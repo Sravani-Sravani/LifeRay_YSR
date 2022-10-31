@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:asrimTables:asrimTables-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+}
+
+buildService {
+	apiDir = "../asrimTables-api/src/main/java"
+}
+
+group = "com.kpmg.asrimTables"

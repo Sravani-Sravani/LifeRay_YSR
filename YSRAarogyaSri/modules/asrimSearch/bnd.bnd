@@ -1,0 +1,4 @@
+Bundle-Name: asrimSearch
+Bundle-SymbolicName: com.kpmg.asrimServices
+Bundle-Version: 1.0.0
+Export-Package: com.kpmg.asrimServices.constants

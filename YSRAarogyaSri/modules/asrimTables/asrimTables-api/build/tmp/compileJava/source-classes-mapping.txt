@@ -1,0 +1,42 @@
+com/kpmg/asrimTables/service/persistence/AsrimHospitalsPersistence.java
+ com.kpmg.asrimTables.service.persistence.AsrimHospitalsPersistence
+com/kpmg/asrimTables/model/AsrimHospitalsModel.java
+ com.kpmg.asrimTables.model.AsrimHospitalsModel
+com/kpmg/asrimTables/service/AsrimHospitalsLocalService.java
+ com.kpmg.asrimTables.service.AsrimHospitalsLocalService
+com/kpmg/asrimTables/service/AsrimHospitalsLocalServiceWrapper.java
+ com.kpmg.asrimTables.service.AsrimHospitalsLocalServiceWrapper
+com/kpmg/asrimTables/service/AsrimHospitalsLocalServiceUtil.java
+ com.kpmg.asrimTables.service.AsrimHospitalsLocalServiceUtil
+com/kpmg/asrimTables/service/persistence/AsrimHospitalsUtil.java
+ com.kpmg.asrimTables.service.persistence.AsrimHospitalsUtil
+com/kpmg/asrimTables/model/AsrimHospitals.java
+ com.kpmg.asrimTables.model.AsrimHospitals
+ com.kpmg.asrimTables.model.AsrimHospitals$1
+com/kpmg/asrimTables/model/AsrimHospitalsWrapper.java
+ com.kpmg.asrimTables.model.AsrimHospitalsWrapper
+com/kpmg/asrimTables/exception/NoSuchAsrimHospitalsException.java
+ com.kpmg.asrimTables.exception.NoSuchAsrimHospitalsException
+com/kpmg/asrimTables/model/AsrimHospitalsTable.java
+ com.kpmg.asrimTables.model.AsrimHospitalsTable
+com/kpmg/asrimTables/service/persistence/FooUtil.java
+ com.kpmg.asrimTables.service.persistence.FooUtil
+com/kpmg/asrimTables/model/Foo.java
+ com.kpmg.asrimTables.model.Foo
+ com.kpmg.asrimTables.model.Foo$1
+com/kpmg/asrimTables/service/persistence/FooPersistence.java
+ com.kpmg.asrimTables.service.persistence.FooPersistence
+com/kpmg/asrimTables/service/FooLocalServiceUtil.java
+ com.kpmg.asrimTables.service.FooLocalServiceUtil
+com/kpmg/asrimTables/service/FooLocalServiceWrapper.java
+ com.kpmg.asrimTables.service.FooLocalServiceWrapper
+com/kpmg/asrimTables/exception/NoSuchFooException.java
+ com.kpmg.asrimTables.exception.NoSuchFooException
+com/kpmg/asrimTables/model/FooModel.java
+ com.kpmg.asrimTables.model.FooModel
+com/kpmg/asrimTables/model/FooWrapper.java
+ com.kpmg.asrimTables.model.FooWrapper
+com/kpmg/asrimTables/service/FooLocalService.java
+ com.kpmg.asrimTables.service.FooLocalService
+com/kpmg/asrimTables/model/FooTable.java
+ com.kpmg.asrimTables.model.FooTable

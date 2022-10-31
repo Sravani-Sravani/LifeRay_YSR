@@ -1,0 +1,39 @@
+com/kpmg/asrimTables/model/impl/AsrimHospitalsBaseImpl.java
+ com.kpmg.asrimTables.model.impl.AsrimHospitalsBaseImpl
+com/kpmg/asrimTables/service/persistence/impl/AsrimHospitalsPersistenceImpl.java
+ com.kpmg.asrimTables.service.persistence.impl.AsrimHospitalsPersistenceImpl
+com/kpmg/asrimTables/model/impl/AsrimHospitalsCacheModel.java
+ com.kpmg.asrimTables.model.impl.AsrimHospitalsCacheModel
+com/kpmg/asrimTables/model/impl/AsrimHospitalsModelImpl.java
+ com.kpmg.asrimTables.model.impl.AsrimHospitalsModelImpl
+ com.kpmg.asrimTables.model.impl.AsrimHospitalsModelImpl$EscapedModelProxyProviderFunctionHolder
+com/kpmg/asrimTables/service/persistence/impl/constants/ASRIMPersistenceConstants.java
+ com.kpmg.asrimTables.service.persistence.impl.constants.ASRIMPersistenceConstants
+com/kpmg/asrimTables/model/impl/AsrimHospitalsImpl.java
+ com.kpmg.asrimTables.model.impl.AsrimHospitalsImpl
+com/kpmg/asrimTables/service/persistence/impl/AsrimHospitalsModelArgumentsResolver.java
+ com.kpmg.asrimTables.service.persistence.impl.AsrimHospitalsModelArgumentsResolver
+com/kpmg/asrimTables/service/impl/FooLocalServiceImpl.java
+ com.kpmg.asrimTables.service.impl.FooLocalServiceImpl
+com/kpmg/asrimTables/service/persistence/impl/FooPersistenceImpl.java
+ com.kpmg.asrimTables.service.persistence.impl.FooPersistenceImpl
+com/kpmg/asrimTables/model/impl/FooModelImpl.java
+ com.kpmg.asrimTables.model.impl.FooModelImpl
+ com.kpmg.asrimTables.model.impl.FooModelImpl$EscapedModelProxyProviderFunctionHolder
+com/kpmg/asrimTables/model/impl/FooBaseImpl.java
+ com.kpmg.asrimTables.model.impl.FooBaseImpl
+com/kpmg/asrimTables/model/impl/FooImpl.java
+ com.kpmg.asrimTables.model.impl.FooImpl
+com/kpmg/asrimTables/service/base/AsrimHospitalsLocalServiceBaseImpl.java
+ com.kpmg.asrimTables.service.base.AsrimHospitalsLocalServiceBaseImpl
+com/kpmg/asrimTables/service/persistence/impl/FooModelArgumentsResolver.java
+ com.kpmg.asrimTables.service.persistence.impl.FooModelArgumentsResolver
+com/kpmg/asrimTables/model/impl/FooCacheModel.java
+ com.kpmg.asrimTables.model.impl.FooCacheModel
+com/kpmg/asrimTables/service/base/FooLocalServiceBaseImpl.java
+ com.kpmg.asrimTables.service.base.FooLocalServiceBaseImpl
+ com.kpmg.asrimTables.service.base.FooLocalServiceBaseImpl$1
+ com.kpmg.asrimTables.service.base.FooLocalServiceBaseImpl$2
+ com.kpmg.asrimTables.service.base.FooLocalServiceBaseImpl$3
+com/kpmg/asrimTables/service/impl/AsrimHospitalsLocalServiceImpl.java
+ com.kpmg.asrimTables.service.impl.AsrimHospitalsLocalServiceImpl
