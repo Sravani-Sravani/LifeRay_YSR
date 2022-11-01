@@ -150,5 +150,29 @@
  	 	<column name="RESPONSE_CNT" type="String"></column> 
  	 	<column name="ERR_MSGS_HOSP_ATTACH" type="String"></column>
  	 	<column name="PAN_NUMBER" type="String"></column>
- 	 </entity>
+</entity>
+<entity name="AsrimLocations" local-service="true" remote-service="false" table="asrim_locations">
+ <column name="LOC_ID" type="String" primary="true"></column> 
+<column name="LOC_NAME" type="String"></column> 
+<column name="LOC_PARNT_ID" type="String"></column> 
+<column name="LOC_ORDER" type="String"></column>
+<column name="LOC_DESC" type="String"></column> 
+<column name="LOC_VAL" type="String"></column> 
+<column name="LANG_ID" type="String"></column> 
+<column name="CRT_USR" type="String"></column> 
+<column name="CRT_DT" type="Date"></column> 
+<column name="LST_UPD_USR" type="String"></column> 
+<column name="LST_UPD_DT" type="Date"></column> 
+<column name="LOC_HDR_ID" type="String"></column> 
+<column name="ACTIVE_YN" type="String"></column> 
+<column name="ITDA" type="String"></column> 
+<column name="ITDA_AREA" type="String"></column> 
+<column name="URBAN_RURAL" type="String"></column> 
+<column name="PINCODE" type="String"></column> 
+<column name="IS_CRDA_LOCATION" type="String"></column> 
+<column name="EHS_LOCATION_ID" type="String"></column> 
+<column name="RURAL_URBAN" type="String"></column> 
+<column name="LOC_DESC_TEL" type="String"></column> 
+<column name="LOC_STATE_VAL" type="String"></column>
+ </entity>
 </service-builder>

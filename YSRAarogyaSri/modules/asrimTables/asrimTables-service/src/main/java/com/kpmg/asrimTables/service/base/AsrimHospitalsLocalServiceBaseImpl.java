@@ -18,6 +18,7 @@ import com.kpmg.asrimTables.model.AsrimHospitals;
 import com.kpmg.asrimTables.service.AsrimHospitalsLocalService;
 import com.kpmg.asrimTables.service.AsrimHospitalsLocalServiceUtil;
 import com.kpmg.asrimTables.service.persistence.AsrimHospitalsPersistence;
+import com.kpmg.asrimTables.service.persistence.AsrimLocationsPersistence;
 import com.kpmg.asrimTables.service.persistence.FooPersistence;
 
 import com.liferay.petra.sql.dsl.query.DSLQuery;
@@ -417,6 +418,9 @@ public abstract class AsrimHospitalsLocalServiceBaseImpl
 
 	@Reference
 	protected AsrimHospitalsPersistence asrimHospitalsPersistence;
+
+	@Reference
+	protected AsrimLocationsPersistence asrimLocationsPersistence;
 
 	@Reference
 	protected FooPersistence fooPersistence;

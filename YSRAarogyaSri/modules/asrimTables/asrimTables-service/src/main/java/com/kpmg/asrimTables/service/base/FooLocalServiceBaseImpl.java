@@ -18,6 +18,7 @@ import com.kpmg.asrimTables.model.Foo;
 import com.kpmg.asrimTables.service.FooLocalService;
 import com.kpmg.asrimTables.service.FooLocalServiceUtil;
 import com.kpmg.asrimTables.service.persistence.AsrimHospitalsPersistence;
+import com.kpmg.asrimTables.service.persistence.AsrimLocationsPersistence;
 import com.kpmg.asrimTables.service.persistence.FooPersistence;
 
 import com.liferay.exportimport.kernel.lar.ExportImportHelperUtil;
@@ -577,6 +578,9 @@ public abstract class FooLocalServiceBaseImpl
 
 	@Reference
 	protected AsrimHospitalsPersistence asrimHospitalsPersistence;
+
+	@Reference
+	protected AsrimLocationsPersistence asrimLocationsPersistence;
 
 	protected FooLocalService fooLocalService;
 

@@ -105,6 +105,30 @@
 		<field name="ERR_MSGS_HOSP_ATTACH" type="String" />
 		<field name="PAN_NUMBER" type="String" />
 	</model>
+	<model name="com.kpmg.asrimTables.model.AsrimLocations">
+		<field name="LOC_ID" type="String" />
+		<field name="LOC_NAME" type="String" />
+		<field name="LOC_PARNT_ID" type="String" />
+		<field name="LOC_ORDER" type="String" />
+		<field name="LOC_DESC" type="String" />
+		<field name="LOC_VAL" type="String" />
+		<field name="LANG_ID" type="String" />
+		<field name="CRT_USR" type="String" />
+		<field name="CRT_DT" type="Date" />
+		<field name="LST_UPD_USR" type="String" />
+		<field name="LST_UPD_DT" type="Date" />
+		<field name="LOC_HDR_ID" type="String" />
+		<field name="ACTIVE_YN" type="String" />
+		<field name="ITDA" type="String" />
+		<field name="ITDA_AREA" type="String" />
+		<field name="URBAN_RURAL" type="String" />
+		<field name="PINCODE" type="String" />
+		<field name="IS_CRDA_LOCATION" type="String" />
+		<field name="EHS_LOCATION_ID" type="String" />
+		<field name="RURAL_URBAN" type="String" />
+		<field name="LOC_DESC_TEL" type="String" />
+		<field name="LOC_STATE_VAL" type="String" />
+	</model>
 	<model name="com.kpmg.asrimTables.model.Foo">
 		<field name="uuid" type="String" />
 		<field name="fooId" type="long" />
