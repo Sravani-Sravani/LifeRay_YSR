@@ -106,21 +106,37 @@ crossorigin="anonymous"></script>
 	 	  
 <footer>
 
-<div class="quick_links">
-			<div class="container">
-				 <h4 class="bordertitle container" style="width:16%">Useful Links</h4>
-				<div class="row mb-3">
-    			  <div class="col-lg-2"><a href="https://www.spandana.ap.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/1.jpg" alt="" class="img-fluid " /></a></div>
-				  <div class="col-lg-2"><a href="https://gramawardsachivalayam.ap.gov.in/GSWS/Home/Main" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/2.jpg" alt="" class="img-fluid "  /></a></div>
-					<div class="col-lg-2"><a href="https://apcos.ap.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/3.jpg" alt="" class="img-fluid "  /></a></div>
-					<div class="col-lg-2"><a href="https://nhsrcindia.org/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/nhsrc-logo.png" alt="" class="img-fluid " /></a></div>
-					<div class="col-lg-2"><a href="https://www.pmjay.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/5.jpg" alt="" class="img-fluid "  /></a></div>
-					<div class="col-lg-2"><a href="https://eoffice.ap.gov.in/cas/login" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/eOfficeLogo.jpeg" alt="" class="img-fluid "  /></a></div>
-					</div>	
-				</div>	
-		</div>
- 
- 
+      <div class="quick_links">
+        <div class="container">
+          <h4>Quick Links</h4>
+          <div class="row mb-5 pb-4">
+            <div class="col">
+              <div class="content-grid">
+                <div class="row content-grid-row ps-3 pe-3">
+                  <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                    <a href="https://www.spandana.ap.gov.in/" target="_blank"><img src="o/AarogyaSri-FrontEnd-Theme/images/quicklinks/1.jpg" alt="" class="img-fluid" /></a>
+                  </div>
+                  <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                    <a href="https://gramawardsachivalayam.ap.gov.in/GSWS/Home/Main" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/2.jpg" alt="" class="img-fluid" /></a>
+                  </div>
+                  <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                    <a href="https://apcos.ap.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/3.jpg" alt="" class="img-fluid" /></a>
+                  </div>
+                  <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                    <a href="https://nhsrcindia.org/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/nhsrc-logo.png" alt="" class="img-fluid" /></a>
+                  </div>
+                  <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                    <a href="https://www.pmjay.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/5.jpg" alt="" class="img-fluid" /></a>
+                  </div>
+                  <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                    <a href="https://eoffice.ap.gov.in/cas/login" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/eOfficeLogo.jpeg" alt="" class="img-fluid" /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 	<div class=" top_footer container">
     <div class="row mb-3">
@@ -148,12 +164,16 @@ Pin:522503 <br />
 			<li><a href="/web/guest/ehs">Employee Health Scheme</a></li> 
 			<li><a href="/web/guest/wjhs">Working Journalist Health Scheme</a></li> 
 			<li><a href="/web/guest/arogyaraksha">Aarogya-Raksha</a></li> 
+			<li> <a href="">AarogyaShri App</a></li>
+			<li> <a href="">Mitra App</a></li>
+			<li> <a href="">EHS App</a></li>
+			
 			
         </ul>
       </div>
 <!--
       <div class="col-lg-3">
-         <h5 class="bordertitle">Useful Links</h5>
+         <h5 class="bordertitle"> Links</h5>
         <ul class="nav flex-column">
             <li><a target="_blank" href="https://treasury.ap.gov.in/aptry/">AP Treasury Site</a></li> 
 			<li><a target="_blank" href="http://uidai.gov.in/">Aadhar Site </a></li>
@@ -168,14 +188,11 @@ Pin:522503 <br />
       <div class="col-lg-3">
             <h5 class="bordertitle">Useful Links</h5>
             <ul class="nav flex-column">
-              <li><a href="https://nhsrcindia.org/">NHSRC</a></li>
-              <li><a href="http://www.mohfw.nic.in/">MOHFW</a></li>
-              <li><a href="https://cfw.ap.nic.in/">COHFW</a></li>
-              <li><a href="https://www.nppaindia.nic.in/en/">NPPA India</a></li>
+
               <li>
                 <a href="https://treasury.ap.gov.in/aptry/">AP Treasury Site</a>
               </li>
-              <li><a href="#">Aadhar Site </a></li>
+              <li><a href="https://appointments.uidai.gov.in/?AspxAutoDetectCookieSupport=1">Aadhar Site </a></li>
               <li>
                 <a href="/web/guest/copyright_policy"
                   >Copyright Policy
@@ -208,13 +225,6 @@ Pin:522503 <br />
           <div class="d-flex flex-column flex-sm-row w-100 gap-2" style="padding-bottom:5px;">
            <img src="/o/AarogyaSri-FrontEnd-Theme/images/btn_googlePlay.svg" class="img-fluid" alt="Get on Playstore" />
                  </div>
-          <div>
-             <ul class="nav flex-column">
-                <li><a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysraarogyasri_app&amp;hl=en" target="_blank">Aarogyasri App</button></a></li>
-                <li><a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysr_mithra&amp;hl=en" target="_blank">Mithra App</button></a></li>
-				<li><a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ehs_app&amp;hl=en" target="_blank">EHS App</button></a></li>
-		     </ul>
-		     </div>
        </div>
     </div>
 
