@@ -331,4 +331,206 @@ transform-origin: .5em 50%;
 .search_panel .table{ background: #fff; font-size: 12px;}
 .download_list_btn{ font-size:30px; text-align: end;}
 .download_list_btn a{ color: #000;}
+
+/*INNER PAGES*/
+h3.heading_inner{ text-align: left; font-size: 35px; margin-bottom: 2%;}
+.inner_twocol_layout{ margin:4% 0;}
+.inner_twocol_layout .sidebar_menu{ background-color: #1B65A6; color:#fff; border-radius: 10PX; margin-bottom:10px;}
+.inner_twocol_layout .sidebar_menu a{color:#fff !important;}
+.inner_twocol_layout .sidebar_menu .btn{ width:100%; text-align: left; background: transparent; color:#fff !important;text-transform: uppercase;}
+.inner_twocol_layout .sidebar_menu .btn-toggle::before {
+width: 1.25em;
+line-height: 0;
+content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%28255,255,255,1%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+transition: transform .35s ease;
+transform-origin: .5em 50%;
+    color:#fff ;
+    
+}
+.inner_twocol_layout .sidebar_menu{ padding:10px;}
+.inner_twocol_layout .sidebar_menu ul li{padding:5px 0;}
+.inner_twocol_layout .sidebar_menu h4{ padding:20px 10px 0; font-size: 18px; }
+.inner_twocol_layout .sidebar_menu a{color: #fff !important; text-decoration: none; display: block; width: 100%; padding:5px 10px;}
+.inner_twocol_layout .sidebar_menu a:hover{color:#000 !important; background: #F1F8FF;}
+.inner_twocol_layout .sidebar_menu ul ul li{ padding:0;;}
+.inner_twocol_layout .sidebar_menu ul ul{   margin-left: 40px;}
+.inner_twocol_layout .rightsidebar_content table tr td{ font-size: 12px; text-align: left;}
+.rightsidebar_content{ text-align: justify;}
+.rightsidebar_content p .download_btn{ margin-bottom: 10px;}
+.rightsidebar_content .download_btn{ background: #7BBF4B; float: right; color: #fff;}
+.rightsidebar_content .download_btn::before {
+    font-family: "FontAwesome";
+    width: 1.25em;
+    line-height: 0;
+    content: "\f56d";
+    transition: transform .35s ease;
+    transform-origin: .5em 50%;
+        color:#fff ;
+        
+    }
+.iframe_box{ width: 100%; min-height: 300px; border: solid 2px #d9d9d9; padding: 5px; }
+
+.service-item{ position: relative;  }
+
+.btn_servicemore {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .btn_servicemore a {
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+  }
+
+.services_section .btn{ background: #2169B2; border-radius: 0;}
+
+/*Responsive Section*/
+@media (max-width:768px){
+.service-item{ position: static;}
+.btn_servicemore {position: static;}
+.service-item{ min-height: auto;}
+}
+
+/*Owl Carousel For NewsLetter*/
+.newsScroller{ padding :0px;}
+.owl-item .item{ margin :0 7px; margin-top:50px; }
+.card{background: #EFF7FF; border-radius:10px; padding: 30px 10px 10px;}
+.newsScroller .owl-nav {
+    z-index: 9999;
+    position: absolute;
+    /*padding: 0 45px;*/
+    width: 100%;
+    height: 45px;
+    top: calc(45% - 22.5px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.newsScroller .owl-nav .owl-prev,
+.newsScroller .owl-nav .owl-next {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EDEDED !important;
+    border-radius: 10px;
+    transition: .5s;
+    left:0px;
+}
+
+.newsScroller .owl-nav .owl-next {}
+
+.newsScroller .owl-nav .owl-prev span, .newsScroller .owl-nav .owl-next span{ color: #2169B2;font-size: 40px;}
+.newsScroller .owl-nav .owl-prev:hover span, .newsScroller .owl-nav .owl-next:hover span{ color:#fff;}
+
+.newsScroller .owl-nav .owl-prev:hover, .newsScroller .owl-nav .owl-next:hover { background: #2169B2 !important; color:#fff;}
+
+.newsScroller .card-title {
+  width: 30%;
+  position: absolute;
+  top: -33px;
+  left: 15px;
+  background: #0e5da0;
+  color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+.newsScroller .card p{ font-size: 12px; }   
+
+.newsScroller .card p.card-top-box-p1, p.card-top-box-p2{ color:#fff; font-size: 16px;}
+.newsScroller .card p.card-top-box-p2{ font-size: 28px; font-weight: bold;}
+
+.newsScroller .card { 
+    text-align: center;
+    background: #FFFFFF;
+    height: 200px;  
+    min-height: 200px;  
+    margin-bottom: 20px;
+    position: relative; 
+    padding: 20px 0 0;
+    }
+
+    .btn_downloadnews {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        text-align: right;
+        width: 100%;
+        font-weight: bold;
+        padding:0 10px 5px;
+        text-decoration: none;
+      }
+
+
+/*Service Box Style*/
+.service-item,.common_service_box { 
+padding:20px 15px 10px;
+text-align: center;
+background: #FFFFFF;
+border-top: 3px solid #2169B2;
+box-shadow: 0px 0px 4px 4px rgba(209, 209, 209, 0.15);
+border-radius: 10px;
+min-height: 390px;  
+margin-bottom: 20px;
+}
+
+.service-item{ position: relative;  }
+
+.btn_servicemore {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .btn_servicemore a {
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+  }
+
+.services_section .btn{ background: #2169B2; border-radius: 10px; margin: 10px;}
+
+
+/*FOR CONTACT US PAGE*/
+
+
+/*Contact Page*/
+.contactUs_section .box_contact{ 
+    min-height: 360px; 
+    margin: 0 0 40px; 
+    padding: 15px; 
+    box-shadow: 0px 0px 4px 4px rgba(209, 209, 209, 0.15);
+    border-radius: 10px;border:1px solid #ddd; 
+    border-top: 3px solid #2169B2; 
+    background: #fefefe;  
+    text-align: center;
+    }
+    .contact_icon i{ width: 60px; height: 60px; background-color: #1B65A6; border-radius: 100%; line-height: 60px; color: #fff;;}
+    .contactUs_section .box_contact h6{ text-transform: uppercase; margin: 20px 0 10px;   font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+      color: #000000;
+
+    }
+
+
+
  

@@ -58,27 +58,28 @@ crossorigin="anonymous"></script>
       <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
         <ul class="navbar-nav mb-2 mb-md-0">
 			<li class="nav-item"><a class="nav-link <#if pageId==6> active </#if> ${page.plid}" href="/home">Home </a></li>        
-			<li class="nav-item"><a class="nav-link" href="#">About</a></li>        
+			<li class="nav-item"><a class="nav-link <#if pageId==159> active </#if>" href="/aboutus">About</a></li>        
 			<li class="nav-item dropdown">
-		  <a class="dropdown-toggle nav-link <#if pageId==29> active </#if>" data-bs-toggle="dropdown" aria-expanded="false">
+		  <a class="dropdown-toggle nav-link <#if pageId==19 || pageId==21 || pageId==25 || pageId==27 > active </#if>" data-bs-toggle="dropdown" aria-expanded="false">
 			Schemes
 		  </a>
 		  <ul class="dropdown-menu" style="overflow: inherit;">
-			<li><a class="dropdown-item <#if pageId==29> active </#if>" href="/asri">Dr. YSR Aarogyasri<span>&rsaquo;</span></a>
+			<li><a class="dropdown-item <#if pageId==19> active </#if>" href="/asri">Dr. YSR Aarogyasri<span>&rsaquo;</span></a>
 			  <ul class="submenu dropdown-menu">
-                <li><a class="dropdown-item" href="#">Hospitals</a></li>
-                <li><a class="dropdown-item" href="#">Procedures</a></li>
-				  <li><a class="dropdown-item" href="#">Aarogya mitra</a></li>
+                <li><a class="dropdown-item" href="/hospital-search">Hospitals</a></li>
+                <li><a class="dropdown-item" href="/procedures-search">Procedures</a></li>
+                 <li><a class="dropdown-item" href="/specialty-Search">Specialty Search</a></li>
+				  <li><a class="dropdown-item" href="/mitra-search">Aarogya mitra</a></li>
               </ul>
 			  </li>
-				<li><a class="dropdown-item" href="#">Aarogya Raksha</a></li>
-				<li><a class="dropdown-item" href="#">WJHS</a></li>
-				<li><a class="dropdown-item" href="#">EHS</a></li>
+				<li><a class="dropdown-item <#if pageId==21> active </#if>" href="/arogyaraksha">Aarogya Raksha</a></li>
+				<li><a class="dropdown-item <#if pageId==25> active </#if>"  href="/wjhs">WJHS</a></li>
+				<li><a class="dropdown-item <#if pageId==27> active </#if>" href="/ehs">EHS</a></li>
 			  </ul>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="#">Know More</a></li>         
-			<li class="nav-item"><a class="nav-link" href="#">FAQ </a></li>        
-			<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+			<!--<li class="nav-item"><a class="nav-link" href="#">Know More</a></li>  -->       
+			<li class="nav-item"><a class="nav-link <#if pageId==157> active </#if>" href="/faq">FAQ </a></li>        
+			<li class="nav-item"><a class="nav-link <#if pageId==161> active </#if>" href="/contact">Contact</a></li>
 			<li><img src="/o/AarogyaSri-FrontEnd-Theme/images/Ayushman_Bharat_logo.png" alt="Ayushman_Bharat_logo" class="img-fluid ayushman_header_logo" /></li>
         </ul>
       </div>
@@ -109,16 +110,17 @@ crossorigin="anonymous"></script>
 			<div class="container">
 				 <h4 class="bordertitle container" style="width:16%">Useful Links</h4>
 				<div class="row mb-3">
-    			  <div class="col-lg-2"><a href="https://www.spandana.ap.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/1.jpg" alt="" class="img-fluid importantLinks" /></a></div>
-				  <div class="col-lg-2"><a href="https://gramawardsachivalayam.ap.gov.in/GSWS/Home/Main" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/2.jpg" alt="" class="img-fluid importantLinks"  /></a></div>
-					<div class="col-lg-2"><a href="https://apcos.ap.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/3.jpg" alt="" class="img-fluid importantLinks"  /></a></div>
-					<div class="col-lg-2"><a href="https://nhsrcindia.org/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/nhsrc-logo.png" alt="" class="img-fluid importantLinks" /></a></div>
-					<div class="col-lg-2"><a href="https://www.pmjay.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/5.jpg" alt="" class="img-fluid importantLinks"  /></a></div>
-					<div class="col-lg-2"><a href="https://eoffice.ap.gov.in/cas/login" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/6.jpg" alt="" class="img-fluid importantLinks"  /></a></div>
+    			  <div class="col-lg-2"><a href="https://www.spandana.ap.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/1.jpg" alt="" class="img-fluid " /></a></div>
+				  <div class="col-lg-2"><a href="https://gramawardsachivalayam.ap.gov.in/GSWS/Home/Main" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/2.jpg" alt="" class="img-fluid "  /></a></div>
+					<div class="col-lg-2"><a href="https://apcos.ap.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/3.jpg" alt="" class="img-fluid "  /></a></div>
+					<div class="col-lg-2"><a href="https://nhsrcindia.org/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/nhsrc-logo.png" alt="" class="img-fluid " /></a></div>
+					<div class="col-lg-2"><a href="https://www.pmjay.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/5.jpg" alt="" class="img-fluid "  /></a></div>
+					<div class="col-lg-2"><a href="https://eoffice.ap.gov.in/cas/login" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/eOfficeLogo.jpeg" alt="" class="img-fluid "  /></a></div>
 					</div>	
 				</div>	
 		</div>
-
+ 
+ 
 
 	<div class=" top_footer container">
     <div class="row mb-3">
@@ -126,7 +128,7 @@ crossorigin="anonymous"></script>
         <img src="/o/AarogyaSri-FrontEnd-Theme/images/footer_logo.svg" alt="YSR" class="pb-3 img-fluid">
         <p class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
   <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-</svg>  Door No. – 241,<br /> MGM Capital Building, <br />
+</svg>  Door No. 241,<br /> MGM Capital Building, <br />
 Chinnakakani, Mangalagiri, <br />
 Guntur Dist, <br />
 Pin:522503 <br />
@@ -142,29 +144,64 @@ Pin:522503 <br />
       <div class="col-lg-3">
         <h5 class="bordertitle">Services</h5>
         <ul class="nav flex-column">
-            <li><a href="/asri">Dr.YSR Aarogyasri</a></li> 
-			<li><a href="#">Employee Health Scheme</a></li> 
-			<li><a href="#">Working Journalist Health Scheme</a></li> 
-			<li><a href="#">Aarogya-Raksha</a></li> 
+            <li><a href="/web/guest/asri">Dr.YSR Aarogyasri</a></li> 
+			<li><a href="/web/guest/ehs">Employee Health Scheme</a></li> 
+			<li><a href="/web/guest/wjhs">Working Journalist Health Scheme</a></li> 
+			<li><a href="/web/guest/arogyaraksha">Aarogya-Raksha</a></li> 
 			
-			<!--<li><a href="#">Aarogyashri App</a></li> 
-			<li><a href="#">Mitra App</a></li> 
-			<li><a href="#">EHS App</a></li> -->
         </ul>
       </div>
-
+<!--
       <div class="col-lg-3">
          <h5 class="bordertitle">Useful Links</h5>
         <ul class="nav flex-column">
-            <li><a href="#">AP Treasury Site</a></li> 
-			<li><a href="#">Aadhar Site </a></li>
-			<li><a href="#">Copyright Policy </a></li>
-			<li><a href="#">Hyperlink Policy </a></li>
-			<li><a href="#">Terms and Conditions </a></li>
-			<li><a href="#">Accessibility Statement </a></li>
-			<li><a href="#">Sitemap</a></li>
+            <li><a target="_blank" href="https://treasury.ap.gov.in/aptry/">AP Treasury Site</a></li> 
+			<li><a target="_blank" href="http://uidai.gov.in/">Aadhar Site </a></li>
+			<li><a href="/web/guest/copyrite-policy">Copyright Policy </a></li>
+			<li><a href="/web/guest/hyperlink-policy">Hyperlink Policy </a></li>
+			<li><a href="/web/guest/terms-conditions">Terms and Conditions </a></li>
+			<li><a href="/web/guest/accessibility-statement">Accessibility Statement </a></li>
+			<li><a href="/web/guest/sitemap">Sitemap</a></li>
         </ul>
       </div>
+      -->
+      <div class="col-lg-3">
+            <h5 class="bordertitle">Useful Links</h5>
+            <ul class="nav flex-column">
+              <li><a href="https://nhsrcindia.org/">NHSRC</a></li>
+              <li><a href="http://www.mohfw.nic.in/">MOHFW</a></li>
+              <li><a href="https://cfw.ap.nic.in/">COHFW</a></li>
+              <li><a href="https://www.nppaindia.nic.in/en/">NPPA India</a></li>
+              <li>
+                <a href="https://treasury.ap.gov.in/aptry/">AP Treasury Site</a>
+              </li>
+              <li><a href="#">Aadhar Site </a></li>
+              <li>
+                <a href="/web/guest/copyright_policy"
+                  >Copyright Policy
+                </a>
+              </li>
+              <li>
+                <a href="/web/guest/hyperlink-policy"
+                  >Hyperlink Policy
+                </a>
+              </li>
+              <li>
+                <a href="/web/guest/terms_conditions_use"
+                  >Terms and Conditions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/web/guest/accessibility-statement"
+                  >Accessibility Statement
+                </a>
+              </li>
+              <!--<li><a href="#">Sitemap</a></li>-->
+            </ul>
+          </div>
+      
+      
 
       <div class="col-lg-2">
            <h5 class="bordertitle">FIND US ON</h5>
@@ -201,21 +238,7 @@ Pin:522503 <br />
 .portlet-header{
 	display:none;
 }
-.importantLinks{
-position: relative;
-    overflow: hidden;
-    box-shadow: 0.1rem 0.1rem 1rem rgb(0 0 0 / 10%);
-    background-color: #fff;
-    min-height: 150px;
-    border-radius: 6px;
-    box-shadow: 0px 0px 9px #00274d;
-    }
-   .card-body{
-         
-element.style {
-}
-
-</style>
+ </style>
 </body>
 
 </html>
