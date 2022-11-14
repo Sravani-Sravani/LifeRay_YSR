@@ -232,7 +232,7 @@ Pin:522503 <br />
     </div>
 	  <div class="copyright">
 		 <div class="container">
-      &copy; Site Maintained By KPMG Advisory Services Pvt. Ltd. (In Consortium With SRIT India Pvt. Ltd.). The Contents Are Owned By Govt.Of AP, India.</div> 
+      &copy; Site Maintained By KPMG Advisory Services Pvt. Ltd. The Contents Are Owned By Govt.Of AP, India.</div> 
     </div>		  
   </footer>
 <!--End of footer-->	
