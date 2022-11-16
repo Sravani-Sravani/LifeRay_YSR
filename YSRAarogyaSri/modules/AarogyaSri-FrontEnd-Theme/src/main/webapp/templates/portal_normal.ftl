@@ -15,7 +15,7 @@
 
 	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 	  
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">	  
 	 <!-- Libraries Stylesheet -->
    
 <@liferay_util["include"] page=top_head_include />
@@ -44,14 +44,16 @@ crossorigin="anonymous"></script>
 <@liferay.control_menu />
 <#assign pageId = page.plid>
 <div id="wrapper">
-	<header class="main_ysriHeader">
-	<div class="header_topbar px-1">	
-	   <div class="container-fluid">
-		  <span class="rounded-circle px-2 py-1 bg-black"><i class="bi bi-telephone"></i></span>104 | <div class="btn btn-success btn-sm">SIGN IN</div>
+
+
+	<header class="main_ysriHeader" >
+<div class="header_topbar">	
+	   <div class="container">
+		 <i class="bi bi-telephone rounded-circle px-2 py-1 bg-black"></i> <span class="mt-1 align-items-center"><b>104</b></span> | <div class="btn btn-success btn-sm"><a href="https://115.124.110.149/web/guest/signin">SIGN IN</a></div>
 	</div></div><!--TOPBAR-->
   <nav id="main_navbar" class="navbar navbar-expand-md">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/home"><img src="/o/AarogyaSri-FrontEnd-Theme/images/logo.svg" alt="Dr. YSR Aarogyasri Health Care Trust" class="img-fluid" /></a>
+    <div class="container">
+      <a class="navbar-brand" href="/home"><img src="https://115.124.110.149/documents/d/guest/logo1" alt="Dr. YSR Aarogyasri Health Care Trust" class="img-fluid" /></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -66,7 +68,7 @@ crossorigin="anonymous"></script>
 		  <ul class="dropdown-menu" style="overflow: inherit;">
 			<li><a class="dropdown-item <#if pageId==19> active </#if>" href="/asri">Dr. YSR Aarogyasri<span>&rsaquo;</span></a>
 			  <ul class="submenu dropdown-menu">
-                <li><a class="dropdown-item" href="/hospital-search">Hospitals</a></li>
+                <li><a class="dropdown-item" href="https://115.124.110.149/hospital-search">Hospitals</a></li>
                 <li><a class="dropdown-item" href="/procedures-search">Procedures</a></li>
                  <li><a class="dropdown-item" href="/specialty-Search">Specialty Search</a></li>
 				  <li><a class="dropdown-item" href="/mitra-search">Aarogya mitra</a></li>

@@ -86,6 +86,7 @@ header.main_ysriHeader{background: #FFFFFF; box-shadow: 0 8px 6px -6px rgba(0,0,
 .header_topbar{ background: #2169B2 ; padding : 4px 0; text-align: right;  color: #fff; font-weight: 400;  }
 .header_topbar span{ font-weight:bold; font-size:20px; margin-top: 5px !important; line-height: 0;font-family: bebas neue; margin-right: 5px;  }
 .header_topbar .btn{background-color: #7BBF4B; margin-left: 5px; padding: 2px 10px; }
+.header_topbar .btn a{color: #fff; text-decoration: none; }
 .navbar-brand{margin:0; padding: 0;}
 .main_ysriHeader li.nav-item .nav-link{ letter-spacing: -.5px; display: block; transition: .5s; height: 85px; font-size:13px; padding:32px 14px 0 14px; margin:0 1px 8px; text-transform: uppercase; font-weight: 600; color:#2169B2}
 .main_ysriHeader .navbar-nav li.nav-item .active, li.nav-item .nav-link:hover, li.nav-item .nav-link:focus{color:#fff !important; background-color: #7BBF4B; }
@@ -102,7 +103,7 @@ li.nav-item .nav-link{ color:000 !important;  font-size:16px;}
 
 .carousel-item {  height: 29rem;  }
 /* Carousel base class */
-.carousel { margin-bottom: 0rem; margin-top:119px;}
+.carousel { margin-bottom: 0rem;}
 .carousel-caption {top: 0rem; z-index: 10; padding: 10px; }
 .carousel-caption h1{font-weight: 700; font-size:2em;}
 .carousel-caption h1 span{font-size:18px; font-weight: bold;}
@@ -157,12 +158,12 @@ li.nav-item .nav-link{ color:000 !important;  font-size:16px;}
 .newsEvents_section{ 
 	border-top: solid 1px #eee; 
 	border-bottom: solid 1px #eee;
-	background-image: url(../img/background_4.jpg);
+	background-image: url(https://115.124.110.149/documents/d/guest/news_bg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed ;
 	background-size: cover; 
-	padding:150px 0 !important;
+	padding:70px 0 0 !important;;
 	box-shadow: 8px 8px 6px -6px rgba(238, 238, 238, 0.2); 
 	}
 ul.spotlight_news { padding-left:0 !important;}
@@ -364,7 +365,7 @@ margin-bottom: 30px;
 	.signin_section h6::before {
 		font-family: "FontAwesome";
 		position: absolute;
-		right:0px;
+		right:20px;
 		font-weight: 400;
 		content: "\f090";
 		
