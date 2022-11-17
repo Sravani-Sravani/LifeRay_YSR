@@ -42,7 +42,6 @@ crossorigin="anonymous"></script>
 <@liferay_util["include"] page=body_top_include />
 
 <@liferay.control_menu />
-
 <#if w3c_language_id=="te-IN">
           <#assign 
 		   language_file="language_te.ftl" 
@@ -50,7 +49,7 @@ crossorigin="anonymous"></script>
       <#else>
        <#assign language_file="language.ftl" />
       </#if>
-
+ <#include "${full_templates_path}/content/${language_file}" />
 <#assign pageId = page.plid>
 <div id="wrapper">
 
@@ -58,7 +57,7 @@ crossorigin="anonymous"></script>
 	<header class="main_ysriHeader" >
 <div class="header_topbar">	
 	   <div class="container">
-	   <div class="portlet-body" id="languages-section">
+	   <div class="portlet-body" style="float: left;" id="languages-section">
  	<style>
 	.language-entry-long-text {
 		display: inline-block;
