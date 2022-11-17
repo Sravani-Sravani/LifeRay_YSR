@@ -42,6 +42,15 @@ crossorigin="anonymous"></script>
 <@liferay_util["include"] page=body_top_include />
 
 <@liferay.control_menu />
+
+<#if w3c_language_id=="te-IN">
+          <#assign 
+		   language_file="language_te.ftl" 
+		/>
+      <#else>
+       <#assign language_file="language.ftl" />
+      </#if>
+
 <#assign pageId = page.plid>
 <div id="wrapper">
 
@@ -49,6 +58,22 @@ crossorigin="anonymous"></script>
 	<header class="main_ysriHeader" >
 <div class="header_topbar">	
 	   <div class="container">
+	   <div class="portlet-body" id="languages-section">
+ 	<style>
+	.language-entry-long-text {
+		display: inline-block;
+		padding: 0 0.5em;
+	}
+</style>
+
+<#if w3c_language_id=="te-IN">
+		<a href="/te/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=en_US" class="language-entry-long-text" lang="en-US">English</a>
+		 <span class="language-entry-long-text" lang="te-IN">తెలుగు</span>
+<#else>
+		 <span class="language-entry-long-text" lang="en-US">English</span>
+		 <a href="/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=te_IN" class="language-entry-long-text" lang="te-IN">తెలుగు</a>
+</#if>
+</div>
 		 <i class="bi bi-telephone rounded-circle px-2 py-1 bg-black"></i> <span class="mt-1 align-items-center"><b>104</b></span> | <div class="btn btn-success btn-sm"><a href="https://115.124.110.149/web/guest/signin">SIGN IN</a></div>
 	</div></div><!--TOPBAR-->
   <nav id="main_navbar" class="navbar navbar-expand-md">
@@ -60,7 +85,7 @@ crossorigin="anonymous"></script>
       <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
         <ul class="navbar-nav mb-2 mb-md-0">
 			<li class="nav-item"><a class="nav-link <#if pageId==6> active </#if> ${page.plid}" href="/home">Home </a></li>        
-			<li class="nav-item"><a class="nav-link <#if pageId==159> active </#if>" href="/aboutus">About</a></li>        
+			<li class="nav-item"><a class="nav-link <#if pageId==159> active </#if>" href="/aboutus">${about}</a></li>        
 			<li class="nav-item dropdown">
 		  <a class="dropdown-toggle nav-link <#if pageId==19 || pageId==21 || pageId==25 || pageId==27 > active </#if>" data-bs-toggle="dropdown" aria-expanded="false">
 			Schemes
