@@ -60,7 +60,7 @@ crossorigin="anonymous"></script>
       <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
         <ul class="navbar-nav mb-2 mb-md-0">
 			<li class="nav-item"><a class="nav-link <#if pageId==6> active </#if> ${page.plid}" href="/home">Home </a></li>        
-			<li class="nav-item"><a class="nav-link <#if pageId==159> active </#if>" href="/aboutus">About</a></li>        
+			<li class="nav-item"><a class="nav-link <#if pageId==159> active </#if>" href="/aboutus">${about}</a></li>        
 			<li class="nav-item dropdown">
 		  <a class="dropdown-toggle nav-link <#if pageId==19 || pageId==21 || pageId==25 || pageId==27 > active </#if>" data-bs-toggle="dropdown" aria-expanded="false">
 			Schemes
@@ -116,7 +116,7 @@ crossorigin="anonymous"></script>
               <div class="content-grid">
                 <div class="row content-grid-row ps-3 pe-3">
                   <div class="content-grid-item col-md-4 col-lg-2 text-center">
-                    <a href="https://www.spandana.ap.gov.in/" target="_blank"><img src="o/AarogyaSri-FrontEnd-Theme/images/quicklinks/1.jpg" alt="" class="img-fluid" /></a>
+                    <a href="https://www.spandana.ap.gov.in/" target="_blank"><img src="https://115.124.110.149/documents/d/guest/1" alt="" class="img-fluid" /></a>
                   </div>
                   <div class="content-grid-item col-md-4 col-lg-2 text-center">
                     <a href="https://gramawardsachivalayam.ap.gov.in/GSWS/Home/Main" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/2.jpg" alt="" class="img-fluid" /></a>
@@ -156,7 +156,7 @@ Pin:522503 <br />
   <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
 </svg>  0863-2259861</p>
 		  <br />
-		  <div class="btn btn-success">Call 104 for any information to the schemes of Trust</div>
+		 <p class="emergency_no">Call 104 for any information to the schemes of the trust 
       </div>
 
       <div class="col-lg-3">
@@ -227,6 +227,7 @@ Pin:522503 <br />
           <div class="d-flex flex-column flex-sm-row w-100 gap-2" style="padding-bottom:5px;">
            <img src="/o/AarogyaSri-FrontEnd-Theme/images/btn_googlePlay.svg" class="img-fluid" alt="Get on Playstore" />
                  </div>
+                 <p><b>Last Updated : </b> 17-11-2022 <br /> <b>Total Visitors : </b> 3100</p>
        </div>
     </div>
 
