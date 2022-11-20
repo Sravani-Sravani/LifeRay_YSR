@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <#include init />
@@ -83,7 +85,7 @@ crossorigin="anonymous"></script>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
         <ul class="navbar-nav mb-2 mb-md-0">
-			<li class="nav-item"><a class="nav-link <#if pageId==6> active </#if> ${page.plid}" href="/home">Home </a></li>        
+			<li class="nav-item"><a class="nav-link <#if pageId==6> active </#if> ${page.plid}" href="/home">${home} </a></li>        
 			<li class="nav-item"><a class="nav-link <#if pageId==159> active </#if>" href="/aboutus">${about}</a></li>        
 			<li class="nav-item dropdown">
 		  <a class="dropdown-toggle nav-link <#if pageId==19 || pageId==21 || pageId==25 || pageId==27 > active </#if>" data-bs-toggle="dropdown" aria-expanded="false">

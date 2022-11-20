@@ -1,0 +1,4 @@
+Bundle-Name: asri
+Bundle-SymbolicName: com.kpmg.asri
+Bundle-Version: 1.0.0
+Export-Package: com.kpmg.asri.constants

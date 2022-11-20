@@ -1,0 +1,4 @@
+Bundle-Name: raksha
+Bundle-SymbolicName: com.kpmg
+Bundle-Version: 1.0.0
+Export-Package: com.kpmg.constants

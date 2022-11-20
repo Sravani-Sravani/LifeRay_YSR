@@ -1,0 +1,4 @@
+Bundle-Name: ArogyaRaksha
+Bundle-SymbolicName: com.kpmg.ArogyaRaksha
+Bundle-Version: 1.0.0
+Export-Package: com.kpmg.ArogyaRaksha.constants
