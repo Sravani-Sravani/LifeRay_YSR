@@ -1,163 +1,460 @@
-<%@page import="com.kpmg.asrimTables.service.FooLocalServiceUtil"%>
-<%@page import="com.kpmg.asrimTables.model.AsrimHospitals"%>
-<%@page import="com.kpmg.asrimTables.service.AsrimHospitalsLocalServiceUtil"%>
-<%@page import="java.text.SimpleDateFormat"%>
-<%@page import="com.liferay.portal.kernel.util.ListUtil"%>
- <%@page import="java.util.List"%>
+<%@page import="com.kpmg.asrimSearch.util.DataGridDisplayManageUtil"%>
 <%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
-<%@page import="javax.portlet.PortletURL"%>
- <%@ include file="/init.jsp" %>
-<!-- 
-<p>
-	<b><liferay-ui:message key="asrimsearch.caption"/></b>
-</p>
- -->
-<%
-//int count=FooLocalServiceUtil.getFoosCount();
-//System.out.println("Count 123>>>"+count);
-  int count=AsrimHospitalsLocalServiceUtil.getAsrimHospitalsesCount();
- System.out.println("Count 123>>>"+count);
-%>
-<% 
- PortletURL iteratorNewURL = renderResponse.createRenderURL(); 
- iteratorNewURL.setParameter("mvcPath", "/view.jsp");
- long cur = 1;
- long delta=1;
- if(ParamUtil.getLong(request, "cur")!=0){
- 	cur =ParamUtil.getLong(request, "cur");
- }
- if(ParamUtil.getLong(request, "delta")!=0){
- 	delta =ParamUtil.getLong(request, "delta");
- }
- long sNo=(delta * (cur-1))+1;
-%>
+<%@ include file="/init.jsp" %>
+<%@ include file="/html/dataTableIncludes.jspf" %>  
+<portlet:resourceURL var="asrimHospitalsURL">
+<portlet:param name="cmd" value="hospitalsList"/>
+<portlet:param name="cmdType" value="AsrimHospitalsList"/>
+</portlet:resourceURL>
+<link href="/o/com.kpmg.asrimSearch/css/select2.min.css" rel="stylesheet" />
+<script src="/o/com.kpmg.asrimSearch/js/select2.min.js"></script> 
+<script>
+function stoploader(){
+	document.getElementById("loader").style.display = "none";
+}
+    $(document).ready(function () {
+	   $("select").select2();
+	}); 
+</script>
+ <style>
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid blue;
+  border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  border-left: 16px solid pink;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+} 
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
 
-<div class="ysri_section">
-	<section class="blue_section">
-	  <div class="container search_panel">
-		  <h3>Empanalled Hospitals List- In Aarogyasri Scheme</h3>
-		 
-		  <form class="row row-cols-lg-auto align-items-center" >
-				<div class="col-2">
-				<h6>Search Hospitals</h6>
-				</div>
-				<div class="col-2">
-				<label class="visually-hidden" for="District">District</label>
-				<select class="form-select" id="District">
-				<option selected>Select District</option>
-				<option value="1">District 1</option>
-				<option value="2">District 2</option>
-				<option value="3">District 3</option>
-				<option value="3">District 4</option>
-				<option value="3">District 5</option>
-				<option value="3">District 6</option>		
-				</select>
-				</div>
-				<div class="col-2">
-				<label class="visually-hidden" for="Mandal">Mandal</label>
-				<select class="form-select" id="Mandal">
-				<option selected>Select Mandal</option>
-				<option value="1">Mandal 1</option>
-				<option value="2">Mandal 2</option>
-				<option value="3">Mandal 3</option>
-				<option value="3">Mandal 4</option>
-				<option value="3">Mandal 5</option>
-				<option value="3">Mandal 6</option>		
-				</select>
-				</div>	
-				<div class="col-2">
-				<label class="visually-hidden" for="hospital_name">Name of Hospitals</label>
-				<select class="form-select" id="hospital_name">
-				<option selected>Name of Hospitals</option>
-				<option value="1">Hospital 1</option>
-				<option value="2">Hospital 2</option>
-				<option value="3">Hospital 3</option>
-				<option value="3">Hospital 4</option>
-				<option value="3">Hospital 5</option>
-				<option value="3">Hospital 6</option>		
-				</select>
-				</div>  
-				<div class="col-2">
-				<label class="visually-hidden" for="hospital_type">Hospital Type</label>
-				<select class="form-select" id="hospital_type">
-				<option selected>Hospital Type</option>
-				<option value="1">Government</option>
-				<option value="2">Private</option>
-				</select>
-				</div>	
-				<div class="col-2">
-				<button type="submit" class="btn btn-primary">Submit</button>
-				<button type="submit" class="btn btn-primary">Reset</button>
-				</div>
-			</form>
-		  
-		  
-		  
-		  <div class="row align-items-center">
-			  <div class="col-lg-6 align"><h6>List of Hospitals</h6></div>  
-		  	<div class="col-lg-6 download_list_btn"><a href="#"><i class="fa-solid fa-download"></i></a></div>
-		  </div>
-		  <div class="row">
-			<div class="table-responsive-md">  
-		  	
-		  	<% 
-		    List<AsrimHospitals> resultList=null;
-		List<AsrimHospitals> hospitalsList =null;
-		int size=0;
-		hospitalsList =AsrimHospitalsLocalServiceUtil.getAsrimHospitalses(0, AsrimHospitalsLocalServiceUtil.getAsrimHospitalsesCount()) ;
-				 
-		
-		//hospitalsList.get(0).getHOSP_NAMEE()()
-		size=hospitalsList.size();
-		 
-			
-		 %> 
-		  	
-		  	
-		  	 <liferay-ui:search-container deltaConfigurable="true" delta="20" total="<%=size %>" emptyResultsMessage="No records found" iteratorURL="<%= iteratorNewURL %>" >			 
-	<% try{
-		resultList = ListUtil.subList(hospitalsList, searchContainer.getStart(),searchContainer.getEnd());
-	}catch(Exception e){
-		e.printStackTrace();
-	}
-	//SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-	%>
-	 <liferay-ui:search-container-results results="<%=resultList %>"  /> 
-	 <liferay-ui:search-container-row className="com.kpmg.asrimTables.model.AsrimHospitals" keyProperty="HOSP_ID" modelVar="hospitals">
-		  <%
-				      	String HOSP_ID ="";
-				      	String HOSP_NAME ="";
-				      	String HOSP_DISP_CODE="";
-				      	 String HOSP_CONTACT_PERSON="";  
-				      	String HOSP_CONTACT_NO="";
-				      	 String HOSP_MITHRA=""; 
-				      	 String CUG_NO="";
-				      	 String HOSP_SPECIALITY="";
-				      	 
-				      	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-				       		HOSP_ID =hospitals.getHOSP_ID();
-				      		HOSP_NAME =hospitals.getHOSP_NAME(); 
-				      		HOSP_DISP_CODE =hospitals.getHOSP_DISP_CODE(); 
-				      		HOSP_CONTACT_PERSON=hospitals.getHOSP_CONTACT_PERSON(); 
-				      		//HOSP_CONTACT_NO=hospitals.getHOSP_CONTACT_NO();
-				      		HOSP_SPECIALITY=hospitals.getHOSP_SPECIALITY();
-		 	%>
-	
-        <liferay-ui:search-container-column-text name="s No." value="<%= String.valueOf(sNo++) %>" />
-         <liferay-ui:search-container-column-text name="Name of Hospital" value="<%=HOSP_NAME %>" />
-         
-	    <liferay-ui:search-container-column-text name="Hospital Code" value="<%= HOSP_DISP_CODE %>" />
-	     <liferay-ui:search-container-column-text name="Contact Person" value="<%= HOSP_CONTACT_PERSON %>" />
-	     <liferay-ui:search-container-column-text name="Specialities" value="<%= HOSP_SPECIALITY %>" />
-		</liferay-ui:search-container-row>
-	<liferay-ui:search-iterator  />
-					</liferay-ui:search-container>
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+} 
+/* End loader slider*/
+ .search_panel .table thead th {background-color: #2169B2; color: #ffff;} 
+.search_panel .table thead td {
+    width: 100px !important;
+    text-align: justify;
+    overflow-x: scroll;
+    }
+main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
+.lfr-search-container-wrapper .lfr-icon-menu > .dropdown-toggle {color: #fff;}
+.specialitys{overflow-y: scroll; height: 125px;  width: auto;    }
+.lfr-tooltip-scope{disaply:none;}
+.alert-dismissible{disaply:none;}
+.alert-danger{disaply:none;}
+</style>
+<%
+ String DIST_ID = request.getParameter("districtId").trim();//ParamUtil.getString(request, "DIST_ID");
+ String stateId = ParamUtil.getString(request, "stateId").trim();
+ String HOSP_TYPE=ParamUtil.getString(request, "HOSP_TYPE").trim();
+ String diseaseName=ParamUtil.getString(request, "diseaseName").trim();
+ if(diseaseName.length()>5 && diseaseName!=null && diseaseName!=""){
+ int postion1=diseaseName.indexOf("(");
+ if(postion1!=0)
+   diseaseName=diseaseName.substring(0, postion1-1).trim();
+ }
+ System.out.println("districtId>>>"+DIST_ID);
+ System.out.println("stateId>>>"+stateId);
+ System.out.println("HOSP_TYPE>>>"+HOSP_TYPE); 
+ System.out.println("diseaseName>>>"+diseaseName); 
+ %>
+<script>
+	var primaryKeyColumn = 1;
+	var primaryKeyColumnName = "Name of Hospital";
+	var dataTables = {
+        tables:[
+            {
+                select: "By Associate Number",
+                dataURL:"<%=asrimHospitalsURL.toString()%>",
+                columns:["Name of Hospital","Hospital Type","District","Hospital Address","Specialities","Empanalled Date","Name of Medco","Medco Contact No","Name of Mitra","Mitra Contact No"],
+                options:{},
+                scrollX: false,
+                header: true,
+                footer: true
+            }
+       ]
+    };
+      
+	function clearAndLoadData(selectedFilter){
+		var booleanflag=true;
+	   if(selectedFilter==5){ 
+		 booleanflag=false; 
+		 }                                                    
+		//$("#recordList").html("");
+		$("#recordList").html("<table id='datatables' class='table table-bordered table-striped table-hover display nowrap' cellspacing='0' style='width:100%'><thead><tr></tr></thead></table>");
+		var columns = dataTables.tables[selectedFilter].columns;
+		var dataURL = dataTables.tables[selectedFilter].dataURL;
+		var scrollXVal = dataTables.tables[selectedFilter].scrollX;
+		var aoCustomColumn=dataTables.tables[selectedFilter].aoColumnDefs;
+		 for(i=0;i<columns.length;i++){
+			if(primaryKeyColumnName==columns[i]) primaryKeyColumn=i;
+        	//console.log("primaryKeyColumn stored as: "+primaryKeyColumn);
+			$("#recordList tr").append("<th scope='col'>"+columns[i]+"</th>");
+		}
+		//for(i=0;i<columns.length;i++){
+			//if(primaryKeyColumnName==columns[ i]) primaryKeyColumn=i;
+        	//console.log("primaryKeyColumn stored as: "+primaryKeyColumn);
+		//	$("#recordList tr <tfoot").append("<th>"+columns[i]+"</th>");
+		//}
+		//$("#recordList tr").append("<tfoot><tr> <th>Name</th><th>Position</th><th>Office</th><th>Age</th><th>Start date</th><th>Salary</th></tr></tfoot>");"
+		//console.log("About to load dataURL as: " + dataURL);
+     datatable = $('#recordList table').removeAttr('width').DataTable({
+    	 ajax: dataURL,
+    	 dom: 'Blfrtip',
+	     lengthMenu: [10, 25, 50, 100],
+	     order: [[ 0, "asc" ]],
+			/* "columnDefs": [
+	            {
+	                "targets": [0 ],
+	                "visible": booleanflag
+	            
+	            }], */
+          //scrollX: scrollXVal,
+          scrollY: false,
+          scrollx: true,
+          //scrollY: '100vh',
+         //scrollCollapse: true,
+         //scrollY: '750px',
+         sScrollX: '100%',
+        ///scrollCollapse: true,
+         aoColumnDefs: aoCustomColumn,
+			buttons: [ {
+             extend: 'copy'      
+         },
+         {
+             extend: 'excel'
+         },
+         {
+             extend: 'pdfHtml5',
+             orientation: 'landscape',
+             pageSize: 'LEGAL'
+         },
+         {
+         	extend: 'print' 
+         }],
+         columnDefs: [
+        	    { width: "200", targets: 0 }
+        	  ],
+        	  fixedColumns: true,
+         initComplete: function () {
+        	var j=1;
+            this.api()
+                .columns([0,1,2])
+                .every(function () {
+                    var column = this;
+                    console.log(column[0][0]);
+                    //if(column[0][0]==0 || column[0][0]==1 || column[0][0]==3){
+                 //   if(column[0][0]==4){
+                    	 /*   $("#Speciality").on("change", function () {
+                               var val = $.fn.dataTable.util.escapeRegex($("#Speciality").val());
+                               column.search(val ? '^' + val + '$' : '', true, false).draw();
+                           }); */
+                   // }else{
+                    	$('#select-'+column[0][0]).find('option').remove().end()
+                    	.append('<option value="">Show all</option>').on('change', function () {
+                            var val = $.fn.dataTable.util.escapeRegex($('#select-'+column[0][0]).val());
+                            column.search(val ? '^' + val + '$' : '', true, false).draw();
+                        });
+                    //}
+                        
+                        
+                    	/* var select = $('<select id="select_'+ j++ +'" style="max-width:150px;"><option value="">Show all</option></select>')
+                        .appendTo($(column.header()).empty())
+                        .on('change', function () {
+                            var val = $.fn.dataTable.util.escapeRegex($(this).val());
+                            column.search(val ? '^' + val + '$' : '', true, false).draw();
+                        }); */
+                     column
+                        .data()
+                        .unique()
+                        .sort()
+                        .each(function (d, j) {
+                        	// var val = $.fn.dataTable.util.escapeRegex(districtId);
+                         /* 	if(column.search() === '^'+d+'$'){
+								select.append( '<option value="'+d+'" selected="selected">'+d.substr(0,30)+'</option>' )
+							} else {
+								select.append( '<option value="'+d+'">'+d.substr(0,30)+'</option>' )
+							} */
+                         	//console.log(d);
+							d=$.trim(d);
+							if(d!="" && d!=null){
+								if(column.search() === '^'+d+'$'){
+	                         		$('#select-'+column[0][0]).append( '<option value="'+d+'" selected="selected">'+d.substr(0,30)+'</option>' )
+								} else {
+									$('#select-'+column[0][0]).append( '<option value="'+d+'">'+d.substr(0,30)+'</option>' )
+								}
+							} 	
+                        });
+                    
+                   /*  if(column[0][0]==3){     
+                    column
+                    .data()
+                    .unique()
+                    .sort()
+                    .each(function (d, j) {
+                    	if(d==districtId){
+                    		 var val = $.fn.dataTable.util.escapeRegex(d);
+                             column.search(val ? '^' + val + '$' : '', true, false).draw();
+	                    }
+                    });
+                    } */ 
+                   // }
+                   // else{
+                    	// var select = $('')
+                         //.appendTo($(column.header()).empty())
+                   // }
+                });
+            
+           
+            <% if(DIST_ID!="" && DIST_ID!=null){ %>
+            var districtId="<%=DIST_ID%>";
+            districtId=$.trim(districtId);
+           // console.log("districtId value>>>>"+ $("#select-2").val());
+           // console.log("districtId before>>>>"+districtId);
+            if(districtId!=null && districtId!=""){
+            //	  console.log("districtId if condition>>>>"+districtId);
+                $("#select-2").val(districtId).trigger('change');
+            }
+            //console.log("districtId after>>>>"+districtId);
+            <% } %>
+            <% if(HOSP_TYPE!="" && HOSP_TYPE!=null){ %>
+            var hospitalType="<%=HOSP_TYPE%>";
+            if(hospitalType!=null && hospitalType!=""){
+
+                console.log("hospitalType>>>>"+ hospitalType);
+              $("#select-1").val(hospitalType).trigger('change');
+            }
+             
+             <% } %>            
+           <% if(diseaseName!="" && diseaseName!=null){ %>
  
-		  	
-		  	</div>
-		  </div>
-		   
-	  </div>
-	</section> 	<!-- Hospital List -->
-	</div><!--ysri_section-->	  
+             var diseaseName="<%=diseaseName%>";
+             if(diseaseName!=null && diseaseName!=""){
+            	 $("input[type='search']").val(diseaseName).trigger('keyup');
+                 console.log("diseaseName>>>>"+ diseaseName); 
+                // $("#Speciality").val(diseaseName).trigger('change');
+             }
   
+             <% } %>
+            stoploader();
+        },
+        processing: true,
+         
+       /*  initComplete: function(){
+            console.log('Data loaded successfully');
+          }, */
+        bStateSave: true
+		/* fixedHeader: {
+	        header:true
+		} */
+    });
+//}); 
+	
+	}
+	
+	function setCookie(cname,cvalue,exdays) {
+		alert("set test");
+	    var d = new Date();
+	    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+	    var expires = "expires=" + d.toGMTString();
+	    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+
+	/* function getCookie(cname) {
+		console.log("get test" +cname);
+	    var name = cname + "=";
+	    var decodedCookie = decodeURIComponent(document.cookie);
+	    var ca = decodedCookie.split(';');
+	    for(var i = 0; i < ca.length; i++) {
+	        var c = ca[i];
+	        while (c.charAt(0) == ' ') {
+	            c = c.substring(1);
+	        }
+	        if (c.indexOf(name) == 0) {
+	            return c.substring(name.length, c.length);
+	        }
+	    }
+	    return "";
+	}
+	 */
+    $(document).ready(function() {
+    	console.log("testa");
+    //	var previouslySelectedFilter = getCookie('hma-wms-position-list-filter');
+    	//var previouslySelectedFilterIndex = 0;
+    	
+    //	console.log("previouslySelectedFilter:"+previouslySelectedFilter);
+    	
+    	/* for(i=0;i<dataTables.tables.length;i++){
+    		if(previouslySelectedFilter==dataTables.tables[i].select){
+        		$(positionFilter).append("<option selected='selected'>"+dataTables.tables[i].select+"</option>");
+        		previouslySelectedFilterIndex = i;
+    		}else{
+        		$(positionFilter).append("<option>"+dataTables.tables[i].select+"</option>");
+    		}
+    	}
+    	
+    	$("#positionFilter").on("change",function(){
+    		setCookie('hma-wms-position-list-filter',$(this).find(":selected").text(),1);
+    		clearAndLoadData( $(this).find(":selected").index() );
+    		$("#successmessage").hide();
+    	}); */
+    	
+    	clearAndLoadData( 0 );
+	    
+	});
+    
+ 	 </script>
+ 	 
+ 	 <div id="loader"></div>
+ 	 <div class="ysri_section">
+	<section class="blue_section">
+	
+	<!-- <div class="row col-md-12" id="loader"  style="display:none;">
+  <div class="col-md-5"></div>
+  <div class="col-md-3">
+  <div class="loader"></div>
+  </div>
+  <div class="col-md-4"></div>
+  </div> -->
+	  <div class="container search_panel">
+		  <h3>Empanelled Hospitals List- In Aarogyasri Scheme</h3>
+		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
+ <div id="searchData" class="row col-md-12">
+ <div class="col-2"  style="padding-top: 22px;">
+	<h6>Search Hospitals</h6>		 
+</div>
+       
+				<div class="col-2">
+				<label  for="District">District</label>
+				<select class="form-select" id="select-2" name="select-2">
+				    <option value="">Show All</option>
+				 </select>
+				</div>
+ <div class="col-4">
+				
+				<label  for="Hospital">Name of Hospitals</label>
+				<select class="form-select" id="select-0" label="Hospital" name="select-0">
+				    <option value="">Show All</option>
+				 </select>
+				</div> 
+                <div class="col-2">
+				<label  for="District">Hospital Type</label>
+				<select class="form-select" id="select-1" name="select-1">
+				    <option value="">Show All</option>
+				 </select>
+				</div>
+				<%-- <div class="col-2">
+				<label  for="District">Speciality</label>
+				<select class="form-select" id="Speciality" name="Speciality">
+				    <option value="">Show All</option>
+				    <%
+				    String specialityId=null;
+				      org.json.JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(specialityId);
+				     // System.out.print("speciality_List 123"+speciality_List.toString());
+				  	  
+				      for(int j=0;j<speciality_List.length();j++){
+			        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
+			    	   
+			    	   int postion=data.getString(3).indexOf("(");
+			    	   String disease_Name=data.getString(3).substring(0, postion-1).trim();
+				    %>
+				    <option value="<%=disease_Name%>"><%=disease_Name%></option>
+				    <% } %>
+				 </select>
+				</div> --%>
+ </div>
+ </form>
+        <div id="recordList" class="table-responsive-md">
+  <!--       <table id="datatables" class="table table-bordered table-striped table-hover display nowrap" cellspacing="0" style=""width:100%">
+        <thead class='table-dark'> 
+        <th>Name of Hospital</th>
+        <th>Hospital Type</th>
+        <th>Hospital Address</th>
+        <th>District</th>
+        <th>Specialities</th>
+        <th>Empanalled Date</th>
+        <th>Name of Medco</th>
+        <th>Medco Contact No</th>
+        <th>Name of Mitra</th>
+        <th>Mitra Contact No</th>
+        </thead>
+        <thead class='table-dark'> 
+        <th>Name of Hospital</th>
+        <th>Hospital Type</th>
+        <th>Hospital Address</th>
+        <th>District</th>
+        <th>Specialities</th>
+        <th>Empanalled Date</th>
+        <th>Name of Medco</th>
+        <th>Medco Contact No</th>
+        <th>Name of Mitra</th>
+        <th>Mitra Contact No</th>
+        </thead>
+        </table>
+      -->   </div>
+	 </div>
+	 </section>
+	 </div>
+<script type="text/javascript"> 
+
+$(document).ready(function() {
+
+	
+});
+$(document).ready(function() {
+	$('.modal-backdrop').remove();
+	$('.modal-backdrop').remove();
+} );
+ 
+</script>
+ 
+<style>
+ th, td { white-space: nowrap; }
+    div.dataTables_wrapper {
+        margin: 0 auto;
+    }
+ 
+    div.container {
+        width: 80%;
+    }
+</style>
