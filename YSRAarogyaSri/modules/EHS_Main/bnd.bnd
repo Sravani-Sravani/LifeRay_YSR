@@ -1,0 +1,4 @@
+Bundle-Name: EHS_Main
+Bundle-SymbolicName: com.kpmg.ehs
+Bundle-Version: 1.0.0
+Export-Package: com.kpmg.ehs.constants

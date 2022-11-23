@@ -1,0 +1,4 @@
+Bundle-Name: ysrAsri
+Bundle-SymbolicName: com.kpmg.ysrasri
+Bundle-Version: 1.0.0
+Export-Package: com.kpmg.ysrasri.constants

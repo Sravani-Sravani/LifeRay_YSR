@@ -8,6 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dr. YSR Aarogyasri Health Care Trust</title>
+    <link rel="icon" type="image/x-icon" href="https://115.124.110.149/documents/d/guest/favicon">
 <meta content="initial-scale=1.0, width=device-width" name="viewport" />
   
      
@@ -53,18 +54,14 @@ crossorigin="anonymous"></script>
 <#assign pageId = page.plid>
 <div id="wrapper">
 
+<header class="main_ysriHeader">
 
-	<header class="main_ysriHeader" >
 <div class="header_topbar">	
-	   <div class="container">
-	   <div class="portlet-body" style="float: left;" id="languages-section">
- 	<style>
-	.language-entry-long-text {
-		display: inline-block;
-		padding: 0 0.5em;
-	}
-</style>
-
+		<div class="container">
+		
+		<div class="row">
+				 <div class="col-lg-6 left_topbar"> 
+	
 <#if w3c_language_id=="te-IN">
 		<a href="/te/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=en_US" class="language-entry-long-text" lang="en-US">English</a>
 		 <span class="language-entry-long-text" lang="te-IN">తెలుగు</span>
@@ -72,9 +69,29 @@ crossorigin="anonymous"></script>
 		 <span class="language-entry-long-text" lang="en-US">English</span>
 		 <a href="/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=te_IN" class="language-entry-long-text" lang="te-IN">తెలుగు</a>
 </#if>
-</div>
-		 <i class="bi bi-telephone rounded-circle px-2 py-1 bg-black"></i> <span class="mt-1 align-items-center"><b>104</b></span> | <div class="btn btn-success btn-sm"><a href="https://115.124.110.149/web/guest/signin">${sign_in}</a></div>
-	</div></div><!--TOPBAR-->
+				 <a href="/web/guest/screen_reader_11"><i class="fa-solid fa-mobile-screen"></i> ScreenReader </a> 
+				 <a href="/web/guest/glossary"><i class="fa-solid fa-book-open-cover"></i> Glossary </a>   
+        
+				 </div>
+				 <div class="col-lg-6 right_topbar"> 
+					<p class="btn btn-danger btn-sm"><i class="bi bi-telephone px-2 py-1"> 104</i></p>
+				 <p class="btn btn-success btn-sm"><a href="https://115.124.110.149/web/guest/signin">SIGN IN</a></p>      
+				 <p class="btn btn-success btn-sm"><i class="fa-regular fa-virus-covid"></i> <a href="https://115.124.110.149/web/guest/covid_19">Covid-19</a></p>    
+				 </div>	
+			 </div>
+		<div class="portlet-body" style="float: left;" id="languages-section">
+	  <style>
+	 .language-entry-long-text {
+		 display: inline-block;
+		 padding: 0 0.5em;
+	 }
+ </style>
+
+ </div>
+		  
+	 </div></div><!--TOPBAR-->
+
+
   <nav id="main_navbar" class="navbar navbar-expand-md">
     <div class="container">
       <a class="navbar-brand" href="/home"><img src="https://115.124.110.149/documents/d/guest/logo1" alt="Dr. YSR Aarogyasri Health Care Trust" class="img-fluid" /></a>
@@ -90,12 +107,12 @@ crossorigin="anonymous"></script>
 			${schemes}
 		  </a>
 		  <ul class="dropdown-menu" style="overflow: inherit;">
-			<li><a class="dropdown-item <#if pageId==19> active </#if>" href="/asri">Dr. YSR Aarogyasri<span>&rsaquo;</span></a>
+			<li><a class="dropdown-item <#if pageId==19> active </#if>" href="/asri">${asri}<span>&rsaquo;</span></a>
 			  <ul class="submenu dropdown-menu">
-                <li><a class="dropdown-item" href="https://115.124.110.149/hospital-search">Hospitals</a></li>
-                <li><a class="dropdown-item" href="/procedures-search">Procedures</a></li>
-                 <li><a class="dropdown-item" href="/specialty-Search">Specialty Search</a></li>
-				  <li><a class="dropdown-item" href="/mitra-search">Aarogya mitra</a></li>
+                <li><a class="dropdown-item" href="https://115.124.110.149/hospital-search">${hospitals}</a></li>
+                <li><a class="dropdown-item" href="/procedures-search">${procedures}</a></li>
+                 <li><a class="dropdown-item" href="/specialty-Search">${speciality_search}</a></li>
+				  <li><a class="dropdown-item" href="/mitra-search">${arogya_mitra}</a></li>
               </ul>
 			  </li>
 				<li><a class="dropdown-item <#if pageId==21> active </#if>" href="/arogyaraksha">${ar}</a></li>
@@ -216,31 +233,55 @@ ${pin_code}:522503 <br />
             <ul class="nav flex-column">
 
               <li>
-                <a href="https://treasury.ap.gov.in/aptry/">AP Treasury Site</a>
+                <a href="https://treasury.ap.gov.in/aptry/">${ap_treasury_site}</a>
               </li>
-              <li><a href="https://appointments.uidai.gov.in/?AspxAutoDetectCookieSupport=1">Aadhar Site </a></li>
+              <li><a href="https://appointments.uidai.gov.in/?AspxAutoDetectCookieSupport=1">${aadhar_site}</a></li>
               <li>
                 <a href="/web/guest/copyright_policy"
-                  >Copyright Policy
+                  >${copyright_policy}
                 </a>
               </li>
               <li>
                 <a href="/web/guest/hyperlink-policy"
-                  >Hyperlink Policy
+                  >${hyperlink_policy}
                 </a>
               </li>
               <li>
                 <a href="/web/guest/terms_conditions_use"
-                  >Terms and Conditions
+                  >${terms_conditions}
                 </a>
               </li>
               <li>
                 <a
                   href="/web/guest/accessibility-statement"
-                  >Accessibility Statement
+                  >${accessibility_statement}
                 </a>
               </li>
-              <!--<li><a href="#">Sitemap</a></li>-->
+              <!--<li><a href="#">${sitemap}</a></li>-->
+              <li>
+                <a
+                  href="https://nhsrcindia.org/"
+                  >NHSRC
+                </a>
+              </li>
+               <li>
+                <a
+                  href="http://www.mohfw.nic.in/"
+                  >MOHFW
+                </a>
+              </li>
+            <li>
+                <a
+                  href="https://cfw.ap.nic.in/"
+                  >COHFW
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.nppaindia.nic.in/en/"
+                  >NPPA India
+                </a>
+              </li>
             </ul>
           </div>
       
@@ -251,7 +292,7 @@ ${pin_code}:522503 <br />
           <div class="d-flex flex-column flex-sm-row w-100 gap-2" style="padding-bottom:5px;">
            <img src="/o/AarogyaSri-FrontEnd-Theme/images/btn_googlePlay.svg" class="img-fluid" alt="Get on Playstore" />
                  </div>
-                 <p><b>${last_updated} : </b> 17-11-2022 <br /> <b>${total_visitors} : </b> 3100</p>
+                 <p><b>${last_updated} : </b> 23-11-2022 <br /> <b>${total_visitors} : </b> 3100</p>
        </div>
     </div>
 
