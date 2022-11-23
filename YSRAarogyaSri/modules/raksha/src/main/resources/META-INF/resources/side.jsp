@@ -30,24 +30,7 @@
 						</div>
 					  </li>
 					  
-					  <li class="mb-1">
-						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patient-collapse" aria-expanded="false">
-						  Documents &amp; Reports
-						</button>
-						
-						<div class="collapse" id="patient-collapse">
-						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-								<li><a href="https://115.124.110.149/web/guest/bids_agreements">Bids and Agreements</a></li>
-								<li><a href="https://115.124.110.149/web/guest/documents-and-reports-guidelines-user-manuals-and-sops">Guidelines, Manuals and SOPs</a></li>
-								<li><a href="https://115.124.110.149/web/guest/processflow_documents">Process Flow Documents</a></li>
-								<li><a href="https://115.124.110.149/web/guest/board_resultions">Board Resolutions</a></li> 
-								<li><a href="https://115.124.110.149/web/guest/reports_workingpapers">Reports and Working Papers</a></li> 
-								<li><a href="https://115.124.110.149/web/guest/publicity">Publicity</a></li> 
-								<li><a href="https://115.124.110.149/web/guest/government_orders2">Government Orders</a></li> 
-                <li><a href="https://115.124.110.149/web/guest/arogyaraksha_document">Documents</a></li> 
-							  </ul>
-						</div>
-					  </li>
+	
 					  <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#employees-collapse" aria-expanded="false">
 							Hospitals
@@ -78,7 +61,7 @@
 					  </li>
 					  <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#pensioners-collapse" aria-expanded="false">
-							Follow-Up Procedres
+							Follow-Up Packages
 						</button>
 						<div class="collapse" id="follow-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">

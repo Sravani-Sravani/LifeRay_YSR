@@ -5,7 +5,6 @@ package com.kpmg.asri.constants;
  */
 public class AsriPortletKeys {
 
-	public static final String ASRI =
-		"com_kpmg_asri_AsriPortlet";
+	public static final String ASRI ="com_kpmg_asri_AsriPortlet";
 
 }

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 
 <#include init />
@@ -10,6 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dr. YSR Aarogyasri Health Care Trust</title>
+    <link rel="icon" type="image/x-icon" href="https://115.124.110.149/documents/d/guest/favicon">
 <meta content="initial-scale=1.0, width=device-width" name="viewport" />
   
      
@@ -55,18 +54,14 @@ crossorigin="anonymous"></script>
 <#assign pageId = page.plid>
 <div id="wrapper">
 
+<header class="main_ysriHeader">
 
-	<header class="main_ysriHeader" >
 <div class="header_topbar">	
-	   <div class="container">
-	   <div class="portlet-body" style="float: left;" id="languages-section">
- 	<style>
-	.language-entry-long-text {
-		display: inline-block;
-		padding: 0 0.5em;
-	}
-</style>
-
+		<div class="container">
+		
+		<div class="row">
+				 <div class="col-lg-6 left_topbar"> 
+	
 <#if w3c_language_id=="te-IN">
 		<a href="/te/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=en_US" class="language-entry-long-text" lang="en-US">English</a>
 		 <span class="language-entry-long-text" lang="te-IN">తెలుగు</span>
@@ -74,9 +69,29 @@ crossorigin="anonymous"></script>
 		 <span class="language-entry-long-text" lang="en-US">English</span>
 		 <a href="/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=te_IN" class="language-entry-long-text" lang="te-IN">తెలుగు</a>
 </#if>
-</div>
-		 <i class="bi bi-telephone rounded-circle px-2 py-1 bg-black"></i> <span class="mt-1 align-items-center"><b>104</b></span> | <div class="btn btn-success btn-sm"><a href="https://115.124.110.149/web/guest/signin">SIGN IN</a></div>
-	</div></div><!--TOPBAR-->
+				 <a href="/web/guest/screen_reader_11"><i class="fa-solid fa-mobile-screen"></i> ScreenReader </a> 
+				 <a href="/web/guest/glossary"><i class="fa-solid fa-book-open-cover"></i> Glossary </a>   
+        
+				 </div>
+				 <div class="col-lg-6 right_topbar"> 
+					<p class="btn btn-danger btn-sm"><i class="bi bi-telephone px-2 py-1"> 104</i></p>
+				 <p class="btn btn-success btn-sm"><a href="https://115.124.110.149/web/guest/signin">SIGN IN</a></p>      
+				 <p class="btn btn-success btn-sm"><i class="fa-regular fa-virus-covid"></i> <a href="https://115.124.110.149/web/guest/covid_19">Covid-19</a></p>    
+				 </div>	
+			 </div>
+		<div class="portlet-body" style="float: left;" id="languages-section">
+	  <style>
+	 .language-entry-long-text {
+		 display: inline-block;
+		 padding: 0 0.5em;
+	 }
+ </style>
+
+ </div>
+		  
+	 </div></div><!--TOPBAR-->
+
+
   <nav id="main_navbar" class="navbar navbar-expand-md">
     <div class="container">
       <a class="navbar-brand" href="/home"><img src="https://115.124.110.149/documents/d/guest/logo1" alt="Dr. YSR Aarogyasri Health Care Trust" class="img-fluid" /></a>
@@ -89,25 +104,25 @@ crossorigin="anonymous"></script>
 			<li class="nav-item"><a class="nav-link <#if pageId==159> active </#if>" href="/aboutus">${about}</a></li>        
 			<li class="nav-item dropdown">
 		  <a class="dropdown-toggle nav-link <#if pageId==19 || pageId==21 || pageId==25 || pageId==27 > active </#if>" data-bs-toggle="dropdown" aria-expanded="false">
-			Schemes
+			${schemes}
 		  </a>
 		  <ul class="dropdown-menu" style="overflow: inherit;">
-			<li><a class="dropdown-item <#if pageId==19> active </#if>" href="/asri">Dr. YSR Aarogyasri<span>&rsaquo;</span></a>
+			<li><a class="dropdown-item <#if pageId==19> active </#if>" href="/asri">${asri}<span>&rsaquo;</span></a>
 			  <ul class="submenu dropdown-menu">
-                <li><a class="dropdown-item" href="https://115.124.110.149/hospital-search">Hospitals</a></li>
-                <li><a class="dropdown-item" href="/procedures-search">Procedures</a></li>
-                 <li><a class="dropdown-item" href="/specialty-Search">Specialty Search</a></li>
-				  <li><a class="dropdown-item" href="/mitra-search">Aarogya mitra</a></li>
+                <li><a class="dropdown-item" href="https://115.124.110.149/hospital-search">${hospitals}</a></li>
+                <li><a class="dropdown-item" href="/procedures-search">${procedures}</a></li>
+                 <li><a class="dropdown-item" href="/specialty-Search">${speciality_search}</a></li>
+				  <li><a class="dropdown-item" href="/mitra-search">${arogya_mitra}</a></li>
               </ul>
 			  </li>
-				<li><a class="dropdown-item <#if pageId==21> active </#if>" href="/arogyaraksha">Aarogya Raksha</a></li>
-				<li><a class="dropdown-item <#if pageId==25> active </#if>"  href="/wjhs">WJHS</a></li>
-				<li><a class="dropdown-item <#if pageId==27> active </#if>" href="/ehs">EHS</a></li>
+				<li><a class="dropdown-item <#if pageId==21> active </#if>" href="/arogyaraksha">${ar}</a></li>
+				<li><a class="dropdown-item <#if pageId==25> active </#if>"  href="/wjhs">${wjhs_short}</a></li>
+				<li><a class="dropdown-item <#if pageId==27> active </#if>" href="/ehs">${ehs_short}</a></li>
 			  </ul>
 			</li>
-			<!--<li class="nav-item"><a class="nav-link" href="#">Know More</a></li>  -->       
-			<li class="nav-item"><a class="nav-link <#if pageId==157> active </#if>" href="/faq">FAQ </a></li>        
-			<li class="nav-item"><a class="nav-link <#if pageId==161> active </#if>" href="/contact">Contact</a></li>
+			<!--<li class="nav-item"><a class="nav-link" href="#">${know_more}</a></li>  -->       
+			<li class="nav-item"><a class="nav-link <#if pageId==157> active </#if>" href="/faq">${faq} </a></li>        
+			<li class="nav-item"><a class="nav-link <#if pageId==161> active </#if>" href="/contact">${contact}</a></li>
 			<li><img src="/o/AarogyaSri-FrontEnd-Theme/images/Ayushman_Bharat_logo.png" alt="Ayushman_Bharat_logo" class="img-fluid ayushman_header_logo" /></li>
         </ul>
       </div>
@@ -172,26 +187,26 @@ crossorigin="anonymous"></script>
         <img src="/o/AarogyaSri-FrontEnd-Theme/images/footer_logo.svg" alt="YSR" class="pb-3 img-fluid">
         <p class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
   <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-</svg>  Door No. 241,<br /> MGM Capital Building, <br />
-Chinnakakani, Mangalagiri, <br />
-Guntur Dist, <br />
-Pin:522503 <br />
-		  Andhra Pradesh, India</p>
+</svg>  ${door_number}. 241,<br /> ${building}, <br />
+${chinakakani}, ${mangalagiri}, <br />
+${guntur}, <br />
+${pin_code}:522503 <br />
+		  ${ap}, ${india}</p>
 		  <br />
 		  <p class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-telephone-fill" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
 </svg>  0863-2259861</p>
 		  <br />
-		 <p class="emergency_no">Call 104 for any information to the schemes of the trust 
+		 <p class="emergency_no">${call} 
       </div>
 
       <div class="col-lg-3">
-        <h5 class="bordertitle">Services</h5>
+        <h5 class="bordertitle">${services}</h5>
         <ul class="nav flex-column">
-            <li><a href="/web/guest/asri">Dr.YSR Aarogyasri</a></li> 
-			<li><a href="/web/guest/ehs">Employee Health Scheme</a></li> 
-			<li><a href="/web/guest/wjhs">Working Journalist Health Scheme</a></li> 
-			<li><a href="/web/guest/arogyaraksha">Aarogya-Raksha</a></li> 
+            <li><a href="/web/guest/asri">${asri}</a></li> 
+			<li><a href="/web/guest/ehs">${ehs}</a></li> 
+			<li><a href="/web/guest/wjhs">${wjhs}</a></li> 
+			<li><a href="/web/guest/arogyaraksha">${ar}</a></li> 
 			<li> <a href="">AarogyaShri App</a></li>
 			<li> <a href="">Mitra App</a></li>
 			<li> <a href="">EHS App</a></li>
@@ -203,13 +218,13 @@ Pin:522503 <br />
       <div class="col-lg-3">
          <h5 class="bordertitle"> Links</h5>
         <ul class="nav flex-column">
-            <li><a target="_blank" href="https://treasury.ap.gov.in/aptry/">AP Treasury Site</a></li> 
-			<li><a target="_blank" href="http://uidai.gov.in/">Aadhar Site </a></li>
-			<li><a href="/web/guest/copyrite-policy">Copyright Policy </a></li>
-			<li><a href="/web/guest/hyperlink-policy">Hyperlink Policy </a></li>
-			<li><a href="/web/guest/terms-conditions">Terms and Conditions </a></li>
-			<li><a href="/web/guest/accessibility-statement">Accessibility Statement </a></li>
-			<li><a href="/web/guest/sitemap">Sitemap</a></li>
+            <li><a target="_blank" href="https://treasury.ap.gov.in/aptry/">${ap_treasury_site}</a></li> 
+			<li><a target="_blank" href="http://uidai.gov.in/">${aadhar_site}</a></li>
+			<li><a href="/web/guest/copyrite-policy">${copyright_policy}</a></li>
+			<li><a href="/web/guest/hyperlink-policy">${hyperlink_policy} </a></li>
+			<li><a href="/web/guest/terms-conditions">${terms_conditions} </a></li>
+			<li><a href="/web/guest/accessibility-statement">${accessibility_statement} </a></li>
+			<li><a href="/web/guest/sitemap">${sitemap} </a></li>
         </ul>
       </div>
       -->
@@ -218,31 +233,55 @@ Pin:522503 <br />
             <ul class="nav flex-column">
 
               <li>
-                <a href="https://treasury.ap.gov.in/aptry/">AP Treasury Site</a>
+                <a href="https://treasury.ap.gov.in/aptry/">${ap_treasury_site}</a>
               </li>
-              <li><a href="https://appointments.uidai.gov.in/?AspxAutoDetectCookieSupport=1">Aadhar Site </a></li>
+              <li><a href="https://appointments.uidai.gov.in/?AspxAutoDetectCookieSupport=1">${aadhar_site}</a></li>
               <li>
                 <a href="/web/guest/copyright_policy"
-                  >Copyright Policy
+                  >${copyright_policy}
                 </a>
               </li>
               <li>
                 <a href="/web/guest/hyperlink-policy"
-                  >Hyperlink Policy
+                  >${hyperlink_policy}
                 </a>
               </li>
               <li>
                 <a href="/web/guest/terms_conditions_use"
-                  >Terms and Conditions
+                  >${terms_conditions}
                 </a>
               </li>
               <li>
                 <a
                   href="/web/guest/accessibility-statement"
-                  >Accessibility Statement
+                  >${accessibility_statement}
                 </a>
               </li>
-              <!--<li><a href="#">Sitemap</a></li>-->
+              <!--<li><a href="#">${sitemap}</a></li>-->
+              <li>
+                <a
+                  href="https://nhsrcindia.org/"
+                  >NHSRC
+                </a>
+              </li>
+               <li>
+                <a
+                  href="http://www.mohfw.nic.in/"
+                  >MOHFW
+                </a>
+              </li>
+            <li>
+                <a
+                  href="https://cfw.ap.nic.in/"
+                  >COHFW
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.nppaindia.nic.in/en/"
+                  >NPPA India
+                </a>
+              </li>
             </ul>
           </div>
       
@@ -253,7 +292,7 @@ Pin:522503 <br />
           <div class="d-flex flex-column flex-sm-row w-100 gap-2" style="padding-bottom:5px;">
            <img src="/o/AarogyaSri-FrontEnd-Theme/images/btn_googlePlay.svg" class="img-fluid" alt="Get on Playstore" />
                  </div>
-                 <p><b>Last Updated : </b> 17-11-2022 <br /> <b>Total Visitors : </b> 3100</p>
+                 <p><b>${last_updated} : </b> 23-11-2022 <br /> <b>${total_visitors} : </b> 3100</p>
        </div>
     </div>
 
@@ -261,7 +300,7 @@ Pin:522503 <br />
     </div>
 	  <div class="copyright">
 		 <div class="container">
-      &copy; Site Maintained By KPMG Advisory Services Pvt. Ltd. The Contents Are Owned By Govt.Of AP, India.</div> 
+      &copy; ${copyright}</div> 
     </div>		  
   </footer>
 <!--End of footer-->	
