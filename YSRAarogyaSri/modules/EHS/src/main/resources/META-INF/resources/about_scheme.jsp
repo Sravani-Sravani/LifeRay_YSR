@@ -4,7 +4,6 @@
 <%@ include file="/sidebar.jsp" %>
 <%@ include file="/rightContent.jsp" %>
 
-
 					<h3 class="bordertitle text-dark">About Scheme</h3>
 					<p>Employees Health Scheme is formulated to provide cashless treatment to the employees, pensioners of the State Government and their dependent family members, which will ipso facto replace the existing medical reimbursement system under the 'Andhra Pradesh Integrated medical Attendance Rules, 1972 (APIMA Rules, 1972)', with additional benefits such as post-operative care and treatment of Chronic diseases, which do not require hospitalization and treatment in empanelled Hospitals.</p> 
 					<div class="accordion" id="accordionExample">
@@ -124,11 +123,11 @@
 						</div>
 						<div class="accordion-item">
 						  <h4 class="accordion-header" id="headingTwo">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 								Patient Process Flow
 							</button>
 						  </h4>
-						  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+						  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
 							<div class="accordion-body">
 								<h5>Patient Process Flow</h5> 
 								<h6>Mode of OP capture</h6> 
@@ -165,7 +164,7 @@
 								<p>All the beneficiaries shall be admitted by a NWH and treated immediately. MEDCO or treating doctor shall obtain emergency telephonic pre-authrorisation through dedicated round the clock telephone lines of the Trust, if the patient is suffering from listed therapies.</p> 
 								<p>If the patient is suffering from diseases other than listed therapies he must be counselled and facilitated safe transportation to the nearest Government Hospital.</p> 
 								<p>If the patient's condition warrants shifting him to a higher centre, safe transport shall be facilitated to other NWH if suffering from listed therapies.</p> 
-								<p><img src="https://115.124.110.149/documents/d/guest/patient_process_flow" class="img-fluid" /></p>
+								<p><img src="img/Patient_Process_Flow.png" class="img-fluid" /></p>
 							</div>
 						  </div>
 						</div>

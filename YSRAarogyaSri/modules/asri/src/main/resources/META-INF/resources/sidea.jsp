@@ -9,31 +9,32 @@
 						<div class="collapse" id="about-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 							<li><a href="https://115.124.110.149/web/guest/about-us-health-camps">Health Camps</a></li>
-							<li><a href="https://115.124.110.149/web/guest/dr.ysr-aarogyasri-scheme">Dr. YSR Aarogyasri Scheme</a></li>
-							<li><a href="https://115.124.110.149/web/guest/about-us-dr.ysr-aarogyasri-health-care-trust">Dr. YSR Aarogyasri Health Care Trust</a></li>
-							<li><a href="https://115.124.110.149/web/guest/about-us-who-is-who-trust-">Who is Who(Trust)</a></li>
-							<li><a href="https://115.124.110.149/web/guest/about-us-who-is-who-district-coordinators-and-district-manager-">Who-Is-Who(District Coordinators &amp; District Manager)</a></li>
-							<li><a href="https://115.124.110.149/web/guest/about-us-board-of-trustees">Board of Trustees</a></li>
-							<li><a href="https://115.124.110.149/web/guest/about-us-rti-act">RTI Act</a></li>
-                <li><a href="https://115.124.110.149/web/guest/notifications">Notifications</a></li>
+							<li><a href="https://115.124.110.149/web/guest/dr_ysr_aarogyasri_scheme">Dr. YSR Aarogyasri Scheme</a></li>
+							<li><a href="https://115.124.110.149/web/guest/dr_ysr_aarogyasri_healthcare_trust">Dr. YSR Aarogyasri Health Care Trust</a></li>
+							<li><a href="https://115.124.110.149/web/guest/who_is_who-trust-">Who is Who(Trust)</a></li>
+							<li><a href="https://115.124.110.149/web/guest/who_is_who_district">Who-Is-Who(District Coordinators &amp; District Manager)</a></li>
+							<li><a href="https://115.124.110.149/web/guest/board_of_trustees">Board of Trustees</a></li>
+							<li><a href=" https://115.124.110.149/web/guest/rti_act">RTI Act</a></li>
+                <li><a href="https://115.124.110.149/web/guest/notifications1">Notifications</a></li>
 						
 							</ul>
 						</div>
 					  </li>
+					  <li class="mb-1">
 					  <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#hospital-collapse" aria-expanded="false">
 						  Empanelment
 						</button>
 						<div class="collapse" id="hospital-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-				<li><a href="https://115.124.110.149/documents/d/guest/empanelmentgud02062022">Empanelment Guidelines</a></li> 	
+				<li><a href="https://www.drysraarogyasri.ap.gov.in/web/empanelment_guidelines">Empanelment Guidelines</a></li> 	
 							<li><a href="https://115.124.110.149/web/guest/online_application-english">Empanelment Application</a></li> 
 							<li><a href="#">Online Empanelment User Manual Empanelment Application Documents</a></li>
 							<li><a href="https://115.124.110.149/documents/d/guest/new_empanelment_documents-2-">Empanelment Application Documents</a></li>  
-               	<li><a href="https://115.124.110.149/documents/d/guest/managmentorhosp">Legal Document for Change Request</a></li> 
+               	<li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/legal_document_for_change_request">Legal Document for Change Request</a></li> 
 							<li><a href="https://115.124.110.149/documents/d/guest/emp_doc_of_gov_hosp-2-">List of Empanelment Documents of Government Hospitals in Dr. YSR Aarogyasri</a></li> 
-							<li><a href="https://115.124.110.149/documents/d/guest/empanelment_application_1">Increased Dr.YSR Aarogyasri Health Care Trust Empanelment Application fee Specialisation inclusion Details</a></li>
-							<li><a href="https://115.124.110.149/documents/d/guest/memorandum">New MOU dcument for NW Hospitals</a></li>  
+							<li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/increased_dr.ysr_aarogyasri_health_care_trust-empanelment">Increased Dr.YSR Aarogyasri Health Care Trust Empanelment Application fee Specialisation inclusion Details</a></li>
+							<li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/new_mou_document">New MOU dcument for NW Hospitals</a></li>  
 						 
 						  </ul>
 						</div>
@@ -77,7 +78,7 @@
 						</button>
 						<div class="collapse" id="usermanuals-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-					          <li><a href="https://115.124.110.149/web/guest/circulars">Circulars</a></li>
+					          <li><a href="https://115.124.110.149/web/guest/asri_circulars">Circulars</a></li>
 								<li><a href="https://115.124.110.149/web/guest/asricaution">Caution </a></li>	
 								<li><a href="#">Emergency Telephonic Intimation </a></li>	
 								<li><a href="https://115.124.110.149/web/guest/explore_data">Explore Data </a></li>	
@@ -99,8 +100,8 @@
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 										<li><a href="https://115.124.110.149/web/guest/follow-up-information">Follow Up Information </a></li>	
 								<li><a href="https://115.124.110.149/web/guest/follow-up-guidelines">Guidelines</a></li>
-                <li><a href="https://www.drysraarogyasri.ap.gov.in/documents/d/guest/listof102">List of 102 additional procedures</a></li>
-                <li><a href="https://www.drysraarogyasri.ap.gov.in/documents/d/guest/nahbhosp">List of NABH Hospitals</a></li>
+                <li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/listof102">List of 102 additional procedures</a></li>
+                <li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/listofnabh_hospitals">List of NABH Hospitals</a></li>
 								 
 						  </ul>
 						</div>

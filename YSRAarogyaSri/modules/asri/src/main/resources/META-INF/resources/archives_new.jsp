@@ -1,9 +1,11 @@
-<%@ include file="/headinga.jsp" %>
-<%@ include file="/topa.jsp" %>
+<%@ include file="/heading.jsp" %>
+<%@ include file="/top.jsp" %>
 
-<%@ include file="/sidea.jsp" %>
-<%@ include file="/rightContenta.jsp" %>
-   <h3 class="bordertitle text-dark">Archive (New)</h3>
+<%@ include file="/sidebar.jsp" %>
+<%@ include file="/rightContent.jsp" %>
+
+
+    <h3 class="bordertitle text-dark">Archive (New)</h3>
     <ul class="tab">
        <li>"29.04.2021: Circular on inclusion of APSRTC(PTD)employees under the EHS scheme "<a href="/documents/10181/0/PTDRTC/0cf422ba-7b63-41d1-abef-e0bd61e6e6db " target="_blank">(Click here to Download)</a>&nbsp;</li>
        <li>"10.08.2020 - Inclusion of certain procedures under the scheme of Employee Health Scheme to treat the cases of suspected and confirmed positive COVID -19 "<a href="/documents/10181/0/NWHCircular/5719450a-75af-4747-9e88-a6f257409efe" target="_blank">(Click here to Download)</a>&nbsp;</li>
@@ -284,4 +286,5 @@
       </ul>
       
 
-<%@ include file="/lasta.jsp" %>
+
+<%@ include file="/last.jsp" %>

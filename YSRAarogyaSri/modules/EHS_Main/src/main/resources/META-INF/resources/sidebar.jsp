@@ -58,11 +58,7 @@
             <a href="/web/guest/hospital_preauthorization">Pre-Authorization</a>
           </li>
           <li><a href="/web/guest/hospital_claims1">Claims</a></li>
-          <li>
-            <a href="/web/guest/hospital_dentalempanelment1"
-              >Dental Empanelment Guidelines</a
-            >
-          </li>
+
           <li>
             <a href="/web/guest/hospital_empanelmentguidelines"
               >Empanelment Guidelines
@@ -215,9 +211,7 @@
       </button>
       <div class="collapse" id="pensioners-collapse">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <li>
-            <a href="/web/guest/pensioners_chronic">Chronic OP Treatment </a>
-          </li>
+
           <li>
             <a href="/web/guest/pensioners_login"
               >Pensioner Login Instructions</a

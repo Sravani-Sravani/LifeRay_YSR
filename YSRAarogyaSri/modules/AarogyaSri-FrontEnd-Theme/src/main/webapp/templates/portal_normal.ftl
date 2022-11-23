@@ -69,14 +69,14 @@ crossorigin="anonymous"></script>
 		 <span class="language-entry-long-text" lang="en-US">English</span>
 		 <a href="/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=te_IN" class="language-entry-long-text" lang="te-IN">తెలుగు</a>
 </#if>
-				 <a href="/web/guest/screen_reader_11"><i class="fa-solid fa-mobile-screen"></i> ScreenReader </a> 
-				 <a href="/web/guest/glossary"><i class="fa-solid fa-book-open-cover"></i> Glossary </a>   
+				 <a href="/web/guest/screen_reader_11"><i class="fa-solid fa-mobile-screen"></i>${screen_reader} </a> 
+				 <a href="/web/guest/glossary"><i class="fa-solid fa-book-open-cover"></i>${glossary} </a>   
         
 				 </div>
 				 <div class="col-lg-6 right_topbar"> 
 					<p class="btn btn-danger btn-sm"><i class="bi bi-telephone px-2 py-1"> 104</i></p>
-				 <p class="btn btn-success btn-sm"><a href="https://115.124.110.149/web/guest/signin">SIGN IN</a></p>      
-				 <p class="btn btn-success btn-sm"><i class="fa-regular fa-virus-covid"></i> <a href="https://115.124.110.149/web/guest/covid_19">Covid-19</a></p>    
+				 <p class="btn btn-success btn-sm"><a href="https://115.124.110.149/web/guest/signin">${sign_in}</a></p>      
+				 <p class="btn btn-success btn-sm"><i class="fa-regular fa-virus-covid"></i> <a href="https://115.124.110.149/web/guest/covid_19">${covid}</a></p>    
 				 </div>	
 			 </div>
 		<div class="portlet-body" style="float: left;" id="languages-section">
@@ -115,9 +115,30 @@ crossorigin="anonymous"></script>
 				  <li><a class="dropdown-item" href="/mitra-search">${arogya_mitra}</a></li>
               </ul>
 			  </li>
-				<li><a class="dropdown-item <#if pageId==21> active </#if>" href="/arogyaraksha">${ar}</a></li>
-				<li><a class="dropdown-item <#if pageId==25> active </#if>"  href="/wjhs">${wjhs_short}</a></li>
-				<li><a class="dropdown-item <#if pageId==27> active </#if>" href="/ehs">${ehs_short}</a></li>
+				<li><a class="dropdown-item <#if pageId==21> active </#if>" href="/arogyaraksha">${ar}</a>
+				<ul class="submenu dropdown-menu">
+                <li><a class="dropdown-item" href="https://115.124.110.149/hospital-search">${hospitals}</a></li>
+                <li><a class="dropdown-item" href="/procedures-search">${procedures}</a></li>
+                 <li><a class="dropdown-item" href="/specialty-Search">${speciality_search}</a></li>
+				  <li><a class="dropdown-item" href="/mitra-search">${arogya_mitra}</a></li>
+              </ul>
+				</li>
+				<li><a class="dropdown-item <#if pageId==25> active </#if>"  href="/wjhs">${wjhs_short}</a>
+				<ul class="submenu dropdown-menu">
+                <li><a class="dropdown-item" href="https://115.124.110.149/hospital-search">${hospitals}</a></li>
+                <li><a class="dropdown-item" href="/procedures-search">${procedures}</a></li>
+                 <li><a class="dropdown-item" href="/specialty-Search">${speciality_search}</a></li>
+				  <li><a class="dropdown-item" href="/mitra-search">${arogya_mitra}</a></li>
+              </ul>
+				</li>
+				<li><a class="dropdown-item <#if pageId==27> active </#if>" href="/ehs">${ehs_short}</a>
+							  <ul class="submenu dropdown-menu">
+                <li><a class="dropdown-item" href="https://115.124.110.149/hospital-search">${hospitals}</a></li>
+                <li><a class="dropdown-item" href="/procedures-search">${procedures}</a></li>
+                 <li><a class="dropdown-item" href="/specialty-Search">${speciality_search}</a></li>
+				  <li><a class="dropdown-item" href="/mitra-search">${arogya_mitra}</a></li>
+              </ul>
+				</li>
 			  </ul>
 			</li>
 			<!--<li class="nav-item"><a class="nav-link" href="#">${know_more}</a></li>  -->       
@@ -207,9 +228,9 @@ ${pin_code}:522503 <br />
 			<li><a href="/web/guest/ehs">${ehs}</a></li> 
 			<li><a href="/web/guest/wjhs">${wjhs}</a></li> 
 			<li><a href="/web/guest/arogyaraksha">${ar}</a></li> 
-			<li> <a href="">AarogyaShri App</a></li>
-			<li> <a href="">Mitra App</a></li>
-			<li> <a href="">EHS App</a></li>
+			<li> <a href="">${asri_app}</a></li>
+			<li> <a href="">${mitra_app}</a></li>
+			<li> <a href="">${ehs_app}</a></li>
 			
 			
         </ul>
@@ -261,25 +282,25 @@ ${pin_code}:522503 <br />
               <li>
                 <a
                   href="https://nhsrcindia.org/"
-                  >NHSRC
+                  >${nhsrc}
                 </a>
               </li>
                <li>
                 <a
                   href="http://www.mohfw.nic.in/"
-                  >MOHFW
+                  >${mohfw}
                 </a>
               </li>
             <li>
                 <a
                   href="https://cfw.ap.nic.in/"
-                  >COHFW
+                  >${cohfw}
                 </a>
               </li>
               <li>
                 <a
                   href="https://www.nppaindia.nic.in/en/"
-                  >NPPA India
+                  >${nppa_india}
                 </a>
               </li>
             </ul>
@@ -292,7 +313,7 @@ ${pin_code}:522503 <br />
           <div class="d-flex flex-column flex-sm-row w-100 gap-2" style="padding-bottom:5px;">
            <img src="/o/AarogyaSri-FrontEnd-Theme/images/btn_googlePlay.svg" class="img-fluid" alt="Get on Playstore" />
                  </div>
-                 <p><b>${last_updated} : </b> 23-11-2022 <br /> <b>${total_visitors} : </b> 3100</p>
+                 <p><b>${last_updated} : </b> 24-11-2022 <br /> <b>${total_visitors} : </b> 3100</p>
        </div>
     </div>
 

@@ -19,17 +19,12 @@
 						</ul></div>
 					  </li>
 					  <li class="mb-1">
-						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#hospital-collapse" aria-expanded="false">
-						 Current Procedures
-						</button>
-						<div class="collapse" id="patienta-collapse" style="">
-						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-								<li><a href="https://aarogyaraksha.ap.gov.in/ASRI/publicViewsAction.do?call=home&amp;actionVal=HomePgSurgList&amp;page=Surgery/TherapyList&amp;stateFlag=ap&amp;">View Section </a></li>
-								
-							  </ul>
-						</div>
-					  </li>
-					  
+					  <li class="mb-1"> <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patienta-collapse" aria-expanded="false"> Current Procedures </button> 
+					   <div class="collapse" id="patienta-collapse" style=""> 
+						<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"> 
+						 <li><a href="https://aarogyaraksha.ap.gov.in/ASRI/publicViewsAction.do?call=home&amp;actionVal=HomePgSurgList&amp;page=Surgery/TherapyList&amp;stateFlag=ap&amp;">View Section </a></li> 
+						</ul> 
+					   </div> </li> 
 		
 					  <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#employees-collapse" aria-expanded="false">
@@ -59,19 +54,14 @@
 						  </ul>
 						</div>
 					  </li>
-					  <li class="mb-1">
-						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#pensioners-collapse" aria-expanded="false">
-							Follow-Up Packages
-						</button>
-						<div class="collapse" id="follow-collapse">
-						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-								
-								<li><a href="https://115.124.110.149/web/guest/follow-up-information">Follow Up Information </a></li>	
-								<li><a href="https://115.124.110.149/web/guest/follow-up-guidelines">Guidelines</a></li> 
-								 
-						  </ul>
-						</div>
-					  </li>
+								   <li class="mb-1"> <button class="btn btn-toggle align-items-center" data-bs-toggle="collapse" data-bs-target="#pensioners-collapse" aria-expanded="false"> Follow-Up Packages </button> 
+						<div class="collapse" id="pensioners-collapse" style=""> 
+						 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"> 
+						  <li><a href="https://115.124.110.149/web/guest/follow-up-information">Follow Up Information </a></li> 
+						  <li><a href="https://115.124.110.149/web/guest/follow-up-guidelines">Guidelines</a></li> 
+						  
+						 </ul> 
+						</div> </li>
 					</ul> 
 </div>
 

@@ -5,7 +5,7 @@
 themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
 long pId=themeDisplay.getPlid();
 %>
-  <%if(pId==45 || pId==49){ %>
+  <%if(pId==45 || pId==49 || pId==6){ %>
  
  <%@ include file="/hospital_search.jsp" %>
  <% }else if(pId==43 || pId==165){ %>

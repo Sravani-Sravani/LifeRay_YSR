@@ -1,8 +1,10 @@
-<%@ include file="/headinga.jsp" %>
-<%@ include file="/topa.jsp" %>
+<%@ include file="/heading.jsp" %>
+<%@ include file="/top.jsp" %>
 
-<%@ include file="/sidea.jsp" %>
-<%@ include file="/rightContenta.jsp" %>
+<%@ include file="/sidebar.jsp" %>
+<%@ include file="/rightContent.jsp" %>
+
+
 						 <h3 class="bordertitle text-dark">Archive (Old)</h3>
 						
 						   <ul class="tab">
@@ -384,6 +386,6 @@
 							<li><span class="date">15.12.2012:</span> "Setting up of a Water Distillation Plant at Aarogyasri Health Care Trust" <a href="javascript:WaterDistillationPlant()">Click here for details</a></li>
 							<li><span class="date">15.12.2012:</span> Bid Notification for "Internal Audit (Reconciliation) for Aarogyasri Health Care Trust" <a href="javascript:Internal_Audit()">Click here for details</a></li>
 						   </ul>
-						 
 
-<%@ include file="/lasta.jsp" %>
+
+<%@ include file="/last.jsp" %>

@@ -2,6 +2,7 @@
 home="Home"
 about="About Us"
 faq = "FAQ"
+covid = "COVID - 19"
 schemes = "Schemes"
 trust = "DR. YSR AAROGYASRI HEALTH CARE TRUST"
 ap_state_govt = "ANDHRA PRADESH STATE GOVERNMENT"
@@ -42,4 +43,15 @@ hospitals = "Hospitals"
 procedures = "Procedures"
 speciality_search = "Speciality Search"
 arogya_mitra = "Arogya Mitra"
+
+asri_app = "AarogyaShri App"
+mitra_app = "Mitra App"
+ehs_app = "EHS App"
+nhsrc = "NHSRC"
+mohfw = "MOHFW"
+cohfw = "COHFW"
+nppa_india = "NPPA India"
+
+glossary = "Glossary"
+screen_reader = "ScreenReader"
 />
