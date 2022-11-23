@@ -51,15 +51,12 @@ public class AsrimSearchPortlet extends MVCPortlet {
 		public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
 				throws IOException, PortletException {
 		 	super.doView(renderRequest, renderResponse);
-		
-	
 	}
 	public void serveResource(ResourceRequest resourceRequest, ResourceResponse resourceResponse)
 			throws IOException, PortletException {
 		String cmd = ParamUtil.getString(resourceRequest, "cmd");
 		String cmdType = ParamUtil.getString(resourceRequest, "cmdType");
 		
-  		
 		if (cmd.equals("hospitalsList")) {
 			try {
 				try {
@@ -103,111 +100,50 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			} catch (SystemException e) {
 				e.printStackTrace();
 			}
-		}
-		
-		/*
-		 * else if (cmd.equals("stateLevelAsrimHospCount")) { try { try {
-		 * getStateLevelAsrimHospCount(cmdType, resourceRequest, resourceResponse); }
-		 * catch (PortalException e) { e.printStackTrace(); } } catch (SystemException
-		 * e) { e.printStackTrace(); } }
-		 */
-		
-		 
+		} 
 	}
 	public static void getHospitalsList(String type, ResourceRequest resourceRequest, ResourceResponse resourceResponse)
 			throws SystemException, PortalException, JSONException {
-	 
 		JSONObject myObject =null;
 		try {
 			     final String POST_PARAMS = "{\n" + "\"districtid\": null,\r\n" +
 				        "    \"hospitalid\": null,\r\n" +
 				        "    \"hospitaltype\": null\r\n" + "\n}";
-			    System.out.println(POST_PARAMS);
+			    //System.out.println(POST_PARAMS);
 				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/searchhospital");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
-			   // postConnection.reques
-			    //postConnection.setRequestProperty("userId", "a1bcdefgh"); 
-			    
-			    //postConnection.setRequestProperty("Content-Type", "application/json");
-			    //postConnection.setRequestProperty("dataType", "json");
-			    
-			    postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
+		 	    postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
 			    postConnection.setRequestProperty("Accept", "application/json;odata=verbose");
-		        
-			    //postConnection.setRequestProperty("data", POST_PARAMS);
-		 	    postConnection.setDoOutput(true);
+		   	    postConnection.setDoOutput(true);
 		 	   postConnection.setDoInput(true);
 		 	   
 			    OutputStream os = postConnection.getOutputStream();
-			/*
-			 * BufferedWriter writer = new BufferedWriter( new OutputStreamWriter(os,
-			 * "UTF-8"));
-			 */
-			    os.write(POST_PARAMS.getBytes());
+			     os.write(POST_PARAMS.getBytes());
 			    os.flush();
 			    os.close();
 			    int responseCode = postConnection.getResponseCode();
-			  //  System.out.println("POST Response Code1 :  " + responseCode);
-			   // System.out.println("POST Response Message1 : " + postConnection.getResponseMessage());
-			    
-			 //   System.out.println("jsondata : " + jsondata);
-			    
-			    if (responseCode == 200 || responseCode == HttpURLConnection.HTTP_CREATED) { //success
-			    //	System.out.println("POST WORKED1");
-			    	BufferedReader in = new BufferedReader(new InputStreamReader(
+			     if (responseCode == 200 || responseCode == HttpURLConnection.HTTP_CREATED) { //success
+			     	BufferedReader in = new BufferedReader(new InputStreamReader(
 			            postConnection.getInputStream()));
 			        String inputLine;
 			        StringBuffer response = new StringBuffer();
-			        
-			       // System.out.println("-------------------->>>>>>"+in.readLine());
-			        while ((inputLine = in .readLine()) != null) {
+			         while ((inputLine = in .readLine()) != null) {
 			        	 response.append(inputLine);
 			             
 			        } in .close();
 			        
 			         myObject = new JSONObject(response.toString());
-			        
-			       // JSONArray array = new JSONArray(response.toString());  
-			    	//System.out.println("--------array------------"+array.length());
-			    	//System.out.println("--------myObject------------"+myObject.length());
-			        // print result
-			        //System.out.println(response.toString());
-			        //_log.info(response);
-			    } else {
-			        System.out.println("POST NOT WORKED");
+			     } else {
+			        System.out.println("Hospitals API NOT WORKEING responseCode>>>"+responseCode);
 			    }
- 
-			   //com.liferay.portal.kernel.json.JSONObject json = DataGridDisplayManageUtil.getPositionList(type, resourceRequest);
-			  // System.out.println(json);
-			   //Iterator<String> keys = myObject.keys();
- 
+   
 			    JSONObject jo = new JSONObject();
-			   // JSONArray ja = new JSONArray();
-			    // populate the array
-			  //  System.out.println("---------------------");
-			  //  System.out.println(myObject.get("result").toString());
-			    //System.out.println("---------------------");
-			   JSONArray array = new JSONArray(myObject.get("result").toString());
-			       
-			   // JSONObject myObject1 =  new JSONObject(array.toString());// new JSONObject(myObject.get("result").toString());
-			    jo.put("data",array);
+	 		   JSONArray array = new JSONArray(myObject.get("result").toString());
+	 		    jo.put("data",array);
 				    
-		  System.out.println("--------array------------"+array.length());
-			/*
-			 * while(keys.hasNext()) { String key = keys.next(); // if (myObject.get(key)
-			 * instanceof JSONObject) { // do something with jsonObject here
-			 * System.out.println("key>>"+key); if()
-			 * System.out.println("myObject.get(key)>>"+myObject.get(key)); // } }
-			 */
-			    
-		//	    System.out.println("-------------json Strat------------");
-			    //System.out.println(json);
-			//    System.out.println("-----------json end-----------");
-			  //  System.out.println("-------------Jo Strat------------");
-			   // System.out.println(jo);
-			   // System.out.println("-----------Jo end-----------");
-		    
+		  System.out.println("--------Hospitals Count------------"+array.length());
+	  	    
 			    PrintWriter writer1 = resourceResponse.getWriter();
 			writer1.print(jo);
 		} catch (Exception e) {
@@ -220,7 +156,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 		JSONObject myObject =null;
 		try {
 			     final String POST_PARAMS = "{\n" + "\"surgeryid\": null\r\n" +"}";
-			    System.out.println(POST_PARAMS);
+			    //System.out.println(POST_PARAMS);
 				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/searchprocedure");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
@@ -230,10 +166,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 		 	      postConnection.setDoInput(true);
 		 	   
 			    OutputStream os = postConnection.getOutputStream();
-			/*
-			 * BufferedWriter writer = new BufferedWriter( new OutputStreamWriter(os,
-			 * "UTF-8"));
-			 */
+			 
 			    os.write(POST_PARAMS.getBytes());
 			    os.flush();
 			    os.close();
@@ -251,12 +184,12 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			        
 			         myObject = new JSONObject(response.toString());
 			     			    } else {
-			        System.out.println("POST NOT WORKED");
+			        System.out.println("Procedures API NOT WORKING responseCode>>>"+responseCode);
 			    }
   			    JSONObject jo = new JSONObject();
 	 		   JSONArray array = new JSONArray(myObject.get("result").toString());
 	 		    jo.put("data",array);
-	    	  System.out.println("--------array------------"+array.length());		    
+	    	  System.out.println("--------Procedures Count------------"+array.length());		    
 			    PrintWriter writer1 = resourceResponse.getWriter();
 			writer1.print(jo);
 		} catch (Exception e) {
@@ -273,7 +206,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 				        "    \"specialitycode\": null,\r\n" + 
 				        "    \"procedurename\": null,\r\n" + 
 				        "    \"proceduretypeid\": null\r\n" + "\n}";
-			    System.out.println(POST_PARAMS);
+			    //System.out.println(POST_PARAMS);
 				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/searchspeciality");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
@@ -283,11 +216,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 		 	      postConnection.setDoInput(true);
 		 	   
 			    OutputStream os = postConnection.getOutputStream();
-			/*
-			 * BufferedWriter writer = new BufferedWriter( new OutputStreamWriter(os,
-			 * "UTF-8"));
-			 */
-			    os.write(POST_PARAMS.getBytes());
+			     os.write(POST_PARAMS.getBytes());
 			    os.flush();
 			    os.close();
 			    int responseCode = postConnection.getResponseCode();
@@ -304,12 +233,12 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			        
 			         myObject = new JSONObject(response.toString());
 			     			    } else {
-			        System.out.println("POST NOT WORKED");
+			        System.out.println("Speciality API NOT WORKED responseCode >>"+responseCode);
 			    }
   			    JSONObject jo = new JSONObject();
 	 		   JSONArray array = new JSONArray(myObject.get("result").toString());
 	 		    jo.put("data",array);
-	    	  System.out.println("--------array------------"+array.length());		    
+	    	  System.out.println("--------Speciality Count------------"+array.length());		    
 			    PrintWriter writer1 = resourceResponse.getWriter();
 			writer1.print(jo);
 		} catch (Exception e) {
@@ -324,7 +253,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 		JSONObject myObject =null;
 		try {
 			 final String POST_PARAMS = "{\n" + "\"districtid\": null\r\n" + "\n}";
-			    System.out.println(POST_PARAMS);
+			  //  System.out.println(POST_PARAMS);
 				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/mitra-search-districtwise");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
@@ -334,10 +263,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 		 	      postConnection.setDoInput(true);
 		 	   
 			    OutputStream os = postConnection.getOutputStream();
-			/*
-			 * BufferedWriter writer = new BufferedWriter( new OutputStreamWriter(os,
-			 * "UTF-8"));
-			 */
+		 
 			    os.write(POST_PARAMS.getBytes());
 			    os.flush();
 			    os.close();
@@ -355,18 +281,17 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			        
 			         myObject = new JSONObject(response.toString());
 			     			    } else {
-			        System.out.println("POST NOT WORKED");
+			        System.out.println("Mitras API NOT WORKED responseCode>>"+responseCode);
 			    }
   			    JSONObject jo = new JSONObject();
 	 		   JSONArray array = new JSONArray(myObject.get("result").toString());
 	 		    jo.put("data",array);
-	    	  System.out.println("--------array------------"+array.length());		    
+	    	  System.out.println("--------Mitras Count------------"+array.length());		    
 			    PrintWriter writer1 = resourceResponse.getWriter();
 			writer1.print(jo);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
-		
+	 
 }

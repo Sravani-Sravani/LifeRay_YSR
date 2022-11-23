@@ -175,20 +175,10 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
                          	
                         }); 
                 });
-            
-
-           <%--  //var districtId="<%=DIST_ID%>";
-          //   $("#select-2").val(districtId.toUpperCase()).trigger('change'); --%>
              
             stoploader();
-        },
-       /*  initComplete: function(){
-            console.log('Data loaded successfully');
-          }, */
-        bStateSave: true
-		/* fixedHeader: {
-	        header:true
-		} */
+        }, 
+        bStateSave: true 
     });
 //}); 
 	
@@ -235,14 +225,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  	 <div id="loader"></div>
  	 <div class="ysri_section">
 	<section class="blue_section">
-	
-	<!-- <div class="row col-md-12" id="loader"  style="display:none;">
-  <div class="col-md-5"></div>
-  <div class="col-md-3">
-  <div class="loader"></div>
-  </div>
-  <div class="col-md-4"></div>
-  </div> -->
+	 
 	  <div class="container search_panel">
 		  <h3>Aarogyasri / Procedure Search</h3>
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
@@ -269,13 +252,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				<select class="form-select" id="select-2" name="select-2">
 				    <option value="">Show All</option>
 				 </select>
-				</div><!-- 
-				<div class="col-2">
-				<label  for="Procedure Type">Procedure Type</label>
-				<select class="form-select" id="select-4" name="select-3">
-				    <option value="">Show All</option>
-				 </select>
-				</div> -->
+				</div>
  </div>
  </form>
  <div id="recordList" class="table-responsive-md">

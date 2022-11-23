@@ -178,17 +178,9 @@ String districtId=request.getParameter("districtId").trim();
            }
              stoploader();
         },
-        processing: true,
-       /*  initComplete: function(){
-            console.log('Data loaded successfully');
-          }, */
+        processing: true, 
         bStateSave: true
-		/* fixedHeader: {
-	        header:true
-		} */
-    });
-//}); 
-	
+    }); 
 	}
 	
 	function setCookie(cname,cvalue,exdays) {
@@ -270,12 +262,6 @@ $(document).ready(function() {
 <style>
  th, td { white-space: nowrap; 
     }
-    /* #recordList table tr td{
-    width: 200px;
-    display: block;
-    overflow-x: scroll; 
-    } */
-    
     div.dataTables_wrapper {
         margin: 0 auto;
     }

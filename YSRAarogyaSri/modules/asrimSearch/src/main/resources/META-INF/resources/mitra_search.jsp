@@ -45,8 +45,7 @@
 		      statesList.add("Telagana");
 		      statesList.add("Karnataka");
 		      statesList.add("Tamilnadu");
-		 
-		     // List<AsrimLocations> asrimDistrictsList=null;	  
+		 	  
 		        for(int i=0;i<statesList.size();i++){
 		        	 System.out.println("statesList.get(i)>>>"+statesList.get(i));
 		        	for(int j=0;j<states_List.length();j++){
@@ -79,13 +78,7 @@
 			  </div>
 			  <% } } } %>
 			  
-		  </div>
-		  <br>
-		  <br>
-		  <br>
-		  <br>
-		  <br>
-		  
+		  </div> 
 	</section>  <!-- services_section -->
 
 	

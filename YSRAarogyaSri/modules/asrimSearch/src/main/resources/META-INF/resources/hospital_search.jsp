@@ -32,11 +32,7 @@ System.out.print("states_List"+states_List.toString());
  .alert-dismissible{disaply:none;}
 .alert-danger{disaply:none;}
 </style>
-<div class="ysri_section">
-             <!--  <portlet:renderURL var="ViewDistrictWiseListURL">
-					<portlet:param name="mvcPath" value="/districtWiseHospitals.jsp" />
-					<portlet:param name="applicationId" value="" />
-				</portlet:renderURL> -->		
+<div class="ysri_section"> 	
 <section class="blue_section search_panel">
 	  <div class="container">
 		  <h3>Aarogyasri State Empanelled Hospitals</h3><br>
@@ -49,18 +45,16 @@ System.out.print("states_List"+states_List.toString());
 		      statesList.add("Karnataka");
 		      statesList.add("Chennai");
  		       
-	        for(int i=0;i<statesList.size();i++){
-	    		//System.out.print("states_List1"+states_List.get(i));
-	    		 System.out.println("statesList.get(i)>>>"+statesList.get(i));
+	        for(int i=0;i<statesList.size();i++){ 
+	    		// System.out.println("statesList.get(i)>>>"+statesList.get(i));
 	    		for(int j=0;j<states_List.length();j++){
-	    		org.json.JSONArray data=new org.json.JSONArray(states_List.get(j).toString());
-	    		//System.out.print("states_List1"+statesList1.getString(0));
+	    		org.json.JSONArray data=new org.json.JSONArray(states_List.get(j).toString()); 
  	    	   
 	    	   String stateId=data.getString(1);
 	    	   String stateName=data.getString(0);
 	    	   long govtHospitalCount=data.getLong(2);
 	 		   long privateHospitalCount=data.getLong(3);
-	 		   System.out.println("stateName>>>"+stateName);
+	 		//   System.out.println("stateName>>>"+stateName);
 	 		   if(stateName.trim().equalsIgnoreCase(statesList.get(i))){
 	 		   if(stateName.equalsIgnoreCase("Chennai")){
 	 			  stateName="Tamilnadu";
@@ -89,12 +83,7 @@ System.out.print("states_List"+states_List.toString());
 			  
 			  <%  } } } %>
 		  </div>
-		  <br>
-		  <br>
-		  <br>
-		  <br>
-		  <br>
-		  
+		   
 	</section>  	
 <script>
 function viewRecords(recordId){

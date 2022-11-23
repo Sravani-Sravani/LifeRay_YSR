@@ -177,14 +177,8 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
                 });
             
             stoploader();
-        },
-       /*  initComplete: function(){
-            console.log('Data loaded successfully');
-          }, */
-        bStateSave: true
-		/* fixedHeader: {
-	        header:true
-		} */
+        }, 
+        bStateSave: true 
     });
 //}); 
 	

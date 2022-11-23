@@ -35,22 +35,7 @@ System.out.print("districts_List"+districts_List.toString());
 		    	 String districtId="";	
 		    	 	String districtName=data.getString(0);
 		    	   long govtHospitalCount=data.getLong(1);
-		 		   long privateHospitalCount=data.getLong(2);
-		 		  /*  
-		 		 List<AsrimLocations> asrimLocation=null;
-		 		 try{
-		 				DynamicQuery dynamicQuery = null;
-		 				dynamicQuery = AsrimLocationsLocalServiceUtil.dynamicQuery(); 
-		 					dynamicQuery.add(RestrictionsFactoryUtil.eq("LOC_STATE_VAL", stateId));
-		 					dynamicQuery.add(RestrictionsFactoryUtil.eq("LOC_NAME", districtName)); 
-		 		 }
-		 		 catch(Exception e){
-		 			 e.printStackTrace();
-		 		 }
-		 		  if(asrimLocation!=null){
-		 			 districtId=asrimLocation.get(0).getLOC_ID();
-		 		  } */
-		    
+		 		   long privateHospitalCount=data.getLong(2); 
 		  %>
 		  <portlet:renderURL var="viewGovtHospitalsURL">
 			<portlet:param name="mvcPath" value="/hospitalsList.jsp"/>

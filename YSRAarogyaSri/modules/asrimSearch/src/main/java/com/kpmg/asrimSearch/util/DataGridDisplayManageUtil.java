@@ -20,15 +20,9 @@ import java.net.URL;
 		     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
 		    postConnection.setRequestProperty("Accept", "application/json;odata=verbose");
 	          postConnection.setDoOutput(true);
-	 	      postConnection.setDoInput(true);
-	 	    // OutputStream os = postConnection.getOutputStream();
-			   // BufferedWriter writer = new BufferedWriter(
-	             //       new OutputStreamWriter(os, "UTF-8"));
-			    //os.write(POST_PARAMS.getBytes());
-			  //  os.flush();
-			   // os.close();
+	 	      postConnection.setDoInput(true); 
 			    int responseCode = postConnection.getResponseCode();
-			    System.out.println("responseCode"+responseCode);
+			//    System.out.println("responseCode"+responseCode);
 		    if (responseCode == 200 || responseCode == HttpURLConnection.HTTP_CREATED) { //success
 		    	BufferedReader in = new BufferedReader(new InputStreamReader(
 			            postConnection.getInputStream()));
@@ -38,32 +32,21 @@ import java.net.URL;
 		        	 response.append(inputLine);
 		             
 		        } in .close();
-		        System.out.println("myObject"+response.toString());
+		       // System.out.println("myObject"+response.toString());
 		         myObject = new org.json.JSONObject(response.toString());
-		         System.out.println("myObject"+myObject.getString("result"));
+		         //System.out.println("myObject"+myObject.getString("result"));
 		         array = new org.json.JSONArray(myObject.getString("result")); 
-		         
-		        // System.out.println("--------array------------"+array.get(0));	
-		    	 //System.out.println("--------array------------"+array.length());
-		         
+		           
 		     } 
 		     else {
-		        System.out.println("POST NOT WORKED");
-		       }
-		 //  org.json.JSONObject jo = new org.json.JSONObject();
- 		 //  org.json.JSONArray array = new org.json.JSONArray(myObject.get("result").toString());
- 		   //jo.put("data",array);
- 		 // System.out.println("--------array------------"+array);	
-    	 // System.out.println("--------array------------"+array.length());		    
-		//    PrintWriter writer1 = resourceResponse.getWriter();
-		//writer1.print(jo);
+		        System.out.println("hospital API NOT WORKEING responseCode>>>>"+responseCode);
+		       } 
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
 	return array;
  }
-
-
+ 
 
 public static org.json.JSONArray getDistrictAsrimHospCount(String stateId) {
 	org.json.JSONObject myObject =null;
@@ -71,7 +54,7 @@ public static org.json.JSONArray getDistrictAsrimHospCount(String stateId) {
 	try {  
 		
 		 final String POST_PARAMS = "{\n" + "\"stateVal\": "+stateId+ "\n}";
-		    System.out.println(POST_PARAMS);
+//		    System.out.println(POST_PARAMS);
 		    
 		   URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/asri-hospital-districtwisecount");
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
@@ -82,15 +65,11 @@ public static org.json.JSONArray getDistrictAsrimHospCount(String stateId) {
 	 	      postConnection.setDoInput(true);
 
 			    OutputStream os = postConnection.getOutputStream();
-			/*
-			 * BufferedWriter writer = new BufferedWriter( new OutputStreamWriter(os,
-			 * "UTF-8"));
-			 */
-			    os.write(POST_PARAMS.getBytes());
+	 		    os.write(POST_PARAMS.getBytes());
 			    os.flush();
 			    os.close();
 			    int responseCode = postConnection.getResponseCode();
-			    System.out.println("responseCode"+responseCode);
+			   // System.out.println("responseCode"+responseCode);
 		    if (responseCode == 200 || responseCode == HttpURLConnection.HTTP_CREATED) { //success
 		    	BufferedReader in = new BufferedReader(new InputStreamReader(
 			            postConnection.getInputStream()));
@@ -100,25 +79,15 @@ public static org.json.JSONArray getDistrictAsrimHospCount(String stateId) {
 		        	 response.append(inputLine);
 		             
 		        } in .close();
-		        System.out.println("myObject"+response.toString());
+		        //System.out.println("myObject"+response.toString());
 		         myObject = new org.json.JSONObject(response.toString());
-		         System.out.println("myObject"+myObject.getString("result"));
+		        // System.out.println("myObject"+myObject.getString("result"));
 		         array = new org.json.JSONArray(myObject.getString("result")); 
-		         
-		        // System.out.println("--------array------------"+array.get(0));	
-		    	 //System.out.println("--------array------------"+array.length());
-		         
+		              
 		     } 
 		     else {
-		        System.out.println("POST NOT WORKED");
-		       }
-		 //  org.json.JSONObject jo = new org.json.JSONObject();
- 		 //  org.json.JSONArray array = new org.json.JSONArray(myObject.get("result").toString());
- 		   //jo.put("data",array);
- 		 // System.out.println("--------array------------"+array);	
-    	 // System.out.println("--------array------------"+array.length());		    
-		//    PrintWriter writer1 = resourceResponse.getWriter();
-		//writer1.print(jo);
+		        System.out.println("hospitals districtwisecount API NOT WORKEING responseCode>>>"+responseCode);
+		       } 
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
@@ -137,7 +106,7 @@ public static org.json.JSONArray getStateLevelAsrimMitrasCount() {
 	          postConnection.setDoOutput(true);
 	 	      postConnection.setDoInput(true);
 	 	     int responseCode = postConnection.getResponseCode();
-			    System.out.println("responseCode"+responseCode);
+			 //   System.out.println("responseCode"+responseCode);
 		    if (responseCode == 200 || responseCode == HttpURLConnection.HTTP_CREATED) { //success
 		    	BufferedReader in = new BufferedReader(new InputStreamReader(
 			            postConnection.getInputStream()));
@@ -147,13 +116,13 @@ public static org.json.JSONArray getStateLevelAsrimMitrasCount() {
 		        	 response.append(inputLine);
 		             
 		        } in .close();
-		        System.out.println("myObject"+response.toString());
+		     //   System.out.println("myObject"+response.toString());
 		         myObject = new org.json.JSONObject(response.toString());
-		         System.out.println("myObject"+myObject.getString("result"));
+		       //  System.out.println("myObject"+myObject.getString("result"));
 		         array = new org.json.JSONArray(myObject.getString("result")); 		         
 		     } 
 		     else {
-		        System.out.println("POST NOT WORKED");
+		        System.out.println("mitra-search API NOT WORKING responseCode>>>"+responseCode);
 		       }
 	} catch (Exception e) {
 		e.printStackTrace();
@@ -166,7 +135,7 @@ public static org.json.JSONArray getDistrictAsrimMitrasCount(String stateId) {
 	try {  
 		
 		 final String POST_PARAMS = "{\n" + "\"stateid\": "+stateId+ "\n}";
-		    System.out.println(POST_PARAMS);
+		   // System.out.println(POST_PARAMS);
 		    
 		   URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/mitra-search-statewise");
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
@@ -177,10 +146,7 @@ public static org.json.JSONArray getDistrictAsrimMitrasCount(String stateId) {
 	 	      postConnection.setDoInput(true);
 
 			OutputStream os = postConnection.getOutputStream();
-			/*
-																 * BufferedWriter writer = new BufferedWriter( new
-																 * OutputStreamWriter(os, "UTF-8"));
-																 */
+			
 			    os.write(POST_PARAMS.getBytes());
 			    os.flush();
 			    os.close();

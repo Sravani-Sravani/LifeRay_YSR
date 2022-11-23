@@ -42,11 +42,7 @@
 		      <div class="col-lg-3">
 			  	<div class="card">
 				  <div class="card-body">
-					<h5 class="card-title"><%=diseaseName %></h5>
-					<%--  <% if(hospitalCount>0){ %>
-					    <a onClick="viewRecords('<%=diseaseId %>');" class="card-link"> 
-					              Procedure - <%=proceduresCount %></a>
-					<% }else { %> Procedure - <%=proceduresCount %> <% } %> --%>
+					<h5 class="card-title"><%=diseaseName %></h5> 
 					<% if(hospitalCount>0){ %>
 					<a style="cursor: pointer;" onClick="viewHospitalRecords('<%=diseaseName %>');" class="card-link">Hospitals - <%=hospitalCount %> </a>
 				  <% }else{ %>Hospitals - <%=hospitalCount %> <% } %>

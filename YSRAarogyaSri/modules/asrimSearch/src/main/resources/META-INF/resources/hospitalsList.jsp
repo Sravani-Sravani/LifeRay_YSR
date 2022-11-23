@@ -127,36 +127,17 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 		var scrollXVal = dataTables.tables[selectedFilter].scrollX;
 		var aoCustomColumn=dataTables.tables[selectedFilter].aoColumnDefs;
 		 for(i=0;i<columns.length;i++){
-			if(primaryKeyColumnName==columns[i]) primaryKeyColumn=i;
-        	//console.log("primaryKeyColumn stored as: "+primaryKeyColumn);
+			if(primaryKeyColumnName==columns[i]) primaryKeyColumn=i; 
 			$("#recordList tr").append("<th scope='col'>"+columns[i]+"</th>");
-		}
-		//for(i=0;i<columns.length;i++){
-			//if(primaryKeyColumnName==columns[ i]) primaryKeyColumn=i;
-        	//console.log("primaryKeyColumn stored as: "+primaryKeyColumn);
-		//	$("#recordList tr <tfoot").append("<th>"+columns[i]+"</th>");
-		//}
-		//$("#recordList tr").append("<tfoot><tr> <th>Name</th><th>Position</th><th>Office</th><th>Age</th><th>Start date</th><th>Salary</th></tr></tfoot>");"
-		//console.log("About to load dataURL as: " + dataURL);
+		} 
      datatable = $('#recordList table').removeAttr('width').DataTable({
     	 ajax: dataURL,
     	 dom: 'Blfrtip',
 	     lengthMenu: [10, 25, 50, 100],
 	     order: [[ 0, "asc" ]],
-			/* "columnDefs": [
-	            {
-	                "targets": [0 ],
-	                "visible": booleanflag
-	            
-	            }], */
-          //scrollX: scrollXVal,
           scrollY: false,
           scrollx: true,
-          //scrollY: '100vh',
-         //scrollCollapse: true,
-         //scrollY: '750px',
          sScrollX: '100%',
-        ///scrollCollapse: true,
          aoColumnDefs: aoCustomColumn,
 			buttons: [ {
              extend: 'copy'      
@@ -182,40 +163,20 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
                 .columns([0,1,2])
                 .every(function () {
                     var column = this;
-                    console.log(column[0][0]);
-                    //if(column[0][0]==0 || column[0][0]==1 || column[0][0]==3){
-                 //   if(column[0][0]==4){
-                    	 /*   $("#Speciality").on("change", function () {
-                               var val = $.fn.dataTable.util.escapeRegex($("#Speciality").val());
-                               column.search(val ? '^' + val + '$' : '', true, false).draw();
-                           }); */
-                   // }else{
+                  //  console.log(column[0][0]);
+                  
                     	$('#select-'+column[0][0]).find('option').remove().end()
                     	.append('<option value="">Show all</option>').on('change', function () {
                             var val = $.fn.dataTable.util.escapeRegex($('#select-'+column[0][0]).val());
                             column.search(val ? '^' + val + '$' : '', true, false).draw();
                         });
-                    //}
-                        
-                        
-                    	/* var select = $('<select id="select_'+ j++ +'" style="max-width:150px;"><option value="">Show all</option></select>')
-                        .appendTo($(column.header()).empty())
-                        .on('change', function () {
-                            var val = $.fn.dataTable.util.escapeRegex($(this).val());
-                            column.search(val ? '^' + val + '$' : '', true, false).draw();
-                        }); */
+                 
                      column
                         .data()
                         .unique()
                         .sort()
                         .each(function (d, j) {
-                        	// var val = $.fn.dataTable.util.escapeRegex(districtId);
-                         /* 	if(column.search() === '^'+d+'$'){
-								select.append( '<option value="'+d+'" selected="selected">'+d.substr(0,30)+'</option>' )
-							} else {
-								select.append( '<option value="'+d+'">'+d.substr(0,30)+'</option>' )
-							} */
-                         	//console.log(d);
+                       
 							d=$.trim(d);
 							if(d!="" && d!=null){
 								if(column.search() === '^'+d+'$'){
@@ -225,43 +186,21 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 								}
 							} 	
                         });
-                    
-                   /*  if(column[0][0]==3){     
-                    column
-                    .data()
-                    .unique()
-                    .sort()
-                    .each(function (d, j) {
-                    	if(d==districtId){
-                    		 var val = $.fn.dataTable.util.escapeRegex(d);
-                             column.search(val ? '^' + val + '$' : '', true, false).draw();
-	                    }
-                    });
-                    } */ 
-                   // }
-                   // else{
-                    	// var select = $('')
-                         //.appendTo($(column.header()).empty())
-                   // }
                 });
             
            
             <% if(DIST_ID!="" && DIST_ID!=null){ %>
             var districtId="<%=DIST_ID%>";
             districtId=$.trim(districtId);
-           // console.log("districtId value>>>>"+ $("#select-2").val());
-           // console.log("districtId before>>>>"+districtId);
             if(districtId!=null && districtId!=""){
-            //	  console.log("districtId if condition>>>>"+districtId);
-                $("#select-2").val(districtId).trigger('change');
+                 $("#select-2").val(districtId).trigger('change');
             }
-            //console.log("districtId after>>>>"+districtId);
-            <% } %>
+             <% } %>
             <% if(HOSP_TYPE!="" && HOSP_TYPE!=null){ %>
             var hospitalType="<%=HOSP_TYPE%>";
             if(hospitalType!=null && hospitalType!=""){
 
-                console.log("hospitalType>>>>"+ hospitalType);
+             //   console.log("hospitalType>>>>"+ hospitalType);
               $("#select-1").val(hospitalType).trigger('change');
             }
              
@@ -271,22 +210,14 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
              var diseaseName="<%=diseaseName%>";
              if(diseaseName!=null && diseaseName!=""){
             	 $("input[type='search']").val(diseaseName).trigger('keyup');
-                 console.log("diseaseName>>>>"+ diseaseName); 
-                // $("#Speciality").val(diseaseName).trigger('change');
-             }
+              //   console.log("diseaseName>>>>"+ diseaseName); 
+                }
   
              <% } %>
             stoploader();
         },
-        processing: true,
-         
-       /*  initComplete: function(){
-            console.log('Data loaded successfully');
-          }, */
-        bStateSave: true
-		/* fixedHeader: {
-	        header:true
-		} */
+        processing: true, 
+        bStateSave: true 
     });
 //}); 
 	
