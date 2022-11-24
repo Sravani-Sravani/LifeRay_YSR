@@ -1,10 +1,8 @@
-<%@ include file="/heading.jsp" %>
-<%@ include file="/top.jsp" %>
+<%@ include file="/headinga.jsp" %>
+<%@ include file="/topa.jsp" %>
 
-<%@ include file="/sidebar.jsp" %>
-<%@ include file="/rightContent.jsp" %>
-
-
+<%@ include file="/sidea.jsp" %>
+<%@ include file="/rightContenta.jsp" %>
 <h3 class="bordertitle text-dark">FOLLOW UP INFORMATION</h3>
 <div class="accordion" id="accordionExample">
           <div class="ysri_section container" style="margin-top: 30px; overflow-y:auto; overflow-x: hidden; height: 400px;">
@@ -1665,4 +1663,4 @@
 </div>
 
 
-<%@ include file="/last.jsp" %>
+<%@ include file="/lasta.jsp" %>

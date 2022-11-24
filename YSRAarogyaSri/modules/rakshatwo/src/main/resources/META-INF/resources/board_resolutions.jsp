@@ -4,7 +4,9 @@
 <%@ include file="/side.jsp" %>
 <%@ include file="/rightcontentr.jsp" %>
 
-  <h3 class="bordertitle text-dark">Board Resolutions</h3>
+
+
+    <h3 class="bordertitle text-dark">Board Resolutions</h3>
     <div class="row">
        <div class="col-lg-12">
         <table class="table table-bordered table-striped table-hover">

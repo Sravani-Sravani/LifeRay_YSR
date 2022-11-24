@@ -16,7 +16,7 @@ Dental Clinics
  </h4>
  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 <div class="accordion-body">
-<p><a class="btn download_btn" href="https://115.124.110.149/documents/d/guest/hospital_dentalclinic"> Download PDF</a> <iframe src="https://115.124.110.149/documents/d/guest/hospital_dentalclinic" class="iframe_box"></iframe></p>
+<p><a class="btn download_btn" href="/documents/d/guest/hospital_dentalclinic"> Download PDF</a> <iframe src="/documents/d/guest/hospital_dentalclinic" class="iframe_box"></iframe></p>
 </div><!-- accordion-body -->
  </div>
 </div>
@@ -28,7 +28,7 @@ Dental Hospitals
 </h4>
 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
  <div class="accordion-body">
-<p><a class="btn download_btn" href="https://115.124.110.149/documents/d/guest/hospital_dentalhospital"> Download PDF</a><iframe src="https://115.124.110.149/documents/d/guest/hospital_dentalhospital" class="iframe_box"></iframe></p>
+<p><a class="btn download_btn" href="/documents/d/guest/hospital_dentalhospital"> Download PDF</a><iframe src="/documents/d/guest/hospital_dentalhospital" class="iframe_box"></iframe></p>
  </div><!-- accordion-body -->
 </div>
  </div>

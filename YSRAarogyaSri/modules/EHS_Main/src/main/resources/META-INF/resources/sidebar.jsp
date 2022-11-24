@@ -48,6 +48,7 @@
               href="https://www.ehs.ap.gov.in/EmpanelmentsAP/empanelment/Eligibility.jsp?scheme=ehs&state=CD201" target = "_blank">Online Empanelment Application Form</a
             >
           </li>
+          
           <li>
             <a href="/web/guest/hospital_networkhospital">Network Hospitals</a>
           </li>
@@ -58,7 +59,11 @@
             <a href="/web/guest/hospital_preauthorization">Pre-Authorization</a>
           </li>
           <li><a href="/web/guest/hospital_claims1">Claims</a></li>
-
+          <li>
+            <a href="/web/guest/hospital_dentalempanelment1"
+              >Dental Empanelment Guidelines</a
+            >
+          </li>
           <li>
             <a href="/web/guest/hospital_empanelmentguidelines"
               >Empanelment Guidelines
@@ -144,8 +149,7 @@
       <div class="collapse" id="employees-collapse">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
           <li>
-            <a href="/web/guest/employee_chroinicpatient"
-              >Chronic Out-Patient Treatment</a
+            <a href="/documents/d/guest/chronicop_2" target="_blank"  >Chronic Out-Patient Treatment</a
             >
           </li>
           <li>

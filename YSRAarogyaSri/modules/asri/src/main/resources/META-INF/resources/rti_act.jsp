@@ -1,9 +1,8 @@
-<%@ include file="/heading.jsp" %>
-<%@ include file="/top.jsp" %>
+<%@ include file="/headinga.jsp" %>
+<%@ include file="/topa.jsp" %>
 
-<%@ include file="/sidebar.jsp" %>
-<%@ include file="/rightContent.jsp" %>
-
+<%@ include file="/sidea.jsp" %>
+<%@ include file="/rightContenta.jsp" %>
     <h3 class="bordertitle text-dark">RTI ACT</h3>
 
         <table class="table table-bordered table-hover" style="margin-top: 40px; overflow-x: auto;">
@@ -42,4 +41,4 @@
           </tbody>
            </table>
 
-<%@ include file="/last.jsp" %>
+<%@ include file="/lasta.jsp" %>

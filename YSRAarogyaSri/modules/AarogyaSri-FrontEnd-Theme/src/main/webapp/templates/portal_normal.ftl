@@ -321,7 +321,7 @@ ${pin_code}:522503 <br />
     </div>
 	  <div class="copyright">
 		 <div class="container">
-      &copy; ${copyright}</div> 
+      &copy;Site maintained by KPMG Advisory Services Pvt. Ltd. (in consortium with SRIT India Pvt. Ltd.). The contents are owned by Govt.of AP,India.</div> 
     </div>		  
   </footer>
 <!--End of footer-->	

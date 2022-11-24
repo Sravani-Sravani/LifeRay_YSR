@@ -1,8 +1,8 @@
-<%@ include file="/heading.jsp" %>
-<%@ include file="/top.jsp" %>
+<%@ include file="/headinga.jsp" %>
+<%@ include file="/topa.jsp" %>
 
-<%@ include file="/sidebar.jsp" %>
-<%@ include file="/rightContent.jsp" %>
+<%@ include file="/sidea.jsp" %>
+<%@ include file="/rightContenta.jsp" %>
 
     <h3 class="bordertitle text-dark">DR.YSR AAROGYASRI SCHEME</h3>
     <h5 class="bordertitle tet-dark">Introduction</h5>
@@ -119,4 +119,4 @@
     Independent evaluation of the scheme by IIPH (Indian institute of Public Health) established the fact that the scheme had profound impact on the health needs of the poor population. Eighty seven percent of beneficiaries who had a low Standard of Living Index (SLI) reported improvement following treatment of their condition. The unemployed together with unskilled labourers made up nearly half the sample, confirming that the scheme was appropriately benefitting economically poor households. The beneficiary satisfaction is highest and the beneficiaries were unanimous that the scheme had transformed their lives. Government has decided to evaluate functioning of the scheme through third party CGG and provide insights into the current performance of the scheme against the overall objectives.
 
 
-<%@ include file="/last.jsp" %>
+<%@ include file="/lasta.jsp" %>

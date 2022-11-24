@@ -6,7 +6,7 @@
 
 
     <h3 class="bordertitle text-dark">Government Orders</h3>
-    <d iv class="row">
+    <div class="row">
          <table class="table table-bordered table-striped table-hover">
           <thead style="background: black !important; color: white !important;">
            <tr>

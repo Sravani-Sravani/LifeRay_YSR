@@ -1,10 +1,8 @@
-<%@ include file="/heading.jsp" %>
-<%@ include file="/top.jsp" %>
+<%@ include file="/headinga.jsp" %>
+<%@ include file="/topa.jsp" %>
 
-<%@ include file="/sidebar.jsp" %>
-<%@ include file="/rightContent.jsp" %>
-
-
+<%@ include file="/sidea.jsp" %>
+<%@ include file="/rightContenta.jsp" %>
 	<h3 class="bordertitle text-dark">BOARD OF TRUSTEES</h3> 
 	
 
@@ -138,4 +136,4 @@
 				  <!--ysri_section-->	  
 				
 
-<%@ include file="/last.jsp" %>
+<%@ include file="/lasta.jsp" %>

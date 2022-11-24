@@ -1,4 +1,0 @@
-Bundle-Name: rakshamain
-Bundle-SymbolicName: com.kpmg.rakshamain
-Bundle-Version: 1.0.0
-Export-Package: com.kpmg.rakshamain.constants

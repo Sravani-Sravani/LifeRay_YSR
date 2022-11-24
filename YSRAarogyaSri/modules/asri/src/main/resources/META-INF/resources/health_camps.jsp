@@ -1,9 +1,8 @@
-<%@ include file="/heading.jsp" %>
-<%@ include file="/top.jsp" %>
+<%@ include file="/headinga.jsp" %>
+<%@ include file="/topa.jsp" %>
 
-<%@ include file="/sidebar.jsp" %>
-<%@ include file="/rightContent.jsp" %>
-
+<%@ include file="/sidea.jsp" %>
+<%@ include file="/rightContenta.jsp" %>
     <h3 class="bordertitle text-dark">Health Camp Policy</h3>
     <p>Employees Health Scheme is formulated to provide cashless treatment to the employees, pensioners of the State Government and their dependent family members, which will ipso facto replace the existing medical reimbursement system under the 'Andhra Pradesh Integrated medical Attendance Rules, 1972 (APIMA Rules, 1972)', with additional benefits such as post-operative care and treatment of Chronic diseases, which do not require hospitalization and treatment in empanelled Hospitals.</p> 
     
@@ -134,4 +133,4 @@
         
 
 
-<%@ include file="/last.jsp" %>
+<%@ include file="/lasta.jsp" %>

@@ -1,10 +1,8 @@
-<%@ include file="/heading.jsp" %>
-<%@ include file="/top.jsp" %>
+<%@ include file="/headinga.jsp" %>
+<%@ include file="/topa.jsp" %>
 
-<%@ include file="/sidebar.jsp" %>
-<%@ include file="/rightContent.jsp" %>
-
-
+<%@ include file="/sidea.jsp" %>
+<%@ include file="/rightContenta.jsp" %>
     <h3 class="bordertitle text-dark">WHO IS WHO (DISTRICT COORDINATORS & DISTRICT MANAGER)</h3>
 
         <table class="table table-sm table-bordered table-hover">
@@ -214,4 +212,4 @@
   
   
 
-<%@ include file="/last.jsp" %>
+<%@ include file="/lasta.jsp" %>

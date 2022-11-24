@@ -18,6 +18,18 @@
 							<li><a href="https://115.124.110.149/web/guest/about-us-rti-act">RTI Act</a></li>
 						</ul></div>
 					  </li>
+			<li class="mb-1"> <button class="btn btn-toggle align-items-center" data-bs-toggle="collapse" data-bs-target="#patientg-collapse" aria-expanded="false"> Documents &amp; Reports </button> 
+              <div class="collapse " id="patientg-collapse" style=""> 
+               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"> 
+                <li><a href="https://115.124.110.149/web/guest/ar_bids_and_agreements">Bids and Agreements</a></li> 
+                <li><a href="https://115.124.110.149/web/guest/ar_guidelines_manuals_and_sops">Guidelines, Manuals and SOPs</a></li> 
+                <li><a href="https://115.124.110.149/web/guest/ar_process_flow_documents">Process Flow Documents</a></li> 
+                <li><a href="https://115.124.110.149/web/guest/ar_board_resolutions">Board Resolutions</a></li> 
+                <li><a href="https://115.124.110.149/web/guest/ar_reports_and_working_pages">Reports and Working Pages</a></li> 
+                <li><a href="https://115.124.110.149/web/guest/ar_publicity">Publicity</a></li> 
+                <li><a href="https://115.124.110.149/web/guest/ar_government_orders">Government Orders</a></li> 
+               </ul> 
+              </div> </li>
 					  <li class="mb-1">
 					  <li class="mb-1"> <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patienta-collapse" aria-expanded="false"> Current Procedures </button> 
 					   <div class="collapse" id="patienta-collapse" style=""> 
@@ -48,8 +60,7 @@
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 
                 <li><a href="https://115.124.110.149/web/guest/circulars">Circulars</a></li>
-								<li><a href="https://115.124.110.149/web/guest/asricaution">Caution </a></li>
-                	<li><a href="https://115.124.110.149/web/guest/ar_notification">Notification </a></li>
+	                	<li><a href="https://115.124.110.149/web/guest/ar_notification1">Notification </a></li>
 								 
 						  </ul>
 						</div>

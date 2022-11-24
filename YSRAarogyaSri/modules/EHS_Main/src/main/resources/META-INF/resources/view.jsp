@@ -37,7 +37,7 @@ if(pageId==6|| pageId==33||pageId==27){ %>
 <%}else if(pageId==214){ %>
 <%@ include file="/hospital_specialization.jsp" %>
 <%}else{ %>
-PageIsNotFound IN ehs
+PageIsNotFound IN ehsmain
 <%}
 %>
 
