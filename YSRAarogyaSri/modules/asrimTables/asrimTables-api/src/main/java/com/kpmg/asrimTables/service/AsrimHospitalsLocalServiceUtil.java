@@ -251,6 +251,13 @@ public class AsrimHospitalsLocalServiceUtil {
 		return getService().getAsrimHospitalsesCount();
 	}
 
+	public static List<AsrimHospitals> getHospitalsBySearch(
+		String DIST_ID, String HOSP_TYPE, List<String> hospitalList) {
+
+		return getService().getHospitalsBySearch(
+			DIST_ID, HOSP_TYPE, hospitalList);
+	}
+
 	/**
 	 * Returns the OSGi service identifier.
 	 *
@@ -267,6 +274,14 @@ public class AsrimHospitalsLocalServiceUtil {
 		throws PortalException {
 
 		return getService().getPersistedModel(primaryKeyObj);
+	}
+
+	public static List<AsrimHospitals> getSearchHospitals(
+		String DIST_ID, String HOSP_NAME, String hospital_type, String stateId,
+		List<String> list) {
+
+		return getService().getSearchHospitals(
+			DIST_ID, HOSP_NAME, hospital_type, stateId, list);
 	}
 
 	/**

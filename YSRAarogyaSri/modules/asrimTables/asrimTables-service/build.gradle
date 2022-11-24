@@ -1,7 +1,8 @@
 dependencies {
 	compile project(":modules:asrimTables:asrimTables-api")
-
 	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+	implementation group: 'com.liferay', name: 'com.liferay.portal.dao.orm.custom.sql.api', version: '4.1.4'
+	
 }
 
 buildService {

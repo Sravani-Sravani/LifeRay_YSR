@@ -232,6 +232,10 @@ public interface AsrimHospitalsLocalService
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public int getAsrimHospitalsesCount();
 
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public List<AsrimHospitals> getHospitalsBySearch(
+		String DIST_ID, String HOSP_TYPE, List<String> hospitalList);
+
 	/**
 	 * Returns the OSGi service identifier.
 	 *
@@ -246,6 +250,11 @@ public interface AsrimHospitalsLocalService
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public PersistedModel getPersistedModel(Serializable primaryKeyObj)
 		throws PortalException;
+
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public List<AsrimHospitals> getSearchHospitals(
+		String DIST_ID, String HOSP_NAME, String hospital_type, String stateId,
+		List<String> list);
 
 	/**
 	 * Updates the asrim hospitals in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.

@@ -1,4 +1,6 @@
- <%@page import="com.kpmg.wjhsSearch.util.DataGridDisplayManageUtil"%>
+ <%@page import="com.liferay.portal.kernel.util.WebKeys"%>
+<%@page import="com.liferay.portal.kernel.theme.ThemeDisplay"%>
+<%@page import="com.kpmg.wjhsSearch.util.DataGridDisplayManageUtil"%>
 <%@page import="org.json.JSONArray"%> 
 <%@page import="com.liferay.portal.kernel.dao.orm.Order"%> 
 <%@page import="com.liferay.portal.kernel.dao.orm.OrderFactoryUtil"%>
@@ -15,6 +17,10 @@
  .alert-dismissible{disaply:none;}
 .alert-danger{disaply:none;}
 </style>
+ <% 
+themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
+long pId=themeDisplay.getPlid();
+%>
  <%
  String stateId = ParamUtil.getString(request, "recordId");
  System.out.println("stateId>>>"+stateId);
@@ -24,7 +30,7 @@ System.out.print("districts_List"+districts_List.toString());
 <div class="ysri_section">
 	<section class="blue_section">
 	  <div class="container search_panel">
-		  <h3>Aarogyasri / District Wise - Empanelled Hospitals</h3><br>
+		  <h3> <%if(pId==499){ %> WJHS <% }else if(pId==491){ %>EHS <% } %>  / District Wise - Empanelled Hospitals</h3><br>
 		  <div class="row">
 		  
 		  <%  try{ 
