@@ -17,6 +17,7 @@ package com.kpmg.asrimTables.service.base;
 import com.kpmg.asrimTables.model.Foo;
 import com.kpmg.asrimTables.service.FooLocalService;
 import com.kpmg.asrimTables.service.FooLocalServiceUtil;
+import com.kpmg.asrimTables.service.persistence.AsrimHospitalsFinder;
 import com.kpmg.asrimTables.service.persistence.AsrimHospitalsPersistence;
 import com.kpmg.asrimTables.service.persistence.AsrimLocationsPersistence;
 import com.kpmg.asrimTables.service.persistence.FooPersistence;
@@ -578,6 +579,9 @@ public abstract class FooLocalServiceBaseImpl
 
 	@Reference
 	protected AsrimHospitalsPersistence asrimHospitalsPersistence;
+
+	@Reference
+	protected AsrimHospitalsFinder asrimHospitalsFinder;
 
 	@Reference
 	protected AsrimLocationsPersistence asrimLocationsPersistence;

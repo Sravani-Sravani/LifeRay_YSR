@@ -10,10 +10,10 @@ com/kpmg/asrimTables/exception/NoSuchAsrimLocationsException.java
 com/kpmg/asrimTables/model/AsrimLocations.java
  com.kpmg.asrimTables.model.AsrimLocations
  com.kpmg.asrimTables.model.AsrimLocations$1
-com/kpmg/asrimTables/service/AsrimLocationsLocalServiceUtil.java
- com.kpmg.asrimTables.service.AsrimLocationsLocalServiceUtil
-com/kpmg/asrimTables/service/AsrimLocationsLocalServiceWrapper.java
- com.kpmg.asrimTables.service.AsrimLocationsLocalServiceWrapper
+com/kpmg/asrimTables/service/FooLocalService.java
+ com.kpmg.asrimTables.service.FooLocalService
+com/kpmg/asrimTables/model/AsrimLocationsWrapper.java
+ com.kpmg.asrimTables.model.AsrimLocationsWrapper
 com/kpmg/asrimTables/service/FooLocalServiceUtil.java
  com.kpmg.asrimTables.service.FooLocalServiceUtil
 com/kpmg/asrimTables/service/FooLocalServiceWrapper.java
@@ -26,8 +26,8 @@ com/kpmg/asrimTables/model/AsrimHospitalsModel.java
  com.kpmg.asrimTables.model.AsrimHospitalsModel
 com/kpmg/asrimTables/model/FooModel.java
  com.kpmg.asrimTables.model.FooModel
-com/kpmg/asrimTables/service/AsrimHospitalsLocalServiceWrapper.java
- com.kpmg.asrimTables.service.AsrimHospitalsLocalServiceWrapper
+com/kpmg/asrimTables/model/AsrimHospitalsTable.java
+ com.kpmg.asrimTables.model.AsrimHospitalsTable
 com/kpmg/asrimTables/service/persistence/AsrimLocationsPersistence.java
  com.kpmg.asrimTables.service.persistence.AsrimLocationsPersistence
 com/kpmg/asrimTables/service/persistence/FooPersistence.java
@@ -42,22 +42,24 @@ com/kpmg/asrimTables/exception/NoSuchAsrimHospitalsException.java
  com.kpmg.asrimTables.exception.NoSuchAsrimHospitalsException
 com/kpmg/asrimTables/service/persistence/FooUtil.java
  com.kpmg.asrimTables.service.persistence.FooUtil
+com/kpmg/asrimTables/service/persistence/AsrimHospitalsFinder.java
+ com.kpmg.asrimTables.service.persistence.AsrimHospitalsFinder
+com/kpmg/asrimTables/model/FooTable.java
+ com.kpmg.asrimTables.model.FooTable
+com/kpmg/asrimTables/model/AsrimLocationsModel.java
+ com.kpmg.asrimTables.model.AsrimLocationsModel
+com/kpmg/asrimTables/model/AsrimHospitals.java
+ com.kpmg.asrimTables.model.AsrimHospitals
+ com.kpmg.asrimTables.model.AsrimHospitals$1
+com/kpmg/asrimTables/service/AsrimLocationsLocalServiceUtil.java
+ com.kpmg.asrimTables.service.AsrimLocationsLocalServiceUtil
+com/kpmg/asrimTables/service/AsrimLocationsLocalServiceWrapper.java
+ com.kpmg.asrimTables.service.AsrimLocationsLocalServiceWrapper
 com/kpmg/asrimTables/service/AsrimLocationsLocalService.java
  com.kpmg.asrimTables.service.AsrimLocationsLocalService
 com/kpmg/asrimTables/service/AsrimHospitalsLocalService.java
  com.kpmg.asrimTables.service.AsrimHospitalsLocalService
+com/kpmg/asrimTables/service/AsrimHospitalsLocalServiceWrapper.java
+ com.kpmg.asrimTables.service.AsrimHospitalsLocalServiceWrapper
 com/kpmg/asrimTables/service/AsrimHospitalsLocalServiceUtil.java
  com.kpmg.asrimTables.service.AsrimHospitalsLocalServiceUtil
-com/kpmg/asrimTables/model/AsrimHospitals.java
- com.kpmg.asrimTables.model.AsrimHospitals
- com.kpmg.asrimTables.model.AsrimHospitals$1
-com/kpmg/asrimTables/service/FooLocalService.java
- com.kpmg.asrimTables.service.FooLocalService
-com/kpmg/asrimTables/model/AsrimLocationsWrapper.java
- com.kpmg.asrimTables.model.AsrimLocationsWrapper
-com/kpmg/asrimTables/model/AsrimLocationsModel.java
- com.kpmg.asrimTables.model.AsrimLocationsModel
-com/kpmg/asrimTables/model/AsrimHospitalsTable.java
- com.kpmg.asrimTables.model.AsrimHospitalsTable
-com/kpmg/asrimTables/model/FooTable.java
- com.kpmg.asrimTables.model.FooTable

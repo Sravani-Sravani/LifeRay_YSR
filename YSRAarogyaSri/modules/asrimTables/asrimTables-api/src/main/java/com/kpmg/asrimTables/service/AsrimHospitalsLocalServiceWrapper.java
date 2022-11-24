@@ -278,6 +278,16 @@ public class AsrimHospitalsLocalServiceWrapper
 		return _asrimHospitalsLocalService.getAsrimHospitalsesCount();
 	}
 
+	@Override
+	public java.util.List<com.kpmg.asrimTables.model.AsrimHospitals>
+		getHospitalsBySearch(
+			String DIST_ID, String HOSP_TYPE,
+			java.util.List<String> hospitalList) {
+
+		return _asrimHospitalsLocalService.getHospitalsBySearch(
+			DIST_ID, HOSP_TYPE, hospitalList);
+	}
+
 	/**
 	 * Returns the OSGi service identifier.
 	 *
@@ -297,6 +307,16 @@ public class AsrimHospitalsLocalServiceWrapper
 		throws com.liferay.portal.kernel.exception.PortalException {
 
 		return _asrimHospitalsLocalService.getPersistedModel(primaryKeyObj);
+	}
+
+	@Override
+	public java.util.List<com.kpmg.asrimTables.model.AsrimHospitals>
+		getSearchHospitals(
+			String DIST_ID, String HOSP_NAME, String hospital_type,
+			String stateId, java.util.List<String> list) {
+
+		return _asrimHospitalsLocalService.getSearchHospitals(
+			DIST_ID, HOSP_NAME, hospital_type, stateId, list);
 	}
 
 	/**

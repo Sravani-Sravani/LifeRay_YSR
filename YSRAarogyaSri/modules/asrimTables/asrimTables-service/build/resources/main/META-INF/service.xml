@@ -151,7 +151,7 @@
  	 	<column name="ERR_MSGS_HOSP_ATTACH" type="String"></column>
  	 	<column name="PAN_NUMBER" type="String"></column>
 </entity>
-<entity name="AsrimLocations" local-service="true" remote-service="false" table="asrim_locations">
+  <entity name="AsrimLocations" local-service="true" remote-service="false" table="asrim_locations">
  <column name="LOC_ID" type="String" primary="true"></column> 
 <column name="LOC_NAME" type="String"></column> 
 <column name="LOC_PARNT_ID" type="String"></column> 
@@ -175,4 +175,5 @@
 <column name="LOC_DESC_TEL" type="String"></column> 
 <column name="LOC_STATE_VAL" type="String"></column>
  </entity>
-</service-builder>
+ 
+ </service-builder>

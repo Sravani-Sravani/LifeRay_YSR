@@ -1,7 +1,7 @@
 <%@page import="com.liferay.portal.kernel.util.WebKeys"%>
 <%@page import="com.liferay.portal.kernel.theme.ThemeDisplay"%>
 <%@ include file="/init.jsp" %>
-    <% 
+   <% 
 themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
 long pId=themeDisplay.getPlid();
 %>
