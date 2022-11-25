@@ -1,0 +1,53 @@
+AR-APIs
+------
+
+1. (2) Speciality Search POST method -10.48.19.54:8092/portalsearchapi/public/ARcount-specialitysearch
+{
+    "specialityId":null
+}
+
+2. (5) Mithra search GET method - 10.48.19.54:8092/portalsearchapi/public/ARmitra-search
+3. (6) Mithra search POST method - 10.48.19.54:8092/portalsearchapi/public/ARmitra-search-statewise
+{
+    "stateid":"8"
+}
+
+4. (7) Mithra search POST method - 10.48.19.54:8092/portalsearchapi/public/ARmitra-search-districtwise
+{
+    "districtid":"12"
+}
+
+5. (8)Hospitals search GET method - 10.48.19.54:8092/portalsearchapi/public/AR-hospitalsearch
+6. (9)Hospitals search POST method - 10.48.19.54:8092/portalsearchapi/public/AR-hospitalsearch-statewisecount
+{
+    "stateVal":"7"
+}
+
+7. (10)Hospitals search POST method - 10.48.19.54:8092/portalsearchapi/public/AR-hospitalsearch-districtwise
+{
+    "districtid":"03"
+}
+
+8. (11)Procedure Search - 10.48.19.54:8092/portalsearchapi/public/AR-searchprocedure
+{
+    "surgeryid":"M6.5"
+}
+
+
+-------------------------------------------------------------------------------------------------------------------
+EHS-APIs
+--------
+
+GET http://10.48.19.54:8093/portalsearchapi/public/ehs-mitra-search Working
+
+POST http://10.48.19.54:8093/portalsearchapi/public/ehs-count-specialitysearch  Not Working
+{
+    "specialityId":null
+}
+POST http://10.48.19.54:8093/portalsearchapi/public/ehs-hospital-districtwisecount  Not Working
+{
+    "districtid":"12"
+}
+
+GET http://10.48.19.54:8093/portalsearchapi/public/ehs-hospital-statewisecount Working
+
