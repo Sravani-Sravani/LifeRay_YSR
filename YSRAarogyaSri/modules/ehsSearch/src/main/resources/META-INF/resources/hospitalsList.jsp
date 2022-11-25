@@ -1,4 +1,4 @@
-<%@page import="com.kpmg.wjhsSearch.util.DataGridDisplayManageUtil"%>
+<%@page import="com.kpmg.ehsSearch.util.DataGridDisplayManageUtil"%>
 <%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
 <%@ include file="/init.jsp" %>
 <%@ include file="/html/dataTableIncludes.jspf" %>  
