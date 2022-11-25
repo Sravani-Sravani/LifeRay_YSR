@@ -5,15 +5,17 @@
 themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
 long pId=themeDisplay.getPlid();
 %>
-  <%if(pId==45 || pId==49 || pId==6){ %>
+  <%if(pId==513){ %>
  
  <%@ include file="/hospital_search.jsp" %>
- <% }else if(pId==43 || pId==165){ %>
+ <% }else if(pId==515){ %>
  <%@ include file="/speciality_search.jsp" %>
- <% }else if(pId==41 || pId==163){ %>
+ <% }else if(pId==517){ %>
  <%@ include file="/procedure_search.jsp" %>
- <% }else if(pId==47 || pId==167){ %>
+ <% }else if(pId==519){ %>
    <%@ include file="/mitra_search.jsp" %>
+   <% }else{ %>
+   Asrim Search Page not Created
    <% } %>
               
    

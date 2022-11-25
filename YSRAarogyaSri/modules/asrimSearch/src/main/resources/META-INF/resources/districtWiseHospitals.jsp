@@ -1,4 +1,4 @@
- <%@page import="com.kpmg.wjhsSearch.util.DataGridDisplayManageUtil"%>
+ <%@page import="com.kpmg.asrimSearch.util.DataGridDisplayManageUtil"%>
 <%@page import="org.json.JSONArray"%> 
 <%@page import="com.liferay.portal.kernel.dao.orm.Order"%> 
 <%@page import="com.liferay.portal.kernel.dao.orm.OrderFactoryUtil"%>

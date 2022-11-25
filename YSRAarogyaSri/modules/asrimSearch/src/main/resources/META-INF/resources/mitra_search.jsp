@@ -1,4 +1,4 @@
-<%@page import="com.kpmg.wjhsSearch.util.DataGridDisplayManageUtil"%> 
+<%@page import="com.kpmg.asrimSearch.util.DataGridDisplayManageUtil"%> 
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.liferay.portal.kernel.dao.orm.OrderFactoryUtil"%> 
 <%@page import="java.util.HashMap"%>
