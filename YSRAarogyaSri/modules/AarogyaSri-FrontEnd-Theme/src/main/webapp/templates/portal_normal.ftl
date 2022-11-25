@@ -69,8 +69,8 @@ crossorigin="anonymous"></script>
 		 <span class="language-entry-long-text" lang="en-US">English</span>
 		 <a href="/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=te_IN" class="language-entry-long-text" lang="te-IN">తెలుగు</a>
 </#if>
-				 <a href="/web/guest/screen_reader_11"><i class="fa-solid fa-mobile-screen"></i>${screen_reader} </a> 
-				 <a href="/web/guest/glossary"><i class="fa-solid fa-book-open-cover"></i>${glossary} </a>   
+				 <a href="/web/guest/screen_reader_11"><i class="fa-solid fa-mobile-screen"></i> ${screen_reader} </a> 
+				 <a href="/web/guest/glossary"><i class="fa-solid fa-book-open-cover"></i> ${glossary} </a>   
         
 				 </div>
 				 <div class="col-lg-6 right_topbar"> 
@@ -109,34 +109,34 @@ crossorigin="anonymous"></script>
 		  <ul class="dropdown-menu" style="overflow: inherit;">
 			<li><a class="dropdown-item <#if pageId==19> active </#if>" href="/asri">${asri}<span>&rsaquo;</span></a>
 			  <ul class="submenu dropdown-menu">
-                <li><a class="dropdown-item" href="https://115.124.110.149/hospital-search">${hospitals}</a></li>
-                <li><a class="dropdown-item" href="/procedures-search">${procedures}</a></li>
-                 <li><a class="dropdown-item" href="/specialty-Search">${speciality_search}</a></li>
-				  <li><a class="dropdown-item" href="/mitra-search">${arogya_mitra}</a></li>
+                <li><a class="dropdown-item" href="/web/guest/asri_hospitalsearch">${hospitals}</a></li>
+                <li><a class="dropdown-item" href="/web/guest/asri_proceduresearch">${procedures}</a></li>
+                 <li><a class="dropdown-item" href="/web/guest/asri_specilitysearch">${speciality_search}</a></li>
+				  <li><a class="dropdown-item" href="/web/guest/asri_mitrasearch">${arogya_mitra}</a></li>
               </ul>
 			  </li>
 				<li><a class="dropdown-item <#if pageId==21> active </#if>" href="/arogyaraksha">${ar}</a>
 				<ul class="submenu dropdown-menu">
-                <li><a class="dropdown-item" href="https://115.124.110.149/hospital-search">${hospitals}</a></li>
-                <li><a class="dropdown-item" href="/procedures-search">${procedures}</a></li>
-                 <li><a class="dropdown-item" href="/specialty-Search">${speciality_search}</a></li>
-				  <li><a class="dropdown-item" href="/mitra-search">${arogya_mitra}</a></li>
+                <li><a class="dropdown-item" href="/web/guest/arogyaraksha_hospitalsearch">${hospitals}</a></li>
+                <li><a class="dropdown-item" href="/web/guest/arogyaraksha_proceduresearch">${procedures}</a></li>
+                 <li><a class="dropdown-item" href="/web/guest/arogyaraksha_specilitysearch">${speciality_search}</a></li>
+				  <li><a class="dropdown-item" href="/web/guest/arogyaraksha_mitrasearch">${arogya_mitra}</a></li>
               </ul>
 				</li>
 				<li><a class="dropdown-item <#if pageId==25> active </#if>"  href="/wjhs">${wjhs_short}</a>
 				<ul class="submenu dropdown-menu">
-                <li><a class="dropdown-item" href="https://115.124.110.149/hospital-search">${hospitals}</a></li>
-                <li><a class="dropdown-item" href="/procedures-search">${procedures}</a></li>
-                 <li><a class="dropdown-item" href="/specialty-Search">${speciality_search}</a></li>
-				  <li><a class="dropdown-item" href="/mitra-search">${arogya_mitra}</a></li>
+                <li><a class="dropdown-item" href="/web/guest/wjhs_hospitalsearch">${hospitals}</a></li>
+                <li><a class="dropdown-item" href="/web/guest/wjhs_proceduresearch">${procedures}</a></li>
+                 <li><a class="dropdown-item" href="/web/guest/wjhs_specilitysearch">${speciality_search}</a></li>
+				  <li><a class="dropdown-item" href="/web/guest/wjhs_mitrasearch">${arogya_mitra}</a></li>
               </ul>
 				</li>
 				<li><a class="dropdown-item <#if pageId==27> active </#if>" href="/ehs">${ehs_short}</a>
 							  <ul class="submenu dropdown-menu">
-                <li><a class="dropdown-item" href="https://115.124.110.149/hospital-search">${hospitals}</a></li>
-                <li><a class="dropdown-item" href="/procedures-search">${procedures}</a></li>
-                 <li><a class="dropdown-item" href="/specialty-Search">${speciality_search}</a></li>
-				  <li><a class="dropdown-item" href="/mitra-search">${arogya_mitra}</a></li>
+                <li><a class="dropdown-item" href="/web/guest/ehs_hospitalsearch">${hospitals}</a></li>
+                <li><a class="dropdown-item" href="/web/guest/ehs_proceduresearch">${procedures}</a></li>
+                 <li><a class="dropdown-item" href="/web/guest/ehs_specilitysearch">${speciality_search}</a></li>
+				  <li><a class="dropdown-item" href="/web/guest/ehs_mitrasearch1">${arogya_mitra}</a></li>
               </ul>
 				</li>
 			  </ul>
@@ -173,7 +173,7 @@ crossorigin="anonymous"></script>
       <div class="quick_links">
         <div class="container">
           <h4>Quick Links</h4>
-          <div class="row mb-5 pb-4">
+          <div class="row">
             <div class="col">
               <div class="content-grid">
                 <div class="row content-grid-row ps-3 pe-3">
@@ -193,12 +193,13 @@ crossorigin="anonymous"></script>
                     <a href="https://www.pmjay.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/5.jpg" alt="" class="img-fluid" /></a>
                   </div>
                   <div class="content-grid-item col-md-4 col-lg-2 text-center">
-                    <a href="https://eoffice.ap.gov.in/cas/login" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/eOfficeLogo.jpeg" alt="" class="img-fluid" /></a>
+                    <a href="https://eoffice.ap.gov.in/cas/login" target="_blank"><img src="/documents/d/guest/eofficelogo" alt="" class="img-fluid" /></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          
         </div>
       </div>
 
@@ -311,7 +312,7 @@ ${pin_code}:522503 <br />
       <div class="col-lg-2">
            <h5 class="bordertitle">FIND US ON</h5>
           <div class="d-flex flex-column flex-sm-row w-100 gap-2" style="padding-bottom:5px;">
-           <img src="/o/AarogyaSri-FrontEnd-Theme/images/btn_googlePlay.svg" class="img-fluid" alt="Get on Playstore" />
+           <a href="https://play.google.com/store/games?hl=enp" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/btn_googlePlay.svg" class="img-fluid" alt="Get on Playstore" /></a>
                  </div>
                  <p><b>${last_updated} : </b> 24-11-2022 <br /> <b>${total_visitors} : </b> 3100</p>
        </div>
