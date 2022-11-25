@@ -60,7 +60,7 @@
           </li>
           <li><a href="/web/guest/hospital_claims1">Claims</a></li>
           <li>
-            <a href="/web/guest/hospital_dentalempanelment1"
+            <a href="/web/guest/hospital_dental"
               >Dental Empanelment Guidelines</a
             >
           </li>
@@ -215,7 +215,12 @@
       </button>
       <div class="collapse" id="pensioners-collapse">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-
+         <li>
+            <a
+              href="/documents/d/guest/chronicop_2" target="_blank" "
+              >Chronic OP Treatment</a
+            >
+          </li>
           <li>
             <a href="/web/guest/pensioners_login"
               >Pensioner Login Instructions</a

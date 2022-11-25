@@ -17,6 +17,10 @@ function stoploader(){
 	}); 
 </script>
  <style>
+  <% 
+themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
+long pId=themeDisplay.getPlid();
+%>
 /* Center the loader */
 #loader {
   position: absolute;
@@ -288,14 +292,14 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
   <div class="col-md-4"></div>
   </div> -->
 	  <div class="container search_panel">
-		  <h3>Empanelled Hospitals List- In Aarogyasri Scheme</h3>
+		  <h3>Empanelled Hospitals List- In <%if(pId==499 || pId==501|| pId==503 || pId==505){ %> WJHS <% }else if(pId==491 || pId==497 || pId==495 || pId==521){ %>EHS <% } %> Scheme</h3>
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
  <div id="searchData" class="row col-md-12">
- <div class="col-2"  style="padding-top: 22px;">
+ <div class="col-lg-2"  style="padding-top: 22px;">
 	<h6>Search Hospitals</h6>		 
 </div>
        
-				<div class="col-2">
+				<div class="col-lg-2">
 				<label  for="District">District</label>
 				<select class="form-select" id="select-2" name="select-2">
 				    <option value="">Show All</option>

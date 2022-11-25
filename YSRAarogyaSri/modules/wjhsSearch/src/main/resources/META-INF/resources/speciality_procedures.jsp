@@ -16,6 +16,10 @@ function stoploader(){
 	}); 
 </script>
 <style>
+ <% 
+themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
+long pId=themeDisplay.getPlid();
+%>
 /* Center the loader */
 #loader {
   position: absolute;
@@ -227,7 +231,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 	<section class="blue_section">
 	 
 	  <div class="container search_panel">
-		  <h3>Aarogyasri / Procedure Search</h3>
+		  <h3><%if(pId==499 || pId==501|| pId==503 || pId==505){ %> WJHS <% }else if(pId==491 || pId==497 || pId==495 || pId==521){ %>EHS <% } %> / Procedure Search</h3>
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
  <div id="searchData" class="row col-md-12">
  <div class="col-2"  style="padding-top: 22px;">
