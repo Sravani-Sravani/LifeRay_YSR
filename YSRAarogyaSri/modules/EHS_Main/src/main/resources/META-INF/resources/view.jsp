@@ -14,8 +14,6 @@ if(pageId==6|| pageId==33||pageId==27){ %>
 <%@ include file="/hospital_chronicpatient.jsp" %>
 <%}else if(pageId==184){ %>
 <%@ include file="/hospital_claims.jsp" %>
-<%}else if(pageId==220){ %>
-<%@ include file="/hospital_dentalempanelment.jsp" %>
 <%}else if(pageId==190){ %>
 <%@ include file="/hospital_edm.jsp" %>
 <%}else if(pageId==194){ %>
@@ -36,6 +34,10 @@ if(pageId==6|| pageId==33||pageId==27){ %>
 <%@ include file="/hospital_preauthorization.jsp" %>
 <%}else if(pageId==214){ %>
 <%@ include file="/hospital_specialization.jsp" %>
+<%}else if(pageId==541){ %>
+<%@ include file="/hospital_dental.jsp" %>
+<%}else if(pageId==220){ %>
+<%@ include file="/hospital_dental.jsp" %>
 <%}else{ %>
 PageIsNotFound IN ehsmain
 <%}

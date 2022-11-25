@@ -54,7 +54,8 @@
 						</button>
 						<div class="collapse" id="patient-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-
+								<li><a href="/web/guest/login_instruction-drpo1-">
+                                                Login Instructions(DPRO)</a></li>
                                         <li><a href="https://115.124.110.149/web/guest/login_instructions_journalist">
                                                 Login Instructions(Journalist)</a></li>
                                         <li><a href="https://115.124.110.149/web/guest/wjhs_schemecoverage2">

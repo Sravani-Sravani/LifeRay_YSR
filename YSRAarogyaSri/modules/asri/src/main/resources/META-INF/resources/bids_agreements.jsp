@@ -16,7 +16,7 @@
 				<ul>
 					  <li><a href="https://115.124.110.149/documents/d/guest/updated_bpo_contract_agreement-2">Contract For Provision Of Services</a></li>
 					  <li><a href="https://115.124.110.149/web/guest/agreements-between-trust-and-network-hospitals.">Agreements Between Trust And Network Hospitals</a></li>
-					  <li><a href="https://115.124.110.149/web/guest/bids_agreements_trust_and_insurance">Bids & Agreements Between Trust And Insurance</a></li>
+					  <li><a href="/web/guest/asri_trust_and_insurance">Bids & Agreements Between Trust And Insurance</a></li>
 				</ul>
 				</div><!-- accordion-body -->
 			</div>

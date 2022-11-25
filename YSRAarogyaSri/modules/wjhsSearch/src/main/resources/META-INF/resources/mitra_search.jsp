@@ -28,6 +28,7 @@
 
 %>
 <style>
+
 .lfr-tooltip-scope{disaply:none;}
  .alert-dismissible{disaply:none;}
 .alert-danger{disaply:none;}
@@ -35,7 +36,7 @@
 <div class="ysri_section">		
 <section class="blue_section search_panel">
 	  <div class="container">
-		  <h3>WJHS / Search State Mitra Information</h3><br>
+		  <h3><%if(pId==499 || pId==501|| pId==503 || pId==505){ %> WJHS <% }else if(pId==491 || pId==497 || pId==495 || pId==521){ %>EHS <% } %> / Search State Mitra Information</h3><br>
 		  <div class="row">
 		      
 		      <% 

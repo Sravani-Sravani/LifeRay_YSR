@@ -11,8 +11,6 @@ System.out.println("pageId="+pageId);
 
 if(pageId==469 || pageId==6){ %>
 <%@ include file="/guidelines_manuals_sops.jsp" %>
-<%}else if(pageId==113){ %>
-<%@ include file="/bids_agreements_bw_trust_and_nw_hospitals.jsp" %>
 <%}else if(pageId==459){ %>
 <%@ include file="/bids_agreements.jsp" %>
 <%}else if(pageId==473){ %>
@@ -33,7 +31,14 @@ if(pageId==469 || pageId==6){ %>
 <%@ include file="/bids_agree_child2.jsp" %>
 <%}else if(pageId==85){ %>
 <%@ include file="/ysr_rti_act.jsp" %>
-<%}else{ %>
+<%}else if(pageId==549){ %>
+<%@ include file="/new_govt_orders.jsp" %>
+<%}else if(pageId==547){ %>
+<%@ include file="/ar_bids_-_agree_trust_-_hosp.jsp" %>
+<%}
+else{ %>
 page not found in rakshatwo
 <%}
 %>
+
+
