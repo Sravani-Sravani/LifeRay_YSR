@@ -106,11 +106,9 @@ public class RakshaSearchPortlet extends MVCPortlet {
 			throws SystemException, PortalException, JSONException {
 		JSONObject myObject =null;
 		try {
-			     final String POST_PARAMS = "{\n" + "\"districtid\": null,\r\n" +
-				        "    \"hospitalid\": null,\r\n" +
-				        "    \"hospitaltype\": null\r\n" + "\n}";
+			     final String POST_PARAMS = "{\n" + "\"districtid\": null\r\n"+ "\n}";
 			    //System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/searchhospital");
+				    URL obj = new URL("http://10.48.19.54:8092/portalsearchapi/public/AR-hospitalsearch-districtwise");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
 		 	    postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -157,7 +155,7 @@ public class RakshaSearchPortlet extends MVCPortlet {
 		try {
 			     final String POST_PARAMS = "{\n" + "\"surgeryid\": null\r\n" +"}";
 			    //System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/searchprocedure");
+				    URL obj = new URL("http://10.48.19.54:8092/portalsearchapi/public/AR-searchprocedure");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
 			     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -189,7 +187,8 @@ public class RakshaSearchPortlet extends MVCPortlet {
   			    JSONObject jo = new JSONObject();
 	 		   JSONArray array = new JSONArray(myObject.get("result").toString());
 	 		    jo.put("data",array);
-	    	  System.out.println("--------Procedures Count------------"+array.length());		    
+	    	  System.out.println("--------Procedures Count------------"+array.length());
+	    	  System.out.println("--------Procedures Array------------"+array);
 			    PrintWriter writer1 = resourceResponse.getWriter();
 			writer1.print(jo);
 		} catch (Exception e) {
@@ -254,7 +253,7 @@ public class RakshaSearchPortlet extends MVCPortlet {
 		try {
 			 final String POST_PARAMS = "{\n" + "\"districtid\": null\r\n" + "\n}";
 			  //  System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/mitra-search-districtwise");
+				    URL obj = new URL("http://10.48.19.54:8092/portalsearchapi/public/ARmitra-search-districtwise");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
 			     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");

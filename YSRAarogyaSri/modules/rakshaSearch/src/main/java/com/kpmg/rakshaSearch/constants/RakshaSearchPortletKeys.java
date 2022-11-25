@@ -6,6 +6,6 @@ package com.kpmg.rakshaSearch.constants;
 public class RakshaSearchPortletKeys {
 
 	public static final String RAKSHASEARCH =
-		"com_kpmg_asrimSearch_AsrimSearchPortlet";
+		"com_kpmg_rakshaSearch_AsrimSearchPortlet";
 
 }

@@ -1,5 +1,5 @@
  <%@page import="org.json.JSONArray"%>
-<%@page import="com.kpmg.wjhsSearch.util.DataGridDisplayManageUtil"%>
+<%@page import="com.kpmg.rakshaSearch.util.DataGridDisplayManageUtil"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.liferay.portal.kernel.dao.orm.Order"%>
 <%@page import="com.liferay.portal.kernel.dao.orm.OrderFactoryUtil"%>

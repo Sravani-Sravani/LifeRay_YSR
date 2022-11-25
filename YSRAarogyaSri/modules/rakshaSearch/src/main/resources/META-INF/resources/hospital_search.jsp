@@ -1,4 +1,4 @@
-<%@page import="com.kpmg.wjhsSearch.util.DataGridDisplayManageUtil"%>
+<%@page import="com.kpmg.rakshaSearch.util.DataGridDisplayManageUtil"%>
 <%@page import="org.json.JSONArray"%>
 <%@page import="org.json.JSONObject"%> 
 <%@page import="java.util.ArrayList"%>

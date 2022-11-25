@@ -5,15 +5,17 @@
 themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
 long pId=themeDisplay.getPlid();
 %>
-  <%if(pId==45 || pId==49 || pId==6){ %>
+  <%if(pId==507){ %>
  
  <%@ include file="/hospital_search.jsp" %>
- <% }else if(pId==43 || pId==165){ %>
+ <% }else if(pId==509){ %>
  <%@ include file="/speciality_search.jsp" %>
- <% }else if(pId==41 || pId==163){ %>
+ <% }else if(pId==511){ %>
  <%@ include file="/procedure_search.jsp" %>
- <% }else if(pId==47 || pId==167){ %>
+ <% }else if(pId==523){ %>
    <%@ include file="/mitra_search.jsp" %>
+   <% }else{ %>
+   Page ID not assigned.
    <% } %>
               
    

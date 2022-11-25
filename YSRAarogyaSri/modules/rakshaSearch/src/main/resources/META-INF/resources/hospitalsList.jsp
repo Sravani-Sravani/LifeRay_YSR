@@ -1,4 +1,4 @@
-<%@page import="com.kpmg.wjhsSearch.util.DataGridDisplayManageUtil"%>
+<%@page import="com.kpmg.rakshaSearch.util.DataGridDisplayManageUtil"%>
 <%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
 <%@ include file="/init.jsp" %>
 <%@ include file="/html/dataTableIncludes.jspf" %>  
@@ -201,7 +201,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
             if(hospitalType!=null && hospitalType!=""){
 
              //   console.log("hospitalType>>>>"+ hospitalType);
-              $("#select-1").val(hospitalType).trigger('change');
+             // $("#select-1").val(hospitalType).trigger('change');
             }
              
              <% } %>            
@@ -212,7 +212,6 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
             	 $("input[type='search']").val(diseaseName).trigger('keyup');
               //   console.log("diseaseName>>>>"+ diseaseName); 
                 }
-  
              <% } %>
             stoploader();
         },

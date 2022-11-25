@@ -34,7 +34,7 @@ function stoploader(){
   border-top: 16px solid #3498db;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
-} 
+}
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
@@ -99,7 +99,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
             {
                 select: "By Associate Number",
                 dataURL:"<%=asrimHProceduresURL.toString()%>",
-                columns:["CODE","SURGERY / THERAPY DESCRIPTION","PROCEDURE TYPE","SPECIAL INVESTIGATION","Treatment Protocol","Aasara Amount","Packages","POST OPERATIVE/PROCEDURE INVESTIGATION"],
+                columns:["CODE","SURGERY / THERAPY DESCRIPTION","SPECIAL INVESTIGATION","Treatment Protocol","Packages","POST OPERATIVE/PROCEDURE INVESTIGATION"],
                 options:{},
                 scrollX: false,
                 header: true,

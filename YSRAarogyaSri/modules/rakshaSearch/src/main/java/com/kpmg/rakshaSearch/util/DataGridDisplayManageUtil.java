@@ -14,7 +14,7 @@ import java.net.URL;
 	org.json.JSONObject myObject =null;
 	org.json.JSONArray array = null;
 	try {
-		   URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/asri-hospital-statewisecount");
+		   URL obj = new URL("http://10.48.19.54:8092/portalsearchapi/public/AR-hospitalsearch");
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 		    postConnection.setRequestMethod("GET");
 		     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -56,7 +56,7 @@ public static org.json.JSONArray getDistrictAsrimHospCount(String stateId) {
 		 final String POST_PARAMS = "{\n" + "\"stateVal\": "+stateId+ "\n}";
 //		    System.out.println(POST_PARAMS);
 		    
-		   URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/asri-hospital-districtwisecount");
+		   URL obj = new URL("http://10.48.19.54:8092/portalsearchapi/public/AR-hospitalsearch-statewisecount");
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 		    postConnection.setRequestMethod("POST");
 		     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -98,7 +98,7 @@ public static org.json.JSONArray getStateLevelAsrimMitrasCount() {
 	org.json.JSONObject myObject =null;
 	org.json.JSONArray array = null;
 	try {
-		   URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/mitra-search");
+		   URL obj = new URL("http://10.48.19.54:8092/portalsearchapi/public/ARmitra-search");
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 		    postConnection.setRequestMethod("GET");
 		     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -137,7 +137,7 @@ public static org.json.JSONArray getDistrictAsrimMitrasCount(String stateId) {
 		 final String POST_PARAMS = "{\n" + "\"stateid\": "+stateId+ "\n}";
 		   // System.out.println(POST_PARAMS);
 		    
-		   URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/mitra-search-statewise");
+		   URL obj = new URL("http://10.48.19.54:8092/portalsearchapi/public/ARmitra-search-statewise");
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 		    postConnection.setRequestMethod("POST");
 		     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -181,7 +181,7 @@ public static org.json.JSONArray getAsriSpecialityCount(String specialityId) {
 	try {
 		 final String POST_PARAMS = "{\n" + "\"specialityId\": "+specialityId+ "\n}";
 		    System.out.println(POST_PARAMS);
-		   URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/count-specialitysearch");
+		   URL obj = new URL("http://10.48.19.54:8092/portalsearchapi/public/ARcount-specialitysearch");
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 		   postConnection.setRequestMethod("POST");
 		   postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
