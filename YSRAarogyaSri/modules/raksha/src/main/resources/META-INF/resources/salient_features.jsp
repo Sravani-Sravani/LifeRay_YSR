@@ -13,9 +13,9 @@
 							<table class="table table-bordered table-hover table-striped">
 							  
 							  <tr> 
-							   <th><h6><a href="https://www.ysraarogyasri.ap.gov.in/documents/10181/0/AR+Maintanance+Enroll1/14cad4f6-fd34-4d95-a597-f36a0f386c27?t=1663914026296">Click Here to Enroll</a></h6></th>
-							   <th><h6><a href="http://pull71.sps.ap.gov.in/NTRSeva/MIS_NTRCovered/MIS_NAbstract.aspx?Id=NTR+Aarogya+Raksha+Covered+Families">Enrollment Statistics</a></h6></th>
-							   <th><h6><a href="http://pull71.sps.ap.gov.in/ARDashboard/reports/ARRenewalAmoutReport.aspx">Renewal Statistics</a></h6></th>
+							   <th><h6><a style = "color:white; text-decoration:none" href="https://www.ysraarogyasri.ap.gov.in/documents/10181/0/AR+Maintanance+Enroll1/14cad4f6-fd34-4d95-a597-f36a0f386c27?t=1663914026296">Click Here to Enroll</a></h6></th>
+							   <th><h6><a style = "color:white; text-decoration:none" href="http://pull71.sps.ap.gov.in/NTRSeva/MIS_NTRCovered/MIS_NAbstract.aspx?Id=NTR+Aarogya+Raksha+Covered+Families">Enrollment Statistics</a></h6></th>
+							   <th><h6><a style = "color:white; text-decoration:none" href="http://pull71.sps.ap.gov.in/ARDashboard/reports/ARRenewalAmoutReport.aspx">Renewal Statistics</a></h6></th>
 							  </tr>
 							 
 							</table>

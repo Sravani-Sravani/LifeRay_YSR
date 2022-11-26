@@ -1,0 +1,4 @@
+Bundle-Name: asrithree
+Bundle-SymbolicName: com.kpmg.asrithree
+Bundle-Version: 1.0.0
+Export-Package: com.kpmg.asrithree.constants

@@ -31,7 +31,7 @@
 							<li><a href="https://115.124.110.149/web/guest/online_application-english">Empanelment Application</a></li> 
 							<li><a href="#">Online Empanelment User Manual</a></li>
 							<li><a href="https://115.124.110.149/documents/d/guest/new_empanelment_documents-2-">Empanelment Application Documents</a></li>  
-               	            <li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/legal_document_for_change_request">Legal Document for Change Request</a></li> 
+               	<li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/legal_document_for_change_request">Legal Document for Change Request</a></li> 
 							<li><a href="https://115.124.110.149/documents/d/guest/emp_doc_of_gov_hosp-2-">List of Empanelment Documents of Government Hospitals in Dr. YSR Aarogyasri</a></li> 
 							<li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/increased_dr.ysr_aarogyasri_health_care_trust-empanelment">Increased Dr.YSR Aarogyasri Health Care Trust Empanelment Application fee Specialisation inclusion Details</a></li>
 							<li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/new_mou_document">New MOU dcument for NW Hospitals</a></li>  
@@ -57,7 +57,7 @@
 							  </ul>
 						</div>
 					  </li>
-					  					  					  <li class="mb-1">
+					    					  					  <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#current-collapse" aria-expanded="false">
 							Current Procedures
 						</button>
@@ -109,16 +109,16 @@
 							Follow-Up Packages
 						</button>
 						<div class="collapse" id="pensioners-collapse">
-			<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-				<li><a href="/web/guest/follow_up_information">Follow Up Information </a></li>	
-				<li><a href="/web/guest/asri_follow_up_guidelines">Guidelines</a></li>
+						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+										<li><a href="/web/guest/follow_up_information">Follow Up Information </a></li>	
+								<li><a href="/web/guest/asri_follow_up_guidelines">Guidelines</a></li>
                 <li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/listof102">List of 102 additional procedures</a></li>
                 <li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/listofnabh_hospitals">List of NABH Hospitals</a></li>
 								 
-			</ul>
+						  </ul>
 						</div>
 					  </li>
-					  					  <li class="mb-1">
+					  <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#archive-collapse" aria-expanded="false">
 							Archives
 						</button>
