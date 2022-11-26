@@ -29,9 +29,9 @@
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 				<li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/empanelment_guidelines">Empanelment Guidelines</a></li> 	
 							<li><a href="https://115.124.110.149/web/guest/online_application-english">Empanelment Application</a></li> 
-							<li><a href="#">Online Empanelment User Manual Empanelment Application Documents</a></li>
+							<li><a href="#">Online Empanelment User Manual</a></li>
 							<li><a href="https://115.124.110.149/documents/d/guest/new_empanelment_documents-2-">Empanelment Application Documents</a></li>  
-               	<li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/legal_document_for_change_request">Legal Document for Change Request</a></li> 
+               	            <li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/legal_document_for_change_request">Legal Document for Change Request</a></li> 
 							<li><a href="https://115.124.110.149/documents/d/guest/emp_doc_of_gov_hosp-2-">List of Empanelment Documents of Government Hospitals in Dr. YSR Aarogyasri</a></li> 
 							<li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/increased_dr.ysr_aarogyasri_health_care_trust-empanelment">Increased Dr.YSR Aarogyasri Health Care Trust Empanelment Application fee Specialisation inclusion Details</a></li>
 							<li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/new_mou_document">New MOU dcument for NW Hospitals</a></li>  
@@ -55,6 +55,18 @@
 								<li><a href="https://115.124.110.149/web/guest/government-orders">Government Orders</a></li> 
 							 
 							  </ul>
+						</div>
+					  </li>
+					  					  					  <li class="mb-1">
+						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#current-collapse" aria-expanded="false">
+							Current Procedures
+						</button>
+						<div class="collapse" id="current-collapse">
+						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+										<li><a href="https://aarogyaraksha.ap.gov.in/ASRI/publicViewsAction.do?call=home&actionVal=HomePgSurgList&page=Surgery/TherapyList&stateFlag=ap&">View Section </a></li>	
+								
+             								 
+						  </ul>
 						</div>
 					  </li>
 					  <li class="mb-1">
@@ -113,7 +125,7 @@
 						<div class="collapse" id="archive-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 										<li><a href="https://115.124.110.149/web/guest/archives_new">Archives New </a></li>	
-								<li><a href="https://115.124.110.149/web/guest/archives_old">Archives old</a></li>
+								<li><a href="https://115.124.110.149/web/guest/archives_old">Archives Old</a></li>
              								 
 						  </ul>
 						</div>

@@ -227,27 +227,27 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 	<section class="blue_section">
 	 
 	  <div class="container search_panel">
-		  <h3>Aarogyasri / Procedure Search</h3>
+		  <h3><%if(pId==499 || pId==501|| pId==503 || pId==505){ %> WJHS <% }else if(pId==491 || pId==497 || pId==495 || pId==521){ %>EHS <% } %> / Procedure Search</h3>
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
- <div id="searchData" class="row col-md-12">
- <div class="col-2"  style="padding-top: 22px;">
+ <div id="searchData" class="row col-lg-12">
+ <div class="col-lg-2"  style="padding-top: 22px;">
 	<h6>Speciality Search</h6>		 
 </div>
  
-<div class="col-2">
+<div class="col-lg-2">
 				<label  for="Code">Speciality Id</label>
 				<select class="form-select" id="select-0" name="select-0">
 				    <option value="">Show All</option>
 				 </select>
 				</div>
- <div class="col-3">
+ <div class="col-lg-3">
 				<label  for="Hospital Speciality">PROCEDURE TYPE ID</label>
 				<select class="form-select" id="select-1" label="Hospital Speciality" name="select-1">
 				    <option value="">Show All</option>
 				 </select>
 				</div> 
                 
-				<div class="col-3">
+				<div class="col-lg-3">
 				<label  for="SURGERY / THERAPY DESCRIPTION">Speciality Code</label>
 				<select class="form-select" id="select-2" name="select-2">
 				    <option value="">Show All</option>

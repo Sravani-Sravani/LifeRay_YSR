@@ -10,14 +10,14 @@
 					<div class="card-body">
 						<div class="container">
 							<h4 class="tablecontainer" style="text-align: center !important;">Aarogya Raksha</h4>
-							<table class="table table-bordered" style="text-align: center;">
-							 <thead> 
+							<table class="table table-bordered table-hover table-striped">
+							  
 							  <tr> 
-							   <th scope="col"><h6><a href="https://www.ysraarogyasri.ap.gov.in/documents/10181/0/AR+Maintanance+Enroll1/14cad4f6-fd34-4d95-a597-f36a0f386c27?t=1663914026296">Click Here to Enroll</a></h6></th>
-							   <th scope="col"><h6><a href="http://pull71.sps.ap.gov.in/NTRSeva/MIS_NTRCovered/MIS_NAbstract.aspx?Id=NTR+Aarogya+Raksha+Covered+Families">Enrollment Statistics</a></h6></th>
-							   <th scope="col"><h6><a href="http://pull71.sps.ap.gov.in/ARDashboard/reports/ARRenewalAmoutReport.aspx">Renewal Statistics</a></h6></th>
+							   <th><h6><a href="https://www.ysraarogyasri.ap.gov.in/documents/10181/0/AR+Maintanance+Enroll1/14cad4f6-fd34-4d95-a597-f36a0f386c27?t=1663914026296">Click Here to Enroll</a></h6></th>
+							   <th><h6><a href="http://pull71.sps.ap.gov.in/NTRSeva/MIS_NTRCovered/MIS_NAbstract.aspx?Id=NTR+Aarogya+Raksha+Covered+Families">Enrollment Statistics</a></h6></th>
+							   <th><h6><a href="http://pull71.sps.ap.gov.in/ARDashboard/reports/ARRenewalAmoutReport.aspx">Renewal Statistics</a></h6></th>
 							  </tr>
-							 </thead>
+							 
 							</table>
 						   </div>
 						   <section>

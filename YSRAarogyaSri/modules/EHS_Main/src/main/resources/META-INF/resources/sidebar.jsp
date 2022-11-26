@@ -29,6 +29,11 @@
               >Web-Portal & Online Workflow</a
             >
           </li>
+                    <li>
+            <a href="/web/guest/docs_new_ehs"
+              >Notification</a
+            >
+          </li>
         </ul>
       </div>
     </li>
@@ -95,6 +100,11 @@
             <a href="/web/guest/hospital_specialisation"
               >Increased Dr.YSR Aarogyasri Health Care Trust Empanelment
               Application fee & Specialisation inclusion Details</a
+            >
+          </li>
+                 <li>
+            <a href="https://www.ehs.ap.gov.in/EmpanelmentsAP/empanelment/Eligibility.jsp?scheme=ehs&state=CD201"
+              >Online Application form for Empanelment</a
             >
           </li>
         </ul>

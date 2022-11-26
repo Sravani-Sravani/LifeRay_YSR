@@ -38,6 +38,8 @@ if(pageId==6|| pageId==33||pageId==27){ %>
 <%@ include file="/hospital_dental.jsp" %>
 <%}else if(pageId==220){ %>
 <%@ include file="/hospital_dental.jsp" %>
+<%}else if(pageId==555){ %>
+<%@ include file="/notifications_ehs.jsp" %>
 <%}else{ %>
 PageIsNotFound IN ehsmain
 <%}

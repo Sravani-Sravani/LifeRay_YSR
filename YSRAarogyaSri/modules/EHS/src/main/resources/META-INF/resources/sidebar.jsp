@@ -29,6 +29,11 @@
               >Web-Portal & Online Workflow</a
             >
           </li>
+                              <li>
+            <a href="/web/guest/docs_new_ehs"
+              >Notification</a
+            >
+          </li>
         </ul>
       </div>
     </li>
@@ -92,6 +97,10 @@
               >Increased Dr.YSR Aarogyasri Health Care Trust Empanelment
               Application fee & Specialisation inclusion Details</a
             >
+          </li>
+           <li>
+            <a href="https://www.ehs.ap.gov.in/EmpanelmentsAP/empanelment/Eligibility.jsp?scheme=ehs&state=CD201"
+              >Online Application form for Empanelment</a>
           </li>
         </ul>
       </div>
@@ -211,7 +220,12 @@
       </button>
       <div class="collapse" id="pensioners-collapse">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-
+           <li>
+            <a
+              href="/documents/d/guest/chronicop_2" target="_blank" "
+              >Chronic OP Treatment</a
+            >
+          </li>
           <li>
             <a href="/web/guest/pensioners_login"
               >Pensioner Login Instructions</a
@@ -233,6 +247,7 @@
               >Pensioners Medical Reimbursement Status</a
             >
           </li>
+
         </ul>
       </div>
     </li>

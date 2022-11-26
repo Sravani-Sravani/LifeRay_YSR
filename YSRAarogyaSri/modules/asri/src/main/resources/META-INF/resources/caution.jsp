@@ -4,10 +4,7 @@
 <%@ include file="/sidea.jsp" %>
 <%@ include file="/rightContenta.jsp" %>
   <h3 class="bordertitle text-dark">CAUTION</h3>
-   
-  
       <div style="text-align: center;">
-
 
       <h5>
         Dr.YSR Aarogyasri Health Care Trust
@@ -26,9 +23,6 @@
          <br>
          <br>The following are the criminal cases filed till date in such instances and the list of some of the habitual offenders caught. 
         </div><br>
-
-
-
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h4 class="accordion-header" id="headingOne">

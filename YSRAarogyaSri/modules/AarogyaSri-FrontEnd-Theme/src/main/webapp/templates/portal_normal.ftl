@@ -74,8 +74,8 @@ crossorigin="anonymous"></script>
         
 				 </div>
 				 <div class="col-lg-6 right_topbar"> 
-					<p class="btn btn-danger btn-sm"><i class="bi bi-telephone px-2 py-1"> 104</i></p>
-				 <p class="btn btn-success btn-sm"><a href="https://115.124.110.149/web/guest/signin">${sign_in}</a></p>      
+					<p class="btn btn-danger btn-sm"><i class="fa-regular fa-phone"></i> 104</p>
+				 <p class="btn btn-success btn-sm"><i class="fa-regular fa-right-to-bracket"></i> <a href="https://115.124.110.149/web/guest/signin">${sign_in}</a></p>      
 				 <p class="btn btn-success btn-sm"><i class="fa-regular fa-virus-covid"></i> <a href="https://115.124.110.149/web/guest/covid_19">${covid}</a></p>    
 				 </div>	
 			 </div>
@@ -229,9 +229,9 @@ ${pin_code}:522503 <br />
 			<li><a href="/web/guest/ehs">${ehs}</a></li> 
 			<li><a href="/web/guest/wjhs">${wjhs}</a></li> 
 			<li><a href="/web/guest/arogyaraksha">${ar}</a></li> 
-			<li> <a href="">${asri_app}</a></li>
-			<li> <a href="">${mitra_app}</a></li>
-			<li> <a href="">${ehs_app}</a></li>
+			<li> <a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysraarogyasri_app&hl=en&pli=1" target="_blank">${asri_app}</a></li>
+			<li> <a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysr_mithra&hl=en"  target="_blank">${mitra_app}</a></li>
+			<li> <a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ehs_app&hl=en" target="_blank">${ehs_app}</a></li>
 			
 			
         </ul>
@@ -312,9 +312,9 @@ ${pin_code}:522503 <br />
       <div class="col-lg-2">
            <h5 class="bordertitle">FIND US ON</h5>
           <div class="d-flex flex-column flex-sm-row w-100 gap-2" style="padding-bottom:5px;">
-           <a href="https://play.google.com/store/games?hl=enp" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/btn_googlePlay.svg" class="img-fluid" alt="Get on Playstore" /></a>
+           <a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysraarogyasri_app&hl=en&pli=1" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/btn_googlePlay.svg" class="img-fluid" alt="Get on Playstore" /></a>
                  </div>
-                 <p><b>${last_updated} : </b> 24-11-2022 <br /> <b>${total_visitors} : </b> 3100</p>
+                
        </div>
     </div>
 

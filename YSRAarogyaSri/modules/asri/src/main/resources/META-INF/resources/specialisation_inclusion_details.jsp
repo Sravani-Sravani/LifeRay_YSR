@@ -3,9 +3,12 @@
 
 <%@ include file="/sidea.jsp" %>
 <%@ include file="/rightContenta.jsp" %>
-<h3 class="bordertitle text-dark">Increased Dr.YSR Aarogyasri Health Care Trust Empanelment Application fee Specialisation inclusion Details</h3>
-	<p><a class="btn download_btn" href="https://115.124.110.149/documents/d/guest/empanelment_application_1"> Download PDF</a></p>
-    <iframe src="https://115.124.110.149/documents/d/guest/empanelment_application_1" width="100%" height="400px"></iframe>
+<div class="col-lg-9 rightsidebar_content px-2">
+    <h3 class="bordertitle text-dark">Empanelment Guidelines</h3>
+    <p><a class="btn download_btn" href="https://www.drysraarogyasri.ap.gov.in/documents/d/guest/empanelmentgud02062022"> Download PDF</a></p>
+    <iframe src="https://www.drysraarogyasri.ap.gov.in/web/guest/documents/d/guest/empanelmentgud02062022" width="100%" height="400px"></iframe>
     
+     <!--Content to be added ends here-->
+</div>
 
 <%@ include file="/lasta.jsp" %>

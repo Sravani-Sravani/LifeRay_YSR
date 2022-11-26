@@ -37,7 +37,7 @@ System.out.print("states_List"+states_List.toString());
 	  <div class="container">
 	  
 	  
-		  <h3> <%if(pId==499 || pId==501|| pId==503 || pId==505){ %> WJHS <% }else if(pId==491 || pId==497 || pId==495 || pId==521){ %>EHS <% } %>  State Empanelled Hospitals</h3><br>
+		  <h3> <%if(pId==499){ %> WJHS <% }else if(pId==491){ %>EHS <% } %>  State Empanelled Hospitals</h3><br>
 		  <div class="row">
 		      
 		      <% 

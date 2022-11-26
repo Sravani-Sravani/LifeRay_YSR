@@ -3,6 +3,7 @@
 
 <%@ include file="/sidea.jsp" %>
 <%@ include file="/rightContenta.jsp" %>
+<h3 class="bordertitle text-dark">Guidelines, Manuals and SOPs</h3>
 <div class="accordion" id="accordionExample">
 				<div class="accordion-item">
 				  <h4 class="accordion-header" id="headingOne">
