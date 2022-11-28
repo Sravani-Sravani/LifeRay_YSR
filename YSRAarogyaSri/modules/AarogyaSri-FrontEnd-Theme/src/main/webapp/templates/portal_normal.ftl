@@ -5,6 +5,11 @@
 <html class="${root_css_class}" dir="<@liferay.language key="lang.dir" />" lang="${w3c_language_id}">
  
 <head>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script async src="https://api.countapi.xyz/hit/115.124.110.149/892a2160-7ba7-4d80-b413-4555bc7f6372?callback=websiteVisits"></script>
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dr. YSR Aarogyasri Health Care Trust</title>
@@ -307,16 +312,27 @@ ${pin_code}:522503 <br />
             </ul>
           </div>
       
-      
+ <script>
+
+$.getJSON("https://api.countapi.xyz/hit/115.124.110.149/visits", function(response) {
+    $("#visits").text(response.value);
+});
+
+function websiteVisits(response) {
+    document.querySelector("#visits").textContent = response.value;
+}
+
+</script>     
 
       <div class="col-lg-2">
            <h5 class="bordertitle">FIND US ON</h5>
           <div class="d-flex flex-column flex-sm-row w-100 gap-2" style="padding-bottom:5px;">
            <a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysraarogyasri_app&hl=en&pli=1" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/btn_googlePlay.svg" class="img-fluid" alt="Get on Playstore" /></a>
-                 </div>
-                
+                 </div><br>
+                 <p> Visitor Count : <span id="visits"></span> times.</p> 
+                 <p> Last Updated Date :28/11/2022 </p>              
        </div>
-    </div>
+ 
 
     
     </div>
