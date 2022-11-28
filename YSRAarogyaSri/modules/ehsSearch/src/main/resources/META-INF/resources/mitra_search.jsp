@@ -1,22 +1,4 @@
-<%@page import="com.kpmg.ehsSearch.util.DataGridDisplayManageUtil"%> 
-<%@page import="java.util.ArrayList"%>
-<%@page import="com.liferay.portal.kernel.dao.orm.OrderFactoryUtil"%> 
-<%@page import="java.util.HashMap"%>
-<%@page import="java.util.Map"%>
-<%@page import="java.util.Set"%> 
-<%@page import="java.util.LinkedHashMap"%>
-<%@page import="com.liferay.portal.kernel.dao.orm.RestrictionsFactoryUtil"%>
-<%@page import="com.liferay.portal.kernel.dao.orm.Order"%> 
-<%@page import="com.liferay.portal.kernel.dao.orm.DynamicQuery"%>
-<%@page import="java.text.SimpleDateFormat"%>
-<%@page import="com.liferay.portal.kernel.util.ListUtil"%>
- <%@page import="java.util.List"%>
-<%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
-<%@page import="javax.portlet.PortletURL"%>
- <%@ include file="/init.jsp" %>
- <portlet:renderURL var="viewMitraDistrictRecordsURL">
-			<portlet:param name="mvcPath" value="/districtWiseMitras.jsp"/> 
-		</portlet:renderURL> 
+
  
 <% 
  PortletURL iteratorNewURL = renderResponse.createRenderURL(); 
@@ -35,7 +17,7 @@
 <div class="ysri_section">		
 <section class="blue_section search_panel">
 	  <div class="container">
-		  <h3>EHS / Search State Mitra Information</h3><br>
+		  <h3><%if(pId==501){ %> WJHS <% }else if(pId==521){ %>EHS <% } %> / Search State Mitra Information</h3><br>
 		  <div class="row">
 		      
 		      <% 
@@ -88,11 +70,11 @@ function viewRecords(recordId){
 	$("#<portlet:namespace />viewRecords").submit();
 } 
 </script>
-		
+<%-- 		
 <aui:form name="viewRecords" method="post" action="<%=viewMitraDistrictRecordsURL %>" style="display:none;">
    <aui:input type="text" name="recordId" value=""></aui:input>
 </aui:form>
-	
+	 --%>
 		
 	</div><!--ysri_section-->	  
     

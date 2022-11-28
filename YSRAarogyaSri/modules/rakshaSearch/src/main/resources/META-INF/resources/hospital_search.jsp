@@ -35,7 +35,7 @@ System.out.print("states_List"+states_List.toString());
 <div class="ysri_section"> 	
 <section class="blue_section search_panel">
 	  <div class="container">
-		  <h3>Arogya RakshaState Empanelled Hospitals</h3><br>
+		  <h3>Arogya Raksha State Empanelled Hospitals</h3><br>
 		  <div class="row">
 		      
 		      <% 

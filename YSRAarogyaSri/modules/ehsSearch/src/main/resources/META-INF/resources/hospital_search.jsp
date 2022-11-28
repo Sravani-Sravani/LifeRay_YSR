@@ -1,24 +1,3 @@
-<%@page import="com.kpmg.ehsSearch.util.DataGridDisplayManageUtil"%>
-<%@page import="org.json.JSONArray"%>
-<%@page import="org.json.JSONObject"%> 
-<%@page import="java.util.ArrayList"%>
-<%@page import="com.liferay.portal.kernel.dao.orm.OrderFactoryUtil"%> 
-<%@page import="java.util.HashMap"%>
-<%@page import="java.util.Map"%>
-<%@page import="java.util.Set"%> 
-<%@page import="java.util.LinkedHashMap"%>
-<%@page import="com.liferay.portal.kernel.dao.orm.RestrictionsFactoryUtil"%>
-<%@page import="com.liferay.portal.kernel.dao.orm.Order"%> 
-<%@page import="com.liferay.portal.kernel.dao.orm.DynamicQuery"%>
-<%@page import="java.text.SimpleDateFormat"%>
-<%@page import="com.liferay.portal.kernel.util.ListUtil"%>
- <%@page import="java.util.List"%>
-<%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
-<%@page import="javax.portlet.PortletURL"%>
- <%@ include file="/init.jsp" %>
- <portlet:renderURL var="viewDistrictRecordsURL">
-			<portlet:param name="mvcPath" value="/districtWiseHospitals.jsp"/> 
-		</portlet:renderURL> 
  
 <%
 org.json.JSONArray states_List=DataGridDisplayManageUtil.getStateLevelAsrimHospCount();
@@ -35,13 +14,13 @@ System.out.print("states_List"+states_List.toString());
 <div class="ysri_section"> 	
 <section class="blue_section search_panel">
 	  <div class="container">
-		  <h3>EHS State Empanelled Hospitals</h3><br>
+		  <h3><%if(pId==499){ %> WJHS <% }else if(pId==491){ %>EHS <% } %> State Empanelled Hospitals</h3><br>
 		  <div class="row">
 		      
 		      <% 
 		      List<String> statesList = new ArrayList<String>();
- 		      statesList.add("AndhraPradesh");
-		      statesList.add("Telangana");
+ 		      statesList.add("ANDHRA PRADESH");
+		      statesList.add("TAMIL NADU");
 		      statesList.add("Karnataka");
 		      statesList.add("Chennai");
  		       
@@ -91,11 +70,11 @@ function viewRecords(recordId){
 	$("#<portlet:namespace />viewRecords").submit();
 } 
 </script>
-		
+	<%-- 	
 <aui:form name="viewRecords" method="post" action="<%=viewDistrictRecordsURL %>" style="display:none;">
    <aui:input type="text" name="recordId" value=""></aui:input>
 </aui:form>
-	
+	 --%>
 		
 	</div><!--ysri_section-->	  
     

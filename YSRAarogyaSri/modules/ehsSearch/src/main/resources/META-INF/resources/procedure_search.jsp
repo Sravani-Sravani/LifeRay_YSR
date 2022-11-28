@@ -1,6 +1,5 @@
-<%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
-<%@ include file="/init.jsp" %>
-<%@ include file="/html/dataTableIncludes.jspf" %>  
+ 
+  
 <portlet:resourceURL var="asrimHProceduresURL">
 <portlet:param name="cmd" value="proceduredList"/>
 <portlet:param name="cmdType" value="AsrimProceduresList"/>
@@ -99,7 +98,8 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
             {
                 select: "By Associate Number",
                 dataURL:"<%=asrimHProceduresURL.toString()%>",
-                columns:["CODE","SURGERY / THERAPY DESCRIPTION","PROCEDURE TYPE","SPECIAL INVESTIGATION","Treatment Protocol","Aasara Amount","Packages","POST OPERATIVE/PROCEDURE INVESTIGATION"],
+               // columns:["CODE","SURGERY / THERAPY DESCRIPTION","SPECIAL INVESTIGATION","Treatment Protocol","Packages","POST OPERATIVE/PROCEDURE INVESTIGATION"],
+                columns:["CODE","SURGERY / THERAPY DESCRIPTION","Investigation","Packages"],
                 options:{},
                 scrollX: false,
                 header: true,
@@ -234,7 +234,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
   <div class="col-md-4"></div>
   </div> -->
 	  <div class="container search_panel">
-		  <h3>EHS / Procedure Search</h3>
+		  <h3><%if(pId==505){ %> WJHS <% }else if(pId==495){ %>EHS <% } %> / Procedure Search</h3>
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
  <div id="searchData" class="row col-md-12">
  <div class="col-2"  style="padding-top: 22px;">

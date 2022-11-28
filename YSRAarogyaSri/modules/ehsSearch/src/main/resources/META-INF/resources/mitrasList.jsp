@@ -5,6 +5,7 @@
 <portlet:param name="cmd" value="asrimMitrasList"/>
 <portlet:param name="cmdType" value="AsrimMitrasList"/>
 </portlet:resourceURL>
+
 <link href="/o/com.kpmg.asrimSearch/css/select2.min.css" rel="stylesheet" />
 <script src="/o/com.kpmg.asrimSearch/js/select2.min.js"></script> 
 <script>
@@ -225,7 +226,7 @@ String districtId=request.getParameter("districtId").trim();
  	 <div class="ysri_section">
 	<section class="blue_section">
  	  <div class="container search_panel">
-		  <h3>Aarogyasri / State Name / Mitra Search</h3>
+		  <h3><%if(pId==501){ %> WJHS <% }else if(pId==521){ %>EHS <% } %> / State Name / Mitra Search</h3>
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
  <div id="searchData" class="row col-md-12">
  <div class="col-2"  style="padding-top: 22px;">

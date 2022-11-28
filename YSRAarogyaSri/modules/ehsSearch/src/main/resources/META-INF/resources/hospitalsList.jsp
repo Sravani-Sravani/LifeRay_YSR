@@ -8,6 +8,7 @@
 </portlet:resourceURL>
 <link href="/o/com.kpmg.asrimSearch/css/select2.min.css" rel="stylesheet" />
 <script src="/o/com.kpmg.asrimSearch/js/select2.min.js"></script> 
+
 <script>
 function stoploader(){
 	document.getElementById("loader").style.display = "none";
@@ -24,7 +25,7 @@ function stoploader(){
   top: 50%;
   z-index: 1;
   width: 120px;
-  height: 120px;
+  height: 120px;	
   margin: -76px 0 0 -76px;
   border: 16px solid #f3f3f3;
   border-top: 16px solid blue;
@@ -106,7 +107,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
             {
                 select: "By Associate Number",
                 dataURL:"<%=asrimHospitalsURL.toString()%>",
-                columns:["Name of Hospital","Hospital Type","District","Hospital Address","Specialities","Empanalled Date","Name of Medco","Medco Contact No","Name of Mitra","Mitra Contact No"],
+                columns:["Name of Hospital","Hospital Type","District","Specialities","Name of Medco","Medco Contact No","Name of Mitra","Mitra Contact No"],
                 options:{},
                 scrollX: false,
                 header: true,
@@ -287,8 +288,9 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
   </div>
   <div class="col-md-4"></div>
   </div> -->
+
 	  <div class="container search_panel">
-		  <h3>Empanelled Hospitals List- In Aarogyasri Scheme</h3>
+		  <h3>Empanelled Hospitals List- In <%if(pId==499 || pId==503){ %> WJHS <% }else if(pId==491 || pId==497){ %>EHS <% } %> Scheme</h3>
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
  <div id="searchData" class="row col-md-12">
  <div class="col-2"  style="padding-top: 22px;">
