@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dr. YSR Aarogyasri Health Care Trust</title>
     <link rel="icon" type="image/x-icon" href="https://115.124.110.149/documents/d/guest/favicon">
-<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+    <meta content="initial-scale=1.0, width=device-width" name="viewport" />
   
      
 	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -62,7 +62,7 @@ crossorigin="anonymous"></script>
 <header class="main_ysriHeader">
 
 <div class="header_topbar">	
-		<div class="container">
+		<div class="container-fluid">
 		
 		<div class="row">
 				 <div class="col-lg-6 left_topbar"> 
@@ -98,7 +98,7 @@ crossorigin="anonymous"></script>
 
 
   <nav id="main_navbar" class="navbar navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid">
       <a class="navbar-brand" href="/home"><img src="https://115.124.110.149/documents/d/guest/logo1" alt="Dr. YSR Aarogyasri Health Care Trust" class="img-fluid" /></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -176,7 +176,7 @@ crossorigin="anonymous"></script>
 <footer>
 
       <div class="quick_links">
-        <div class="container">
+        <div class="container-fluid">
           <h4>Quick Links</h4>
           <div class="row">
             <div class="col">
@@ -208,10 +208,10 @@ crossorigin="anonymous"></script>
         </div>
       </div>
 
-	<div class=" top_footer container">
-    <div class="row mb-3">
-      <div class="col-lg-4">
-        <img src="/o/AarogyaSri-FrontEnd-Theme/images/footer_logo.svg" alt="YSR" class="pb-3 img-fluid">
+	<div class=" top_footer container-fluid">
+    <div class="row mb-4">
+      <div class="col-lg-3">
+        <img src="/o/AarogyaSri-FrontEnd-Theme/images/footer_logo.svg" alt="YSR" class="footer_logo img-fluid">
         <p class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
   <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
 </svg>  ${door_number}. 241,<br /> ${building}, <br />
@@ -324,21 +324,22 @@ function websiteVisits(response) {
 
 </script>     
 
-      <div class="col-lg-2">
-           <h5 class="bordertitle">FIND US ON</h5>
+      <div class="col-lg-3">
+           <h5 class="bordertitle">Find Us On</h5>
           <div class="d-flex flex-column flex-sm-row w-100 gap-2" style="padding-bottom:5px;">
            <a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysraarogyasri_app&hl=en&pli=1" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/btn_googlePlay.svg" class="img-fluid" alt="Get on Playstore" /></a>
                  </div><br>
-                 <p> Visitor Count : <span id="visits"></span> times.</p> 
-                 <p> Last Updated Date :28/11/2022 </p>              
+                 <p> Visitor Count : <span id="visits"></span> </p> 
+                 <p> Last Update : 28/11/2022 </p>              
        </div>
  
 
-    
+   </div>
     </div>
 	  <div class="copyright">
-		 <div class="container">
-      &copy;Site maintained by KPMG Advisory Services Pvt. Ltd. (in consortium with SRIT India Pvt. Ltd.). The contents are owned by Govt.of AP,India.</div> 
+		 <div class="container-fluid">
+      &copy;Site maintained by KPMG Advisory Services Pvt. Ltd. (in consortium with SRIT India Pvt. Ltd.). The contents are owned by Govt.of AP,India.
+      </div> 
     </div>		  
   </footer>
 <!--End of footer-->	

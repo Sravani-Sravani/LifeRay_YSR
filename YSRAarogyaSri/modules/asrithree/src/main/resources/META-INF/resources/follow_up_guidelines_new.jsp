@@ -11,8 +11,6 @@
 
         <table class="table table-bordered table-hover table-striped">
 
-        
-
          <tbody>
 
 

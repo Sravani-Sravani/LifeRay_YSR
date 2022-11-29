@@ -3,9 +3,9 @@
 
 <%@ include file="/sidea.jsp" %>
 <%@ include file="/rightContenta.jsp" %>
-
+<div class="container-fluid">
     <h3 class="bordertitle text-dark">DR.YSR AAROGYASRI SCHEME</h3>
-    <h5 class="bordertitle tet-dark">Introduction</h5>
+    <h5>Introduction</h5>
     <p>
         Towards achievement of universal health coverage for BPL families whether defined in terms of financial protection or access to and effective use of health care, Government of Andhra Pradesh is implementing state sponsored Dr.YSR Aarogyasri Health Insurance Scheme. This scheme certainly counts to be one of the pioneers in terms of achieving equity and providing accountable and evidence-based good-quality health-care services in the state to assist poor families from catastrophic health expenditure. The aim of the Government is to provide Universal Health Coverage to BPL families. The scheme is a unique PPP model in the field of Health Insurance, tailor made to the health needs of poor patients and provides end-to-end cashless services for identified diseases under secondary and tertiary care through a network of service providers from Government and private sector.<br><br>
         The scheme has established a demand-side mechanism that mobilizes and channels additional public financing to health, introduced an explicit benefits package, pioneered cashless care and fostered public private partnerships.<br><br>
@@ -118,5 +118,5 @@
     </ul> <br>
     Independent evaluation of the scheme by IIPH (Indian institute of Public Health) established the fact that the scheme had profound impact on the health needs of the poor population. Eighty seven percent of beneficiaries who had a low Standard of Living Index (SLI) reported improvement following treatment of their condition. The unemployed together with unskilled labourers made up nearly half the sample, confirming that the scheme was appropriately benefitting economically poor households. The beneficiary satisfaction is highest and the beneficiaries were unanimous that the scheme had transformed their lives. Government has decided to evaluate functioning of the scheme through third party CGG and provide insights into the current performance of the scheme against the overall objectives.
 
-
+</div>
 <%@ include file="/lasta.jsp" %>

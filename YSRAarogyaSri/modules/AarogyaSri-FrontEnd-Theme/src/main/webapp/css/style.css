@@ -1,6 +1,7 @@
 /* CSS Document */
 *{ margin:0; padding:0;}
 body{  font-family:poppins,Arial,sans-serif; font-size: 14px;  color: #444; font-weight: 400; }
+.container-fluid{ max-width: 90%; margin: 0 auto;}
 p.lead{ font-size: 15px; font-weight: 400;}
 main p, main ul li{line-height: 25px; color: #777;}
 .text-primary{ color: #2169B2 !important;}
@@ -132,7 +133,7 @@ li.nav-item .nav-link{ color:000 !important;  font-size:16px;}
 	}
 
 @media (min-width: 1368px) {
-	.carousel-item { background-position: bottom; background-size: contain;  }
+	.carousel-item { background-position: bottom; background-size: contain; min-height: 42rem; }
 	.carousel-item img { height: auto;} 
 }
 
@@ -159,6 +160,10 @@ li.nav-item .nav-link{ color:000 !important;  font-size:16px;}
 #myCarousel1 { padding:10px; background: #65B43E; border-radius: 10px;}
 #myCarousel1 .carousel-item{ height: 15rem;}
 
+@media (min-width: 1368px) {
+	#myCarousel1 .carousel-item { background-position: bottom; background-size: contain;  min-height: 25rem; }
+	#myCarousel1 .carousel-item img { height: auto;} 
+}
 /* LATEST NEWS*/
 .ysri_section section.spotlight{padding: 8% !important;}
 .spotlight{ background: #2169B2; border-radius: 10px; font-size: 12px; margin-bottom: 30px;  }
