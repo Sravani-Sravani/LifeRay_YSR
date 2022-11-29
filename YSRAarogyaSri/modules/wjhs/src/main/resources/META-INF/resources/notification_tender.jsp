@@ -11,7 +11,9 @@
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Tenders
+                            Tenders <span>
+                                <a id = "arc" href="https://115.124.110.149/web/guest/archieve_notification" style="margin-left:3px">Archive</a>
+                              </span>
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
@@ -67,7 +69,24 @@
                     </div>
                 </div>
 
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Archive
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            07.09.2012: e-Tender Notification for Providing fingerprint biometric based Health Cards to
+                            employees/pensioners and their dependent family members for Aarogyasri Health Care Trust for tender
+                            filing visit e-Procurement website www.eprocurement.gov.in
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
 
 
 

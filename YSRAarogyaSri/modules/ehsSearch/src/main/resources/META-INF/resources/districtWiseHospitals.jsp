@@ -24,7 +24,9 @@ System.out.print("districts_List"+districts_List.toString());
 <div class="ysri_section">
 	<section class="blue_section">
 	  <div class="container search_panel">
+ 
 		  <h3><%if(pId==499){ %> WJHS <% }else if(pId==491){ %>EHS <% } %> / District Wise - Empanelled Hospitals</h3><br>
+ 
 		  <div class="row">
 		  
 		  <%  try{ 

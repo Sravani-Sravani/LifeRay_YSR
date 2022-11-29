@@ -226,19 +226,21 @@ String districtId=request.getParameter("districtId").trim();
  	 <div class="ysri_section">
 	<section class="blue_section">
  	  <div class="container search_panel">
+ 
 		  <h3><%if(pId==501){ %> WJHS <% }else if(pId==521){ %>EHS <% } %> / State Name / Mitra Search</h3>
+ 
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
- <div id="searchData" class="row col-md-12">
- <div class="col-2"  style="padding-top: 22px;">
+ <div id="searchData" class="row col-lg-12">
+ <div class="col-lg-2"  style="padding-top: 22px;">
 	<h6>Search Mitra</h6>		 
 </div>
- <div class="col-4">
+ <div class="col-lg-4">
 				<label  for="Hospital">Name of Hospital</label>
 				<select class="form-select" id="select-3" label="Hospital" name="select-0">
 				    <option value="">Show All</option>
 				 </select>
 				</div> 
-     			<div class="col-2">
+     			<div class="col-lg-2">
 				<label  for="District">District Name</label>
 				<select class="form-select" id="select-2" name="select-2">
 				    <option value="">Show All</option>

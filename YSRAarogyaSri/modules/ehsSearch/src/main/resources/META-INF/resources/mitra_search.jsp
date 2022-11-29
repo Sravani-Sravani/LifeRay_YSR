@@ -17,7 +17,9 @@
 <div class="ysri_section">		
 <section class="blue_section search_panel">
 	  <div class="container">
+ 
 		  <h3><%if(pId==501){ %> WJHS <% }else if(pId==521){ %>EHS <% } %> / Search State Mitra Information</h3><br>
+ 
 		  <div class="row">
 		      
 		      <% 

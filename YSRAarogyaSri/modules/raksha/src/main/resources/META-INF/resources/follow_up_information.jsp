@@ -4,9 +4,6 @@
 <%@ include file="/side.jsp" %>
 <%@ include file="/rightcontentr.jsp" %>
 
-<div class="col-lg-9 rightsidebar_content px-2">
-  <!--START-->
-
   <h3 class="bordertitle text-dark">FOLLOW UP INFORMATION</h3>
 
   <div class="accordion" id="accordionExample">
@@ -3227,7 +3224,6 @@
       <br />
     </div>
   </div>
-</div>
 
 
 <%@ include file="/lastr.jsp" %>

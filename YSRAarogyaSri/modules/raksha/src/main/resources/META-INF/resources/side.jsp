@@ -54,11 +54,11 @@
 					  </li>
 					  <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usermanuals-collapse" aria-expanded="false">
-							others
+							Others
 						</button>
 						<div class="collapse" id="usermanuals-collapse" style="height: 109px;">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                
+                <li><a href="/web/guest/new_govt_orders">Government Orders</a>
                 <li><a href="https://115.124.110.149/web/guest/circulars">Circulars</a></li>
 	                	<li><a href="https://115.124.110.149/web/guest/ar_notification1">Notification </a></li>
 								 

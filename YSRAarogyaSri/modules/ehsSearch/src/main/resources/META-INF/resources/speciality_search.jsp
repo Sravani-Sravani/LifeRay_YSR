@@ -12,10 +12,9 @@
 		
 	<section class="blue_section search_panel">
 	  <div class="container">
+ 
 		  <h3><%if(pId==503){ %> WJHS <% }else if(pId==497){ %>EHS <% } %> / Speciality Search</h3><br>
-		  
-		  
-		  
+ 
 		  <div class="row">
 		      
 		      <% 

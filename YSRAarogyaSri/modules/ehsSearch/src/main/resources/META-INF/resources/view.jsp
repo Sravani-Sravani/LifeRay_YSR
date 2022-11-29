@@ -1,4 +1,5 @@
 <%@ include file="/init.jsp" %>
+ 
   <%@page import="com.kpmg.ehsSearch.util.DataGridDisplayManageUtil"%> 
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.liferay.portal.kernel.dao.orm.OrderFactoryUtil"%> 
@@ -18,6 +19,7 @@
   
 		
     <%if(pId==499 || pId==491){ %>
+ 
  <%@ include file="/hospital_search.jsp" %>
  <% }else if(pId==503 || pId==497){ %>
  <%@ include file="/speciality_search.jsp" %>
@@ -26,5 +28,5 @@
  <% }else if(pId==501 || pId==521){ %>
    <%@ include file="/mitra_search.jsp" %>
    <% } else{ %> 
-   pagenotfound in <%=pId %>
+   pagenotfound in ehssearch
    <% } %>
