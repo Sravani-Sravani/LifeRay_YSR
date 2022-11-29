@@ -97,7 +97,7 @@ public static org.json.JSONArray getStateLevelAsrimMitrasCount() {
 	org.json.JSONObject myObject =null;
 	org.json.JSONArray array = null;
 	try {
-		   URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/mitra-search");
+		   URL obj = new URL("http://10.48.19.54:8093/ehsportalsearchapi/public/ehs-mitra-statewisecount");
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 		    postConnection.setRequestMethod("GET");
 		     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -133,10 +133,10 @@ public static org.json.JSONArray getDistrictAsrimMitrasCount(String stateId) {
 	org.json.JSONArray array = null;
 	try {  
 		
-		 final String POST_PARAMS = "{\n" + "\"stateid\": "+stateId+ "\n}";
+		 final String POST_PARAMS = "{\n" + "\"stateid\": \""+stateId+ "\"\n}";
 		   // System.out.println(POST_PARAMS);
 		    
-		   URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/mitra-search-statewise");
+		   URL obj = new URL("http://10.48.19.54:8093/ehsportalsearchapi/public//ehs-mitra-districtwisecount");
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 		    postConnection.setRequestMethod("POST");
 		     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -207,9 +207,9 @@ public static org.json.JSONArray getAsriSpecialityCount(String specialityId) {
 		        	 response.append(inputLine);
 		             
 		        } in .close();
-		        System.out.println("myObject"+response.toString());
+		        //System.out.println("myObject"+response.toString());
 		         myObject = new org.json.JSONObject(response.toString());
-		         System.out.println("myObject"+myObject.getString("result"));
+		       //  System.out.println("myObject"+myObject.getString("result"));
 		         array = new org.json.JSONArray(myObject.getString("result")); 		         
 		     } 
 		     else {

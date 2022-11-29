@@ -99,7 +99,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
                 select: "By Associate Number",
                 dataURL:"<%=asrimHProceduresURL.toString()%>",
                // columns:["CODE","SURGERY / THERAPY DESCRIPTION","SPECIAL INVESTIGATION","Treatment Protocol","Packages","POST OPERATIVE/PROCEDURE INVESTIGATION"],
-                columns:["CODE","SURGERY / THERAPY DESCRIPTION","Investigation","Packages"],
+                columns:["Code","Speciality Name","Procedure Code,","SURGERY / THERAPY DESCRIPTION","Packages","Investigation"],
                 options:{},
                 scrollX: false,
                 header: true,

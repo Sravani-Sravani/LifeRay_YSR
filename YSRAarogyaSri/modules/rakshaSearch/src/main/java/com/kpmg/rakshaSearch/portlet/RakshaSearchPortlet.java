@@ -206,7 +206,7 @@ public class RakshaSearchPortlet extends MVCPortlet {
 				        "    \"procedurename\": null,\r\n" + 
 				        "    \"proceduretypeid\": null\r\n" + "\n}";
 			    //System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/searchspeciality");
+				    URL obj = new URL("http://10.48.19.54:8092/portalsearchapi/public/searchspeciality");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
 			     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");

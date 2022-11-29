@@ -95,7 +95,7 @@ String districtId=request.getParameter("districtId").trim();
             {
                 select: "By Associate Number",
                 dataURL:"<%=asrimMitrasURL.toString()%>",
-                columns:["Name of Mitra","Mitra - Contact Number","District","Name of the Hospital","Specialities"],
+                columns:["Name of Mitra","Mitra - Contact Number","District","Code","Name of the Hospital","Specialities"],
                 options:{},
                 scrollX: false,
                 header: true,

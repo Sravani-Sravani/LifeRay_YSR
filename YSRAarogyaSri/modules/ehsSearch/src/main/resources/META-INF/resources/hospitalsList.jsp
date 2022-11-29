@@ -379,8 +379,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 	$('.modal-backdrop').remove();
 	$('.modal-backdrop').remove();
-} );
- 
+});
 </script>
  
 <style>

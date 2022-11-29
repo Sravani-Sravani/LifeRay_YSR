@@ -25,7 +25,7 @@
 		      for(int j=0;j<speciality_List.length();j++){
 	        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
 	    	   //  long proceduresCount=data.getLong(0);
-	    	   long hospitalCount=data.getLong(1);
+	    	   long hospitalCount=data.getLong(2);
 	    	   //String diseaseId=data.getString(2);
 	    	   String diseaseName=data.getString(0);
 	    	   
