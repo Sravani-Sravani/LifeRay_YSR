@@ -152,7 +152,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 	}
 	public static void getProceduresList(String type, ResourceRequest resourceRequest, ResourceResponse resourceResponse)
 			throws SystemException, PortalException, JSONException {
-	 
+	 JSONArray jsonarray =new JSONArray();
 		JSONObject myObject =null;
 		try {
 			     final String POST_PARAMS = "{\n" + "\"surgeryid\": null\r\n" +"}";

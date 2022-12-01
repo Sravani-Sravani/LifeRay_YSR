@@ -136,7 +136,7 @@ public static org.json.JSONArray getDistrictAsrimMitrasCount(String stateId) {
 		 final String POST_PARAMS = "{\n" + "\"stateid\": \""+stateId+ "\"\n}";
 		   // System.out.println(POST_PARAMS);
 		    
-		   URL obj = new URL("http://10.48.19.54:8093/ehsportalsearchapi/public//ehs-mitra-districtwisecount");
+		   URL obj = new URL("http://10.48.19.54:8093/ehsportalsearchapi/public/ehs-mitra-districtwisecount");
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 		    postConnection.setRequestMethod("POST");
 		     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");

@@ -1,4 +1,6 @@
  
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%
 org.json.JSONArray states_List=DataGridDisplayManageUtil.getStateLevelAsrimHospCount();
 
@@ -24,7 +26,7 @@ System.out.print("states_List"+states_List.toString());
  		      statesList.add("ANDHRA PRADESH");
 		      statesList.add("TAMIL NADU");
 		      statesList.add("Karnataka");
-		      statesList.add("Chennai");
+		      statesList.add("TELANGANA");
  		       
 	        for(int i=0;i<statesList.size();i++){ 
 	    		// System.out.println("statesList.get(i)>>>"+statesList.get(i));

@@ -99,7 +99,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
             {
                 select: "By Associate Number",
                 dataURL:"<%=asrimHProceduresURL.toString()%>",
-                columns:["CODE","SURGERY / THERAPY DESCRIPTION","PROCEDURE TYPE","SPECIAL INVESTIGATION","Treatment Protocol","Aasara Amount","Packages","POST OPERATIVE/PROCEDURE INVESTIGATION"],
+                columns:["Code","Speciality Name","Procedure Code","Procedure Name","Procedure Type","Package Amount","Aasara Amount","Pre Investigation","Post Operative/Procedure Investigation"],
                 options:{},
                 scrollX: false,
                 header: true,
@@ -152,7 +152,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
          initComplete: function () {
         	var j=1;
             this.api()
-                .columns([0,1,2])
+                .columns([1,3,4])
                 .every(function () {
                     var column = this;
                     console.log(column[0][0]); 
@@ -240,28 +240,35 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  <div class="col-2"  style="padding-top: 22px;">
 	<h6>Procedures Search</h6>		 
 </div>
-<div class="col-2">
-				<label  for="Code">Code</label>
-				<select class="form-select" id="select-0" name="select-0">
-				    <option value="">Show All</option>
-				 </select>
-				</div>
+           
  <!-- <div class="col-3">
 				<label  for="Hospital Speciality">Hospital Speciality</label>
 				<select class="form-select" id="select-1" label="Hospital Speciality" name="select-1">
 				    <option value="">Show All</option>
 				 </select>
 				</div>  -->
-                
-				<div class="col-4">
-				<label  for="SURGERY / THERAPY DESCRIPTION">SURGERY / THERAPY DESCRIPTION</label>
-				<select class="form-select" id="select-1" name="select-1">
+               
+				 <!-- <div class="col-2">
+				<label  for="Code">Speciality Code</label>
+				<select class="form-select" id="select-0" name="select-0">
+				    <option value="">Show All</option>
+				 </select>
+				</div> -->
+				<div class="col-3">
+				<label  for="Speciality Name">Speciality Name</label>
+				<select class="form-select" id="select-1" name="select-2">
 				    <option value="">Show All</option>
 				 </select>
 				</div>
-				<div class="col-2">
+				 <div class="col-2">
 				<label  for="Procedure Type">Procedure Type</label>
-				<select class="form-select" id="select-2" name="select-2">
+				<select class="form-select" id="select-4" name="select-4">
+				    <option value="">Show All</option>
+				 </select>
+				</div>
+				<div class="col-3">
+				<label  for="Procedure Name">Procedure Name</label>
+				<select class="form-select" id="select-3" name="select-3">
 				    <option value="">Show All</option>
 				 </select>
 				</div>
