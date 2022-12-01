@@ -267,6 +267,19 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				    <option value="">Show All</option>
 				 </select>
 				</div>
+				<div class="col-md-2">
+                  <div class="serchbtn-sec"> 
+				      <button type="button" id="resetBtnS" class="btn btn-secondary resetbtnclass" style="margin-top: 23px;width: 100%;font-size:13px;">Reset</button>
+                  </div>
+              </div>
+			<script>
+			$("#resetBtnS").click(function(){
+				//alert("Clear");
+				 $("#select-1").val("").trigger('change');
+				 $("#select-3").val("").trigger('change');
+				 $("input[type='search']").val("").trigger('keyup');
+			});
+			</script>
  </div>
  </form>
  <div id="recordList" class="table-responsive-md">

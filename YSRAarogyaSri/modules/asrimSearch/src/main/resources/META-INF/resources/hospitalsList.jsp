@@ -308,7 +308,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
  <div id="searchData" class="row col-md-12">
  <div class="col-md-12"  style="padding-top: 0px;">
-	<h5>Search Hospitals:</h5>		 
+	<h6>Search Hospitals:</h6>		 
 </div>
        
 				<div class="col-2">
