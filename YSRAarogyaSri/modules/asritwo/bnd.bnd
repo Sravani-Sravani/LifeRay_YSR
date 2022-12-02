@@ -1,0 +1,4 @@
+Bundle-Name: asritwo
+Bundle-SymbolicName: com.kpmg.asritwo
+Bundle-Version: 1.0.0
+Export-Package: com.kpmg.asritwo.constants
