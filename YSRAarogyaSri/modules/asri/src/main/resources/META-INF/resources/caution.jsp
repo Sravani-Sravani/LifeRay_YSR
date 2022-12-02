@@ -34,42 +34,35 @@
           <div class="accordion-body">
             <div id="flush-collapse1" class="accordion-collapse collapse show" aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample" style="">
               <div class="accordion-body"> 
-               <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="true">
-                <div class="carousel-indicators"><button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button><button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button><button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button><button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button><button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="/documents/d/guest/Habimg1" class="d-block w-100 img-fluid" alt="Image">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/documents/d/guest/Habimg2" class="d-block w-100 img-fluid" alt="Image">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/documents/d/guest/Habimg3" class="d-block w-100 img-fluid" alt="Image">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/documents/d/guest/Habimg4" class="d-block w-100 img-fluid" alt="Image">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/documents/d/guest/Habimg5" class="d-block w-100 img-fluid" alt="Image">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
                 </div>
-                <div class="carousel-inner">
-                 <div class="carousel-item active item"><picture data-fileentryid="52761">
-                 <source media="(max-width:200px)" srcset="/o/adaptive-media/image/52761/Preview-1000x0/Habimg1.gif?t=1667806261010">
-                 <source media="(max-width:200px) and (min-width:200px)" srcset="/o/adaptive-media/image/52761/Thumbnail-300x300/Habimg1.gif?t=1667806261010">
-                 <img src="https://115.124.110.149/documents/d/guest/Habimg1" class="d-block w-100" alt="...">
-                </picture>
-                 </div>
-                 <div class="carousel-item item"><picture data-fileentryid="52776">
-                 <source media="(max-width:100px)" srcset="/o/adaptive-media/image/52776/Preview-1000x0/Habimg2.gif?t=1667806261777">
-                 <source media="(max-width:100px) and (min-width:100px)" srcset="/o/adaptive-media/image/52776/Thumbnail-300x300/Habimg2.gif?t=1667806261777">
-                 <img src="https://115.124.110.149/documents/d/guest/Habimg2" class="d-block w-100 desktopify" alt="...">
-                </picture>
-                 </div>
-                 <div class="carousel-item item"><picture data-fileentryid="52791">
-                 <source media="(max-width:100px)" srcset="/o/adaptive-media/image/52791/Preview-1000x0/Habimg3.gif?t=1667806262399">
-                 <source media="(max-width:100px) and (min-width:100px)" srcset="/o/adaptive-media/image/52791/Thumbnail-300x300/Habimg3.gif?t=1667806262399">
-                 <img src="https://115.124.110.149/documents/d/guest/Habimg3" class="d-block w-100 desktopify" alt="...">
-                </picture>
-                 </div>
-                 <div class="carousel-item item"><picture data-fileentryid="52806">
-                 <source media="(max-width:100px)" srcset="/o/adaptive-media/image/52806/Preview-1000x0/Habimg4.gif?t=1667806263014">
-                 <source media="(max-width:100px) and (min-width:100px)" srcset="/o/adaptive-media/image/52806/Thumbnail-300x300/Habimg4.gif?t=1667806263014">
-                 <img src="https://115.124.110.149/documents/d/guest/Habimg4" class="d-block w-100 desktopify" alt="...">
-                </picture>
-                 </div>
-                 <div class="carousel-item item"><picture data-fileentryid="52821">
-                 <source media="(max-width:150px)" srcset="/o/adaptive-media/image/52821/Preview-1000x0/Habimg5.gif?t=1667806263612">
-                 <source media="(max-width:150px) and (min-width:150px)" srcset="/o/adaptive-media/image/52821/Thumbnail-300x300/Habimg5.gif?t=1667806263612">
-                 <img src="https://115.124.110.149/documents/d/guest/Habimg5" class="d-block w-100" alt="...">
-                </picture>
-                 </div>
-                </div><button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span> </button><button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Next</span> </button>
-               </div>
+
               </div>
                </div>
             

@@ -3,12 +3,11 @@
 
 <%@ include file="/sidea.jsp" %>
 <%@ include file="/rightContenta.jsp" %>
-
     <h3 class="bordertitle text-dark">Agreements between Trust and Network Hospitals</h3> 
     <div class="ysri_section">
         <div class="container-fluid py-5">
             <div class="container ">
-   
+                <h2>Agreements Between Trust And Network Hospitals</h2>
                 <div class="row">
                     <div class="col-lg-12">
                         <table class="table table-bordered table-hover table-striped">
@@ -32,11 +31,11 @@
                             </tr>
                             <tr>
                                 <td>-</td>
-                                <td><a href="https://115.124.110.149/documents/d/guest/ntrvs-period-i" target="_blank" title="External PDF which opens in a new window">Trust And
+                                <td><a href="/documents/d/guest/ntrvs-period-i" target="_blank" title="External PDF which opens in a new window">Trust And
                                         Hospitals</a></td>
-                                <td><a href="https://115.124.110.149/documents/d/guest/ntrvs-period-ii" target="_blank" title="External PDF which opens in a new window">Trust And
+                                <td><a href="/documents/d/guest/ntrvs-period-ii" target="_blank" title="External PDF which opens in a new window">Trust And
                                         Hospitals</a></td>
-                                <td><a href="https://115.124.110.149/documents/d/guest/ntrvs-period-iii" target="_blank" title="External PDF which opens in a new window">Trust And
+                                <td><a href="/documents/d/guest/ntrvs-period-iii" target="_blank" title="External PDF which opens in a new window">Trust And
                                         Hospitals</a></td>
                                 <td>-</td>
                             </tr>
@@ -50,11 +49,11 @@
                             </tr>
                             <tr>
                                 <td>-</td>
-                                <td><a href="https://115.124.110.149/documents/d/guest/cmco-period-i" target="_blank" title="External PDF which opens in a new window">Trust And
+                                <td><a href="/documents/d/guest/cmco-period-i" target="_blank" title="External PDF which opens in a new window">Trust And
                                         Hospitals</a></td>
-                                <td><a href="https://115.124.110.149/documents/d/guest/cmco-period-ii" target="_blank" title="External PDF which opens in a new window">Trust And
+                                <td><a href="/documents/d/guest/cmco-period-ii" target="_blank" title="External PDF which opens in a new window">Trust And
                                         Hospitals</a></td>
-                                <td><a href="https://115.124.110.149/documents/d/guest/cmco-period-iii" target="_blank" title="External PDF which opens in a new window">Trust And
+                                <td><a href="/documents/d/guest/cmco-period-iii" target="_blank" title="External PDF which opens in a new window">Trust And
                                         Hospitals</a></td>
                                 <td>-</td>
                             </tr>
@@ -69,9 +68,9 @@
                             <tr>
                                 <td>-</td>
                                 <td>-</td>
-                                <td><a href="https://115.124.110.149/documents/d/guest/journalists-period-ii" target="_blank" title="External PDF which opens in a new window">Trust And
+                                <td><a href="/documents/d/guest/journalists-period-ii" target="_blank" title="External PDF which opens in a new window">Trust And
                                         Hospitals</a></td>
-                                <td><a href="https://115.124.110.149/documents/d/guest/journalists-period-ii-1-" target="_blank" title="External PDF which opens in a new window">Trust And
+                                <td><a href="/documents/d/guest/journalists-period-ii-1-" target="_blank" title="External PDF which opens in a new window">Trust And
                                         Hospitals</a></td>
                                 <td>-</td>
                             </tr>

@@ -7,6 +7,8 @@
 
  <h1 class="id">Bids &amp; Agreements Between Trust And Insurance</h1>
     <div class="container-fluid" style="overflow-x: scroll; max-height: 500px;">
+
+
         <table class = "table table-bordered table-hover table-striped">
 
          <tbody>
@@ -20,7 +22,7 @@
             </tr>
             <tr>
                <th colspan="1" rowspan="7">I</th>
-               <th>PERIOD - I</th>					
+               <th>PERIOD - I</th>
                <th>PERIOD - II</th>
                <th>PERIOD - III</th>
                <th>PERIOD - IV</th>
@@ -256,8 +258,25 @@
          </tbody>
          </table>
 
-    
+
+
+
+
+
+
+
+
+        
+
+      
     </div><!--ysri_section-->	   
+
+
+
+
+
+
+
 
 
 

@@ -5,7 +5,7 @@
 <%@ include file="/rightContenta.jsp" %>
 
     <h3 class="bordertitle text-dark">DR.YSR AAROGYASRI SCHEME</h3>
-    <h5>Introduction</h5>
+    <h5 class="bordertitle tet-dark">Introduction</h5>
     <p>
         Towards achievement of universal health coverage for BPL families whether defined in terms of financial protection or access to and effective use of health care, Government of Andhra Pradesh is implementing state sponsored Dr.YSR Aarogyasri Health Insurance Scheme. This scheme certainly counts to be one of the pioneers in terms of achieving equity and providing accountable and evidence-based good-quality health-care services in the state to assist poor families from catastrophic health expenditure. The aim of the Government is to provide Universal Health Coverage to BPL families. The scheme is a unique PPP model in the field of Health Insurance, tailor made to the health needs of poor patients and provides end-to-end cashless services for identified diseases under secondary and tertiary care through a network of service providers from Government and private sector.<br><br>
         The scheme has established a demand-side mechanism that mobilizes and channels additional public financing to health, introduced an explicit benefits package, pioneered cashless care and fostered public private partnerships.<br><br>
@@ -30,7 +30,7 @@
                 The scheme is designed in such a way that the benefit in the primary care is addressed through free screening and outpatient consultation both in the health camps and in the network hospitals as part of scheme implementation.
             </li>
             <li><strong>In-Patient</strong>
-                The scheme shall provide coverage for the 2434 "Listed Therapies" for identified diseases in the 30 categories â€“ Are listed in website: www.ysraarogyasri.ap.gov.in
+                The scheme shall provide coverage for the 2434 "Listed Therapies" for identified diseases in the 30 categories '€“ Are listed in website: www.ysraarogyasri.ap.gov.in
             </li>
         </ul>
         <br>
@@ -54,7 +54,7 @@
     </ul> <br><br>
     <h5 class="bordertitle tet-dark">Follow Up Services</h5>
     <p>Follow-up services are provided for a period of one year through fixed packages to the patients whoever require long term follow-up therapy in order to get optimum benefit from the procedure and avoid complications. Follow-up package for consultation, investigations, drugs etc., for one year for listed therapies were formulated by Technical committee of the Trust in consultation with specialists are listed in the website:</p>
-    <a href="www.drysraarogyasri.ap.gov.in">www.drysraarogyasri.ap.gov.in</a> <br><br>
+    www.drysraarogyasri.ap.gov.in <br><br>
     <br>
 
     <h5 class="bordertitle tet-dark">Important stakeholders in the scheme are</h5>
@@ -69,7 +69,7 @@
     </ul>
     <h5 class="bordertitle text-dark">Implementation Process - Patient Process Flow</h5>
     <ul>
-        <li>Modes of OP capture A beneficiary suffering from an ailment can approach any of the following â€˜first point of contact' for registration under the scheme. There are three modes of OP capture. Vaidyamithra counters at PHC. Registration in a Health Camp organized by the PHCs or NWHs and Directly at the NWH in case of emergencies or through referral. Referral from CMCO center Referral from 104 and 108 services</li> <br>
+        <li>Modes of OP capture A beneficiary suffering from an ailment can approach any of the following '€˜first point of contact' for registration under the scheme. There are three modes of OP capture. Vaidyamithra counters at PHC. Registration in a Health Camp organized by the PHCs or NWHs and Directly at the NWH in case of emergencies or through referral. Referral from CMCO center Referral from 104 and 108 services</li> <br>
         <li>Biometric registration: Capturing digital image (finger impression) of the patient while registering online for the first time in a network hospital.
         </li> <br>
         <li>Evaluation and Admission After the initial evaluation of the patient, the patient is admitted if needed and evaluated further. The patient may be evaluated as an out-patient initially and after ascertaining the diagnosis and finalization treatment mode admitted and converted as "in-patient" in the online workflow.
@@ -88,7 +88,7 @@
         <li>Claim submission The NWH will raise the claim after the 10 days of satisfactory discharge of the patient. x) Emergency Registration and Admission All the beneficiaries shall be admitted by a NWH and treated immediately. MEDCO or treating doctor shall obtain emergency telephonic pre-authrorisation through dedicated round the clock telephone lines of the Trust, if the patient is suffering from listed therapies.</li> <br>
         <li>Health camp Services Dr.YSR Aarogyasri is the flag ship scheme of the state government and the aim is to achieve "Universal Health Care " to poor people in Andhra Pradesh, and the benefit in the primary care is addressed through health camps as part of scheme implementation. Health Camps are main source of mobilizing the Beneficiaries. The important role played by the health camps includes conducting IEC activity, screening, counselling , treatment of common ailments and refer the patients to Government and Corporate Network Hospitals for treatment under Dr.YSR Aarogyasri
         </li> <br>
-        <img src="https://115.124.110.149/documents/d/guest/ex2">
+        <img src="/documents/d/guest/ex2">
     </ul>
     <h5 class="bordertitle text-dark">Impact on Health Scenario in the State</h5>
     <ul>

@@ -29,11 +29,6 @@
               >Web-Portal & Online Workflow</a
             >
           </li>
-                    <li>
-            <a href="/web/guest/docs_new_ehs"
-              >Notification</a
-            >
-          </li>
         </ul>
       </div>
     </li>
@@ -102,11 +97,6 @@
               Application fee & Specialisation inclusion Details</a
             >
           </li>
-                 <li>
-            <a href="https://www.ehs.ap.gov.in/EmpanelmentsAP/empanelment/Eligibility.jsp?scheme=ehs&state=CD201"
-              >Online Application form for Empanelment</a
-            >
-          </li>
         </ul>
       </div>
     </li>
@@ -129,7 +119,7 @@
             >
           </li>
           <li>
-            <a href="#"
+            <a href="/documents/d/guest/meesevaapplication_pensioners" target="_blank"
               >Mee Seva Health Card Application Form</a
             >
           </li>

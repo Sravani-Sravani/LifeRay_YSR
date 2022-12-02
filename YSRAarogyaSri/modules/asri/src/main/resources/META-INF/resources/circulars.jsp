@@ -12,7 +12,7 @@
           </h4>
           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <a href="https://115.124.110.149/documents/d/guest/circular-15days" target="_blank" class="btn btn-primary">Click here for Details</a>
+            <a href="/documents/d/guest/circular-15days" target="_blank" class="btn btn-primary">Click here for Details</a>
             
           </div><!-- accordion-body -->
           </div>
@@ -25,7 +25,7 @@
           </h4>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-            <a href="https://115.124.110.149/documents/d/guest/open-sky-enrollment" class="btn btn-primary">Click here for Circular</a>
+            <a href="/documents/d/guest/open-sky-enrollment" class="btn btn-primary">Click here for Circular</a>
             </div><!-- accordion-body -->
           </div>
           </div>
@@ -38,7 +38,7 @@
           </h4>
           <div id="collapseTwoa" class="accordion-collapse collapse" aria-labelledby="headingTwoa" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-            <a href="https://115.124.110.149/documents/d/guest/circular-on-extension-of-enrolmrnt-period-upto-06-04-2017-1-" target="_blank" class="btn btn-primary">Click here for Circular</a>
+            <a href="/documents/d/guest/circular-on-extension-of-enrolmrnt-period-upto-06-04-2017-1-" target="_blank" class="btn btn-primary">Click here for Circular</a>
             </div><!-- accordion-body -->
           </div>
           </div>
@@ -51,7 +51,7 @@
           </h4>
           <div id="collapseTwob" class="accordion-collapse collapse" aria-labelledby="headingTwob" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-            <a href="https://115.124.110.149/documents/d/guest/expression_of_interest-aarogya_raksha" class="btn btn-primary">Click here for Details</a>
+            <a href="/documents/d/guest/expression_of_interest-aarogya_raksha" class="btn btn-primary">Click here for Details</a>
             </div><!-- accordion-body -->
           </div>
           </div>
@@ -64,7 +64,7 @@
           </h4>
           <div id="collapseTwoc" class="accordion-collapse collapse" aria-labelledby="headingTwoc" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-            <a href="https://115.124.110.149/documents/d/guest/circular-of-aarogyaraksha-guidelines" class="btn btn-primary">Click here for Details</a>
+            <a href="/documents/d/guest/circular-of-aarogyaraksha-guidelines" class="btn btn-primary">Click here for Details</a>
             </div><!-- accordion-body -->
           </div>
           </div>

@@ -29,11 +29,6 @@
               >Web-Portal & Online Workflow</a
             >
           </li>
-                              <li>
-            <a href="/web/guest/docs_new_ehs"
-              >Notification</a
-            >
-          </li>
         </ul>
       </div>
     </li>
@@ -64,7 +59,11 @@
             <a href="/web/guest/hospital_preauthorization">Pre-Authorization</a>
           </li>
           <li><a href="/web/guest/hospital_claims1">Claims</a></li>
- 
+          <li>
+            <a href="/web/guest/hospital_dental"
+              >Dental Empanelment Guidelines</a
+            >
+          </li>
           <li>
             <a href="/web/guest/hospital_empanelmentguidelines"
               >Empanelment Guidelines
@@ -98,10 +97,6 @@
               Application fee & Specialisation inclusion Details</a
             >
           </li>
-           <li>
-            <a href="https://www.ehs.ap.gov.in/EmpanelmentsAP/empanelment/Eligibility.jsp?scheme=ehs&state=CD201"
-              >Online Application form for Empanelment</a>
-          </li>
         </ul>
       </div>
     </li>
@@ -124,7 +119,7 @@
             >
           </li>
           <li>
-            <a href="#"
+            <a href="/documents/d/guest/meesevaapplication_pensioners" target="_blank"
               >Mee Seva Health Card Application Form</a
             >
           </li>
@@ -220,7 +215,7 @@
       </button>
       <div class="collapse" id="pensioners-collapse">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-           <li>
+         <li>
             <a
               href="/documents/d/guest/chronicop_2" target="_blank" "
               >Chronic OP Treatment</a
@@ -247,7 +242,6 @@
               >Pensioners Medical Reimbursement Status</a
             >
           </li>
-
         </ul>
       </div>
     </li>

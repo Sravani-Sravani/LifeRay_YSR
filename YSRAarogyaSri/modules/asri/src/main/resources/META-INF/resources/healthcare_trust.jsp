@@ -67,7 +67,7 @@
   <div class="accordion-body"> <picture data-fileentryid="52858">
   <source media="(max-width:300px)" srcset="/o/adaptive-media/image/52858/Thumbnail-300x300/DSC02734.JPG?t=1667806531395">
   <source media="(max-width:1000px) and (min-width:300px)" srcset="/o/adaptive-media/image/52858/Preview-1000x0/DSC02734.JPG?t=1667806531395">
-  <img src="https://115.124.110.149/documents/d/guest/dsc02734-jpg" alt="Dr.YSR Aarogyasri Health Care Trust" class="img-fluid">
+  <img src="/documents/d/guest/dsc02734-jpg" alt="Dr.YSR Aarogyasri Health Care Trust" class="img-fluid">
   </picture>
   </div>
   
@@ -88,7 +88,7 @@
   <div class="accordion-body"> <picture data-fileentryid="52871">
   <source media="(max-width:300px)" srcset="/o/adaptive-media/image/52871/Thumbnail-300x300/organisation+chart.jpg?t=1667806531749">
   <source media="(max-width:953px) and (min-width:300px)" srcset="/o/adaptive-media/image/52871/Preview-1000x0/organisation+chart.jpg?t=1667806531749">
-  <img src="https://115.124.110.149/documents/d/guest/organisation-chart" alt="Dr.YSR Aarogyasri Health Care Trust" class="img-fluid">
+  <img src="/documents/d/guest/organisation-chart" alt="Dr.YSR Aarogyasri Health Care Trust" class="img-fluid">
    </picture>
   </div>
   
@@ -168,9 +168,9 @@
       <br>
       <br>
       <h3>Copy of Trust Deed</h3>
-      <br><a class="btn btn-primary" href="https://115.124.110.149/documents/d/guest/trust-deed" role="button">COPY OF TRUST DEED</a> 
+      <br><a class="btn btn-primary" href="/documents/d/guest/trust-deed" role="button">COPY OF TRUST DEED</a> 
       <br> 
-      <br> <a class="btn btn-primary" href="https://115.124.110.149/documents/d/guest/supp_trust_deed" role="button">SUPPLEMENTARY TRUST DEED 1</a> 
+      <br> <a class="btn btn-primary" href="/documents/d/guest/supp_trust_deed" role="button">SUPPLEMENTARY TRUST DEED 1</a> 
        </ul>
     </div>
   

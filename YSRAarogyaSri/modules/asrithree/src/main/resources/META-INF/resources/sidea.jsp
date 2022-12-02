@@ -27,14 +27,14 @@
 						</button>
 						<div class="collapse" id="hospital-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-				<li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/empanelment_guidelines">Empanelment Guidelines</a></li> 	
+				<li><a href="/web/guest/asri_guidelines_new">Empanelment Guidelines</a></li> 	
 							<li><a href="/web/guest/online_application-english">Empanelment Application</a></li> 
 							<li><a href="#">Online Empanelment User Manual</a></li>
 							<li><a href="/documents/d/guest/new_empanelment_documents-2-">Empanelment Application Documents</a></li>  
-               	<li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/legal_document_for_change_request">Legal Document for Change Request</a></li> 
+               	            <li><a href="/web/guest/legal_document_for_change_request">Legal Document for Change Request</a></li> 
 							<li><a href="/documents/d/guest/emp_doc_of_gov_hosp-2-">List of Empanelment Documents of Government Hospitals in Dr. YSR Aarogyasri</a></li> 
-							<li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/increased_dr.ysr_aarogyasri_health_care_trust-empanelment">Increased Dr.YSR Aarogyasri Health Care Trust Empanelment Application fee Specialisation inclusion Details</a></li>
-							<li><a href="https://www.drysraarogyasri.ap.gov.in/web/guest/new_mou_document">New MOU dcument for NW Hospitals</a></li>  
+							<li><a href="/documents/d/guest/empanelment_application_1" target="_blank">Increased Dr.YSR Aarogyasri Health Care Trust Empanelment Application fee Specialisation inclusion Details</a></li>
+							<li><a href="/web/guest/new_mou_document">New MOU dcument for NW Hospitals</a></li>  
 						 
 						  </ul>
 						</div>
@@ -57,33 +57,8 @@
 							  </ul>
 						</div>
 					  </li>
-					    					  					  <li class="mb-1">
-						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#current-collapse" aria-expanded="false">
-							Current Procedures
-						</button>
-						<div class="collapse" id="current-collapse">
-						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-										<li><a href="https://aarogyaraksha.ap.gov.in/ASRI/publicViewsAction.do?call=home&actionVal=HomePgSurgList&page=Surgery/TherapyList&stateFlag=ap&">View Section </a></li>	
-								
-             								 
-						  </ul>
-						</div>
-					  </li>
-					  <li class="mb-1">
-						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#employees-collapse" aria-expanded="false">
-							Hospitals
-						</button>
-						<div class="collapse" id="employees-collapse">
-						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="https://app.ysraarogyasri.ap.gov.in/ASRI/publicViewsAction.do?actionVal=AarogyasriView&amp;page=Network%20Hospitals&amp;%3E%3E%3CB%3EGovernment%20Hospitals%3C/B%3E&amp;mainMenu=Hospitals&amp;call=home&amp;subMenu=Government%20Hospitals&amp;stateFlag=ap" target="_blank">Government Hospitals</a></li> 	
-								<li><a href="https://app.ysraarogyasri.ap.gov.in/ASRI/publicViewsAction.do?actionVal=AarogyasriView&amp;page=Network%20Hospitals&amp;%3E%3E%3CB%3EPrivate%20Hospitals%3C/B%3E&amp;mainMenu=Hospitals&amp;subMenu=Private%20Hospitals&amp;call=home&amp;stateFlag=ap" target="_blank">Private Hospitals </a></li>	
-								<li><a href="https://app.ysraarogyasri.ap.gov.in/ASRI/publicViewsAction.do?actionVal=PHCMithrasView&amp;page=Network hospitals>><B>PHCs/Govt Hospitals</B>&amp;mainMenu=Hospitals&amp;subMenu=PHCs&amp;stateFlag=ap&amp;call=home&amp;" target="_blank">PHCs</a></li> 	
-								<li><a href="https://app.ysraarogyasri.ap.gov.in/ASRI/hospEmpanelAction.do?actionVal=getDelistHosp&amp;pageName=HospitalInfo&amp;mainMenu=Hospitals&amp;subMenu=Delisted/Suspended/De-Empanel%20Hospitals&amp;stateFlag=ap&amp;fromPage=HomePage&amp;" target="_blank">Delisted/Suspender/De-Empaneled Hospitals</a></li>
-                <li><a href="https://app.ysraarogyasri.ap.gov.in/ASRI/publicViewsAction.do?actionVal=ViewBedCapacity&amp;page=Network Hospitals&amp;>><B>View Bed Occupancy</B>&amp;mainMenu=Hospitals&amp;call=home&amp;subMenu=View Bed Occupancy&amp;stateFlag=ap&amp;" target="_blank">Bed Occupancy</a></li>
-                
-						  </ul>
-						</div>
-					  </li>
+					  					  					  
+
 					  <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usermanuals-collapse" aria-expanded="false">
 							Others
@@ -97,7 +72,7 @@
 								<li><a href="#">Awards &amp; Achievements</a></li> 
 								<li><a href="#">In-Patient Live Status Report</a></li> 
 								<li><a href="#">Hospitals Peformance Report</a></li> 
-								<li><a href="https://www.drysraarogyasri.ap.gov.in/documents/d/guest/dongletool">Dongle Tool</a></li> 
+								<li><a href="/documents/d/guest/dongletool">Dongle Tool</a></li> 
 								<li><a href="/web/guest/usermanuals">Aadhar Biometric User Manual and Software</a></li>
                 <li><a href="/web/guest/tenders">Tenders</a></li>
 						 
@@ -109,16 +84,16 @@
 							Follow-Up Packages
 						</button>
 						<div class="collapse" id="pensioners-collapse">
-						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-										<li><a href="/web/guest/follow_up_information">Follow Up Information </a></li>	
-								<li><a href="/web/guest/asri_follow_up_guidelines">Guidelines</a></li>
+			<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+				<li><a href="/web/guest/follow_up_information">Follow Up Information </a></li>	
+				<li><a href="/web/guest/asri_follow_up_guidelines">Guidelines</a></li>
                 <li><a href="/web/guest/listof102">List of 102 additional procedures</a></li>
                 <li><a href="/web/guest/listofnabh_hospitals">List of NABH Hospitals</a></li>
 								 
-						  </ul>
+			</ul>
 						</div>
 					  </li>
-					  <li class="mb-1">
+					  					  <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#archive-collapse" aria-expanded="false">
 							Archives
 						</button>

@@ -105,7 +105,7 @@
        <picture data-fileentryid="55314">
         <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55314/Preview-1000x0/MedicalCamps.gif?t=1667839003859">
         <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55314/Thumbnail-300x300/MedicalCamps.gif?t=1667839003859">
-        <img src="https://115.124.110.149/documents/d/guest/medicalcamps" alt="">
+        <img src="/documents/d/guest/medicalcamps" alt="">
        </picture></td>
       <td>Health Camps</td>
       <td></td>
@@ -118,7 +118,7 @@
        <picture data-fileentryid="55327">
         <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55327/Preview-1000x0/Pre-Auth-6.gif?t=1667839232379">
         <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55327/Thumbnail-300x300/Pre-Auth-6.gif?t=1667839232379">
-        <img src="https://115.124.110.149/documents/d/guest/pre-auth-6" alt="">
+        <img src="/documents/d/guest/pre-auth-6" alt="">
        </picture></td>
       <td rowspan="3">Preauthorizations</td>
       <td>Government</td>
@@ -140,7 +140,7 @@
        <picture data-fileentryid="55340">
         <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55340/Preview-1000x0/Outpatients.gif?t=1667839311102">
         <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55340/Thumbnail-300x300/Outpatients.gif?t=1667839311102">
-        <img src="https://115.124.110.149/documents/d/guest/outpatients" alt="">
+        <img src="/documents/d/guest/outpatients" alt="">
        </picture></td>
       <td rowspan="3">Out Patients</td>
       <td>Government</td>
@@ -162,7 +162,7 @@
        <picture data-fileentryid="55353">
         <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55353/Preview-1000x0/Inpatients.gif?t=1667839374941">
         <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55353/Thumbnail-300x300/Inpatients.gif?t=1667839374941">
-        <img src="https://115.124.110.149/documents/d/guest/inpatients" alt="">
+        <img src="/documents/d/guest/inpatients" alt="">
        </picture></td>
       <td rowspan="3">In Patients</td>
       <td>Government</td>
@@ -198,7 +198,7 @@
        <picture data-fileentryid="55366">
         <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55366/Preview-1000x0/PeopleScreened.gif?t=1667839477685">
         <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55366/Thumbnail-300x300/PeopleScreened.gif?t=1667839477685">
-        <img src="https://115.124.110.149/documents/d/guest/peoplescreened">
+        <img src="/documents/d/guest/peoplescreened">
        </picture></td>
       <td rowspan="2"> Patients</td>
       <td>Screened</td>
@@ -215,7 +215,7 @@
        <picture data-fileentryid="55446">
         <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55446/Preview-1000x0/surgeries.gif?t=1667839671958">
         <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55446/Thumbnail-300x300/surgeries.gif?t=1667839671958">
-        <img src="https://115.124.110.149/documents/d/guest/surgeries" alt="">
+        <img src="/documents/d/guest/surgeries" alt="">
        </picture></td>
       <td rowspan="3"> Surgeries/Therapies</td>
       <td>Government</td>
@@ -237,7 +237,7 @@
        <picture data-fileentryid="55431">
         <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55431/Preview-1000x0/AmountClaimed.gif?t=1667839671539">
         <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55431/Thumbnail-300x300/AmountClaimed.gif?t=1667839671539">
-        <img src="https://115.124.110.149/documents/d/guest/amountclaimed" alt="">
+        <img src="/documents/d/guest/amountclaimed" alt="">
        </picture></td>
       <td rowspan="3">Amount Preauthorized</td>
       <td>Government</td>
@@ -259,7 +259,7 @@
        <picture data-fileentryid="55416">
         <source media="(max-width:23px)" srcset="/o/adaptive-media/image/55416/Preview-1000x0/Death-Cases.gif?t=1667839671061">
         <source media="(max-width:23px) and (min-width:23px)" srcset="/o/adaptive-media/image/55416/Thumbnail-300x300/Death-Cases.gif?t=1667839671061">
-        <img src="https://115.124.110.149/documents/d/guest/death-cases" alt="">
+        <img src="/documents/d/guest/death-cases" alt="">
        </picture></td>
       <td rowspan="3">Death Cases</td>
       <td>Government</td>
@@ -319,7 +319,7 @@
        <picture data-fileentryid="55314">
       <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55314/Preview-1000x0/MedicalCamps.gif?t=1667839003859">
       <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55314/Thumbnail-300x300/MedicalCamps.gif?t=1667839003859">
-      <img src="https://115.124.110.149/documents/d/guest/medicalcamps" alt="">
+      <img src="/documents/d/guest/medicalcamps" alt="">
        </picture></td>
       <td>Health Camps</td>
       <td></td>
@@ -330,7 +330,7 @@
        <picture data-fileentryid="55327">
       <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55327/Preview-1000x0/Pre-Auth-6.gif?t=1667839232379">
       <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55327/Thumbnail-300x300/Pre-Auth-6.gif?t=1667839232379">
-      <img src="https://115.124.110.149/documents/d/guest/pre-auth-6" alt="">
+      <img src="/documents/d/guest/pre-auth-6" alt="">
        </picture></td>
       <td rowspan="3">Preauthorizations</td>
       <td>Government</td>
@@ -349,7 +349,7 @@
        <picture data-fileentryid="55340">
       <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55340/Preview-1000x0/Outpatients.gif?t=1667839311102">
       <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55340/Thumbnail-300x300/Outpatients.gif?t=1667839311102">
-      <img src="https://115.124.110.149/documents/d/guest/outpatients" alt="">
+      <img src="/documents/d/guest/outpatients" alt="">
        </picture></td>
       <td rowspan="3">Out Patients</td>
       <td>Government</td>
@@ -368,7 +368,7 @@
        <picture data-fileentryid="55353">
       <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55353/Preview-1000x0/Inpatients.gif?t=1667839374941">
       <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55353/Thumbnail-300x300/Inpatients.gif?t=1667839374941">
-      <img src="https://115.124.110.149/documents/d/guest/inpatients" alt="">
+      <img src="/documents/d/guest/inpatients" alt="">
        </picture></td>
       <td rowspan="3">In Patients</td>
       <td>Government</td>
@@ -400,7 +400,7 @@
        <picture data-fileentryid="55366">
       <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55366/Preview-1000x0/PeopleScreened.gif?t=1667839477685">
       <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55366/Thumbnail-300x300/PeopleScreened.gif?t=1667839477685">
-      <img src="https://115.124.110.149/documents/d/guest/peoplescreened">
+      <img src="/documents/d/guest/peoplescreened">
        </picture></td>
       <td rowspan="2"> Patients</td>
       <td>Screened</td>
@@ -415,7 +415,7 @@
        <picture data-fileentryid="55446">
       <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55446/Preview-1000x0/surgeries.gif?t=1667839671958">
       <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55446/Thumbnail-300x300/surgeries.gif?t=1667839671958">
-      <img src="https://115.124.110.149/documents/d/guest/surgeries" alt="">
+      <img src="/documents/d/guest/surgeries" alt="">
        </picture></td>
       <td rowspan="3"> Surgeries/Therapies</td>
       <td>Government</td>
@@ -434,7 +434,7 @@
        <picture data-fileentryid="55431">
       <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55431/Preview-1000x0/AmountClaimed.gif?t=1667839671539">
       <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55431/Thumbnail-300x300/AmountClaimed.gif?t=1667839671539">
-      <img src="https://115.124.110.149/documents/d/guest/amountclaimed" alt="">
+      <img src="/documents/d/guest/amountclaimed" alt="">
        </picture></td>
       <td rowspan="3">Amount Preauthorized</td>
       <td>Government</td>
@@ -453,7 +453,7 @@
        <picture data-fileentryid="55416">
       <source media="(max-width:23px)" srcset="/o/adaptive-media/image/55416/Preview-1000x0/Death-Cases.gif?t=1667839671061">
       <source media="(max-width:23px) and (min-width:23px)" srcset="/o/adaptive-media/image/55416/Thumbnail-300x300/Death-Cases.gif?t=1667839671061">
-      <img src="https://115.124.110.149/documents/d/guest/death-cases" alt="">
+      <img src="/documents/d/guest/death-cases" alt="">
        </picture></td>
       <td rowspan="3">Death Cases</td>
       <td>Government</td>
