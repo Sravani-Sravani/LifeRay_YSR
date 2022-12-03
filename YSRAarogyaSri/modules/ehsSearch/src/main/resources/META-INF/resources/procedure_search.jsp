@@ -1,6 +1,5 @@
-<%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
-<%@ include file="/init.jsp" %>
-<%@ include file="/html/dataTableIncludes.jspf" %>  
+ 
+  
 <portlet:resourceURL var="asrimHProceduresURL">
 <portlet:param name="cmd" value="proceduredList"/>
 <portlet:param name="cmdType" value="AsrimProceduresList"/>
@@ -99,7 +98,8 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
             {
                 select: "By Associate Number",
                 dataURL:"<%=asrimHProceduresURL.toString()%>",
-                columns:["CODE","SURGERY / THERAPY DESCRIPTION","PROCEDURE TYPE","SPECIAL INVESTIGATION","Treatment Protocol","Aasara Amount","Packages","POST OPERATIVE/PROCEDURE INVESTIGATION"],
+               // columns:["CODE","SURGERY / THERAPY DESCRIPTION","SPECIAL INVESTIGATION","Treatment Protocol","Packages","POST OPERATIVE/PROCEDURE INVESTIGATION"],
+                columns:["Code","Speciality Name","Procedure Code","Procedure Name","Packages","Investigation"],
                 options:{},
                 scrollX: false,
                 header: true,
@@ -152,7 +152,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
          initComplete: function () {
         	var j=1;
             this.api()
-                .columns([0,1,2])
+                .columns([1,3])
                 .every(function () {
                     var column = this;
                     console.log(column[0][0]); 
@@ -234,15 +234,23 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
   <div class="col-md-4"></div>
   </div> -->
 	  <div class="container search_panel">
-		  <h3><%if(pId==499 || pId==501|| pId==503 || pId==505){ %> WJHS <% }else if(pId==491 || pId==497 || pId==495 || pId==521){ %>EHS <% } %> / Procedure Search</h3>
+ 
+		  <h3><%if(pId==505){ %> WJHS <% }else if(pId==495){ %>EHS <% } %> / Procedure Search</h3>
+ 
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
  <div id="searchData" class="row col-md-12">
  <div class="col-2"  style="padding-top: 22px;">
 	<h6>Procedures Search</h6>		 
-</div>
+</div><!-- 
 <div class="col-2">
-				<label  for="Code">Code</label>
+				<label  for="Code">Speciality Code</label>
 				<select class="form-select" id="select-0" name="select-0">
+				    <option value="">Show All</option>
+				 </select>
+				</div> -->
+				<div class="col-3">
+				<label  for="Speciality Name">Speciality Name</label>
+				<select class="form-select" id="select-1" name="select-2">
 				    <option value="">Show All</option>
 				 </select>
 				</div>
@@ -252,19 +260,32 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				    <option value="">Show All</option>
 				 </select>
 				</div>  -->
-                
-				<div class="col-4">
-				<label  for="SURGERY / THERAPY DESCRIPTION">SURGERY / THERAPY DESCRIPTION</label>
-				<select class="form-select" id="select-1" name="select-1">
-				    <option value="">Show All</option>
-				 </select>
-				</div>
-				<div class="col-2">
-				<label  for="Procedure Type">Procedure Type</label>
+                <!-- <div class="col-2">
+				<label  for="Procedure Code">Procedure Code</label>
 				<select class="form-select" id="select-2" name="select-2">
 				    <option value="">Show All</option>
 				 </select>
+				</div> -->
+				<div class="col-3">
+				<label  for="Procedure Name">Procedure Name</label>
+				<select class="form-select" id="select-3" name="select-3">
+				    <option value="">Show All</option>
+				 </select>
 				</div>
+					<div class="col-md-2">
+                  <div class="serchbtn-sec"> 
+				      <button type="button" id="resetBtnS" class="btn btn-secondary resetbtnclass" style="margin-top: 23px;width: 100%;font-size:13px;">Reset</button>
+                  </div>
+              </div>
+			<script>
+			$("#resetBtnS").click(function(){
+				//alert("Clear");
+				 $("#select-1").val("").trigger('change');
+				 $("#select-3").val("").trigger('change'); 
+				 $("input[type='search']").val("").trigger('keyup');
+			});
+			</script>
+				
  </div>
  </form>
  <div id="recordList" class="table-responsive-md">

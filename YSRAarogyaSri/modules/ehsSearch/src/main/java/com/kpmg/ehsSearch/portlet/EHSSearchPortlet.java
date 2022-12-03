@@ -106,11 +106,9 @@ public class EHSSearchPortlet extends MVCPortlet {
 			throws SystemException, PortalException, JSONException {
 		JSONObject myObject =null;
 		try {
-			     final String POST_PARAMS = "{\n" + "\"districtid\": null,\r\n" +
-				        "    \"hospitalid\": null,\r\n" +
-				        "    \"hospitaltype\": null\r\n" + "\n}";
+			     final String POST_PARAMS = "{\n" + "\"districtid\": null" + "\n}";
 			    //System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/searchhospital");
+				    URL obj = new URL("http://10.48.19.54:8093/ehsportalsearchapi/public/ehs-hospitalsearch-districtwise");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
 		 	    postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -155,21 +153,21 @@ public class EHSSearchPortlet extends MVCPortlet {
 	 
 		JSONObject myObject =null;
 		try {
-			     final String POST_PARAMS = "{\n" + "\"surgeryid\": null\r\n" +"}";
+			     //final String POST_PARAMS = "{\n" + "\"surgeryid\": null\r\n" +"}";
 			    //System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/searchprocedure");
+				    URL obj = new URL("http://10.48.19.54:8093/ehsportalsearchapi/public/ehs-searchspeciality");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
-			    postConnection.setRequestMethod("POST");
+			    postConnection.setRequestMethod("GET");
 			     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
 			    postConnection.setRequestProperty("Accept", "application/json;odata=verbose");
 		          postConnection.setDoOutput(true);
 		 	      postConnection.setDoInput(true);
 		 	   
-			    OutputStream os = postConnection.getOutputStream();
+			//    OutputStream os = postConnection.getOutputStream();
 			 
-			    os.write(POST_PARAMS.getBytes());
-			    os.flush();
-			    os.close();
+			   // os.write(POST_PARAMS.getBytes());
+			   // os.flush();
+			  //  os.close();
 			    int responseCode = postConnection.getResponseCode();
 			     
 			    if (responseCode == 200 || responseCode == HttpURLConnection.HTTP_CREATED) { //success
@@ -207,9 +205,9 @@ public class EHSSearchPortlet extends MVCPortlet {
 				        "    \"procedurename\": null,\r\n" + 
 				        "    \"proceduretypeid\": null\r\n" + "\n}";
 			    //System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/searchspeciality");
+				    URL obj = new URL("10.48.19.54:8093/ehsportalsearchapi/public/ehs-searchspeciality");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
-			    postConnection.setRequestMethod("POST");
+			    postConnection.setRequestMethod("GET");
 			     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
 			    postConnection.setRequestProperty("Accept", "application/json;odata=verbose");
 		          postConnection.setDoOutput(true);
@@ -252,21 +250,21 @@ public class EHSSearchPortlet extends MVCPortlet {
 	 
 		JSONObject myObject =null;
 		try {
-			 final String POST_PARAMS = "{\n" + "\"districtid\": null\r\n" + "\n}";
+			// final String POST_PARAMS = "{\n" + "\"districtid\": null\r\n" + "\n}";
 			  //  System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/mitra-search-districtwise");
+				    URL obj = new URL("http://10.48.19.54:8093/ehsportalsearchapi/public/ehs-mitra-search-districtwise");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
-			    postConnection.setRequestMethod("POST");
+			    postConnection.setRequestMethod("GET");
 			     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
 			    postConnection.setRequestProperty("Accept", "application/json;odata=verbose");
 		          postConnection.setDoOutput(true);
 		 	      postConnection.setDoInput(true);
 		 	   
-			    OutputStream os = postConnection.getOutputStream();
+			  //  OutputStream os = postConnection.getOutputStream();
 		 
-			    os.write(POST_PARAMS.getBytes());
-			    os.flush();
-			    os.close();
+			    //os.write(POST_PARAMS.getBytes());
+			   // os.flush();
+			   // os.close();
 			    int responseCode = postConnection.getResponseCode();
 			     
 			    if (responseCode == 200 || responseCode == HttpURLConnection.HTTP_CREATED) { //success

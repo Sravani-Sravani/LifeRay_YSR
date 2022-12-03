@@ -1,22 +1,4 @@
-<%@page import="com.kpmg.ehsSearch.util.DataGridDisplayManageUtil"%> 
-<%@page import="java.util.ArrayList"%>
-<%@page import="com.liferay.portal.kernel.dao.orm.OrderFactoryUtil"%> 
-<%@page import="java.util.HashMap"%>
-<%@page import="java.util.Map"%>
-<%@page import="java.util.Set"%> 
-<%@page import="java.util.LinkedHashMap"%>
-<%@page import="com.liferay.portal.kernel.dao.orm.RestrictionsFactoryUtil"%>
-<%@page import="com.liferay.portal.kernel.dao.orm.Order"%> 
-<%@page import="com.liferay.portal.kernel.dao.orm.DynamicQuery"%>
-<%@page import="java.text.SimpleDateFormat"%>
-<%@page import="com.liferay.portal.kernel.util.ListUtil"%>
- <%@page import="java.util.List"%>
-<%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
-<%@page import="javax.portlet.PortletURL"%>
- <%@ include file="/init.jsp" %>
- <portlet:renderURL var="viewMitraDistrictRecordsURL">
-			<portlet:param name="mvcPath" value="/districtWiseMitras.jsp"/> 
-		</portlet:renderURL> 
+
  
 <% 
  PortletURL iteratorNewURL = renderResponse.createRenderURL(); 
@@ -35,7 +17,9 @@
 <div class="ysri_section">		
 <section class="blue_section search_panel">
 	  <div class="container">
-		  <h3><%if(pId==499 || pId==501|| pId==503 || pId==505){ %> WJHS <% }else if(pId==491 || pId==497 || pId==495 || pId==521){ %>EHS <% } %>/ Search State Mitra Information</h3><br>
+ 
+		  <h3><%if(pId==501){ %> WJHS <% }else if(pId==521){ %>EHS <% } %> / Search State Mitra Information</h3><br>
+ 
 		  <div class="row">
 		      
 		      <% 
@@ -50,7 +34,7 @@
 		        	 System.out.println("statesList.get(i)>>>"+statesList.get(i));
 		        	for(int j=0;j<states_List.length();j++){
 		        	org.json.JSONArray data=new org.json.JSONArray(states_List.get(j).toString());
-		    	   long stateId=data.getLong(2);
+		    	   String stateId=data.getString(2);
 		    	   String stateName=data.getString(0).toString();
 		    	   long mitrasCount=data.getLong(1);
 		    	   System.out.println("stateName>>>"+stateName);
@@ -88,11 +72,11 @@ function viewRecords(recordId){
 	$("#<portlet:namespace />viewRecords").submit();
 } 
 </script>
-		
+<%-- 		
 <aui:form name="viewRecords" method="post" action="<%=viewMitraDistrictRecordsURL %>" style="display:none;">
    <aui:input type="text" name="recordId" value=""></aui:input>
 </aui:form>
-	
+	 --%>
 		
 	</div><!--ysri_section-->	  
     

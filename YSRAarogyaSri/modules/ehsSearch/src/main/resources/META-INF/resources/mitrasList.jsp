@@ -5,6 +5,7 @@
 <portlet:param name="cmd" value="asrimMitrasList"/>
 <portlet:param name="cmdType" value="AsrimMitrasList"/>
 </portlet:resourceURL>
+
 <link href="/o/com.kpmg.asrimSearch/css/select2.min.css" rel="stylesheet" />
 <script src="/o/com.kpmg.asrimSearch/js/select2.min.js"></script> 
 <script>
@@ -94,7 +95,7 @@ String districtId=request.getParameter("districtId").trim();
             {
                 select: "By Associate Number",
                 dataURL:"<%=asrimMitrasURL.toString()%>",
-                columns:["Name of Mitra","Mitra - Contact Number","District","Name of the Hospital","Specialities"],
+                columns:["Name of Mitra","Mitra - Contact Number","District","Code","Name of the Hospital","Specialities"],
                 options:{},
                 scrollX: false,
                 header: true,
@@ -225,7 +226,9 @@ String districtId=request.getParameter("districtId").trim();
  	 <div class="ysri_section">
 	<section class="blue_section">
  	  <div class="container search_panel">
-		  <h3><%if(pId==499 || pId==501|| pId==503 || pId==505){ %> WJHS <% }else if(pId==491 || pId==497 || pId==495 || pId==521){ %>EHS <% } %> / State Name / Mitra Search</h3>
+ 
+		  <h3><%if(pId==501){ %> WJHS <% }else if(pId==521){ %>EHS <% } %> / State Name / Mitra Search</h3>
+ 
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
  <div id="searchData" class="row col-lg-12">
  <div class="col-lg-2"  style="padding-top: 22px;">

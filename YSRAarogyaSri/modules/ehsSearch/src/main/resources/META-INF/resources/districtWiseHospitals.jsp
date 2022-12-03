@@ -1,4 +1,4 @@
- <%@page import="com.kpmg.ehsSearch.util.DataGridDisplayManageUtil"%>
+<%@page import="com.kpmg.ehsSearch.util.DataGridDisplayManageUtil"%>
 <%@page import="org.json.JSONArray"%> 
 <%@page import="com.liferay.portal.kernel.dao.orm.Order"%> 
 <%@page import="com.liferay.portal.kernel.dao.orm.OrderFactoryUtil"%>
@@ -24,7 +24,9 @@ System.out.print("districts_List"+districts_List.toString());
 <div class="ysri_section">
 	<section class="blue_section">
 	  <div class="container search_panel">
-		  <h3><%if(pId==499 || pId==501|| pId==503 || pId==505){ %> WJHS <% }else if(pId==491 || pId==497 || pId==495 || pId==521){ %>EHS <% } %> / District Wise - Empanelled Hospitals</h3><br>
+ 
+		  <h3><%if(pId==499){ %> WJHS <% }else if(pId==491){ %>EHS <% } %> / District Wise - Empanelled Hospitals</h3><br>
+ 
 		  <div class="row">
 		  
 		  <%  try{ 
