@@ -47,31 +47,31 @@
                  <div class="carousel-item active item"><picture data-fileentryid="52761">
                  <source media="(max-width:200px)" srcset="/o/adaptive-media/image/52761/Preview-1000x0/Habimg1.gif?t=1667806261010">
                  <source media="(max-width:200px) and (min-width:200px)" srcset="/o/adaptive-media/image/52761/Thumbnail-300x300/Habimg1.gif?t=1667806261010">
-                 <img src="https://115.124.110.149/documents/d/guest/Habimg1" class="d-block w-100" alt="...">
+                 <img src="/documents/d/guest/Habimg1" class="d-block w-100" alt="...">
                 </picture>
                  </div>
                  <div class="carousel-item item"><picture data-fileentryid="52776">
                  <source media="(max-width:100px)" srcset="/o/adaptive-media/image/52776/Preview-1000x0/Habimg2.gif?t=1667806261777">
                  <source media="(max-width:100px) and (min-width:100px)" srcset="/o/adaptive-media/image/52776/Thumbnail-300x300/Habimg2.gif?t=1667806261777">
-                 <img src="https://115.124.110.149/documents/d/guest/Habimg2" class="d-block w-100 desktopify" alt="...">
+                 <img src="/documents/d/guest/Habimg2" class="d-block w-100 desktopify" alt="...">
                 </picture>
                  </div>
                  <div class="carousel-item item"><picture data-fileentryid="52791">
                  <source media="(max-width:100px)" srcset="/o/adaptive-media/image/52791/Preview-1000x0/Habimg3.gif?t=1667806262399">
                  <source media="(max-width:100px) and (min-width:100px)" srcset="/o/adaptive-media/image/52791/Thumbnail-300x300/Habimg3.gif?t=1667806262399">
-                 <img src="https://115.124.110.149/documents/d/guest/Habimg3" class="d-block w-100 desktopify" alt="...">
+                 <img src="/documents/d/guest/Habimg3" class="d-block w-100 desktopify" alt="...">
                 </picture>
                  </div>
                  <div class="carousel-item item"><picture data-fileentryid="52806">
                  <source media="(max-width:100px)" srcset="/o/adaptive-media/image/52806/Preview-1000x0/Habimg4.gif?t=1667806263014">
                  <source media="(max-width:100px) and (min-width:100px)" srcset="/o/adaptive-media/image/52806/Thumbnail-300x300/Habimg4.gif?t=1667806263014">
-                 <img src="https://115.124.110.149/documents/d/guest/Habimg4" class="d-block w-100 desktopify" alt="...">
+                 <img src="/documents/d/guest/Habimg4" class="d-block w-100 desktopify" alt="...">
                 </picture>
                  </div>
                  <div class="carousel-item item"><picture data-fileentryid="52821">
                  <source media="(max-width:150px)" srcset="/o/adaptive-media/image/52821/Preview-1000x0/Habimg5.gif?t=1667806263612">
                  <source media="(max-width:150px) and (min-width:150px)" srcset="/o/adaptive-media/image/52821/Thumbnail-300x300/Habimg5.gif?t=1667806263612">
-                 <img src="https://115.124.110.149/documents/d/guest/Habimg5" class="d-block w-100" alt="...">
+                 <img src="/documents/d/guest/Habimg5" class="d-block w-100" alt="...">
                 </picture>
                  </div>
                 </div><button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span> </button><button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Next</span> </button>

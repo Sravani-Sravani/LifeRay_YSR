@@ -8,13 +8,13 @@ long pageId=themeDisplay.getPlid();
 System.out.println("pageId="+pageId);
 
 
-if(pageId==6|| pageId==33){ %>
+if( pageId==33){ %>
 <%@ include file="/about_fieldoperations.jsp" %>
 <% } else if(pageId==31||pageId==27){ %>
 <%@ include file="/about_scheme.jsp" %>
 <%} else if(pageId==35){ %>
 <%@ include file="/about_trustoffice.jsp" %>
-<%}else if(pageId==41){ %>
+<%}else if(pageId==41 || pageId==6){ %>
 <%@ include file="/whoiswho.jsp" %>
 <%}else if(pageId==39){ %>
 <%@ include file="/about_webportal.jsp" %>

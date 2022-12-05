@@ -2,17 +2,14 @@
 <%@ include file="/topr.jsp" %>
 
 <%@ include file="/side.jsp" %>
-<%@ include file="/rightcontentr.jsp" %>
+<%@ include file="/rightContentr.jsp" %>
 
 
 	<h3 class="bordertitle text-dark">FOLLOW UP GUIDELINES</h3> 
-	
-	
 
-	
 	<div class="accordion" id="accordionExample">
 		<div class="card-off">
-			<div class="ysri_section container" style="margin-top: 30px; overflow-y:auto; overflow-x: hidden; height: 400px;">
+			<div class="ysri_section container" style="margin-top: 30px; overflow-y:auto; overflow-x:auto; height: 400px;">
 				<table>
 				 <tbody>
 				  <tr>

@@ -2,7 +2,7 @@
 <%@ include file="/topr.jsp" %>
 
 <%@ include file="/side.jsp" %>
-<%@ include file="/rightcontentr.jsp" %>
+<%@ include file="/rightContentr.jsp" %>
 
 
 	<h3 class="bordertitle text-dark">BOARD OF TRUSTEES</h3> 

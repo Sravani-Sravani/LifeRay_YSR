@@ -32,7 +32,7 @@
           <div class="card-body">
             <p class="shadow-sm p-3 mb-2 bg-white rounded bg-info">
               <a
-                href="https://115.124.110.149/documents/d/guest/new-tribal-health-policy"
+                href="/documents/d/guest/new-tribal-health-policy"
                 >Dr.YSR Aarogyasri Health Care Trust REVISED HEALTH CAMP
                 POLICY</a
               >

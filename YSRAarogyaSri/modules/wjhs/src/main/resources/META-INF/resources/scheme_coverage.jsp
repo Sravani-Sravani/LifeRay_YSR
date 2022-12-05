@@ -134,9 +134,7 @@
                                 preauthorization and other modalities while implementing the scheme will
                                 be in conformity with the existing standard procedures being followed by
                                 Dr.YSR AHCT. The list of empanelled hospitals will be made available in
-                                the official website <strong><a href="www.wjhs.ap.gov.in" http:=""><span
-                                            style="color:#0000ff;">www.wjhs.ap.gov.in
-                                        </span></a></strong></li>
+                                the official website</li>
                         </ul>
                         <h5 >Hospital Payments:</h5>
                         <p>Payments under the scheme will be based on approved package prices.</p>

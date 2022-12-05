@@ -4,7 +4,7 @@
 
 <%@ include file="/sidea.jsp" %>
 <%@ include file="/rightContenta.jsp" %>
-<div class="col-lg-9 rightsidebar_content px-2"> 
+
 				<h3 class="bordertitle text-dark">Explore Data</h3> 
 				<div class="accordion" id="accordionExample-1"> 
 				 <div class="accordion-item"> 

@@ -9,7 +9,7 @@
 				</div>
 				<div class="col-md-4 order-1 order-md-2 align-self-center">
 					<ul class="breadcrumb d-block text-md-end breadcrumb-light">
-						<li><a href="https://115.124.110.149/home">Home</a></li>
+						<li><a href="/home">Home</a></li>
 						<li class="active">EHS</li>
 					</ul>
 				</div>

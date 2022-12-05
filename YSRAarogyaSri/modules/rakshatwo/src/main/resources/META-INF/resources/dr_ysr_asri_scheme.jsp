@@ -88,7 +88,7 @@
         <li>Claim submission The NWH will raise the claim after the 10 days of satisfactory discharge of the patient. x) Emergency Registration and Admission All the beneficiaries shall be admitted by a NWH and treated immediately. MEDCO or treating doctor shall obtain emergency telephonic pre-authrorisation through dedicated round the clock telephone lines of the Trust, if the patient is suffering from listed therapies.</li> <br>
         <li>Health camp Services Dr.YSR Aarogyasri is the flag ship scheme of the state government and the aim is to achieve "Universal Health Care " to poor people in Andhra Pradesh, and the benefit in the primary care is addressed through health camps as part of scheme implementation. Health Camps are main source of mobilizing the Beneficiaries. The important role played by the health camps includes conducting IEC activity, screening, counselling , treatment of common ailments and refer the patients to Government and Corporate Network Hospitals for treatment under Dr.YSR Aarogyasri
         </li> <br>
-        <img src="https://115.124.110.149/documents/d/guest/ex2">
+        <img src="/documents/d/guest/ex2">
     </ul>
     <h5 class="bordertitle text-dark">Impact on Health Scenario in the State</h5>
     <ul>

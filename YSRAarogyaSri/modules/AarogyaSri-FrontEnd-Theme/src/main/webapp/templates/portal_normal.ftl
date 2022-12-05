@@ -268,7 +268,7 @@ ${pin_code}:522503 <br />
       </div>
       -->
       <div class="col-lg-3">
-            <h5 class="bordertitle">Useful Links</h5>
+            <h5 class="bordertitle">${links}</h5>
             <ul class="nav flex-column">
 
               <li>
@@ -323,21 +323,51 @@ ${pin_code}:522503 <br />
               </li>
             </ul>
           </div>
-      
- <script>
+  <script>
 
-$.getJSON("https://api.countapi.xyz/hit/ysraarogyasri.ap.gov.in/visits", function(response) {
-    $("#visits").text(response.value);
-});
+function increaser(){
+    $.getJSON("https://api.countapi.xyz/hit/ysraarogyasri.ap.gov.in/visits", function(response) {
+        $("#visits").text(response.value);
+    });
+}
 
+function reader(){
+    $.getJSON("https://api.countapi.xyz/get/ysraarogyasri.ap.gov.in/visits", function(response) {
+        $("#visits").text(response.value);
+    });
+}
+
+//Invoke jquery if aarogyasri url for home page matches
+//alert(window.location.href); //-> Get Current Page URL before validation
+
+if(window.location.href === "https://www.ysraarogyasri.ap.gov.in/"){
+    increaser(); // Increase counter on asri homepage url only.
+}
+
+// For this statement, any page which loads the footer but is not HomePage will show count as blank.
+// Lets add a read-count mode
+
+else{
+    reader(); // Read counter value without incrementing
+}
+
+
+
+/*
+// For Custom Developed API, Replace JQuery with this JS KPMG Function [where response == getjsonClass.value]
 function websiteVisits(response) {
     document.querySelector("#visits").textContent = response.value;
 }
+*/
+</script>
 
-</script>     
+<!--
+<p> <span id="visits"></span> times.</p>
+-->
+  
 
       <div class="col-lg-2">
-           <h5 class="bordertitle">Find Us On</h5>
+           <h5 class="bordertitle">${find}</h5>
           <div class="d-flex flex-column flex-sm-row w-100 gap-2" style="padding-bottom:5px;">
 
            <a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysraarogyasri_app&hl=en&pli=1" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/btn_googlePlay.svg" class="img-fluid" alt="Get on Playstore" /></a>

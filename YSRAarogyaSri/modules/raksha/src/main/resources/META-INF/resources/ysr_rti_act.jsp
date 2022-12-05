@@ -2,7 +2,7 @@
 <%@ include file="/topr.jsp" %>
 
 <%@ include file="/side.jsp" %>
-<%@ include file="/rightcontentr.jsp" %>
+<%@ include file="/rightContentr.jsp" %>
 
 
 <h3 class="bordertitle text-dark">RTI ACT</h3>
@@ -21,7 +21,7 @@
           1st Appellate Authority
            </div><br> M. Prasada Rao<br> Executive Officer(Admin)<br> Dr.YSR Aarogyasri Health Care Trust.</td>
           <td>8333817330</td>
-          <td>ap_c388@ysraarogyasri.ap.gov.in</td>
+          <td>ap_c388[at]ysraarogyasri[dot]ap[dot]gov[dot]in</td>
          </tr>
          <tr>
           <td>
@@ -29,7 +29,7 @@
           Public Information Officer
            </div><br> K Bala Raghu Ram<br> Joint Executive Officer(Admin &amp; HR)<br> Dr.YSR Aarogyasri Health Care Trust.</td>
           <td>8333817321</td>
-          <td>ap_d115@ysraarogyasri.ap.gov.in</td>
+          <td>ap_d115[at]ysraarogyasri[dot]ap[dot]gov[dot]in</td>
          </tr>
          <tr>
           <td>
@@ -37,7 +37,7 @@
           Assistant Public Information Officer
            </div><br> D.Narendra<br> Deputy Executive Officer(RTI,Store &amp; Procurement)<br> Dr.YSR Aarogyasri Health Care Trust.</td>
           <td>8333817326</td>
-          <td>ap_c389@ysraarogyasri.ap.gov.in</td>
+          <td>ap_c389[at]ysraarogyasri[dot]ap[dot]gov[dot]in</td>
          </tr>
         </tbody>
          </table>

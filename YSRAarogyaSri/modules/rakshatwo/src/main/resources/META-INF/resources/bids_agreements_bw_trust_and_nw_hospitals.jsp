@@ -31,9 +31,9 @@
     </tr>
     <tr>
       <td>-</td>
-      <td><a href="https://115.124.110.149/documents/d/guest/ntrvs-period-i?download=true">Trust And Hospitals</a></td>
-      <td><a href="https://115.124.110.149/documents/d/guest/ntrvs-period-ii?download=true">Trust And Hospitals</a></td>
-      <td><a href="https://115.124.110.149/documents/d/guest/ntrvs-period-iii?download=true">Trust And Hospitals</a></td>
+      <td><a href="/d/guest/ntrvs-period-i?download=true">Trust And Hospitals</a></td>
+      <td><a href="/d/guest/ntrvs-period-ii?download=true">Trust And Hospitals</a></td>
+      <td><a href="/d/guest/ntrvs-period-iii?download=true">Trust And Hospitals</a></td>
       <td>-</td>
     </tr>
 
@@ -47,9 +47,9 @@
     </tr>
     <tr>
       <td>-</td>
-      <td><a href="https://115.124.110.149/documents/d/guest/cmco-period-i?download=true">Trust And Hospitals</a></td>
-      <td><a href="https://115.124.110.149/documents/d/guest/cmco-period-ii?download=true">Trust And Hospitals</a></td>
-      <td><a href="https://115.124.110.149/documents/d/guest/cmco-period-iii?download=true">Trust And Hospitals</a></td>
+      <td><a href="/d/guest/cmco-period-i?download=true">Trust And Hospitals</a></td>
+      <td><a href="/d/guest/cmco-period-ii?download=true">Trust And Hospitals</a></td>
+      <td><a href="/d/guest/cmco-period-iii?download=true">Trust And Hospitals</a></td>
       <td>-</td>
     </tr>
     <tr>
@@ -63,8 +63,8 @@
     <tr>
       <td>-</td>
       <td>-</td>
-      <td><a href="https://115.124.110.149/documents/d/guest/journalists-period-ii?download=true">Trust And Hospitals</a></td>
-      <td><a href="https://115.124.110.149/documents/d/guest/journalists-period-ii?download=true">Trust And Hospitals</a></td>
+      <td><a href="/d/guest/journalists-period-ii?download=true">Trust And Hospitals</a></td>
+      <td><a href="/d/guest/journalists-period-ii?download=true">Trust And Hospitals</a></td>
       <td>-</td>
     </tr>
     </tbody>

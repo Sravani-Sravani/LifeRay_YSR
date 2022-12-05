@@ -7,7 +7,7 @@
         <h3 class="bordertitle text-dark">Patient Process Flow</h3>
        
         <p>
-            <img src="https://115.124.110.149/documents/d/guest/patient_process_flow-1" class="img-fluid"/>
+            <img src="/documents/d/guest/patient_process_flow-1" class="img-fluid"/>
         </p>
 
  <%@ include file="/lastw.jsp" %>

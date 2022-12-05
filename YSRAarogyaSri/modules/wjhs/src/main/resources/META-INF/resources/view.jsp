@@ -10,7 +10,7 @@ long pageId=themeDisplay.getPlid();
 System.out.println("pageId="+pageId);
 
 
-if(pageId==151 || pageId==6||pageId==25){ %>
+if(pageId==151 || pageId==25){ %>
 <%@ include file="/asri_functions.jsp" %>
 <% } else if(pageId==149){ %>
 <%@ include file="/claims.jsp" %>
@@ -34,7 +34,7 @@ if(pageId==151 || pageId==6||pageId==25){ %>
 <%@ include file="/tender.jsp" %>
 <%}else if(pageId==143){ %>
 <%@ include file="/webportal_online_workflow.jsp" %>
-<%}else if(pageId==147){ %>
+<%}else if(pageId==147 || pageId==6){ %>
 <%@ include file="/who_is_who.jsp" %>
 <%}else if(pageId==308){ %>
 <%@ include file="/documents_wjhs.jsp" %>

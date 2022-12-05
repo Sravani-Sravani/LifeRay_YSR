@@ -78,7 +78,7 @@
 						<p>The eligible beneficiaries will be provided with health cards also called eligibility cards.</p> <p>The procedure of verification of eligibility of beneficiary under the scheme shall be by online authentication of the Health Card details. The beneficiary shall provide either the eligibility card or the card number in case the card is unavailable. The staff at the kiosk in the Network Hospital shall verify the details online by accessing the database. Once the authentication is complete, the eligibility verification ends.</p> 
 						<h6>Penal actions:</h6> 
 						<p>Any irregularities or misuse committed by the beneficiaries coming to the notice of Government or Dr. YSR AHCT will entail disciplinary action as per A.P. C.S. (CCA) Rules, 1991 and may attract penal action as per law.</p> 
-						<h5>Benifit Coverage</h5> 
+						<h5>Benefit Coverage</h5> 
 						<h6>In-Patient Treatment:</h6> 
 						<ul> 
 							<li>The scheme will provide Inpatient treatment for the listed therapies for identified diseases under all specialties in the empanelled hospitals. <a href="">List of IP therapies</a></li> 
@@ -110,7 +110,7 @@
 				<h6>Empanelment:</h6> 
 				<ul> 
 				<li>Guidelines for empanelment of hospitals within the State and outside, preauthorization and other modalities while implementing the scheme will be in conformity with the existing standard procedures being followed by Dr.YSR Aarogyasri Health Care Trust. The list of empanelled hospitals will be made available in the official website 
-				<a href="https://auth.ehs.ap.gov.in/HomePageAP/findHospAction.do?actionFlag=findHosp" target="_blank">https://auth.ehs.ap.gov.in/HomePageAP/findHospAction.do?actionFlag=findHosp</a></li> 
+				<a href="https://auth.ehs.ap.gov.in/HomePageAP/findHospAction.do?actionFlag=findHosp" target="_blank">Find-Hospital</a></li> 
 				</ul> 
 				<h6>Hospital Payments:</h6> 
 				<p>Payments under the scheme will be based on approved package prices.</p> 
@@ -164,7 +164,7 @@
 								<p>All the beneficiaries shall be admitted by a NWH and treated immediately. MEDCO or treating doctor shall obtain emergency telephonic pre-authrorisation through dedicated round the clock telephone lines of the Trust, if the patient is suffering from listed therapies.</p> 
 								<p>If the patient is suffering from diseases other than listed therapies he must be counselled and facilitated safe transportation to the nearest Government Hospital.</p> 
 								<p>If the patient's condition warrants shifting him to a higher centre, safe transport shall be facilitated to other NWH if suffering from listed therapies.</p> 
-								<p><img src="img/Patient_Process_Flow.png" class="img-fluid" /></p>
+
 							</div>
 						  </div>
 						</div>

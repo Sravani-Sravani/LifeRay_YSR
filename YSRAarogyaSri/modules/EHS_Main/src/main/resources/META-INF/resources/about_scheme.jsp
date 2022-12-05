@@ -165,7 +165,7 @@
 								<p>All the beneficiaries shall be admitted by a NWH and treated immediately. MEDCO or treating doctor shall obtain emergency telephonic pre-authrorisation through dedicated round the clock telephone lines of the Trust, if the patient is suffering from listed therapies.</p> 
 								<p>If the patient is suffering from diseases other than listed therapies he must be counselled and facilitated safe transportation to the nearest Government Hospital.</p> 
 								<p>If the patient's condition warrants shifting him to a higher centre, safe transport shall be facilitated to other NWH if suffering from listed therapies.</p> 
-								<p><img src="https://115.124.110.149/documents/d/guest/patient_process_flow" class="img-fluid" /></p>
+								<p><img src="/documents/d/guest/patient_process_flow" class="img-fluid" /></p>
 							</div>
 						  </div>
 						</div>

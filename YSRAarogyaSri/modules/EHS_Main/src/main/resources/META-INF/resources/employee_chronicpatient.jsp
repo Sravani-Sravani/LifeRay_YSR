@@ -6,7 +6,7 @@
 
 
 			<h3 class="bordertitle text-dark">Chronic Out-Patient Treatment</h3>
-			<p><img src="https://115.124.110.149/documents/d/guest/chronicop_2" class="img-fluid" alt="Chronic Out-Patient Treatment" /></p>
+			<p><img src="/documents/d/guest/chronicop_2" class="img-fluid" alt="Chronic Out-Patient Treatment" /></p>
 			
 			
 

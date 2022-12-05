@@ -18,11 +18,11 @@
                         <div class="accordion-body">
                             <ul>
                                 <li style="font-weight:bold">Extension of Working Journalists Health Scheme for the
-                                    F.Y.2017-18<a href="https://115.124.110.149/documents/d/guest/wjhs_exention_doc1"
+                                    F.Y.2017-18<a href="/documents/d/guest/wjhs_exention_doc1"
                                         target="_blank">(Click here for Details)</a>&nbsp;</li>
                                 <li style="font-weight:bold">Extension of Working Journalists Health Scheme for the
                                     F.Y.2016-17.<a
-                                        href="https://115.124.110.149/webdav/guest/document_library/WJHS/Govtorder1_doc2"
+                                        href="/webdav/guest/document_library/WJHS/Govtorder1_doc2"
                                         target="_blank" title="Click here for details">(Click here for
                                         details)</a></li>
 
@@ -44,7 +44,7 @@
                             <ul>
                                 <li style="font-weight:bold">G.O.Ms.No.159: Dated 22.12.2014-Health,Medical and Family
                                     Welfare - Employees Health Scheme (EHS) -Further Clarification -Order Issued.<a
-                                        href="https://115.124.110.149/documents/d/guest/go_159_doc3"
+                                        href="/documents/d/guest/go_159_doc3"
                                         target="_blank">(Click here to Download).</a></li>
 
                             </ul>

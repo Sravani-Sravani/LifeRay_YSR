@@ -2,10 +2,10 @@
 <%@ include file="/topr.jsp" %>
 
 <%@ include file="/side.jsp" %>
-<%@ include file="/rightcontentr.jsp" %>
+<%@ include file="/rightContentr.jsp" %>
 
 
-<h3 class="bordertitle text-dark">Health Camp</h3>
+<h3 class="bordertitle text-dark">Health Camps</h3>
 
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
@@ -31,18 +31,14 @@
         <div class="card">
           <div class="card-body">
             <p class="shadow-sm p-3 mb-2 bg-white rounded bg-info">
-              <a
-                href="https://115.124.110.149/documents/d/guest/new-tribal-health-policy"
-                >Dr.YSR Aarogyasri Health Care Trust REVISED HEALTH CAMP
-                POLICY</a
-              >
+              <a href="/documents/d/guest/new-tribal-health-policy" target="_blank">Dr.YSR Aarogyasri Health Care Trust REVISED HEALTH CAMP
+                POLICY</a>
             </p>
             <p class="shadow-sm p-3 mb-2 bg-white rounded bg-info">
               <a
-                href="https://www.ysraarogyasri.ap.gov.in/web/guest/hcview"
+                href=""
                 target="_blank"
-                >Health Camp View</a
-              >
+                >Health Camp View</a>
             </p>
           </div>
         </div>

@@ -19,16 +19,16 @@
                         <div class="accordion-body">
                             <ul>
                                 <li style="font-weight:bold">"Tender document for printing of posters"<a
-                                        href="https://115.124.110.149/documents/d/guest/tender_document_printing"
+                                        href="/documents/d/guest/tender_document_printing"
                                         target="_blank">(Click here for Details)</a>&nbsp;</li>
                                 <li style="font-weight:bold">Revised Bid schedule for Tender NTRVS/PMU
                                     IT/F4035/IT Tender/2015-16.<a
-                                        href="https://115.124.110.149/documents/d/guest/revides_bid" target="_blank"
+                                        href="/documents/d/guest/revides_bid" target="_blank"
                                         title="Click here for details">(Click here for
                                         details)</a></li>
                                 <li style="font-weight:bold">Notice Inviting Proposals for Selection of IT
                                     Service Provider <a
-                                        href="https://115.124.110.149/documents/d/guest/notice_inviting_proposal">(Click
+                                        href="/documents/d/guest/notice_inviting_proposal">(Click
                                         here for details Notice Inviting Tender).</a>
                                 </li>
                             </ul>
@@ -48,19 +48,19 @@
                         <div class="accordion-body">
                             <ul>
                                 <li style="font-weight:bold">Circular to the NWHs<a
-                                        href="https://115.124.110.149/documents/d/guest/circular-to-the-nwhs"
+                                        href="/documents/d/guest/circular-to-the-nwhs"
                                         target="_blank">(Click here to Download).</a></li>
                                 <li style="font-weight:bold">Circular on continuation of Working Journalist
                                     Health Scheme up to 31.05.2019<a
                                         href="
-                                        https://115.124.110.149/documents/d/guest/circular-to-nwhs-on-extension-of-wjhs-schme-up-to-31-05-2019"
+                                        /documents/d/guest/circular-to-nwhs-on-extension-of-wjhs-schme-up-to-31-05-2019"
                                         target="_blank">(Click here to Download).</a></li>
                                 <li style="font-weight:bold">Extension of Working Journalists Health Scheme
                                     for the F.Y.2016-17.<a
-                                        href="https://115.124.110.149/documents/d/guest/extension_of_working"
+                                        href="/documents/d/guest/extension_of_working"
                                         target="_blank" title="Click here for Circular">(Click here for
                                         Circular)</a></li>
-                                <li><a href="https://115.124.110.149/documents/d/guest/initial_go"
+                                <li><a href="/documents/d/guest/initial_go"
                                         style="font-weight:bold" target="_blank">Initial GO</a></li>
                             </ul>
                         </div>

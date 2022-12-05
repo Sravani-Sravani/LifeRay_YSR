@@ -1,122 +1,449 @@
+
 <%@ include file="/headinga.jsp" %>
 <%@ include file="/topa.jsp" %>
 
 <%@ include file="/sidea.jsp" %>
 <%@ include file="/rightContenta.jsp" %>
 
-    <h3 class="bordertitle text-dark">DR.YSR AAROGYASRI SCHEME</h3>
-    <h5 class="bordertitle tet-dark">Introduction</h5>
-    <p>
-        Towards achievement of universal health coverage for BPL families whether defined in terms of financial protection or access to and effective use of health care, Government of Andhra Pradesh is implementing state sponsored Dr.YSR Aarogyasri Health Insurance Scheme. This scheme certainly counts to be one of the pioneers in terms of achieving equity and providing accountable and evidence-based good-quality health-care services in the state to assist poor families from catastrophic health expenditure. The aim of the Government is to provide Universal Health Coverage to BPL families. The scheme is a unique PPP model in the field of Health Insurance, tailor made to the health needs of poor patients and provides end-to-end cashless services for identified diseases under secondary and tertiary care through a network of service providers from Government and private sector.<br><br>
-        The scheme has established a demand-side mechanism that mobilizes and channels additional public financing to health, introduced an explicit benefits package, pioneered cashless care and fostered public private partnerships.<br><br>
-        The scheme is designed in such a way that the benefit in the primary care is addressed through free screening and outpatient consultation both in the health camps and in the network hospitals as part of scheme implementation. The IEC activity during the health camps, screening, counselling and treatment of common ailments in the health camps and out-patient services in network hospitals is supplementing the government health care system in preventive and primary care. <br><br>
-        In order to facilitate the effective implementation of the scheme, the State Government set up the Dr.YSR Aarogyasri Health Care Trust, under the chairmanship of the Honorable Chief Minister. The Trust is administered by a Chief Executive Officer who is an IAS Officer. The trust, in consultation with the specialists in the field of insurance and healthcare, runs the scheme.<br><br>
-        Dr.YSR Aarogyasri Health Insurance scheme is unique in its applicability since no other State/ government agency has provided universal health coverage to the poor. The choice of hospital for treatment is with the patient. The entire process from the time of conduct of health camps to the screening, diagnosing , treatment, follow- up and claim payment is made transparent through online web based processing to prevent any misuse and fraud. The scheme is complimentary to facilities available in government hospitals and put together provides Universal Health Coverage to BPL population including Prevention, Primary care and In-Patient care. All the Primary Health Centres (PHCs) which are the first contact point, Area/District Hospitals and Network Hospitals, are provided with Help Desks manned by VAIDYA MITHRA's to facilitate the illiterate patients.<br><br>
-    </p>
-    <h5 class="bordertitle tet-dark">Objective</h5>
-    <ul>
-        <li>To provide free quality hospital care and equity of access to BPL families by purchase of quality medical services from identified network of health care providers through a self-funded reimbursement mechanism (serviced by Trust).</li>
-        <li>To provide financial security against the catastrophic health expenditures.</li>
-        <li>To strengthen the Government Hospitals through demand side financing.</li>
-        <li>To provide universal coverage of health for both urban and rural poor of the State of Andhra Pradesh.</li>
-    </ul> <br><br>
-    <h5 class="bordertitle tet-dark">Geometry of Health Insurance Coverage</h5>
-    <ul>
-        <li>Population coverage (Breadth of Universal Health coverage) The beneficiaries of the scheme are the members of Below Poverty Line (BPL) families as enumerated and photographed in White Ration Card linked with Adhar card and available in Civil Supplies Department database.</li>
-        <li>Financial coverage (Height of Universal Health coverage) The scheme shall provide coverage for the services to the beneficiaries up to Rs.5 lakh per family per annum on floater basis. There shall be no co-payment under this scheme.</li>
-        <li>Benefit Coverage (Depth of Universal Health coverage)</li>
-        <ul>
-            <li><strong>Out-Patient</strong>
-                The scheme is designed in such a way that the benefit in the primary care is addressed through free screening and outpatient consultation both in the health camps and in the network hospitals as part of scheme implementation.
-            </li>
-            <li><strong>In-Patient</strong>
-                The scheme shall provide coverage for the 2434 "Listed Therapies" for identified diseases in the 30 categories -€“ Are listed in website: www.ysraarogyasri.ap.gov.in
-            </li>
-        </ul>
-        <br>
-        <p><strong>Package includes the following services:</strong></p>
-        <li>End-to-end cashless service offered through a NWH from the time of reporting of a patient till ten days post discharge medication, including complications if any up to thirty (30) days post-discharge, for those patients who undergo a "listed therapy(ies).</li>
-        <li>Free OP evaluation of patients for listed therapies who may not undergo treatment for "listed therapies.</li>
-        <li>All the pre-existing cases under listed therapies are covered under the scheme.</li>
-        <li>Food and Transportation.</li>
-    </ul> <br><br>
-        The scheme provides coverage for the procedures under following categories:
-        <div class="col-lg-9 rightsidebar_content px-2" 
-        style="max-height: 200px; background-color: #1b65a6;; color: whitesmoke">
-            <ul class="nav nav-pills nav-stacked anyClass">
-             <li class="nav-item colorchax" style=" color: whitesmoke"></li>
-                <br><strong>
-                1) GENERAL SURGERY<br>
-                2) ENT SURGERY<br>
-                3) OPHTHAMOLOGY<br>
-                4) GYNAECOLOGY &amp; OBSTETRICS<br>
-                5) ORTHOPEDIC SURGERY AND PROCEDURES<br> 6) SURGICAL GASTROENTEROLOGY<br> 7) CARDIOTHORASIC SURGERY<br> 8) PAEDIATRIC SURGERIES<br> 9) GENITO URINARY SURGERIES<br> 10) NEURO SURGERY<br> 11) SURGICAL ONCOLOGY<br> 12) MEDICAL ONCOLOGY<br> 13) RADIATION ONCOLOGY<br> 14) PLASTIC SURGERY<br> 15) POLYTRAUMA<br> 16) PROSTHESES<br> 17) CRITICAL CARE<br> 18) GENERAL MEDICINE<br> 19) INFECTIOUS DISEASES<br> 20) PEDIATRICS<br> 21) CARDIOLOGY<br> 22) NEPHROLOGY<br> 23) NEUROLOGY<br> 24) PULMONOLOGY<br> 25) DERMATOLOGY<br> 26) RHEUMATOLOGY<br> 27) ENDOCRINOLOGY<br> 28) GASTRO ENTEROLOGY<br> 29) PSYCHIATRY</strong><br><br></li> 
-           </div><br><br>
-    </ul> <br><br>
-    <h5 class="bordertitle tet-dark">Follow Up Services</h5>
-    <p>Follow-up services are provided for a period of one year through fixed packages to the patients whoever require long term follow-up therapy in order to get optimum benefit from the procedure and avoid complications. Follow-up package for consultation, investigations, drugs etc., for one year for listed therapies were formulated by Technical committee of the Trust in consultation with specialists are listed in the website:</p>
-    www.drysraarogyasri.ap.gov.in <br><br>
-    <br>
-
-    <h5 class="bordertitle tet-dark">Important stakeholders in the scheme are</h5>
-    <ul>
-        <li> The beneficiaries The Scheme is intended to benefit 129.44 lakh families in all 13 districts of the state.</li> <br>
-        <li> Dr.YSR Aarogyasri Health Care Trust- Implementing agency In order to implement the scheme in a dynamic and hassle free manner Government of AP established an Independent Trust "Dr.YSR Aarogyasri Health Care Trust". The scheme is implemented directly by the Trust by entering into contract agreement with network hospitals</li> <br>
-        <li> Network Hospitals - Service Providers A health care provider shall be a hospital or nursing home in Andhra Pradesh/Telangana established for indoor medical care and treatment of disease and injuries and should be registered under Andhra Pradesh Private Allopathic Medical Establishments (Registration & Regulation) Act and Pre-Conception and Pre-Natal Diagnostic Techniques Act (Wherever Applicable).</li> <br>
-        <li> District Administration- Mobilization District level monitoring committees are setup with district collector as the chairman of the committee. This committee not only reviews the implementation of the scheme through regular review meetings but also help mobilize patients by encouraging them to attend health camps, conducting awareness campaigns through peoples representatives, Self Help Groups and other field functionaries.
-        </li> <br>
-        <li>Software Company - Technology Solutions A dedicated real-time online workflow system was designed by the Trust in order to bring dynamism and decentralization of work like Online processing of the cases starting from registration of case at first referral center, health camps etc., registration at network hospital, pre-authorization, treatment and other services at the hospital, discharge and post treatment follow-up, claim settlement, payment gateway, accounting system, TDS deductions, e-office solutions etc. The maintenance of the workflow is done round the clock.
-        </li> <br><br>
-    </ul>
-    <h5 class="bordertitle text-dark">Implementation Process - Patient Process Flow</h5>
-    <ul>
-        <li>Modes of OP capture A beneficiary suffering from an ailment can approach any of the following '€˜first point of contact' for registration under the scheme. There are three modes of OP capture. Vaidyamithra counters at PHC. Registration in a Health Camp organized by the PHCs or NWHs and Directly at the NWH in case of emergencies or through referral. Referral from CMCO center Referral from 104 and 108 services</li> <br>
-        <li>Biometric registration: Capturing digital image (finger impression) of the patient while registering online for the first time in a network hospital.
-        </li> <br>
-        <li>Evaluation and Admission After the initial evaluation of the patient, the patient is admitted if needed and evaluated further. The patient may be evaluated as an out-patient initially and after ascertaining the diagnosis and finalization treatment mode admitted and converted as "in-patient" in the online workflow.
-        </li> <br>
-        <li>Final diagnosis and categorization After the evaluation of the patient: If the patient is found to be suffering from listed therapies, MEDCO shall submit the pre-authorization through the Trust portal within 24 hours. If the patient is found to be suffering from diseases other than listed therapies, he shall be counseled and referred to nearest Govt. Hospital for further management.
-        </li> <br>
-        <li>Pre-authorization MEDCO shall upload all the relevant documents and send the case for pre-authorization .</li> <br>
-        <li>Treatment The NWH shall render complete treatment to the patient after obtaining pre-authorization.
-        </li> <br>
-        <li> Treatment The NWH shall render complete treatment to the patient after obtaining pre-authorization.
-        </li> <br>
-        <li>Enhancement (Package price adjustment) The NWH shall provide end to end cashless services within the package. However NWH may apply for enhancement of the package price in case of exigencies prior to discharge as per Trust guidelines.
-        </li> <br>
-        <li>Discharge The patient is discharged after complete recovery. The NWH shall issue discharge summary, 10 days post-discharge medication, counsel the patient for follow-up. A letter of satisfactory services shall be obtained from the beneficiary at the time of discharge.The patient is reimbursed transport charges as per the scheme norms and obtains receipt.
-        </li> <br>
-        <li>Claim submission The NWH will raise the claim after the 10 days of satisfactory discharge of the patient. x) Emergency Registration and Admission All the beneficiaries shall be admitted by a NWH and treated immediately. MEDCO or treating doctor shall obtain emergency telephonic pre-authrorisation through dedicated round the clock telephone lines of the Trust, if the patient is suffering from listed therapies.</li> <br>
-        <li>Health camp Services Dr.YSR Aarogyasri is the flag ship scheme of the state government and the aim is to achieve "Universal Health Care " to poor people in Andhra Pradesh, and the benefit in the primary care is addressed through health camps as part of scheme implementation. Health Camps are main source of mobilizing the Beneficiaries. The important role played by the health camps includes conducting IEC activity, screening, counselling , treatment of common ailments and refer the patients to Government and Corporate Network Hospitals for treatment under Dr.YSR Aarogyasri
-        </li> <br>
-        <img src="/documents/d/guest/ex2">
-    </ul>
-    <h5 class="bordertitle text-dark">Impact on Health Scenario in the State</h5>
-    <ul>
-        <li> Changing Tertiary care profile As the scheme progressed the pre-existing load of diseases is coming down, particularly in relation to the high end diseases in cardiology, neurosurgery, gynaecology and obstetrics etc., This may be attributed to the decrease in preload which is contributed by procedures under the scheme such as valve replacement surgeries and congenital cardiac defects, SOLs in brain and chronic disorders in gynaecology.</li> <br>
-        <li> Improvement in documentation and regulatory effect on Hospitals The empanelment procedure, defined diagnostic and treatment protocols, capturing of admission notes, daily clinical notes, operation notes, discharge summary and uploading of diagnostic reports including films, WebEx recording of Angio and Laparoscopic procedures and other photographic evidences have resulted in profound improvement of medical documentation in the State and regulatory effect on the hospitals.
-        </li> <br>
-        <li>Improvement in quality of services: Continued monitoring of the services both online and in the field by the elaborated field mechanism coupled with disciplinary action against erring hospitals is greatly contributing to the quality of treatment under the scheme.</li> <br>
-        <li> Establishing Medical Protocols tailor-made to local situations: The scheme by taking into consideration of availability of local infrastructure and standard medical practices defined standard medical protocols with the help of senior specialists in each field.
-        </li> <br>
-        <li>Employment Generation The scheme generated indirect employment potential as the insurance company, network hospital and other stake holders have to employ number of people in different cadres such as Vaidyamithra, MEDCO, VMCCO, duty doctors, para medical technicians, staff nurses etc.,
-        </li> <br>
-        <li> Health Awareness: Since implementation of the scheme Health camps held in rural areas not only screened people but also played key role in bringing health awareness among the population through IEC activity. Counselling by field staff and paramedical staff is also contributing to the health awareness among rural poor. As pre-evaluation of the patient is also cashless under the scheme, the people are motivated to approach network hospitals as and when suspected of suffering from identified diseases.</li> <br>
-        <li>Morbidity pool and Disease Mapping As the entire patient data of people attending health camps, network hospital OP, in-patient treatment details and treatment details of the beneficiaries approved under the scheme are captured online, it created huge morbidity data of the population.
-        </li> <br>
-        <li>Early recognition and Disease IEC activities, health camps, counselling by field staff and awareness campaigns by the Trust and district administration is helping in early recognition and disease prevention.</li> <br>
-        <li>Performance of Government Hospitals Hospitals from Govt sector with requisite infrastructure are empanelled to provide services under the scheme and they are entitled to receive same payment as the private and corporate hospitals. This is helping Govt.,hospitals to earn much needed finances for improving infrastructure, provide quality care to the patients This system is motivating more and more government hospitals to participate in the scheme and utilize the revenue earned to improve facilities to provide quality medical care. Government decided to retain 20% of earnings by the Government Hospitals to create revolving fund to regularly assist these hospitals to improve their infrastructure and decided to utilize art thus bring reforms in tertiary medical care
-        </li> <br>
-        <li>Other PPP models Dr.YSR Aarogyasri Health Insurance scheme has encouraged the introduction of many successful PPP schemes as given below.
-        </li> <br>
-        <ul>
-            <li>Haemodialysis facilities in 11 government hospitals.</li>
-            <li>Insurance scheme for Journalist.</li>
-            <li>CMCO referral system.</li>
-            <li>Advanced diagnostic facility in Government Hospitals,</li>
-        </ul>
-    </ul> <br>
-    Independent evaluation of the scheme by IIPH (Indian institute of Public Health) established the fact that the scheme had profound impact on the health needs of the poor population. Eighty seven percent of beneficiaries who had a low Standard of Living Index (SLI) reported improvement following treatment of their condition. The unemployed together with unskilled labourers made up nearly half the sample, confirming that the scheme was appropriately benefitting economically poor households. The beneficiary satisfaction is highest and the beneficiaries were unanimous that the scheme had transformed their lives. Government has decided to evaluate functioning of the scheme through third party CGG and provide insights into the current performance of the scheme against the overall objectives.
-
+				<h3 class="bordertitle text-dark">Explore Data</h3> 
+				<div class="accordion" id="accordionExample-1"> 
+				 <div class="accordion-item"> 
+				  <h4 class="accordion-header" id="headingOne"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> Data Tables </button> </h4> 
+				  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample-1" style=""> 
+				   <div class="accordion-body"> 
+					<div class="table-responsive"> 
+						<table class="table table-bordered table-hover table-striped"> 
+					 <thead> 
+					  <tr> 
+					   <th scope="col" colspan="2" style="text-align: center; background-color: #7bbf4b; color: white;" class="table"> Data Tables </th> 
+					  </tr> 
+					 </thead> 
+					 <tbody> 
+					  <tr> 
+					   <td><a href="https://app.ysraarogyasri.ap.gov.in/ASRI/common/Districts.jsp?stateFlag=ap" target="_blank" style="text-decoration: none color:"> Data Tables District Wise Details of Dr. YSR Aarogyasri </a></td> 
+					   <td><a href="https://app.ysraarogyasri.ap.gov.in/ASRI/readAttachAction.do?actionVal=openAtach&amp;filepath=/NAS1-Production//EXT_IMAGES/documents/AP_Hospital-wise-Report.xls&amp;Storage=&amp;fromPage=HomePage" target="_blank" style="text-decoration: none"> Hospital-wise Expenditure <img src="img/excel.png" alt=""></a><br>(Data as on: excluding CMCO and Cochlear cases) </td> 
+					  </tr> 
+					  <tr> 
+					   <td><a href="https://app.ysraarogyasri.ap.gov.in/ASRI/hospEmpanelAction.do?actionVal=getHospDistSpecialities&amp;fromPage=HomePage" target="_blank" style="text-decoration: none"> Hospital wise Specialties Empanelled </a></td> 
+					   <td><a href="https://app.ysraarogyasri.ap.gov.in/ASRI/publicViewsAction.do?actionVal=ConstituencyRpt&amp;stateFlag=ap&amp;call=home" target="_blank" style="text-decoration: none"> Constituency Wise Report </a></td> 
+					  </tr> 
+					  <tr> 
+					   <td> Patient Claim Data : <a href="https://app.ysraarogyasri.ap.gov.in/ASRI/readAttachAction.do?actionVal=openAtach&amp;filepath=/NAS1-Production//EXT_IMAGES/documents/AP_Claims_Data_Report-2014.zip&amp;Storage=&amp;fromPage=HomePage" style="text-decoration: none">2014</a>&nbsp;&nbsp; <a href="https://app.ysraarogyasri.ap.gov.in/ASRI/readAttachAction.do?actionVal=openAtach&amp;filepath=/NAS1-Production//EXT_IMAGES/documents/AP_Claims_Data_Report-2015.zip&amp;Storage=&amp;fromPage=HomePage" style="text-decoration: none">2015</a>&nbsp;&nbsp; <a href="https://app.ysraarogyasri.ap.gov.in/ASRI/readAttachAction.do?actionVal=openAtach&amp;filepath=/NAS1-Production//EXT_IMAGES/documents/AP_Claims_Data_Report-2016.zip&amp;Storage=&amp;fromPage=HomePage" style="text-decoration: none">2016</a>&nbsp;&nbsp; <a href="https://app.ysraarogyasri.ap.gov.in/ASRI/readAttachAction.do?actionVal=openAtach&amp;filepath=/NAS1-Production//EXT_IMAGES/documents/AP_Claims_Data_Report-2017.zip&amp;Storage=&amp;fromPage=HomePage" style="text-decoration: none">2017</a>&nbsp;&nbsp; <a href="https://app.ysraarogyasri.ap.gov.in/ASRI/readAttachAction.do?actionVal=openAtach&amp;filepath=/NAS1-Production//EXT_IMAGES/documents/AP_Claims_Data_Report-2018.zip&amp;Storage=&amp;fromPage=HomePage" style="text-decoration: none">2018</a>&nbsp;&nbsp; <a href="https://app.ysraarogyasri.ap.gov.in/ASRI/readAttachAction.do?actionVal=openAtach&amp;filepath=/NAS1-Production//EXT_IMAGES/documents/AP_Claims_Data_Report-2019.zip&amp;Storage=&amp;fromPage=HomePage" style="text-decoration: none">2019</a></td> 
+					   <td><a href="https://app.ysraarogyasri.ap.gov.in/ASRI/publicViewsAction.do?actionVal=EmpanelmentRptExcel&amp;call=home" style="text-decoration: none"> Hospital Empanelment Data</a></td> 
+					  </tr> 
+					  <tr> 
+					   <td><a href="https://app.ysraarogyasri.ap.gov.in/ASRI/reportsAction.do?actionFlag=getAsriPerformanceReport&amp;stateFlag=ap" target="_blank" style="text-decoration: none"> Performance Rating in Dr. YSR Aarogyasri Hospitals</a></td> 
+					   <td><a href="https://app.ysraarogyasri.ap.gov.in/ASRI/HomePgDtlReportsAction.do?actionVal=reportdetails&amp;onLoadFlag=Y" target="_blank" style="text-decoration: none"> Government Hospitals Performance</a></td> 
+					  </tr> 
+					 </tbody> 
+					</table> 
+				</div>
+				   </div><!-- accordion-body --> 
+				  </div> 
+				 </div> 
+				</div> 
+				<div class="accordion" id="accordionExample-2"> 
+				 <div class="accordion-item"> 
+				  <h4 class="accordion-header" id="headingTwo"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Data Visualisations </button> </h4> 
+				  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample-2"> 
+				   <div class="accordion-body"> 
+					<div class="table-responsive"> 
+						<table class="table table-bordered table-hover table-striped"> 
+					 <thead> 
+					  <tr> 
+					   <th scope="col" colspan="2" class="table table-bordered "> Data Visualisations </th> 
+					  </tr>  </thead> 
+					  <tr> 
+					   <td><a href="https://app.ysraarogyasri.ap.gov.in/ASRI/reportsAction.do?actionFlag=hospDistPer&amp;stateFlag=ap" target="_blank"> District wise hospital performance</a></td> 
+					   <td><a href="https://app.ysraarogyasri.ap.gov.in/ASRI/reportsAction.do?actionFlag=hospDistCatPer&amp;stateFlag=ap" target="_blank">Hospital wise performance of categories</a></td> 
+					  </tr> 
+					  <tr> 
+					   <td><a href="https://app.ysraarogyasri.ap.gov.in/ASRI/reportsAction.do?actionFlag=PatDistrictCatPerf&amp;stateFlag=ap" target="_blank">Patient District wise performance of categories</a></td> 
+					   <td></td> 
+					  </tr> 
+					
+					</table> 
+					</div>
+				   </div><!-- accordion-body --> 
+				  </div> 
+				 </div> 
+				</div> 
+				<div class="accordion" id="accordionExample-3"> 
+				 <div class="accordion-item"> 
+				  <h4 class="accordion-header" id="headingThree"> <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Vital Statistics </button> </h4> 
+				  <div id="collapseThree" style="margin-left: -20px; transform: scale(94%);" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample-3"> 
+				   <div class="accordion-body"> 
+					<h5>Vital Statistics </h5>
+					<div class="table-responsive">  
+					<table class="table table-bordered"> 
+					 <tbody> 
+					  <tr> 
+					   <td> 
+						<table> 
+						 <thead> 
+						  <tr> 
+						   <th>Vital statistics</th> 
+						   <th></th> 
+						   <th></th> 
+						   <th>last 24 hours</th> 
+						   <th>Since 2ndJune,2014</th> 
+						  </tr> 
+						 </thead> 
+						 <tbody> 
+						  <tr> 
+						   <td> <picture data-fileentryid="55314"> 
+							 <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55314/Preview-1000x0/MedicalCamps.gif?t=1667839003859"> 
+							 <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55314/Thumbnail-300x300/MedicalCamps.gif?t=1667839003859"> 
+							 <img src="/documents/d/guest/medicalcamps" alt=""> 
+							</picture></td> 
+						   <td>Health Camps</td> 
+						   <td></td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						  <tr></tr> 
+						  <tr> 
+						   <td rowspan="3"> <picture data-fileentryid="55327"> 
+							 <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55327/Preview-1000x0/Pre-Auth-6.gif?t=1667839232379"> 
+							 <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55327/Thumbnail-300x300/Pre-Auth-6.gif?t=1667839232379"> 
+							 <img src="/documents/d/guest/pre-auth-6" alt=""> 
+							</picture></td> 
+						   <td rowspan="3">Preauthorizations</td> 
+						   <td>Government</td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						  <tr> 
+						   <td>Private</td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						  <tr> 
+						   <td>Total</td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						  <tr> 
+						   <td rowspan="3"> <picture data-fileentryid="55340"> 
+							 <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55340/Preview-1000x0/Outpatients.gif?t=1667839311102"> 
+							 <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55340/Thumbnail-300x300/Outpatients.gif?t=1667839311102"> 
+							 <img src="/documents/d/guest/outpatients" alt=""> 
+							</picture></td> 
+						   <td rowspan="3">Out Patients</td> 
+						   <td>Government</td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						  <tr> 
+						   <td>Private</td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						  <tr> 
+						   <td>Total</td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						  <tr> 
+						   <td rowspan="3"> <picture data-fileentryid="55353"> 
+							 <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55353/Preview-1000x0/Inpatients.gif?t=1667839374941"> 
+							 <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55353/Thumbnail-300x300/Inpatients.gif?t=1667839374941"> 
+							 <img src="/documents/d/guest/inpatients" alt=""> 
+							</picture></td> 
+						   <td rowspan="3">In Patients</td> 
+						   <td>Government</td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						  <tr> 
+						   <td>Private</td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						  <tr> 
+						   <td>Total<br><br><br></td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						 </tbody> 
+						</table></td> 
+					   <td> 
+						<table> 
+						 <thead> 
+						  <tr> 
+						   <th>Vital statistics</th> 
+						   <th></th> 
+						   <th></th> 
+						   <th>last 24 hours</th> 
+						   <th>Since 2ndJune,2014</th> 
+						  </tr> 
+						 </thead> 
+						 <tbody> 
+						  <tr> 
+						   <td rowspan="2"> <picture data-fileentryid="55366"> 
+							 <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55366/Preview-1000x0/PeopleScreened.gif?t=1667839477685"> 
+							 <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55366/Thumbnail-300x300/PeopleScreened.gif?t=1667839477685"> 
+							 <img src="/documents/d/guest/peoplescreened"> 
+							</picture></td> 
+						   <td rowspan="2"> Patients</td> 
+						   <td>Screened</td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						  <tr> 
+						   <td>Registered</td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						  <tr> 
+						   <td rowspan="3"> <picture data-fileentryid="55446"> 
+							 <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55446/Preview-1000x0/surgeries.gif?t=1667839671958"> 
+							 <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55446/Thumbnail-300x300/surgeries.gif?t=1667839671958"> 
+							 <img src="/documents/d/guest/surgeries" alt=""> 
+							</picture></td> 
+						   <td rowspan="3"> Surgeries/Therapies</td> 
+						   <td>Government</td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						  <tr> 
+						   <td>Private</td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						  <tr> 
+						   <td>Total</td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						  <tr> 
+						   <td rowspan="3"> <picture data-fileentryid="55431"> 
+							 <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55431/Preview-1000x0/AmountClaimed.gif?t=1667839671539"> 
+							 <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55431/Thumbnail-300x300/AmountClaimed.gif?t=1667839671539"> 
+							 <img src="/documents/d/guest/amountclaimed" alt=""> 
+							</picture></td> 
+						   <td rowspan="3">Amount Preauthorized</td> 
+						   <td>Government</td> 
+						   <td>Rs. 0.000 Cr.</td> 
+						   <td>Rs.NaN Cr</td> 
+						  </tr> 
+						  <tr> 
+						   <td>Private</td> 
+						   <td>Rs.0.000 Cr.</td> 
+						   <td>Rs.NaN Cr</td> 
+						  </tr> 
+						  <tr> 
+						   <td>Total</td> 
+						   <td>Rs. 0.000 Cr.</td> 
+						   <td>Rs.NaN Cr</td> 
+						  </tr> 
+						  <tr> 
+						   <td rowspan="3"> <picture data-fileentryid="55416"> 
+							 <source media="(max-width:23px)" srcset="/o/adaptive-media/image/55416/Preview-1000x0/Death-Cases.gif?t=1667839671061"> 
+							 <source media="(max-width:23px) and (min-width:23px)" srcset="/o/adaptive-media/image/55416/Thumbnail-300x300/Death-Cases.gif?t=1667839671061"> 
+							 <img src="/documents/d/guest/death-cases" alt=""> 
+							</picture></td> 
+						   <td rowspan="3">Death Cases</td> 
+						   <td>Government</td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						  <tr> 
+						   <td>Private</td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						  <tr> 
+						   <td>Total</td> 
+						   <td></td> 
+						   <td></td> 
+						  </tr> 
+						 </tbody> 
+						</table></td> 
+					  </tr> 
+					 </tbody> 
+					</table>
+					</div> <!-- table-responsive -->
+				   </div><!-- accordion-body --> 
+				  </div> 
+				 </div> 
+				</div> 
+				<div class="accordion" id="accordionExample-4"> 
+				 <div class="accordion-item"> 
+				  <h4 class="accordion-header" id="headingFour"> <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> Vital statistics before 2nd June,2014 </button> </h4> 
+				  <div id="collapseFour" style="margin-left: -20px; transform: scale(94%);" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample-4"> 
+				   <div class="accordion-body"> 
+					<h5>Vital statistics before 2nd June, 2014 </h5>
+					<div class="table-responsive"> 
+					<table class="table table-bordered"> 
+					 <tbody> 
+					  <tr> 
+					   <td> 
+						<table class="table table-bordered"> 
+						 <thead> 
+						  <tr> 
+						   <th>Vital statistics</th> 
+						   <th></th> 
+						   <th></th> 
+						   <th> Before 2ndJune,2014</th> 
+						  </tr> 
+						 </thead> 
+						 <tbody> 
+						  <tr> 
+						   <td> <picture data-fileentryid="55314"> 
+							 <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55314/Preview-1000x0/MedicalCamps.gif?t=1667839003859"> 
+							 <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55314/Thumbnail-300x300/MedicalCamps.gif?t=1667839003859"> 
+							 <img src="/documents/d/guest/medicalcamps" alt=""> 
+							</picture></td> 
+						   <td>Health Camps</td> 
+						   <td></td> 
+						   <td>37104</td> 
+						  </tr> 
+						  <tr> 
+						   <td rowspan="3"> <picture data-fileentryid="55327"> 
+							 <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55327/Preview-1000x0/Pre-Auth-6.gif?t=1667839232379"> 
+							 <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55327/Thumbnail-300x300/Pre-Auth-6.gif?t=1667839232379"> 
+							 <img src="/documents/d/guest/pre-auth-6" alt=""> 
+							</picture></td> 
+						   <td rowspan="3">Preauthorizations</td> 
+						   <td>Government</td> 
+						   <td>629377</td> 
+						  </tr> 
+						  <tr> 
+						   <td>Private</td> 
+						   <td>1753927</td> 
+						  </tr> 
+						  <tr> 
+						   <td>Total</td> 
+						   <td>2383304</td> 
+						  </tr> 
+						  <tr> 
+						   <td rowspan="3"> <picture data-fileentryid="55340"> 
+							 <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55340/Preview-1000x0/Outpatients.gif?t=1667839311102"> 
+							 <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55340/Thumbnail-300x300/Outpatients.gif?t=1667839311102"> 
+							 <img src="/documents/d/guest/outpatients" alt=""> 
+							</picture></td> 
+						   <td rowspan="3">Out Patients</td> 
+						   <td>Government</td> 
+						   <td>617274</td> 
+						  </tr> 
+						  <tr> 
+						   <td>Private</td> 
+						   <td>4489913</td> 
+						  </tr> 
+						  <tr> 
+						   <td>Total</td> 
+						   <td>5107187</td> 
+						  </tr> 
+						  <tr> 
+						   <td rowspan="3"> <picture data-fileentryid="55353"> 
+							 <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55353/Preview-1000x0/Inpatients.gif?t=1667839374941"> 
+							 <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55353/Thumbnail-300x300/Inpatients.gif?t=1667839374941"> 
+							 <img src="/documents/d/guest/inpatients" alt=""> 
+							</picture></td> 
+						   <td rowspan="3">In Patients</td> 
+						   <td>Government</td> 
+						   <td>750410</td> 
+						  </tr> 
+						  <tr> 
+						   <td>Private</td> 
+						   <td>1877969</td> 
+						  </tr> 
+						  <tr> 
+						   <td>Total</td> 
+						   <td>2628379<br><br><br></td> 
+						  </tr> 
+						 </tbody> 
+						</table></td> 
+					   <td> 
+						<table class="table table-bordered"> 
+						 <thead> 
+						  <tr> 
+						   <th>Vital statistics</th> 
+						   <th></th> 
+						   <th>last 24 hours</th> 
+						   <th>Since 2ndJune,2014</th> 
+						  </tr> 
+						 </thead> 
+						 <tbody> 
+						  <tr> 
+						   <td rowspan="2"> <picture data-fileentryid="55366"> 
+							 <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55366/Preview-1000x0/PeopleScreened.gif?t=1667839477685"> 
+							 <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55366/Thumbnail-300x300/PeopleScreened.gif?t=1667839477685"> 
+							 <img src="/documents/d/guest/peoplescreened"> 
+							</picture></td> 
+						   <td rowspan="2"> Patients</td> 
+						   <td>Screened</td> 
+						   <td>7616743</td> 
+						  </tr> 
+						  <tr> 
+						   <td>Registered</td> 
+						   <td>8609638</td> 
+						  </tr> 
+						  <tr> 
+						   <td rowspan="3"> <picture data-fileentryid="55446"> 
+							 <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55446/Preview-1000x0/surgeries.gif?t=1667839671958"> 
+							 <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55446/Thumbnail-300x300/surgeries.gif?t=1667839671958"> 
+							 <img src="/documents/d/guest/surgeries" alt=""> 
+							</picture></td> 
+						   <td rowspan="3"> Surgeries/Therapies</td> 
+						   <td>Government</td> 
+						   <td>629202</td> 
+						  </tr> 
+						  <tr> 
+						   <td>Private</td> 
+						   <td>1753157</td> 
+						  </tr> 
+						  <tr> 
+						   <td>Total</td> 
+						   <td>2382359</td> 
+						  </tr> 
+						  <tr> 
+						   <td rowspan="3"> <picture data-fileentryid="55431"> 
+							 <source media="(max-width:25px)" srcset="/o/adaptive-media/image/55431/Preview-1000x0/AmountClaimed.gif?t=1667839671539"> 
+							 <source media="(max-width:25px) and (min-width:25px)" srcset="/o/adaptive-media/image/55431/Thumbnail-300x300/AmountClaimed.gif?t=1667839671539"> 
+							 <img src="/documents/d/guest/amountclaimed" alt=""> 
+							</picture></td> 
+						   <td rowspan="3">Amount Preauthorized</td> 
+						   <td>Government</td> 
+						   <td>1510.86 Crs.</td> 
+						  </tr> 
+						  <tr> 
+						   <td>Private</td> 
+						   <td>1510.86 Crs.</td> 
+						  </tr> 
+						  <tr> 
+						   <td>Total</td> 
+						   <td>6383.63 Crs.</td> 
+						  </tr> 
+						  <tr> 
+						   <td rowspan="3"> <picture data-fileentryid="55416"> 
+							 <source media="(max-width:23px)" srcset="/o/adaptive-media/image/55416/Preview-1000x0/Death-Cases.gif?t=1667839671061"> 
+							 <source media="(max-width:23px) and (min-width:23px)" srcset="/o/adaptive-media/image/55416/Thumbnail-300x300/Death-Cases.gif?t=1667839671061"> 
+							 <img src="/documents/d/guest/death-cases" alt=""> 
+							</picture></td> 
+						   <td rowspan="3">Death Cases</td> 
+						   <td>Government</td> 
+						   <td>24259</td> 
+						  </tr> 
+						  <tr> 
+						   <td>Private</td> 
+						   <td>32013</td> 
+						  </tr> 
+						  <tr> 
+						   <td>Total</td> 
+						   <td>56272</td> 
+						  </tr> 
+						 </tbody> 
+						</table></td> 
+					  </tr> 
+					 </tbody> 
+					</table> 
+				</div> <!-- table-responsive -->
+				   </div><!-- accordion-body --> 
+				  </div> 
+				 </div> 
+				</div> 
+			   </div>
 
 <%@ include file="/lasta.jsp" %>

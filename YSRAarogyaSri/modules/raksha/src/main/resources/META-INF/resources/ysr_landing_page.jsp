@@ -2,7 +2,7 @@
 <%@ include file="/topr.jsp" %>
 
 <%@ include file="/side.jsp" %>
-<%@ include file="/rightcontentr.jsp" %>
+<%@ include file="/rightContentr.jsp" %>
 
 <h3 class="bordertitle text-dark">About Scheme</h3>
 
@@ -21,7 +21,7 @@
 							  ">
 							  <ul>
 							   <li style="text-align: justify"> Andhra Pradesh is the first and only State in India providing of "Health for All" with an objective of providing quality health to the entire population of the State by launching "Aarogya Raksha". </li>
-							   <li style="text-align: justify"> ‘Health for All' Scheme counts to be one of the pioneers in terms of achieving equity and providing accountable and evidence-based good-quality health-care services in the State to assist Above Poverty Line families from catastrophic health expenditure. </li>
+							   <li style="text-align: justify"> 'Health for All' Scheme counts to be one of the pioneers in terms of achieving equity and providing accountable and evidence-based good-quality health-care services in the State to assist Above Poverty Line families from catastrophic health expenditure. </li>
 							   <li style="text-align: justify"> End-to-end cashless services for identified 1059 diseases under secondary and tertiary care through 400 Government and Corporate Network Hospitals. </li>
 							   <li style="text-align: justify"> The BPL families and families coming under employees and pensioners health scheme and working journalist health scheme are already covered with quality health care. The remaining population accounting to 32 lakhs of families will be covered under "Health for All" in addition to 159 lakhs of families who are already covered under various state owned programmes like Dr.YSR Aarogyasri, Employees Health Scheme and Working Journalist Scheme. </li>
 							   <li style="text-align: justify"> The APL / BPL families can enroll under "Aarogya Raksha" from 01.01.2017 by paying the premium for the entire family for one year @ Rs.1200/- for individual. </li>

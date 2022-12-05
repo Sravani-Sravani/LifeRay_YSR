@@ -7,8 +7,8 @@
 
     
         <h3 class="bordertitle text-dark">Follow-up Packages</h3>
-        <p><a class="btn download_btn" href="https://115.124.110.149/documents/d/guest/follow-up-packages">Download PDF</a></p>
-        <iframe src="https://115.124.110.149/documents/d/guest/follow-up-packages" class="iframe_box"></iframe>
+        <p><a class="btn download_btn" href="/documents/d/guest/follow-up-packages">Download PDF</a></p>
+        <iframe src="/documents/d/guest/follow-up-packages" class="iframe_box"></iframe>
    
 
  <%@ include file="/lastw.jsp" %>

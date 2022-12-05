@@ -54,4 +54,6 @@ nppa_india = "NPPA India"
 
 glossary = "Glossary"
 screen_reader = "ScreenReader"
+find="Find Us On"
+links="Useful Links"
 />

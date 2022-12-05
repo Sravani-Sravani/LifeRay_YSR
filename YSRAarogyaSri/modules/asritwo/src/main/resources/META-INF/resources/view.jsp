@@ -9,9 +9,9 @@ themeDisplay = (ThemeDisplay)request.getAttribute(WebKeys.THEME_DISPLAY);
 long pageId=themeDisplay.getPlid();
 System.out.println("pageId="+pageId);
 
-if(pageId==443||pageId==6){ %>
+if(pageId==443){ %>
 <%@ include file="/asri.jsp" %>
-<%}else if(pageId==447){ %>
+<%}else if(pageId==447 ||pageId==6){ %>
 <%@ include file="/who_is_who_trust.jsp" %>
 <%}else if(pageId==282){ %>
 <%@ include file="/asri_agreements_bw_trust_and_network_hospitals.jsp" %>
