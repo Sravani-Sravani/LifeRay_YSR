@@ -34,9 +34,9 @@ System.out.print("districts_List"+districts_List.toString());
 			   
 			  for(int i=0;i<districts_List.length();i++){
 		    	 	org.json.JSONArray data=new org.json.JSONArray(districts_List.get(i).toString());
-		           String districtName=data.getString(0);
+		           String districtName=data.getString(1);
 		    	   long mitrasCount=data.getLong(2);
-		 		   String districtId=data.getString(1);
+		 		   String districtId=data.getString(0);
 		 	  
 		  %>
 		  <portlet:renderURL var="viewMitraDetailsURL">

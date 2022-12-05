@@ -1,11 +1,25 @@
-<%@page import="com.liferay.portal.kernel.util.WebKeys"%>
-<%@page import="com.liferay.portal.kernel.theme.ThemeDisplay"%>
 <%@ include file="/init.jsp" %>
-    <% 
-themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
-long pId=themeDisplay.getPlid();
-%>
-    <%if(pId==499 || pId==491||pId==7){ %>
+ 
+  <%@page import="com.kpmg.ehsSearch.util.DataGridDisplayManageUtil"%> 
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.liferay.portal.kernel.dao.orm.OrderFactoryUtil"%> 
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.Map"%>
+<%@page import="java.util.Set"%> 
+<%@page import="java.util.LinkedHashMap"%>
+<%@page import="com.liferay.portal.kernel.dao.orm.RestrictionsFactoryUtil"%>
+<%@page import="com.liferay.portal.kernel.dao.orm.Order"%> 
+<%@page import="com.liferay.portal.kernel.dao.orm.DynamicQuery"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="com.liferay.portal.kernel.util.ListUtil"%>
+ <%@page import="java.util.List"%>
+<%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
+<%@page import="javax.portlet.PortletURL"%> 
+ <%@ include file="/html/dataTableIncludes.jspf" %>
+  
+		
+    <%if(pId==499 || pId==491){ %>
+ 
  <%@ include file="/hospital_search.jsp" %>
  <% }else if(pId==503 || pId==497){ %>
  <%@ include file="/speciality_search.jsp" %>

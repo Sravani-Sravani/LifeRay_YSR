@@ -1,11 +1,3 @@
-<%@page import="com.kpmg.ehsSearch.util.DataGridDisplayManageUtil"%> 
-<%@page import="java.util.ArrayList"%>
-<%@page import="com.liferay.portal.kernel.dao.orm.OrderFactoryUtil"%>
-<%@page import="com.liferay.portal.kernel.dao.orm.Order"%>
-<%@page import="com.liferay.portal.kernel.dao.orm.RestrictionsFactoryUtil"%>
-<%@page import="com.liferay.portal.kernel.dao.orm.DynamicQuery"%> 
-<%@page import="java.util.List"%>
- <%@ include file="/init.jsp" %>
 
 <style>
 
@@ -20,7 +12,9 @@
 		
 	<section class="blue_section search_panel">
 	  <div class="container">
-		  <h3><%if(pId==499 || pId==501|| pId==503 || pId==505){ %> WJHS <% }else if(pId==491 || pId==497 || pId==495 || pId==521){ %>EHS <% } %> / Speciality Search</h3><br>
+ 
+		  <h3><%if(pId==503){ %> WJHS <% }else if(pId==497){ %>EHS <% } %> / Speciality Search</h3><br>
+ 
 		  <div class="row">
 		      
 		      <% 
@@ -30,11 +24,11 @@
 		  	  
 		      for(int j=0;j<speciality_List.length();j++){
 	        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
-	    	   long proceduresCount=data.getLong(0);
-	    	   long hospitalCount=data.getLong(1);
-	    	   String diseaseId=data.getString(2);
-	    	   String diseaseName=data.getString(3);
-	    	    
+	    	   //  long proceduresCount=data.getLong(0);
+	    	   long hospitalCount=data.getLong(2);
+	    	   //String diseaseId=data.getString(2);
+	    	   String diseaseName=data.getString(0);
+	    	   
 	    	   %>
 		      <div class="col-lg-3">
 			  	<div class="card">
