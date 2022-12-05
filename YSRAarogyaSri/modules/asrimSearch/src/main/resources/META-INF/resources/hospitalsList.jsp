@@ -158,24 +158,30 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
          	extend: 'print' 
          } */],
          columnDefs: [
+             {
+                 //target: 2,
+                 //visible: false,
+               //  searchable: false,
+             },
         	    { width: "200", targets: 0 }
         	  ],
         	  fixedColumns: true,
+        	//  search: { regex: true,  },
          initComplete: function () {
         	var j=1;
             this.api()
-                .columns([0,1,2,3])
+                .columns([1,2,3])
                 .every(function () {
                     var column = this;
                   //  console.log(column[0][0]);
                   
                   	if(column[0][0]==3){
-                    	$('#select-'+column[0][0]).on('keyup change clear', function () {
+                    	$('#select-'+column[0][0]).on('change', function () {
                             var val = $('#select-'+column[0][0]).val();
                             console.log("val>>>"+val);
                             //column.search(val ? '^' + val + '$' : '', true, false).draw();
                            // if (column.search() !== val) {
-                                column.search(val).draw();
+                                column.search(val,true,false,true).draw();
                             //}
                         });
                   	}
@@ -202,6 +208,10 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 								}
 							}	
                         });
+                  	}
+                  	else{
+                  	//	column.search(regex, true, false);
+                  		console.log("column.search()>>>"+column.search());
                   	}
                 });
             <% if(DIST_ID!="" && DIST_ID!=null){ %>
@@ -232,6 +242,10 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
              <% } %>
             stoploader();
         },
+        search: {
+            smart: false
+         },
+       // searching: false,
         processing: true, 
         bStateSave: true 
     });
@@ -311,20 +325,20 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 	<h6>Search Hospitals:</h6>		 
 </div>
        
-				<div class="col-2">
+				<div class="col-3">
 				<label  for="District">District</label>
 				<select class="form-select" id="select-2" name="select-2">
 				    <option value="">Show All</option>
 				 </select>
 				</div>
-              <div class="col-3">
+            <!--   <div class="col-3">
 				
 				<label  for="Hospital">Name of Hospitals</label>
 				<select class="form-select" id="select-0" label="Hospital" name="select-0">
 				    <option value="">Show All</option>
 				 </select>
-				</div> 
-                <div class="col-2">
+				</div>  -->
+                <div class="col-3">
 				<label  for="District">Hospital Type</label>
 				<select class="form-select" id="select-1" name="select-1">
 				    <option value="">Show All</option>
@@ -338,7 +352,6 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				    <%
 				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null);
 				      System.out.print("speciality_List 123"+speciality_List.toString());
-				  	  
 				      for(int j=0;j<speciality_List.length();j++){
 			        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
 			    	   long proceduresCount=data.getLong(0);
@@ -348,10 +361,8 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 			    	   int postion_1=disease_Name.indexOf("(");
 			    	   if(postion_1!=0)
 			    	     disease_Name=disease_Name.substring(0, postion_1-1).trim();
-			    	   
-			    	   
 				    %>
-				    <option value="<%=disease_Name %>"><%=disease_Name %></option>
+				    <option value="<%=disease_Name%>"><%=disease_Name %></option>
 				    <% } %>
 				    
 				 </select>

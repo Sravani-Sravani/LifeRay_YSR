@@ -1,5 +1,4 @@
- 
-<%@page import="java.util.ArrayList"%>
+ <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%
 org.json.JSONArray states_List=DataGridDisplayManageUtil.getStateLevelAsrimHospCount();
@@ -20,15 +19,13 @@ System.out.print("states_List"+states_List.toString());
 		  <h3><%if(pId==499){ %> WJHS <% }else if(pId==491){ %>EHS <% } %> State Empanelled Hospitals</h3><br>
  
 		  <div class="row">
-		      
 		      <% 
 		      List<String> statesList = new ArrayList<String>();
  		      statesList.add("ANDHRA PRADESH");
 		      statesList.add("TAMIL NADU");
 		      statesList.add("KARNATAKA");
 		      statesList.add("TELANGANA");
- 		       
-	        for(int i=0;i<statesList.size();i++){ 
+	        for(int i=0;i<statesList.size();i++){
 	    		// System.out.println("statesList.get(i)>>>"+statesList.get(i));
 	    		for(int j=0;j<states_List.length();j++){
 	    		org.json.JSONArray data=new org.json.JSONArray(states_List.get(j).toString()); 
@@ -63,16 +60,14 @@ System.out.print("states_List"+states_List.toString());
 				</div>
 				</div>
 			  </div>
-			  
 			  <%  } } } %>
 		  </div>
-		   
 	</section>  	
 <script>
 function viewRecords(recordId){
 	$('#<portlet:namespace />viewRecords').find('input[name=<portlet:namespace />recordId]').val(recordId);
 	$("#<portlet:namespace />viewRecords").submit();
-} 
+}
 </script>
 	<%-- 	
 <aui:form name="viewRecords" method="post" action="<%=viewDistrictRecordsURL %>" style="display:none;">

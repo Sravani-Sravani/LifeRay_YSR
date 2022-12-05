@@ -123,7 +123,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 		 booleanflag=false; 
 		 }                                                    
 		//$("#recordList").html("");
-		$("#recordList").html("<table id='datatables' class='table table-bordered table-striped table-hover display nowrap' cellspacing='0' style='width:100%'><thead><tr></tr></thead></table>");
+		$("#recordList").html("<table id='datatables' class='table table-bordered table-hover table-striped' cellspacing='0' style='width:100%'><thead><tr></tr></thead></table>");
 		var columns = dataTables.tables[selectedFilter].columns;
 		var dataURL = dataTables.tables[selectedFilter].dataURL;
 		var scrollXVal = dataTables.tables[selectedFilter].scrollX;
@@ -163,14 +163,14 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
          initComplete: function () {
         	var j=1;
             this.api()
-                .columns([0,1,2,3])
+                .columns([1,2,3])
                 .every(function () {
                     var column = this;
                   //  console.log(column[0][0]);
                     if(column[0][0]==3){
                     	$('#select-'+column[0][0]).on('keyup change clear', function () {
                             var val = $('#select-'+column[0][0]).val(); 
-                                column.search(val).draw(); 
+                            column.search(val,true,false,true).draw();
                         });
                   	}
                   	else{
@@ -310,20 +310,20 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 	<h6>Search Hospitals:</h6> 
 </div>
        
-				<div class="col-lg-2">
+				<div class="col-lg-3">
 				<label  for="District">District</label>
 				<select class="form-select" id="select-2" name="select-2">
 				    <option value="">Show All</option>
 				 </select>
 				</div>
- <div class="col-lg-3">
+<!--  <div class="col-lg-3">
 				
 				<label  for="Hospital">Name of Hospitals</label>
 				<select class="form-select" id="select-0" label="Hospital" name="select-0">
 				    <option value="">Show All</option>
 				 </select>
-				</div> 
-                <div class="col-2">
+				</div> --> 
+                <div class="col-3">
 				<label  for="District">Hospital Type</label>
 				<select class="form-select" id="select-1" name="select-1">
 				    <option value="">Show All</option>
