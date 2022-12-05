@@ -25,7 +25,7 @@ System.out.print("states_List"+states_List.toString());
 		      List<String> statesList = new ArrayList<String>();
  		      statesList.add("ANDHRA PRADESH");
 		      statesList.add("TAMIL NADU");
-		      statesList.add("Karnataka");
+		      statesList.add("KARNATAKA");
 		      statesList.add("TELANGANA");
  		       
 	        for(int i=0;i<statesList.size();i++){ 
@@ -33,8 +33,8 @@ System.out.print("states_List"+states_List.toString());
 	    		for(int j=0;j<states_List.length();j++){
 	    		org.json.JSONArray data=new org.json.JSONArray(states_List.get(j).toString()); 
  	    	   
-	    	   String stateId=data.getString(1);
-	    	   String stateName=data.getString(0);
+	    	   String stateId=data.getString(0);
+	    	   String stateName=data.getString(1);
 	    	   long govtHospitalCount=data.getLong(2);
 	 		   long privateHospitalCount=data.getLong(3);
 	 		//   System.out.println("stateName>>>"+stateName);
