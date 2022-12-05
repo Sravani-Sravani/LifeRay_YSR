@@ -18,7 +18,7 @@
  <%@ include file="/html/dataTableIncludes.jspf" %>
   
 		
-    <%if(pId==499 || pId==491){ %>
+ <%if(pId==499 || pId==491  || pId==6){ %>
  
  <%@ include file="/hospital_search.jsp" %>
  <% }else if(pId==503 || pId==497){ %>
@@ -26,7 +26,7 @@
  <% }else if(pId==505 || pId==495){ %>
  <%@ include file="/procedure_search.jsp" %>
  <% }else if(pId==501 || pId==521){ %>
-   <%@ include file="/mitra_search.jsp" %>
-   <% } else{ %> 
+ <%@ include file="/mitra_search.jsp" %>
+  <% } else{ %> 
    pagenotfound in ehssearch
    <% } %>

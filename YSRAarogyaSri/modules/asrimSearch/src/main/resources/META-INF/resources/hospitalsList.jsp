@@ -24,16 +24,11 @@ function stoploader(){
   left: 50%;
   top: 50%;
   z-index: 1;
-  width: 120px;
-  height: 120px;
+  width: 50px;
+  height: 50px;
   margin: -76px 0 0 -76px;
   border: 16px solid #f3f3f3;
-  border-top: 16px solid blue;
-  border-right: 16px solid green;
-  border-bottom: 16px solid red;
-  border-left: 16px solid pink;
   border-radius: 50%;
-  border-top: 16px solid #3498db;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 } 
@@ -124,7 +119,8 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 	   if(selectedFilter==5){ 
 		 booleanflag=false; 
 		 }                                                    
-		//$("#recordList").html("");                       
+		//$("#recordList").html(""); 
+		
 		$("#recordList").html("<table id='datatables' class='table table-bordered table-hover table-striped' cellspacing='0' style='width:100%'><thead><tr></tr></thead></table>");
 		var columns = dataTables.tables[selectedFilter].columns;
 		var dataURL = dataTables.tables[selectedFilter].dataURL;
@@ -303,34 +299,34 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
   </div>
   <div class="col-md-4"></div>
   </div> -->
-	  <div class="container search_panel">
+	  <div class="container-fluid search_panel">
 		  <h3>Empanelled Hospitals List- In Aarogyasri Scheme</h3>
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
- <div id="searchData" class="row col-md-12">
- <div class="col-md-12"  style="padding-top: 0px;">
-	<h6>Search Hospitals:</h6>		 
-</div>
+
+<div class="col-lg-12">
+				<h6>Search Hospitals</h6>
+				</div>
        
-				<div class="col-2">
+				<div class="col-12">
 				<label  for="District">District</label>
 				<select class="form-select" id="select-2" name="select-2">
 				    <option value="">Show All</option>
 				 </select>
 				</div>
-              <div class="col-3">
+              <div class="col-12">
 				
 				<label  for="Hospital">Name of Hospitals</label>
 				<select class="form-select" id="select-0" label="Hospital" name="select-0">
 				    <option value="">Show All</option>
 				 </select>
 				</div> 
-                <div class="col-2">
+                <div class="col-12">
 				<label  for="District">Hospital Type</label>
 				<select class="form-select" id="select-1" name="select-1">
 				    <option value="">Show All</option>
 				 </select>
 				</div>
-				<div class="col-3">
+				<div class="col-12">
 				
 				<label  for="Speciality Name">Speciality Name</label>
 				<select class="form-select" id="select-3" label="Speciality Name" name="select-3">
@@ -391,7 +387,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				    <% } %>
 				 </select>
 				</div> --%>
- </div>
+
  </form>
         <div id="recordList" class="table-responsive-md">
   <!--       <table id="datatables" class="table table-bordered table-striped table-hover display nowrap" cellspacing="0" style=""width:100%">

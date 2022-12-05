@@ -15,8 +15,8 @@
  <%@page import="java.util.List"%>
 <%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
 <%@page import="javax.portlet.PortletURL"%>
- <%@ include file="/init.jsp" %>
- <portlet:renderURL var="viewDistrictRecordsURL">
+<%@ include file="/init.jsp" %>
+<portlet:renderURL var="viewDistrictRecordsURL">
 			<portlet:param name="mvcPath" value="/districtWiseHospitals.jsp"/> 
 		</portlet:renderURL> 
  
