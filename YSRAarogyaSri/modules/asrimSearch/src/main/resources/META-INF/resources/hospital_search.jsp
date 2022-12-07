@@ -15,19 +15,13 @@
  <%@page import="java.util.List"%>
 <%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
 <%@page import="javax.portlet.PortletURL"%>
- <%@ include file="/init.jsp" %>
- <portlet:renderURL var="viewDistrictRecordsURL">
+<%@ include file="/init.jsp" %>
+<portlet:renderURL var="viewDistrictRecordsURL">
 			<portlet:param name="mvcPath" value="/districtWiseHospitals.jsp"/> 
 		</portlet:renderURL> 
  
 <%
-org.json.JSONArray states_List=null;
-try{
-	states_List=DataGridDisplayManageUtil.getStateLevelAsrimHospCount();
-}
-catch(Exception e){
-e.getMessage();	
-}
+org.json.JSONArray states_List=DataGridDisplayManageUtil.getStateLevelAsrimHospCount();
 
 System.out.print("states_List"+states_List.toString());
  

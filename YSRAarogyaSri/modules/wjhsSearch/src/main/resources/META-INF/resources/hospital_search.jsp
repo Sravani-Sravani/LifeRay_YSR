@@ -83,9 +83,9 @@ System.out.print("states_List"+states_List.toString());
 				</div>
 			  </div>
 			  
-			  <%  } } } %>
+			  <%  } } } %>		  
 		  </div>
-		   
+      		   
 	</section>  	
 <script>
 function viewRecords(recordId){

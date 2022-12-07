@@ -235,12 +235,12 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
   </div> -->
 	  <div class="container search_panel">
  
-		  <h3><%if(pId==505){ %> WJHS <% }else if(pId==495){ %>EHS <% } %> / Procedure Search</h3>
+		  <h3><%if(pId==505){ %> WJHS <% }else if(pId==495){ %>EHS <% } %> / Treatment Search</h3>
  
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
  <div id="searchData" class="row col-md-12">
  <div class="col-2"  style="padding-top: 22px;">
-	<h6>Procedures Search</h6>		 
+	<h6>Treatment Search</h6>		 
 </div><!-- 
 <div class="col-2">
 				<label  for="Code">Speciality Code</label>
