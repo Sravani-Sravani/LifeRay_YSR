@@ -108,7 +108,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
             {
                 select: "By Associate Number",
                 dataURL:"<%=asrimHospitalsURL.toString()%>",
-                columns:["Name of Hospital","Hospital Type","District","Specialities","Mitra Contact No","Name of Mitra","Medco Contact No","Name of Medco"],
+                columns:["Name of Hospital","Hospital Type","State","District","Mandal","Specialities","Mitra Contact No","Name of Mitra","Medco Contact No","Name of Medco"],
                 options:{},
                 scrollX: false,
                 header: true,
@@ -163,11 +163,11 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
          initComplete: function () {
         	var j=1;
             this.api()
-                .columns([1,2,3])
+                .columns([1,3,5])
                 .every(function () {
                     var column = this;
                   //  console.log(column[0][0]);
-                    if(column[0][0]==3){
+                    if(column[0][0]==5){
                     	$('#select-'+column[0][0]).on('keyup change clear', function () {
                             var val = $('#select-'+column[0][0]).val(); 
                             column.search(val,true,false,true).draw();
@@ -180,7 +180,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
                             column.search(val ? '^' + val + '$' : '', true, false).draw();
                         });
                   	}
-                    if(column[0][0]!=3){
+                    if(column[0][0]!=5){
                      column
                         .data()
                         .unique()
@@ -204,10 +204,10 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
             var districtId="<%=DIST_ID%>";
             districtId=$.trim(districtId);
             if(districtId!=null && districtId!=""){
-                 $("#select-2").val(districtId).trigger('change');
+                 $("#select-3").val(districtId).trigger('change');
             }
              <% } %>
-            <% if(HOSP_TYPE!="" && HOSP_TYPE!=null){ %>
+          <% if(HOSP_TYPE!="" && HOSP_TYPE!=null){ %>
             var hospitalType="<%=HOSP_TYPE%>";
             if(hospitalType!=null && hospitalType!=""){
 
@@ -215,12 +215,12 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
               $("#select-1").val(hospitalType).trigger('change');
             }
              
-             <% } %>            
+             <% } %>      
            <% if(diseaseName!="" && diseaseName!=null){ %>
  
              var diseaseName="<%=diseaseName%>";
              if(diseaseName!=null && diseaseName!=""){
-            	 $("#select-3").val(diseaseName).trigger('change');
+            	 $("#select-5").val(diseaseName).trigger('change');
             	// $("input[type='search']").val(diseaseName).trigger('keyup');
               //   console.log("diseaseName>>>>"+ diseaseName); 
                 }
@@ -310,29 +310,35 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 	<h6>Search Hospitals:</h6> 
 </div>
        
-				<div class="col-lg-3">
-				<label  for="District">District</label>
+				<!-- <div class="col-2">
+				<label  for="State">State</label>
 				<select class="form-select" id="select-2" name="select-2">
 				    <option value="">Show All</option>
 				 </select>
-				</div>
-<!--  <div class="col-lg-3">
-				
-				<label  for="Hospital">Name of Hospitals</label>
-				<select class="form-select" id="select-0" label="Hospital" name="select-0">
+				</div> -->
+				<div class="col-2">
+				<label  for="District">District</label>
+				<select class="form-select" id="select-3" name="select-3">
 				    <option value="">Show All</option>
 				 </select>
-				</div> --> 
-                <div class="col-3">
-				<label  for="District">Hospital Type</label>
+				</div>
+				<div class="col-2">
+				<label  for="Type">Type</label>
 				<select class="form-select" id="select-1" name="select-1">
 				    <option value="">Show All</option>
 				 </select>
 				</div>
+				<!-- <div class="col-3">
+				<label  for="Mandal">Mandal</label>
+				<select class="form-select" id="select-4" name="select-4">
+				    <option value="">Show All</option>
+				 </select>
+				</div> -->
+         
 				<div class="col-3">
 				
 				<label  for="Speciality Name">Speciality Name</label>
-				<select class="form-select" id="select-3" label="Speciality Name" name="select-3">
+				<select class="form-select" id="select-5" label="Speciality Name" name="select-5">
 				    <option value="">Show All</option>
 				    <%
 				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null);

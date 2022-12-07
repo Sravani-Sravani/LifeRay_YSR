@@ -107,7 +107,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
             {
                 select: "By Associate Number",
                 dataURL:"<%=asrimHospitalsURL.toString()%>",
-                columns:["Name of Hospital","Hospital Type","District","Specialities","Mitra Contact No","Name of Mitra","Medco Contact No","Name of Medco"],
+                columns:["Name of Hospital","Hospital Type","State","District","Mandal","Specialities","Mitra Contact No","Name of Mitra","Medco Contact No","Name of Medco"],
                 options:{},
                 scrollX: false,
                 header: true,
@@ -159,26 +159,28 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
          } */],
          columnDefs: [
              {
-                 //target: 2,
+                 //target: [ 2, 3 ],
                  //visible: false,
-               //  searchable: false,
+               //  searchable: true,
              },
         	    { width: "200", targets: 0 }
         	  ],
         	  fixedColumns: true,
         	//  search: { regex: true,  },
          initComplete: function () {
-        	var j=1;
+        	
+        	 stoploader();
+        	 var j=1;
             this.api()
-                .columns([1,2,3])
+                .columns([1,3,5])
                 .every(function () {
                     var column = this;
                   //  console.log(column[0][0]);
                   
-                  	if(column[0][0]==3){
+                  	if(column[0][0]==5){
                     	$('#select-'+column[0][0]).on('change', function () {
                             var val = $('#select-'+column[0][0]).val();
-                            console.log("val>>>"+val);
+                            //console.log("val>>>"+val);
                             //column.search(val ? '^' + val + '$' : '', true, false).draw();
                            // if (column.search() !== val) {
                                 column.search(val,true,false,true).draw();
@@ -189,11 +191,11 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
                   		$('#select-'+column[0][0]).find('option').remove().end()
                     	.append('<option value="">Show all</option>').on('change', function () {
                             var val = $.fn.dataTable.util.escapeRegex($('#select-'+column[0][0]).val());
-                    		console.log("val>>>"+val);
+                    		//console.log("val>>>"+val);
                     		column.search(val ? '^' + val + '$' : '', true, false).draw();
                         });
                   	}
-                  	if(column[0][0]!=3){
+                  	if(column[0][0]!=5){
                      column
                         .data()
                         .unique()
@@ -202,40 +204,40 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 							d=$.trim(d);
 							if(d!="" && d!=null){
 								if(column.search() === '^'+d+'$'){
-	                         		$('#select-'+column[0][0]).append('<option value="'+d+'" selected="selected">'+d.substr(0,30)+'</option>' )
+	                         		$('#select-'+column[0][0]).append('<option value="'+d+'" selected="selected">'+d+'</option>' )
 								} else {
-									$('#select-'+column[0][0]).append( '<option value="'+d+'">'+d.substr(0,30)+'</option>' )
+									$('#select-'+column[0][0]).append( '<option value="'+d+'">'+d+'</option>' )
 								}
 							}	
                         });
                   	}
                   	else{
                   	//	column.search(regex, true, false);
-                  		console.log("column.search()>>>"+column.search());
+                  		//console.log("column.search()>>>"+column.search());
                   	}
                 });
             <% if(DIST_ID!="" && DIST_ID!=null){ %>
             var districtId="<%=DIST_ID%>";
             districtId=$.trim(districtId);
             if(districtId!=null && districtId!=""){
-                 $("#select-2").val(districtId).trigger('change');
+                 $("#select-3").val(districtId).trigger('change');
             }
              <% } %>
             <% if(HOSP_TYPE!="" && HOSP_TYPE!=null){ %>
-            var hospitalType="<%=HOSP_TYPE%>";
+             var hospitalType="<%=HOSP_TYPE%>";
             if(hospitalType!=null && hospitalType!=""){
 
              //   console.log("hospitalType>>>>"+ hospitalType);
               $("#select-1").val(hospitalType).trigger('change');
             }
              
-             <% } %>            
+             <% } %>         
            <% if(diseaseName!="" && diseaseName!=null){ %>
  
              var diseaseName="<%=diseaseName%>";
              if(diseaseName!=null && diseaseName!=""){
             	// $("input[type='search']").val(diseaseName).trigger('keyup');
-            	 $("#select-3").val(diseaseName).trigger('change');
+            	 $("#select-5").val(diseaseName).trigger('change');
               //   console.log("diseaseName>>>>"+ diseaseName); 
                 }
   
@@ -322,32 +324,36 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
  <div id="searchData" class="row col-md-12">
  <div class="col-md-12"  style="padding-top: 0px;">
-	<h6>Search Hospitals:</h6>		 
+	<h6>Search Hospitals:</h6>	 
 </div>
-       
-				<div class="col-3">
-				<label  for="District">District</label>
+				<!-- <div class="col-2">
+				<label  for="State">State</label>
 				<select class="form-select" id="select-2" name="select-2">
 				    <option value="">Show All</option>
 				 </select>
-				</div>
-            <!--   <div class="col-3">
-				
-				<label  for="Hospital">Name of Hospitals</label>
-				<select class="form-select" id="select-0" label="Hospital" name="select-0">
+				</div> -->
+				<div class="col-2">
+				<label  for="District">District</label>
+				<select class="form-select" id="select-3" name="select-3">
 				    <option value="">Show All</option>
 				 </select>
-				</div>  -->
-                <div class="col-3">
-				<label  for="District">Hospital Type</label>
+				</div>
+				<div class="col-2">
+				<label  for="Type">Type</label>
 				<select class="form-select" id="select-1" name="select-1">
 				    <option value="">Show All</option>
 				 </select>
 				</div>
-				<div class="col-3">
+			<!-- 	<div class="col-3">
+				<label  for="Mandal">Mandal</label>
+				<select class="form-select" id="select-4" name="select-4">
+				    <option value="">Show All</option>
+				 </select>
+				</div> -->
+						<div class="col-3">
 				
 				<label  for="Speciality Name">Speciality Name</label>
-				<select class="form-select" id="select-3" label="Speciality Name" name="select-3">
+				<select class="form-select" id="select-5" label="Speciality Name" name="select-5">
 				    <option value="">Show All</option>
 				    <%
 				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null);
@@ -375,10 +381,10 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 			<script>
 			$("#resetBtnS").click(function(){
 				//alert("Clear");
-				$("#select-0").val("").trigger('change');
-				$("#select-1").val("").trigger('change');
-				$("#select-2").val("").trigger('change');
 				$("#select-3").val("").trigger('change');
+				$("#select-5").val("").trigger('change');
+				//$("#select-2").val("").trigger('change');
+				//$("#select-3").val("").trigger('change');
 				 $("input[type='search']").val("").trigger('keyup');
 			});
 			</script>	

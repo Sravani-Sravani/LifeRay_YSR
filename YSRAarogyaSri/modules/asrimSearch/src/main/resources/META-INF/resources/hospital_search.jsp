@@ -21,7 +21,13 @@
 		</portlet:renderURL> 
  
 <%
-org.json.JSONArray states_List=DataGridDisplayManageUtil.getStateLevelAsrimHospCount();
+org.json.JSONArray states_List=null;
+try{
+	states_List=DataGridDisplayManageUtil.getStateLevelAsrimHospCount();
+}
+catch(Exception e){
+e.getMessage();	
+}
 
 System.out.print("states_List"+states_List.toString());
  
