@@ -99,7 +99,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
             {
                 select: "By Associate Number",
                 dataURL:"<%=asrimHProceduresURL.toString()%>",
-                columns:["Code","Speciality Name","Procedure Code","Procedure Name","Procedure Type","Package Amount","Aasara Amount","Pre Investigation","Post Operative/Procedure Investigation"],
+                columns:["Code","Speciality Name","Treatment Code","Treatment Name","Treatment Type","Package Amount","Aasara Amount","Pre Investigation","Post Operative/Treatment Investigation"],
                 options:{},
                 scrollX: false,
                 header: true,
@@ -152,7 +152,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
          initComplete: function () {
         	var j=1;
             this.api()
-                .columns([1,3,4])
+                .columns([1,3])
                 .every(function () {
                     var column = this;
                     console.log(column[0][0]); 
@@ -260,14 +260,14 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				    <option value="">Show All</option>
 				 </select>
 				</div>
-				 <div class="col-2">
-				<label  for="Procedure Type">Procedure Type</label>
+				 <!-- <div class="col-2">
+				<label  for="Treatment Type">Treatment Type</label>
 				<select class="form-select" id="select-4" name="select-4">
 				    <option value="">Show All</option>
 				 </select>
-				</div>
+				</div> -->
 				<div class="col-3">
-				<label  for="Procedure Name">Procedure Name</label>
+				<label  for="Treatment Name">Treatment Name</label>
 				<select class="form-select" id="select-3" name="select-3">
 				    <option value="">Show All</option>
 				 </select>

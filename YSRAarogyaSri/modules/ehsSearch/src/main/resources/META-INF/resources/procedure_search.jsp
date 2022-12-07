@@ -99,7 +99,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
                 select: "By Associate Number",
                 dataURL:"<%=asrimHProceduresURL.toString()%>",
                // columns:["CODE","SURGERY / THERAPY DESCRIPTION","SPECIAL INVESTIGATION","Treatment Protocol","Packages","POST OPERATIVE/PROCEDURE INVESTIGATION"],
-                columns:["Code","Speciality Name","Procedure Code","Procedure Name","Packages","Investigation"],
+                columns:["Code","Speciality Name","Treatment Code","Treatment Name","Packages","Investigation"],
                 options:{},
                 scrollX: false,
                 header: true,
@@ -267,7 +267,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				 </select>
 				</div> -->
 				<div class="col-3">
-				<label  for="Procedure Name">Procedure Name</label>
+				<label  for="Treatment Name">Treatment Name</label>
 				<select class="form-select" id="select-3" name="select-3">
 				    <option value="">Show All</option>
 				 </select>

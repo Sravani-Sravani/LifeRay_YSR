@@ -10,12 +10,12 @@ long pId=themeDisplay.getPlid();
  <%@ include file="/hospital_search.jsp" %>
  <% }else if(pId==509){ %>
  <%@ include file="/speciality_search.jsp" %>
- <% }else if(pId==511 || pId==6){ %>
+ <% }else if(pId==511){ %>
  <%@ include file="/procedure_search.jsp" %>
  <% }else if(pId==523){ %>
    <%@ include file="/mitra_search.jsp" %>
    <% }else{ %>
-   Page ID not assigned in raksha search.
+   Page ID not assigned.
    <% } %>
               
    
