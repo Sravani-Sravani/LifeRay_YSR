@@ -22,7 +22,7 @@
 	
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">	  
 	 <!-- Libraries Stylesheet -->
-   
+
 <@liferay_util["include"] page=top_head_include />
 
 
@@ -80,7 +80,7 @@ crossorigin="anonymous"></script>
         
 				 </div>
 				 <div class="col-lg-6 right_topbar"> 
-					<p class="blink-bg"><span class="btn btn-sm"><i class="fa-regular fa-phone"></i> 104 </span></p>
+<p class="blink-bg"><a href="tel:104"><span class="btn btn-sm"><i class="fa-regular fa-phone"></i> 104 - Medical Helpline -Grievances </span></a></p>
 
 				 <p class="btn btn-success btn-sm"><i class="fa-regular fa-right-to-bracket"></i><a href="/web/guest/signin">${sign_in}</a></p>      
 				 <p class="btn btn-success btn-sm"><i class="fa-regular fa-virus-covid"></i> <a href="/web/guest/covid_19">${covid}</a></p>    
@@ -186,7 +186,7 @@ crossorigin="anonymous"></script>
 	
 	 	  
 <footer>
-<div class="blink-bg callbtn_bottom"><span><i class="fa-regular fa-phone"></i> 104</span></div><!-- callbtn_bottom -->
+<div class="blink-bg callbtn_bottom"><a href="tel:104"><span><i class="fa-regular fa-phone"></i> 104</span></a></div><!-- callbtn_bottom -->
       <div class="quick_links">
         <div class="container-fluid">
           <h4>Quick Links</h4>
@@ -368,13 +368,8 @@ function websiteVisits(response) {
 
       <div class="col-lg-2">
            <h5 class="bordertitle">${find}</h5>
-          <div class="d-flex flex-column flex-sm-row w-100 gap-2" style="padding-bottom:5px;">
-
-           <a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysraarogyasri_app&hl=en&pli=1" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/btn_googlePlay.svg" class="img-fluid" alt="Get on Playstore" /></a>
-                 </div><br>
-                 <p> Visitor Count : <span id="visits"></span> </p> 
-                             
-
+           <p><a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysraarogyasri_app&hl=en&pli=1" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/btn_googlePlay.svg" class="img-fluid" alt="Get on Playstore" /></a></p>
+                 <p class="visits"> Visitor Count : <span id="visits"></span> </p>            
        </div>
 
    </div>
