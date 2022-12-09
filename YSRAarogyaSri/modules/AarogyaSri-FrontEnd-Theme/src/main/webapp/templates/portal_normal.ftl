@@ -13,9 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dr. YSR Aarogyasri Health Care Trust</title>
     <link rel="icon" type="image/x-icon" href="/documents/d/guest/favicon">
-    <meta content="initial-scale=1.0, width=device-width" name="viewport" />
-  
-     
+    <meta content="initial-scale=1.0, width=device-width" name="viewport" />  
 	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -80,7 +78,7 @@ crossorigin="anonymous"></script>
         
 				 </div>
 				 <div class="col-lg-6 right_topbar"> 
-<p class="blink-bg"><a href="tel:104"><span class="btn btn-sm"><i class="fa-regular fa-phone"></i> 104 - Medical Helpline -Grievances </span></a></p>
+<p class="blink-bg"><a href="tel:104"><span class="btn btn-sm"><i class="fa-regular fa-phone"></i> 104 - ${medical} </span></a></p>
 
 				 <p class="btn btn-success btn-sm"><i class="fa-regular fa-right-to-bracket"></i><a href="/web/guest/signin">${sign_in}</a></p>      
 				 <p class="btn btn-success btn-sm"><i class="fa-regular fa-virus-covid"></i> <a href="/web/guest/covid_19">${covid}</a></p>    
@@ -369,7 +367,7 @@ function websiteVisits(response) {
       <div class="col-lg-2">
            <h5 class="bordertitle">${find}</h5>
            <p><a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysraarogyasri_app&hl=en&pli=1" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/btn_googlePlay.svg" class="img-fluid" alt="Get on Playstore" /></a></p>
-                 <p class="visits"> Visitor Count : <span id="visits"></span> </p>            
+                 <p class="visits"> ${visitors} : <span id="visits"></span> </p>            
        </div>
 
    </div>
