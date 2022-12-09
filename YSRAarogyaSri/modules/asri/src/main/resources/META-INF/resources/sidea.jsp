@@ -93,18 +93,6 @@
 			</ul>
 						</div>
 					  </li>
-					  					  <li class="mb-1">
-						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#archive-collapse" aria-expanded="false">
-							Archives
-						</button>
-						<div class="collapse" id="archive-collapse">
-						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-										<li><a href="/web/guest/archives_new">Archives New </a></li>	
-								<li><a href="/web/guest/archives_old">Archives Old</a></li>
-             								 
-						  </ul>
-						</div>
-					  </li>
 					</ul> 
 </div>
 
