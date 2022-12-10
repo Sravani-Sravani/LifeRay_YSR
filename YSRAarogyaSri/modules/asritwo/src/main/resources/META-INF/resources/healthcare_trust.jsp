@@ -67,7 +67,7 @@
   <div class="accordion-body"> <picture data-fileentryid="52858">
   <source media="(max-width:300px)" srcset="/o/adaptive-media/image/52858/Thumbnail-300x300/DSC02734.JPG?t=1667806531395">
   <source media="(max-width:1000px) and (min-width:300px)" srcset="/o/adaptive-media/image/52858/Preview-1000x0/DSC02734.JPG?t=1667806531395">
-  <img src="/documents/d/guest/dsc02734-jpg" alt="Dr.YSR Aarogyasri Health Care Trust" class="img-fluid">
+  <img src="/o/AarogyaSri-FrontEnd-Theme/images/trust-ysrpsd.jpg" alt="Dr.YSR Aarogyasri Health Care Trust" class="img-fluid">
   </picture>
   </div>
   
