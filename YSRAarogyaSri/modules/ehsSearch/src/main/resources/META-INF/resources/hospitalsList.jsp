@@ -163,11 +163,11 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
          initComplete: function () {
         	var j=1;
             this.api()
-                .columns([1,3,5])
+                .columns([1,2,3,5,4])
                 .every(function () {
                     var column = this;
                   //  console.log(column[0][0]);
-                    if(column[0][0]==5){
+                    if(column[0][0]==5 || column[0][0]==2 || column[0][0]==4){
                     	$('#select-'+column[0][0]).on('keyup change clear', function () {
                             var val = $('#select-'+column[0][0]).val(); 
                             column.search(val,true,false,true).draw();
@@ -180,7 +180,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
                             column.search(val ? '^' + val + '$' : '', true, false).draw();
                         });
                   	}
-                    if(column[0][0]!=5){
+                    if(column[0][0]!=5 || column[0][0]!=2 || column[0][0]!=4 ){
                      column
                         .data()
                         .unique()
@@ -310,16 +310,55 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 	<h6>Search Hospitals:</h6> 
 </div>
        
-				<!-- <div class="col-2">
+				<div class="col-2">
 				<label  for="State">State</label>
 				<select class="form-select" id="select-2" name="select-2">
 				    <option value="">Show All</option>
+				    <%
+				      JSONArray state_List= DataGridDisplayManageUtil.getEhsStateList();
+				      System.out.print("state_list 123"+state_List.toString());
+				  	  
+				      for(int k=0;k<state_List.length();k++){
+			        	JSONArray data=new JSONArray(state_List.get(k).toString());
+			    	   
+			    	    String state_id=data.getString(0);
+			    	    String state_name=data.getString(1);
+			    	 
+				    %>
+				    <option value="<%=state_name %>"><%=state_name %></option>
+				    <% } %>
+				    
 				 </select>
-				</div> -->
+				</div>
 				<div class="col-2">
 				<label  for="District">District</label>
 				<select class="form-select" id="select-3" name="select-3">
 				    <option value="">Show All</option>
+
+				 </select>
+				</div>
+				<div class="col-2">
+				<label  for="Mandal">Mandal</label>
+				<select class="form-select" id="select-4" name="select-4">
+				    <option value="">Show All</option>
+				 <%
+				      JSONArray mandal_List= DataGridDisplayManageUtil.getEhsmandalList(null);
+				      System.out.print("mandal_list 123"+mandal_List.toString());
+				  	  
+				      for(int i=0;i<state_List.length();i++){
+			        	JSONArray data=new JSONArray(state_List.get(i).toString());
+			    	   
+			    	    String mandal_id=data.getString(1);
+			    	    String mandal_name="";
+			    	    if(data.length()>2){
+			    	    	 mandal_name=data.getString(3);
+			    	    }else{
+			    	    	continue;
+			    	    }
+				    %>
+				    <option value="<%=mandal_name %>"><%=mandal_name %></option>
+				    <% } %>
+				    
 				 </select>
 				</div>
 				<div class="col-2">
@@ -367,10 +406,11 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 			<script>
 			$("#resetBtnS").click(function(){
 				//alert("Clear");
-				$("#select-0").val("").trigger('change');
+				$("#select-4").val("").trigger('change');
 				$("#select-1").val("").trigger('change');
 				$("#select-2").val("").trigger('change');
 				$("#select-3").val("").trigger('change');
+				$("#select-5").val("").trigger('change');
 				 $("input[type='search']").val("").trigger('keyup');
 			});
 			</script>	
