@@ -15,7 +15,7 @@ function stoploader(){
 	document.getElementById("loader").style.display = "none";
 }
     $(document).ready(function () {
-	 //  $("select").select2();
+	   $("select").select2();
 	}); 
 </script>
  <style>
@@ -37,7 +37,7 @@ function stoploader(){
   border-top: 16px solid #3498db;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
-} 
+}
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
@@ -200,10 +200,10 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
                             var val = $('#select-'+column[0][0]).val();
                             var id=$('#select-'+column[0][0]).find(':selected').attr('data');
                            if(column[0][0]==2){
-                        	  // districtsData(id);
+                        	    districtsData(id);
                             }
                            if(column[0][0]==3){
-                        	  // mandalData(id);
+                        	  mandalData(id);
                             }
                            
                        column.search(val,true,false,true).draw();
@@ -226,21 +226,20 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
              var stateName="<%=stateName%>";
              if(stateName!=null && stateName!=""){
             	 console.log("state selection");
-                $("#select-2").val(stateName).trigger('change');
-                <% if((DIST_ID!="" && DIST_ID!=null)){ %>
-                var districtId="<%=DIST_ID%>"; 
-                districtId=$.trim(districtId);
-                if((districtId!=null && districtId!="")){
-               	 console.log("district selection");
-                     $("#select-3").val(districtId).trigger('change');
-                }
-                 <% } %>
+                 $("#select-2").val(stateName);
                 //var id=$('#select-2').find(':selected').attr('data');
                 //console.log("state Id>>>"+id); 
             	  // districtsData(id);
              }
              <% } %>
-             
+             <% if((DIST_ID!="" && DIST_ID!=null)){ %>
+             var districtId="<%=DIST_ID%>"; 
+             districtId=$.trim(districtId);
+             if((districtId!=null && districtId!="")){
+            	 console.log("district selection");
+                  $("#select-3").val(districtId).trigger('change');
+             }
+              <% } %>
            <% if(diseaseName!="" && diseaseName!=null){ %>
  
              var diseaseName="<%=diseaseName%>";
@@ -255,12 +254,12 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 
             stoploader();
         },
-        search: {
+       /*  search: {
             smart: false
-         },
+         }, */
        // searching: false,
         processing: true, 
-        bStateSave: true 
+       // bStateSave: true 
     });
 //}); 
 	
@@ -404,59 +403,53 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				 $("input[type='search']").val("").trigger('keyup');
 			});
 			
-		     function districtsData(stateId){
-		    	   console.log("stateId>>>"+stateId);
-		    	 $.ajax({
-		    		  url: "http://10.48.19.62:8091/portalsearchapi/public/ASRI-statelist",
-		    		  type: "get", //send it through get method
-		    		  // url: "http://10.48.19.62:8091/portalsearchapi/public/ASRI-districtlist",
-		    		 // type: "post", //send it through get method
-		    		  contentType: "application/json",
- 		    		 // data: {
-		    			//  "stateId":"6"
-		    		  //},
+		     function districtsData(state_Id){
+		    	   console.log("stateId>>>"+state_Id);
+		    	   var data1= { stateId:state_Id };
+		    	 $.ajax({ 
+		    		  url: "http://10.48.19.62:8091/portalsearchapi/public/ASRI-districtlist",
+		    		  type: "POST", 
+		    		 // async: false,
 		    		  dataType: 'json',
+		              contentType: "application/json; charset=utf-8",
+		              data: JSON.stringify(data1),
 		    		  success: function(response) {
 		    		   console.log("Success");
-		    		  // console.log(response);
-		    		   $('#select-3').find('option').remove().end().append('<option value="">Show all</option>');
+		    		   console.log(response);
+		    		   $('#select-3').find('option').remove().end().append('<option value="">Show all</option>'); 
+
 		    		 for(var i=0;i<response.result.length;i++){
 		    			 var data=response.result[i];
-		    			 $('#select-3').append("<option data='"+data.stateId+"' value='"+data.stateName+"'>"+data.stateName+"</option>");
-		    			
-		    			  //console.log(response.result[i].stateId);
-		    			//  console.log(response.result[i].stateName);
+		    			 $('#select-3').append("<option data='"+data.districtId+"' value='"+data.districtName+"'>"+data.districtName+"</option>");
 		    		  } 
-		    		// $('#select-3').trigger('change');
+		    		 $('#select-3').trigger('change');
 		    		  },
 		    		  error: function(xhr) {
 		    			  console.log("Error");
 		    		  }
 		    		});
-		    	  
 		     }
-		     function mandalData(districtId){
-			    	  console.log("districtId>>>"+districtId);
+		     function mandalData(district_Id){
+			    	  console.log("districtId>>>"+district_Id);
+			    	  
+			    	  var data1= { districtId:district_Id};
 			    	 $.ajax({
-			    		  url: "http://10.48.19.62:8091/portalsearchapi/public/ASRI-statelist",
-			    		  type: "get", //send it through get method
-			    		  // url: "http://10.48.19.62:8091/portalsearchapi/public/ASRI-districtlist",
-			    		 // type: "post", //send it through get method
-			    		  contentType: "application/json",
-	 		    		 // data: {
-			    			//  "stateId":"6"
-			    		  //},
+			    		  url: "http://10.48.19.62:8091/portalsearchapi/public/ASRI-mandallist",
+			    		  type: "post", //send it through get method
 			    		  dataType: 'json',
+			              contentType: "application/json; charset=utf-8",
+			              data: JSON.stringify(data1),
 			    		  success: function(response) {
 			    		   console.log("Success");
-			    		//   console.log(response); 
+			    		    console.log(response); 
+			    		    console.log(response.result); 
 			    		   $('#select-4').find('option').remove().end().append('<option value="">Show all</option>');
 			    		 for(var i=0;i<response.result.length;i++){ 
 			    			 var data=response.result[i];
-			    			 $('#select-4').append("<option data='"+data.stateId+"' value='"+data.stateName+"'>"+data.stateName+"</option>");
+			    			 $('#select-4').append("<option data='"+data.mandalId+"' value='"+data.mandalName+"'>"+data.mandalName+"</option>");
 			    			 
 			    		  } 
-			    		// $('#select-4').trigger('change');
+			    		  $('#select-4').trigger('change');
 			    		  },
 			    		  error: function(xhr) {
 			    			  console.log("Error");
