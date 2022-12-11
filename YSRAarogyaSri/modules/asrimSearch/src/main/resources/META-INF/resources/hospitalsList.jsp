@@ -1,3 +1,4 @@
+<%@page import="org.json.JSONObject"%>
 <%@page import="org.json.JSONArray"%>
 <%@page import="com.kpmg.asrimSearch.util.DataGridDisplayManageUtil"%>
 <%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
@@ -14,7 +15,7 @@ function stoploader(){
 	document.getElementById("loader").style.display = "none";
 }
     $(document).ready(function () {
-	   $("select").select2();
+	 //  $("select").select2();
 	}); 
 </script>
  <style>
@@ -28,10 +29,10 @@ function stoploader(){
   height: 120px;
   margin: -76px 0 0 -76px;
   border: 16px solid #f3f3f3;
-  border-top: 16px solid blue;
+/*   border-top: 16px solid blue;
   border-right: 16px solid green;
   border-bottom: 16px solid red;
-  border-left: 16px solid pink;
+  border-left: 16px solid pink; */
   border-radius: 50%;
   border-top: 16px solid #3498db;
   -webkit-animation: spin 2s linear infinite;
@@ -87,6 +88,8 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 <%
  String DIST_ID = request.getParameter("districtId").trim();//ParamUtil.getString(request, "DIST_ID");
  String stateId = ParamUtil.getString(request, "stateId").trim();
+ String stateName="";
+ String distId="";
  String HOSP_TYPE=ParamUtil.getString(request, "HOSP_TYPE").trim();
  String diseaseName=ParamUtil.getString(request, "diseaseName").trim();
  if(diseaseName.length()>5 && diseaseName!=null && diseaseName!=""){
@@ -94,10 +97,27 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  if(postion1!=0)
    diseaseName=diseaseName.substring(0, postion1-1).trim();
  }
+  
+ JSONObject states_List= DataGridDisplayManageUtil.getStates();
+   
+ JSONArray statesJsonArray = (JSONArray) states_List.get("result"); 
+    for(int j=0;j<statesJsonArray.length();j++){
+  	org.json.JSONObject data=new org.json.JSONObject(statesJsonArray.get(j).toString());
+  	System.out.println(data.get("stateName"));
+ 	System.out.println(data.get("stateId"));
+ 	 if(data.get("stateId").equals(stateId)){
+ 		stateName=data.get("stateName").toString();
+ 	}
+   }  
+ JSONObject districts_List= DataGridDisplayManageUtil.getDistricts(stateId);
+ JSONArray destrictsJsonArray = (JSONArray) districts_List.get("result"); 
+ 
+ 
+ System.out.println("State Name:"+stateName);
  System.out.println("districtId>>>"+DIST_ID);
  System.out.println("stateId>>>"+stateId);
  System.out.println("HOSP_TYPE>>>"+HOSP_TYPE); 
- System.out.println("diseaseName>>>"+diseaseName); 
+ System.out.println("diseaseName>>>"+diseaseName);
  %>
 <script>
 	var primaryKeyColumn = 1;
@@ -166,64 +186,33 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
         	    { width: "200", targets: 0 }
         	  ],
         	  fixedColumns: true,
-        	//  search: { regex: true,  },
+        	//  search: { regex: true, Â },
          initComplete: function () {
         	
         	 stoploader();
         	 var j=1;
             this.api()
-                .columns([1,3,5])
+                .columns([2,3,4,5])
                 .every(function () {
-                    var column = this;
-                  //  console.log(column[0][0]);
-                  
-                  	if(column[0][0]==5){
-                    	$('#select-'+column[0][0]).on('change', function () {
+                    var column = this; 
+                     	$('#select-'+column[0][0]).on('change', function () {
+                     		console.log("onchange action for >>>"+"#select-"+column[0][0]);
                             var val = $('#select-'+column[0][0]).val();
-                            //console.log("val>>>"+val);
-                            //column.search(val ? '^' + val + '$' : '', true, false).draw();
-                           // if (column.search() !== val) {
-                                column.search(val,true,false,true).draw();
-                            //}
-                        });
-                  	}
-                  	else{
-                  		$('#select-'+column[0][0]).find('option').remove().end()
-                    	.append('<option value="">Show all</option>').on('change', function () {
-                            var val = $.fn.dataTable.util.escapeRegex($('#select-'+column[0][0]).val());
-                    		//console.log("val>>>"+val);
-                    		column.search(val ? '^' + val + '$' : '', true, false).draw();
-                        });
-                  	}
-                  	if(column[0][0]!=5){
-                     column
-                        .data()
-                        .unique()
-                        .sort()
-                        .each(function (d, j) {
-							d=$.trim(d);
-							if(d!="" && d!=null){
-								if(column.search() === '^'+d+'$'){
-	                         		$('#select-'+column[0][0]).append('<option value="'+d+'" selected="selected">'+d+'</option>' )
-								} else {
-									$('#select-'+column[0][0]).append( '<option value="'+d+'">'+d+'</option>' )
-								}
-							}	
-                        });
-                  	}
-                  	else{
-                  	//	column.search(regex, true, false);
-                  		//console.log("column.search()>>>"+column.search());
-                  	}
+                            var id=$('#select-'+column[0][0]).find(':selected').attr('data');
+                           if(column[0][0]==2){
+                        	  // districtsData(id);
+                            }
+                           if(column[0][0]==3){
+                        	  // mandalData(id);
+                            }
+                           
+                       column.search(val,true,false,true).draw();
+                                 
+                   });
+                  	
                 });
-            <% if(DIST_ID!="" && DIST_ID!=null){ %>
-            var districtId="<%=DIST_ID%>";
-            districtId=$.trim(districtId);
-            if(districtId!=null && districtId!=""){
-                 $("#select-3").val(districtId).trigger('change');
-            }
-             <% } %>
-            <% if(HOSP_TYPE!="" && HOSP_TYPE!=null){ %>
+
+<%--             <% if(HOSP_TYPE!="" && HOSP_TYPE!=null){ %>
              var hospitalType="<%=HOSP_TYPE%>";
             if(hospitalType!=null && hospitalType!=""){
 
@@ -231,7 +220,27 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
               $("#select-1").val(hospitalType).trigger('change');
             }
              
-             <% } %>         
+             <% } %>  --%>
+             <% if(stateName!="" && stateName!=null){ %>
+             
+             var stateName="<%=stateName%>";
+             if(stateName!=null && stateName!=""){
+            	 console.log("state selection");
+                $("#select-2").val(stateName).trigger('change');
+                <% if((DIST_ID!="" && DIST_ID!=null)){ %>
+                var districtId="<%=DIST_ID%>"; 
+                districtId=$.trim(districtId);
+                if((districtId!=null && districtId!="")){
+               	 console.log("district selection");
+                     $("#select-3").val(districtId).trigger('change');
+                }
+                 <% } %>
+                //var id=$('#select-2').find(':selected').attr('data');
+                //console.log("state Id>>>"+id); 
+            	  // districtsData(id);
+             }
+             <% } %>
+             
            <% if(diseaseName!="" && diseaseName!=null){ %>
  
              var diseaseName="<%=diseaseName%>";
@@ -242,6 +251,8 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
                 }
   
              <% } %>
+             
+
             stoploader();
         },
         search: {
@@ -262,25 +273,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 	    var expires = "expires=" + d.toGMTString();
 	    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 	}
-
-	/* function getCookie(cname) {
-		console.log("get test" +cname);
-	    var name = cname + "=";
-	    var decodedCookie = decodeURIComponent(document.cookie);
-	    var ca = decodedCookie.split(';');
-	    for(var i = 0; i < ca.length; i++) {
-	        var c = ca[i];
-	        while (c.charAt(0) == ' ') {
-	            c = c.substring(1);
-	        }
-	        if (c.indexOf(name) == 0) {
-	            return c.substring(name.length, c.length);
-	        }
-	    }
-	    return "";
-	}
-	 */
-    $(document).ready(function() {
+     $(document).ready(function() {
     	console.log("testa");
     //	var previouslySelectedFilter = getCookie('hma-wms-position-list-filter');
     	//var previouslySelectedFilterIndex = 0;
@@ -312,13 +305,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  	 <div class="ysri_section">
 	<section class="blue_section">
 	
-	<!-- <div class="row col-md-12" id="loader"  style="display:none;">
-  <div class="col-md-5"></div>
-  <div class="col-md-3">
-  <div class="loader"></div>
-  </div>
-  <div class="col-md-4"></div>
-  </div> -->
+
 	  <div class="container search_panel">
 		  <h3>Empanelled Hospitals List- In Aarogyasri Scheme</h3>
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
@@ -326,30 +313,59 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  <div class="col-md-12"  style="padding-top: 0px;">
 	<h6>Search Hospitals:</h6>	 
 </div>
-				<!-- <div class="col-2">
+				  <div class="col-2">
 				<label  for="State">State</label>
 				<select class="form-select" id="select-2" name="select-2">
 				    <option value="">Show All</option>
-				 </select>
-				</div> -->
+				    <% 
+    for(int j=0;j<statesJsonArray.length();j++){
+  	org.json.JSONObject data=new org.json.JSONObject(statesJsonArray.get(j).toString());
+  	  
+     %>
+				    <option data="<%=data.get("stateId")  %>" value="<%=data.get("stateName") %>"><%=data.get("stateName")  %></option>
+				    <% } %> 
+				   </select>
+				</div> 
 				<div class="col-2">
 				<label  for="District">District</label>
 				<select class="form-select" id="select-3" name="select-3">
 				    <option value="">Show All</option>
+				     <% 
+					    for(int j=0;j<destrictsJsonArray.length();j++){
+					  	org.json.JSONObject data=new org.json.JSONObject(destrictsJsonArray.get(j).toString());
+					  	
+					  	 if(data.get("districtName").equals(DIST_ID)){
+					  		distId=data.get("districtId").toString();
+					  	}
+					  	
+  	                  %>
+				    <option data="<%=data.get("districtId")  %>" value="<%=data.get("districtName") %>"><%=data.get("districtName")  %></option>
+				    <% } %>
 				 </select>
 				</div>
-				<div class="col-2">
+				<!-- <div class="col-2"> 
 				<label  for="Type">Type</label>
 				<select class="form-select" id="select-1" name="select-1">
 				    <option value="">Show All</option>
 				 </select>
-				</div>
-			<!-- 	<div class="col-3">
+				</div>  -->
+				<div class="col-3">
 				<label  for="Mandal">Mandal</label>
 				<select class="form-select" id="select-4" name="select-4">
 				    <option value="">Show All</option>
+				      <%
+				      JSONObject mandal_List= DataGridDisplayManageUtil.getMandal(distId);
+				     // System.out.print("mandal_List 123"+mandal_List.toString());
+						 JSONArray mandalJsonArray = (JSONArray) mandal_List.get("result"); 
+						for(int j=0;j<mandalJsonArray.length();j++){
+			        	org.json.JSONObject data=new org.json.JSONObject(mandalJsonArray.get(j).toString());
+			    	   String id=data.get("mandalId").toString();
+			    	   String mandalName=data.get("mandalName").toString();  
+				    %>
+				    <option data="<%=id %>" value="<%=mandalName%>"><%=mandalName %></option>
+				    <% } %> 
 				 </select>
-				</div> -->
+				</div>
 						<div class="col-3">
 				
 				<label  for="Speciality Name">Speciality Name</label>
@@ -381,12 +397,73 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 			<script>
 			$("#resetBtnS").click(function(){
 				//alert("Clear");
+				$("#select-2").val("").trigger('change');
 				$("#select-3").val("").trigger('change');
+				$("#select-4").val("").trigger('change');
 				$("#select-5").val("").trigger('change');
-				//$("#select-2").val("").trigger('change');
-				//$("#select-3").val("").trigger('change');
 				 $("input[type='search']").val("").trigger('keyup');
 			});
+			
+		     function districtsData(stateId){
+		    	   console.log("stateId>>>"+stateId);
+		    	 $.ajax({
+		    		  url: "http://10.48.19.62:8091/portalsearchapi/public/ASRI-statelist",
+		    		  type: "get", //send it through get method
+		    		  // url: "http://10.48.19.62:8091/portalsearchapi/public/ASRI-districtlist",
+		    		 // type: "post", //send it through get method
+		    		  contentType: "application/json",
+ 		    		 // data: {
+		    			//  "stateId":"6"
+		    		  //},
+		    		  dataType: 'json',
+		    		  success: function(response) {
+		    		   console.log("Success");
+		    		  // console.log(response);
+		    		   $('#select-3').find('option').remove().end().append('<option value="">Show all</option>');
+		    		 for(var i=0;i<response.result.length;i++){
+		    			 var data=response.result[i];
+		    			 $('#select-3').append("<option data='"+data.stateId+"' value='"+data.stateName+"'>"+data.stateName+"</option>");
+		    			
+		    			  //console.log(response.result[i].stateId);
+		    			//  console.log(response.result[i].stateName);
+		    		  } 
+		    		// $('#select-3').trigger('change');
+		    		  },
+		    		  error: function(xhr) {
+		    			  console.log("Error");
+		    		  }
+		    		});
+		    	  
+		     }
+		     function mandalData(districtId){
+			    	  console.log("districtId>>>"+districtId);
+			    	 $.ajax({
+			    		  url: "http://10.48.19.62:8091/portalsearchapi/public/ASRI-statelist",
+			    		  type: "get", //send it through get method
+			    		  // url: "http://10.48.19.62:8091/portalsearchapi/public/ASRI-districtlist",
+			    		 // type: "post", //send it through get method
+			    		  contentType: "application/json",
+	 		    		 // data: {
+			    			//  "stateId":"6"
+			    		  //},
+			    		  dataType: 'json',
+			    		  success: function(response) {
+			    		   console.log("Success");
+			    		//   console.log(response); 
+			    		   $('#select-4').find('option').remove().end().append('<option value="">Show all</option>');
+			    		 for(var i=0;i<response.result.length;i++){ 
+			    			 var data=response.result[i];
+			    			 $('#select-4').append("<option data='"+data.stateId+"' value='"+data.stateName+"'>"+data.stateName+"</option>");
+			    			 
+			    		  } 
+			    		// $('#select-4').trigger('change');
+			    		  },
+			    		  error: function(xhr) {
+			    			  console.log("Error");
+			    		  }
+			    		});
+			    	  
+			     }
 			</script>	
 				
 				<%-- <div class="col-2">
