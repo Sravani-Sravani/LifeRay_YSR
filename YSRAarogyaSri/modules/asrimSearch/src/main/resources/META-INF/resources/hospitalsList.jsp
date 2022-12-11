@@ -15,7 +15,10 @@ function stoploader(){
 	document.getElementById("loader").style.display = "none";
 }
     $(document).ready(function () {
-	   $("select").select2();
+	   $("#select-3").select2();
+	   $("#select-4").select2();
+	   $("#select-5").select2();
+	  // $("#select-2").select2();
 	}); 
 </script>
  <style>
@@ -199,12 +202,16 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
                      		console.log("onchange action for >>>"+"#select-"+column[0][0]);
                             var val = $('#select-'+column[0][0]).val();
                             var id=$('#select-'+column[0][0]).find(':selected').attr('data');
-                           if(column[0][0]==2){
-                        	   
-                        	    districtsData(id);
-                            }
-                           if(column[0][0]==3){
-                        	  mandalData(id);
+                            
+                            console.log("id>>>"+id);
+                            if(id!=undefined){
+	                            if(column[0][0]==2){
+	                        	   
+	                        	    districtsData(id);
+	                            }
+	                            else if(column[0][0]==3){
+	                        	  mandalData(id);
+	                            }
                             }
                            
                        column.search(val,true,false,true).draw();
@@ -398,17 +405,21 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 			$("#resetBtnS").click(function(){
 				//alert("Clear");
 				$("#select-2").val("").trigger('change');
+				$('#select-3').find('option').remove().end().append('<option value="">Show all</option>');
 				$("#select-3").val("").trigger('change');
-				$("#select-4").val("").trigger('change');
+				$('#select-4').find('option').remove().end().append('<option value="">Show all</option>');
+				$("#select-4").val("").trigger('change'); 
 				$("#select-5").val("").trigger('change');
 				 $("input[type='search']").val("").trigger('keyup');
 			});
 			
 		     function districtsData(state_Id){
 		    	   console.log("stateId>>>"+state_Id);
-		    	   $('#select-3').prop("disabled", true);
+		    	   $('#select-4').find('option').remove().end().append('<option value="">Show all</option>');
 		    	   var data1= { stateId:state_Id };
-		    	 $.ajax({ 
+		    	   if(state_Id!=""){
+		    		   $('#select-3').prop("disabled", true);
+		    	 $.ajax({
 		    		  url: "http://10.48.19.62:8091/portalsearchapi/public/ASRI-districtlist",
 		    		  type: "POST", 
 		    		 // async: false,
@@ -430,11 +441,14 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 		    			  console.log("Error");
 		    		  }
 		    		});
+		    	   }
 		     }
 		     function mandalData(district_Id){
 			    	  console.log("districtId>>>"+district_Id);
-			    	  $('#select-4').prop("disabled", true);
+			    	 
 			    	  var data1= { districtId:district_Id};
+			    	  if(district_Id!=""){
+			    		  $('#select-4').prop("disabled", true);
 			    	 $.ajax({
 			    		  url: "http://10.48.19.62:8091/portalsearchapi/public/ASRI-mandallist",
 			    		  type: "post", //send it through get method
@@ -449,7 +463,6 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 			    		 for(var i=0;i<response.result.length;i++){ 
 			    			 var data=response.result[i];
 			    			 $('#select-4').append("<option data='"+data.mandalId+"' value='"+data.mandalName+"'>"+data.mandalName+"</option>");
-			    			 
 			    		  } 
 			    		  $('#select-4').trigger('change');
 			    		  $('#select-4').prop("disabled", false);
@@ -458,7 +471,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 			    			  console.log("Error");
 			    		  }
 			    		});
-			    	  
+			    	  }
 			     }
 			</script>	
 				
