@@ -90,7 +90,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 .alert-danger{disaply:none;}
 </style>
 <%
- String DIST_ID = request.getParameter("districtId").trim();//ParamUtil.getString(request, "DIST_ID");
+ String DIST_ID = ParamUtil.getString(request,"districtId").trim();//ParamUtil.getString(request, "DIST_ID");
  String stateId = ParamUtil.getString(request, "stateId").trim();
  String stateName="";
  String distId="";
@@ -103,8 +103,11 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  }
   
  JSONObject states_List= DataGridDisplayManageUtil.getStates();
-   
- JSONArray statesJsonArray = (JSONArray) states_List.get("result"); 
+ 
+ JSONArray statesJsonArray =new JSONArray();
+ 
+ if(states_List!=null){
+	 statesJsonArray =(JSONArray) states_List.get("result"); 
     for(int j=0;j<statesJsonArray.length();j++){
   	org.json.JSONObject data=new org.json.JSONObject(statesJsonArray.get(j).toString());
   	System.out.println(data.get("stateName"));
@@ -113,9 +116,14 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  		stateName=data.get("stateName").toString();
  	}
    }  
- JSONObject districts_List= DataGridDisplayManageUtil.getDistricts(stateId);
- JSONArray destrictsJsonArray = (JSONArray) districts_List.get("result"); 
- 
+ }
+ JSONObject districts_List=new JSONObject();
+ JSONArray destrictsJsonArray =null;
+ if(stateId!=null && stateId!=""){
+  districts_List= DataGridDisplayManageUtil.getDistricts(stateId);
+  destrictsJsonArray=(JSONArray) districts_List.get("result"); 
+ }
+   
  
  System.out.println("State Name:"+stateName);
  System.out.println("districtId>>>"+DIST_ID);
@@ -339,6 +347,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				<select class="form-select" id="select-3" name="select-3">
 				    <option value="">Show All</option>
 				     <% 
+				     if(destrictsJsonArray!=null){
 					    for(int j=0;j<destrictsJsonArray.length();j++){
 					  	org.json.JSONObject data=new org.json.JSONObject(destrictsJsonArray.get(j).toString());
 					  	
@@ -348,7 +357,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 					  	
   	                  %>
 				    <option data="<%=data.get("districtId")  %>" value="<%=data.get("districtName") %>"><%=data.get("districtName")  %></option>
-				    <% } %>
+				    <% } } %>
 				 </select>
 				</div>
 				<!-- <div class="col-2"> 
@@ -362,6 +371,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				<select class="form-select" id="select-4" name="select-4">
 				    <option value="">Show All</option>
 				      <%
+				      if(stateId!=null && stateId!=""){
 				      JSONObject mandal_List= DataGridDisplayManageUtil.getMandal(distId);
 				     // System.out.print("mandal_List 123"+mandal_List.toString());
 						 JSONArray mandalJsonArray = (JSONArray) mandal_List.get("result"); 
@@ -371,7 +381,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 			    	   String mandalName=data.get("mandalName").toString();  
 				    %>
 				    <option data="<%=id %>" value="<%=mandalName%>"><%=mandalName %></option>
-				    <% } %> 
+				    <% } } %> 
 				 </select>
 				</div>
 						<div class="col-3">
@@ -472,6 +482,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 			    			  console.log("Error");
 			    		  }
 			    		});
+			    	 $('#select-4').prop("disabled", false);
 			    	  }
 			     }
 			</script>	

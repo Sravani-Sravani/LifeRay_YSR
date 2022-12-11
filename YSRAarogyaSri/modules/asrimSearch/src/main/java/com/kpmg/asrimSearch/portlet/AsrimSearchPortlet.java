@@ -110,7 +110,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 				        "    \"hospitalid\": null,\r\n" +
 				        "    \"hospitaltype\": null\r\n" + "\n}";
 			    //System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/searchhospital");
+				    URL obj = new URL("http://10.48.19.62:8091/portalsearchapi/public/searchhospital");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
 		 	    postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -157,7 +157,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 		try {
 			     final String POST_PARAMS = "{\n" + "\"surgeryid\": null\r\n" +"}";
 			    //System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/searchprocedure");
+				    URL obj = new URL("http://10.48.19.62:8091/portalsearchapi/public/searchprocedure");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
 			     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -207,7 +207,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 				        "    \"procedurename\": null,\r\n" + 
 				        "    \"proceduretypeid\": null\r\n" + "\n}";
 			    //System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/searchspeciality");
+				    URL obj = new URL("http://10.48.19.62:8091/portalsearchapi/public/searchspeciality");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
 			     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -254,7 +254,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 		try {
 			 final String POST_PARAMS = "{\n" + "\"districtid\": null\r\n" + "\n}";
 			  //  System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/mitra-search-districtwise");
+				    URL obj = new URL("http://10.48.19.62:8091/portalsearchapi/public/mitra-search-districtwise");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
 			     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
