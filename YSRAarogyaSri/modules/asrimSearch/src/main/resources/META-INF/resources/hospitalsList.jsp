@@ -37,7 +37,7 @@ function stoploader(){
   border-top: 16px solid #3498db;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
-}
+} 
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
@@ -200,6 +200,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
                             var val = $('#select-'+column[0][0]).val();
                             var id=$('#select-'+column[0][0]).find(':selected').attr('data');
                            if(column[0][0]==2){
+                        	   
                         	    districtsData(id);
                             }
                            if(column[0][0]==3){
@@ -405,6 +406,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 			
 		     function districtsData(state_Id){
 		    	   console.log("stateId>>>"+state_Id);
+		    	   $('#select-3').prop("disabled", true);
 		    	   var data1= { stateId:state_Id };
 		    	 $.ajax({ 
 		    		  url: "http://10.48.19.62:8091/portalsearchapi/public/ASRI-districtlist",
@@ -417,12 +419,12 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 		    		   console.log("Success");
 		    		   console.log(response);
 		    		   $('#select-3').find('option').remove().end().append('<option value="">Show all</option>'); 
-
-		    		 for(var i=0;i<response.result.length;i++){
-		    			 var data=response.result[i];
-		    			 $('#select-3').append("<option data='"+data.districtId+"' value='"+data.districtName+"'>"+data.districtName+"</option>");
-		    		  } 
-		    		 $('#select-3').trigger('change');
+			    		  for(var i=0;i<response.result.length;i++){
+			    			 var data=response.result[i];
+			    			 $('#select-3').append("<option data='"+data.districtId+"' value='"+data.districtName+"'>"+data.districtName+"</option>");
+			    		  } 
+		    		   $('#select-3').trigger('change');
+		    		   $('#select-3').prop("disabled", false);
 		    		  },
 		    		  error: function(xhr) {
 		    			  console.log("Error");
@@ -431,7 +433,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 		     }
 		     function mandalData(district_Id){
 			    	  console.log("districtId>>>"+district_Id);
-			    	  
+			    	  $('#select-4').prop("disabled", true);
 			    	  var data1= { districtId:district_Id};
 			    	 $.ajax({
 			    		  url: "http://10.48.19.62:8091/portalsearchapi/public/ASRI-mandallist",
@@ -450,6 +452,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 			    			 
 			    		  } 
 			    		  $('#select-4').trigger('change');
+			    		  $('#select-4').prop("disabled", false);
 			    		  },
 			    		  error: function(xhr) {
 			    			  console.log("Error");
