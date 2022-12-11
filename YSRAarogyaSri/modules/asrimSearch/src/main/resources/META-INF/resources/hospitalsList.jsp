@@ -15,6 +15,7 @@ function stoploader(){
 	document.getElementById("loader").style.display = "none";
 }
     $(document).ready(function () {
+       //$("#select-2").select2();
 	   $("#select-3").select2();
 	   $("#select-4").select2();
 	   $("#select-5").select2();
@@ -320,7 +321,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  <div class="col-md-12"  style="padding-top: 0px;">
 	<h6>Search Hospitals:</h6>	 
 </div>
-				  <div class="col-2">
+				  <div class="col-3">
 				<label  for="State">State</label>
 				<select class="form-select" id="select-2" name="select-2">
 				    <option value="">Show All</option>
@@ -356,7 +357,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				    <option value="">Show All</option>
 				 </select>
 				</div>  -->
-				<div class="col-3">
+				<div class="col-2">
 				<label  for="Mandal">Mandal</label>
 				<select class="form-select" id="select-4" name="select-4">
 				    <option value="">Show All</option>
