@@ -1,13 +1,12 @@
+<%@page import="com.liferay.portal.kernel.util.WebKeys"%>
+<%@page import="com.liferay.portal.kernel.theme.ThemeDisplay"%>
 <%@page import="org.json.JSONObject"%>
 <%@page import="org.json.JSONArray"%>
 <%@page import="com.kpmg.asrimSearch.util.DataGridDisplayManageUtil"%>
 <%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
 <%@ include file="/init.jsp" %>
 <%@ include file="/html/dataTableIncludes.jspf" %>  
-<portlet:resourceURL var="asrimHospitalsURL">
-<portlet:param name="cmd" value="hospitalsList"/>
-<portlet:param name="cmdType" value="AsrimHospitalsList"/>
-</portlet:resourceURL>
+
 <link href="/o/com.kpmg.asrimSearch/css/select2.min.css" rel="stylesheet" />
 <script src="/o/com.kpmg.asrimSearch/js/select2.min.js"></script> 
 <script>
@@ -89,20 +88,33 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 .alert-dismissible{disaply:none;}
 .alert-danger{disaply:none;}
 </style>
+<% 
+themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
+long pageId=themeDisplay.getPlid();
+%>
+<portlet:resourceURL var="asrimHospitalsURL">
+<portlet:param name="cmd" value="hospitalsList"/>
+<portlet:param name="pageId" value="<%=String.valueOf(pageId) %>"/>
+<portlet:param name="cmdType" value="AsrimHospitalsList"/>
+</portlet:resourceURL>
 <%
+
+
  String DIST_ID = ParamUtil.getString(request,"districtId").trim();//ParamUtil.getString(request, "DIST_ID");
  String stateId = ParamUtil.getString(request, "stateId").trim();
  String stateName="";
  String distId="";
+ 
  String HOSP_TYPE=ParamUtil.getString(request, "HOSP_TYPE").trim();
  String diseaseName=ParamUtil.getString(request, "diseaseName").trim();
+ 
  if(diseaseName.length()>5 && diseaseName!=null && diseaseName!=""){
- int postion1=diseaseName.indexOf("(");
- if(postion1!=0)
-   diseaseName=diseaseName.substring(0, postion1-1).trim();
+	 int postion1=diseaseName.indexOf("(");
+	 if(postion1!=0)
+	   diseaseName=diseaseName.substring(0, postion1-1).trim();
  }
   
- JSONObject states_List= DataGridDisplayManageUtil.getStates();
+ JSONObject states_List= DataGridDisplayManageUtil.getStates(pageId);
  
  JSONArray statesJsonArray =new JSONArray();
  
@@ -120,11 +132,10 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  JSONObject districts_List=new JSONObject();
  JSONArray destrictsJsonArray =null;
  if(stateId!=null && stateId!=""){
-  districts_List= DataGridDisplayManageUtil.getDistricts(stateId);
+  districts_List= DataGridDisplayManageUtil.getDistricts(stateId,pageId);
   destrictsJsonArray=(JSONArray) districts_List.get("result"); 
  }
    
- 
  System.out.println("State Name:"+stateName);
  System.out.println("districtId>>>"+DIST_ID);
  System.out.println("stateId>>>"+stateId);
@@ -331,16 +342,15 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 </div>
 				  <div class="col-3">
 				<label  for="State">State</label>
-				<select class="form-select" id="select-2" name="select-2">
-				    <option value="">Show All</option>
+	<select class="form-select" id="select-2" name="select-2">
+		 <option value="">Show All</option>
 				    <% 
     for(int j=0;j<statesJsonArray.length();j++){
-  	org.json.JSONObject data=new org.json.JSONObject(statesJsonArray.get(j).toString());
-  	  
-     %>
-				    <option data="<%=data.get("stateId")  %>" value="<%=data.get("stateName") %>"><%=data.get("stateName")  %></option>
-				    <% } %> 
-				   </select>
+  	org.json.JSONObject data=new org.json.JSONObject(statesJsonArray.get(j).toString()); 
+  	%>
+	 <option data="<%=data.get("stateId")  %>" value="<%=data.get("stateName") %>"><%=data.get("stateName")  %></option>
+	<% } %> 
+   </select>
 				</div> 
 				<div class="col-2">
 				<label  for="District">District</label>
@@ -372,13 +382,20 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				    <option value="">Show All</option>
 				      <%
 				      if(stateId!=null && stateId!=""){
-				      JSONObject mandal_List= DataGridDisplayManageUtil.getMandal(distId);
+				      JSONObject mandal_List= DataGridDisplayManageUtil.getMandal(distId,pageId);
 				     // System.out.print("mandal_List 123"+mandal_List.toString());
 						 JSONArray mandalJsonArray = (JSONArray) mandal_List.get("result"); 
 						for(int j=0;j<mandalJsonArray.length();j++){
 			        	org.json.JSONObject data=new org.json.JSONObject(mandalJsonArray.get(j).toString());
 			    	   String id=data.get("mandalId").toString();
-			    	   String mandalName=data.get("mandalName").toString();  
+			    	   String mandalName="";   
+			    	   if(pageId==513 || pageId==507){
+			    		     mandalName=data.get("mandalName").toString();  
+			    	   }
+			    	   else{
+			    		     mandalName=data.get("mandal").toString();  
+			    	   }
+			    	  
 				    %>
 				    <option data="<%=id %>" value="<%=mandalName%>"><%=mandalName %></option>
 				    <% } } %> 

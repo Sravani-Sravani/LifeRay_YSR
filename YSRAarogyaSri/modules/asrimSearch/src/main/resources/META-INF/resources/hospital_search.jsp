@@ -22,8 +22,23 @@
  
 <%
 org.json.JSONArray states_List=null;
+String pageTitle="";
+if(pageId==513){
+	pageTitle="Aarogyasri ";
+}
+else if(pageId==507){
+	pageTitle="Arogya Raksha ";
+}
+else if(pageId==499){
+	pageTitle="WJHS ";
+}
+else if(pageId==491){
+	pageTitle="EHS ";
+}
 try{
-	states_List=DataGridDisplayManageUtil.getStateLevelAsrimHospCount();
+	// if(pId==513 || pId==507 || pId==499 || pId==491){
+	    states_List=DataGridDisplayManageUtil.getStateLevelAsrimHospCount(pageId);
+	// }
 }
 catch(Exception e){
 e.getMessage();	
@@ -41,7 +56,7 @@ System.out.print("states_List"+states_List.toString());
 <div class="ysri_section"> 	
 <section class="blue_section search_panel">
 	  <div class="container">
-		  <h3>Aarogyasri State Empanelled Hospitals</h3><br>
+		  <h3><%=pageTitle %> State Empanelled Hospitals</h3><br>
 		  <div class="row">
 		      
 		      <% 
@@ -52,19 +67,24 @@ System.out.print("states_List"+states_List.toString());
 		      statesList.add("TAMIL NADU");
  		       
 	        for(int i=0;i<statesList.size();i++){
-	    		 System.out.println("statesList.get(i)>>>"+statesList.get(i));
+	    		/// System.out.println("statesList.get(i)>>>"+statesList.get(i));
 	    		for(int j=0;j<states_List.length();j++){
 	    		org.json.JSONArray data=new org.json.JSONArray(states_List.get(j).toString()); 
  	    	   
 	    	   String stateId=data.getString(1);
 	    	   String stateName=data.getString(0);
+	    	   
+	    	   if(pageId==499 || pageId==491){
+	    		     stateId=data.getString(0);
+		    	     stateName=data.getString(1);
+	    	   }
 	    	   long govtHospitalCount=data.getLong(2);
 	 		   long privateHospitalCount=data.getLong(3);
-	 		   System.out.println("stateName>>>"+stateName);
+	 		  // System.out.println("stateName>>>"+stateName);
 	 		   if(stateName.trim().equalsIgnoreCase(statesList.get(i))){
-	 		   if(stateName.equalsIgnoreCase("Chennai")){
-	 			  stateName="Tamilnadu";
-	 		   }
+	 		 //  if(stateName.equalsIgnoreCase("Chennai")){
+	 			//  stateName="Tamilnadu";
+	 		  // }
 	 		   
 	    	   %>
 	    	   

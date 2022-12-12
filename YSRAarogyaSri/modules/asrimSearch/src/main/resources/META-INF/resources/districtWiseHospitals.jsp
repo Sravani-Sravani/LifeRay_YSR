@@ -1,4 +1,6 @@
- <%@page import="com.kpmg.asrimSearch.util.DataGridDisplayManageUtil"%>
+ <%@page import="com.liferay.portal.kernel.util.WebKeys"%>
+<%@page import="com.liferay.portal.kernel.theme.ThemeDisplay"%>
+<%@page import="com.kpmg.asrimSearch.util.DataGridDisplayManageUtil"%>
 <%@page import="org.json.JSONArray"%> 
 <%@page import="com.liferay.portal.kernel.dao.orm.Order"%> 
 <%@page import="com.liferay.portal.kernel.dao.orm.OrderFactoryUtil"%>
@@ -15,19 +17,23 @@
  .alert-dismissible{disaply:none;}
 .alert-danger{disaply:none;}
 </style>
- <%
+  <% 
+themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
+long pageId=themeDisplay.getPlid();
+ 
  String stateId = ParamUtil.getString(request, "recordId");
  System.out.println("stateId>>>"+stateId);
-JSONArray districts_List=DataGridDisplayManageUtil.getDistrictAsrimHospCount(stateId);
-System.out.print("districts_List"+districts_List.toString());
+ JSONArray districts_List=DataGridDisplayManageUtil.getDistrictAsrimHospCount(stateId,pageId);
+ System.out.print("districts_List"+districts_List.toString());
 %>
+
 <div class="ysri_section">
 	<section class="blue_section">
 	  <div class="container search_panel">
 		  <h3>Aarogyasri / District Wise - Empanelled Hospitals</h3><br>
 		  <div class="row">
 		  
-		  <%  try{ 
+		  <%  try{
 			   
 			  for(int i=0;i<districts_List.length();i++){
 		    	 	org.json.JSONArray data=new org.json.JSONArray(districts_List.get(i).toString());

@@ -56,11 +56,11 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			throws IOException, PortletException {
 		String cmd = ParamUtil.getString(resourceRequest, "cmd");
 		String cmdType = ParamUtil.getString(resourceRequest, "cmdType");
-		
+		long pageId= ParamUtil.getLong(resourceRequest, "pageId");
 		if (cmd.equals("hospitalsList")) {
 			try {
 				try {
-					getHospitalsList(cmdType, resourceRequest, resourceResponse);
+					getHospitalsList(cmdType,pageId, resourceRequest, resourceResponse);
 				} catch (PortalException e) {
 					e.printStackTrace();
 				}
@@ -102,15 +102,37 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			}
 		} 
 	}
-	public static void getHospitalsList(String type, ResourceRequest resourceRequest, ResourceResponse resourceResponse)
+	public static void getHospitalsList(String type,long pId, ResourceRequest resourceRequest, ResourceResponse resourceResponse)
 			throws SystemException, PortalException, JSONException {
 		JSONObject myObject =null;
 		try {
-			     final String POST_PARAMS = "{\n" + "\"districtid\": null,\r\n" +
-				        "    \"hospitalid\": null,\r\n" +
-				        "    \"hospitaltype\": null\r\n" + "\n}";
+			
+			
+			       String POST_PARAMS="";
 			    //System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.62:8091/portalsearchapi/public/searchhospital");
+			     
+			     
+			     String url="";
+					if(pId==513){
+						url="http://10.48.19.62:8091/portalsearchapi/public/searchhospital";
+						POST_PARAMS = "{\n" + "\"districtid\": null,\r\n" +
+						        "    \"hospitalid\": null,\r\n" +
+						        "    \"hospitaltype\": null\r\n" + "\n}";
+					}
+					else if(pId==507) {
+ 
+							                  url="http://10.48.19.62:8092/portalsearchapi/public/AR-hospitalsearch-districtwise";
+						
+						     POST_PARAMS = "{\n" + "\"districtid\": null\r\n"+ "\n}";
+						    //System.out.println(POST_PARAMS);
+							    //URL obj = new URL("http://10.48.19.54:8092/portalsearchapi/public/AR-hospitalsearch-districtwise");
+					}
+					else { //pId==499 || pId==491
+						   POST_PARAMS = "{\n" + "\"districtid\": null" + "\n}";
+						url="http://10.48.19.62:8093/ehsportalsearchapi/public/ehs-hospitalsearch-districtwise";
+					}
+			     
+				    URL obj = new URL(url);
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
 		 	    postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");

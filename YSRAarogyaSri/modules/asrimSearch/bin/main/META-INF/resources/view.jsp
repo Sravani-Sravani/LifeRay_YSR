@@ -1,21 +1,19 @@
 <%@page import="com.liferay.portal.kernel.util.WebKeys"%>
 <%@page import="com.liferay.portal.kernel.theme.ThemeDisplay"%>
 <%@ include file="/init.jsp" %>
-    <% 
+  <% 
 themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
-long pId=themeDisplay.getPlid();
+long pageId=themeDisplay.getPlid();
 %>
-  <%if(pId==513){ %>
+ <%if(pageId==513 || pageId==507 || pageId==499 || pageId==491){ %>
  
  <%@ include file="/hospital_search.jsp" %>
- <% }else if(pId==515){ %>
+ <% }else if(pageId==515){ %>
  <%@ include file="/speciality_search.jsp" %>
- <% }else if(pId==517){ %>
+ <% }else if(pageId==517){ %>
  <%@ include file="/procedure_search.jsp" %>
- <% }else if(pId==519){ %>
+ <% }else if(pageId==519){ %>
    <%@ include file="/mitra_search.jsp" %>
    <% }else{ %>
    Asrim Search Page not Created
-   <% } %>
-              
-   
+   <% } %> 
