@@ -16,13 +16,13 @@ import java.net.URL;
 	try {
 		String url="";
 		if(pId==513){
-			url="http://10.48.19.62:8091/portalsearchapi/public/asri-hospital-statewisecount";
+			url="http://10.48.19.62:8091/portalsearchapi/public-asri/hospital-statewisecount";
 		}
 		else if(pId==507) {
-			url="http://10.48.19.62:8092/portalsearchapi/public/AR-hospitalsearch";
+			url="http://10.48.19.62:8092/portalsearchapi/public-ar/hospital-statewisecount";
 		}
 		else { //pId==499 || pId==491
-			url="http://10.48.19.62:8093/ehsportalsearchapi/public/ehs-hospitalsearch-statewisecount";
+			url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/hospital-statewisecount";
 		}
 		
 		   URL obj = new URL(url);
@@ -65,13 +65,13 @@ public static org.json.JSONArray getDistrictAsrimHospCount(String stateId,long p
 	try {  
 		String url="";
 		if(pId==513){
-			url="http://10.48.19.62:8091/portalsearchapi/public/asri-hospital-districtwisecount";
+			url="http://10.48.19.62:8091/portalsearchapi/public-asri/hospital-districtwisecount";
 		}
 		else if(pId==507) {
-			url="http://10.48.19.62:8092/portalsearchapi/public/AR-hospitalsearch-statewisecount";
+			url="http://10.48.19.62:8092/portalsearchapi/public-ar/hospital-districtwisecount";
 		}
 		else { //pId==499 || pId==491
-			url="http://10.48.19.62:8093/ehsportalsearchapi/public/ehs-hospital-districtwisecount";
+			url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/hospital-districtwisecount";
 		}
 		 final String POST_PARAMS = "{\n" + "\"stateVal\": \""+stateId+ "\"\n}";
 //		    System.out.println(POST_PARAMS);
@@ -202,7 +202,7 @@ public static org.json.JSONArray getAsriSpecialityCount(String specialityId) {
 	try {
 		 final String POST_PARAMS = "{\n" + "\"specialityId\": "+specialityId+ "\n}";
 		    System.out.println(POST_PARAMS);
-		   URL obj = new URL("http://10.48.19.62:8091/portalsearchapi/public/count-specialitysearch");
+		   URL obj = new URL("http://10.48.19.62:8091/portalsearchapi/public-asri/specialitysearchcount");
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 		   postConnection.setRequestMethod("POST");
 		   postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -249,13 +249,13 @@ public static org.json.JSONObject getStates(long pId) {
 	try { 
 		String url="";
 		if(pId==513){
-			url="http://10.48.19.62:8091/portalsearchapi/public/ASRI-statelist";
+			url="http://10.48.19.62:8091/portalsearchapi/public-asri/statelist";
 		}
 		else if(pId==507) {
-			url="http://10.48.19.62:8092/portalsearchapi/public/AR-statelist";
+			url="http://10.48.19.62:8092/portalsearchapi/public-ar/statelist";
 		}
 		else { //pId==499 || pId==491
-			url="http://10.48.19.62:8093/ehsportalsearchapi/public/ehs-statelist";
+			url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/statelist";
 		}
 		   URL obj = new URL(url);
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
@@ -299,13 +299,13 @@ public static org.json.JSONObject getDistricts(String stateId,long pId) {
 		    System.out.println(POST_PARAMS);
 		    String url="";
 			if(pId==513){
-				url="http://10.48.19.62:8091/portalsearchapi/public/ASRI-districtlist";
+				url="http://10.48.19.62:8091/portalsearchapi/public-asri/districtlist";
 			}
 			else if(pId==507) {
-				url="http://10.48.19.62:8092/portalsearchapi/public/AR-districtlist";
+				url="http://10.48.19.62:8092/portalsearchapi/public-ar/districtlist";
 			}
 			else { //pId==499 || pId==491
-				url="http://10.48.19.62:8093/ehsportalsearchapi/public/ehs-districtlist";
+				url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/districtlist";
 			}
 			   URL obj = new URL(url);
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
@@ -352,13 +352,13 @@ public static org.json.JSONObject getMandal(String districtId,long pId) {
 		    System.out.println(POST_PARAMS);
 		    String url="";
 			if(pId==513){
-				url="http://10.48.19.62:8091/portalsearchapi/public/ASRI-mandallist";
+				url="http://10.48.19.62:8091/portalsearchapi/public-asri/mandallist";
 			}
 			else if(pId==507) {
-				url="http://10.48.19.62:8092/portalsearchapi/public/AR-mandallist";
+				url="http://10.48.19.62:8092/portalsearchapi/public-ar/mandallist";
 			}
 			else { //pId==499 || pId==491
-				url="http://10.48.19.62:8093/ehsportalsearchapi/public/ehs-mandallist";
+				url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/mandallist";
 			}
 			   URL obj = new URL(url);
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();

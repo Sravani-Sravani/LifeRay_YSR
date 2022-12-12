@@ -209,7 +209,7 @@ long pageId=themeDisplay.getPlid();
         	    { width: "200", targets: 0 }
         	  ],
         	  fixedColumns: true,
-        	//  search: { regex: true, Â },
+        	//  search: { regex: true,  },
          initComplete: function () {
         	
         	 stoploader();
@@ -448,7 +448,7 @@ long pageId=themeDisplay.getPlid();
 		    	   if(state_Id!=""){
 		    		   $('#select-3').prop("disabled", true);
 		    	 $.ajax({
-		    		  url: "http://10.48.19.62:8091/portalsearchapi/public/ASRI-districtlist",
+		    		  url: "http://10.48.19.62:8091/portalsearchapi/public-asri/districtlist",
 		    		  type: "POST", 
 		    		 // async: false,
 		    		  dataType: 'json',
@@ -469,6 +469,7 @@ long pageId=themeDisplay.getPlid();
 		    			  console.log("Error");
 		    		  }
 		    		});
+		    	 $('#select-3').prop("disabled", false);
 		    	   }
 		     }
 		     function mandalData(district_Id){
@@ -478,7 +479,7 @@ long pageId=themeDisplay.getPlid();
 			    	  if(district_Id!=""){
 			    		  $('#select-4').prop("disabled", true);
 			    	 $.ajax({
-			    		  url: "http://10.48.19.62:8091/portalsearchapi/public/ASRI-mandallist",
+			    		  url: "http://10.48.19.62:8091/portalsearchapi/public-asri/mandallist",
 			    		  type: "post", //send it through get method
 			    		  dataType: 'json',
 			              contentType: "application/json; charset=utf-8",

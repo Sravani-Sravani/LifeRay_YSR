@@ -114,14 +114,15 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			     
 			     String url="";
 					if(pId==513){
-						url="http://10.48.19.62:8091/portalsearchapi/public/searchhospital";
-						POST_PARAMS = "{\n" + "\"districtid\": null,\r\n" +
-						        "    \"hospitalid\": null,\r\n" +
-						        "    \"hospitaltype\": null\r\n" + "\n}";
+						url="http://10.48.19.62:8091/portalsearchapi/public-asri/searchHospital";
+						////POST_PARAMS = "{\n" + "\"districtid\": null,\r\n" +
+						        //"    \"hospitalid\": null,\r\n" +
+						        //"    \"hospitaltype\": null\r\n" + "\n}";
+						POST_PARAMS = "{\n" + "\"districtid\": null\r\n"+ "\n}";
 					}
 					else if(pId==507) {
  
-							                  url="http://10.48.19.62:8092/portalsearchapi/public/AR-hospitalsearch-districtwise";
+				url="http://10.48.19.62:8092/portalsearchapi/public-ar/searchHospital";
 						
 						     POST_PARAMS = "{\n" + "\"districtid\": null\r\n"+ "\n}";
 						    //System.out.println(POST_PARAMS);
@@ -129,7 +130,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 					}
 					else { //pId==499 || pId==491
 						   POST_PARAMS = "{\n" + "\"districtid\": null" + "\n}";
-						url="http://10.48.19.62:8093/ehsportalsearchapi/public/ehs-hospitalsearch-districtwise";
+						url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/searchHospital";
 					}
 			     
 				    URL obj = new URL(url);
