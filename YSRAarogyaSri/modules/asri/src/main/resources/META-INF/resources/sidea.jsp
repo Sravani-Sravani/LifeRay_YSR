@@ -1,4 +1,19 @@
-
+<style>
+li.active {
+background-color: #7BBF4B;
+color: #fff !important;
+}
+li a.active{
+color: #fff !important;
+}
+.sidebar_menu ul li:hover {
+  background-color: #7BBF4B;
+  color: #fff !important;
+}
+.sidebar_menu ul li a:hover{
+color: #fff !important;
+}
+</style>
 			 <div class="d-flex flex-column flex-shrink-0 sidebar_menu">
 					 
 					 <ul class="list-unstyled ps-0">
@@ -41,15 +56,15 @@
 					  </li>
 					  
 					  <li class="mb-1">
-						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patient-collapse" aria-expanded="false">
+						<button class="btn btn-toggle align-items-center <% if(pageId!=244){ %> collapsed<% } %>" data-bs-toggle="collapse" data-bs-target="#patient-collapse" aria-expanded="false">
 						 Documents &amp; Reports
 						</button>
-						<div class="collapse" id="patient-collapse">
+						<div class="collapse <% if(pageId==244){ %> show<% } %>" id="patient-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 															<li><a href="/web/guest/bids_agreements4">Bids and Agreements</a></li>
 								<li><a href="/web/guest/guidelines_manuals_sops">Guidelines, Manuals and SOPs</a></li>
 								<li><a href="/web/guest/processflow-documents">Process Flow Documents</a></li>
-								<li><a href="/web/guest/board-resolution">Board Resolutions</a></li> 
+								<li <% if(pageId==244){ %> class="active"<% } %>><a href="/web/guest/board-resolution">Board Resolutions</a></li> 
 								<li><a href="/web/guest/reports-and-working-papers">Reports and Working Pages</a></li> 
 								<li><a href="/web/guest/publicity1">Publicity</a></li> 
 								<li><a href="/web/guest/government-orders">Government Orders</a></li> 

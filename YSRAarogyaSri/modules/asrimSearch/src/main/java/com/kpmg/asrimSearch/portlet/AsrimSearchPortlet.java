@@ -120,10 +120,8 @@ public class AsrimSearchPortlet extends MVCPortlet {
 						        "    \"hospitaltype\": null\r\n" + "\n}";
 					}
 					else if(pId==507) {
- 
-							                  url="http://10.48.19.62:8092/portalsearchapi/public/AR-hospitalsearch-districtwise";
-						
-						     POST_PARAMS = "{\n" + "\"districtid\": null\r\n"+ "\n}";
+                             url="http://10.48.19.62:8092/portalsearchapi/public/AR-hospitalsearch-districtwise";
+						   POST_PARAMS = "{\n" + "\"districtid\": null\r\n"+ "\n}";
 						    //System.out.println(POST_PARAMS);
 							    //URL obj = new URL("http://10.48.19.54:8092/portalsearchapi/public/AR-hospitalsearch-districtwise");
 					}

@@ -469,6 +469,7 @@ long pageId=themeDisplay.getPlid();
 		    			  console.log("Error");
 		    		  }
 		    		});
+		    	 $('#select-3').prop("disabled", false);
 		    	   }
 		     }
 		     function mandalData(district_Id){
