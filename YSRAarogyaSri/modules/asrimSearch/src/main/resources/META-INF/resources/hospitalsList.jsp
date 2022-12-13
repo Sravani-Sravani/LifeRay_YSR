@@ -333,7 +333,7 @@ long pageId=themeDisplay.getPlid();
 	<section class="blue_section">
 	
 
-	  <div class="container search_panel">
+	  <div class="container-fluid search_panel">
 		  <h3>Empanelled Hospitals List- In Aarogyasri Scheme</h3>
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
  <div id="searchData" class="row col-md-12">
