@@ -125,6 +125,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 				url="http://10.48.19.62:8092/portalsearchapi/public-ar/searchHospital";
 						
 						     POST_PARAMS = "{\n" + "\"districtid\": null\r\n"+ "\n}";
+
 						    //System.out.println(POST_PARAMS);
 							    //URL obj = new URL("http://10.48.19.54:8092/portalsearchapi/public/AR-hospitalsearch-districtwise");
 					}
