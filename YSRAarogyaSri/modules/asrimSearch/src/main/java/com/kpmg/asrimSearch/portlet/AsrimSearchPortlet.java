@@ -57,14 +57,33 @@ public class AsrimSearchPortlet extends MVCPortlet {
 		String cmd = ParamUtil.getString(resourceRequest, "cmd");
 		String cmdType = ParamUtil.getString(resourceRequest, "cmdType");
 		long pageId= ParamUtil.getLong(resourceRequest, "pageId");
+		
 		if(cmd.equals("destrictsList")) {
 			PrintWriter out = resourceResponse.getWriter();
 			String state_Id = ParamUtil.getString(resourceRequest, "state_Id");
+			
 			System.out.println("state_Id>>>"+state_Id);
 			 JSONArray destrictsJsonArray =null;
 			 JSONObject districts_List=new JSONObject();
 			try {
-				  districts_List=DataGridDisplayManageUtil.getDistricts(state_Id,513);
+				  districts_List=DataGridDisplayManageUtil.getDistricts(state_Id, pageId);
+				  destrictsJsonArray=(JSONArray) districts_List.get("result"); 
+				  PrintWriter writer = resourceResponse.getWriter();
+					writer.print(destrictsJsonArray);
+				System.out.println(destrictsJsonArray);
+			}
+			catch(Exception e) {
+				
+			}
+		}
+		if(cmd.equals("mandalList")) {
+			PrintWriter out = resourceResponse.getWriter();
+			String district_Id = ParamUtil.getString(resourceRequest, "district_Id");
+			System.out.println("district_Id>>>"+district_Id);
+			 JSONArray destrictsJsonArray =null;
+			 JSONObject districts_List=new JSONObject();
+			try {
+				  districts_List=DataGridDisplayManageUtil.getMandal(district_Id,pageId);
 				  destrictsJsonArray=(JSONArray) districts_List.get("result"); 
 				  PrintWriter writer = resourceResponse.getWriter();
 					writer.print(destrictsJsonArray);

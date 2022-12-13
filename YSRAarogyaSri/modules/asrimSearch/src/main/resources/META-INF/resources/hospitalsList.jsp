@@ -440,19 +440,23 @@ long pageId=themeDisplay.getPlid();
 			
 			
 			function districtsData(state_Id){
+
 				 AUI().use('aui-base','aui-io-request-deprecated', 'aui-node', function(A){
 				    A.io.request('<%=getAjaxDataURL.toString() %>',{
 					    dataType : 'json',
 					    method : 'GET',
 					    data : {
 						    <portlet:namespace />state_Id :$.trim(state_Id),
-						    <portlet:namespace />cmd:'destrictsList'
+						    <portlet:namespace />cmd:'destrictsList',
+						    <portlet:namespace />pageId:'<%=pageId %>'
 					    },
 					    on : {
 					    success : function() {
 					    	 console.log("Success 123");
 				           			 var response=this.get('responseData');
 				           			 console.log(response);
+						
+				           			 
 				           			 $('#select-3').find('option').remove().end().append('<option value="">Show all</option>'); 
 				           			 $('#<portlet:namespace />searchComplaintTypeId').html("");
 				           			 jQuery.each(response, function(i, val) {
@@ -460,6 +464,7 @@ long pageId=themeDisplay.getPlid();
 				           			});
 				           			 $('#select-3').trigger('change');
 						    		   $('#select-3').prop("disabled", false);
+						    		   
 				           			 },  
                                      error: function(xhr) {
 						    			  console.log("Error");
@@ -468,68 +473,40 @@ long pageId=themeDisplay.getPlid();
 				       });
 				});        
 			}
-		     /* function districtsData(state_Id){
-		    	   console.log("stateId>>>"+state_Id);
-		    	   $('#select-4').find('option').remove().end().append('<option value="">Show all</option>');
-		    	   var data1= { stateId:state_Id };
-		    	   if(state_Id!=""){
-		    		   $('#select-3').prop("disabled", true);
-		    	 $.ajax({
-		    		  url: "http://10.48.19.62:8091/portalsearchapi/public-asri/districtlist",
-		    		  type: "POST", 
-		    		 // async: false,
-		    		  dataType: 'json',
-		              contentType: "application/json; charset=utf-8",
-		              data: JSON.stringify(data1),
-		    		  success: function(response) {
-		    		   console.log("Success");
-		    		   console.log(response);
-		    		   $('#select-3').find('option').remove().end().append('<option value="">Show all</option>'); 
-			    		  for(var i=0;i<response.result.length;i++){
-			    			 var data=response.result[i];
-			    			 $('#select-3').append("<option data='"+data.districtId+"' value='"+data.districtName+"'>"+data.districtName+"</option>");
-			    		  } 
-		    		   $('#select-3').trigger('change');
-		    		   $('#select-3').prop("disabled", false);
-		    		  },
-		    		  error: function(xhr) {
-		    			  console.log("Error");
-		    		  }
-		    		});
-		    	 $('#select-3').prop("disabled", false);
-		    	   }
-		     } */
-		     function mandalData(district_Id){
-			    	  console.log("districtId>>>"+district_Id);
-			    	 
-			    	  var data1= { districtId:district_Id};
-			    	  if(district_Id!=""){
-			    		  $('#select-4').prop("disabled", true);
-			    	 $.ajax({
-			    		  url: "http://10.48.19.62:8091/portalsearchapi/public-asri/mandallist",
-			    		  type: "post", //send it through get method
-			    		  dataType: 'json',
-			              contentType: "application/json; charset=utf-8",
-			              data: JSON.stringify(data1),
-			    		  success: function(response) {
-			    		   console.log("Success");
-			    		    console.log(response); 
-			    		    console.log(response.result); 
-			    		   $('#select-4').find('option').remove().end().append('<option value="">Show all</option>');
-			    		 for(var i=0;i<response.result.length;i++){ 
-			    			 var data=response.result[i];
-			    			 $('#select-4').append("<option data='"+data.mandalId+"' value='"+data.mandalName+"'>"+data.mandalName+"</option>");
-			    		  } 
-			    		  $('#select-4').trigger('change');
-			    		  $('#select-4').prop("disabled", false);
-			    		  },
-			    		  error: function(xhr) {
-			    			  console.log("Error");
-			    		  }
-			    		});
-			    	 $('#select-4').prop("disabled", false);
-			    	  }
-			     }
+
+				function mandalData(district_Id){
+					console.log("Success 1256789" + district_Id);
+				 AUI().use('aui-base','aui-io-request-deprecated', 'aui-node', function(A){
+				    A.io.request('<%=getAjaxDataURL.toString() %>',{
+					    dataType : 'json',
+					    method : 'GET',
+					    data : {
+						    <portlet:namespace />district_Id :$.trim(district_Id),
+						    <portlet:namespace />cmd:'mandalList',
+						    <portlet:namespace />pageId:'<%=pageId %>'
+					    },
+					    on : {
+					    success : function() {
+					    	 console.log("Success 12567");
+				           			 var response=this.get('responseData');
+				           			 console.log(response);
+				           			 $('#select-4').find('option').remove().end().append('<option value="">Show all</option>'); 
+				           			 $('#<portlet:namespace />searchComplaintTypeId').html("");
+				           			 jQuery.each(response, function(i, val) {
+				           		 	 $('#select-4').append("<option data='"+val.mandalId+"' value='"+val.mandalName+"'>"+val.mandalName+"</option>");
+				           			});
+				           			 $('#select-4').trigger('change');
+						    		   $('#select-4').prop("disabled", false);
+				           			 },  
+                                     error: function(xhr) {
+						    			  console.log("Error");
+						    		  }
+				           	 	 }
+				       });
+				});        
+			}
+		     
+		     
 			</script>	
 				
 				<%-- <div class="col-2">
