@@ -1,5 +1,5 @@
 package com.kpmg.asrimSearch.portlet;
-
+import com.kpmg.asrimSearch.util.DataGridDisplayManageUtil;
 import com.kpmg.asrimSearch.constants.AsrimSearchPortletKeys;
  import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
@@ -57,7 +57,24 @@ public class AsrimSearchPortlet extends MVCPortlet {
 		String cmd = ParamUtil.getString(resourceRequest, "cmd");
 		String cmdType = ParamUtil.getString(resourceRequest, "cmdType");
 		long pageId= ParamUtil.getLong(resourceRequest, "pageId");
-		if (cmd.equals("hospitalsList")) {
+		if(cmd.equals("destrictsList")) {
+			PrintWriter out = resourceResponse.getWriter();
+			String state_Id = ParamUtil.getString(resourceRequest, "state_Id");
+			System.out.println("state_Id>>>"+state_Id);
+			 JSONArray destrictsJsonArray =null;
+			 JSONObject districts_List=new JSONObject();
+			try {
+				  districts_List=DataGridDisplayManageUtil.getDistricts(state_Id,513);
+				  destrictsJsonArray=(JSONArray) districts_List.get("result"); 
+				  PrintWriter writer = resourceResponse.getWriter();
+					writer.print(destrictsJsonArray);
+				System.out.println(destrictsJsonArray);
+			}
+			catch(Exception e) {
+				
+			}
+		}
+		else if (cmd.equals("hospitalsList")) {
 			try {
 				try {
 					getHospitalsList(cmdType,pageId, resourceRequest, resourceResponse);

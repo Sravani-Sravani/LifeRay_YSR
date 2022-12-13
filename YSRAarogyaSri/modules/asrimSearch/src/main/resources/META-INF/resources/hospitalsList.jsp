@@ -5,10 +5,11 @@
 <%@page import="com.kpmg.asrimSearch.util.DataGridDisplayManageUtil"%>
 <%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
 <%@ include file="/init.jsp" %>
-<%@ include file="/html/dataTableIncludes.jspf" %>  
-
+<%@ include file="/html/dataTableIncludes.jspf" %>
 <link href="/o/com.kpmg.asrimSearch/css/select2.min.css" rel="stylesheet" />
 <script src="/o/com.kpmg.asrimSearch/js/select2.min.js"></script> 
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+<portlet:resourceURL var="getAjaxDataURL"></portlet:resourceURL>
 <script>
 function stoploader(){
 	document.getElementById("loader").style.display = "none";
@@ -191,15 +192,15 @@ long pageId=themeDisplay.getPlid();
          },
          {
              extend: 'excel'
-         }/*,
+         },
           {
              extend: 'pdfHtml5',
              orientation: 'landscape',
              pageSize: 'LEGAL'
-         }, */
-         /* {
+         },
+          {
          	extend: 'print' 
-         } */],
+         }],
          columnDefs: [
              {
                  //target: [ 2, 3 ],
@@ -209,7 +210,7 @@ long pageId=themeDisplay.getPlid();
         	    { width: "200", targets: 0 }
         	  ],
         	  fixedColumns: true,
-        	//  search: { regex: true,  },
+        	//  search: { regex: true, ï¿½},
          initComplete: function () {
         	
         	 stoploader();
@@ -222,20 +223,16 @@ long pageId=themeDisplay.getPlid();
                      		console.log("onchange action for >>>"+"#select-"+column[0][0]);
                             var val = $('#select-'+column[0][0]).val();
                             var id=$('#select-'+column[0][0]).find(':selected').attr('data');
-                            
                             console.log("id>>>"+id);
                             if(id!=undefined){
 	                            if(column[0][0]==2){
-	                        	   
 	                        	    districtsData(id);
 	                            }
 	                            else if(column[0][0]==3){
 	                        	  mandalData(id);
 	                            }
                             }
-                           
                        column.search(val,true,false,true).draw();
-                                 
                    });
                   	
                 });
@@ -441,7 +438,37 @@ long pageId=themeDisplay.getPlid();
 				 $("input[type='search']").val("").trigger('keyup');
 			});
 			
-		     function districtsData(state_Id){
+			
+			function districtsData(state_Id){
+				 AUI().use('aui-base','aui-io-request-deprecated', 'aui-node', function(A){
+				    A.io.request('<%=getAjaxDataURL.toString() %>',{
+					    dataType : 'json',
+					    method : 'GET',
+					    data : {
+						    <portlet:namespace />state_Id :$.trim(state_Id),
+						    <portlet:namespace />cmd:'destrictsList'
+					    },
+					    on : {
+					    success : function() {
+					    	 console.log("Success 123");
+				           			 var response=this.get('responseData');
+				           			 console.log(response);
+				           			 $('#select-3').find('option').remove().end().append('<option value="">Show all</option>'); 
+				           			 $('#<portlet:namespace />searchComplaintTypeId').html("");
+				           			 jQuery.each(response, function(i, val) {
+				           		 	 $('#select-3').append("<option data='"+val.districtId+"' value='"+val.districtName+"'>"+val.districtName+"</option>");
+				           			});
+				           			 $('#select-3').trigger('change');
+						    		   $('#select-3').prop("disabled", false);
+				           			 },  
+                                     error: function(xhr) {
+						    			  console.log("Error");
+						    		  }
+				           	 	 }
+				       });
+				});        
+			}
+		     /* function districtsData(state_Id){
 		    	   console.log("stateId>>>"+state_Id);
 		    	   $('#select-4').find('option').remove().end().append('<option value="">Show all</option>');
 		    	   var data1= { stateId:state_Id };
@@ -471,7 +498,7 @@ long pageId=themeDisplay.getPlid();
 		    		});
 		    	 $('#select-3').prop("disabled", false);
 		    	   }
-		     }
+		     } */
 		     function mandalData(district_Id){
 			    	  console.log("districtId>>>"+district_Id);
 			    	 
