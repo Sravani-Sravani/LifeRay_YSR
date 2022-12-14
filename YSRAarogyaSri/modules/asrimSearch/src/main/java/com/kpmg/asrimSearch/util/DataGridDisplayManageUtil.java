@@ -248,7 +248,7 @@ public static org.json.JSONObject getStates(long pId) {
 	org.json.JSONObject object = null;
 	try { 
 		String url="";
-		if(pId==513){
+		if(pId==513 || pId==589){
 			url="http://10.48.19.62:8091/portalsearchapi/public-asri/statelist";
 		}
 		else if(pId==507) {
@@ -298,7 +298,7 @@ public static org.json.JSONObject getDistricts(String stateId,long pId) {
 		 final String POST_PARAMS = "{\n" + "\"stateId\": \""+stateId+ "\"\n}";
 		    System.out.println(POST_PARAMS);
 		    String url="";
-			if(pId==513){
+			if(pId==513 || pId==589){
 				url="http://10.48.19.62:8091/portalsearchapi/public-asri/districtlist";
 			}
 			else if(pId==507) {
@@ -351,7 +351,7 @@ public static org.json.JSONObject getMandal(String districtId,long pId) {
 		 final String POST_PARAMS = "{\n" + "\"districtId\": \""+districtId+ "\"\n}";
 		    System.out.println(POST_PARAMS);
 		    String url="";
-			if(pId==513){
+			if(pId==513 || pId==589){
 				url="http://10.48.19.62:8091/portalsearchapi/public-asri/mandallist";
 			}
 			else if(pId==507) {

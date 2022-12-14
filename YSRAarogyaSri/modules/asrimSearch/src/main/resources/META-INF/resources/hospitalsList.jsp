@@ -10,12 +10,18 @@
 <script src="/o/com.kpmg.asrimSearch/js/select2.min.js"></script> 
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 <portlet:resourceURL var="getAjaxDataURL"></portlet:resourceURL>
+<% 
+themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
+long pageId1=themeDisplay.getPlid();
+%>
 <script>
 function stoploader(){
 	document.getElementById("loader").style.display = "none";
 }
     $(document).ready(function () {
-       //$("#select-2").select2();
+    	<% if(pageId1==589){ %>
+        $("#select-2").select2();
+        <% } %>
 	   $("#select-3").select2();
 	   $("#select-4").select2();
 	   $("#select-5").select2();
@@ -89,13 +95,10 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 .alert-dismissible{disaply:none;}
 .alert-danger{disaply:none;}
 </style>
-<% 
-themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
-long pageId=themeDisplay.getPlid();
-%>
+
 <portlet:resourceURL var="asrimHospitalsURL">
 <portlet:param name="cmd" value="hospitalsList"/>
-<portlet:param name="pageId" value="<%=String.valueOf(pageId) %>"/>
+<portlet:param name="pageId" value="<%=String.valueOf(pageId1) %>"/>
 <portlet:param name="cmdType" value="AsrimHospitalsList"/>
 </portlet:resourceURL>
 <%
@@ -115,7 +118,7 @@ long pageId=themeDisplay.getPlid();
 	   diseaseName=diseaseName.substring(0, postion1-1).trim();
  }
   
- JSONObject states_List= DataGridDisplayManageUtil.getStates(pageId);
+ JSONObject states_List= DataGridDisplayManageUtil.getStates(pageId1);
  
  JSONArray statesJsonArray =new JSONArray();
  
@@ -133,7 +136,7 @@ long pageId=themeDisplay.getPlid();
  JSONObject districts_List=new JSONObject();
  JSONArray destrictsJsonArray =null;
  if(stateId!=null && stateId!=""){
-  districts_List= DataGridDisplayManageUtil.getDistricts(stateId,pageId);
+  districts_List= DataGridDisplayManageUtil.getDistricts(stateId,pageId1);
   destrictsJsonArray=(JSONArray) districts_List.get("result"); 
  }
    
@@ -379,14 +382,14 @@ long pageId=themeDisplay.getPlid();
 				    <option value="">Show All</option>
 				      <%
 				      if(stateId!=null && stateId!=""){
-				      JSONObject mandal_List= DataGridDisplayManageUtil.getMandal(distId,pageId);
+				      JSONObject mandal_List= DataGridDisplayManageUtil.getMandal(distId,pageId1);
 				     // System.out.print("mandal_List 123"+mandal_List.toString());
 						 JSONArray mandalJsonArray = (JSONArray) mandal_List.get("result"); 
 						for(int j=0;j<mandalJsonArray.length();j++){
 			        	org.json.JSONObject data=new org.json.JSONObject(mandalJsonArray.get(j).toString());
 			    	   String id=data.get("mandalId").toString();
 			    	   String mandalName="";   
-			    	   if(pageId==513 || pageId==507){
+			    	   if(pageId1==513 || pageId1==507){
 			    		     mandalName=data.get("mandalName").toString();  
 			    	   }
 			    	   else{
@@ -448,7 +451,7 @@ long pageId=themeDisplay.getPlid();
 					    data : {
 						    <portlet:namespace />state_Id :$.trim(state_Id),
 						    <portlet:namespace />cmd:'destrictsList',
-						    <portlet:namespace />pageId:'<%=pageId %>'
+						    <portlet:namespace />pageId:'<%=pageId1 %>'
 					    },
 					    on : {
 					    success : function() {
@@ -483,7 +486,7 @@ long pageId=themeDisplay.getPlid();
 					    data : {
 						    <portlet:namespace />district_Id :$.trim(district_Id),
 						    <portlet:namespace />cmd:'mandalList',
-						    <portlet:namespace />pageId:'<%=pageId %>'
+						    <portlet:namespace />pageId:'<%=pageId1 %>'
 					    },
 					    on : {
 					    success : function() {

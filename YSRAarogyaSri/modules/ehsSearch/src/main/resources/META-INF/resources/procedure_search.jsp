@@ -1,6 +1,5 @@
  
-  
-<portlet:resourceURL var="asrimHProceduresURL">
+ <portlet:resourceURL var="asrimHProceduresURL">
 <portlet:param name="cmd" value="proceduredList"/>
 <portlet:param name="cmdType" value="AsrimProceduresList"/>
 </portlet:resourceURL>
@@ -112,7 +111,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 	var booleanflag=true;
 	   if(selectedFilter==5){ 
 		 booleanflag=false; 
-		 }                                                    
+		 }
 		$("#recordList").html("<table id='datatables' class='table table-bordered table-striped table-hover display nowrap' cellspacing='0' style='width:100%'><thead><tr></tr></thead></table>");
 		var columns = dataTables.tables[selectedFilter].columns;
 		var dataURL = dataTables.tables[selectedFilter].dataURL;
@@ -124,7 +123,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 		}
      datatable = $('#recordList table').removeAttr('width').DataTable({
     	 ajax: dataURL,
-    	 dom: 'Blfrtip',
+    	 dom: 'Bfrtip',
 	     lengthMenu: [10, 25, 50, 100],
 	     order: [[ 0, "asc" ]], 
           scrollY: false,
@@ -140,7 +139,8 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
          {
              extend: 'pdfHtml5',
              orientation: 'landscape',
-             pageSize: 'LEGAL'
+             pageSize: 'LEGAL',
+             download: 'open'
          },
          {
          	extend: 'print' 
