@@ -215,9 +215,9 @@ public class AsrimSearchPortlet extends MVCPortlet {
 	 JSONArray jsonarray =new JSONArray();
 		JSONObject myObject =null;
 		try {
-			     final String POST_PARAMS = "{\n" + "\"surgeryid\": null\r\n" +"}";
+			     final String POST_PARAMS = "{\n" + "\"surgeryid\": \"null\"" +"}";
 			    //System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.62:8091/portalsearchapi/public/searchprocedure");
+				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/searchprocedure");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
 			     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
