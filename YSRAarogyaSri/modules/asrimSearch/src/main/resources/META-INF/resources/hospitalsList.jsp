@@ -14,6 +14,7 @@
 themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
 long pageId1=themeDisplay.getPlid();
 %>
+
 <script>
 function stoploader(){
 	document.getElementById("loader").style.display = "none";
@@ -47,6 +48,9 @@ function stoploader(){
   border-top: 16px solid #3498db;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
+}
+.alert-notifications alert-notifications-fixed{
+display:none;
 } 
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
@@ -331,8 +335,23 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  	 <div id="loader"></div>
  	 <div class="ysri_section">
 	<section class="blue_section">
-	
+	 <%if(pageId==589 || pageId==591){ %> 
+	<h2 class="subheading">Network Hospitals</h2> 
+	<div class="row mb-2 p-2 rounded-2 shadow-lg" id="Aarogyasri_section">
+ 			<div class="col-lg-4"  >
+				<p><a href="/web/guest/search-by-geography"   class="active_button_blueshade"><i class="fa-solid fa-location-dot"></i> Search by Geography</a></p>
+		  </div> <!--end of col-->
 
+		  <div class="col-lg-4">
+			<p><a href="/web/guest/asri_specilitysearch" class="button_blueshade" ><i class="fa-solid fa-user-doctor"></i> Search by Speciality</a></p>
+
+	 	  </div> <!--end of col-->
+
+	 	<div class="col-lg-4">
+			<p><a href="/web/guest/nearby-hospitals" class="button_blueshade"><i class="fa-solid fa-hospital"></i> Hospitals Near Me</a></p>
+ 		 </div> <!--end of col-->
+	</div> 
+	<% } %> 
 	  <div class="container-fluid search_panel">
 		  <h3>Empanelled Hospitals List- In Aarogyasri Scheme</h3>
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >

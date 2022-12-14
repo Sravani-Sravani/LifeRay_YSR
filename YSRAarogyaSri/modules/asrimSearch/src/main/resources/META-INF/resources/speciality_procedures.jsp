@@ -225,7 +225,8 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  	 <div id="loader"></div>
  	 <div class="ysri_section">
 	<section class="blue_section">
-	 
+	
+	
 	  <div class="container search_panel">
 		  <h3>Aarogyasri / Procedure Search</h3>
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >

@@ -9,7 +9,8 @@ long pageId=themeDisplay.getPlid();
 
 
 <!--End of header-->
-<%if(pageId==589){ %> 
+
+<%if(pageId==589 || pageId==591){ %> 
 	<!-- <div class="main_heading_breadcrum">
 		<div class="container">
 			<div class="row">
@@ -29,23 +30,7 @@ long pageId=themeDisplay.getPlid();
 	<!--main_heading_breadcrum-->
 	
  
-  <div class="container">
-	<h2 class="subheading">Network Hospitals</h2> 
-	<div class="row mb-5 p-5 rounded-2 shadow-lg" id="Aarogyasri_section">
- 			<div class="col-lg-4">
-				<p><a href="/web/guest/asri_hospitalsearch" target="_blank" class="button_blueshade"><i class="fa-solid fa-location-dot"></i> Search by Geography</a></p>
-		  </div> <!--end of col-->
-
-		  <div class="col-lg-4">
-			<p><a href="/web/guest/asri_specilitysearch" class="button_blueshade" target="_blank"><i class="fa-solid fa-user-doctor"></i> Search by Speciality</a></p>
-
-	 	  </div> <!--end of col-->
-
-	 	<div class="col-lg-4">
-			<p><a href="https://115.124.110.149/web/guest/nearby-hospitals" class="button_blueshade" target="_blank"><i class="fa-solid fa-hospital"></i> Hospitals Near Me</a></p>
- 		 </div> <!--end of col-->
-	</div>
-</div>
+  
  
 <%@ include file="/hospitalsList.jsp" %>
 </section>  <!-- faq_section -->	    

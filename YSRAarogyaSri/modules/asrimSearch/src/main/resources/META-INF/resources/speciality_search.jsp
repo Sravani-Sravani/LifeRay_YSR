@@ -19,6 +19,21 @@
 	<div class="ysri_section">
 		
 	<section class="blue_section search_panel">
+	<h2 class="subheading">Network Hospitals</h2> 
+	<div class="row mb-2 p-2 rounded-2 shadow-lg" id="Aarogyasri_section">
+ 			<div class="col-lg-4"  >
+				<p><a href="/web/guest/search-by-geography" class="button_blueshade"><i class="fa-solid fa-location-dot"></i> Search by Geography</a></p>
+		  </div> <!--end of col-->
+
+		  <div class="col-lg-4">
+			<p><a href="/web/guest/asri_specilitysearch" class="active_button_blueshade"><i class="fa-solid fa-user-doctor"></i> Search by Speciality</a></p>
+
+	 	  </div> <!--end of col-->
+
+	 	<div class="col-lg-4">
+			<p><a href="/web/guest/nearby-hospitals" class="button_blueshade"><i class="fa-solid fa-hospital"></i> Hospitals Near Me</a></p>
+ 		 </div> <!--end of col-->
+	</div> 
 	  <div class="container">
 		  <h3>Aarogyasri / Speciality Search</h3><br>
 		  

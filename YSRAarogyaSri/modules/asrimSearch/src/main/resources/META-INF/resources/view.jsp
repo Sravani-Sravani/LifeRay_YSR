@@ -9,7 +9,29 @@ long pageId=themeDisplay.getPlid();
 
 
 <!--End of header-->
-<%if(pageId==589){ %> 	
+
+<%if(pageId==589 || pageId==591){ %> 
+	<!-- <div class="main_heading_breadcrum">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 p-static">
+					<h1>Network Hospitals</h1>
+					<span class="sub-title">Search Your Area Hospital</span>
+				</div>
+				<div class="col-md-4 order-1 order-md-2 align-self-center">
+					<ul class="breadcrumb d-block text-md-end breadcrumb-light">
+						<li><a href="index.html">Home</a></li>
+						<li class="active">NWH</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<!--main_heading_breadcrum-->
+	
+ 
+  
+ 
 <%@ include file="/hospitalsList.jsp" %>
 </section>  <!-- faq_section -->	    
  
@@ -27,32 +49,3 @@ long pageId=themeDisplay.getPlid();
    <% }else{ %>
    Asrim Search Page not Created
    <% } %> 
-   
-   
-   
-   
-   
-   
-   
-   
-   *****************ASRI********************
-
-1. http://10.48.19.62:8091/portalsearchapi/public-asri/procedurebyspeciality -POST
-{
-"specialityId":"S13"
-}
-
-*****************AR********************
-2. http://10.48.19.62:8092/portalsearchapi/public-ar/procedurebyspeciality -POST
-{
-"specialityId":"S13"
-}
-
-*****************EHS********************
-3. http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/procedurebyspeciality -POST
-{
-"specialityId":"S13"
-}
-
-
-output sequence is same as searchProcedure api.
