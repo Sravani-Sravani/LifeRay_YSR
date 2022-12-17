@@ -161,10 +161,10 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
          initComplete: function () {
         	var j=1;
             this.api()
-                .columns([2,3,4,5])
+                .columns([2,5])
                 .every(function () {
                     var column = this; 
-                    if(column[0][0]==5){
+                    if(column[0][0]==5 || column[0][0]==2 ){
                     	$('#select-'+column[0][0]).on('keyup change clear', function () {
                             var val = $('#select-'+column[0][0]).val(); 
                             column.search(val,true,false,true).draw();
@@ -177,7 +177,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
                             column.search(val ? '^' + val + '$' : '', true, false).draw();
                         });
                   	}
-                    if(column[0][0]!=5){
+                    if(column[0][0]!=5 || column[0][0]!=2){
                      column
                         .data()
                         .unique()
@@ -308,6 +308,17 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				<label  for="State">State</label>
 				<select class="form-select" id="select-2" name="select-2">
 				    <option value="">Show All</option>
+				 <%
+				      JSONArray state_List= DataGridDisplayManageUtil.getrakshaStateList();
+				      System.out.print("state_List 123"+state_List.toString());
+				  	  
+				      for(int k=0;k<state_List.length();k++){
+			        	org.json.JSONArray data=new org.json.JSONArray(state_List.get(k).toString());
+			        	
+			    	   String state_Name=data.getString(1);
+				    %>
+				    <option value="<%=state_Name %>"><%=state_Name %></option>
+				    <% } %>
 				 </select>
 				</div>
 				<div class="col-2">
@@ -338,23 +349,23 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				<label  for="Speciality Name">Speciality Name</label>
 				<select class="form-select" id="select-5" label="Speciality Name" name="select-5">
 				    <option value="">Show All</option>
-				    <%
-				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null);
-				      System.out.print("speciality_List 123"+speciality_List.toString());
-				  	  
-				      for(int j=0;j<speciality_List.length();j++){
-			        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
-			    	   long proceduresCount=data.getLong(0);
-			    	   long hospitalCount=data.getLong(1);
-			    	   String diseaseId=data.getString(2);
-			    	   String disease_Name=data.getString(3);
-			    	   int postion_1=disease_Name.indexOf("(");
-			    	   if(postion_1!=0)
-			    	     disease_Name=disease_Name.substring(0, postion_1-1).trim();
-			    	    
-				    %>
-				    <option value="<%=disease_Name %>"><%=disease_Name %></option>
-				    <% } %>
+						    <%
+						      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null);
+						      System.out.print("speciality_List 123"+speciality_List.toString());
+						  	  
+						      for(int j=0;j<speciality_List.length();j++){
+					        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
+					    	   long proceduresCount=data.getLong(0);
+					    	   long hospitalCount=data.getLong(1);
+					    	   String diseaseId=data.getString(2);
+					    	   String disease_Name=data.getString(3);
+					    	   int postion_1=disease_Name.indexOf("(");
+					    	   if(postion_1!=0)
+					    	     disease_Name=disease_Name.substring(0, postion_1-1).trim();
+					    	    
+						    %>
+						    <option value="<%=disease_Name %>"><%=disease_Name %></option>
+						    <% } %>
 				    
 				 </select>
 				</div> 

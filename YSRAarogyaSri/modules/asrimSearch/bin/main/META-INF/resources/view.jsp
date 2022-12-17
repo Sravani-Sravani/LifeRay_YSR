@@ -10,7 +10,7 @@ long pageId=themeDisplay.getPlid();
 
 <!--End of header-->
 
-<%if(pageId==589 || pageId==591){ %> 
+<%if(pageId==589|| pageId==585){ %> 
 	<!-- <div class="main_heading_breadcrum">
 		<div class="container">
 			<div class="row">
@@ -30,19 +30,24 @@ long pageId=themeDisplay.getPlid();
 	<!--main_heading_breadcrum-->
 	
  
-  
- 
 <%@ include file="/hospitalsList.jsp" %>
 </section>  <!-- faq_section -->	    
  
 <% } %>
+<%if(pageId==591){ %> 
 
- <%if(pageId==513 || pageId==507 || pageId==499 || pageId==491){ %>
+<%@ include file="/speciality_procedures.jsp" %>
+</section>  <!-- faq_section -->	    
+ 
+<% } %>
+
+
+ <%if(pageId==513 || pageId==507 || pageId==499 || pageId==491|| pageId==585){ %>
  
  <%@ include file="/hospital_search.jsp" %>
- <% }else if(pageId==515){ %>
+ <% }else if(pageId==515 || pageId==497 || pageId==585){ %>
  <%@ include file="/speciality_search.jsp" %>
- <% }else if(pageId==517){ %>
+ <% }else if(pageId==517 || pageId==495 || pageId==505 ||pageId==511){ %>
  <%@ include file="/procedure_search.jsp" %>
  <% }else if(pageId==519){ %>
    <%@ include file="/mitra_search.jsp" %>

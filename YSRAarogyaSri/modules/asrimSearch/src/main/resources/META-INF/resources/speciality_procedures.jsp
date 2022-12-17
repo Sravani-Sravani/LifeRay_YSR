@@ -239,13 +239,13 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				<label  for="Code">Speciality Id</label>
 				<select class="form-select" id="select-0" name="select-0">
 				    <option value="">Show All</option>
-				 </select>
+				 </select>	
 				</div>
  <div class="col-3">
 				<label  for="Hospital Speciality">PROCEDURE TYPE ID</label>
 				<select class="form-select" id="select-1" label="Hospital Speciality" name="select-1">
 				    <option value="">Show All</option>
-				 </select>
+					 </select>
 				</div> 
                 
 				<div class="col-3">

@@ -20,7 +20,7 @@ function stoploader(){
 	document.getElementById("loader").style.display = "none";
 }
     $(document).ready(function () {
-    	<% if(pageId1==589){ %>
+    	<% if(pageId1==589 || pageId1==585){ %>
         $("#select-2").select2();
         <% } %>
 	   $("#select-3").select2();
@@ -112,8 +112,8 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  String stateId = ParamUtil.getString(request, "stateId").trim();
  String stateName="";
  String distId="";
- 
  String HOSP_TYPE=ParamUtil.getString(request, "HOSP_TYPE").trim();
+ 
  String diseaseName=ParamUtil.getString(request, "diseaseName").trim();
  
  if(diseaseName.length()>5 && diseaseName!=null && diseaseName!=""){
@@ -137,19 +137,23 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  	}
    }  
  }
+ 
+ 
  JSONObject districts_List=new JSONObject();
  JSONArray destrictsJsonArray =null;
  if(stateId!=null && stateId!=""){
   districts_List= DataGridDisplayManageUtil.getDistricts(stateId,pageId1);
+  
   destrictsJsonArray=(JSONArray) districts_List.get("result"); 
  }
-   
+  
  System.out.println("State Name:"+stateName);
  System.out.println("districtId>>>"+DIST_ID);
  System.out.println("stateId>>>"+stateId);
  System.out.println("HOSP_TYPE>>>"+HOSP_TYPE); 
  System.out.println("diseaseName>>>"+diseaseName);
  %>
+ 
 <script>
 	var primaryKeyColumn = 1;
 	var primaryKeyColumnName = "Name of Hospital";
@@ -259,6 +263,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
              if(stateName!=null && stateName!=""){
             	 console.log("state selection");
                  $("#select-2").val(stateName);
+                 //
                 //var id=$('#select-2').find(':selected').attr('data');
                 //console.log("state Id>>>"+id); 
             	  // districtsData(id);
@@ -335,7 +340,9 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  	 <div id="loader"></div>
  	 <div class="ysri_section">
 	<section class="blue_section">
-	 <%if(pageId==589 || pageId==591){ %> 
+	
+	
+	 <%if(pageId1==589 || pageId1==585){ %> 
 	<h2 class="subheading">Network Hospitals</h2> 
 	<div class="row mb-2 p-2 rounded-2 shadow-lg" id="Aarogyasri_section">
  			<div class="col-lg-4"  >
@@ -352,15 +359,30 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  		 </div> <!--end of col-->
 	</div> 
 	<% } %> 
+	<%
+	String pageTitle="";
+	if(pageId1==589){
+		pageTitle="Aarogyasri ";
+	}
+	else if(pageId1==1){
+		pageTitle="Arogya Raksha ";
+	}
+	else if(pageId1==499){
+		pageTitle="WJHS ";
+	}
+	else if(pageId1==585){
+		pageTitle="EHS ";
+	}
+	%>
 	  <div class="container-fluid search_panel">
-		  <h3>Empanelled Hospitals List- In Aarogyasri Scheme</h3>
+		  <h3><%=pageTitle %> State empanlled Hospitals</h3>
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
  <div id="searchData" class="row col-md-12">
  <div class="col-md-12"  style="padding-top: 0px;">
 	<h6>Search Hospitals:</h6>	 
 </div>
-				  <div class="col-3">
-				<label  for="State">State</label>
+		<div class="col-3">
+				<label  for="State">State&#9733;</label>
 	<select class="form-select" id="select-2" name="select-2">
 		 <option value="">Show All</option>
 				    <% 
@@ -370,7 +392,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 	 <option data="<%=data.get("stateId")  %>" value="<%=data.get("stateName") %>"><%=data.get("stateName")  %></option>
 	<% } %> 
    </select>
-				</div> 
+		</div> 
 				<div class="col-2">
 				<label  for="District">District</label>
 				<select class="form-select" id="select-3" name="select-3">
@@ -387,6 +409,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
   	                  %>
 				    <option data="<%=data.get("districtId")  %>" value="<%=data.get("districtName") %>"><%=data.get("districtName")  %></option>
 				    <% } } %>
+				    
 				 </select>
 				</div>
 				<!-- <div class="col-2"> 
@@ -408,11 +431,14 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 			        	org.json.JSONObject data=new org.json.JSONObject(mandalJsonArray.get(j).toString());
 			    	   String id=data.get("mandalId").toString();
 			    	   String mandalName="";   
-			    	   if(pageId1==513 || pageId1==507){
+			    	   System.out.print("page id is"+ pageId1);
+			    	   if(pageId1==513 || pageId1==507 || pageId1==515){
 			    		     mandalName=data.get("mandalName").toString();  
 			    	   }
-			    	   else{
+			    	   else if(pageId1==499 ||pageId1==491 || pageId1==585){
+			    		   
 			    		     mandalName=data.get("mandal").toString();  
+			    		     System.out.print("page id is"+ mandalName);
 			    	   }
 			    	  
 				    %>
@@ -515,8 +541,12 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				           			 $('#select-4').find('option').remove().end().append('<option value="">Show all</option>'); 
 				           			 $('#<portlet:namespace />searchComplaintTypeId').html("");
 				           			 jQuery.each(response, function(i, val) {
+				           				<% if(pageId1==589 || pageId1==513 || pageId1==507 ||pageId1==515){ %>
 				           		 	 $('#select-4').append("<option data='"+val.mandalId+"' value='"+val.mandalName+"'>"+val.mandalName+"</option>");
-				           			});
+				           			<% }else{ %>
+				           			$('#select-4').append("<option data='"+val.mandalId+"' value='"+val.mandal+"'>"+val.mandal+"</option>");
+				           			<% } %>
+				           				});
 				           			 $('#select-4').trigger('change');
 						    		   $('#select-4').prop("disabled", false);
 				           			 },  

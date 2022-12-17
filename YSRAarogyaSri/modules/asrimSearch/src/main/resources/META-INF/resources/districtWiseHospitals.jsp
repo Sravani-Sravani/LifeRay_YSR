@@ -19,18 +19,32 @@
 </style>
   <% 
 themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
-long pageId=themeDisplay.getPlid();
+long pageId1=themeDisplay.getPlid();
  
  String stateId = ParamUtil.getString(request, "recordId");
  System.out.println("stateId>>>"+stateId);
- JSONArray districts_List=DataGridDisplayManageUtil.getDistrictAsrimHospCount(stateId,pageId);
+ JSONArray districts_List=DataGridDisplayManageUtil.getDistrictAsrimHospCount(stateId,pageId1);
  System.out.print("districts_List"+districts_List.toString());
 %>
-
+<%
+String pageTitle="";
+if(pageId1==513){
+	pageTitle="Aarogyasri ";
+}
+else if(pageId1==491){
+	pageTitle="EHS ";
+}
+else if(pageId1==499){
+	pageTitle="WJHS";
+}
+else if(pageId1==507){
+	pageTitle="Aarogya Raksha";
+}
+%>
 <div class="ysri_section">
 	<section class="blue_section">
 	  <div class="container search_panel">
-		  <h3>Aarogyasri / District Wise - Empanelled Hospitals</h3><br>
+		  <h3><%=pageTitle %> / District Wise - Empanelled Hospitals</h3><br>
 		  <div class="row">
 		  
 		  <%  try{

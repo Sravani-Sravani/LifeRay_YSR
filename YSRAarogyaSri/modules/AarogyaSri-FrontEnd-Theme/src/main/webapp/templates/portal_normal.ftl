@@ -97,72 +97,65 @@ crossorigin="anonymous"></script>
 	 </div></div><!--TOPBAR-->
 
 
-  <nav id="main_navbar" class="navbar navbar-expand-md">
+  <nav class="navbar navbar-expand-md">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/home"><img src="/documents/d/guest/logo1" alt="Dr. YSR Aarogyasri Health Care Trust" class="img-fluid" /></a> &nbsp; &nbsp; 
-            <a class="navbar-brand" href="https://www.g20.org/en/" target="_blank"><img src="https://ysraarogyasri.ap.gov.in/documents/d/guest/g20-logo" style="width:100px; height:50px;"alt="" class="img-fluid" /></a>
+      <a class="navbar-brand" href="/home"><img src="/documents/d/guest/logo1" alt="Dr. YSR Aarogyasri Health Care Trust" class="img-fluid" /></a>
+            <a class="navbar-brandg20" href="https://www.g20.org/en/" target="_blank"><img src="https://ysraarogyasri.ap.gov.in/documents/d/guest/g20-logo" style="width:60px; height:32px; "alt="" class="img-fluid" /></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span> MAIN MENU
+     
+     
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
         <ul class="navbar-nav mb-2 mb-md-0">
 			<li class="nav-item"><a class="nav-link <#if pageId==6> active </#if> ${page.plid}" href="/home">${home} </a></li>        
-			<li class="nav-item"><a class="nav-link <#if pageId==159> active </#if>" href="/aboutus">${about}</a></li>        
+			
+		<li class="nav-item"><a class="nav-link <#if pageId==159> active </#if>" href="/aboutus">${about}</a></li>        
+			
 			<li class="nav-item dropdown">
-		  <a class="dropdown-toggle nav-link <#if pageId==19 || pageId==21 || pageId==25 || pageId==27 > active </#if>" data-bs-toggle="dropdown" aria-expanded="false">
+		  <a class="nav-link dropdown-toggle <#if pageId==19 || pageId==21 || pageId==25 || pageId==27 > active </#if>" data-bs-toggle="dropdown" aria-expanded="false">
 			${schemes}
 		  </a>
-		  <ul class="dropdown-menu" style="overflow: inherit;">
+		  <ul class="dropdown-menu">
 			<li><a class="dropdown-item <#if pageId==19> active </#if>" href="/asri">${asri}<span></span></a>
-			  <ul class="submenu dropdown-menu">
-                <li><a class="dropdown-item" href="/web/guest/asri_hospitalsearch">${hospitals}</a></li>
-                <li><a class="dropdown-item" href="/web/guest/asri_proceduresearch">${procedures}</a></li>
-                 <li><a class="dropdown-item" href="/web/guest/asri_specilitysearch">${speciality_search}</a></li>
-				  <li><a class="dropdown-item" href="/web/guest/arogyamithra">${arogya_mitra}</a></li>
-              </ul>
 			  </li>
 				<li><a class="dropdown-item <#if pageId==27> active </#if>" href="/ehs">${ehs_short}</a>
-							  <ul class="submenu dropdown-menu">
-                <li><a class="dropdown-item" href="/web/guest/ehs_hospitalsearch">${hospitals}</a></li>
-                <li><a class="dropdown-item" href="/web/guest/ehs_proceduresearch">${procedures}</a></li>
-                 <li><a class="dropdown-item" href="/web/guest/ehs_specilitysearch">${speciality_search}</a></li>
-				  <li><a class="dropdown-item" href="/web/guest/mithraehs">${arogya_mitra}</a></li>
-              </ul>
 				</li>
-						
-				
 				<li><a class="dropdown-item <#if pageId==25> active </#if>"  href="/wjhs">${wjhs_short}</a>
-				<ul class="submenu dropdown-menu">
-                <li><a class="dropdown-item" href="/web/guest/wjhs_hospitalsearch">${hospitals}</a></li>
-                <li><a class="dropdown-item" href="/web/guest/wjhs_proceduresearch">${procedures}</a></li>
-                 <li><a class="dropdown-item" href="/web/guest/wjhs_specilitysearch">${speciality_search}</a></li>
-				  <li><a class="dropdown-item" href="/web/guest/mithrawjhs">${arogya_mitra}</a></li>
-              </ul>
 				</li>
-				
-	  
 				<li><a class="dropdown-item <#if pageId==21> active </#if>" href="/arogyaraksha">${ar}</a>
-				<ul class="submenu dropdown-menu">
-                <li><a class="dropdown-item" href="/web/guest/arogyaraksha_hospitalsearch">${hospitals}</a></li>
-                <li><a class="dropdown-item" href="/web/guest/arogyaraksha_proceduresearch">${procedures}</a></li>
-                 <li><a class="dropdown-item" href="/web/guest/arogyaraksha_specilitysearch">${speciality_search}</a></li>
-				  <li><a class="dropdown-item" href="/web/guest/mithraraksha">${arogya_mitra}</a></li>
-              </ul>
 				</li>
-				
 			  </ul>
 			</li>
+			
+			
+		<li class="nav-item dropdown">
+        <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">Network Hospitals</a>
+        <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/web/guest/search-by-geography">Aarogyasri  </a></li>
+        <li><a class="dropdown-item" href="/web/guest/ehs-v4">EHS</a></li>
+         </ul>
+      </li> 
+      
+            <li class="nav-item dropdown">
+        <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">Treatments Covered</a>
+        <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/web/guest/asri_proceduresearch">Aarogyasri </a></li>
+          <li><a class="dropdown-item" href="/web/guest/ehs_proceduresearch">EHS</a></li>
+         </ul>
+      </li>  
 			<!--<li class="nav-item"><a class="nav-link" href="#">${know_more}</a></li>  --> 
 		      
 			<li class="nav-item"><a class="nav-link <#if pageId==157> active </#if>" href="/faq">${faq} </a></li>        
-			<li class="nav-item"><a class="nav-link <#if pageId==161> active </#if>" href="/contact">${contact}</a></li>
 			
+			<li class="nav-item"><a class="nav-link <#if pageId==161> active </#if>" href="/contact">${contact}</a></li>
 <li><a href="https://pmjay.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/Ayushman_Bharat_logo.png" alt="Ayushman_Bharat_logo" class="img-fluid ayushman_header_logo" /></a></li>
 
         </ul>
       </div>
     </div>
   </nav>
+  
 </header>
 <main>
 	<section class="ysrportal" id="content">
@@ -187,7 +180,6 @@ crossorigin="anonymous"></script>
 	
 	 	  
 <footer>
-<div class="blink-bg callbtn_bottom"><a href="tel:104"><span><i class="fa-regular fa-phone"></i> 104</span></a></div><!-- callbtn_bottom -->
       <div class="quick_links">
         <div class="container-fluid">
           <h4>Quick Links</h4>
@@ -237,7 +229,7 @@ ${pin_code}:522503 <br />
   <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
 </svg>  0863-2259861</p>
 		  <br />
-		 <span class="emergency_no">${call} </span>
+		 
       </div>
 
       <div class="col-lg-3">

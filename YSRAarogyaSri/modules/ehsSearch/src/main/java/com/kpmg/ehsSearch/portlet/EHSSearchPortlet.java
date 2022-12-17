@@ -60,6 +60,7 @@ public class EHSSearchPortlet extends MVCPortlet {
 		if (cmd.equals("hospitalsList")) {
 			try {
 				try {
+					System.out.println(cmdType + " " + resourceRequest +" "+ resourceResponse);
 					getHospitalsList(cmdType, resourceRequest, resourceResponse);
 				} catch (PortalException e) {
 					e.printStackTrace();

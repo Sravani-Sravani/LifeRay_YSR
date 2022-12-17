@@ -1,3 +1,4 @@
+<%@page import="org.json.JSONObject"%>
 <%@page import="org.json.JSONArray"%>
 <%@page import="com.kpmg.ehsSearch.util.DataGridDisplayManageUtil"%>
 <%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
@@ -16,6 +17,11 @@ function stoploader(){
 }
     $(document).ready(function () {
 	   $("select").select2();
+	   $("#select-3").select2();
+	   $("#select-4").select2();
+	   $("#select-5").select2();
+	   $("#select-2").select2();
+	 
 	}); 
 </script>
  <style>
@@ -29,10 +35,6 @@ function stoploader(){
   height: 120px;	
   margin: -76px 0 0 -76px;
   border: 16px solid #f3f3f3;
-  border-top: 16px solid blue;
-  border-right: 16px solid green;
-  border-bottom: 16px solid red;
-  border-left: 16px solid pink;
   border-radius: 50%;
   border-top: 16px solid #3498db;
   -webkit-animation: spin 2s linear infinite;
@@ -88,6 +90,8 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 <%
  String DIST_ID = request.getParameter("districtId").trim();//ParamUtil.getString(request, "DIST_ID");
  String stateId = ParamUtil.getString(request, "stateId").trim();
+ String stateName="";
+ String distId="";
  String HOSP_TYPE=ParamUtil.getString(request, "HOSP_TYPE").trim();
  String diseaseName=ParamUtil.getString(request, "diseaseName").trim();
  if(diseaseName.length()>5 && diseaseName!=null && diseaseName!=""){
@@ -95,6 +99,23 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  if(postion1!=0)
    diseaseName=diseaseName.substring(0, postion1-1).trim();
  }
+ 
+ JSONObject states_List= DataGridDisplayManageUtil.getEhsStateList();  
+ JSONArray statesJsonArray = (JSONArray) states_List.get("result"); 
+ 
+    for(int j=0;j<statesJsonArray.length();j++){
+  	org.json.JSONObject data=new org.json.JSONObject(statesJsonArray.get(j).toString());
+  	System.out.println(data.get("stateName"));
+ 	System.out.println(data.get("stateId")); 
+ 	 if(data.get("stateId").equals(stateId)){
+ 		stateName=data.get("stateName").toString();
+ 	}
+   }  
+ JSONObject districts_List= DataGridDisplayManageUtil.getEhsdistrictList(stateId);
+ JSONArray destrictsJsonArray = (JSONArray) districts_List.get("result"); 
+ 
+ 
+ System.out.println("State Name:"+stateName);
  System.out.println("districtId>>>"+DIST_ID);
  System.out.println("stateId>>>"+stateId);
  System.out.println("HOSP_TYPE>>>"+HOSP_TYPE); 
@@ -163,43 +184,44 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
          initComplete: function () {
         	var j=1;
             this.api()
-                .columns([1,2,3,5,4])
+                .columns([2,3,5,4,1])
                 .every(function () {
                     var column = this;
                   //  console.log(column[0][0]);
-                    if(column[0][0]==5 || column[0][0]==2 || column[0][0]==4){
-                    	$('#select-'+column[0][0]).on('keyup change clear', function () {
-                            var val = $('#select-'+column[0][0]).val(); 
-                            column.search(val,true,false,true).draw();
-                        });
-                  	}
-                  	else{
-                    	$('#select-'+column[0][0]).find('option').remove().end()
-                    	.append('<option value="">Show all</option>').on('change', function () {
-                            var val = $.fn.dataTable.util.escapeRegex($('#select-'+column[0][0]).val());
-                            column.search(val ? '^' + val + '$' : '', true, false).draw();
-                        });
-                  	}
-                    if(column[0][0]!=5 || column[0][0]!=2 || column[0][0]!=4 ){
-                     column
-                        .data()
-                        .unique()
-                        .sort()
-                        .each(function (d, j) {
-                       
-							d=$.trim(d);
-							if(d!="" && d!=null){
-								if(column.search() === '^'+d+'$'){
-	                         		$('#select-'+column[0][0]).append( '<option value="'+d+'" selected="selected">'+d.substr(0,30)+'</option>' )
-								} else {
-									$('#select-'+column[0][0]).append( '<option value="'+d+'">'+d.substr(0,30)+'</option>' )
-								}
-							} 	
-                        });
-                    }
+                    //if(column[0][0]==5 || column[0][0]==2 || column[0][0]==4 || column[0][0]==3 ){
+                    	$('#select-'+column[0][0]).on('change', function ()  {
+                    		console.log("onchange action for >>>"+"#select-"+column[0][0]);
+                            var val = $('#select-'+column[0][0]).val();
+                            var id=$('#select-'+column[0][0]).find(':selected').attr('data');
+                            console.log("id>>>"+id);
+                            if(id!=undefined){
+	                            if(column[0][0]==2){
+	                        	   
+	                        	    districtsData(id);
+	                            }
+	                            else if(column[0][0]==3){
+	                        	  mandalData(id);
+	                            }
+                            }
+                           
+                       column.search(val,true,false,true).draw();
+                                 
+                   });
+                  	
                 });
-            
            
+ 
+            <% if(stateName!="" && stateName!=null){ %>
+            
+            var stateName="<%=stateName%>";
+            if(stateName!=null && stateName!=""){
+           	 console.log("state selection");
+                $("#select-2").val(stateName);
+               //var id=$('#select-2').find(':selected').attr('data');
+               //console.log("state Id>>>"+id); 
+           	  // districtsData(id);
+            }
+            <% } %>
             <% if(DIST_ID!="" && DIST_ID!=null){ %>
             var districtId="<%=DIST_ID%>";
             districtId=$.trim(districtId);
@@ -229,7 +251,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
             stoploader();
         },
         processing: true, 
-        bStateSave: true 
+        //bStateSave: true 
     });
 //}); 
 	
@@ -314,55 +336,52 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				<label  for="State">State</label>
 				<select class="form-select" id="select-2" name="select-2">
 				    <option value="">Show All</option>
-				    <%
-				      JSONArray state_List= DataGridDisplayManageUtil.getEhsStateList();
-				      System.out.print("state_list 123"+state_List.toString());
-				  	  
-				      for(int k=0;k<state_List.length();k++){
-			        	JSONArray data=new JSONArray(state_List.get(k).toString());
-			    	   
-			    	    String state_id=data.getString(0);
-			    	    String state_name=data.getString(1);
-			    	 
-				    %>
-				    <option value="<%=state_name %>"><%=state_name %></option>
-				    <% } %>
-				    
+				    <% 
+    for(int j=0;j<statesJsonArray.length();j++){
+  	org.json.JSONObject data=new org.json.JSONObject(statesJsonArray.get(j).toString());
+  	  
+     %>
+				    <option data="<%=data.get("stateId")  %>" value="<%=data.get("stateName") %>"><%=data.get("stateName")  %></option>
+				    <% } %> 
 				 </select>
 				</div>
 				<div class="col-2">
 				<label  for="District">District</label>
 				<select class="form-select" id="select-3" name="select-3">
 				    <option value="">Show All</option>
-
+				     <% 
+					    for(int j=0;j<destrictsJsonArray.length();j++){
+					  	org.json.JSONObject data=new org.json.JSONObject(destrictsJsonArray.get(j).toString());
+					  	
+					  	 if(data.get("districtName").equals(DIST_ID)){
+					  		distId=data.get("districtId").toString();
+					  	}
+					  	
+  	                  %>
+				    <option data="<%=data.get("districtId")  %>" value="<%=data.get("districtName") %>"><%=data.get("districtName")  %></option>
+				    <% } %>
 				 </select>
 				</div>
 				<div class="col-2">
 				<label  for="Mandal">Mandal</label>
 				<select class="form-select" id="select-4" name="select-4">
 				    <option value="">Show All</option>
-				 <%
-				      JSONArray mandal_List= DataGridDisplayManageUtil.getEhsmandalList(null);
-				      System.out.print("mandal_list 123"+mandal_List.toString());
-				  	  
-				      for(int i=0;i<state_List.length();i++){
-			        	JSONArray data=new JSONArray(state_List.get(i).toString());
-			    	   
-			    	    String mandal_id=data.getString(1);
-			    	    String mandal_name="";
-			    	    if(data.length()>2){
-			    	    	 mandal_name=data.getString(3);
-			    	    }else{
-			    	    	continue;
-			    	    }
+				      <%
+				      JSONObject mandal_List= DataGridDisplayManageUtil.getEhsmandalList(distId);
+				     // System.out.print("mandal_List 123"+mandal_List.toString());
+						 JSONArray mandalJsonArray = (JSONArray) mandal_List.get("result"); 
+						for(int j=0;j<mandalJsonArray.length();j++){
+			        	org.json.JSONObject data=new org.json.JSONObject(mandalJsonArray.get(j).toString());
+			        	
+			    	   String id=data.get("mandalId").toString();
+			    	   String mandal=data.get("mandal").toString();  
 				    %>
-				    <option value="<%=mandal_name %>"><%=mandal_name %></option>
-				    <% } %>
-				    
+				    <option data="<%=id %>" value="<%=mandal%>"><%=mandal %></option>
+				    <% } %> 
 				 </select>
 				</div>
 				<div class="col-2">
-				<label  for="Type">Type</label>
+				 <label  for="Type">Type</label>
 				<select class="form-select" id="select-1" name="select-1">
 				    <option value="">Show All</option>
 				 </select>
@@ -406,13 +425,77 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 			<script>
 			$("#resetBtnS").click(function(){
 				//alert("Clear");
-				$("#select-4").val("").trigger('change');
-				$("#select-1").val("").trigger('change');
 				$("#select-2").val("").trigger('change');
+				$('#select-3').find('option').remove().end().append('<option value="">Show all</option>');
 				$("#select-3").val("").trigger('change');
+				$('#select-4').find('option').remove().end().append('<option value="">Show all</option>');
+				$("#select-4").val("").trigger('change'); 
 				$("#select-5").val("").trigger('change');
 				 $("input[type='search']").val("").trigger('keyup');
 			});
+			
+			
+			 function districtsData(state_Id){
+		    	   console.log("stateId>>>"+state_Id);
+		    	   $('#select-4').find('option').remove().end().append('<option value="">Show all</option>');
+		    	   var data1= { stateId:state_Id };
+		    	   if(state_Id!=""){
+		    		   $('#select-3').prop("disabled", true);
+		    	 $.ajax({
+		    		  url: "http://10.48.19.62:8093/ehsportalsearchapi/public/ehs-districtlist",
+		    		  type: "POST", 
+		    		 // async: false,
+		    		  dataType: 'json',
+		              contentType: "application/json; charset=utf-8",
+		              data: JSON.stringify(data1),
+		    		  success: function(response) {
+		    		   console.log("Success");
+		    		   console.log(response);
+		    		   $('#select-3').find('option').remove().end().append('<option value="">Show all</option>'); 
+			    		  for(var i=0;i<response.result.length;i++){
+			    			 var data=response.result[i];
+			    			 $('#select-3').append("<option data='"+data.districtId+"' value='"+data.districtName+"'>"+data.districtName+"</option>");
+			    		  } 
+		    		   $('#select-3').trigger('change');
+		    		   $('#select-3').prop("disabled", false);
+		    		  },
+		    		  error: function(xhr) {
+		    			  console.log("Error");
+		    		  }
+		    		});
+		    	   }
+		     }
+		     function mandalData(district_Id){
+			    	  console.log("districtId>>>"+district_Id);
+			    	 
+			    	  var data1= { districtId:district_Id};
+			    	  if(district_Id!=""){
+			    		  $('#select-4').prop("disabled", true);
+			    	 $.ajax({
+			    		  url: "http://10.48.19.62:8093/ehsportalsearchapi/public/ehs-mandallist",
+			    		  type: "post", //send it through get method
+			    		  dataType: 'json',
+			              contentType: "application/json; charset=utf-8",
+			              data: JSON.stringify(data1),
+			    		  success: function(response) {
+			    		   console.log("Success");
+			    		    console.log(response); 
+			    		    console.log(response.result); 
+			    		   $('#select-4').find('option').remove().end().append('<option value="">Show all</option>');
+			    		 for(var i=0;i<response.result.length;i++){ 
+			    			 var data=response.result[i];
+			    			 $('#select-4').append("<option data='"+data.mandalId+"' value='"+data.mandal+"'>"+data.mandal+"</option>");
+			    		  } 
+			    		  $('#select-4').trigger('change');
+			    		  $('#select-4').prop("disabled", false);
+			    		  },
+			    		  error: function(xhr) {
+			    			  console.log("Error");
+			    		  }
+			    		});
+			    	  }
+			     }
+			
 			</script>	
 				<%-- <div class="col-lg-2">
 				<label  for="District">Speciality</label>

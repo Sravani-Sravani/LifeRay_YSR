@@ -39,7 +39,7 @@ accessibility_statement = "సుగమ నివేదిక"
 know_more = "మరింత తెలుసుకోండి"
 sitemap = "సైట్ పటం"
 hospitals = "ఆసుపత్రులు"
-procedures = "చికిత్స"
+procedures = "చికిత్సలు"
 speciality_search = "ప్రత్యేక శోధన"
 arogya_mitra = "ఆరోగ్య మిత్ర"
 

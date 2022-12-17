@@ -196,6 +196,11 @@
               >Health Card Enrollment User Manual
             </a>
           </li>
+                    <li>
+            <a href="https://ysraarogyasri.ap.gov.in/documents/d/guest/employee-and-pensioner-enrollment-user-manual"
+              >Employee Health card generation User Manual</a
+            >
+          </li>
           <li>
             <a href="/web/guest/usermanual_medicalreimbursement"
               >Online Medical Reimbursement User Manual</a

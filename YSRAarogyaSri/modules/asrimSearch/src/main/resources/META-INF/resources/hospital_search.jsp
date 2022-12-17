@@ -1,4 +1,6 @@
 <%@page import="com.kpmg.asrimSearch.util.DataGridDisplayManageUtil"%>
+<%@page import="com.liferay.portal.kernel.util.WebKeys"%>
+<%@page import="com.liferay.portal.kernel.theme.ThemeDisplay"%>
 <%@page import="org.json.JSONArray"%>
 <%@page import="org.json.JSONObject"%> 
 <%@page import="java.util.ArrayList"%>
@@ -19,25 +21,28 @@
  <portlet:renderURL var="viewDistrictRecordsURL">
 			<portlet:param name="mvcPath" value="/districtWiseHospitals.jsp"/> 
 		</portlet:renderURL> 
- 
+ <% 
+themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
+long pageId1=themeDisplay.getPlid();
+%>
 <%
 org.json.JSONArray states_List=null;
 String pageTitle="";
-if(pageId==513){
+if(pageId1==513){
 	pageTitle="Aarogyasri ";
 }
-else if(pageId==507){
+else if(pageId1==507){
 	pageTitle="Arogya Raksha ";
 }
-else if(pageId==499){
+else if(pageId1==499){
 	pageTitle="WJHS ";
 }
-else if(pageId==491){
+else if(pageId1==491){
 	pageTitle="EHS ";
 }
 try{
 	// if(pId==513 || pId==507 || pId==499 || pId==491){
-	    states_List=DataGridDisplayManageUtil.getStateLevelAsrimHospCount(pageId);
+	    states_List=DataGridDisplayManageUtil.getStateLevelAsrimHospCount(pageId1);
 	// }
 }
 catch(Exception e){
@@ -74,7 +79,7 @@ System.out.print("states_List"+states_List.toString());
 	    	   String stateId=data.getString(1);
 	    	   String stateName=data.getString(0);
 	    	   
-	    	   if(pageId==499 || pageId==491){
+	    	   if(pageId1==499 || pageId1==491){
 	    		     stateId=data.getString(0);
 		    	     stateName=data.getString(1);
 	    	   }

@@ -1,3 +1,8 @@
+<%@page import="com.liferay.portal.kernel.theme.ThemeDisplay"%>
+<%@page import="com.liferay.portal.kernel.util.WebKeys"%>
+<%@page import="org.json.JSONObject"%>
+<%@page import="org.json.JSONArray"%>
+<%@page import="com.kpmg.asrimSearch.util.DataGridDisplayManageUtil"%>
 <%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
 <%@ include file="/init.jsp" %>
 <%@ include file="/html/dataTableIncludes.jspf" %>  
@@ -7,6 +12,11 @@
 </portlet:resourceURL>
 <link href="/o/com.kpmg.asrimSearch/css/select2.min.css" rel="stylesheet" />
 <script src="/o/com.kpmg.asrimSearch/js/select2.min.js"></script> 
+<portlet:resourceURL var="getAjaxDataURL1"></portlet:resourceURL>
+<% 
+themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
+long pageId1=themeDisplay.getPlid();
+%>
 <script>
 function stoploader(){
 	document.getElementById("loader").style.display = "none";
@@ -15,6 +25,7 @@ function stoploader(){
 	   $("select").select2();
 	}); 
 </script>
+
 <style>
 /* Center the loader */
 #loader {
@@ -26,10 +37,6 @@ function stoploader(){
   height: 120px;
   margin: -76px 0 0 -76px;
   border: 16px solid #f3f3f3;
-  border-top: 16px solid blue;
-  border-right: 16px solid green;
-  border-bottom: 16px solid red;
-  border-left: 16px solid pink;
   border-radius: 50%;
   border-top: 16px solid #3498db;
   -webkit-animation: spin 2s linear infinite;
@@ -83,13 +90,19 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 .alert-dismissible{disaply:none;}
 .alert-danger{disaply:none;}
 </style>
-<%
- String DIST_ID = request.getParameter("districtId");//ParamUtil.getString(request, "DIST_ID");
- String stateId = ParamUtil.getString(request, "stateId");
- String HOSP_TYPE=ParamUtil.getString(request, "HOSP_TYPE");
- System.out.println("districtId>>>"+DIST_ID);
- System.out.println("stateId>>>"+stateId);
- System.out.println("HOSP_TYPE>>>"+HOSP_TYPE); 
+<% 
+
+ String diseaseName=ParamUtil.getString(request, "diseaseName").trim();
+//String specialityId= ParamUtil.getString(request,"specialityId").trim();//ParamUtil.getString(request, "DIST_ID");
+//String splcode="";
+String specialityId = ParamUtil.getString(request, "specialityId").trim();
+ 
+ if(diseaseName.length()>5 && diseaseName!=null && diseaseName!=""){
+	 int postion1=diseaseName.indexOf("(");
+	 if(postion1!=0)
+	   diseaseName=diseaseName.substring(0, postion1-1).trim();
+ }
+    
  %>
 <script>
 	var primaryKeyColumn = 1;
@@ -152,28 +165,22 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
          initComplete: function () {
         	var j=1;
             this.api()
-                .columns([1,3,4])
+                .columns([1,3])
                 .every(function () {
-                    var column = this;
-                    console.log(column[0][0]); 
-                    	$('#select-'+column[0][0]).find('option').remove().end()
-                    	.append('<option value="">Show all</option>').on('change', function () {
-                            var val = $.fn.dataTable.util.escapeRegex($('#select-'+column[0][0]).val());
-                            column.search(val ? '^' + val + '$' : '', true, false).draw();
-                        });
-                     column
-                        .data()
-                        .unique()
-                        .sort()
-                        .each(function (d, j) {
-                           if(d!="" && d!=null){
-							if(column.search() === '^'+d+'$'){
-                         		$('#select-'+column[0][0]).append( '<option value="'+d+'" selected="selected">'+d.substr(0,30)+'</option>' )
-							} else {
-								$('#select-'+column[0][0]).append( '<option value="'+d+'">'+d.substr(0,30)+'</option>' )
-							}
-                           }
-                        }); 
+                    var column = this; 
+                 	$('#select-'+column[0][0]).on('change', function () {
+                 		console.log("onchange action for >>>"+"#select-"+column[0][0]);
+                        var val = $('#select-'+column[0][0]).val();
+                        var id=$('#select-'+column[0][0]).find(':selected').attr('data');
+                        console.log("id>>>"+id);
+                        if(id!=undefined){
+                            if(column[0][0]==1){
+                        	    procedureData(id);
+                            }
+                        }
+                   column.search(val,true,false,true).draw();
+               });
+
                 });
             
             stoploader();
@@ -225,7 +232,19 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  	 <div id="loader"></div>
  	 <div class="ysri_section">
 	<section class="blue_section">
-	
+	<%String pageTitle="";
+	if(pageId1==517){
+		pageTitle="Aarogyasri ";
+	}
+	else if(pageId1==495){
+		pageTitle="EHS ";
+	} else if(pageId1==505){
+		pageTitle="WJHS";
+	}
+	else if(pageId1==511){
+		pageTitle="Aarogya Raksha";
+	}
+	%>
 	<!-- <div class="row col-md-12" id="loader"  style="display:none;">
   <div class="col-md-5"></div>
   <div class="col-md-3">
@@ -234,7 +253,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
   <div class="col-md-4"></div>
   </div> -->
 	  <div class="container search_panel">
-		  <h3>Aarogyasri / Procedure Search</h3>
+		  <h3><%=pageTitle %> / Procedure Search</h3>
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
  <div id="searchData" class="row col-md-12">
  <div class="col-2"  style="padding-top: 22px;">
@@ -256,20 +275,36 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				</div> -->
 				<div class="col-3">
 				<label  for="Speciality Name">Speciality Name</label>
-				<select class="form-select" id="select-1" name="select-2">
+				<select class="form-select" id="select-1" name="select-1">
 				    <option value="">Show All</option>
+				  <%
+				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null);
+				      System.out.print("speciality_List 123"+speciality_List.toString());
+				      for(int j=0;j<speciality_List.length();j++){
+			        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
+			    	   long proceduresCount=data.getLong(0);
+			    	   long hospitalCount=data.getLong(1);
+			    	   String diseaseId=data.getString(2);
+			    	   String disease_Name=data.getString(3);
+			    	   int postion_1=disease_Name.indexOf("(");
+			    	   if(postion_1!=0)
+			    	     disease_Name=disease_Name.substring(0, postion_1-1).trim();
+				    %>
+				    <option data="<%=diseaseId %>" value="<%=disease_Name%>"><%=disease_Name %></option>
+				    <% } %>
 				 </select>
 				</div>
-				 <div class="col-2">
-				<label  for="Procedure Type">Procedure Type</label>
+				 
+				<!--<label  for="Procedure Type">Procedure Type</label>
 				<select class="form-select" id="select-4" name="select-4">
 				    <option value="">Show All</option>
 				 </select>
-				</div>
+				</div>-->
 				<div class="col-3">
 				<label  for="Procedure Name">Procedure Name</label>
 				<select class="form-select" id="select-3" name="select-3">
 				    <option value="">Show All</option>
+
 				 </select>
 				</div>
 					<div class="col-md-2">
@@ -282,10 +317,47 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				//alert("Clear");
 				 $("#select-1").val("").trigger('change');
 				 $("#select-3").val("").trigger('change');
+				 $('#select-3').find('option').remove().end().append('<option value="">Show all</option>');
 				 $("#select-4").val("").trigger('change');
 				 $("input[type='search']").val("").trigger('keyup');
 			});
-			</script>
+			
+			
+				function procedureData(specialityId){
+
+				 AUI().use('aui-base','aui-io-request-deprecated', 'aui-node', function(A){
+				    A.io.request('<%=getAjaxDataURL1.toString() %>',{
+					    dataType : 'json',
+					    method : 'GET',
+					    data : {
+						    <portlet:namespace />specialityId :$.trim(specialityId),
+						    <portlet:namespace />cmd:'List',
+						    <portlet:namespace />pageId:'<%=pageId1 %>'
+					    },
+					    on : {
+					    success : function() {
+					    	 console.log("Success 12345");
+				           			 var response=this.get('responseData');
+				           			 console.log(response);
+						
+				           			 
+				           			 $('#select-3').find('option').remove().end().append('<option value="">Show all</option>'); 
+				           			 $('#<portlet:namespace />searchComplaintTypeId').html("");
+				           			 jQuery.each(response, function(i, val) {
+				           		 	 $('#select-3').append("<option data='"+val.specialityCode+"' value='"+val.procedureName+"'>"+val.procedureName+"</option>");
+				           			});
+				           			 $('#select-3').trigger('change');
+						    		   $('#select-3').prop("disabled", false);
+						    		   
+				           			 },  
+                                     error: function(xhr) {
+						    			  console.log("Error");
+						    		  }
+				           	 	 }
+				       });
+				});        
+			}
+				</script>
  </div>
  </form>
  <div id="recordList" class="table-responsive-md">

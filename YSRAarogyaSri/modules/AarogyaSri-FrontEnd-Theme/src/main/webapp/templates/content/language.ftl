@@ -40,7 +40,7 @@ know_more = "Know More"
 sitemap = "Sitemap"
 
 hospitals = "Hospitals"
-procedures = "Treatment"
+procedures = "Treatments"
 speciality_search = "Speciality Search"
 arogya_mitra = "Aarogya Mithra"
 
@@ -56,6 +56,6 @@ glossary = "Glossary"
 screen_reader = "ScreenReader"
 find="Find Us On"
 links="Useful Links"
-medical="Medical Helpline Grievances"
+medical="Helpline/Grievances"
 visitors="Visitor Count "
 />

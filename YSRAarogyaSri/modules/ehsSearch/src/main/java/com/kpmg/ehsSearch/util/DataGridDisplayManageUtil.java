@@ -7,11 +7,14 @@ import java.io.InputStreamReader;
 import java.io.OutputStream; 
 import java.net.HttpURLConnection;
 import java.net.URL;
+
+import org.json.JSONObject;
  public class DataGridDisplayManageUtil {
 	static Log _log=LogFactoryUtil.getLog(DataGridDisplayManageUtil.class);
- public static org.json.JSONArray getStateLevelAsrimHospCount() {
+	
+ public static JSONObject getStateLevelAsrimHospCount() {
 	org.json.JSONObject myObject =null;
-	org.json.JSONArray array = null;
+	org.json.JSONArray  obejct= null;
 	try {
 		   URL obj = new URL("http://10.48.19.54:8093/ehsportalsearchapi/public/ehs-hospitalsearch-statewisecount");
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
@@ -34,7 +37,7 @@ import java.net.URL;
 		       // System.out.println("myObject"+response.toString());
 		         myObject = new org.json.JSONObject(response.toString());
 		         //System.out.println("myObject"+myObject.getString("result"));
-		         array = new org.json.JSONArray(myObject.getString("result")); 
+		         //array = new org.json.JSONArray(myObject.getString("result")); 
 		           
 		     } 
 		     else {
@@ -43,13 +46,13 @@ import java.net.URL;
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
-	return array;
+	return myObject;
  }
  
 
-public static org.json.JSONArray getDistrictAsrimHospCount(String stateId) {
+public static JSONObject getDistrictAsrimHospCount(String stateId) {
 	org.json.JSONObject myObject =null;
-	org.json.JSONArray array = null;
+	org.json.JSONArray object = null;
 	try {  
 		
 		 final String POST_PARAMS = "{\n" + "\"stateVal\": \""+stateId+ "\"\n}";
@@ -81,7 +84,7 @@ public static org.json.JSONArray getDistrictAsrimHospCount(String stateId) {
 		        //System.out.println("myObject"+response.toString());
 		         myObject = new org.json.JSONObject(response.toString());
 		        // System.out.println("myObject"+myObject.getString("result"));
-		         array = new org.json.JSONArray(myObject.getString("result")); 
+		         //array = new org.json.JSONArray(myObject.getString("result")); 
 		              
 		     } 
 		     else {
@@ -90,10 +93,10 @@ public static org.json.JSONArray getDistrictAsrimHospCount(String stateId) {
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
-	return array;
+	return myObject;
  }
 
-public static org.json.JSONArray getStateLevelAsrimMitrasCount() {
+public static JSONObject getStateLevelAsrimMitrasCount() {
 	org.json.JSONObject myObject =null;
 	org.json.JSONArray array = null;
 	try {
@@ -126,9 +129,9 @@ public static org.json.JSONArray getStateLevelAsrimMitrasCount() {
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
-	return array;
+	return myObject;
  }
-public static org.json.JSONArray getDistrictAsrimMitrasCount(String stateId) {
+public static JSONObject getDistrictAsrimMitrasCount(String stateId) {
 	org.json.JSONObject myObject =null;
 	org.json.JSONArray array = null;
 	try {  
@@ -171,11 +174,11 @@ public static org.json.JSONArray getDistrictAsrimMitrasCount(String stateId) {
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
-	return array;
+	return myObject;
  }
 
 
-public static org.json.JSONArray getAsriSpecialityCount(String specialityId) {
+public static JSONObject getAsriSpecialityCount(String specialityId) {
 	org.json.JSONObject myObject =null;
 	org.json.JSONArray array = null;
 	try {
@@ -218,14 +221,14 @@ public static org.json.JSONArray getAsriSpecialityCount(String specialityId) {
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
-	return array;
+	return myObject;
  }
 
 
 
-public static org.json.JSONArray getEhsStateList() {
+public static org.json.JSONObject getEhsStateList() {
 	org.json.JSONObject myObject =null;
-	org.json.JSONArray array = null;
+	org.json.JSONArray object = null;
 	try {
 		 //final String POST_PARAMS = "{\n" + "\"specialityId\": "+ "\n}";
 		    //System.out.println(POST_PARAMS);
@@ -258,7 +261,7 @@ public static org.json.JSONArray getEhsStateList() {
 		        //System.out.println("myObject"+response.toString());
 		         myObject = new org.json.JSONObject(response.toString());
 		       //  System.out.println("myObject"+myObject.getString("result"));
-		         array = new org.json.JSONArray(myObject.getString("result")); 		         
+		         //array = new org.json.JSONArray(myObject.getString("result")); 		         
 		     } 
 		     else {
 		        System.out.println("ehsstateList get is not working");
@@ -266,15 +269,16 @@ public static org.json.JSONArray getEhsStateList() {
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
-	return array;
+	return myObject;
  }
 
 
-public static org.json.JSONArray getEhsmandalList(String districtId) {
+public static JSONObject getEhsmandalList(String districtId) {
 	org.json.JSONObject myObject =null;
-	org.json.JSONArray array = null;
+	org.json.JSONArray object = null;
 	try {
-		 final String POST_PARAMS = "{\n" + "\"districtId\": "+districtId+ "\n}";
+		 final String POST_PARAMS = "{\n" + "\"districtId\": \""+districtId+ "\"\n}";
+
 		    System.out.println(POST_PARAMS);
 		   URL obj = new URL("http://10.48.19.62:8093/ehsportalsearchapi/public/ehs-mandallist");
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
@@ -305,7 +309,7 @@ public static org.json.JSONArray getEhsmandalList(String districtId) {
 		        //System.out.println("myObject"+response.toString());
 		         myObject = new org.json.JSONObject(response.toString());
 		       //  System.out.println("myObject"+myObject.getString("result"));
-		         array = new org.json.JSONArray(myObject.getString("result")); 		         
+		         //array = new org.json.JSONArray(myObject.getString("result")); 		         
 		     } 
 		     else {
 		        System.out.println("POST NOT WORKED in mandal");
@@ -313,15 +317,13 @@ public static org.json.JSONArray getEhsmandalList(String districtId) {
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
-	return array;
+	return myObject;
  }
-
-
-public static org.json.JSONArray getEhsdistrictList(String stateId) {
+public static org.json.JSONObject getEhsdistrictList(String stateId) {
 	org.json.JSONObject myObject =null;
-	org.json.JSONArray array = null;
+	org.json.JSONArray object = null;
 	try {
-		 final String POST_PARAMS = "{\n" + "\"stateId\": "+stateId+ "\n}";
+		 final String POST_PARAMS = "{\n" + "\"stateId\": \""+stateId+ "\"\n}";
 		    System.out.println(POST_PARAMS);
 		   URL obj = new URL("http://10.48.19.62:8093/ehsportalsearchapi/public/ehs-districtlist");
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
@@ -350,18 +352,17 @@ public static org.json.JSONArray getEhsdistrictList(String stateId) {
 		             
 		        } in .close();
 		        //System.out.println("myObject"+response.toString());
-		         myObject = new org.json.JSONObject(response.toString());
+		        myObject = new org.json.JSONObject(response.toString());
 		       //  System.out.println("myObject"+myObject.getString("result"));
-		         array = new org.json.JSONArray(myObject.getString("result")); 		         
+		        // array = new org.json.JSONArray(myObject.getString("result")); 		         
 		     } 
 		     else {
-		        System.out.println("POST NOT WORKED in ehs districtlist");
+		        System.out.println("POST NOT WORKED in district");
 		       }
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
-	return array;
+	return  myObject;
  }
-
 
 }

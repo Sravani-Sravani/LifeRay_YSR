@@ -1,3 +1,4 @@
+<%@page import="com.liferay.portal.kernel.theme.ThemeDisplay"%>
 <%@page import="com.kpmg.asrimSearch.util.DataGridDisplayManageUtil"%> 
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.liferay.portal.kernel.dao.orm.OrderFactoryUtil"%>
@@ -6,7 +7,12 @@
 <%@page import="com.liferay.portal.kernel.dao.orm.DynamicQuery"%> 
 <%@page import="java.util.List"%>
  <%@ include file="/init.jsp" %>
-
+ <%@page import="com.kpmg.asrimSearch.util.DataGridDisplayManageUtil"%>
+<%@page import="com.liferay.portal.kernel.util.WebKeys"%>
+ <% 
+themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
+long pageId1=themeDisplay.getPlid();
+%>
 <style>
 
 .lfr-tooltip-scope{disaply:none;}
@@ -35,7 +41,17 @@
  		 </div> <!--end of col-->
 	</div> 
 	  <div class="container">
-		  <h3>Aarogyasri / Speciality Search</h3><br>
+	  <%
+	  String pageTitle="";
+	  if(pageId1==513){
+	  	pageTitle="Aarogyasri ";
+	  }
+	  else if(pageId1==507){
+	  	pageTitle="Arogya Raksha ";
+	  }
+
+	  %>
+		  <h3><%=pageTitle %> / Speciality Search</h3><br>
 		  
 		  
 		  

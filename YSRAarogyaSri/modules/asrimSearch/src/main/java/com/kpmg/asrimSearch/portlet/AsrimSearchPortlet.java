@@ -93,6 +93,24 @@ public class AsrimSearchPortlet extends MVCPortlet {
 				
 			}
 		}
+		
+		if(cmd.equals("List")) {
+			PrintWriter out = resourceResponse.getWriter();
+			String specialityId= ParamUtil.getString(resourceRequest, "specialityId");
+			System.out.println("specialityId>>>"+specialityId);
+			 JSONArray prJsonArray =null;
+			 JSONObject pr_List=new JSONObject();
+			try {
+				  pr_List=DataGridDisplayManageUtil.getprocedureList(specialityId,517);
+				  prJsonArray=(JSONArray) pr_List.get("result"); 
+				  PrintWriter writer = resourceResponse.getWriter();
+					writer.print(prJsonArray);
+				System.out.println(prJsonArray);
+			}
+			catch(Exception e) {
+				
+			}
+		}
 		else if (cmd.equals("hospitalsList")) {
 			try {
 				try {
@@ -106,7 +124,10 @@ public class AsrimSearchPortlet extends MVCPortlet {
 		}
 		else if (cmd.equals("proceduredList")) {
 			try {
+				
 				try {
+					System.out.println("hell");
+					//console.log("hii");
 					getProceduresList(cmdType, resourceRequest, resourceResponse);
 				} catch (PortalException e) {
 					e.printStackTrace();
