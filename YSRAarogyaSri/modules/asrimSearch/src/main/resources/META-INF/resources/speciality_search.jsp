@@ -25,41 +25,52 @@ long pageId1=themeDisplay.getPlid();
 	<div class="ysri_section">
 		
 	<section class="blue_section search_panel">
-	<h2 class="subheading">Network Hospitals</h2> 
-	<div class="row mb-2 p-2 rounded-2 shadow-lg" id="Aarogyasri_section">
- 			<div class="col-lg-4"  >
-				<p><a href="/web/guest/search-by-geography" class="button_blueshade"><i class="fa-solid fa-location-dot"></i> Search by Geography</a></p>
-		  </div> <!--end of col-->
-
-		  <div class="col-lg-4">
-			<p><a href="/web/guest/asri_specilitysearch" class="active_button_blueshade"><i class="fa-solid fa-user-doctor"></i> Search by Speciality</a></p>
-
-	 	  </div> <!--end of col-->
-
-	 	<div class="col-lg-4">
-			<p><a href="/web/guest/nearby-hospitals" class="button_blueshade"><i class="fa-solid fa-hospital"></i> Hospitals Near Me</a></p>
- 		 </div> <!--end of col-->
-	</div> 
+		  <%
+	String geography="";
+	String speciality="";
+	String nearbyhptls="";
+	if(pageId1==589|| pageId1==593 || pageId1==515){
+		geography="/web/guest/search-by-geography";
+		speciality="/web/guest/asrispeciality";
+		nearbyhptls="/web/guest/nearby-hospitals";
+	}
+	else if(pageId1==497|| pageId1==585||pageId1==595){
+		geography="/web/guest/ehs-v4";
+		speciality="/web/guest/ehsspeciality";
+		nearbyhptls="/web/guest/nearby-hospitals";
+	}
+	 %>
+	
+			<div class="row">
+				<div class="col-lg-12 text-end">
+				<a href="<%=geography %>" class="btn search_sm_btn"><i class="fa-solid fa-location-dot"></i> Search by Geography</a>
+				<a href="<%=speciality %>"  class="btn search_sm_btn"><i class="fa-solid fa-user-doctor"></i> Search by Speciality</a>
+				<a href="<%=nearbyhptls %>" class="btn search_sm_btn"><i class="fa-solid fa-hospital"></i> Hospitals Near Me</a>
+			  </div> <!--end of col-->
+			</div>
+	
 	  <div class="container">
 	  <%
 	  String pageTitle="";
-	  if(pageId1==513){
+	  if(pageId1==513 || pageId1==589|| pageId1==593 ||pageId1==515){
 	  	pageTitle="Aarogyasri ";
 	  }
 	  else if(pageId1==507){
 	  	pageTitle="Arogya Raksha ";
 	  }
-
+	  else if(pageId1==585 || pageId1==497||pageId1==595){
+		  pageTitle="EHS";
+	  }
+	  else if(pageId1==503){
+		  pageTitle="WJHS";
+	  }
 	  %>
 		  <h3><%=pageTitle %> / Speciality Search</h3><br>
-		  
-		  
-		  
 		  <div class="row">
 		      
 		      <% 
 	          String specialityId=null;
-		      org.json.JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(specialityId);
+		      org.json.JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(specialityId, pageId1);
 		      System.out.print("speciality_List 123"+speciality_List.toString());
 		  	  
 		      for(int j=0;j<speciality_List.length();j++){

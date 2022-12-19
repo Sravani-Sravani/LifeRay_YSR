@@ -254,9 +254,10 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
   </div> -->
 	  <div class="container search_panel">
 		  <h3><%=pageTitle %> / Procedure Search</h3>
+		   <div id="searchData">
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
- <div id="searchData" class="row col-md-12">
- <div class="col-2"  style="padding-top: 22px;">
+ <!--
+ <div class="col-auto">
 	<h6>Procedures Search</h6>		 
 </div>
            
@@ -273,12 +274,12 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 				    <option value="">Show All</option>
 				 </select>
 				</div> -->
-				<div class="col-3">
+				<div class="col-auto">
 				<label  for="Speciality Name">Speciality Name</label>
 				<select class="form-select" id="select-1" name="select-1">
 				    <option value="">Show All</option>
 				  <%
-				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null);
+				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(specialityId, pageId1);
 				      System.out.print("speciality_List 123"+speciality_List.toString());
 				      for(int j=0;j<speciality_List.length();j++){
 			        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
@@ -300,14 +301,14 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 				    <option value="">Show All</option>
 				 </select>
 				</div>-->
-				<div class="col-3">
+				<div class="col-auto">
 				<label  for="Procedure Name">Procedure Name</label>
 				<select class="form-select" id="select-3" name="select-3">
 				    <option value="">Show All</option>
 
 				 </select>
 				</div>
-					<div class="col-md-2">
+					<div class="col-auto">
                   <div class="serchbtn-sec"> 
 				      <button type="button" id="resetBtnS" class="btn btn-secondary resetbtnclass" style="margin-top: 23px;width: 100%;font-size:13px;">Reset</button>
                   </div>
@@ -358,8 +359,9 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 				});        
 			}
 				</script>
- </div>
+
  </form>
+  </div>
  <div id="recordList" class="table-responsive-md">
   </div>
 	 </div>

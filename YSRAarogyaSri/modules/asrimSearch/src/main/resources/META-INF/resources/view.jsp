@@ -42,10 +42,10 @@ long pageId=themeDisplay.getPlid();
 <% } %>
 
 
- <%if(pageId==513 || pageId==507 || pageId==499 || pageId==491|| pageId==585){ %>
+ <%if(pageId==513 || pageId==507 || pageId==499 || pageId==491|| pageId==585 ||pageId==589){ %>
  
  <%@ include file="/hospital_search.jsp" %>
- <% }else if(pageId==515 || pageId==497 || pageId==585){ %>
+ <% }else if(pageId==497 || pageId==585 ||pageId==595 || pageId==593 ||pageId==515|| pageId==503){ %>
  <%@ include file="/speciality_search.jsp" %>
  <% }else if(pageId==517 || pageId==495 || pageId==505 ||pageId==511){ %>
  <%@ include file="/procedure_search.jsp" %>

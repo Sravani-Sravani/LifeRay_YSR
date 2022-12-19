@@ -30,74 +30,6 @@ function stoploader(){
 	}); 
 </script>
  <style>
-/* Center the loader */
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 120px;
-  height: 120px;
-  margin: -76px 0 0 -76px;
-  border: 16px solid #f3f3f3;
-/*   border-top: 16px solid blue;
-  border-right: 16px solid green;
-  border-bottom: 16px solid red;
-  border-left: 16px solid pink; */
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
-.alert-notifications alert-notifications-fixed{
-display:none;
-} 
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
-
-#myDiv {
-  display: none;
-  text-align: center;
-} 
-/* End loader slider*/
- .search_panel .table thead th {background-color: #2169B2; color: #ffff;} 
-.search_panel .table thead td {
-    width: 100px !important;
-    text-align: justify;
-    overflow-x: scroll;
-    }
-main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
-.lfr-search-container-wrapper .lfr-icon-menu > .dropdown-toggle {color: #fff;}
-.specialitys{overflow-y: scroll; height: 125px;  width: auto;    }
-.lfr-tooltip-scope{disaply:none;}
-.alert-dismissible{disaply:none;}
-.alert-danger{disaply:none;}
 </style>
 
 <portlet:resourceURL var="asrimHospitalsURL">
@@ -227,7 +159,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
         	 stoploader();
         	 var j=1;
             this.api()
-                .columns([2,3,4,5])
+                .columns([1,2,3,4,5])
                 .every(function () {
                     var column = this; 
                      	$('#select-'+column[0][0]).on('change', function () {
@@ -248,7 +180,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
                   	
                 });
 
-<%--             <% if(HOSP_TYPE!="" && HOSP_TYPE!=null){ %>
+          <% if(HOSP_TYPE!="" && HOSP_TYPE!=null){ %>
              var hospitalType="<%=HOSP_TYPE%>";
             if(hospitalType!=null && hospitalType!=""){
 
@@ -256,7 +188,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
               $("#select-1").val(hospitalType).trigger('change');
             }
              
-             <% } %>  --%>
+             <% } %> 
              <% if(stateName!="" && stateName!=null){ %>
              
              var stateName="<%=stateName%>";
@@ -342,23 +274,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 	<section class="blue_section">
 	
 	
-	 <%if(pageId1==589 || pageId1==585){ %> 
-	<h2 class="subheading">Network Hospitals</h2> 
-	<div class="row mb-2 p-2 rounded-2 shadow-lg" id="Aarogyasri_section">
- 			<div class="col-lg-4"  >
-				<p><a href="/web/guest/search-by-geography"   class="active_button_blueshade"><i class="fa-solid fa-location-dot"></i> Search by Geography</a></p>
-		  </div> <!--end of col-->
 
-		  <div class="col-lg-4">
-			<p><a href="/web/guest/asri_specilitysearch" class="button_blueshade" ><i class="fa-solid fa-user-doctor"></i> Search by Speciality</a></p>
-
-	 	  </div> <!--end of col-->
-
-	 	<div class="col-lg-4">
-			<p><a href="/web/guest/nearby-hospitals" class="button_blueshade"><i class="fa-solid fa-hospital"></i> Hospitals Near Me</a></p>
- 		 </div> <!--end of col-->
-	</div> 
-	<% } %> 
 	<%
 	String pageTitle="";
 	if(pageId1==589){
@@ -374,16 +290,44 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 		pageTitle="EHS ";
 	}
 	%>
+	
+	
 	  <div class="container-fluid search_panel">
-		  <h3><%=pageTitle %> State empanlled Hospitals</h3>
+	  <%
+	String geography="";
+	String speciality="";
+	String nearbyhptls="";
+	if(pageId1==589|| pageId1==593){
+		geography="/web/guest/search-by-geography";
+		speciality="/web/guest/asrispeciality";
+		nearbyhptls="/web/guest/nearby-hospitals";
+	}
+	else if(pageId1==497|| pageId1==585||pageId1==595 ||pageId1==503){
+		geography="/web/guest/ehs-v4";
+		speciality="/web/guest/ehsspeciality";
+		nearbyhptls="/web/guest/nearby-hospitals";
+	}
+	 %>
+	
+			<div class="row">
+				<div class="col-lg-12 text-end">
+				<a href="<%=geography %>"  class="btn search_sm_btn"><i class="fa-solid fa-location-dot"></i> Search by Geography</a>
+				<a href="<%=speciality %>"  class="btn search_sm_btn"><i class="fa-solid fa-user-doctor"></i> Search by Speciality</a>
+				<a href="<%=nearbyhptls %>"  class="btn search_sm_btn"><i class="fa-solid fa-hospital"></i> Hospitals Near Me</a>
+			  </div> <!--end of col-->
+			</div>
+
+	
+		  <h3><%=pageTitle %> State Empanlled Hospitals</h3>
+
+		  <div id="searchData">
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
- <div id="searchData" class="row col-md-12">
- <div class="col-md-12"  style="padding-top: 0px;">
-	<h6>Search Hospitals:</h6>	 
-</div>
-		<div class="col-3">
-				<label  for="State">State&#9733;</label>
-	<select class="form-select" id="select-2" name="select-2">
+ 			
+ 			
+		 
+				<div class="col-auto">
+				<label  for="State">* State</label>
+				<select class="form-select" id="select-2" name="select-2">
 		 <option value="">Show All</option>
 				    <% 
     for(int j=0;j<statesJsonArray.length();j++){
@@ -393,7 +337,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 	<% } %> 
    </select>
 		</div> 
-				<div class="col-2">
+				<div class="col-auto">
 				<label  for="District">District</label>
 				<select class="form-select" id="select-3" name="select-3">
 				    <option value="">Show All</option>
@@ -418,7 +362,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				    <option value="">Show All</option>
 				 </select>
 				</div>  -->
-				<div class="col-2">
+				<div class="col-auto">
 				<label  for="Mandal">Mandal</label>
 				<select class="form-select" id="select-4" name="select-4">
 				    <option value="">Show All</option>
@@ -446,13 +390,20 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				    <% } } %> 
 				 </select>
 				</div>
-						<div class="col-3">
+				<div class="col-auto">
+				 <label  for="Type">Type</label>
+				<select class="form-select" id="select-1" name="select-1">
+				    <option value="">Show All</option>
+				 </select>
+				</div>
+				<div class="col-auto">
 				
 				<label  for="Speciality Name">Speciality Name</label>
 				<select class="form-select" id="select-5" label="Speciality Name" name="select-5">
 				    <option value="">Show All</option>
 				    <%
-				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null);
+				    String specialityId=null;
+				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(specialityId,pageId1);
 				      System.out.print("speciality_List 123"+speciality_List.toString());
 				      for(int j=0;j<speciality_List.length();j++){
 			        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
@@ -469,7 +420,7 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				    
 				 </select>
 				</div> 
-				<div class="col-md-2">
+				<div class="col-auto">
                   <div class="serchbtn-sec"> 
 				      <button type="button" id="resetBtnS" class="btn btn-secondary resetbtnclass" style="margin-top: 23px;width: 100%;font-size:13px;">Reset</button>
                   </div>
@@ -580,9 +531,10 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 				    <% } %>
 				 </select>
 				</div> --%>
- </div>
+
  </form>
-        <div id="recordList" class="table-responsive-md">
+  </div>
+        <div id="recordList" class="table-responsive-lg">
   <!--       <table id="datatables" class="table table-bordered table-striped table-hover display nowrap" cellspacing="0" style=""width:100%">
         <thead class='table-dark'> 
         <th>Name of Hospital</th>

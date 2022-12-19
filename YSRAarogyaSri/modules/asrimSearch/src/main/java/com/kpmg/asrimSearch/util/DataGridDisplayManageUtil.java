@@ -18,7 +18,7 @@ import org.json.JSONObject;
 	org.json.JSONArray array = null;
 	try {
 		String url="";
-		if(pId==513){
+		if(pId==513 ||pId==589){
 			url="http://10.48.19.62:8091/portalsearchapi/public-asri/hospital-statewisecount";
 		}
 		else if(pId==507 ) {
@@ -199,12 +199,19 @@ public static org.json.JSONArray getDistrictAsrimMitrasCount(String stateId) {
 	return array;
  }
 
-public static org.json.JSONArray getAsriSpecialityCount(String specialityId) {
+public static org.json.JSONArray getAsriSpecialityCount(String specialityId, long pId) {
 	org.json.JSONObject myObject =null;
 	org.json.JSONArray array = null;
 	try {
 		 final String POST_PARAMS = "{\n" + "\"specialityId\": "+specialityId+ "\n}";
 		    System.out.println(POST_PARAMS);
+		    String rl4="";
+		    if(pId==517) {
+		    	rl4="http://10.48.19.62:8091/portalsearchapi/public-asri/specialitysearchcount";
+		    }
+		    else if(pId==495) {
+		    	rl4="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/specialitysearchcount";
+		    }
 		   URL obj = new URL("http://10.48.19.62:8091/portalsearchapi/public-asri/specialitysearchcount");
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 		   postConnection.setRequestMethod("POST");
@@ -411,7 +418,7 @@ public static org.json.JSONObject getprocedureList(String specialityId,long pId)
 				url="http://10.48.19.62:8091/portalsearchapi/public-asri/procedurebyspeciality";
 			}
 			else if(pId==511) {
-				url="http://10.48.19.62:8091/portalsearchapi/public-asri/procedurebyspeciality";
+				url="http://10.48.19.62:8092/portalsearchapi/public-ar/procedurebyspeciality";
 			}
 			else if(pId==495 || pId==505) {
 				url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/procedurebyspeciality";
