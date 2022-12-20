@@ -43,6 +43,7 @@ function stoploader(){
  String DIST_ID = ParamUtil.getString(request,"districtId").trim();//ParamUtil.getString(request, "DIST_ID");
  String stateId = ParamUtil.getString(request, "stateId").trim();
  String stateName="";
+ String specialityId = ParamUtil.getString(request, "specialityId").trim();
  String distId="";
  String HOSP_TYPE=ParamUtil.getString(request, "HOSP_TYPE").trim();
  
@@ -177,6 +178,26 @@ function stoploader(){
                             }
                        column.search(val,true,false,true).draw();
                    });
+                     	
+                     	
+                     	
+                      	if(column[0][0]==1){
+                            column
+                               .data()
+                               .unique()
+                               .sort()
+                               .each(function (d, j) {
+       							d=$.trim(d);
+       							if(d!="" && d!=null){
+       								if(column.search() === '^'+d+'$'){
+       	                         		$('#select-'+column[0][0]).append('<option value="'+d+'" selected="selected">'+d.substr(0,30)+'</option>' )
+       								} else {
+       									$('#select-'+column[0][0]).append( '<option value="'+d+'">'+d.substr(0,30)+'</option>' )
+       								}
+       							}	
+                               });
+                         	}   	
+                  
                   	
                 });
 
@@ -280,7 +301,7 @@ function stoploader(){
 	if(pageId1==589){
 		pageTitle="Aarogyasri ";
 	}
-	else if(pageId1==1){
+	else if(pageId1==507){
 		pageTitle="Arogya Raksha ";
 	}
 	else if(pageId1==499){
@@ -307,6 +328,8 @@ function stoploader(){
 		speciality="/web/guest/ehsspeciality";
 		nearbyhptls="/web/guest/nearby-hospitals";
 	}
+	
+	if(pageId1==589|| pageId1==593 || pageId1==497|| pageId1==585||pageId1==595 ||pageId1==503){
 	 %>
 	
 			<div class="row">
@@ -316,7 +339,7 @@ function stoploader(){
 				<a href="<%=nearbyhptls %>"  class="btn search_sm_btn"><i class="fa-solid fa-hospital"></i> Hospitals Near Me</a>
 			  </div> <!--end of col-->
 			</div>
-
+<% } %>
 	
 		  <h3><%=pageTitle %> State Empanlled Hospitals</h3>
 
@@ -402,15 +425,30 @@ function stoploader(){
 				<select class="form-select" id="select-5" label="Speciality Name" name="select-5">
 				    <option value="">Show All</option>
 				    <%
-				    String specialityId=null;
-				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(specialityId,pageId1);
+				    //String specialityId=null;
+				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null,pageId1);
 				      System.out.print("speciality_List 123"+speciality_List.toString());
 				      for(int j=0;j<speciality_List.length();j++){
 			        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
-			    	   long proceduresCount=data.getLong(0);
-			    	   long hospitalCount=data.getLong(1);
-			    	   String diseaseId=data.getString(2);
-			    	   String disease_Name=data.getString(3);
+			        	long proceduresCount=0;
+				    	   long hospitalCount=0;
+				    	   String diseaseId="";
+				    	   String disease_Name="";
+			        	
+			    	     if(pageId1==495 || pageId1==505 || pageId1==585 || pageId1==595  || pageId1==499){ //ehs
+
+			    	    	     proceduresCount=data.getLong(1);
+					    	     hospitalCount=data.getLong(2);
+					    	     diseaseId=data.getString(2);
+					    	     disease_Name=data.getString(0); 
+			    	     }
+			    	     else{
+                             	 proceduresCount=data.getLong(0);
+					    	     hospitalCount=data.getLong(1);
+					    	     diseaseId=data.getString(2);
+					    	     disease_Name=data.getString(3); 
+			    	    	 
+			    	     }
 			    	   int postion_1=disease_Name.indexOf("(");
 			    	   if(postion_1!=0)
 			    	     disease_Name=disease_Name.substring(0, postion_1-1).trim();
@@ -422,7 +460,7 @@ function stoploader(){
 				</div> 
 				<div class="col-auto">
                   <div class="serchbtn-sec"> 
-				      <button type="button" id="resetBtnS" class="btn btn-secondary resetbtnclass" style="margin-top: 23px;width: 100%;font-size:13px;">Reset</button>
+				      <button type="button" id="resetBtnS" class="btn btn-secondary resetbtnclass" style="margin-top: 23px;width: 100%;font-size:13px;">Clear All</button>
                   </div>
               </div>
 			<script>
@@ -434,12 +472,14 @@ function stoploader(){
 				$('#select-4').find('option').remove().end().append('<option value="">Show all</option>');
 				$("#select-4").val("").trigger('change'); 
 				$("#select-5").val("").trigger('change');
+				$("#select-1").val("").trigger('change');
+				$('#select-1').find('option').remove().end().append('<option value="">Show all</option>');
 				 $("input[type='search']").val("").trigger('keyup');
 			});
 			
 			
 			function districtsData(state_Id){
-
+	    		   $('#select-3').prop("disabled", true);
 				 AUI().use('aui-base','aui-io-request-deprecated', 'aui-node', function(A){
 				    A.io.request('<%=getAjaxDataURL.toString() %>',{
 					    dataType : 'json',
@@ -457,6 +497,7 @@ function stoploader(){
 						
 				           			 
 				           			 $('#select-3').find('option').remove().end().append('<option value="">Show all</option>'); 
+				           			 $('#select-4').find('option').remove().end().append('<option value="">Show all</option>');
 				           			 $('#<portlet:namespace />searchComplaintTypeId').html("");
 				           			 jQuery.each(response, function(i, val) {
 				           		 	 $('#select-3').append("<option data='"+val.districtId+"' value='"+val.districtName+"'>"+val.districtName+"</option>");

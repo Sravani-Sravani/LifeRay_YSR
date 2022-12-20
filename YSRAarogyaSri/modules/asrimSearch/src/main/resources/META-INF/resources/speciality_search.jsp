@@ -39,6 +39,8 @@ long pageId1=themeDisplay.getPlid();
 		speciality="/web/guest/ehsspeciality";
 		nearbyhptls="/web/guest/nearby-hospitals";
 	}
+	
+	if(pageId1==589|| pageId1==593 || pageId1==515 || pageId1==497|| pageId1==585||pageId1==595){
 	 %>
 	
 			<div class="row">
@@ -48,15 +50,15 @@ long pageId1=themeDisplay.getPlid();
 				<a href="<%=nearbyhptls %>" class="btn search_sm_btn"><i class="fa-solid fa-hospital"></i> Hospitals Near Me</a>
 			  </div> <!--end of col-->
 			</div>
-	
+	<% } %>
 	  <div class="container">
 	  <%
 	  String pageTitle="";
 	  if(pageId1==513 || pageId1==589|| pageId1==593 ||pageId1==515){
 	  	pageTitle="Aarogyasri ";
 	  }
-	  else if(pageId1==507){
-	  	pageTitle="Arogya Raksha ";
+	  else if(pageId1==507 || pageId1==509){
+	  	pageTitle="Aarogya Raksha ";
 	  }
 	  else if(pageId1==585 || pageId1==497||pageId1==595){
 		  pageTitle="EHS";
@@ -75,10 +77,28 @@ long pageId1=themeDisplay.getPlid();
 		  	  
 		      for(int j=0;j<speciality_List.length();j++){
 	        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
-	    	   long proceduresCount=data.getLong(0);
-	    	   long hospitalCount=data.getLong(1);
-	    	   String diseaseId=data.getString(2);
-	    	   String diseaseName=data.getString(3);
+	        	
+	        	
+	        	long proceduresCount=0;
+		    	   long hospitalCount=0;
+		    	   String diseaseId="";
+		    	   String diseaseName="";
+	        	
+	    	     if(pageId1==595 || pageId1==497 || pageId1==503){ //503=wjhs, 595 = ehsspeciality, 497=ehs
+
+	    	    	     proceduresCount=Long.valueOf(data.getString(1));
+			    	     hospitalCount=Long.valueOf(data.getString(2));
+			    	     diseaseId=data.getString(2);
+			    	     diseaseName=data.getString(0); 
+	    	     }
+	    	 
+	    	     else{
+                  	 proceduresCount=data.getLong(0);
+			    	     hospitalCount=data.getLong(1);
+			    	     diseaseId=data.getString(2);
+			    	     diseaseName=data.getString(3); 
+	    	    	 
+	    	     }
 	    	    
 	    	   %>
 		      <div class="col-lg-3">

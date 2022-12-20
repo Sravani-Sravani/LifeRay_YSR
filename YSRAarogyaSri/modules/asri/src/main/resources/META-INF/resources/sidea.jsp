@@ -20,9 +20,9 @@
 									<li><a href="/">Applying for Card</a></li>	
                                     <li><a href="/">Adding Family Member</a></li>
 								</ul></div>
-							</li>    
-                            
-                            
+</li>    
+
+                                                      
 <li class="mb-1">
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myent-collapse" aria-expanded="false"> My Entitlements</button>
 								<div class="collapse" id="myent-collapse" data-bs-parent="#citizen-collapse">

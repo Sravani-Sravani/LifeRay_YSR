@@ -6,10 +6,7 @@
 <%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
 <%@ include file="/init.jsp" %>
 <%@ include file="/html/dataTableIncludes.jspf" %>  
-<portlet:resourceURL var="asrimHProceduresURL">
-<portlet:param name="cmd" value="proceduredList"/>
-<portlet:param name="cmdType" value="AsrimProceduresList"/>
-</portlet:resourceURL>
+
 <link href="/o/com.kpmg.asrimSearch/css/select2.min.css" rel="stylesheet" />
 <script src="/o/com.kpmg.asrimSearch/js/select2.min.js"></script> 
 <portlet:resourceURL var="getAjaxDataURL1"></portlet:resourceURL>
@@ -17,6 +14,12 @@
 themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
 long pageId1=themeDisplay.getPlid();
 %>
+
+<portlet:resourceURL var="asrimHProceduresURL">
+<portlet:param name="cmd" value="proceduredList"/>
+<portlet:param name="pageId" value="<%=String.valueOf(pageId1)  %>"/>
+<portlet:param name="cmdType" value="AsrimProceduresList"/>
+</portlet:resourceURL>
 <script>
 function stoploader(){
 	document.getElementById("loader").style.display = "none";
@@ -110,7 +113,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 	var dataTables = {
         tables:[
             {
-                select: "By Associate Number",
+                select: "By Associate Number	",
                 dataURL:"<%=asrimHProceduresURL.toString()%>",
                 columns:["Code","Speciality Name","Procedure Code","Procedure Name","Procedure Type","Package Amount","Aasara Amount","Pre Investigation","Post Operative/Procedure Investigation"],
                 options:{},
@@ -170,7 +173,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
                     var column = this; 
                  	$('#select-'+column[0][0]).on('change', function () {
                  		console.log("onchange action for >>>"+"#select-"+column[0][0]);
-                        var val = $('#select-'+column[0][0]).val();
+                        var val = $('#select-'+column[0][0]).val();                        
                         var id=$('#select-'+column[0][0]).find(':selected').attr('data');
                         console.log("id>>>"+id);
                         if(id!=undefined){
@@ -279,7 +282,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 				<select class="form-select" id="select-1" name="select-1">
 				    <option value="">Show All</option>
 				  <%
-				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(specialityId, pageId1);
+				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null, pageId1);
 				      System.out.print("speciality_List 123"+speciality_List.toString());
 				      for(int j=0;j<speciality_List.length();j++){
 			        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
