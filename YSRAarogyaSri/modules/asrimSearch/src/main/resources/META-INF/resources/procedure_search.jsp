@@ -110,20 +110,36 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 <script>
 	var primaryKeyColumn = 1;
 	var primaryKeyColumnName = "Name of Hospital";
+	
+	
 	var dataTables = {
-        tables:[
-            {
-                select: "By Associate Number	",
-                dataURL:"<%=asrimHProceduresURL.toString()%>",
-                columns:["Code","Speciality Name","Procedure Code","Procedure Name","Procedure Type","Package Amount","Aasara Amount","Pre Investigation","Post Operative/Procedure Investigation"],
-                options:{},
-                scrollX: false,
-                header: true,
-                footer: true
-            }
-       ]
-    };
-      
+	        tables:[
+	            {
+	                select: "By Associate Number	",
+	                dataURL:"<%=asrimHProceduresURL.toString()%>",
+	                columns:["Code","Speciality Name","Procedure Code","Procedure Name","Procedure Type","Package Amount","Aasara Amount","Pre Investigation","Post Operative/Procedure Investigation"],
+	                options:{},
+	                scrollX: false,
+	                header: true,
+	                footer: true
+	            }
+	       ]
+	    };
+	<%   if(pageId1==495 || pageId1==505){ %>
+	  dataTables = {
+	        tables:[
+	            {
+	                select: "By Associate Number	",
+	                dataURL:"<%=asrimHProceduresURL.toString()%>",
+	                columns:["Code","Speciality Name","Procedure Code","Procedure Name","Packages","Investigation"],
+	                options:{},
+	                scrollX: false,
+	                header: true,
+	                footer: true
+	            }
+	       ]
+	    };
+<% }  %>
 	function clearAndLoadData(selectedFilter){
 	var booleanflag=true;
 	   if(selectedFilter==5){ 
@@ -286,13 +302,39 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 				      System.out.print("speciality_List 123"+speciality_List.toString());
 				      for(int j=0;j<speciality_List.length();j++){
 			        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
-			    	   long proceduresCount=data.getLong(0);
-			    	   long hospitalCount=data.getLong(1);
-			    	   String diseaseId=data.getString(2);
-			    	   String disease_Name=data.getString(3);
+			    	  
+			        	
+			        	long proceduresCount=0;
+				    	   long hospitalCount=0;
+				    	   String diseaseId="";
+				    	   String disease_Name="";
+			        	
+			    	     if(pageId1==495 || pageId1==505){ //ehs
+
+			    	    	     proceduresCount=data.getLong(1);
+					    	     hospitalCount=data.getLong(2);
+					    	     diseaseId=data.getString(2);
+					    	     disease_Name=data.getString(0); 
+			    	     }
+			    	     else{
+                          	 proceduresCount=data.getLong(0);
+					    	     hospitalCount=data.getLong(1);
+					    	     diseaseId=data.getString(2);
+					    	     disease_Name=data.getString(3); 
+			    	    	 
+			    	     }
 			    	   int postion_1=disease_Name.indexOf("(");
+			    	   
+			    	   if(postion_1!=0 && (pageId1==495 || pageId1==505)){
+			    		   System.out.println("disease_Name>>>"+disease_Name);
+			    		  diseaseId=disease_Name.substring(postion_1+1,disease_Name.length()-1).trim();
+			    	   System.out.println("diseaseId>>>"+diseaseId);
+			    	   }
+			    	   
 			    	   if(postion_1!=0)
 			    	     disease_Name=disease_Name.substring(0, postion_1-1).trim();
+			    	   
+			    	  
 				    %>
 				    <option data="<%=diseaseId %>" value="<%=disease_Name%>"><%=disease_Name %></option>
 				    <% } %>

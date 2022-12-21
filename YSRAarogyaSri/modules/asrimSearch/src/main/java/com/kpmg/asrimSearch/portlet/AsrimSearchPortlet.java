@@ -236,23 +236,25 @@ public class AsrimSearchPortlet extends MVCPortlet {
 	 JSONArray jsonarray =new JSONArray();
 		JSONObject myObject =null;
 		try {
-			     final String POST_PARAMS = "{\n" + "\"surgeryid\": \"M1.8\"" +"}";
-			    System.out.println(POST_PARAMS);
+			     String POST_PARAMS = "";
+			    
 			     String rl5="";
 			     String method="";
 			     if(pId==517 || pId==515){
+			    	 POST_PARAMS = "{\n" + "\"surgeryid\": \"M1.8\"" +"}";
 			    	 method="POST";
 			    	 rl5="http://10.48.19.62:8091/portalsearchapi/public-asri/searchProcedure";
 					}
 					else if(pId==511 ||pId==507) {
+						POST_PARAMS = "{\n" + "\"surgeryid\": \"M1.8\"" +"}";
 						method="POST";
 						rl5="http://10.48.19.62:8092/portalsearchapi/public-ar/searchProcedure";
 					}
 					else if(pId==495 || pId==505) {
 						method="GET";
-						rl5="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/searchProcedure";
+						rl5="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/searchProcedure"; 
 					}
-			     
+			     System.out.println(POST_PARAMS);
 			     System.out.println("urls is"+rl5);
 				    URL obj = new URL(rl5);
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
@@ -261,12 +263,13 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			      postConnection.setRequestProperty("Accept", "application/json;odata=verbose");
 		          postConnection.setDoOutput(true);
 		 	      postConnection.setDoInput(true);
-		 	   
+		 	     if(pId==517 || pId==515 || pId==511 ||pId==507){
 			    OutputStream os = postConnection.getOutputStream();
 			    System.out.println("hell");
 			    os.write(POST_PARAMS.getBytes());
 			    os.flush();
 			    os.close();
+		 	     }
 			    int responseCode = postConnection.getResponseCode();
 			     
 			    if (responseCode == 200 || responseCode == HttpURLConnection.HTTP_CREATED) { //success
