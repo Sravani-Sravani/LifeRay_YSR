@@ -210,13 +210,13 @@ public static org.json.JSONArray getAsriSpecialityCount(String specialityId, lon
 		    
 		    
 		    String rl4="";
-		    if(pId==517 || pId==589 || pId==593 || pId==515) {  //593=asrispeciality, 515=asri_specilitysearch
+		    if(pId==517 || pId==589 || pId==593 || pId==515 ||pId==513) {  //593=asrispeciality, 515=asri_specilitysearch
 		    	rl4="http://10.48.19.62:8091/portalsearchapi/public-asri/specialitysearchcount";
 		    }
 		    else if(pId==507 || pId==509 ||pId==511) {
 		    	rl4="http://10.48.19.62:8092/portalsearchapi/public-ar/specialitysearchcount";
 		    }
-		    else if(pId==495  || pId==585 || pId==595 || pId==497 || pId==503 || pId==499 || pId==505){    //499=wjhs  495=EHS hospitallist, 585=  ,      503=wjhs, 595 = ehsspeciality, 497=ehs
+		    else if(pId==495  || pId==585 || pId==595 || pId==497 || pId==503 || pId==499 || pId==505 ||pId==491){    //499=wjhs  495=EHS hospitallist, 585=  ,      503=wjhs, 595 = ehsspeciality, 497=ehs
 		    	rl4="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/specialitysearchcount";
 		    }
 		    
@@ -272,7 +272,7 @@ public static org.json.JSONObject getStates(long pId) {
 		else if(pId==507 || pId==5) {
 			url="http://10.48.19.62:8092/portalsearchapi/public-ar/statelist";
 		}
-		else if(pId==499 || pId==491 || pId==585 ){ //pId==499 || pId==491
+		else if(pId==499 || pId==491 || pId==585 ||pId==497 || pId==503){ //pId==499 || pId==491
 			url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/statelist";
 		}
 		   URL obj = new URL(url);

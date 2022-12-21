@@ -46,7 +46,7 @@ long pageId1=themeDisplay.getPlid();
 			<div class="row">
 				<div class="col-lg-12 text-end">
 				<a href="<%=geography %>" class="btn search_sm_btn"><i class="fa-solid fa-location-dot"></i> Search by Geography</a>
-				<a href="<%=speciality %>"  class="btn search_sm_btn"><i class="fa-solid fa-user-doctor"></i> Search by Speciality</a>
+				<a href="<%=speciality %>"  class="btn search_sm_btn_active"><i class="fa-solid fa-user-doctor"></i> Search by Speciality</a>
 				<a href="<%=nearbyhptls %>" class="btn search_sm_btn"><i class="fa-solid fa-hospital"></i> Hospitals Near Me</a>
 			  </div> <!--end of col-->
 			</div>
@@ -84,10 +84,10 @@ long pageId1=themeDisplay.getPlid();
 		    	   String diseaseId="";
 		    	   String diseaseName="";
 	        	
-	    	     if(pageId1==595 || pageId1==497 || pageId1==503){ //503=wjhs, 595 = ehsspeciality, 497=ehs
+	    	     if(pageId1==595 || pageId1==497 || pageId1==503 ||pageId1==495 || pageId1==491){ //503=wjhs, 595 = ehsspeciality, 497=ehs
 
-	    	    	     proceduresCount=Long.valueOf(data.getString(1));
-			    	     hospitalCount=Long.valueOf(data.getString(2));
+	    	    	     proceduresCount=data.getLong(1);
+			    	     hospitalCount=data.getLong(2);
 			    	     diseaseId=data.getString(2);
 			    	     diseaseName=data.getString(0); 
 	    	     }

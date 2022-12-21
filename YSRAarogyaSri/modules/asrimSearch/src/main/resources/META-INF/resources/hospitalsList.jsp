@@ -307,7 +307,7 @@ function stoploader(){
 	else if(pageId1==499){
 		pageTitle="WJHS ";
 	}
-	else if(pageId1==585){
+	else if(pageId1==585 ){
 		pageTitle="EHS ";
 	}
 	%>
@@ -334,14 +334,14 @@ function stoploader(){
 	
 			<div class="row">
 				<div class="col-lg-12 text-end">
-				<a href="<%=geography %>"  class="btn search_sm_btn"><i class="fa-solid fa-location-dot"></i> Search by Geography</a>
+				<a href="<%=geography %>"  class="btn search_sm_btn_active"><i class="fa-solid fa-location-dot"></i> Search by Geography</a>
 				<a href="<%=speciality %>"  class="btn search_sm_btn"><i class="fa-solid fa-user-doctor"></i> Search by Speciality</a>
 				<a href="<%=nearbyhptls %>"  class="btn search_sm_btn"><i class="fa-solid fa-hospital"></i> Hospitals Near Me</a>
 			  </div> <!--end of col-->
 			</div>
 <% } %>
 	
-		  <h3><%=pageTitle %> State Empanlled Hospitals</h3>
+		  <h3><%=pageTitle %> State Empanelled Hospitals</h3>
 
 		  <div id="searchData">
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
@@ -413,14 +413,15 @@ function stoploader(){
 				    <% } } %> 
 				 </select>
 				</div>
+				
 				<div class="col-auto">
 				 <label  for="Type">Type</label>
 				<select class="form-select" id="select-1" name="select-1">
 				    <option value="">Show All</option>
 				 </select>
 				</div>
-				<div class="col-auto">
 				
+				<div class="col-auto">
 				<label  for="Speciality Name">Speciality Name</label>
 				<select class="form-select" id="select-5" label="Speciality Name" name="select-5">
 				    <option value="">Show All</option>
@@ -435,7 +436,7 @@ function stoploader(){
 				    	   String diseaseId="";
 				    	   String disease_Name="";
 			        	
-			    	     if(pageId1==495 || pageId1==505 || pageId1==585 || pageId1==595  || pageId1==499){ //ehs
+			    	     if(pageId1==495 || pageId1==505 || pageId1==585 || pageId1==595  || pageId1==499 || pageId1==491 || pageId1==497 || pageId1==503){ //ehs
 
 			    	    	     proceduresCount=data.getLong(1);
 					    	     hospitalCount=data.getLong(2);
@@ -473,7 +474,7 @@ function stoploader(){
 				$("#select-4").val("").trigger('change'); 
 				$("#select-5").val("").trigger('change');
 				$("#select-1").val("").trigger('change');
-				$('#select-1').find('option').remove().end().append('<option value="">Show all</option>');
+				
 				 $("input[type='search']").val("").trigger('keyup');
 			});
 			
@@ -575,7 +576,7 @@ function stoploader(){
 
  </form>
   </div>
-        <div id="recordList" class="table-responsive-lg">
+        <div id="recordList" class="table-responsive-md">
   <!--       <table id="datatables" class="table table-bordered table-striped table-hover display nowrap" cellspacing="0" style=""width:100%">
         <thead class='table-dark'> 
         <th>Name of Hospital</th>
@@ -592,6 +593,7 @@ function stoploader(){
         <thead class='table-dark'> 
         <th>Name of Hospital</th>
         <th>Hospital Type</th>
+        
         <th>Hospital Address</th>
         <th>District</th>
         <th>Specialities</th>
@@ -619,13 +621,3 @@ $(document).ready(function() {
  
 </script>
  
-<style>
- th, td { white-space: nowrap; }
-    div.dataTables_wrapper {
-        margin: 0 auto;
-    }
- 
-    div.container {
-        width: 80%;
-    }
-</style>

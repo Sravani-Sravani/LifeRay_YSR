@@ -125,6 +125,21 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 	            }
 	       ]
 	    };
+	<%   if(pageId1==511){ %>
+	  dataTables = {
+		        tables:[
+		            {
+		                select: "By Associate Number	",
+		                dataURL:"<%=asrimHProceduresURL.toString()%>",
+		                columns:["Code","Speciality Name","Procedure Code","Procedure Name","Package Amount","Pre Investigation","Post Operative/Procedure Investigation"],
+		                options:{},
+		                scrollX: false,
+		                header: true,
+		                footer: true
+		            }
+		       ]
+		    };
+	  <% }  %>
 	<%   if(pageId1==495 || pageId1==505){ %>
 	  dataTables = {
 	        tables:[
@@ -140,6 +155,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 	       ]
 	    };
 <% }  %>
+
 	function clearAndLoadData(selectedFilter){
 	var booleanflag=true;
 	   if(selectedFilter==5){ 
@@ -309,7 +325,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 				    	   String diseaseId="";
 				    	   String disease_Name="";
 			        	
-			    	     if(pageId1==495 || pageId1==505){ //ehs
+			    	     if(pageId1==495 || pageId1==505 ||pageId1==491){ //ehs
 
 			    	    	     proceduresCount=data.getLong(1);
 					    	     hospitalCount=data.getLong(2);
@@ -355,7 +371,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 				</div>
 					<div class="col-auto">
                   <div class="serchbtn-sec"> 
-				      <button type="button" id="resetBtnS" class="btn btn-secondary resetbtnclass" style="margin-top: 23px;width: 100%;font-size:13px;">Reset</button>
+				      <button type="button" id="resetBtnS" class="btn btn-secondary resetbtnclass" style="margin-top: 23px;width: 100%;font-size:13px;">Clear All</button>
                   </div>
               </div>
 			<script>
@@ -420,13 +436,3 @@ $(document).ready(function() {
  
 </script>
  
-<style>
- th, td { white-space: nowrap; }
-    div.dataTables_wrapper {
-        margin: 0 auto;
-    }
- 
-    div.container {
-        width: 80%;
-    }
-</style>
