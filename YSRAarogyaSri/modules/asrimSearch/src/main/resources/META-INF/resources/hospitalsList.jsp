@@ -298,7 +298,7 @@ function stoploader(){
 
 	<%
 	String pageTitle="";
-	if(pageId1==589){
+	if(pageId1==589 || pageId1==513){
 		pageTitle="Aarogyasri ";
 	}
 	else if(pageId1==507){
@@ -307,7 +307,7 @@ function stoploader(){
 	else if(pageId1==499){
 		pageTitle="WJHS ";
 	}
-	else if(pageId1==585 ){
+	else if(pageId1==585 ||pageId1==491 ){
 		pageTitle="EHS ";
 	}
 	%>
@@ -346,7 +346,46 @@ function stoploader(){
 		  <div id="searchData">
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
  			
- 			
+ 			<%if(pageId1==595 || pageId1==593){ %>
+ 							<div class="col-auto">
+				<label  for="Speciality Name">* Speciality Name</label>
+				<select class="form-select" id="select-5" label="Speciality Name" name="select-5">
+				    <option value="">Show All</option>
+				    <%
+				    //String specialityId=null;
+				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null,pageId1);
+				      System.out.print("speciality_List 123"+speciality_List.toString());
+				      for(int j=0;j<speciality_List.length();j++){
+			        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
+			        	long proceduresCount=0;
+				    	   long hospitalCount=0;
+				    	   String diseaseId="";
+				    	   String disease_Name="";
+			        	
+			    	     if(pageId1==495 || pageId1==505 || pageId1==585 || pageId1==595  || pageId1==499 || pageId1==491 || pageId1==497 || pageId1==503){ //ehs
+
+			    	    	     proceduresCount=data.getLong(1);
+					    	     hospitalCount=data.getLong(2);
+					    	     diseaseId=data.getString(2);
+					    	     disease_Name=data.getString(0); 
+			    	     }
+			    	     else{
+                             	 proceduresCount=data.getLong(0);
+					    	     hospitalCount=data.getLong(1);
+					    	     diseaseId=data.getString(2);
+					    	     disease_Name=data.getString(3); 
+			    	    	 
+			    	     }
+			    	   int postion_1=disease_Name.indexOf("(");
+			    	   if(postion_1!=0)
+			    	     disease_Name=disease_Name.substring(0, postion_1-1).trim();
+				    %>
+				    <option value="<%=disease_Name%>"><%=disease_Name %></option>
+				    <% } %>
+				    
+				 </select>
+				</div> 
+ 			<%} %>
 		 
 				<div class="col-auto">
 				<label  for="State">* State</label>
@@ -420,7 +459,7 @@ function stoploader(){
 				    <option value="">Show All</option>
 				 </select>
 				</div>
-				
+				<%if(pageId1==585 || pageId1==589 ||pageId1==513 ||pageId1==491){ %>
 				<div class="col-auto">
 				<label  for="Speciality Name">Speciality Name</label>
 				<select class="form-select" id="select-5" label="Speciality Name" name="select-5">
@@ -459,6 +498,7 @@ function stoploader(){
 				    
 				 </select>
 				</div> 
+				<%} %>
 				<div class="col-auto">
                   <div class="serchbtn-sec"> 
 				      <button type="button" id="resetBtnS" class="btn btn-secondary resetbtnclass" style="margin-top: 23px;width: 100%;font-size:13px;">Clear All</button>

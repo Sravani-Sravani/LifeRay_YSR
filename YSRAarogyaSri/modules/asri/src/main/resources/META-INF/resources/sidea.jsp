@@ -1,33 +1,30 @@
-<div class="d-flex flex-column flex-shrink-0 sidebar_menu">
-
+					<div class="d-flex flex-column flex-shrink-0 sidebar_menu">
 						<button class="accordion-button btn_icon show" type="button" data-bs-toggle="collapse" data-bs-target="#citizen-collapse" aria-expanded="true" aria-controls="citizen-collapse">	
 						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;Citizens</button>
 					<div class="collapse show" id="citizen-collapse"> 
-						
-
-<ul class="list-unstyled ps-0">
+						<ul class="list-unstyled ps-0">
 <li class="mb-1">
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#eligible-collapse" aria-expanded="false"> Am I Eligible</button>
 								<div class="collapse" id="eligible-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="#">Click Here</a></li>									
+									<li><a href="/web/guest/am-i-eligible">Click Here</a></li>									
 								</ul></div>
 							</li>
 <li class="mb-1">
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myarg-collapse" aria-expanded="false"> My Aarogyasri Card</button>
 								<div class="collapse" id="myarg-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/">Applying for Card</a></li>	
-                                    <li><a href="/">Adding Family Member</a></li>
+									<li><a href="/web/guest/am-i-eligible">Applying for Card</a></li>	
+                                    <li><a href="/web/guest/am-i-eligible">Adding Family Member</a></li>
 								</ul></div>
-</li>    
-
-                                                      
+							</li>    
+                            
+                            
 <li class="mb-1">
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myent-collapse" aria-expanded="false"> My Entitlements</button>
 								<div class="collapse" id="myent-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/">Click Here</a></li>                                   
+									<li><a href="/web/guest/aarogya-aasara">Click Here</a></li>                                   
 								</ul></div>
 							</li>  
                             
@@ -55,7 +52,7 @@
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#asara-collapse" aria-expanded="false"> Aarogya Aasara</button>
 								<div class="collapse" id="asara-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/">Click Here</a></li>                                   
+									<li><a href="/web/guest/aarogya-aasara">Click Here</a></li>                                   
 								</ul></div>
 							</li>                            
                             
@@ -82,7 +79,7 @@
 								</button>
 								<div class="collapse" id="history-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="#">Click Here</a></li>
+									<li><a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysraarogyasri_app&hl=en&pli=1" target="_blank">Click Here</a></li>
                                     Please register on the app to get your Treatment History
 								</ul>
 								</div>
@@ -96,7 +93,7 @@
 								</button>
 								<div class="collapse" id="usermanuals-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysraarogyasri_app&hl=en&pli=1" target="_blank">Click Here</a></li>
+									<li><a href="/web/guest/arogyamithra" target="_blank">Click Here</a></li>
                                     
 								</ul>
 								</div>
@@ -127,7 +124,7 @@
 						  </ul>
 						</div>
 					  </li>
-					  <li class="mb-1">
+					  <!-- <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patient-collapse1" aria-expanded="false">
 							Search Hospitals
 						</button>
@@ -139,7 +136,19 @@
 							<li><a href="/web/guest/nearby-hospitals">Find a Hospital Near Me</a></li>
 							  </ul>
 						</div>
+					  </li> -->
+
+					  <li class="mb-1">
+						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patient-collapse1" aria-expanded="false">
+							Hospital Login
+						</button>
+						<div class="collapse" id="patient-collapse1" data-bs-parent="#hospital-collapse">
+						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+							<li><a href="/web/guest/signin" target="_blank">Click Here</a></li>							
+							  </ul>
+						</div>
 					  </li>
+
 					  <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#employees-collapse1" aria-expanded="false">
 							IT Assistance
@@ -153,3 +162,4 @@
 					  </li>
 					</ul> 
 					</div>
+				  </div>

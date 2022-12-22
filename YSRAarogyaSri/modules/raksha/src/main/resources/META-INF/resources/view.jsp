@@ -23,10 +23,6 @@ if(pageId==6 || pageId==87){ %>
 <%@ include file="/health_who_is_who_trust.jsp" %>
 <%}else if(pageId==177){ %>
 <%@ include file="/salient_features.jsp" %>
-<%}else if(pageId==145){ %>
-<%@ include file="/ysr_caution.jsp" %>
-<%}else if(pageId==71){ %>
-<%@ include file="/ysr_circulars.jsp" %>
 <%}else if(pageId==95){ %>
 <%@ include file="/ysr_healthcare_trust.jsp" %>
 <%}else if(pageId==21){ %>

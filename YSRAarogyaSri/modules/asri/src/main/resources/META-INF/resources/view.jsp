@@ -11,10 +11,6 @@ System.out.println("pageId="+pageId);
 
 if(pageId==443||pageId==6 || pageId==19){ %>
 <%@ include file="/asri.jsp" %>
-<%}else if(pageId==314){ %>
-<%@ include file="/archives_new.jsp" %>
-<%} else if(pageId==318){ %>
-<%@ include file="/archives_old.jsp" %>
 <%}else if(pageId==99){ %>
 <%@ include file="/asrischeme.jsp" %>
 <%}else if(pageId==294){ %>
@@ -49,8 +45,6 @@ if(pageId==443||pageId==6 || pageId==19){ %>
 <%@ include file="/changerequest.jsp" %>
 <%}else if(pageId==429){ %>
 <%@ include file="/fix_incl.jsp" %>
-<%}else if(pageId==427){ %>
-<%@ include file="/changerequest.jsp" %>
 <%}else{ %>
 PageIsNotFound in asri
 <%}

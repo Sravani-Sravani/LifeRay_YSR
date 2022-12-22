@@ -117,7 +117,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 	            {
 	                select: "By Associate Number	",
 	                dataURL:"<%=asrimHProceduresURL.toString()%>",
-	                columns:["Code","Speciality Name","Procedure Code","Procedure Name","Procedure Type","Package Amount","Aasara Amount","Pre Investigation","Post Operative/Procedure Investigation"],
+	                columns:["Code","Speciality Name","Treatments Code","Treatments Name","Treatments Type","Package Amount","Aasara Amount","Pre Investigation","Post Operative/Treatments Investigation"],
 	                options:{},
 	                scrollX: false,
 	                header: true,
@@ -131,7 +131,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 		            {
 		                select: "By Associate Number	",
 		                dataURL:"<%=asrimHProceduresURL.toString()%>",
-		                columns:["Code","Speciality Name","Procedure Code","Procedure Name","Package Amount","Pre Investigation","Post Operative/Procedure Investigation"],
+		                columns:["Code","Speciality Name","Treatments Code","Treatments Name","Package Amount","Pre Investigation","Post Operative/Treatments Investigation"],
 		                options:{},
 		                scrollX: false,
 		                header: true,
@@ -146,7 +146,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 	            {
 	                select: "By Associate Number	",
 	                dataURL:"<%=asrimHProceduresURL.toString()%>",
-	                columns:["Code","Speciality Name","Procedure Code","Procedure Name","Packages","Investigation"],
+	                columns:["Code","Speciality Name","Treatments Code","Treatments Name","Packages","Investigation"],
 	                options:{},
 	                scrollX: false,
 	                header: true,
@@ -288,7 +288,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
   <div class="col-md-4"></div>
   </div> -->
 	  <div class="container search_panel">
-		  <h3><%=pageTitle %> / Procedure Search</h3>
+		  <h3><%=pageTitle %> / Treatments Search</h3>
 		   <div id="searchData">
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
  <!--
@@ -363,7 +363,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 				 </select>
 				</div>-->
 				<div class="col-auto">
-				<label  for="Procedure Name">Procedure Name</label>
+				<label  for="Procedure Name">Treatments Name</label>
 				<select class="form-select" id="select-3" name="select-3">
 				    <option value="">Show All</option>
 

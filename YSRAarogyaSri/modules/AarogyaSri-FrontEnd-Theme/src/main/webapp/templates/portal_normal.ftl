@@ -121,28 +121,31 @@ crossorigin="anonymous"></script>
 			  </li>
 				<li><a class="dropdown-item <#if pageId==27> active </#if>" href="/ehs">${ehs_short}</a>
 				</li>
-				<li><a class="dropdown-item <#if pageId==25> active </#if>"  href="/wjhs">${wjhs_short}</a>
-				</li>
-				<li><a class="dropdown-item <#if pageId==21> active </#if>" href="/arogyaraksha">${ar}</a>
+			<li><a class="dropdown-item <#if pageId==599> active </#if>" href="/web/guest/aarogya-aasara" >Aarogya Aasara<span></span></a>
+			  </li>
+			  <li><a class="dropdown-item <#if pageId==21> active </#if>" href="/arogyaraksha">${ar}</a>
 				
 				</li>
+				<li><a class="dropdown-item <#if pageId==25> active </#if>"  href="/wjhs">${wjhs_short}</a>
+				</li>
+				
 			  </ul>
 			</li>
 			
 			
 		<li class="nav-item dropdown">
-        <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">Network Hospitals</a>
+        <a class="nav-link dropdown-toggle <#if pageId==589 || pageId==585 > active </#if>" data-bs-toggle="dropdown" aria-expanded="false">Network Hospitals</a>
         <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="/web/guest/search-by-geography">Aarogyasri  </a></li>
-        <li><a class="dropdown-item" href="/web/guest/ehs-v4">EHS</a></li>
+        <li><a class="dropdown-item" <#if pageId==589> active </#if> href="/web/guest/search-by-geography">Aarogyasri  </a></li>
+        <li><a class="dropdown-item"  <#if pageId==585> active </#if> href="/web/guest/ehs-v4">EHS</a></li>
          </ul>
       </li> 
       
             <li class="nav-item dropdown">
-        <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">Treatments Covered</a>
+        <a class="nav-link dropdown-toggle <#if pageId==517 || pageId==495 > active </#if>" data-bs-toggle="dropdown" aria-expanded="false">Treatments Covered</a>
         <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="/web/guest/asri_proceduresearch">Aarogyasri </a></li>
-          <li><a class="dropdown-item" href="/web/guest/ehs_proceduresearch">EHS</a></li>
+        <li><a class="dropdown-item" <#if pageId==517> active </#if> href="/web/guest/asri_proceduresearch">Aarogyasri </a></li>
+          <li><a class="dropdown-item" <#if pageId==495> active </#if> href="/web/guest/ehs_proceduresearch">EHS</a></li>
          </ul>
       </li>  
 			<!--<li class="nav-item"><a class="nav-link" href="#">${know_more}</a></li>  --> 

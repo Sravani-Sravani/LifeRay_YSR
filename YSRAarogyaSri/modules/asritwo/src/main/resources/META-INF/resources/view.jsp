@@ -15,10 +15,6 @@ if(pageId==443){ %>
 <%@ include file="/who_is_who_trust.jsp" %>
 <%}else if(pageId==282){ %>
 <%@ include file="/asri_agreements_bw_trust_and_network_hospitals.jsp" %>
-<%}else if(pageId==529){ %>
-<%@ include file="/archives_new.jsp" %>
-<%}else if(pageId==527){ %>
-<%@ include file="/archives_old.jsp" %>
 <%}else if(pageId==531){ %>
 <%@ include file="/asri_circulars.jsp" %>
 <%}else if(pageId==537){ %>

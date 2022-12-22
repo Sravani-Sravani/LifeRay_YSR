@@ -69,25 +69,20 @@ else if(pageId1==507){
 	        map.put("Guntur", "https://www.google.com/maps/d/embed?mid=17ZSiCA8vUZxU1yGxe2F1wzde8zsnKjQ&ehbc=2E312F");
 	        
 	        HashMap<String,String> image = new HashMap<>();
-	        image.put("Anantapur", "http://localhost:8080/documents/d/guest/677ecec6-ebb6-46c0-b356-18fef06c1eb6");
-	        image.put("", "");
-	        image.put("r", "");
-	        image.put("", "");
-	        image.put("", "");
-	        image.put("", "");
-	        image.put("", "");
-	        image.put("", "");
-	        image.put("", "");
-	        image.put("", "");image.put("", "");
-	        image.put("", "");
-	        image.put("", "");
-	        image.put("", "");
-	        image.put("", "");
-	        image.put("", "");
-	        image.put("", "");
-	        image.put("", "");
-	        image.put("", "");
-	        image.put("", "");
+	        image.put("Anantapur", "/documents/d/guest/anantapur");
+	        image.put("Srikakulam", "/documents/d/guest/srikakulam");
+	        image.put("Vizianagaram", "/documents/d/guest/vizianagaram");
+	        image.put("Vishakhapatnam", "/documents/d/guest/vishakhapatnam");
+	        image.put("East Godavari", "/documents/d/guest/east_godawari");
+	        image.put("West Godavari", "/documents/d/guest/west_godavari");
+	        image.put("Krishna", "/documents/d/guest/krishna");
+	        image.put("Prakasam", "/documents/d/guest/prakasam");
+	        image.put("Nellore", "/documents/d/guest/nellore");
+	        image.put("Chittoor", "/documents/d/guest/chittoor");
+	        image.put("YSR Kadapa", "/documents/d/guest/ysr_kadapa");
+	        image.put("Kurnool", "/documents/d/guest/kurnool");
+	        image.put("Guntur", "/documents/d/guest/guntur");
+
 		  try{
 			  
 			   
@@ -113,9 +108,9 @@ else if(pageId1==507){
 		</portlet:renderURL>
 		      <div class="col-lg-3">
 			  	<div class="card">
-				  <div class="card-body">
-				  
-				  <%
+			  	
+			  	
+			  			  <%
 				  String flag="";
 				  flag=image.get(districtName.trim());
 				  System.out.println("image is " + flag);
@@ -128,24 +123,34 @@ else if(pageId1==507){
 			      //System.out.println("sample is " + link);
 				  
 				  %>
-					<h5 class="card-title"><%=districtName %> &nbsp;<%if(link!=null){ %><a href=<%=link %> onclick="basicPopup(this.href);return false" ><img src="<%=flag %>" style="height:30px; width:40px;"/></a><%} %></h5>
+					<div class="d-flex align-items-center card-title">
+						<div class="flex-grow-1"><h5><%=districtName %> &nbsp;</h5></div>
+						<div><%if(link!=null){ %><a href="<%=link %>" onclick="basicPopup(this.href);return false"><img src="<%=flag %>" alt="<%=districtName %>"  data-bs-toggle="tooltip" data-bs-placement="top" title="View Map!" /></a><%} %></div>
+					</div>
+				  <div class="card-body">
+				  
+		
+				  
+					<%--<h5 class="card-title"><%=districtName %> &nbsp;<%if(link!=null){ %><a href=<%=link %> onclick="basicPopup(this.href);return false" ><img src="<%=flag %>" style="height:30px; width:40px;"/></a><%} %></h5>
 					
-					<%-- <a style="cursor: pointer;" onClick="viewRecords('<%=districtName %>','Government');" class="card-link">Government - <%=String.valueOf(govtHospitalCount) %> </a>
+					 <a style="cursor: pointer;" onClick="viewRecords('<%=districtName %>','Government');" class="card-link">Government - <%=String.valueOf(govtHospitalCount) %> </a>
 					<a style="cursor: pointer;" onClick="viewRecords('<%=districtName %>','Private');" class="card-link">Private - <%=String.valueOf(privateHospitalCount) %></a>
 				  --%> 
 				  
 				  <a href="<%=viewGovtHospitalsURL %>" style="cursor: pointer;"  class="card-link">Government - <%=String.valueOf(govtHospitalCount) %> </a>
 				<a href="<%=viewPrivateHospitalsURL %>" style="cursor: pointer;" class="card-link">Private - <%=String.valueOf(privateHospitalCount) %></a>
 				  
-				  </div>
-				  
+				  </div>	  
 				</div>
+
+				
 			  </div>
 			  <%  } }catch(Exception e){e.printStackTrace();} %>
-		 </div>
+		
+		</div> </div>
 	</section>  <!-- services_section -->
 	   </div>
-	</div><!--ysri_section-->	
+	<!--ysri_section-->	
 <script>
 function viewRecords(recordId,HOSP_TYPE){
 	$('#<portlet:namespace />viewRecords').find('input[name=<portlet:namespace />districtId]').val(recordId);
@@ -165,6 +170,12 @@ function viewRecords(recordId,HOSP_TYPE){
 	}
   </script>
 
+<script>
+	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+	var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+	  return new bootstrap.Tooltip(tooltipTriggerEl)
+	})
+	</script>
 		<portlet:renderURL var="viewRecordsURL">
 			<portlet:param name="mvcPath" value="/hospitalsList.jsp"/> 
 		</portlet:renderURL> 

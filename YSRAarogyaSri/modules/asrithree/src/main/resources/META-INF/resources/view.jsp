@@ -13,6 +13,10 @@ if(pageId==6){ %>
 <%@ include file="/follow_up_guidelines_new.jsp" %>
 <%}else if(pageId==551){ %>
 <%@ include file="/follow_up_guidelines_new.jsp" %>
+<%}else if(pageId==601){ %>
+<%@ include file="/amieligible.jsp" %>
+<%}else if(pageId==599){ %>
+<%@ include file="/aasara.jsp" %>
 <%}else{ %>
 PageIsNotFound in asri
 <%}

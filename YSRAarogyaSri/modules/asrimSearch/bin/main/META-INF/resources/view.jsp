@@ -26,6 +26,7 @@ long pageId=themeDisplay.getPlid();
 				</div>
 			</div>
 		</div>
+		
 	</div> -->
 	<!--main_heading_breadcrum-->
 	
