@@ -30,7 +30,7 @@
                 The scheme is designed in such a way that the benefit in the primary care is addressed through free screening and outpatient consultation both in the health camps and in the network hospitals as part of scheme implementation.
             </li>
             <li><strong>In-Patient</strong>
-                The scheme shall provide coverage for the 2434 "Listed Therapies" for identified diseases in the 30 categories '€“ Are listed in website: www.ysraarogyasri.ap.gov.in
+                The scheme shall provide coverage for the 3255 "Listed Therapies" for identified diseases in the 31 categories '€“ Are listed in website: www.ysraarogyasri.ap.gov.in
             </li>
         </ul>
         <br>
@@ -46,11 +46,40 @@
             <ul class="nav nav-pills nav-stacked anyClass">
              <li class="nav-item colorchax" style=" color: whitesmoke"></li>
                 <br><strong>
-                1) GENERAL SURGERY<br>
-                2) ENT SURGERY<br>
-                3) OPHTHAMOLOGY<br>
-                4) GYNAECOLOGY &amp; OBSTETRICS<br>
-                5) ORTHOPEDIC SURGERY AND PROCEDURES<br> 6) SURGICAL GASTROENTEROLOGY<br> 7) CARDIOTHORASIC SURGERY<br> 8) PAEDIATRIC SURGERIES<br> 9) GENITO URINARY SURGERIES<br> 10) NEURO SURGERY<br> 11) SURGICAL ONCOLOGY<br> 12) MEDICAL ONCOLOGY<br> 13) RADIATION ONCOLOGY<br> 14) PLASTIC SURGERY<br> 15) POLYTRAUMA<br> 16) PROSTHESES<br> 17) CRITICAL CARE<br> 18) GENERAL MEDICINE<br> 19) INFECTIOUS DISEASES<br> 20) PEDIATRICS<br> 21) CARDIOLOGY<br> 22) NEPHROLOGY<br> 23) NEUROLOGY<br> 24) PULMONOLOGY<br> 25) DERMATOLOGY<br> 26) RHEUMATOLOGY<br> 27) ENDOCRINOLOGY<br> 28) GASTRO ENTEROLOGY<br> 29) PSYCHIATRY</strong><br><br></li> 
+                1) CARDIAC AND CARDIOTHORACIC SURGERY<br>
+                2) CARDIOLOGY<br>
+                3) COCHLEAR IMPLANT SURGERY<br>
+                4) CRITICAL CARE<br>
+                5) ODERMATOLOGY<br>
+                 6) ENDOCRINOLOGY<br> 
+                 7) ENT SURGERY<br>
+                 
+                 8) EPIDEMIC DISEASE<br> 
+                 9) GASTROENTEROLOGY<br> 
+                 10) GENERAL MEDICINE<br>
+                  11) GENERAL SURGERYY<br> 
+                  
+                  12) GENITO URINARY SURGERIES<br>
+                   13) GYNAECOLOGY AND OBSTETRICS SURGERY<br> 
+                   14) INFECTIOUS DISEASES<br> 
+                   15) MEDICAL ONCOLOGY<br> 
+                   16) NEPHROLOGY<br> 
+                   17) NEUROLOGY<br> 
+                   18) NEUROSURGERY<br>
+                    19) OPHTHALMOLOGY SURGERY<br> 
+                    20) ORGAN TRANSPLANTATION SURGERY<br> 
+                    21) ORTHOPEDIC SURGERY AND PROCEDURES<br> 
+                    22) PEDIATRIC SURGERIES<br> 
+                    23) PEDIATRICS<br> 
+                    24) PLASTIC SURGERYbr>
+                     25) POLY TRAUMA<br> 
+                     26) PSYCHIATRY<br> 
+                     27) PULMONOLOGY<br> 
+                     28) RADIATION ONCOLOGY<br>
+                      29) RHEUMATOLOGY<br>
+                      30) SURGICAL GASTRO ENTEROLOGY<br>
+                      29) SURGICAL ONCOLOGY
+                      </strong><br><br></li> 
            </div><br><br>
     </ul> <br><br>
     <h5 class="bordertitle tet-dark">Follow Up Services</h5>
@@ -70,7 +99,7 @@
     </ul>
     <h5 class="bordertitle text-dark">Implementation Process - Patient Process Flow</h5>
     <ul>
-        <li>Modes of OP capture A beneficiary suffering from an ailment can approach any of the following '€˜first point of contact' for registration under the scheme. There are three modes of OP capture. Vaidyamithra counters at PHC. Registration in a Health Camp organized by the PHCs or NWHs and Directly at the NWH in case of emergencies or through referral. Referral from CMCO center Referral from 104 and 108 services</li> <br>
+        <li>Modes of OP capture A beneficiary suffering from an ailment can approach any of the following '€˜first point of contact' for registration under the scheme. There are three modes of OP capture. Aarogya mithra counters at PHC. Registration in a Health Camp organized by the PHCs or NWHs and Directly at the NWH in case of emergencies or through referral. Referral from CMCO center Referral from 104 and 108 services</li> <br>
         <li>Biometric registration: Capturing digital image (finger impression) of the patient while registering online for the first time in a network hospital.
         </li> <br>
         <li>Evaluation and Admission After the initial evaluation of the patient, the patient is admitted if needed and evaluated further. The patient may be evaluated as an out-patient initially and after ascertaining the diagnosis and finalization treatment mode admitted and converted as "in-patient" in the online workflow.

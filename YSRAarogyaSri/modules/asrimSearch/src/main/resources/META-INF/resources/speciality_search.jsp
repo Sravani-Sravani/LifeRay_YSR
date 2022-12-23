@@ -42,8 +42,9 @@ long pageId1=themeDisplay.getPlid();
 	
 	if(pageId1==589|| pageId1==593 || pageId1==515 || pageId1==497|| pageId1==585||pageId1==595){
 	 %>
-	
+	<div class="container-fluid">
 			<div class="row">
+		
 				<div class="col-lg-12 text-end">
 				<a href="<%=geography %>" class="btn search_sm_btn"><i class="fa-solid fa-location-dot"></i> Search by Geography</a>
 				<a href="<%=speciality %>"  class="btn search_sm_btn_active"><i class="fa-solid fa-user-doctor"></i> Search by Speciality</a>
@@ -51,7 +52,7 @@ long pageId1=themeDisplay.getPlid();
 			  </div> <!--end of col-->
 			</div>
 	<% } %>
-	  <div class="container">
+
 	  <%
 	  String pageTitle="";
 	  if(pageId1==513 || pageId1==589|| pageId1==593 ||pageId1==515){
@@ -104,7 +105,7 @@ long pageId1=themeDisplay.getPlid();
 		      <div class="col-lg-3">
 			  	<div class="card">
 				  <div class="card-body">
-					<h5 class="card-title"><%=diseaseName %></h5> 
+					<h5 class="card-title card-title-large"><%=diseaseName %></h5> 
 					<% if(hospitalCount>0){ %>
 					<a style="cursor: pointer;" onClick="viewHospitalRecords('<%=diseaseName %>');" class="card-link">Hospitals - <%=hospitalCount %> </a>
 				  <% }else{ %>Hospitals - <%=hospitalCount %> <% } %>
@@ -112,8 +113,9 @@ long pageId1=themeDisplay.getPlid();
 				</div>
 			  </div>
 			    <% } %>
- 
-	</div>	</section>
+ </div>
+	</div>	
+	</section>
 	</div><!--ysri_section-->
  	
 <script>

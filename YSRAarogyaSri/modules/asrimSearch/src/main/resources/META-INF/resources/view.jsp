@@ -23,7 +23,7 @@ long pageId=themeDisplay.getPlid();
 						<li><a href="index.html">Home</a></li>
 						<li class="active">NWH</li>
 					</ul>
-				</div>
+				</div >
 			</div>
 		</div>
 		

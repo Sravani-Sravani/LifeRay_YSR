@@ -287,7 +287,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
   </div>
   <div class="col-md-4"></div>
   </div> -->
-	  <div class="container search_panel">
+	  <div class="container-fluid search_panel">
 		  <h3><%=pageTitle %> / Treatments Search</h3>
 		   <div id="searchData">
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >

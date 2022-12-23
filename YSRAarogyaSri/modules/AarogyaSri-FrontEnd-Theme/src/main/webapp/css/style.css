@@ -3,7 +3,7 @@
 
 	/******************************* General CSS Class *******************************/
 	html,*{ margin:0; padding:0;}
-	a:active, a:hover {outline:0; }   
+	a:active, a:hover {outline:0 !important;  }   
 	body{color: #000; font-weight: 400; line-height: 150%; font-family:poppins,Arial,sans-serif; font-size: 14px; text-size-adjust:none; overflow-x: hidden; outline: none;}
 	.container-fluid{ max-width: 95%; margin: 0 auto;}
 	header.main_ysriHeader .container-fluid{ max-width: 100%;}
@@ -323,7 +323,7 @@
 	#citizen-collapse{background: #09519A;  }
 	#hospital-collapse{background: #42741f; }
 	.inner_twocol_layout .sidebar_menu .btn{ width:100%; text-align: left; background: transparent !important; color:#fff !important;text-transform:uppercase; font-weight: 500; }
-	.inner_twocol_layout .sidebar_menu .btn:focus, .inner_twocol_layout .sidebar_menu .btn:hover{background : #b4e925; border-radius:10px 10px 0 0 !important;}
+	.inner_twocol_layout .sidebar_menu .btn:focus, .inner_twocol_layout .sidebar_menu .btn:hover{background : #b4e925; border-radius:0 !important;}
 	.inner_twocol_layout .sidebar_menu .btn-toggle::before {width: 1.25em; line-height: 0; color:#fff ; content:"\f061" ; font-family: "FontAwesome"; 	transition: transform .35s ease; transform-origin: .5em 50%; }
 	.inner_twocol_layout .sidebar_menu ul li{padding:0; margin-top: 10px !important; text-transform: capitalize; color: #fff;}
 	.inner_twocol_layout .sidebar_menu ul .btn:focus{font-weight: bold; color:#9ED2FF !important;}
@@ -380,8 +380,8 @@
 	.search_panel .table{ background: #fff; font-size: 12px;}
 	.download_list_btn{ font-size:20px; text-align: end; margin-bottom: 5px;}
 	.download_list_btn a{ color: #FFF; background-color: #2169B2; padding:5px 10px; border-radius:5px;}
-	.search_panel .search_sm_btn, .search_panel .search_sm_btn:hover, .search_panel .search_sm_btn_active{ font-size: 12px; padding: 8px; margin-left: 3px; background-color: #2169B2; }
-	.search_panel .search_sm_btn:hover, .search_panel .search_sm_btn_active{ background-color: #287ed4;}
+	.search_panel .search_sm_btn, .search_panel .search_sm_btn:hover, .search_panel .search_sm_btn_active{ font-size: 12px; padding: 8px; margin-left: 3px; background-color: #1a5997; margin-bottom: 3px; }
+	.search_panel .search_sm_btn:hover, .search_panel .search_sm_btn_active, .search_panel .search_sm_btn_active:hover{ background-color: #287ed4;}
 
 	#searchData label{ display: block;}	
 	#searchData .btn, #searchData .btn:hover{ background: #3d9df1; font-size: 12px; margin-top: 30px;}
@@ -513,7 +513,7 @@
 		.btn_icon i{ width: 90px;}
 		#searchData .col-auto{width:50%;}
 		 #searchData label{ display: block; margin-bottom: 0; margin-top: 0.5rem;}	
-		.select2-container{max-width:95%; width:95%;}
+		.select2-container{max-width:95% !important; width:95% !important;}
 		}
 
 /******************************* Responsive Section  MAIN HEADER MENUBAR 2nd Level Menu*******************************/		

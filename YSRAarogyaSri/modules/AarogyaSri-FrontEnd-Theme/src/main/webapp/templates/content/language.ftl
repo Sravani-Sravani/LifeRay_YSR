@@ -58,4 +58,7 @@ find="Find Us On"
 links="Useful Links"
 medical="Helpline/Grievances"
 visitors="Visitor Count "
+aasara="Arogya Aasara"
+treatments="Treatments Covered"
+netwrk="Network Hospitals"
 />
