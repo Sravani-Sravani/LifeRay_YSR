@@ -7,7 +7,7 @@
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#eligible-collapse" aria-expanded="false"> Am I Eligible</button>
 								<div class="collapse" id="eligible-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/am-i-eligible">Click Here</a></li>									
+									<li><a href="/web/guest/am-i-eligible">Check Your Eligibility</a></li>									
 								</ul></div>
 							</li>
 <li class="mb-1">
@@ -24,7 +24,7 @@
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myent-collapse" aria-expanded="false"> My Entitlements</button>
 								<div class="collapse" id="myent-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/aarogya-aasara">Click Here</a></li>                                   
+									<li><a href="/web/guest/entitlements_asri">Check Your Entitlements</a></li>                                   
 								</ul></div>
 							</li>  
                             
@@ -32,7 +32,7 @@
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button>
 								<div class="collapse" id="treats-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/asri_proceduresearch">Click Here</a></li>                                   
+									<li><a href="/web/guest/asri_proceduresearch">Search for Procedures</a></li>                                   
 								</ul></div>
 							</li>                            
 
@@ -52,7 +52,7 @@
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#asara-collapse" aria-expanded="false"> Aarogya Aasara</button>
 								<div class="collapse" id="asara-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/aarogya-aasara">Click Here</a></li>                                   
+									<li><a href="/web/guest/aarogya-aasara">Learn More about the Scheme</a></li>                                   
 								</ul></div>
 							</li>                            
                             
@@ -79,8 +79,8 @@
 								</button>
 								<div class="collapse" id="history-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysraarogyasri_app&hl=en&pli=1" target="_blank">Click Here</a></li>
-                                    Please register on the app to get your Treatment History
+									<li><a href="/web/guest/asri-treatment-history" >Check Your Treatment History</a></li>
+                                    
 								</ul>
 								</div>
 							</li>
@@ -93,7 +93,7 @@
 								</button>
 								<div class="collapse" id="usermanuals-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/arogyamithra" target="_blank">Click Here</a></li>
+									<li><a href="/web/guest/arogyamithra" target="_blank">Find Your Mithra</a></li>
                                     
 								</ul>
 								</div>

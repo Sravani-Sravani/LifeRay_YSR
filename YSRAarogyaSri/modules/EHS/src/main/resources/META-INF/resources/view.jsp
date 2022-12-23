@@ -44,6 +44,10 @@ if( pageId==33){ %>
 <%@ include file="/usermanual_enrolmentstatus.jsp" %>
 <%}else if(pageId==101){ %>
 <%@ include file="/usermanual_healthcard.jsp" %>
+<%}else if(pageId==609){ %>
+<%@ include file="/ehs-entitlements.jsp" %>
+<%}else if(pageId==611){ %>
+<%@ include file="/ehs_treats.jsp" %>
 <%}else if(pageId==97){ %>
 <%@ include file="/usermanual_medicalreimbursment.jsp" %>
 <%}else{ %>

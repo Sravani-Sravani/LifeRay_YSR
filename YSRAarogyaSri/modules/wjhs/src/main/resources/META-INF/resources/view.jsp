@@ -52,6 +52,8 @@ if(pageId==151 || pageId==25){ %>
 <%@ include file="/usermanual_for_download_healthcard.jsp" %>
 <%}else if(pageId==411){ %>
 <%@ include file="/lgn_instructionsj.jsp" %>
+<%}else if(pageId==605){ %>
+<%@ include file="/wjhs_treatments.jsp" %>
 <%}else if(pageId==409){ %>
 <%@ include file="/login_instruction.jsp" %>
 <%}else{ %>

@@ -46,40 +46,40 @@
             <ul class="nav nav-pills nav-stacked anyClass">
              <li class="nav-item colorchax" style=" color: whitesmoke"></li>
                 <br><strong>
-                1) CARDIAC AND CARDIOTHORACIC SURGERY<br>
-                2) CARDIOLOGY<br>
-                3) COCHLEAR IMPLANT SURGERY<br>
-                4) CRITICAL CARE<br>
-                5) ODERMATOLOGY<br>
-                 6) ENDOCRINOLOGY<br> 
-                 7) ENT SURGERY<br>
-                 
-                 8) EPIDEMIC DISEASE<br> 
-                 9) GASTROENTEROLOGY<br> 
-                 10) GENERAL MEDICINE<br>
-                  11) GENERAL SURGERYY<br> 
-                  
-                  12) GENITO URINARY SURGERIES<br>
-                   13) GYNAECOLOGY AND OBSTETRICS SURGERY<br> 
-                   14) INFECTIOUS DISEASES<br> 
-                   15) MEDICAL ONCOLOGY<br> 
-                   16) NEPHROLOGY<br> 
-                   17) NEUROLOGY<br> 
-                   18) NEUROSURGERY<br>
-                    19) OPHTHALMOLOGY SURGERY<br> 
-                    20) ORGAN TRANSPLANTATION SURGERY<br> 
-                    21) ORTHOPEDIC SURGERY AND PROCEDURES<br> 
-                    22) PEDIATRIC SURGERIES<br> 
-                    23) PEDIATRICS<br> 
-                    24) PLASTIC SURGERYbr>
-                     25) POLY TRAUMA<br> 
-                     26) PSYCHIATRY<br> 
-                     27) PULMONOLOGY<br> 
-                     28) RADIATION ONCOLOGY<br>
-                      29) RHEUMATOLOGY<br>
-                      30) SURGICAL GASTRO ENTEROLOGY<br>
-                      29) SURGICAL ONCOLOGY
-                      </strong><br><br></li> 
+
+                1)CARDIAC AND CARDIOTHORACIC SURGERY <br>
+2)CARDIOLOGY <br>
+3)COCHLEAR IMPLANT SURGERY <br>
+4)CRITICAL CARE <br>
+5)DERMATOLOGY <br>
+6)ENDOCRINOLOGY <br>
+7)ENT SURGERY <br>
+8)EPIDEMIC DISEASE <br>
+9)GASTROENTEROLOGY <br>
+10)GENERAL MEDICINE <br>
+11)GENERAL SURGERY <br>
+12)GENITO URINARY SURGERIES <br>
+13)GYNAECOLOGY AND OBSTETRICS SURGERY <br>
+14)INFECTIOUS DISEASES <br>
+15)MEDICAL ONCOLOGY <br>
+16)NEPHROLOGY <br>
+17)NEUROLOGY <br>
+18)NEUROSURGERY <br>
+19)OPHTHALMOLOGY SURGERY <br>
+20)ORGAN TRANSPLANTATION SURGERY <br>
+21)ORTHOPEDIC SURGERY AND PROCEDURES <br>
+22)PEDIATRIC SURGERIES <br>
+23)PEDIATRICS <br>
+24)PLASTIC SURGERY <br>
+25)POLY TRAUMA <br>
+26)PSYCHIATRY <br>
+27)PULMONOLOGY <br>
+28)RADIATION ONCOLOGY <br>
+29)RHEUMATOLOGY <br>
+30)SURGICAL GASTRO ENTEROLOGY <br>
+31)SURGICAL ONCOLOGY <br>
+</strong><br><br></li> 
+
            </div><br><br>
     </ul> <br><br>
     <h5 class="bordertitle tet-dark">Follow Up Services</h5>

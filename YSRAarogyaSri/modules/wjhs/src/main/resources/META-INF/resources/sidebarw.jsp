@@ -3,13 +3,7 @@
 						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;Citizens</button>
 					<div class="collapse show" id="citizen-collapse"> 
 						<ul class="list-unstyled ps-0">
-<li class="mb-1">
-								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#eligible-collapse" aria-expanded="false"> Am I Eligible</button>
-								<div class="collapse" id="eligible-collapse" data-bs-parent="#citizen-collapse">
-								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/am-i-eligible">Click Here</a></li>									
-								</ul></div>
-							</li>
+
 <li class="mb-1">
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myarg-collapse" aria-expanded="false"> Journalist Services</button>
 								<div class="collapse" id="myarg-collapse" data-bs-parent="#citizen-collapse">
@@ -23,19 +17,12 @@
 							</li>    
                             
                             
-<li class="mb-1">
-								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myent-collapse" aria-expanded="false"> My Entitlements</button>
-								<div class="collapse" id="myent-collapse" data-bs-parent="#citizen-collapse">
-								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/my-entitlements">Click Here</a></li>                                   
-								</ul></div>
-							</li>  
                             
 <li class="mb-1">
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button>
 								<div class="collapse" id="treats-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/ehs_proceduresearch">Click Here</a></li>                                   
+									<li><a href="/web/guest/ehs_proceduresearch">Get Details of the Procedures</a></li>                                   
 								</ul></div>
 							</li>                            
 
@@ -74,8 +61,8 @@
 								</button>
 								<div class="collapse" id="history-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysraarogyasri_app&hl=en&pli=1" target="_blank">Click Here</a></li>
-                                    Please register on the app to get your Treatment History
+									<li><a href="/web/guest/wjhs-treatment-history">Check Your Treatment History</a></li>
+                                    
 								</ul>
 								</div>
 							</li>
@@ -88,7 +75,7 @@
 								</button>
 								<div class="collapse" id="usermanuals-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/mithrawjhs">Click Here</a></li>
+									<li><a href="/web/guest/mithrawjhs">Get Mithra Details</a></li>
                                     
 								</ul>
 								</div>
@@ -125,7 +112,7 @@
 						</button>
 						<div class="collapse" id="patient-collapse1" data-bs-parent="#hospital-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-							<li><a href="/web/guest/signin" target="_blank">Click Here</a></li>							
+							<li><a href="/web/guest/signin" target="_blank">Sign-in to Portal</a></li>							
 							  </ul>
 						</div>
 					  </li>

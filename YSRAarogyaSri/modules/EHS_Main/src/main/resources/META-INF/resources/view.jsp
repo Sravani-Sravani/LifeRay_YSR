@@ -34,6 +34,8 @@ if(pageId==6|| pageId==33||pageId==27){ %>
 <%@ include file="/hospital_preauthorization.jsp" %>
 <%}else if(pageId==214){ %>
 <%@ include file="/hospital_specialization.jsp" %>
+<%}else if(pageId==607){ %>
+<%@ include file="/eligible-ehs.jsp" %>
 <%}else if(pageId==541){ %>
 <%@ include file="/hospital_dental.jsp" %>
 <%}else{ %>

@@ -3,13 +3,7 @@
 						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;Citizens</button>
 					<div class="collapse show" id="citizen-collapse"> 
 						<ul class="list-unstyled ps-0">
-<li class="mb-1">
-								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#eligible-collapse" aria-expanded="false"> Am I Eligible</button>
-								<div class="collapse" id="eligible-collapse" data-bs-parent="#citizen-collapse">
-								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/am-i-eligible">Click Here</a></li>									
-								</ul></div>
-							</li>
+
 <li class="mb-1">
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myarg-collapse" aria-expanded="false"> Documents and Reports</button>
 								<div class="collapse" id="myarg-collapse" data-bs-parent="#citizen-collapse">
@@ -25,19 +19,13 @@
 							</li>    
                             
                             
-<li class="mb-1">
-								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myent-collapse" aria-expanded="false"> My Entitlements</button>
-								<div class="collapse" id="myent-collapse" data-bs-parent="#citizen-collapse">
-								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/aarogya-aasara">Click Here</a></li>                                   
-								</ul></div>
-							</li>  
+  
                             
 <li class="mb-1">
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button>
 								<div class="collapse" id="treats-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/arogyaraksha_proceduresearch">Click Here</a></li>                                   
+									<li><a href="/web/guest/arogyaraksha_proceduresearch">Get Details of The Procedures</a></li>                                   
 								</ul></div>
 							</li>                            
 
@@ -76,8 +64,8 @@
 								</button>
 								<div class="collapse" id="history-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysraarogyasri_app&hl=en&pli=1" target="_blank">Click Here</a></li>
-                                    Please register on the app to get your Treatment History
+									<li><a href="/web/guest/raksha-treatments" target="_blank">Check Your Treatments</a></li>
+                                   
 								</ul>
 								</div>
 							</li>
@@ -90,7 +78,7 @@
 								</button>
 								<div class="collapse" id="usermanuals-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/arogyaraksha_mitrasearch">Click Here</a></li>
+									<li><a href="/web/guest/arogyaraksha_mitrasearch">Get Mithra Details</a></li>
                                     
 								</ul>
 								</div>
@@ -110,7 +98,7 @@
 						<div class="collapse" id="hospital-collapse1" data-bs-parent="#hospital-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 							
-							<li><a href="#" target="_blank">Online Empanelment Application Form</a></li>
+							<li><a href="/web/guest/online_application-english" target="_blank">Online Empanelment Application Form</a></li>
 							
             	
 						  </ul>
@@ -136,7 +124,7 @@
 						</button>
 						<div class="collapse" id="patient-collapse1" data-bs-parent="#hospital-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-							<li><a href="/web/guest/signin" target="_blank">Click Here</a></li>							
+							<li><a href="/web/guest/signin" target="_blank">Sign-In To Portal</a></li>							
 							  </ul>
 						</div>
 					  </li>
