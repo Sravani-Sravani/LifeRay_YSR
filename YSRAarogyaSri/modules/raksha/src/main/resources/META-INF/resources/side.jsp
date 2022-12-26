@@ -64,7 +64,7 @@
 								</button>
 								<div class="collapse" id="history-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/raksha-treatments" target="_blank">Check Your Treatments</a></li>
+									<li><a href="/web/guest/raksha-treatments" target="_blank">Check Treatments</a></li>
                                    
 								</ul>
 								</div>
@@ -78,7 +78,7 @@
 								</button>
 								<div class="collapse" id="usermanuals-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/arogyaraksha_mitrasearch">Get Mithra Details</a></li>
+									<li><a href="/web/guest/mithraraksha">Get Mithra Details</a></li>
                                     
 								</ul>
 								</div>

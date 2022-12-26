@@ -7,7 +7,7 @@
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#eligible-collapse" aria-expanded="false"> Am I Eligible</button>
 								<div class="collapse" id="eligible-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/am-i-eligible">Check Your Eligibility</a></li>									
+									<li><a href="/web/guest/am-i-eligible">Check Eligibility</a></li>									
 								</ul></div>
 							</li>
 <li class="mb-1">
@@ -24,7 +24,7 @@
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myent-collapse" aria-expanded="false"> My Entitlements</button>
 								<div class="collapse" id="myent-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/entitlements_asri">Check Your Entitlements</a></li>                                   
+									<li><a href="/web/guest/entitlements_asri">Check Entitlements</a></li>                                   
 								</ul></div>
 							</li>  
                             
@@ -79,7 +79,7 @@
 								</button>
 								<div class="collapse" id="history-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/asri-treatment-history" >Check Your Treatment History</a></li>
+									<li><a href="/web/guest/asri-treatment-history" >Check Treatment History</a></li>
                                     
 								</ul>
 								</div>
@@ -93,7 +93,7 @@
 								</button>
 								<div class="collapse" id="usermanuals-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/arogyamithra" target="_blank">Find Your Mithra</a></li>
+									<li><a href="/web/guest/arogyamithra" target="_blank">Find A Mithra</a></li>
                                     
 								</ul>
 								</div>

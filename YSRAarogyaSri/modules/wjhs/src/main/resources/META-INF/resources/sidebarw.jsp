@@ -61,7 +61,7 @@
 								</button>
 								<div class="collapse" id="history-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/wjhs-treatment-history">Check Your Treatment History</a></li>
+									<li><a href="/web/guest/wjhs-treatment-history">Check Treatment History</a></li>
                                     
 								</ul>
 								</div>

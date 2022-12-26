@@ -7,28 +7,22 @@
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#eligible-collapse" aria-expanded="false"> Am I Eligible</button>
 								<div class="collapse" id="eligible-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/am-i-eligible-ehs">Check Your Eligibility</a></li>									
+									<li><a href="/web/guest/am-i-eligible-ehs">Check Eligibility</a></li>									
 								</ul></div>
 							</li>
 <li class="mb-1">
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myarg-collapse" aria-expanded="false"> Patient Services</button>
 								<div class="collapse" id="myarg-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/">Search Enrollment Status</a></li>	
+									<li><a href="#">Search Enrollment Status</a></li>	
                                     <li><a href="/documents/d/guest/meesevaapplication_pensioners">Mee Seva Health Card Application</a></li>
-									<li><a href="/">Health Card Status</a></li>
-									<li><a href="/">Aadhar Enrolment Centers</a></li>
+									<li><a href="#">Health Card Status</a></li>
+									<li><a href="#">Aadhar Enrolment Centers</a></li>
 								</ul></div>
 							</li>    
                             
                             
-<li class="mb-1">
-								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myent-collapse" aria-expanded="false"> My Entitlements</button>
-								<div class="collapse" id="myent-collapse" data-bs-parent="#citizen-collapse">
-								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/ehs-entitlements">Check your entitlements</a></li>                                   
-								</ul></div>
-							</li>  
+
                             
 <li class="mb-1">
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button>
@@ -85,7 +79,7 @@
 								</button>
 								<div class="collapse" id="history-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/ehs-treatment-history">Check Your Treatment History</a></li>
+									<li><a href="/web/guest/ehs-treatment-history">Check Treatment History</a></li>
                                    
 								</ul>
 								</div>

@@ -9,7 +9,8 @@
     <div class="container-fluid" style="overflow-x: scroll; max-height: 500px;">
 
 
-        <table class="table table-bordered table-hover table-striped">
+    <div class="table-responsive">  
+    <table class="table table-bordered table-hover table-striped">
 
         
 
@@ -260,20 +261,8 @@
                <td>-</td>
             </tr>
          </tbody>
-         </table>
-
-
-
-
-
-
-
-
-
-        
-
-      
-    </div><!--ysri_section-->	  
+             </table>
+</div><!--END of table-responsive-->  
 
 
 

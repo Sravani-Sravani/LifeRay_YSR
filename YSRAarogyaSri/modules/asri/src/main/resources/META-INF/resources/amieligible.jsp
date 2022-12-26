@@ -10,7 +10,7 @@
 <div class="container ">
       <div class="row">
        <div class="col-lg-12">
-        <h2 class="subheading">Am I Eligible</h2>
+        
         <ul class="icon-list">
           <li>All Rice Card Holders are eligible. </li>
           <li>Families which are eligible for YSR Pension Kanuka Card and Jagananna Vidya and Vasathi Deevena Card are also eligible.</li>
