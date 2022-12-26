@@ -266,13 +266,13 @@ public static org.json.JSONObject getStates(long pId) {
 	org.json.JSONObject object = null;
 	try { 
 		String url="";
-		if(pId==513 || pId==589 ||pId==515){
+		if(pId==513 || pId==589 ||pId==515 ||pId==593 ){
 			url="http://10.48.19.62:8091/portalsearchapi/public-asri/statelist";
 		}
-		else if(pId==507 || pId==5) {
+		else if(pId==507 || pId==509) {
 			url="http://10.48.19.62:8092/portalsearchapi/public-ar/statelist";
 		}
-		else if(pId==499 || pId==491 || pId==585 ||pId==497 || pId==503){ //pId==499 || pId==491
+		else if(pId==499 || pId==491 || pId==585 ||pId==497 || pId==503 || pId==595){ //pId==499 || pId==491
 			url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/statelist";
 		}
 		   URL obj = new URL(url);
@@ -316,13 +316,13 @@ public static org.json.JSONObject getDistricts(String stateId,long pId) {
 		 final String POST_PARAMS = "{\n" + "\"stateId\": \""+stateId+ "\"\n}";
 		    System.out.println(POST_PARAMS);
 		    String url="";
-			if(pId==513 || pId==589 || pId==515){
+			if(pId==513 || pId==589 || pId==515 ||pId==593 ){
 				url="http://10.48.19.62:8091/portalsearchapi/public-asri/districtlist";
 			}
-			else if(pId==507) {
+			else if(pId==507 ||pId==509) {
 				url="http://10.48.19.62:8092/portalsearchapi/public-ar/districtlist";
 			}
-			else if(pId==499 || pId==585 || pId==491) { //pId==499 || pId==491
+			else if(pId==499 || pId==585 || pId==491 ||pId==497 ||pId==595 ||pId==503) { //pId==499 || pId==491
 				url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/districtlist";
 			}
 			   URL obj = new URL(url);
@@ -369,13 +369,13 @@ public static org.json.JSONObject getMandal(String districtId,long pId) {
 		 final String POST_PARAMS = "{\n" + "\"districtId\": \""+districtId+ "\"\n}";
 		    System.out.println(POST_PARAMS);
 		    String url="";
-			if(pId==513 || pId==589 || pId==515){
+			if(pId==513 || pId==589 || pId==515 || pId==593) {
 				url="http://10.48.19.62:8091/portalsearchapi/public-asri/mandallist";
 			}
-			else if(pId==507) {
+			else if(pId==507 ||pId==509) {
 				url="http://10.48.19.62:8092/portalsearchapi/public-ar/mandallist";
 			}
-			else if(pId==585 || pId==499 || pId==491){ //pId==499 || pId==491
+			else if(pId==585 || pId==499 || pId==491 || pId==497 || pId==595||pId==503 ){ //pId==499 || pId==491
 				url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/mandallist";
 			}
 			   URL obj = new URL(url);

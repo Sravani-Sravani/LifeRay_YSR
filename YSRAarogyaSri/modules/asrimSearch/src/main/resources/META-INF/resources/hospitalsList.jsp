@@ -20,13 +20,13 @@ function stoploader(){
 	document.getElementById("loader").style.display = "none";
 }
     $(document).ready(function () {
-    	<% if(pageId1==589 || pageId1==585){ %>
+<%--     	<% if(pageId1==589 || pageId1==585){ %> --%>
         $("#select-2").select2();
-        <% } %>
+<%--         <% } %> --%>
 	   $("#select-3").select2();
 	   $("#select-4").select2();
 	   $("#select-5").select2();
-	  // $("#select-2").select2();
+	  $("#select-1").select2();
 	}); 
 </script>
  <style>
@@ -298,16 +298,16 @@ function stoploader(){
 
 	<%
 	String pageTitle="";
-	if(pageId1==589 || pageId1==513){
+	if(pageId1==589 || pageId1==513 || pageId1==515 || pageId1==593){
 		pageTitle="Aarogyasri ";
 	}
-	else if(pageId1==507){
-		pageTitle="Arogya Raksha ";
+	else if(pageId1==507 || pageId1==509){
+		pageTitle="Aarogya Raksha ";
 	}
-	else if(pageId1==499){
+	else if(pageId1==499 || pageId1==503){
 		pageTitle="WJHS ";
 	}
-	else if(pageId1==585 ||pageId1==491 ){
+	else if(pageId1==585 ||pageId1==491 || pageId1==497 ||pageId1==595){
 		pageTitle="EHS ";
 	}
 	%>
@@ -329,26 +329,26 @@ function stoploader(){
 		nearbyhptls="/web/guest/nearby-hospitals";
 	}
 	
-	if(pageId1==589|| pageId1==593 || pageId1==497|| pageId1==585||pageId1==595 ||pageId1==503){
+	if(pageId1==589 || pageId1==593|| pageId1==585||pageId1==595 ||pageId1==503){
 	 %>
 	
 			<div class="row">
 				<div class="col-lg-12 text-end">
-				<a href="<%=geography %>"  class="btn search_sm_btn_active"><i class="fa-solid fa-location-dot"></i> Search by Geography</a>
-				<a href="<%=speciality %>"  class="btn search_sm_btn"><i class="fa-solid fa-user-doctor"></i> Search by Speciality</a>
+				<a href="<%=geography %>" <%if(pageId1==585 ||pageId1==589){ %>class="btn search_sm_btn_active" <%} %>  class="btn search_sm_btn"><i class="fa-solid fa-location-dot"></i> Search by Geography</a>
+				<a href="<%=speciality %>"  <%if(pageId1==593 ||pageId1==595){ %>class="btn search_sm_btn_active" <%} %> class="btn search_sm_btn"><i class="fa-solid fa-user-doctor"></i> Search by Speciality</a>
 				<a href="<%=nearbyhptls %>"  class="btn search_sm_btn"><i class="fa-solid fa-hospital"></i> Hospitals Near Me</a>
 			  </div> <!--end of col-->
 			</div>
 <% } %>
-	
+
 		  <h3><%=pageTitle %> State Empanelled Hospitals</h3>
 
 		  <div id="searchData">
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
  			
- 			<%if(pageId1==595 || pageId1==593){ %>
+ 			<%if(pageId1==595 || pageId1==593 || pageId1==515 ||pageId1==497 || pageId1==509 ||pageId1==503){ %>
  							<div class="col-auto">
-				<label  for="Speciality Name">* Speciality Name</label>
+				<label  for="Speciality Name"><span class="text-danger">*</span>Speciality Name</label>
 				<select class="form-select" id="select-5" label="Speciality Name" name="select-5">
 				    <option value="">Show All</option>
 				    <%
@@ -388,7 +388,7 @@ function stoploader(){
  			<%} %>
 		 
 				<div class="col-auto">
-				<label  for="State">* State</label>
+				<label  for="State"><span class="text-danger">*</span> State</label>
 				<select class="form-select" id="select-2" name="select-2">
 		 <option value="">Show All</option>
 				    <% 
@@ -438,10 +438,10 @@ function stoploader(){
 			    	   String id=data.get("mandalId").toString();
 			    	   String mandalName="";   
 			    	   System.out.print("page id is"+ pageId1);
-			    	   if(pageId1==513 || pageId1==507 || pageId1==515){
+			    	   if(pageId1==513 || pageId1==507 || pageId1==515 || pageId1==595 || pageId1==509){
 			    		     mandalName=data.get("mandalName").toString();  
 			    	   }
-			    	   else if(pageId1==499 ||pageId1==491 || pageId1==585){
+			    	   else if(pageId1==499 ||pageId1==491 || pageId1==585  ){
 			    		   
 			    		     mandalName=data.get("mandal").toString();  
 			    		     System.out.print("page id is"+ mandalName);
@@ -459,7 +459,7 @@ function stoploader(){
 				    <option value="">Show All</option>
 				 </select>
 				</div>
-				<%if(pageId1==585 || pageId1==589 ||pageId1==513 ||pageId1==491){ %>
+				<%if(pageId1==585 || pageId1==589 ||pageId1==513 ||pageId1==491||pageId1==507 || pageId1==499){ %>
 				<div class="col-auto">
 				<label  for="Speciality Name">Speciality Name</label>
 				<select class="form-select" id="select-5" label="Speciality Name" name="select-5">
@@ -574,7 +574,7 @@ function stoploader(){
 				           			 $('#select-4').find('option').remove().end().append('<option value="">Show all</option>'); 
 				           			 $('#<portlet:namespace />searchComplaintTypeId').html("");
 				           			 jQuery.each(response, function(i, val) {
-				           				<% if(pageId1==589 || pageId1==513 || pageId1==507 ||pageId1==515){ %>
+				           				<% if(pageId1==589 || pageId1==513 || pageId1==507 ||pageId1==515 || pageId1==593 ||pageId1==509){ %>
 				           		 	 $('#select-4').append("<option data='"+val.mandalId+"' value='"+val.mandalName+"'>"+val.mandalName+"</option>");
 				           			<% }else{ %>
 				           			$('#select-4').append("<option data='"+val.mandalId+"' value='"+val.mandal+"'>"+val.mandal+"</option>");

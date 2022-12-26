@@ -40,7 +40,7 @@ long pageId1=themeDisplay.getPlid();
 		nearbyhptls="/web/guest/nearby-hospitals";
 	}
 	
-	if(pageId1==589|| pageId1==593 || pageId1==515 || pageId1==497|| pageId1==585||pageId1==595){
+	if(pageId1==589|| pageId1==593|| pageId1==585||pageId1==595){
 	 %>
 	<div class="container-fluid">
 			<div class="row">
@@ -103,9 +103,9 @@ long pageId1=themeDisplay.getPlid();
 	    	    
 	    	   %>
 		      <div class="col-lg-3">
-			  	<div class="card">
+			  	<div class="card card-large">
 				  <div class="card-body">
-					<h5 class="card-title card-title-large"><%=diseaseName %></h5> 
+					<h5 class="card-title card-title-large d-flex align-items-center justify-content-center"><%=diseaseName %></h5> 
 					<% if(hospitalCount>0){ %>
 					<a style="cursor: pointer;" onClick="viewHospitalRecords('<%=diseaseName %>');" class="card-link">Hospitals - <%=hospitalCount %> </a>
 				  <% }else{ %>Hospitals - <%=hospitalCount %> <% } %>

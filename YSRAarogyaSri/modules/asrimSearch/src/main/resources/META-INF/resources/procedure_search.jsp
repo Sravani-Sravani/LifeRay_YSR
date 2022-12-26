@@ -310,7 +310,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 				 </select>
 				</div> -->
 				<div class="col-auto">
-				<label  for="Speciality Name">Speciality Name</label>
+				<label  for="Speciality Name"><span class="text-danger">*</span> Speciality Name</label>
 				<select class="form-select" id="select-1" name="select-1">
 				    <option value="">Show All</option>
 				  <%
@@ -386,7 +386,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 			
 			
 				function procedureData(specialityId){
-
+				$('#select-3').prop("disabled", true);
 				 AUI().use('aui-base','aui-io-request-deprecated', 'aui-node', function(A){
 				    A.io.request('<%=getAjaxDataURL1.toString() %>',{
 					    dataType : 'json',

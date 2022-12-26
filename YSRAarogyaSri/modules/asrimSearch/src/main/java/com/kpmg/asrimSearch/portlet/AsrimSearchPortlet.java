@@ -170,14 +170,14 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			     
 			     
 			     String url="";
-					if(pId==513 || pId==589 || pId==593){
+					if(pId==513 || pId==589 || pId==593 ||pId==515){
 						url="http://10.48.19.62:8091/portalsearchapi/public-asri/searchHospital";
 						////POST_PARAMS = "{\n" + "\"districtid\": null,\r\n" +
 						        //"    \"hospitalid\": null,\r\n" +
 						        //"    \"hospitaltype\": null\r\n" + "\n}";
 						POST_PARAMS = "{\n" + "\"districtid\": null\r\n"+ "\n}";
 					}
-					else if(pId==507) {
+					else if(pId==507 ||pId==509) {
  
 				url="http://10.48.19.62:8092/portalsearchapi/public-ar/searchHospital";
 						
