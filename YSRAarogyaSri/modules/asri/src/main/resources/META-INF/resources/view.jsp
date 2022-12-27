@@ -49,8 +49,6 @@ if(pageId==443||pageId==6 || pageId==19){ %>
 <%@ include file="/asri-entitle.jsp" %>
 <%}else if(pageId==601){ %>
 <%@ include file="/amieligible.jsp" %>
-<%}else if(pageId==599){ %>
-<%@ include file="/aasara.jsp" %>
 <%}else if(pageId==429){ %>
 <%@ include file="/fix_incl.jsp" %>
 <%}else{ %>

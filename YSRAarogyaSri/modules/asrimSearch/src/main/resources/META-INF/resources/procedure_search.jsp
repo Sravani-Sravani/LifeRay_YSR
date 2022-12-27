@@ -29,7 +29,7 @@ function stoploader(){
 	}); 
 </script>
 
-<style>
+<!-- <style>
 /* Center the loader */
 #loader {
   position: absolute;
@@ -92,13 +92,14 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 .lfr-tooltip-scope{disaply:none;}
 .alert-dismissible{disaply:none;}
 .alert-danger{disaply:none;}
-</style>
+</style> -->
 <% 
 
  String diseaseName=ParamUtil.getString(request, "diseaseName").trim();
 //String specialityId= ParamUtil.getString(request,"specialityId").trim();//ParamUtil.getString(request, "DIST_ID");
 //String splcode="";
 String specialityId = ParamUtil.getString(request, "specialityId").trim();
+String proc_type=ParamUtil.getString(request, "proc_type").trim();
  
  if(diseaseName.length()>5 && diseaseName!=null && diseaseName!=""){
 	 int postion1=diseaseName.indexOf("(");
@@ -107,6 +108,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
  }
     
  %>
+ <% System.out.println("proc_type>>>"+proc_type); %>
 <script>
 	var primaryKeyColumn = 1;
 	var primaryKeyColumnName = "Name of Hospital";
@@ -200,7 +202,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
          initComplete: function () {
         	var j=1;
             this.api()
-                .columns([1,3])
+                .columns([1,3,4])
                 .every(function () {
                     var column = this; 
                  	$('#select-'+column[0][0]).on('change', function () {
@@ -215,16 +217,49 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
                         }
                    column.search(val,true,false,true).draw();
                });
+                  	if(column[0][0]==4){
+                        column
+                           .data()
+                           .unique()
+                           .sort()
+                           .each(function (d, j) {
+   							d=$.trim(d);
+   							if(d!="" && d!=null){
+   								if(column.search() === '^'+d+'$'){
+   	                         		$('#select-'+column[0][0]).append('<option value="'+d+'" selected="selected">'+d.substr(0,30)+'</option>' )
+   								} else {
+   									$('#select-'+column[0][0]).append( '<option value="'+d+'">'+d.substr(0,30)+'</option>' )
+   								}
+   							}	
+                           });
+                     	}  
 
                 });
             
+        	
+            <% if(proc_type!="" && proc_type!=null){ %>
+            var procedureType="<%=proc_type%>";
+           if(procedureType!=null && procedureType!=""){
+
+            //   console.log("hospitalType>>>>"+ hospitalType);
+             $("#select-4").val(procedureType).trigger('change');
+           }
+            
+            <% } %> 
+        	
+            
+            
+            
             stoploader();
         }, 
-        bStateSave: true 
+        //bStateSave: true 
+        processing: true, 
     });
 //}); 
 	
 	}
+
+	
 	
 	function setCookie(cname,cvalue,exdays) {
 		alert("set test");
@@ -365,6 +400,14 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 				<div class="col-auto">
 				<label  for="Procedure Name">Treatments Name</label>
 				<select class="form-select" id="select-3" name="select-3">
+				    <option value="">Show All</option>
+
+				 </select>
+				</div>
+				
+				<div class="col-auto">
+				<label  for="Procedure Name">Type</label>
+				<select class="form-select" id="select-4" name="select-4">
 				    <option value="">Show All</option>
 
 				 </select>

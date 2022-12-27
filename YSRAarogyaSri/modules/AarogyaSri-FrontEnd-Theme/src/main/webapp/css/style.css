@@ -3,7 +3,7 @@
 
 	/******************************* General CSS Class *******************************/
 	html,*{ margin:0; padding:0;}
-	a:active, a:hover {outline:0 !important;  }   
+		
 	body{color: #000; font-weight: 400; line-height: 150%; font-family:poppins,Arial,sans-serif; font-size: 14px; text-size-adjust:none; overflow-x: hidden; outline: none;}
 	.container-fluid{ max-width: 95%; margin: 0 auto;}
 	header.main_ysriHeader .container-fluid{ max-width: 100%;}
@@ -14,12 +14,15 @@
 	.text-primary{color: #2169B2 !important;}
 	.text-justify{text-align: justify; }
 
+	/*Resetting Clay.css*/
+	a:active, a:hover, .btn:focus, .btn.focus,.btn:active:focus   {outline:0 !important;  box-shadow:0 transparent !important; }   
 
 	/******************************* Heading CSS Class *******************************/
-	h1,h2,h3,h4,h5,h6,.text-dark{color: #444;	line-height: 150%; }
+	h1,h2,h3,h4,h5,h6,.text-dark{color: #444;	line-height: 150%; font-weight: 600; }
 	h1, h1.text-dark{color:#2169B2 !important; font-size: 32px;font-weight: 600; line-height: 12px; margin-bottom: 35px;	padding:10px 0; text-transform: uppercase; }
 	h2{ font-weight: 600; font-size: 30px;	line-height: 59px;	text-align: center;	padding:10px 0;	margin-bottom: 20px; color: #444;}
 	h2.subtitle, h2.subheading{ text-align: left;}
+	h2.subheading{ text-align: left; margin-bottom: 0px; padding: 20px 0 0; }
 	.bordertitle, .bordertitlegreen {color:#fff; font-weight: 600;	font-size: 20px; margin-bottom: 30px; padding-bottom: 5px; border-bottom: solid 3px #eee;  position: relative;}
 	.bordertitlegreen { color:#444;}
 	.bordertitle::before, .bordertitlegreen::before { background-color: #9ED2FF;	content: ''; position: absolute; height: 6px; width: 150px;	max-width: 100%; top: auto; bottom: -6px; left: 0; right: auto;	}
@@ -44,10 +47,12 @@
 	.blue_section{background-color: #F1F8FF !important; }
 	.white_section,.blue_section, .quick_links, .services_section, .newsEvents_section, .inner_twocol_layout{padding: 50px 0;}
 	.inner_twocol_layout{padding-top:0;}
-	.ysri_section .btn{ background-color: #2169B2; border: 0; color: #fff; }
-	.ysri_section .btn:hover{ background-color: #2b83db; border: 0; color: #fff;}
+
+	/******************************* Button Style*******************************/	
+	.ysri_section .btn, .archive_btn .btn, .rightsidebar_content .btn{ 	background: #2169b2; background: -moz-linear-gradient(180deg, #3a94ee 0%, #2169b2 100%); background: -webkit-linear-gradient(180deg, #3a94ee 0%, #2169b2 100%);	background: linear-gradient(180deg, #3a94ee 0%, #2169b2 100%); border: 0; color: #fff; border-radius: 5px; }
+	.ysri_section .btn:hover, .archive_btn .btn:hover, .rightsidebar_content .btn:hover{  border: 0; color: #fff; background: #3a94ee; 	background: -moz-linear-gradient(180deg, #2169b2 0%, #3a94ee 100%); background: -webkit-linear-gradient(180deg, #2169b2 0%, #3a94ee 100%);	background: linear-gradient(180deg, #2169b2 0%, #3a94ee 100%);}
 	.button_blueshade {	background: rgb(33,105,178); background: linear-gradient(180deg, rgba(33,105,178,1) 0%, rgba(58,148,238,1) 100%); border-radius: 8px; color: #FFFFFF;  font-size: 17px;  font-weight: 500;  padding: 20PX !important;  text-align: center;  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px; transition: all .5s; display: inline-block; text-align: center; text-decoration: none;}
-	.button_blueshade:hover {transition-duration: .1s;  color: #fff;  background: rgb(58,148,238); background: linear-gradient(180deg, rgba(58,148,238,1) 0%, rgba(33,105,178,1) 100%); }
+	.button_blueshade:hover {transition-duration: .1s;  color: #fff;  background: #3a94ee; background: linear-gradient(180deg, #3a94ee 0%, #2169b2 100%); }
 	
 	/******************************* MAP PAGE Style*******************************/
 	.select_white{background-color: #fff;	color: #0563af; width: 250px; margin: 0 auto; padding: 12px 10px !important;	border: none; outline: none; box-shadow: 0 6px 26px rgba(4, 57, 100, 0.5); border-radius: 2px;} 
@@ -203,18 +208,18 @@
 	
 	/******************************* Service Box Homepage *******************************/
 	.service-item{ padding-bottom:10px; text-align: center; background: #FFFFFF; border-top: 4px solid #2169B2; box-shadow: 0 0 16px rgba(148,148,148,.2);
-		transition: all .3s ease-in; border-radius: 0px; min-height: 380px; margin-bottom: 20px;}
-		.service-item{ position: relative; margin: 0px 30px 40px;  overflow: hidden;}
-		.btn_servicemore {position: absolute; left: 0; bottom: 0; text-align: center; width: 100%; }
-		.btn_servicemore a {display: block; padding: 5px 0px; text-decoration: none; -moz-transition: all .4s ease; -o-transition: all .4s ease; -webkit-transition: all .4s ease; transition: all .4s ease; }
-		.services_section .btn{ background: #2169B2; border-radius: 0px; margin: 10px 80px 20px; color: #fff; padding:5px;}
-		.service-item .service_heading{font-weight: 500; font-size: 20px; line-height: 29px; text-align: center; color: #2169B2;}
-		.service-item p{ text-align: center; padding: 0 7px ; }
-		.service-item:hover, .service-item:focus{box-shadow:0 6px 26px rgba(148,148,148,.5); }
-		.service-item:hover .btn, .service-item:focus .btn{ background: #7BBF4B;}
-		.service-item .service-icon, .service-item:hover .service-icon{ width: 100%; max-height: 180px; overflow: hidden; }
-		.service-item .service-icon img{transition: 0.5s all ease-in-out; max-height: 180px; width:100%; object-fit: cover; object-position: top; }
-		.service-item:hover .service-icon img{ transform: scale(1.1);}
+	transition: all .3s ease-in; border-radius: 0px; min-height: 440px; margin-bottom: 20px;}
+	.service-item{ position: relative; margin: 0px 30px 40px;  overflow: hidden;}
+	.btn_servicemore {position: absolute; left: 0; bottom: 0; text-align: center; width: 100%; }
+	.btn_servicemore a {display: block; padding: 5px 0px; text-decoration: none; -moz-transition: all .4s ease; -o-transition: all .4s ease; -webkit-transition: all .4s ease; transition: all .4s ease; }
+	.services_section .btn{ background: #2169B2; border-radius: 0px; margin: 10px auto 20px; color: #fff; padding:5px; width: 150px;}
+	.service-item .service_heading{font-weight: 500; font-size: 20px; line-height: 29px; text-align: center; color: #2169B2;}
+	.service-item p{ text-align: center; padding: 0 7px ; }
+	.service-item:hover, .service-item:focus{box-shadow:0 6px 26px rgba(148,148,148,.5); }
+	.service-item:hover .btn, .service-item:focus .btn{ background: #7BBF4B;}
+	.service-item .service-icon, .service-item:hover .service-icon{ width: 100%; max-height: 250px; overflow: hidden; }
+	.service-item .service-icon img{transition: 0.5s all ease-in-out; max-height: 250px; width:100%; object-fit: cover; object-position: center; }
+	.service-item:hover .service-icon img{ transform: scale(1.1);}
 	
 		
 	/******************************* Spotlight *******************************/
@@ -293,11 +298,15 @@
 	/* back, initially hidden pane */
 	.back { -webkit-transform: rotateY(180deg); transform: rotateY(180deg); padding-top: 20px; }
 	.back p{ font-size: 13px; }
+
+	/******************************* Download Health Card Section *******************************/
+
 	
 	
 	/******************************* ContactUs Page Section *******************************/
 	.contactUs_section .box_contact{min-height: 360px;	margin: 0 0 40px; padding: 15px; box-shadow: 0px 0px 4px 4px rgba(209, 209, 209, 0.15); border-radius: 0px;
 	border:1px solid #eee;	border-top: 3px solid #2169B2;	background: #fefefe; text-align: center;}
+	.contactUs_section .box_contact span{ margin: 0; padding: 0; font-size: 11px;}
 	.contact_icon i{ width: 60px; height: 60px; background-color: #2169B2; border-radius: 100%; line-height: 60px; color: #fff;}
 	.contactUs_section .box_contact h6{ text-transform: uppercase; margin: 20px 0 10px;  font-weight: 700; font-size: 14px;	line-height: 20px; color: #444000;	}
 	
@@ -323,10 +332,10 @@
 	#citizen-collapse{background: #09519A;  }
 	#hospital-collapse{background: #42741f; }
 	.inner_twocol_layout .sidebar_menu .btn{ width:100%; text-align: left; background: transparent !important; color:#fff !important;text-transform:uppercase; font-weight: 500; }
-	.inner_twocol_layout .sidebar_menu .btn:focus, .inner_twocol_layout .sidebar_menu .btn:hover{background : #b4e925; border-radius:0 !important;}
+	.inner_twocol_layout .sidebar_menu .btn:focus, .inner_twocol_layout .sidebar_menu .btn:hover{background : #b4e925; border-radius:0 !important; box-shadow: 0 transparent !important;}
 	.inner_twocol_layout .sidebar_menu .btn-toggle::before {width: 1.25em; line-height: 0; color:#fff ; content:"\f061" ; font-family: "FontAwesome"; 	transition: transform .35s ease; transform-origin: .5em 50%; }
 	.inner_twocol_layout .sidebar_menu ul li{padding:0; margin-top: 10px !important; text-transform: capitalize; color: #fff;}
-	.inner_twocol_layout .sidebar_menu ul .btn:focus{font-weight: bold; color:#9ED2FF !important;}
+	.inner_twocol_layout .sidebar_menu ul .btn:focus{font-weight: bold; color:#9ED2FF !important; box-shadow: 0 transparent !important; outline: 0 !important;}
 	.inner_twocol_layout .sidebar_menu h4{ padding:20px 10px 0; font-size: 18px;  }
 	.inner_twocol_layout .sidebar_menu a{color:#fff !important; text-decoration: none; display: block; width: 100%; }
 	.inner_twocol_layout .sidebar_menu a:hover{color:#fff !important; padding-left:5px; transition: 0.5s; text-decoration: underline; }
@@ -340,19 +349,25 @@
 	.btn_icon1 i{ font-size: 28px; margin-right: 10px; background-color:#42741f; padding: 20px; width:25%; text-align: center; color:#fff;}
 	.inner_twocol_layout .sidebar_menu ul.green_sidebar .btn:focus{color:#d4f1bf !important;}	
 	.inner_twocol_layout .sidebar_menu .green_sidebar .btn{ width:100%; text-align: left; color:#fff !important;text-transform:uppercase; font-weight: 500; }
-	.inner_twocol_layout .sidebar_menu .green_sidebar .btn:focus, .inner_twocol_layout .sidebar_menu .green_sidebar .btn:hover{background :transparent; border-radius:10px 10px 0 0 !important;}
+	.inner_twocol_layout .sidebar_menu .green_sidebar .btn:focus, .inner_twocol_layout .sidebar_menu .green_sidebar .btn:hover{background :transparent; border-radius:0 !important; box-shadow: 0 transparent !important;}
 
 	.rightsidebar_content .iframe_box{ width: 100%; min-height: 300px; border: solid 2px #d9d9d9; padding: 5px; }
 	.rightsidebar_content .tab-pane{height: 300px; overflow-y:scroll;}
 	.rightsidebar_content{ text-align: justify;padding-right:20px; max-height: 600px; overflow-y: scroll;}
-	.rightsidebar_content h5{ display: inline-block; border-left: solid 5px #2169B2; color:#444; padding-left:10px; margin-bottom:20px; font-weight: 600; font-size:17px; text-transform: capitalize;}
-	.rightsidebar_content h6{ color: #444;}
+	.rightsidebar_content h5{ display: inline-block; color:#444; margin-bottom:20px; font-weight: 600; font-size:19px; text-transform: capitalize; }
+	.rightsidebar_content h6{ color: #5e5e5e;}
+	.rightsidebar_content ul{ margin-left: 20px;}
 	.rightsidebar_content p .download_btn{ margin-bottom: 10px;}
 	.rightsidebar_content .download_btn{ background: #7BBF4B; float: right; color: #fff;}
 	.rightsidebar_content .download_btn::before {font-family: "FontAwesome"; width: 1.25em;	line-height: 0;	content: "\f56d"; transition: transform .35s ease; transform-origin: .5em 50%; color:#fff ;}
 	
 
-
+	/*QR_Codes*/
+	.qr_code ul{ margin-bottom: 0; margin-left: 10px; } 
+	.qr_code .card{background: #2169B2; text-align: center;  }
+	.qr_code .card-body{ padding: 10px 0 !important; }
+	.qr_code .card img{ padding: 5px;}
+	.qr_code .card p{ margin-bottom: 0px; color: #fff; text-transform: uppercase; font-weight: bold;}
 
 
 
@@ -361,11 +376,13 @@
 	.search_panel .card { background: #fff; padding:3px 3px 10px;  box-shadow: 1px 5px 13px #f1f1f1; border-color: #EEEEEE; transition: 0.6s all; border-radius: 10px; margin-bottom: 15px; }
 	.search_panel .card:hover{transform: translateY(-10px); box-shadow: 1px 5px 13px #d9d9d9;}
 	.search_panel .card-body{padding:0 ;  background: #fff; text-align: center; padding-bottom: 15px; }
-	.search_panel .card-title{width:100%; background: #2169b2; color:#fff; border-radius: 10px 10px 0 0; padding: 5px 5px 5px 10px; margin-bottom: 20px;  }
+	.search_panel .card-title{width:100%; background: #2169b2; color:#fff; border-radius: 10px 10px 0 0; padding: 5px 5px 5px 10px; margin-bottom: 20px; text-align: center;  }
+	.search_panel .card-large .card-title{ height: 62px; font-size: 14px;}
+	.search_panel .card-large .card-link{width: 50%;  }
 	.search_panel .card-title h5{ text-transform: uppercase; font-size: 16px; color: #fff; margin-bottom: 0; font-weight: 600;}
 	.search_panel .card-title a { display: block; padding: 5px; border: dashed 1px #68b3fd; border-radius: 5px; background-color: #2b85df; color: #fff;}
 	.search_panel .card-title a img{ height: 35px;  }
-	.search_panel .card-link{ text-align: center; background-color:#fff; padding: 5px; text-decoration: none; border: 2px dotted #EEEEEE; color: #444; cursor: pointer;
+	.search_panel .card-link{ text-align: center; background-color:#f4f4f4; padding: 5px; text-decoration: none; border: 2px dotted #EEEEEE; color: #444; cursor: pointer;
 	display: inline-block;}
 	.search_panel .card-link:hover{ color: #444; background: #D8EDFF; }
 
@@ -379,14 +396,21 @@
 	.search_panel .btn:hover{ background: #444;}
 	.search_panel .table{ background: #fff; font-size: 12px;}
 	.download_list_btn{ font-size:20px; text-align: end; margin-bottom: 5px;}
-	.download_list_btn a{ color: #FFF; background-color: #2169B2; padding:5px 10px; border-radius:5px;}
+	.download_list_btn a{ color: #FFF; background: #003D86; padding:5px 10px; border-radius:5px;}
 	.search_panel .search_sm_btn, .search_panel .search_sm_btn:hover, .search_panel .search_sm_btn_active{ font-size: 12px; padding: 8px; margin-left: 3px; background-color: #1a5997; margin-bottom: 3px; }
-	.search_panel .search_sm_btn:hover, .search_panel .search_sm_btn_active, .search_panel .search_sm_btn_active:hover{ background-color: #287ed4;}
+	.search_panel .search_sm_btn:hover, .search_panel .search_sm_btn_active, .search_panel .search_sm_btn_active:hover{ background: #003D86;}
 
 	#searchData label{ display: block;}	
+	#searchData .text-danger {color: #fff !important;	font-size: 17px; }
 	#searchData .btn, #searchData .btn:hover{ background: #3d9df1; font-size: 12px; margin-top: 30px;}
 	#searchData .btn:hover{ background: #287ed4; }	
-	#searchData .select2-container{max-width:150px;}
+	#searchData .select2-container, #searchData .form-select{min-width:150px;}
+	#recordList .dataTables_wrapper input[type="search"] { 	border-radius: 100px; border: solid 1px #ccc;	padding: 5px;	}
+	#recordList .dataTables_wrapper .dataTables_length { margin-left: 10px;  }
+	button.dt-button, div.dt-button, a.dt-button{ padding: 2px 5px !important;	border: 1px solid #CCC !important; border-radius: 2px; color: #444 !important;}
+	.paginate_button previous, .paginate_button next{ font-weight: bold;}
+	.dataTables_wrapper .dataTables_info {font-size: 11px;}
+	.dataTables_wrapper .dataTables_paginate .paginate_button{ padding:2px !important;}
 
 	/******************************* LOADER SEARCH PANEL Section *******************************/
 	#loader {position: absolute; left: 50%;	top: 50%; z-index: 1; width: 120px;	height: 120px; margin: -76px 0 0 -76px;	border: 16px solid #f3f3f3; border-radius: 50%; border-top: 16px solid #3498db;-webkit-animation: spin 2s linear infinite; animation: spin 2s linear infinite;}
@@ -488,10 +512,11 @@
 		.header_topbar, .header_topbar .left_topbar, .header_topbar .right_topbar{ text-align: center;}
 		.header_topbar .right_topbar .btn-success{ font-size: 11px;}
 		.header_topbar .right_topbar span{font-size: 14px;}
-		#navbarCollapse li.nav-item .nav-link{ height:auto; line-height: 20px;  padding: 8px !important ; color: #fff; margin: 1px 0; }
+		#navbarCollapse li.nav-item .nav-link { height:auto; line-height: 20px;  padding: 8px !important ; color: #fff; margin: 1px 0; }
 		.main_ysriHeader .navbar-nav li.nav-item .active, li.nav-item .nav-link:hover{ background: #fff; color: #2169B2 !important;}
+		li.nav-item .nav-link:focus{ background: #fff !important; color: #2169B2 !important;}
 		.navbar-toggler {width: 100%; margin-bottom: 2px;}
-		.navbar-collapse{ background-color: #2169B2; margin:10px 0; padding:20px; margin-top:-14px; border-radius:0px; width: 100% !important;}
+		.navbar-collapse{ background-color: #2169B2; margin:10px 0; padding:20px; margin-top:0px; border-radius:0px; width: 100% !important;}
 		.navbar-brand{ width:80%; margin:5px 0}
 		.navbar-brandg20{ width:20%; margin:5px 0}
 		.navbar-expand-md .navbar-collapse .navbar-nav .dropdown-menu{background-color: #fff !important; border-top-width: 3px !important;}
@@ -521,6 +546,7 @@
 	.dropdown-menu li{ position: relative;}
 	.nav-item .submenu{	display: none;	position: absolute;	left:50%; top:0px;}
 	.nav-item .submenu-left{ right:100%; left:auto;	}
+	
 	.dropdown-menu > li:hover > .submenu{display: block;}
 	
 	}

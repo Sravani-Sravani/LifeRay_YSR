@@ -1,14 +1,12 @@
 					<div class="d-flex flex-column flex-shrink-0 sidebar_menu">
+					
 						<button class="accordion-button btn_icon show" type="button" data-bs-toggle="collapse" data-bs-target="#citizen-collapse" aria-expanded="true" aria-controls="citizen-collapse">	
 						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;Citizens</button>
 					<div class="collapse show" id="citizen-collapse"> 
 						<ul class="list-unstyled ps-0">
-<li class="mb-1">
-								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#eligible-collapse" aria-expanded="false"> Am I Eligible</button>
-								<div class="collapse" id="eligible-collapse" data-bs-parent="#citizen-collapse">
-								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/am-i-eligible">Check Eligibility</a></li>									
-								</ul></div>
+							<li class="mb-1">
+							<a href="/web/guest/am-i-eligible">	<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#eligible-collapse" aria-expanded="false">Am I Eligible </button></a>
+
 							</li>
 <li class="mb-1">
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myarg-collapse" aria-expanded="false"> My Aarogyasri Card</button>
@@ -21,19 +19,19 @@
                             
                             
 <li class="mb-1">
-								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myent-collapse" aria-expanded="false"> My Entitlements</button>
-								<div class="collapse" id="myent-collapse" data-bs-parent="#citizen-collapse">
+								<a href="/web/guest/entitlements_asri"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myent-collapse" aria-expanded="false"> My Entitlements</button></a>
+<!-- 								<div class="collapse" id="myent-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									<li><a href="/web/guest/entitlements_asri">Check Entitlements</a></li>                                   
-								</ul></div>
+								</ul></div> -->
 							</li>  
                             
 <li class="mb-1">
-								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button>
-								<div class="collapse" id="treats-collapse" data-bs-parent="#citizen-collapse">
+								<a href="/web/guest/asri_proceduresearch" target="_blank"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button></a>
+<!-- 								<div class="collapse" id="treats-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									<li><a href="/web/guest/asri_proceduresearch">Search for Procedures</a></li>                                   
-								</ul></div>
+								</ul></div> -->
 							</li>                            
 
 							<li class="mb-1">
@@ -43,20 +41,20 @@
 								<div class="collapse" id="patient-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									<li><a href="/web/guest/follow_up_information">Follow Up Information</a></li>
-									<li><a href="/web/guest/asri_follow_up_guidelines">Follow Up Guidelines</a></li>
+								<!-- 	<li><a href="/web/guest/asri_follow_up_guidelines">Follow Up Guidelines</a></li> -->
 									</ul>
 								</div>
 							</li>
                             
 <li class="mb-1">
-								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#asara-collapse" aria-expanded="false"> Aarogya Aasara</button>
-								<div class="collapse" id="asara-collapse" data-bs-parent="#citizen-collapse">
+								<a href="/web/guest/aarogya-aasara" target="_blank"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#asara-collapse" aria-expanded="false"> Aarogya Aasara</button></a>
+							<!-- 	<div class="collapse" id="asara-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									<li><a href="/web/guest/aarogya-aasara">Learn More about the Scheme</a></li>                                   
-								</ul></div>
+								</ul></div> -->
 							</li>                            
                             
-                            
+                            	
                             
                             
 							<li class="mb-1">
@@ -65,38 +63,38 @@
 								</button>
 								<div class="collapse" id="employees-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/asri_hospitalsearch">Where Can I Find a Network Hospital</a></li>
-									<li><a href="/web/guest/asri_proceduresearch">Where Can I Find Treatment</a></li>
-									<li><a href="/web/guest/asri_specilitysearch">Where Can I Find Speciality Details</a></li>
-									<li><a href="/web/guest/nearby-hospitals">Find a Hospital Near Me</a></li>
+									<li><a href="/web/guest/search-by-geography">Search by Geography</a></li>
+									<!-- <li><a href="/web/guest/asri_proceduresearch">Where Can I Find Treatment</a></li> -->
+									<li><a href="/web/guest/asri_specilitysearch">Search by Speciality </a></li>
+									<li><a href="/web/guest/nearby-hospitals">Hospitals Near Me</a></li>
 								</ul>
 								</div>
 							</li>
 							<li class="mb-1">
-								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#history-collapse" aria-expanded="false">
+								<a href="/web/guest/asri-treatment-history" ><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#history-collapse" aria-expanded="false">
 									Treatment History
 
-								</button>
-								<div class="collapse" id="history-collapse" data-bs-parent="#citizen-collapse">
+								</button></a>
+	<!-- 							<div class="collapse" id="history-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									<li><a href="/web/guest/asri-treatment-history" >Check Treatment History</a></li>
                                     
 								</ul>
-								</div>
+								</div> -->
 							</li>
                             
                             
                             <li class="mb-1">
-								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usermanuals-collapse" aria-expanded="false">
+								<a href="/web/guest/arogyamithra" target="_blank"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usermanuals-collapse" aria-expanded="false">
 									Know Your Mithra
 
-								</button>
-								<div class="collapse" id="usermanuals-collapse" data-bs-parent="#citizen-collapse">
+								</button></a>
+			<!-- 					<div class="collapse" id="usermanuals-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									<li><a href="/web/guest/arogyamithra" target="_blank">Find A Mithra</a></li>
                                     
 								</ul>
-								</div>
+								</div> -->
 							</li>
                             
                             
