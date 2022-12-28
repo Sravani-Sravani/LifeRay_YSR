@@ -212,7 +212,7 @@ crossorigin="anonymous"></script>
                     <a href="https://www.pmjay.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/5.jpg" alt="" class="img-fluid" /></a>
                   </div>
                   <div class="content-grid-item col-md-4 col-lg-2 text-center">
-                    <a href="https://eoffice.ap.gov.in/cas/login" target="_blank"><img src="/documents/d/guest/eofficelogo" alt="" class="img-fluid" /></a>
+                    <a href="https://eoffice.ap.gov.in/cas/login" target="_blank"><img src="https://ysraarogyasri.ap.gov.in/documents/d/guest/elogo" alt="" class="img-fluid" /></a>
                   </div>
                 </div>
               </div>

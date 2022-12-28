@@ -19,11 +19,8 @@
                             
                             
 <li class="mb-1">
-								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button>
-								<div class="collapse" id="treats-collapse" data-bs-parent="#citizen-collapse">
-								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/ehs_proceduresearch">Get Details of the Procedures</a></li>                                   
-								</ul></div>
+								<a href="/web/guest/ehs_proceduresearch"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button></a>
+								
 							</li>                            
 
 						<!--	<li class="mb-1">
@@ -47,38 +44,28 @@
 								</button>
 								<div class="collapse" id="employees-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/ehs_hospitalsearch">Where Can I Find a Network Hospital</a></li>
-									<li><a href="/web/guest/ehs_proceduresearch">Where Can I Find Treatment</a></li>
-									<li><a href="/web/guest/ehs_specilitysearch">Where Can I Find Speciality Details</a></li>
-									<li><a href="/web/guest/nearby-hospitals">Find a Hospital Near Me</a></li>
+									<li><a href="/web/guest/ehs_hospitalsearch">Search by Geography</a></li>
+									
+									<li><a href="/web/guest/ehs_specilitysearch">Search by  Speciality</a></li>
+									<li><a href="/web/guest/nearby-hospitals">Hospitals Near Me</a></li>
 								</ul>
 								</div>
 							</li>
 							<li class="mb-1">
-								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#history-collapse" aria-expanded="false">
+								<a href="/web/guest/wjhs-treatment-history"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#history-collapse" aria-expanded="false">
 									Treatment History
 
-								</button>
-								<div class="collapse" id="history-collapse" data-bs-parent="#citizen-collapse">
-								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/wjhs-treatment-history">Check Treatment History</a></li>
-                                    
-								</ul>
-								</div>
+								</button></a>
+							
 							</li>
                             
                             
                             <li class="mb-1">
-								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usermanuals-collapse" aria-expanded="false">
+							<a href="/web/guest/mithrawjhs" target="_blank">	<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usermanuals-collapse" aria-expanded="false">
 									Know Your Mithra
 
-								</button>
-								<div class="collapse" id="usermanuals-collapse" data-bs-parent="#citizen-collapse">
-								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/mithrawjhs">Get Mithra Details</a></li>
-                                    
-								</ul>
-								</div>
+								</button></a>
+								
 							</li>
                             
                             
@@ -107,14 +94,10 @@
 					  </li>
 
 					  <li class="mb-1">
-						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patient-collapse1" aria-expanded="false">
+						<a href="/web/guest/signin" target="_blank"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patient-collapse1" aria-expanded="false">
 							Hospital Login
-						</button>
-						<div class="collapse" id="patient-collapse1" data-bs-parent="#hospital-collapse">
-						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-							<li><a href="/web/guest/signin" target="_blank">Sign-in to Portal</a></li>							
-							  </ul>
-						</div>
+						</button></a>
+						
 					  </li>
 					 
 

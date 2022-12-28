@@ -85,7 +85,7 @@ long pageId1=themeDisplay.getPlid();
 		    	   String diseaseId="";
 		    	   String diseaseName="";
 	        	
-	    	     if(pageId1==595 || pageId1==497 || pageId1==503 ||pageId1==495 || pageId1==491){ //503=wjhs, 595 = ehsspeciality, 497=ehs
+	    	     if(pageId1==595 || pageId1==497 || pageId1==503 ||pageId1==495 ){ //503=wjhs, 595 = ehsspeciality, 497=ehs
 
 	    	    	     proceduresCount=data.getLong(1);
 			    	     hospitalCount=data.getLong(2);

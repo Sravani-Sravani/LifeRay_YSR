@@ -5,8 +5,8 @@
 <%@ include file="/rightcontent.jsp" %>
 
 
-            <h3 class="bordertitle text-dark">Dr.YSR Aarogyasri Functions</h3>
-            <h5>Scheme Administration:</h5>
+            <h3 class="bordertitle text-dark">WJHS</h3>
+            <h5>Introduction</h5>
             <p>The initial period of coverage under the scheme by Dr.YSR
                 Aarogyasri will be two years.</p>
             <p>The offices of the Dr.YSR Aarogyasri will house the staff

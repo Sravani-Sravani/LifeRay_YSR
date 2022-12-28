@@ -438,10 +438,10 @@ function stoploader(){
 			    	   String id=data.get("mandalId").toString();
 			    	   String mandalName="";   
 			    	   System.out.print("page id is"+ pageId1);
-			    	   if(pageId1==513 || pageId1==507 || pageId1==515 || pageId1==595 || pageId1==509){
+			    	   if(pageId1==513 || pageId1==507 || pageId1==515 || pageId1==595 || pageId1==509 || pageId1==491){
 			    		     mandalName=data.get("mandalName").toString();  
 			    	   }
-			    	   else if(pageId1==499 ||pageId1==491 || pageId1==585  ){
+			    	   else if(pageId1==499 || pageId1==585  ){
 			    		   
 			    		     mandalName=data.get("mandal").toString();  
 			    		     System.out.print("page id is"+ mandalName);
@@ -540,9 +540,12 @@ function stoploader(){
 				           			 $('#select-3').find('option').remove().end().append('<option value="">Show all</option>'); 
 				           			 $('#select-4').find('option').remove().end().append('<option value="">Show all</option>');
 				           			 $('#<portlet:namespace />searchComplaintTypeId').html("");
+				           			/* if(state_Id=="6"){ */
+				        
 				           			 jQuery.each(response, function(i, val) {
 				           		 	 $('#select-3').append("<option data='"+val.districtId+"' value='"+val.districtName+"'>"+val.districtName+"</option>");
 				           			});
+				           			
 				           			 $('#select-3').trigger('change');
 						    		   $('#select-3').prop("disabled", false);
 						    		   

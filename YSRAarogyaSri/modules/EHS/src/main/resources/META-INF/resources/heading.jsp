@@ -1,7 +1,7 @@
 
 	<div class="ysri_section">
 	<div class="main_heading_breadcrum">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
 				<div class="col-md-8 p-static">
 					<h1>EHS SCHEME</h1>

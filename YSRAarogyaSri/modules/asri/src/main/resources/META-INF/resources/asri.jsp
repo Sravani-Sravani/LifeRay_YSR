@@ -5,7 +5,7 @@
 <%@ include file="/rightContenta.jsp" %>
 
     <h3 class="bordertitle text-dark">DR.YSR AAROGYASRI SCHEME</h3>
-    <h5 class="bordertitle tet-dark">Introduction</h5>
+    <h5>Introduction</h5>
     <p>
         Towards achievement of universal health coverage for BPL families whether defined in terms of financial protection or access to and effective use of health care, Government of Andhra Pradesh is implementing state sponsored Dr.YSR Aarogyasri Health Insurance Scheme. This scheme certainly counts to be one of the pioneers in terms of achieving equity and providing accountable and evidence-based good-quality health-care services in the state to assist poor families from catastrophic health expenditure. The aim of the Government is to provide Universal Health Coverage to BPL families. The scheme is a unique PPP model in the field of Health Insurance, tailor made to the health needs of poor patients and provides end-to-end cashless services for identified diseases under secondary and tertiary care through a network of service providers from Government and private sector.<br><br>
         The scheme has established a demand-side mechanism that mobilizes and channels additional public financing to health, introduced an explicit benefits package, pioneered cashless care and fostered public private partnerships.<br><br>
@@ -13,14 +13,14 @@
         In order to facilitate the effective implementation of the scheme, the State Government set up the Dr.YSR Aarogyasri Health Care Trust, under the chairmanship of the Honorable Chief Minister. The Trust is administered by a Chief Executive Officer who is an IAS Officer. The trust, in consultation with the specialists in the field of insurance and healthcare, runs the scheme.<br><br>
         Dr.YSR Aarogyasri Health Insurance scheme is unique in its applicability since no other State/ government agency has provided universal health coverage to the poor. The choice of hospital for treatment is with the patient. The entire process from the time of conduct of health camps to the screening, diagnosing , treatment, follow- up and claim payment is made transparent through online web based processing to prevent any misuse and fraud. The scheme is complimentary to facilities available in government hospitals and put together provides Universal Health Coverage to BPL population including Prevention, Primary care and In-Patient care. All the Primary Health Centres (PHCs) which are the first contact point, Area/District Hospitals and Network Hospitals, are provided with Help Desks manned by VAIDYA MITHRA's to facilitate the illiterate patients.<br><br>
     </p>
-    <h5 class="bordertitle tet-dark">Objective</h5>
-    <ul>
+    <h5>Objective</h5>
+    <ul>	
         <li>To provide free quality hospital care and equity of access to BPL families by purchase of quality medical services from identified network of health care providers through a self-funded reimbursement mechanism (serviced by Trust).</li>
         <li>To provide financial security against the catastrophic health expenditures.</li>
         <li>To strengthen the Government Hospitals through demand side financing.</li>
         <li>To provide universal coverage of health for both urban and rural poor of the State of Andhra Pradesh.</li>
     </ul> <br><br>
-    <h5 class="bordertitle tet-dark">Geometry of Health Insurance Coverage</h5>
+    <h5>Geometry of Health Insurance Coverage</h5>
     <ul>
         <li>Population coverage (Breadth of Universal Health coverage) The beneficiaries of the scheme are the members of Below Poverty Line (BPL) families as enumerated and photographed in White Ration Card linked with Adhar card and available in Civil Supplies Department database.</li>
         <li>Financial coverage (Height of Universal Health coverage) The scheme shall provide coverage for the services to the beneficiaries up to Rs.5 lakh per family per annum on floater basis. There shall be no co-payment under this scheme.</li>

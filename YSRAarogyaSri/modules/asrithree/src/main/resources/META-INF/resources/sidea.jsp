@@ -40,7 +40,7 @@
 								</button>
 								<div class="collapse" id="patient-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-									<li><a href="/web/guest/follow_up_information">Follow Up Information</a></li>
+									<li><a hre	f="/web/guest/follow_up_information">Follow Up Information</a></li>
 								<!-- 	<li><a href="/web/guest/asri_follow_up_guidelines">Follow Up Guidelines</a></li> -->
 									</ul>
 								</div>

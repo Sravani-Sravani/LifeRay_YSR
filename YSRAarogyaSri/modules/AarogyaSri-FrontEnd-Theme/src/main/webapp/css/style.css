@@ -344,9 +344,10 @@
 
 	.citizenhospital_sidebar_menu .sidebar_menu{ padding:0px; background : #2169B2; }
 	.btn_icon, .btn_icon:hover, .btn_icon:focus{background: #2169B2 !important; border-bottom: solid 1px #2169B2 ; margin-top: 5px; text-align: left !important; text-transform: uppercase; font-weight: bold; font-size: 20px; }
-	.btn_icon i{ font-size: 28px; margin-right: 10px; background-color:#09519A;padding: 20px; width:25%; text-align: center; color:#fff;}
 	.btn_icon1, .btn_icon1:hover, .btn_icon1:focus{ border-bottom: solid 1px #5EA22E ; background:#5EA22E !important;  margin-top: 5px; text-align: left !important; text-transform: uppercase; font-weight: bold; font-size: 20px;}
-	.btn_icon1 i{ font-size: 28px; margin-right: 10px; background-color:#42741f; padding: 20px; width:25%; text-align: center; color:#fff;}
+	.btn_icon i,.btn_icon1 i { font-size: 28px; margin-right: 10px; background-color:#09519A;padding: 20px; width:25%; text-align: center; color:#fff;}
+	.btn_icon1 i{ font-size: 22px; background-color:#42741f; }
+	.btn_icon1 i.downarrow, .btn_icon i.downarrow{background: transparent; text-align:right;	padding: 0;	width: auto; margin: 0;  margin-left: 0px; margin-left: 12px; font-size: 20px; }	
 	.inner_twocol_layout .sidebar_menu ul.green_sidebar .btn:focus{color:#d4f1bf !important;}	
 	.inner_twocol_layout .sidebar_menu .green_sidebar .btn{ width:100%; text-align: left; color:#fff !important;text-transform:uppercase; font-weight: 500; }
 	.inner_twocol_layout .sidebar_menu .green_sidebar .btn:focus, .inner_twocol_layout .sidebar_menu .green_sidebar .btn:hover{background :transparent; border-radius:0 !important; box-shadow: 0 transparent !important;}
