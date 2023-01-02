@@ -107,7 +107,7 @@ function stoploader(){
             }
        ]
     };
-	<%   if(pageId1==589){ %>
+	<%   if(pageId1==589 || pageId1==581 || pageId1==513 || pageId1==579 || pageId1==515){ %>
 	dataTables = {
 	        tables:[
 	            {
