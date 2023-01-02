@@ -45,13 +45,13 @@ long pageId=themeDisplay.getPlid();
  <%if(pageId==513 || pageId==507 || pageId==499 || pageId==491){ %>
  
  <%@ include file="/hospital_search.jsp" %>
- <% }else if(pageId==497  ||pageId==595 || pageId==593 ||pageId==515|| pageId==503 || pageId==509){ %>
+ <% }else if(pageId==497  ||pageId==595 ||pageId==587 || pageId==593 ||pageId==579||pageId==515|| pageId==503 || pageId==509){ %>
  <%@ include file="/speciality_search.jsp" %>
  <% }else if(pageId==517 || pageId==495 || pageId==505 ||pageId==511){ %>
  <%@ include file="/procedure_search.jsp" %>
  <% }else if(pageId==519){ %>
    <%@ include file="/mitra_search.jsp" %>
-   <% }else if(pageId==589 || pageId==585){ %>
+   <% }else if(pageId==589 || pageId==585 ||pageId==581){ %>
    <%@ include file="/hospitalsList.jsp" %>
    <% }else{ %>
    Asrim Search Page not Created

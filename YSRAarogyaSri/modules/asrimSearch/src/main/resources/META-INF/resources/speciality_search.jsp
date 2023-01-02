@@ -29,18 +29,18 @@ long pageId1=themeDisplay.getPlid();
 	String geography="";
 	String speciality="";
 	String nearbyhptls="";
-	if(pageId1==589|| pageId1==593 || pageId1==515){
+	if(pageId1==589|| pageId1==593 ||pageId1==579|| pageId1==515 ||pageId1==579){
 		geography="/web/guest/search-by-geography";
 		speciality="/web/guest/asrispeciality";
 		nearbyhptls="/web/guest/nearby-hospitals";
 	}
-	else if(pageId1==497|| pageId1==585||pageId1==595){
+	else if(pageId1==497|| pageId1==585||pageId1==595 ||pageId1==587){
 		geography="/web/guest/ehs-v4";
 		speciality="/web/guest/ehsspeciality";
 		nearbyhptls="/web/guest/nearby-hospitals";
 	}
 	
-	if(pageId1==589|| pageId1==593|| pageId1==585||pageId1==595){
+	if(pageId1==589|| pageId1==593||pageId1==579|| pageId1==585||pageId1==595 ||pageId1==587){
 	 %>
 	<div class="container-fluid">
 			<div class="row">
@@ -55,13 +55,13 @@ long pageId1=themeDisplay.getPlid();
 
 	  <%
 	  String pageTitle="";
-	  if(pageId1==513 || pageId1==589|| pageId1==593 ||pageId1==515){
+	  if(pageId1==513 || pageId1==589|| pageId1==593 ||pageId1==579||pageId1==515){
 	  	pageTitle="Aarogyasri ";
 	  }
 	  else if(pageId1==507 || pageId1==509){
 	  	pageTitle="Aarogya Raksha ";
 	  }
-	  else if(pageId1==585 || pageId1==497||pageId1==595){
+	  else if(pageId1==585 || pageId1==497||pageId1==595 ||pageId1==587){
 		  pageTitle="EHS";
 	  }
 	  else if(pageId1==503){
@@ -85,7 +85,7 @@ long pageId1=themeDisplay.getPlid();
 		    	   String diseaseId="";
 		    	   String diseaseName="";
 	        	
-	    	     if(pageId1==595 || pageId1==497 || pageId1==503 ||pageId1==495 ){ //503=wjhs, 595 = ehsspeciality, 497=ehs
+	    	     if(pageId1==595 ||pageId1==587 || pageId1==497 || pageId1==503 ||pageId1==495 ){ //503=wjhs, 595 = ehsspeciality, 497=ehs
 
 	    	    	     proceduresCount=data.getLong(1);
 			    	     hospitalCount=data.getLong(2);

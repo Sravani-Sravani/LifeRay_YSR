@@ -43,11 +43,11 @@ if(pageId==443||pageId==6 || pageId==19){ %>
 <%@ include file="/empanlementguidelines.jsp" %>
 <%}else if(pageId==427){ %>
 <%@ include file="/changerequest.jsp" %>
-<%}else if(pageId==613){ %>
+<%}else if(pageId==613 || pageId==591){ %>
 <%@ include file="/asri_treats.jsp" %>
-<%}else if(pageId==615){ %>
+<%}else if(pageId==615 ||pageId==593){ %>
 <%@ include file="/asri-entitle.jsp" %>
-<%}else if(pageId==601){ %>
+<%}else if(pageId==601 ||pageId==589){ %>
 <%@ include file="/amieligible.jsp" %>
 <%}else if(pageId==429){ %>
 <%@ include file="/fix_incl.jsp" %>

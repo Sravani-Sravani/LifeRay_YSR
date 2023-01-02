@@ -1,6 +1,9 @@
 					<div class="d-flex flex-column flex-shrink-0 sidebar_menu">
 						<button class="accordion-button btn_icon show" type="button" data-bs-toggle="collapse" data-bs-target="#citizen-collapse" aria-expanded="true" aria-controls="citizen-collapse">	
-						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;Citizens</button>
+						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;Citizens
+						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
+						</button>
+					
 					<div class="collapse show" id="citizen-collapse"> 
 						<ul class="list-unstyled ps-0">
 <li class="mb-1">
@@ -87,7 +90,9 @@
 					</ul> 
 					</div>
 						<button class="accordion-button collapsed btn_icon1" type="button" data-bs-toggle="collapse" data-bs-target="#hospital-collapse" aria-expanded="false" aria-controls="hospital-collapse">
-						<i class="fa-sharp fa-solid fa-hospital"></i> &nbsp;Hospitals</button>
+						<i class="fa-sharp fa-solid fa-hospital"></i> &nbsp;Hospitals
+						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
+						</button>
 					<div class="collapse" id="hospital-collapse"> 
 						<ul class="list-unstyled green_sidebar ps-0">
 					  <li class="mb-1">

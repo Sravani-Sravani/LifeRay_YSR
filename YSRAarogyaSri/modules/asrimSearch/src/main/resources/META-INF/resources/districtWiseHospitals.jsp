@@ -1,4 +1,4 @@
- <%@page import="java.util.HashMap"%>
+dd <%@page import="java.util.HashMap"%>
 <%@page import="com.liferay.portal.kernel.util.WebKeys"%>
 <%@page import="com.liferay.portal.kernel.theme.ThemeDisplay"%>
 <%@page import="com.kpmg.asrimSearch.util.DataGridDisplayManageUtil"%>
@@ -68,50 +68,50 @@ else if(pageId1==507){
 	        map.put("KURNOOL", "https://www.google.com/maps/d/embed?mid=1gsdxrqA-dgnXnllMo51svZZcFA8M4-w&ehbc=2E312F");
 	        map.put("GUNTUR", "https://www.google.com/maps/d/embed?mid=17ZSiCA8vUZxU1yGxe2F1wzde8zsnKjQ&ehbc=2E312F");
 	       
-	        map.put("ALLURI SITHARAMA RAJU","");
-	        map.put("ANAKAPALLI","");
-	        map.put("ANNAMAYYA","");
-	        map.put("BAPATLA","");
-	        map.put("DR.B.R.AMBEDKAR KONASEEMA","");
-	        map.put("PARVATHIPURAM MANYAM","");
-	        map.put("SRI SATHAYA SAI","");
-	        map.put("PALNADU","");
-	        map.put("NANDHYALA","");
-	        map.put("TIRUPATI","");
-	        map.put("ELURU","");
-	        map.put("KAKINADA","");
-	        map.put("NTR","");
+	        map.put("ALLURI SITHARAMA RAJU","https://www.google.com/maps/d/u/0/embed?mid=1jzHgrpqg7IPdl8janhaSR1KbrL2kAgc&ehbc=2E312F");
+	        map.put("ANAKAPALLI","https://www.google.com/maps/d/u/0/embed?mid=1nlSbZsub1LmQhT5FYyrb4gsHy3EbJS0&ehbc=2E312F");
+	        map.put("ANNAMAYYA","https://www.google.com/maps/d/u/0/embed?mid=1s8NyqgTMw7648ebLbv_l5CBd_VRGzOg&ehbc=2E312F");
+	        map.put("BAPATLA","https://www.google.com/maps/d/u/0/embed?mid=1G1pNIRyt28SvH9nlMAW40Ynom7Fhmmk&ehbc=2E312F");
+	        map.put("DR.B.R.AMBEDKAR KONASEEMA","https://www.google.com/maps/d/u/0/embed?mid=19qldR0viFjzezyaahVzEhZ3WnZOiOv8&ehbc=2E312F");
+	        map.put("PARVATHIPURAM MANYAM","https://www.google.com/maps/d/u/0/embed?mid=1IaFcoS96uBMbU4gkCneHa5eq_93HGLY&ehbc=2E312F");
+	        map.put("SRI SATHAYA SAI","https://www.google.com/maps/d/u/0/embed?mid=1K_HKsRT35eJKIHSuRs-8mqBBkQ0XB08&ehbc=2E312F");
+	        map.put("PALNADU","https://www.google.com/maps/d/u/0/embed?mid=1D8qYrEVEh77W964xl1KnOFQ20MlMyHU&ehbc=2E312F");
+	        map.put("NANDHYALA","https://www.google.com/maps/d/u/0/embed?mid=1ameqdqp8IlROqeRC1-XFdBoIuD4xYA8&ehbc=2E312F");
+	        map.put("TIRUPATI","https://www.google.com/maps/d/u/0/embed?mid=17mM7suBvyd2HkaBmIsLFwDeY8VPXhEk&ehbc=2E312F");
+	        map.put("ELURU","https://www.google.com/maps/d/u/0/embed?mid=1RGZwWAWb7wRX76KIjVc96wUDU6NRORc&ehbc=2E312F");
+	        map.put("KAKINADA","https://www.google.com/maps/d/u/0/embed?mid=1zb6RZGrRGgshRs3JwUYFfqGIQ7At7Rg&ehbc=2E312F");
+	        map.put("NTR","https://www.google.com/maps/d/u/0/embed?mid=1MhYoJ-i6wSvSftXe4f1-kpqhevDgyC0&ehbc=2E312F");
 	        
 	        
 	        
 	        HashMap<String,String> image = new HashMap<>();
-	        image.put("ANANTHAPURAMU", "/documents/d/guest/anantapur");
-	        image.put("SRIKAKULAM", "/documents/d/guest/srikakulam");
-	        image.put("VIZIANAGARAM", "/documents/d/guest/vizianagaram");
-	        image.put("VISHAKAPATANAM", "/documents/d/guest/vishakhapatnam");
-	        image.put("EAST GODAVARI", "/documents/d/guest/east_godawari");
-	        image.put("WEST GODAVARI", "/documents/d/guest/west_godavari");
-	        image.put("KRISHNA", "/documents/d/guest/krishna");
-	        image.put("PRAKASAM", "/documents/d/guest/prakasam");
-	        image.put("SRI POTTISRIRAMULU NELLORE", "/documents/d/guest/nellore");
-	        image.put("CHITTOOR", "/documents/d/guest/chittoor");
-	        image.put("YSR KADAPA", "/documents/d/guest/ysr_kadapa");
-	        image.put("KURNOOL", "/documents/d/guest/kurnool");
-	        image.put("GUNTUR", "/documents/d/guest/guntur");
+	        image.put("ANANTHAPURAMU", "/o/com.kpmg.asrimSearch/Images/Anantapur.png");
+	        image.put("SRIKAKULAM", "/o/com.kpmg.asrimSearch/Images/Srikakulam.png");
+	        image.put("VIZIANAGARAM", "/o/com.kpmg.asrimSearch/Images/Vizianagaram.png");
+	        image.put("VISHAKAPATANAM", "/o/com.kpmg.asrimSearch/Images/Vishakhapatnam.png");
+	        image.put("EAST GODAVARI", "/o/com.kpmg.asrimSearch/Images/east_godawari.png");
+	        image.put("WEST GODAVARI", "/o/com.kpmg.asrimSearch/Images/West Godavari.png");
+	        image.put("KRISHNA", "/o/com.kpmg.asrimSearch/Images/krishna.png");
+	        image.put("PRAKASAM", "/o/com.kpmg.asrimSearch/Images/Prakasam.png");
+	        image.put("SRI POTTISRIRAMULU NELLORE", "/o/com.kpmg.asrimSearch/Images/nellore.png");
+	        image.put("CHITTOOR", "/o/com.kpmg.asrimSearch/Images/Chittoor.png");
+	        image.put("YSR KADAPA", "/o/com.kpmg.asrimSearch/Images/YSR Kadapa.png");
+	        image.put("KURNOOL", "/o/com.kpmg.asrimSearch/Images/kurnool.png");
+	        image.put("GUNTUR", "/o/com.kpmg.asrimSearch/Images/guntur.png");
 	        
-	        image.put("PARVATHIPURAM MANYAM","/documents/d/guest/parvathipuram");
-	        image.put("ANAKAPALLI","/documents/d/guest/anakapalli");
-	        image.put("ELURU","/documents/d/guest/eluru");
-	        image.put("KAKINADA","/documents/d/guest/kakinada");
-	        image.put("DR.B.R.AMBEDKAR KONASEEMA","/documents/d/guest/konaseema");
-	        image.put("NANDHYALA","/documents/d/guest/nandyal");
-	        image.put("NTR","/documents/d/guest/ntr");
-	        image.put("PALNADU","/documents/d/guest/palnadu");
-	        image.put("TIRUPATI","/documents/d/guest/tirupati");
-	        image.put("ANNAMAYYA","/documents/d/guest/annamayya");
-	        image.put("ALLURI SITHARAMA RAJU","/documents/d/guest/allurisitharamaraju");
-	        image.put("BAPATLA","/documents/d/guest/bapatla");
-	        image.put("SRI SATHAYA SAI","/documents/d/guest/sri-sathya-sai");
+	        image.put("PARVATHIPURAM MANYAM","/o/com.kpmg.asrimSearch/Images/parvathipuram.jfif");
+	        image.put("ANAKAPALLI","/o/com.kpmg.asrimSearch/Images/ANAKAPALLI.png");
+	        image.put("ELURU","/o/com.kpmg.asrimSearch/Images/ELURU.png");
+	        image.put("KAKINADA","/o/com.kpmg.asrimSearch/Images/kakinada.png");
+	        image.put("DR.B.R.AMBEDKAR KONASEEMA","/o/com.kpmg.asrimSearch/Images/konaseema.png");
+	        image.put("NANDHYALA","/o/com.kpmg.asrimSearch/Images/NANDYAL.png");
+	        image.put("NTR","/o/com.kpmg.asrimSearch/Images/NTR.png");
+	        image.put("PALNADU","/o/com.kpmg.asrimSearch/Images/Palnadu.png");
+	        image.put("TIRUPATI","/o/com.kpmg.asrimSearch/Images/TIRUPATI.png");
+	        image.put("ANNAMAYYA","/o/com.kpmg.asrimSearch/Images/ANNAMAYYA.png");
+	        image.put("ALLURI SITHARAMA RAJU","/o/com.kpmg.asrimSearch/Images/allurisitharamaraju.png");
+	        image.put("BAPATLA","/o/com.kpmg.asrimSearch/Images/BAPATLA.png");
+	        image.put("SRI SATHAYA SAI","/o/com.kpmg.asrimSearch/Images/SRI SATHYA SAI.png");
 
 
 		  try{
