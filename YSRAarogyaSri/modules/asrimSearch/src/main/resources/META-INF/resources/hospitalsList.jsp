@@ -124,7 +124,7 @@ function stoploader(){
 	            }
 	       ]
 	    };
-	<%}%>
+	<%}%>	
 	function clearAndLoadData(selectedFilter){
 		var booleanflag=true;
 	   if(selectedFilter==5){ 
