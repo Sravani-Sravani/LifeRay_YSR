@@ -562,6 +562,28 @@
 	.dropdown-menu > li:hover{ background-color: #f1f1f1 }
 	.dropdown-menu > li:hover > .submenu{display: block;}
 	}
+	
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+}
+
+#topBtn:hover {
+  background-color: #555;
+}
 
 	
 		
