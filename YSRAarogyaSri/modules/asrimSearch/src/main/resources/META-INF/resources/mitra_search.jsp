@@ -23,7 +23,7 @@
  iteratorNewURL.setParameter("mvcPath", "/view.jsp");
 
  org.json.JSONArray states_List=DataGridDisplayManageUtil.getStateLevelAsrimMitrasCount();
- System.out.print("states_List"+states_List.toString());
+ //System.out.print("states_List"+states_List.toString());
 
 
 %>
@@ -47,13 +47,13 @@
 		      statesList.add("Tamilnadu");
 		 	  
 		        for(int i=0;i<statesList.size();i++){
-		        	 System.out.println("statesList.get(i)>>>"+statesList.get(i));
+		        	// System.out.println("statesList.get(i)>>>"+statesList.get(i));
 		        	for(int j=0;j<states_List.length();j++){
 		        	org.json.JSONArray data=new org.json.JSONArray(states_List.get(j).toString());
 		    	   long stateId=data.getLong(2);
 		    	   String stateName=data.getString(0).toString();
 		    	   long mitrasCount=data.getLong(1);
-		    	   System.out.println("stateName>>>"+stateName);
+		    	  // System.out.println("stateName>>>"+stateName);
 		    	if(stateName.trim().equalsIgnoreCase(statesList.get(i))){
 		    		stateName=statesList.get(i);
 		    		

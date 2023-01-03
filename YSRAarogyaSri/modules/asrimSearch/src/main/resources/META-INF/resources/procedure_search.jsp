@@ -108,7 +108,7 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
  }
     
  %>
- <% System.out.println("proc_type>>>"+proc_type); %>
+ <% //System.out.println("proc_type>>>"+proc_type); %>
 <script>
 	var primaryKeyColumn = 1;
 	var primaryKeyColumnName = "Name of Hospital";
@@ -349,8 +349,8 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
 				<select class="form-select" id="select-1" name="select-1">
 				    <option value="">Show All</option>
 				  <%
-				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null, pageId1);
-				      System.out.print("speciality_List 123"+speciality_List.toString());
+				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null, pageId1,serverName);
+				      //System.out.print("speciality_List 123"+speciality_List.toString());
 				      for(int j=0;j<speciality_List.length();j++){
 			        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
 			    	  
@@ -377,9 +377,9 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
 			    	   int postion_1=disease_Name.indexOf("(");
 			    	   
 			    	   if(postion_1!=0 && (pageId1==495 || pageId1==505)){
-			    		   System.out.println("disease_Name>>>"+disease_Name);
+			    		  // System.out.println("disease_Name>>>"+disease_Name);
 			    		  diseaseId=disease_Name.substring(postion_1+1,disease_Name.length()-1).trim();
-			    	   System.out.println("diseaseId>>>"+diseaseId);
+			    	   //System.out.println("diseaseId>>>"+diseaseId);
 			    	   }
 			    	   
 			    	   if(postion_1!=0)
