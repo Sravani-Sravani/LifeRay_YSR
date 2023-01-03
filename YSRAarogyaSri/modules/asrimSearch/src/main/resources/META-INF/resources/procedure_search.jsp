@@ -404,7 +404,7 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
 
 				 </select>
 				</div>
-				
+				<%if(pageId1==517) {%>
 				<div class="col-auto">
 				<label  for="Procedure Name">Type</label>
 				<select class="form-select" id="select-4" name="select-4">
@@ -412,6 +412,7 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
 
 				 </select>
 				</div>
+				<% } %>
 					<div class="col-auto">
                   <div class="serchbtn-sec"> 
 				      <button type="button" id="resetBtnS" class="btn btn-secondary resetbtnclass" style="margin-top: 23px;width: 100%;font-size:13px;">Clear All</button>

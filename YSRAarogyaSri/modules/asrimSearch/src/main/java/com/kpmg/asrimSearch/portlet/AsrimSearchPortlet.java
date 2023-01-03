@@ -171,7 +171,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			     
 			     String url="";
 					if(pId==513 || pId==589 ||pId==581 || pId==593 ||pId==579 ||pId==515){
-						url="http://10.48.19.62:8091/portalsearchapi/public-asri/searchHospital";
+						url="http://10.48.19.54:8091/portalsearchapi/public-asri/searchHospital";
 						////POST_PARAMS = "{\n" + "\"districtid\": null,\r\n" +
 						        //"    \"hospitalid\": null,\r\n" +
 						        //"    \"hospitaltype\": null\r\n" + "\n}";
@@ -179,7 +179,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 					}
 					else if(pId==507 ||pId==509) {
  
-				url="http://10.48.19.62:8092/portalsearchapi/public-ar/searchHospital";
+				url="http://10.48.19.54:8092/portalsearchapi/public-ar/searchHospital";
 						
 						     POST_PARAMS = "{\n" + "\"districtid\": null\r\n"+ "\n}";
 
@@ -188,7 +188,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 					}
 					else { //pId==499 || pId==491
 						   POST_PARAMS = "{\n" + "\"districtid\": null" + "\n}";
-						url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/searchHospital";
+						url="http://10.48.19.54:8093/ehsportalsearchapi/public-ehs/searchHospital";
 					}
 			     
 				    URL obj = new URL(url);
@@ -243,16 +243,16 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			     if(pId==517 || pId==515){
 			    	 POST_PARAMS = "{\n" + "\"surgeryid\": \"M1.8\"" +"}";
 			    	 method="POST";
-			    	 rl5="http://10.48.19.62:8091/portalsearchapi/public-asri/searchProcedure";
+			    	 rl5="http://10.48.19.54:8091/portalsearchapi/public-asri/searchProcedure";
 					}
 					else if(pId==511 ||pId==507) {
 						POST_PARAMS = "{\n" + "\"surgeryid\": \"M1.8\"" +"}";
 						method="POST";
-						rl5="http://10.48.19.62:8092/portalsearchapi/public-ar/searchProcedure";
+						rl5="http://10.48.19.54:8092/portalsearchapi/public-ar/searchProcedure";
 					}
 					else if(pId==495 || pId==505) {
 						method="GET";
-						rl5="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/searchProcedure"; 
+						rl5="http://10.48.19.54:8093/ehsportalsearchapi/public-ehs/searchProcedure"; 
 					}
 			     System.out.println(POST_PARAMS);
 			     System.out.println("urls is"+rl5);
@@ -307,7 +307,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 				        "    \"procedurename\": null,\r\n" + 
 				        "    \"proceduretypeid\": null\r\n" + "\n}";
 			    //System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.62:8091/portalsearchapi/public/searchspeciality");
+				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/searchspeciality");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
 			     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -354,7 +354,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 		try {
 			 final String POST_PARAMS = "{\n" + "\"districtid\": null\r\n" + "\n}";
 			  //  System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.62:8091/portalsearchapi/public/mitra-search-districtwise");
+				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/mitra-search-districtwise");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
 			     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
