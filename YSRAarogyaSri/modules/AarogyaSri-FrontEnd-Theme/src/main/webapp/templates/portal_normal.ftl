@@ -68,10 +68,10 @@ crossorigin="anonymous"></script>
 	
 <#if w3c_language_id=="te-IN">
 		<a href="/te/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=en_US" class="language-entry-long-text" lang="en-US">English</a>
-		 <span class="language-entry-long-text" lang="te-IN">తెలుగు</span>
+		 <span class="language-entry-long-text" lang="te-IN">à°¤à±†à°²à±�à°—à±�</span>
 <#else>
 		 <span class="language-entry-long-text" lang="en-US">English</span>
-		 <a href="/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=te_IN" class="language-entry-long-text" lang="te-IN">తెలుగు</a>
+		 <a href="/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=te_IN" class="language-entry-long-text" lang="te-IN">à°¤à±†à°²à±�à°—à±�</a>
 </#if>
 				 <a href="/web/guest/screen_reader_11"><i class="fa-solid fa-mobile-screen"></i> ${screen_reader} </a> 
 				 <a href="/web/guest/glossary"><i class="fa-solid fa-book-open-cover"></i> ${glossary} </a>   
@@ -189,6 +189,28 @@ crossorigin="anonymous"></script>
 	
 	 	  
 <footer>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>		
       <div class="quick_links">
         <div class="container-fluid">
           <h4>Quick Links</h4>
