@@ -19,13 +19,13 @@ import org.json.JSONObject;
 	try {
 		String url="";
 		if(pId==513 ||pId==589 ||pId==581){
-			url="http://10.48.19.54:8091/portalsearchapi/public-asri/hospital-statewisecount";
+			url="http://10.48.19.62:8091/portalsearchapi/public-asri/hospital-statewisecount";
 		}
 		else if(pId==507 ) {
-			url="http://10.48.19.54:8092/portalsearchapi/public-ar/hospital-statewisecount";
+			url="http://10.48.19.62:8092/portalsearchapi/public-ar/hospital-statewisecount";
 		}
 		else if(pId==499 || pId==491 ||pId==585) { //pId==499 || pId==491
-			url="http://10.48.19.54:8093/ehsportalsearchapi/public-ehs/hospital-statewisecount";
+			url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/hospital-statewisecount";
 		}
 		
 		   URL obj = new URL(url);
@@ -68,13 +68,13 @@ public static org.json.JSONArray getDistrictAsrimHospCount(String stateId,long p
 	try {  
 		String url="";
 		if(pId==513){
-			url="http://10.48.19.54:8091/portalsearchapi/public-asri/hospital-districtwisecount";
+			url="http://10.48.19.62:8091/portalsearchapi/public-asri/hospital-districtwisecount";
 		}
 		else if(pId==507) {
-			url="http://10.48.19.54:8092/portalsearchapi/public-ar/hospital-districtwisecount";
+			url="http://10.48.19.62:8092/portalsearchapi/public-ar/hospital-districtwisecount";
 		}
 		else if(pId==491 || pId==499){ //pId==499 || pId==491
-			url="http://10.48.19.54:8093/ehsportalsearchapi/public-ehs/hospital-districtwisecount";
+			url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/hospital-districtwisecount";
 		}
 		 final String POST_PARAMS = "{\n" + "\"stateVal\": \""+stateId+ "\"\n}";
 //		    System.out.println(POST_PARAMS);
@@ -122,7 +122,7 @@ public static org.json.JSONArray getStateLevelAsrimMitrasCount() {
 	org.json.JSONArray array = null;
 	try {
 	
-		   URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/mitra-search");
+		   URL obj = new URL("http://10.48.19.62:8091/portalsearchapi/public/mitra-search");
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 		    postConnection.setRequestMethod("GET");
 		     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -161,7 +161,7 @@ public static org.json.JSONArray getDistrictAsrimMitrasCount(String stateId) {
 		 final String POST_PARAMS = "{\n" + "\"stateid\": "+stateId+ "\n}";
 		   // System.out.println(POST_PARAMS);
 		    
-		   URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/mitra-search-statewise");
+		   URL obj = new URL("http://10.48.19.62:8091/portalsearchapi/public/mitra-search-statewise");
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 		    postConnection.setRequestMethod("POST");
 		     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -211,13 +211,13 @@ public static org.json.JSONArray getAsriSpecialityCount(String specialityId, lon
 		    
 		    String rl4="";
 		    if(pId==517 || pId==589 ||pId==581 || pId==593 ||pId==579|| pId==515 ||pId==513) {  //593=asrispeciality, 515=asri_specilitysearch
-		    	rl4="http://10.48.19.54:8091/portalsearchapi/public-asri/specialitysearchcount";
+		    	rl4="http://10.48.19.62:8091/portalsearchapi/public-asri/specialitysearchcount";
 		    }
 		    else if(pId==507 || pId==509 ||pId==511) {
-		    	rl4="http://10.48.19.54:8092/portalsearchapi/public-ar/specialitysearchcount";
+		    	rl4="http://10.48.19.62:8092/portalsearchapi/public-ar/specialitysearchcount";
 		    }
 		    else if(pId==495  || pId==585 || pId==595||pId==587 || pId==497 || pId==503 || pId==499 || pId==505 ||pId==491){    //499=wjhs  495=EHS hospitallist, 585=  ,      503=wjhs, 595 = ehsspeciality, 497=ehs
-		    	rl4="http://10.48.19.54:8093/ehsportalsearchapi/public-ehs/specialitysearchcount";
+		    	rl4="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/specialitysearchcount";
 		    }
 		    
 		   URL obj = new URL(rl4);
@@ -267,13 +267,13 @@ public static org.json.JSONObject getStates(long pId) {
 	try { 
 		String url="";
 		if(pId==513 || pId==589 ||pId==581 ||pId==515 ||pId==593 ||pId==579 ){
-			url="http://10.48.19.54:8091/portalsearchapi/public-asri/statelist";
+			url="http://10.48.19.62:8091/portalsearchapi/public-asri/statelist";
 		}
 		else if(pId==507 || pId==509) {
-			url="http://10.48.19.54:8092/portalsearchapi/public-ar/statelist";
+			url="http://10.48.19.62:8092/portalsearchapi/public-ar/statelist";
 		}
 		else if(pId==499 || pId==491 || pId==585 ||pId==497 || pId==503 || pId==595 ||pId==587){ //pId==499 || pId==491
-			url="http://10.48.19.54:8093/ehsportalsearchapi/public-ehs/statelist";
+			url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/statelist";
 		}
 		   URL obj = new URL(url);
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
@@ -317,13 +317,13 @@ public static org.json.JSONObject getDistricts(String stateId,long pId) {
 		    System.out.println(POST_PARAMS);
 		    String url="";
 			if(pId==513 || pId==589 ||pId==581 || pId==515 ||pId==593 ||pId==579){
-				url="http://10.48.19.54:8091/portalsearchapi/public-asri/districtlist";
+				url="http://10.48.19.62:8091/portalsearchapi/public-asri/districtlist";
 			}
 			else if(pId==507 ||pId==509) {
-				url="http://10.48.19.54:8092/portalsearchapi/public-ar/districtlist";
+				url="http://10.48.19.62:8092/portalsearchapi/public-ar/districtlist";
 			}
 			else if(pId==499 || pId==585 || pId==491 ||pId==497 ||pId==595 ||pId==587 ||pId==503) { //pId==499 || pId==491
-				url="http://10.48.19.54:8093/ehsportalsearchapi/public-ehs/districtlist";
+				url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/districtlist";
 			}
 			   URL obj = new URL(url);
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
@@ -370,13 +370,13 @@ public static org.json.JSONObject getMandal(String districtId,long pId) {
 		    System.out.println(POST_PARAMS);
 		    String url="";
 			if(pId==513 || pId==589 ||pId==581 || pId==515 || pId==593 ||pId==579) {
-				url="http://10.48.19.54:8091/portalsearchapi/public-asri/mandallist";
+				url="http://10.48.19.62:8091/portalsearchapi/public-asri/mandallist";
 			}
 			else if(pId==507 ||pId==509) {
-				url="http://10.48.19.54:8092/portalsearchapi/public-ar/mandallist";
+				url="http://10.48.19.62:8092/portalsearchapi/public-ar/mandallist";
 			}
 			else if(pId==585 || pId==499 || pId==491 || pId==497 || pId==595 ||pId==503 ||pId==587 ){ //pId==499 || pId==491
-				url="http://10.48.19.54:8093/ehsportalsearchapi/public-ehs/mandallist";
+				url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/mandallist";
 			}
 			   URL obj = new URL(url);
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
@@ -423,13 +423,13 @@ public static org.json.JSONObject getprocedureList(String specialityId,long pId)
 		    System.out.println(POST_PARAMS);
 		    String url="";
 			if(pId==517 || pId==515){
-				url="http://10.48.19.54:8091/portalsearchapi/public-asri/procedurebyspeciality";
+				url="http://10.48.19.62:8091/portalsearchapi/public-asri/procedurebyspeciality";
 			}
 			else if(pId==511) {
-				url="http://10.48.19.54:8092/portalsearchapi/public-ar/procedurebyspeciality";
+				url="http://10.48.19.62:8092/portalsearchapi/public-ar/procedurebyspeciality";
 			}
 			else if(pId==495 || pId==505 || pId==585) {
-				url="http://10.48.19.54:8093/ehsportalsearchapi/public-ehs/procedurebyspeciality";
+				url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/procedurebyspeciality";
 			}
 			   URL obj = new URL(url);
 	       HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();

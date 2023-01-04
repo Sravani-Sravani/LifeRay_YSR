@@ -704,13 +704,11 @@
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: red;
+  background-color: #000;
   color: white;
   cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-}
-
-#myBtn:hover {
-  background-color: #555;
+  padding: 0;
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
 }

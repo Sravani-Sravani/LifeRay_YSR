@@ -189,7 +189,8 @@ crossorigin="anonymous"></script>
 	
 	 	  
 <footer>
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-regular fa-chevrons-up"></i></button>
 <script>
 // Get the button
 let mybutton = document.getElementById("myBtn");
@@ -201,7 +202,7 @@ function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    mybutton.style.display = "none";	
   }
 }
 
@@ -210,7 +211,8 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-</script>		
+</script>
+		
       <div class="quick_links">
         <div class="container-fluid">
           <h4>Quick Links</h4>

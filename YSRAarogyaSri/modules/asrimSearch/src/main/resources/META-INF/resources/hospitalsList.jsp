@@ -96,7 +96,7 @@ function stoploader(){
             {
                 select: "By Associate Number",
                 dataURL:"<%=asrimHospitalsURL.toString()%>",
-                columns:["Name of Hospital","Hospital Type","State","District","Mandal","Specialities","Mitra Contact No","Name of Mitra","Medco Contact No","Name of Medco"],
+                columns:["Name of Hospital","Hospital Type","State","District","Mandal","Specialities","Mitra Contact No"],
                 options:{},
                 scrollX: false,
                 header: true,
@@ -113,7 +113,7 @@ function stoploader(){
 	            {
 	                select: "By Associate Number",
 	                dataURL:"<%=asrimHospitalsURL.toString()%>",
-	                columns:["Name of Hospital","Hospital Type","State","District","Mandal","Specialities","Address","Mitra Contact No","Name of Mitra","Medco Contact No","Name of Medco"],
+	                columns:["Name of Hospital","Hospital Type","State","District","Mandal","Specialities","Address","Mitra Contact No"],
 	                options:{},
 	                scrollX: false,
 	                header: true,
