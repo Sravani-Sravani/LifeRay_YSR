@@ -54,6 +54,9 @@ public class AsrimSearchPortlet extends MVCPortlet {
 	}
 	public void serveResource(ResourceRequest resourceRequest, ResourceResponse resourceResponse)
 			throws IOException, PortletException {
+		
+		System.out.println("resourceRequest.getServerName>>>>"+resourceRequest.getServerName());
+		String serverName=resourceRequest.getServerName();
 		String cmd = ParamUtil.getString(resourceRequest, "cmd");
 		String cmdType = ParamUtil.getString(resourceRequest, "cmdType");
 		long pageId= ParamUtil.getLong(resourceRequest, "pageId");
@@ -62,15 +65,15 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			PrintWriter out = resourceResponse.getWriter();
 			String state_Id = ParamUtil.getString(resourceRequest, "state_Id");
 			
-			System.out.println("state_Id>>>"+state_Id);
+			//System.out.println("state_Id>>>"+state_Id);
 			 JSONArray destrictsJsonArray =null;
 			 JSONObject districts_List=new JSONObject();
 			try {
-				  districts_List=DataGridDisplayManageUtil.getDistricts(state_Id, pageId);
+				  districts_List=DataGridDisplayManageUtil.getDistricts(state_Id, pageId,serverName);
 				  destrictsJsonArray=(JSONArray) districts_List.get("result"); 
 				  PrintWriter writer = resourceResponse.getWriter();
 					writer.print(destrictsJsonArray);
-				System.out.println(destrictsJsonArray);
+				//System.out.println(destrictsJsonArray);
 			}
 			catch(Exception e) {
 				
@@ -79,15 +82,15 @@ public class AsrimSearchPortlet extends MVCPortlet {
 		if(cmd.equals("mandalList")) {
 			PrintWriter out = resourceResponse.getWriter();
 			String district_Id = ParamUtil.getString(resourceRequest, "district_Id");
-			System.out.println("district_Id>>>"+district_Id);
+			//System.out.println("district_Id>>>"+district_Id);
 			 JSONArray destrictsJsonArray =null;
 			 JSONObject districts_List=new JSONObject();
 			try {
-				  districts_List=DataGridDisplayManageUtil.getMandal(district_Id,pageId);
+				  districts_List=DataGridDisplayManageUtil.getMandal(district_Id,pageId,serverName);
 				  destrictsJsonArray=(JSONArray) districts_List.get("result"); 
 				  PrintWriter writer = resourceResponse.getWriter();
 					writer.print(destrictsJsonArray);
-				System.out.println(destrictsJsonArray);
+				//System.out.println(destrictsJsonArray);
 			}
 			catch(Exception e) {
 				
@@ -97,15 +100,15 @@ public class AsrimSearchPortlet extends MVCPortlet {
 		if(cmd.equals("List")) {
 		//	PrintWriter out = resourceResponse.getWriter();
 			String specialityId= ParamUtil.getString(resourceRequest, "specialityId");
-			 System.out.println("specialityId>>>"+specialityId);
+			// System.out.println("specialityId>>>"+specialityId);
 			 JSONArray prJsonArray =null;
 			 JSONObject pr_List=new JSONObject();
 			try {
-				  pr_List=DataGridDisplayManageUtil.getprocedureList(specialityId,pageId);
+				  pr_List=DataGridDisplayManageUtil.getprocedureList(specialityId,pageId,serverName);
 				  prJsonArray=(JSONArray) pr_List.get("result"); 
 				  PrintWriter writer = resourceResponse.getWriter();
 					writer.print(prJsonArray);
-				System.out.println(prJsonArray);
+			//	System.out.println(prJsonArray);
 			}
 			catch(Exception e) {
 				
@@ -126,7 +129,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			try {
 				
 				try {
-					System.out.println("hell");
+					//System.out.println("hell");
 					//console.log("hii");
 					getProceduresList(cmdType, pageId,resourceRequest, resourceResponse);
 				} catch (PortalException e) {
@@ -147,7 +150,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 				e.printStackTrace();
 			}
 		}
-		else if (cmd.equals("asrimMitrasList")) {
+		/*else if (cmd.equals("asrimMitrasList")) {
 			try {
 				try {
 					getAsrimMitrasList(cmdType, resourceRequest, resourceResponse);
@@ -157,12 +160,19 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			} catch (SystemException e) {
 				e.printStackTrace();
 			}
-		} 
+		} */
 	}
 	public static void getHospitalsList(String type,long pId, ResourceRequest resourceRequest, ResourceResponse resourceResponse)
 			throws SystemException, PortalException, JSONException {
 		JSONObject myObject =null;
+		String serverName=resourceRequest.getServerName();
+		
+		
+		String serverIP=AsrimSearchPortletKeys.UAT_API_ID; //UAT
 		try {
+			if(serverName.equals(AsrimSearchPortletKeys.PROD_SERVER_NAME)) {
+				serverIP=AsrimSearchPortletKeys.PROD_API_ID;//PRODUCTION
+			}
 			
 			
 			       String POST_PARAMS="";
@@ -171,7 +181,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			     
 			     String url="";
 					if(pId==513 || pId==589 ||pId==581 || pId==593 ||pId==579 ||pId==515){
-						url="http://10.48.19.62:8091/portalsearchapi/public-asri/searchHospital";
+						url="http://"+serverIP+":8091/portalsearchapi/public-asri/searchHospital";
 						////POST_PARAMS = "{\n" + "\"districtid\": null,\r\n" +
 						        //"    \"hospitalid\": null,\r\n" +
 						        //"    \"hospitaltype\": null\r\n" + "\n}";
@@ -179,16 +189,16 @@ public class AsrimSearchPortlet extends MVCPortlet {
 					}
 					else if(pId==507 ||pId==509) {
  
-				url="http://10.48.19.62:8092/portalsearchapi/public-ar/searchHospital";
+				url="http://"+serverIP+":8092/portalsearchapi/public-ar/searchHospital";
 						
 						     POST_PARAMS = "{\n" + "\"districtid\": null\r\n"+ "\n}";
 
 						    //System.out.println(POST_PARAMS);
-							    //URL obj = new URL("http://10.48.19.62:8092/portalsearchapi/public/AR-hospitalsearch-districtwise");
+							    //URL obj = new URL("http://10.48.19.54:8092/portalsearchapi/public/AR-hospitalsearch-districtwise");
 					}
 					else { //pId==499 || pId==491
 						   POST_PARAMS = "{\n" + "\"districtid\": null" + "\n}";
-						url="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/searchHospital";
+						url="http://"+serverIP+":8093/ehsportalsearchapi/public-ehs/searchHospital";
 					}
 			     
 				    URL obj = new URL(url);
@@ -235,7 +245,13 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			throws SystemException, PortalException, JSONException {
 	 JSONArray jsonarray =new JSONArray();
 		JSONObject myObject =null;
+		String serverName=resourceRequest.getServerName();
+		String serverIP=AsrimSearchPortletKeys.UAT_API_ID; //UAT
 		try {
+			if(serverName.equals(AsrimSearchPortletKeys.PROD_SERVER_NAME)) {
+				serverIP=AsrimSearchPortletKeys.PROD_API_ID;//PRODUCTION
+			}
+	
 			     String POST_PARAMS = "";
 			    
 			     String rl5="";
@@ -243,19 +259,19 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			     if(pId==517 || pId==515){
 			    	 POST_PARAMS = "{\n" + "\"surgeryid\": \"M1.8\"" +"}";
 			    	 method="POST";
-			    	 rl5="http://10.48.19.62:8091/portalsearchapi/public-asri/searchProcedure";
+			    	 rl5="http://"+serverIP+":8091/portalsearchapi/public-asri/searchProcedure";
 					}
 					else if(pId==511 ||pId==507) {
 						POST_PARAMS = "{\n" + "\"surgeryid\": \"M1.8\"" +"}";
 						method="POST";
-						rl5="http://10.48.19.62:8092/portalsearchapi/public-ar/searchProcedure";
+						rl5="http://"+serverIP+":8092/portalsearchapi/public-ar/searchProcedure";
 					}
 					else if(pId==495 || pId==505) {
 						method="GET";
-						rl5="http://10.48.19.62:8093/ehsportalsearchapi/public-ehs/searchProcedure"; 
+						rl5="http://"+serverIP+":8093/ehsportalsearchapi/public-ehs/searchProcedure"; 
 					}
-			     System.out.println(POST_PARAMS);
-			     System.out.println("urls is"+rl5);
+			    // System.out.println(POST_PARAMS);
+			    // System.out.println("urls is"+rl5);
 				    URL obj = new URL(rl5);
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 				    postConnection.setRequestMethod(method);   
@@ -265,7 +281,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 		 	      postConnection.setDoInput(true);
 		 	     if(pId==517 || pId==515 || pId==511 ||pId==507){
 			    OutputStream os = postConnection.getOutputStream();
-			    System.out.println("hell");
+			  //  System.out.println("hell");
 			    os.write(POST_PARAMS.getBytes());
 			    os.flush();
 			    os.close();
@@ -281,7 +297,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			        	 response.append(inputLine);
 			             
 			        } in .close();
-			        System.out.println("re"+response.toString());
+			       // System.out.println("re"+response.toString());
 			         myObject = new JSONObject(response.toString());
 			     			    } else {
 			        System.out.println("Procedures API NOT WORKING responseCode>>>"+responseCode);
@@ -289,7 +305,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
   			    JSONObject jo = new JSONObject();
 	 		   JSONArray array = new JSONArray(myObject.get("result").toString());
 	 		   jo.put("data",array);
-	    	  System.out.println("--------Procedures Count------------"+array.length());		    
+	    	//  System.out.println("--------Procedures Count------------"+array.length());		    
 			    PrintWriter writer1 = resourceResponse.getWriter();
 			writer1.print(jo);
 		} catch (Exception e) {
@@ -300,14 +316,19 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			throws SystemException, PortalException, JSONException {
 	 
 		JSONObject myObject =null;
+		String serverName=resourceRequest.getServerName();
+		String serverIP=AsrimSearchPortletKeys.UAT_API_ID; //UAT
 		try {
+			if(serverName.equals(AsrimSearchPortletKeys.PROD_SERVER_NAME)) {
+				serverIP=AsrimSearchPortletKeys.PROD_API_ID;//PRODUCTION
+			}
 			 final String POST_PARAMS = "{\n" + "\"specialityid\": null,\r\n" +
 				        "    \"hospitalid\": null,\r\n" +
 				        "    \"specialitycode\": null,\r\n" + 
 				        "    \"procedurename\": null,\r\n" + 
 				        "    \"proceduretypeid\": null\r\n" + "\n}";
 			    //System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.62:8091/portalsearchapi/public/searchspeciality");
+				    URL obj = new URL("http://"+serverIP+":8091/portalsearchapi/public/searchspeciality");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
 			     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -346,7 +367,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 		}
 	}
 
-	
+	/*
 	public static void getAsrimMitrasList(String type, ResourceRequest resourceRequest, ResourceResponse resourceResponse)
 			throws SystemException, PortalException, JSONException {
 	 
@@ -354,7 +375,7 @@ public class AsrimSearchPortlet extends MVCPortlet {
 		try {
 			 final String POST_PARAMS = "{\n" + "\"districtid\": null\r\n" + "\n}";
 			  //  System.out.println(POST_PARAMS);
-				    URL obj = new URL("http://10.48.19.62:8091/portalsearchapi/public/mitra-search-districtwise");
+				    URL obj = new URL("http://10.48.19.54:8091/portalsearchapi/public/mitra-search-districtwise");
 				    HttpURLConnection postConnection = (HttpURLConnection) obj.openConnection();
 			    postConnection.setRequestMethod("POST");
 			     postConnection.setRequestProperty("Content-Type", "application/json;odata=verbose");
@@ -393,5 +414,5 @@ public class AsrimSearchPortlet extends MVCPortlet {
 			e.printStackTrace();
 		}
 	}
-	 
+	 */
 }

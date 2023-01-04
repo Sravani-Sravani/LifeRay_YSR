@@ -12,6 +12,7 @@
  <% 
 themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
 long pageId1=themeDisplay.getPlid();
+String serverName1=request.getServerName();
 %>
 <style>
 
@@ -73,9 +74,10 @@ long pageId1=themeDisplay.getPlid();
 		      
 		      <% 
 	          String specialityId=null;
-		      org.json.JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(specialityId, pageId1);
-		      System.out.print("speciality_List 123"+speciality_List.toString());
-		  	  
+		      
+		      
+		      org.json.JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(specialityId, pageId1,serverName1);
+		      
 		      for(int j=0;j<speciality_List.length();j++){
 	        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
 	        	

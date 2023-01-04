@@ -13,6 +13,7 @@
 <% 
 themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
 long pageId1=themeDisplay.getPlid();
+String serverName1=request.getServerName();
 %>
 
 <script>
@@ -56,7 +57,7 @@ function stoploader(){
 	   diseaseName=diseaseName.substring(0, postion1-1).trim();
  }
   
- JSONObject states_List= DataGridDisplayManageUtil.getStates(pageId1);
+ JSONObject states_List= DataGridDisplayManageUtil.getStates(pageId1,serverName1);
  
  JSONArray statesJsonArray =new JSONArray();
  
@@ -64,8 +65,8 @@ function stoploader(){
 	 statesJsonArray =(JSONArray) states_List.get("result"); 
     for(int j=0;j<statesJsonArray.length();j++){
   	org.json.JSONObject data=new org.json.JSONObject(statesJsonArray.get(j).toString());
-  	System.out.println(data.get("stateName"));
- 	System.out.println(data.get("stateId"));
+  	//System.out.println(data.get("stateName"));
+ 	//System.out.println(data.get("stateId"));
  	 if(data.get("stateId").equals(stateId)){
  		stateName=data.get("stateName").toString();
  	}
@@ -76,16 +77,16 @@ function stoploader(){
  JSONObject districts_List=new JSONObject();
  JSONArray destrictsJsonArray =null;
  if(stateId!=null && stateId!=""){
-  districts_List= DataGridDisplayManageUtil.getDistricts(stateId,pageId1);
+  districts_List= DataGridDisplayManageUtil.getDistricts(stateId,pageId1,serverName1);
   
   destrictsJsonArray=(JSONArray) districts_List.get("result"); 
  }
   
- System.out.println("State Name:"+stateName);
+ /* System.out.println("State Name:"+stateName);
  System.out.println("districtId>>>"+DIST_ID);
  System.out.println("stateId>>>"+stateId);
  System.out.println("HOSP_TYPE>>>"+HOSP_TYPE); 
- System.out.println("diseaseName>>>"+diseaseName);
+ System.out.println("diseaseName>>>"+diseaseName); */
  %>
  
 <script>
@@ -371,8 +372,8 @@ function stoploader(){
 				    <option value="">Show All</option>
 				    <%
 				    //String specialityId=null;
-				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null,pageId1);
-				      System.out.print("speciality_List 123"+speciality_List.toString());
+				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null,pageId1,serverName1);
+				     // System.out.print("speciality_List 123"+speciality_List.toString());
 				      for(int j=0;j<speciality_List.length();j++){
 			        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
 			        	long proceduresCount=0;
@@ -448,21 +449,21 @@ function stoploader(){
 				    <option value="">Show All</option>
 				      <%
 				      if(stateId!=null && stateId!=""){
-				      JSONObject mandal_List= DataGridDisplayManageUtil.getMandal(distId,pageId1);
+				      JSONObject mandal_List= DataGridDisplayManageUtil.getMandal(distId,pageId1,serverName1);
 				     // System.out.print("mandal_List 123"+mandal_List.toString());
 						 JSONArray mandalJsonArray = (JSONArray) mandal_List.get("result"); 
 						for(int j=0;j<mandalJsonArray.length();j++){
 			        	org.json.JSONObject data=new org.json.JSONObject(mandalJsonArray.get(j).toString());
 			    	   String id=data.get("mandalId").toString();
 			    	   String mandalName="";   
-			    	   System.out.print("page id is"+ pageId1);
+			    	  // System.out.print("page id is"+ pageId1);
 			    	   if(pageId1==513 || pageId1==507 || pageId1==515 || pageId1==595 ||pageId1==587 || pageId1==509 ){
 			    		     mandalName=data.get("mandalName").toString();  
 			    	   }
 			    	   else if(pageId1==499 || pageId1==585 || pageId1==491 ){
 			    		   
 			    		     mandalName=data.get("mandal").toString();  
-			    		     System.out.print("page id is"+ mandalName);
+			    		     //System.out.print("page id is"+ mandalName);
 			    	   }
 			    	  
 				    %>
@@ -484,8 +485,8 @@ function stoploader(){
 				    <option value="">Show All</option>
 				    <%
 				    //String specialityId=null;
-				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null,pageId1);
-				      System.out.print("speciality_List 123"+speciality_List.toString());
+				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null,pageId1,serverName1);
+				    //  System.out.print("speciality_List 123"+speciality_List.toString());
 				      for(int j=0;j<speciality_List.length();j++){
 			        	org.json.JSONArray data=new org.json.JSONArray(speciality_List.get(j).toString());
 			        	long proceduresCount=0;

@@ -21,10 +21,11 @@
   <% 
 themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
 long pageId1=themeDisplay.getPlid();
+String serverName1=request.getServerName();
  
  String stateId = ParamUtil.getString(request, "recordId");
  System.out.println("stateId>>>"+stateId);
- JSONArray districts_List=DataGridDisplayManageUtil.getDistrictAsrimHospCount(stateId,pageId1);
+ JSONArray districts_List=DataGridDisplayManageUtil.getDistrictAsrimHospCount(stateId,pageId1,serverName1);
  System.out.print("districts_List"+districts_List.toString());
 %>
 <%

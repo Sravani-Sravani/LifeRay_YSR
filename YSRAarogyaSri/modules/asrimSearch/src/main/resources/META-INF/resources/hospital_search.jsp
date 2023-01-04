@@ -24,6 +24,7 @@
  <% 
 themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
 long pageId1=themeDisplay.getPlid();
+String serverName1=request.getServerName();
 %>
 <%
 org.json.JSONArray states_List=null;
@@ -42,8 +43,8 @@ else if(pageId1==491){
 }
 try{
 	// if(pId==513 || pId==507 || pId==499 || pId==491){
-	    states_List=DataGridDisplayManageUtil.getStateLevelAsrimHospCount(pageId1);
-	    System.out.print("states_List"+states_List.toString());
+	    states_List=DataGridDisplayManageUtil.getStateLevelAsrimHospCount(pageId1,serverName1);
+	   // System.out.print("states_List"+states_List.toString());
 	// }
 }
 catch(Exception e){

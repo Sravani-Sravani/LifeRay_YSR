@@ -87,9 +87,9 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
  String DIST_ID = request.getParameter("districtId");//ParamUtil.getString(request, "DIST_ID");
  String stateId = ParamUtil.getString(request, "stateId");
  String HOSP_TYPE=ParamUtil.getString(request, "HOSP_TYPE");
- System.out.println("districtId>>>"+DIST_ID);
- System.out.println("stateId>>>"+stateId);
- System.out.println("HOSP_TYPE>>>"+HOSP_TYPE); 
+ //System.out.println("districtId>>>"+DIST_ID);
+ //System.out.println("stateId>>>"+stateId);
+ //System.out.println("HOSP_TYPE>>>"+HOSP_TYPE); 
  %>
 <script>
 	var primaryKeyColumn = 1;

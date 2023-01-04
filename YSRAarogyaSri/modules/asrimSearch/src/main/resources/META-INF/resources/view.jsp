@@ -4,6 +4,11 @@
   <% 
 themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
 long pageId=themeDisplay.getPlid();
+//themeDisplay.get
+System.out.println("request.getServerName() >>>"+request.getServerName());
+String serverName=request.getServerName();
+//>www.ysraarogyasri.ap.gov.in
+  // www.ysraarogyasri.ap.gov.in
 %>
 
 
@@ -31,7 +36,7 @@ long pageId=themeDisplay.getPlid();
 	<!--main_heading_breadcrum-->
 	
  
-<%@ include file="/hospitalsList.jsp" %> --%>
+<%@ include file="/hospitalsList.jsp" %> --%>	
 </section>  <!-- faq_section -->	    
  
 <%if(pageId==591){ %> 
@@ -50,7 +55,7 @@ long pageId=themeDisplay.getPlid();
  <% }else if(pageId==517 || pageId==495 || pageId==505 ||pageId==511){ %>
  <%@ include file="/procedure_search.jsp" %>
  <% }else if(pageId==519){ %>
-   <%@ include file="/mitra_search.jsp" %>
+  <%--  <%@ include file="/mitra_search.jsp" %> --%>
    <% }else if(pageId==589 || pageId==585 ||pageId==581){ %>
    <%@ include file="/hospitalsList.jsp" %>
    <% }else{ %>
