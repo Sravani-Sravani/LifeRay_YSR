@@ -100,12 +100,11 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 //String splcode="";
 String specialityId = ParamUtil.getString(request, "specialityId").trim();
 String proc_type=ParamUtil.getString(request, "proc_type").trim();
- 
  if(diseaseName.length()>5 && diseaseName!=null && diseaseName!=""){
 	 int postion1=diseaseName.indexOf("(");
 	 if(postion1!=0)
 	   diseaseName=diseaseName.substring(0, postion1-1).trim();
- }
+ } 
     
  %>
  <% System.out.println("proc_type>>>"+proc_type); %>
@@ -397,7 +396,7 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
 				    <option value="">Show All</option>
 				 </select>
 				</div>-->
-				<div class="col-auto">
+				<div class="col-lg-4">
 				<label  for="Procedure Name">Treatments Name</label>
 				<select class="form-select" id="select-3" name="select-3">
 				    <option value="">Show All</option>
