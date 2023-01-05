@@ -82,7 +82,7 @@ function stoploader(){
 
  .search_panel .table thead th {background-color: #2169B2; color: #ffff;} 
 .search_panel .table thead td {
-    width: 100px !important;
+    width: 100 px!important;
     text-align: justify;
     overflow-x: scroll;
     }
@@ -93,6 +93,9 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 .alert-dismissible{disaply:none;}
 .alert-danger{disaply:none;}
 </style> -->
+<%-- <%-- <%if(pageId1==511) {%> --%>
+
+
 <% 
 
  String diseaseName=ParamUtil.getString(request, "diseaseName").trim();
@@ -163,7 +166,7 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
 	   if(selectedFilter==5){ 
 		 booleanflag=false; 
 		 }                                                    
-		$("#recordList").html("<table id='datatables' class='table table-bordered table-striped table-hover display nowrap' cellspacing='0' style='width:100%'><thead><tr></tr></thead></table>");
+		$("#recordList").html("<table id='datatables' class='table table-bordered table-hover table-striped'><thead><tr></tr></thead></table>");
 		var columns = dataTables.tables[selectedFilter].columns;
 		var dataURL = dataTables.tables[selectedFilter].dataURL;
 		var scrollXVal = dataTables.tables[selectedFilter].scrollX;
@@ -320,7 +323,7 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
   <div class="col-md-3">
   <div class="loader"></div>
   </div>
-  <div class="col-md-4"></div>
+  <div class="col-md-3"></div>
   </div> -->
 	  <div class="container-fluid search_panel">
 		  <h3><%=pageTitle %> / Treatments Search</h3>
@@ -344,7 +347,7 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
 				    <option value="">Show All</option>
 				 </select>
 				</div> -->
-				<div class="col-auto">
+				<div class="col-lg-3">
 				<label  for="Speciality Name"><span class="text-danger">*</span> Speciality Name</label>
 				<select class="form-select" id="select-1" name="select-1">
 				    <option value="">Show All</option>
@@ -397,7 +400,7 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
 				    <option value="">Show All</option>
 				 </select>
 				</div>-->
-				<div class="col-lg-4">
+				<div class="col-lg-6">
 				<label  for="Procedure Name">Treatments Name</label>
 				<select class="form-select" id="select-3" name="select-3">
 				    <option value="">Show All</option>

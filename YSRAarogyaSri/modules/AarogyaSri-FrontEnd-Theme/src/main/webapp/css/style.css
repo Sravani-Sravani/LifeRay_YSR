@@ -410,10 +410,14 @@
 	#recordList .dataTables_wrapper input[type="search"] { 	border-radius: 100px; border: solid 1px #ccc;	padding: 5px;	}
 	#recordList .dataTables_wrapper .dataTables_length { margin-left: 10px;  }
 	button.dt-button, div.dt-button, a.dt-button{ padding: 2px 5px !important;	border: 1px solid #CCC !important; border-radius: 2px; color: #444 !important;}
+
 	.paginate_button previous, .paginate_button next{ font-weight: bold;}
 	.dataTables_wrapper .dataTables_info {font-size: 11px;}
 	.dataTables_wrapper .dataTables_paginate .paginate_button{ padding:2px !important;}
 
+	.search_panel .table td, .search_panel .table th {
+    width:20%;
+    }
 	/******************************* LOADER SEARCH PANEL Section *******************************/
 	#loader {position: absolute; left: 50%;	top: 50%; z-index: 1; width: 120px;	height: 120px; margin: -76px 0 0 -76px;	border: 16px solid #f3f3f3; border-radius: 50%; border-top: 16px solid #3498db;-webkit-animation: spin 2s linear infinite; animation: spin 2s linear infinite;}
 	  .alert-notifications alert-notifications-fixed{display:none; } 
@@ -481,7 +485,7 @@
 	@media (min-width: 1368px) {
 		.newsScroller .card .card-text-p{line-height: 25px; }
 		.newsScroller .card-title{ width:18%; margin-bottom: 20px;}
-		#homeSliderCarousel .carousel-item { background-position: bottom; background-size: contain; height: 42rem; }
+		#homeSliderCarousel .carousel-item { background-position: bottom; background-size: contain; height: 39rem; }
 		#homeSliderCarousel .carousel-item img { height: auto;}
 		#photogalleyCarousel .carousel-item { background-position: center; background-size: contain;  min-height: 20rem; }
 		#photogalleyCarousel .carousel-item img { height: auto;}
@@ -541,6 +545,10 @@
 		#searchData .col-auto{width:50%;}
 		 #searchData label{ display: block; margin-bottom: 0; margin-top: 0.5rem;}	
 		.select2-container{max-width:95% !important; width:95% !important;}
+		
+			.search_panel .table td, .search_panel .table th {
+    width:auto;
+    }
 		}
 
 /******************************* Responsive Section  MAIN HEADER MENUBAR 2nd Level Menu*******************************/		
@@ -704,7 +712,7 @@
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: #2169B2;;
+  background-color: #2169B2;
   color: white;
   cursor: pointer;
   padding: 0;
@@ -712,3 +720,4 @@
   width: 40px;
   height: 40px;
 }
+
