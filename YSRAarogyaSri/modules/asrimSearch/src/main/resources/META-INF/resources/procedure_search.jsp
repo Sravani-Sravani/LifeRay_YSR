@@ -208,6 +208,9 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
                 .columns([1,3,4])
                 .every(function () {
                     var column = this; 
+                    /* .appendTo($(column.footer()));
+                    .appendTo( $(column.footer()).empty() );
+                     */
                  	$('#select-'+column[0][0]).on('change', function () {
                  		console.log("onchange action for >>>"+"#select-"+column[0][0]);
                         var val = $('#select-'+column[0][0]).val();                        
@@ -218,8 +221,18 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
                         	    procedureData(id);
                             }
                         }
-                   column.search(val,true,false,true).draw();
+                   /* column.search(val,true,false,true).draw(); */
+                   var val = $.fn.dataTable.util.escapeRegex(
+                                         $(this).val()
+                                     );
+                        /* alert("Asche::"+val); */
+                        column.search(val ? '^' + val + '$' : '', true, false).draw();
+                        
                });
+                 	/* column.data().unique().sort().each(function (d, j) {
+                        select.append('<option style="text-align-last: right;" value="' + d + '">' + d + '</option>');
+                        }); */
+                 	
                   	if(column[0][0]==4){
                         column
                            .data()

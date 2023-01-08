@@ -6,6 +6,18 @@
 
 
 <h3 class="bordertitle text-dark">Check Treatment History</h3>
+
+
+<div class="qr_code">  
+						<h5 class="text-center">To access WJHS App, Please scan the QR code. </h5> 
+						 <div class="card mx-auto">
+							<img src="/o/com.kpmg/qr/Aarogyasri.png" class="img-fluid" alt="QR CODE">
+								  <div class="card-body"> 
+						   <p class="card-text">WJHS</p> 
+						  </div> 
+						 </div> 
+
+					   </div>
 				<p>The primary objective of Arogyasri Mobile App is to enable the delivery of envisaged medical services through self-service mode on the mobile devices in an efficient and cost-effective manner. The key principles of the Mobile app are (i) Available to All (ii) delivered to all, and (iii) Accessible to All. Initially, it will be available for the Aarogyasri scheme beneficiaries.</p>
 				<p>Beneficiaries of YSRAHCT do not have any medium to view their demographic details, family details, Card utilization and scheme benefits under a single platform.
 					To address this issue, YSRAHCT has come up with a unique enhanced solution for beneficiaries in the existing Mobile Application of YSRAHCT developed in-house. 
@@ -77,21 +89,7 @@
 					</div>
 				
 				<br />
-				<h5 class="text-center">To access Aarogyasri App, Please scan the QR code.	</h5>
-				<div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 qr_code text-center">
-					<div class="col">
-					  <div class="card shadow-sm">
-						<img src="/documents/d/guest/dr-ysr-ahct" class="img-fluid" alt="QR CODE" />
-			
-						<div class="card-body">
-						  <p class="card-text">Aarogyasri</p>
-						  <div class="d-flex justify-content-between align-items-center">
-							
-						  </div>
-						</div>
-					  </div>
-					</div>
-					</div>
+
 
 
  <%@ include file="/lastw.jsp" %>

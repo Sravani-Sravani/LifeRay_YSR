@@ -7,12 +7,13 @@
 					<div class="collapse show" id="citizen-collapse"> 
 						<ul class="list-unstyled ps-0">
 <li class="mb-1">
-								<a href="/web/guest/am-i-eligible-ehs"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#eligible-collapse" aria-expanded="false"> Am I Eligible</button></a>
+<a href="/web/guest/am-i-eligible-ehs">
+<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#eligible-collapse" aria-expanded="false"> Am I Eligible</button></a>
 
-							</li>
+</li>
 <li class="mb-1">
-								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myarg-collapse" aria-expanded="false"> Patient Services</button>
-								<div class="collapse" id="myarg-collapse" data-bs-parent="#citizen-collapse">
+		<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myarg-collapse" aria-expanded="false"> Patient Services</button>
+								<div class="collapse"id="myarg-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									<li><a href="#">Search Enrollment Status</a></li>	
                                     <li><a href="/documents/d/guest/meesevaapplication_pensioners">Mee Seva Health Card Application</a></li>

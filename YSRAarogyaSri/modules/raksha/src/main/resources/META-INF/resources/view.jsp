@@ -27,7 +27,7 @@ if(pageId==6 || pageId==87){ %>
 <%@ include file="/ysr_healthcare_trust.jsp" %>
 <%}else if(pageId==21){ %>
 <%@ include file="/ysr_landing_page.jsp" %>
-`<%}else if(pageId==617){ %>
+`<%}else if(pageId==617 ||pageId==605){ %>
 <%@ include file="/raksha_treats.jsp" %>
 <%}else if(pageId==71){ %>
 <%@ include file="/ysr_circulars.jsp" %>
