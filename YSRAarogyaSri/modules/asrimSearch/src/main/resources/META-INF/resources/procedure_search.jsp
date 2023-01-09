@@ -28,7 +28,11 @@ function stoploader(){
 	   $("select").select2();
 	}); 
 </script>
-
+<style>
+search_panel .table td, .search_panel .table th {
+    width:20%;
+    } 
+</style>
 <!-- <style>
 /* Center the loader */
 #loader {
@@ -94,8 +98,6 @@ main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
 .alert-danger{disaply:none;}
 </style> -->
 <%-- <%-- <%if(pageId1==511) {%> --%>
-
-
 <% 
 
  String diseaseName=ParamUtil.getString(request, "diseaseName").trim();
