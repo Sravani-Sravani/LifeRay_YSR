@@ -721,3 +721,8 @@
   height: 40px;
 }
 
+.classname{ text-decoration:underline; font-weight:bold;}
+.qr_code {
+  background: #fff;
+  text-align: center;
+}
