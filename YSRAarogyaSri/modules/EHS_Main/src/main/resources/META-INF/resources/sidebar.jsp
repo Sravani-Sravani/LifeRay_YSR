@@ -1,4 +1,4 @@
-					<div class="d-flex flex-column flex-shrink-0 sidebar_menu">
+<div class="d-flex flex-column flex-shrink-0 sidebar_menu">
 						<button class="accordion-button btn_icon show" type="button" data-bs-toggle="collapse" data-bs-target="#citizen-collapse" aria-expanded="true" aria-controls="citizen-collapse">	
 						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;Citizens
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
@@ -7,12 +7,13 @@
 					<div class="collapse show" id="citizen-collapse"> 
 						<ul class="list-unstyled ps-0">
 <li class="mb-1">
-								<a href="/web/guest/am-i-eligible-ehs"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#eligible-collapse" aria-expanded="false"> Am I Eligible</button></a>
+<a href="/web/guest/am-i-eligible-ehs">
+<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#eligible-collapse" aria-expanded="false"> Am I Eligible</button></a>
 
-							</li>
+</li>
 <li class="mb-1">
-								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myarg-collapse" aria-expanded="false"> Patient Services</button>
-								<div class="collapse" id="myarg-collapse" data-bs-parent="#citizen-collapse">
+		<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myarg-collapse" aria-expanded="false"> Patient Services</button>
+								<div class="collapse"id="myarg-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									<li><a href="#">Search Enrollment Status</a></li>	
                                     <li><a href="/documents/d/guest/meesevaapplication_pensioners">Mee Seva Health Card Application</a></li>
@@ -22,10 +23,11 @@
 							</li>    
                             
                             
+                            
 
                             
 <li class="mb-1">
-								<a href="/web/guest/ehs_proceduresearch" target="_blank"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button></a>
+								<a href="/web/guest/ehs_proceduresearch" ><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button></a>
 								
 							</li>                            
 
@@ -43,7 +45,7 @@
                             
 <li class="mb-1">
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#asara-collapse" aria-expanded="false"> Pensioners</button>
-								<div class="collapse" id="asara-collapse" data-bs-parent="#citizen-collapse">
+								<div class="collapse <% if(pageId==417 || pageId==413 || pageId==421 || pageId==310 || pageId==415 ){ %> show <% } %>" id="asara-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									<li><a href="/documents/d/guest/chronicop_2">Chronic OP Treatment</a></li> 
 									<li><a href="/web/guest/pensioners_login">Pensioner Login Instructions</a></li>
@@ -79,7 +81,7 @@
                             
                             
                             <li class="mb-1">
-								<a href="/web/guest/mithraehs" target="_blank"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usermanuals-collapse" aria-expanded="false">
+								<a href="/web/guest/mithraehs" ><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usermanuals-collapse" aria-expanded="false">
 									Know Your Mithra
 
 								</button></a>
@@ -93,13 +95,15 @@
 						<i class="fa-sharp fa-solid fa-hospital"></i> &nbsp;Hospitals
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
-					<div class="collapse" id="hospital-collapse"> 
+					<div class="collapse <% if(pageId==200 || pageId==190 || pageId==202 || pageId==212 || pageId==184|| pageId== 541|| pageId== 198|| pageId== 179
+								|| pageId==206 || pageId==210 || pageId==194|| pageId== 214 || pageId==105 || pageId==97 || pageId==101 || pageId==109 ){ %> show <% } %>" id="hospital-collapse"> 
 						<ul class="list-unstyled green_sidebar ps-0">
 					  <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#hospital-collapse1" aria-expanded="false">
 							Empanelment
 						</button>
-						<div class="collapse" id="hospital-collapse1" data-bs-parent="#hospital-collapse">
+						<div class="collapse <% if(pageId==200 || pageId==190 || pageId==202 || pageId==212 || pageId==184|| pageId== 541|| pageId== 198|| pageId== 179
+								|| pageId==206 || pageId==210 || pageId==194|| pageId== 214){ %> show <% } %>" id="hospital-collapse1" data-bs-parent="#hospital-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 							
 							<li><a href="https://www.ehs.ap.gov.in/EmpanelmentsAP/empanelment/Eligibility.jsp?scheme=ehs&state=CD201" target="_blank">Online Empanelment Application Form</a></li>
@@ -134,7 +138,7 @@
 					  </li> -->
 
 					  <li class="mb-1">
-						<a href="/web/guest/signin" target="_blank"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patient-collapse1" aria-expanded="false">
+						<a href="/web/guest/signin" ><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patient-collapse1" aria-expanded="false">
 							Hospital Login
 						</button></a>
 						
@@ -146,7 +150,7 @@
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usman-collapse1" aria-expanded="false">
 							User Manuals
 						</button>
-						<div class="collapse" id="usman-collapse1" data-bs-parent="#hospital-collapse">
+						<div class="collapse <% if(pageId==105 || pageId==97 || pageId==101 || pageId==109 ){ %> show <% } %>" id="usman-collapse1" data-bs-parent="#hospital-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 							<li><a href="/web/guest/usermanual_enrollmentstatus">Employee Enrollment Status User Manual </a></li> 
 							<li><a href="/web/guest/usermanual_additionalbenificiary">Adding Beneficiary User Manual </a></li> 

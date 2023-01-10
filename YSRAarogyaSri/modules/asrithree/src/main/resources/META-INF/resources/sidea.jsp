@@ -1,3 +1,5 @@
+
+
 					<div class="d-flex flex-column flex-shrink-0 sidebar_menu">
 					
 						<button class="accordion-button btn_icon show" type="button" data-bs-toggle="collapse" data-bs-target="#citizen-collapse" aria-expanded="true" aria-controls="citizen-collapse">	
@@ -30,7 +32,7 @@
 							</li>  
                             
 <li class="mb-1">
-								<a href="/web/guest/asri_proceduresearch" target="_blank"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button></a>
+								<a href="/web/guest/asri_proceduresearch"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button></a>
 <!-- 								<div class="collapse" id="treats-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									<li><a href="/web/guest/asri_proceduresearch">Search for Procedures</a></li>                                   
@@ -38,11 +40,11 @@
 							</li>                            
 
 							<li class="mb-1">
-								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patient-collapse" aria-expanded="false">
+								<button class="btn btn-toggle align-items-center" data-bs-toggle="collapse" data-bs-target="#patient-collapse" aria-expanded="false">
 									Follow-up Procedures
 								</button>
-								<div class="collapse" id="patient-collapse" data-bs-parent="#citizen-collapse">
-								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+								<div class="collapse <% if(pageId==537){ %> show <% } %>" id="patient-collapse" data-bs-parent="#citizen-collapse">
+								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ">
 									<li><a href="/web/guest/follow_up_information">Follow Up Information</a></li>
 								<!-- 	<li><a href="/web/guest/asri_follow_up_guidelines">Follow Up Guidelines</a></li> -->
 									</ul>
@@ -50,7 +52,7 @@
 							</li>
                             
 <li class="mb-1">
-								<a href="/web/guest/aarogya-aasara" target="_blank"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#asara-collapse" aria-expanded="false"> Aarogya Aasara</button></a>
+								<a href="/web/guest/aarogya-aasara" ><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#asara-collapse" aria-expanded="false"> Aarogya Aasara</button></a>
 							<!-- 	<div class="collapse" id="asara-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									<li><a href="/web/guest/aarogya-aasara">Learn More about the Scheme</a></li>                                   
@@ -88,7 +90,7 @@
                             
                             
                             <li class="mb-1">
-								<a href="/web/guest/arogyamithra" target="_blank"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usermanuals-collapse" aria-expanded="false">
+								<a href="/web/guest/arogyamithra" ><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usermanuals-collapse" aria-expanded="false">
 									Know Your Mithra
 
 								</button></a>
@@ -108,13 +110,13 @@
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
 					
-					<div class="collapse" id="hospital-collapse"> 
+					<div class="collapse <% if(pageId==559 || pageId==427 || pageId==431 || pageId == 153){ %> show <% } %>" id="hospital-collapse"> 
 						<ul class="list-unstyled green_sidebar ps-0">
 					  <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#hospital-collapse1" aria-expanded="false">
 							Empanelment
 						</button>
-						<div class="collapse" id="hospital-collapse1" data-bs-parent="#hospital-collapse">
+						<div class="collapse <% if(pageId==559 || pageId==427 || pageId==431){ %> show <% } %>" id="hospital-collapse1" data-bs-parent="#hospital-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 						  <li><a href="https://www.ysraarogyasri.ap.gov.in/ASRI/empanelment/Eligibility.jsp?stateFlag=ap" target="_blank">Online Empanelment Application</a></li> 
 							
@@ -150,7 +152,7 @@
 						</button>
 						<div class="collapse" id="patient-collapse1" data-bs-parent="#hospital-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-							<li><a href="/web/guest/signin" target="_blank">Click Here</a></li>							
+							<li><a href="/web/guest/signin" >Click Here</a></li>							
 							  </ul>
 						</div>
 					  </li>
@@ -159,7 +161,7 @@
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#employees-collapse1" aria-expanded="false">
 							IT Assistance
 						</button>
-						<div class="collapse" id="employees-collapse1" data-bs-parent="#hospital-collapse">
+						<div class="collapse <% if(pageId==153){ %> show <% } %>" id="employees-collapse1" data-bs-parent="#hospital-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 							<li><a href="/web/guest/usermanuals">Aadhar Biometric User Manual &amp; Software</a></li> 
 							<li><a href="/documents/d/guest/dongletool">Dongle-Tool</a></li> 

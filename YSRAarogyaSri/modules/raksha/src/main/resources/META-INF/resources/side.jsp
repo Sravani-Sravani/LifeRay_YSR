@@ -1,8 +1,7 @@
 					<div class="d-flex flex-column flex-shrink-0 sidebar_menu">
 						
 <button class="accordion-button btn_icon show" type="button" data-bs-toggle="collapse" data-bs-target="#citizen-collapse" aria-expanded="true" aria-controls="citizen-collapse">	
-<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;Citizens	
-<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
+<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;Citizens	<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 </button>
 
 					<div class="collapse show" id="citizen-collapse"> 
@@ -10,7 +9,7 @@
 
 <li class="mb-1">
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myarg-collapse" aria-expanded="false"> Documents and Reports</button>
-								<div class="collapse" id="myarg-collapse" data-bs-parent="#citizen-collapse">
+								<div class="collapse <% if(pageId==459 || pageId==469 || pageId==473 || pageId==475 || pageId==477|| pageId== 479|| pageId== 481){ %> show <% } %>" id="myarg-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									<li><a href="/web/guest/ar_bids_and_agreements">Bids and Agreements</a></li>	
                                     <li><a href="/web/guest/ar_guidelines_manuals_and_sops">Guidlines, Manuals and SOPs</a></li>
@@ -22,7 +21,7 @@
 								</ul></div>
 							</li>                              
 <li class="mb-1">
-								<a href="/web/guest/arogyaraksha_proceduresearch" target="_blank"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button></a>
+								<a href="/web/guest/arogyaraksha_proceduresearch" ><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button></a>
 								
 							</li>                            
 
@@ -30,7 +29,7 @@
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patient-collapse" aria-expanded="false">
 									Follow-up Procedures
 								</button>
-								<div class="collapse" id="patient-collapse" data-bs-parent="#citizen-collapse">
+								<div class="collapse <% if(pageId==75){ %> show <% } %>" id="patient-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									<li><a href="/web/guest/follow-up-information">Follow Up Information</a></li>
 					
@@ -65,7 +64,7 @@
                             
                             
                             <li class="mb-1">
-								<a href="/web/guest/mithraraksha" target="_blank"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usermanuals-collapse" aria-expanded="false">
+								<a href="/web/guest/mithraraksha"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usermanuals-collapse" aria-expanded="false">
 									Know Your Mithra
 
 								</button></a>
@@ -78,7 +77,7 @@
 						<button class="accordion-button collapsed btn_icon1" type="button" data-bs-toggle="collapse" data-bs-target="#hospital-collapse" aria-expanded="false" aria-controls="hospital-collapse">
 						<i class="fa-sharp fa-solid fa-hospital"></i> &nbsp;Hospitals		<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
-					<div class="collapse" id="hospital-collapse"> 
+					<div class="collapse <% if(pageId==549 || pageId==71 || pageId==525 || pageId==200 ){ %> show <% } %>" id="hospital-collapse"> 
 						<ul class="list-unstyled green_sidebar ps-0">
 					  <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#hospital-collapse1" aria-expanded="false">
@@ -108,7 +107,7 @@
 					  </li> -->
 
 					  <li class="mb-1">
-						<a href="/web/guest/signin" target="_blank"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patient-collapse1" aria-expanded="false">
+						<a href="/web/guest/signin" ><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patient-collapse1" aria-expanded="false">
 							Hospital Login
 						</button></a>
 						
@@ -120,7 +119,7 @@
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usman-collapse1" aria-expanded="false">
 							Others
 						</button>
-						<div class="collapse" id="usman-collapse1" data-bs-parent="#hospital-collapse">
+						<div class="collapse <% if(pageId==549 || pageId==71 || pageId==525 ){ %> show <% } %>" id="usman-collapse1" data-bs-parent="#hospital-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 							<li><a href="/web/guest/new_govt_orders">Government Orders </a></li> 
 							<li><a href="/web/guest/circulars">Circulars </a></li> 
