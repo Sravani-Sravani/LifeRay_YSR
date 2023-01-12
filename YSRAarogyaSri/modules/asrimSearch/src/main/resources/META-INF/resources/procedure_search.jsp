@@ -153,7 +153,7 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
 	            {
 	                select: "By Associate Number	",
 	                dataURL:"<%=asrimHProceduresURL.toString()%>",
-	                columns:["Code","Speciality Name","Treatments Code","Treatments Name","Packages","Investigation"],
+	                columns:["Code","Speciality Name","Treatments Code","Treatments Name","Preauth Evidence","Price for Semi private ward - Non NABH","Price for Private ward - Non NABH"],
 	                options:{},
 	                scrollX: false,
 	                header: true,
