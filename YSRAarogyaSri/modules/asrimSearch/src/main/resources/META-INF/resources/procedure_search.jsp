@@ -168,7 +168,7 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
 	   if(selectedFilter==5){ 
 		 booleanflag=false; 
 		 }                                                    
-		$("#recordList").html("<table id='datatables' class='table table-bordered table-hover table-striped'><thead><tr></tr></thead></table>");
+		$("#recordList").html("<table id='datatables' class='table table-bordered table-hover table-striped' ><thead><tr></tr></thead></table>");
 		var columns = dataTables.tables[selectedFilter].columns;
 		var dataURL = dataTables.tables[selectedFilter].dataURL;
 		var scrollXVal = dataTables.tables[selectedFilter].scrollX;
