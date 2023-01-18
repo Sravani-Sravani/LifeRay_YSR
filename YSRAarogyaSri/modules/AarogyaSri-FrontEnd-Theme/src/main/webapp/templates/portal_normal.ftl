@@ -68,10 +68,10 @@ crossorigin="anonymous"></script>
 	
 <#if w3c_language_id=="te-IN">
 		<a href="/te/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=en_US" class="language-entry-long-text" lang="en-US">English</a>
-		 <span class="language-entry-long-text" lang="te-IN">à°¤à±†à°²à±�à°—à±�</span>
+		 <span class="language-entry-long-text" lang="te-IN">తెలుగు</span>
 <#else>
 		 <span class="language-entry-long-text" lang="en-US">English</span>
-		 <a href="/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=te_IN" class="language-entry-long-text" lang="te-IN">à°¤à±†à°²à±�à°—à±�</a>
+		 <a href="/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=te_IN" class="language-entry-long-text" lang="te-IN">తెలుగు</a>
 </#if>
 				 <a href="/web/guest/screen_reader_11"><i class="fa-solid fa-mobile-screen"></i> ${screen_reader} </a> 
 				 <a href="/web/guest/glossary"><i class="fa-solid fa-book-open-cover"></i> ${glossary} </a>   
@@ -153,8 +153,9 @@ crossorigin="anonymous"></script>
 			<li class="nav-item"><a class="nav-link <#if pageId==157> active </#if>" href="/faq">${faq} </a></li>        
 			
 			<li class="nav-item"><a class="nav-link <#if pageId==161> active </#if>" href="/contact">${contact}</a></li>
+			<li><a class="brandg20_dekstop" href="https://www.g20.org/en/" target="_blank"><img src="https://ysraarogyasri.ap.gov.in/documents/d/guest/g20-logo" alt="g20_logo" class="img-fluid" /></a></li>
 <li><a href="https://pmjay.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/Ayushman_Bharat_logo.png" alt="Ayushman_Bharat_logo" class="img-fluid ayushman_header_logo" /></a></li>
-<li>          <a class="brandg20_dekstop" href="https://www.g20.org/en/" target="_blank"><img src="https://ysraarogyasri.ap.gov.in/documents/d/guest/g20-logo" alt="g20_logo" class="img-fluid" /></a></li>
+
         </ul>
       </div>
     </div>

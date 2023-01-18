@@ -246,7 +246,7 @@ newsScroller .owl-carousel .owl-dot, newsScroller .owl-carousel .owl-nav .owl-ne
 .newsScroller .card{box-shadow: 0 0 16px rgba(148,148,148,.2);	transition: all .3s ease-in; background: #EFF7FF; border-radius:10px; padding: 30px 10px 10px; text-align: center;	background: #FFFFFF; height: 200px; min-height: 200px; margin-bottom: 20px; position: relative; padding: 20px 0 0;	border:solid 1px #E3E3E3; }	
 .newsScroller .card:hover{ cursor:pointer; background: #F1F8FF !important; transform: translateY(-10px); box-shadow: 1px 5px 13px #d9d9d9;}
 .newsScroller .card-title {width: 25%; position: absolute; top: -33px; left: 15px;  border:solid 1px #ddd;  border-top:solid 2px #2169B2; background: #fff; color: #fff; border-radius: 0px;}
-.newsScroller .card p.card-top-box-p1, p.card-top-box-p2{ color:#fff; font-size: 14px;  color: #2169B2; margin-bottom: 0; text-transform: uppercase; margin-bottom: 0;}
+.newsScroller .card p.card-top-box-p1, p.card-top-box-p2{ text-align:center; color:#fff; font-size: 14px;  color: #2169B2; margin-bottom: 0; text-transform: uppercase; margin-bottom: 0;}
 .newsScroller .card p.card-top-box-p2{ font-size: 22px; font-weight: bold;background: #2169B2; padding: 3px 0; color: #fff;}
 .newsScroller .card .card-text-p{ text-align: justify; line-height: 20px; }
 .btn_downloadnews {	letter-spacing: -.5px;	position: absolute;	left: 0; bottom: 0;	text-align: right; width: 100%;	font-weight: 500; padding:0 10px 5px; text-decoration: none;}
