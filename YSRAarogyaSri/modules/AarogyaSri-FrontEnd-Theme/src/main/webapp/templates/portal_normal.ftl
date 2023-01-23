@@ -100,7 +100,7 @@ crossorigin="anonymous"></script>
   <nav class="navbar navbar-expand-md">
     <div class="container-fluid">
       <a class="navbar-brand" href="/home"><img src="/documents/d/guest/logo1" alt="Dr. YSR Aarogyasri Health Care Trust" class="img-fluid" /></a>
-            <a class="navbar-brandg20" href="https://www.g20.org/en/" target="_blank"><img src="https://ysraarogyasri.ap.gov.in/documents/d/guest/g20-logo" style="width:60px; height:32px; "alt="" class="img-fluid" /></a>
+            <a class="brandg20_mobile" href="https://www.g20.org/en/" target="_blank"><img src="https://ysraarogyasri.ap.gov.in/documents/d/guest/g20-logo" alt="g20_logo" class="img-fluid" /></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span> MAIN MENU
      
@@ -153,6 +153,7 @@ crossorigin="anonymous"></script>
 			<li class="nav-item"><a class="nav-link <#if pageId==157> active </#if>" href="/faq">${faq} </a></li>        
 			
 			<li class="nav-item"><a class="nav-link <#if pageId==161> active </#if>" href="/contact">${contact}</a></li>
+			<li><a class="brandg20_dekstop" href="https://www.g20.org/en/" target="_blank"><img src="https://ysraarogyasri.ap.gov.in/documents/d/guest/g20-logo" alt="g20_logo" class="img-fluid" /></a></li>
 <li><a href="https://pmjay.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/Ayushman_Bharat_logo.png" alt="Ayushman_Bharat_logo" class="img-fluid ayushman_header_logo" /></a></li>
 
         </ul>
