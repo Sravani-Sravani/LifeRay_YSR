@@ -95,8 +95,16 @@ function closeFun()
 PortletURL iteratorNewURL = renderResponse.createRenderURL(); 
 iteratorNewURL.setParameter("mvcPath", "/view.jsp");
 
+
+
+long cur = 1;
+long delta=20;
+
+long sNo=(delta * (cur-1))+1;
+long order=sNo;
 themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
 long pageId1=themeDisplay.getPlid();
+String thSno = "S.No.";
 %>
 
 <%if(pageId1 == 618){ %>
@@ -166,7 +174,9 @@ long pageId1=themeDisplay.getPlid();
 		          %>
 		
 		     
-		 <liferay-ui:search-container-column-text name="Sr.NO." value="<%=String.valueOf(did) %>" />
+		  <liferay-ui:search-container-column-text cssClass="<%= String.valueOf(did) %>" name="<%=thSno %>">	 
+		
+	    <%= String.valueOf(sNo++) %></liferay-ui:search-container-column-text>
 	    <liferay-ui:search-container-column-text name="title" value="<%=title %>" /> 
 		 <liferay-ui:search-container-column-text name="description" value="<%=description %>" />
 		<liferay-ui:search-container-column-text name="Status" value="<%=status %>" />
