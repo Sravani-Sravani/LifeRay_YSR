@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.departmentService">
+	<namespace>Department</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+    <entity name="Department" remote-service="false" local-service="true" table="department">
+        <column name="did" primary="true" type="long" id-type="increment"></column>
+        <column name="title" type="String"></column>
+        <column name="description" type="String"></column>
+        <column name="department" type="int"></column>
+    </entity>
+</service-builder>

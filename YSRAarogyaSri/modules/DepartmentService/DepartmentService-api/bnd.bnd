@@ -1,0 +1,10 @@
+Bundle-Name: DepartmentService-api
+Bundle-SymbolicName: com.departmentService.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.departmentService.exception,\
+	com.departmentService.model,\
+	com.departmentService.service,\
+	com.departmentService.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../DepartmentService-service/service.xml
