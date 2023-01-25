@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:KeyPeopleService:KeyPeopleService-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+}
+
+buildService {
+	apiDir = "../KeyPeopleService-api/src/main/java"
+}
+
+group = "com.keyPeopleService"

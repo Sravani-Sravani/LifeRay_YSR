@@ -1,0 +1,10 @@
+Bundle-Name: KeyPeopleService-api
+Bundle-SymbolicName: com.keyPeopleService.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.keyPeopleService.exception,\
+	com.keyPeopleService.model,\
+	com.keyPeopleService.service,\
+	com.keyPeopleService.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../KeyPeopleService-service/service.xml

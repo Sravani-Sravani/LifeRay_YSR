@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.keyPeopleService.model.Designation">
+		<field name="did" type="long" />
+		<field name="wid" type="long" />
+		<field name="dname" type="String" />
+		<field name="status" type="String" />
+	</model>
+	<model name="com.keyPeopleService.model.KeyPeople">
+		<field name="trust_userId" type="long" />
+		<field name="empname" type="String" />
+		<field name="phone" type="String" />
+		<field name="email" type="String" />
+		<field name="wingId" type="long" />
+		<field name="designationId" type="long" />
+		<field name="status" type="String" />
+		<field name="empOrder" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="createdBy" type="String" />
+		<field name="modifyDate" type="Date" />
+		<field name="modifyBy" type="String" />
+	</model>
+	<model name="com.keyPeopleService.model.Wing">
+		<field name="wid" type="long" />
+		<field name="wname" type="String" />
+		<field name="status" type="String" />
+	</model>
+</model-hints>
