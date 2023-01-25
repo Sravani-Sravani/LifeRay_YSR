@@ -1,3 +1,4 @@
+<%@page import="com.liferay.portal.kernel.util.PortalUtil"%>
 <%@page import="com.liferay.portal.kernel.theme.ThemeDisplay"%>
 <%@page import="com.liferay.portal.kernel.util.WebKeys"%>
 <%@page import="org.json.JSONObject"%>
@@ -20,6 +21,7 @@ long pageId1=themeDisplay.getPlid();
 <portlet:param name="pageId" value="<%=String.valueOf(pageId1)  %>"/>
 <portlet:param name="cmdType" value="AsrimProceduresList"/>
 </portlet:resourceURL>
+ 
 <script>
 function stoploader(){
 	document.getElementById("loader").style.display = "none";
@@ -29,83 +31,52 @@ function stoploader(){
 	}); 
 </script>
 <style>
-search_panel .table td, .search_panel .table th {
-    width:20%;
-    } 
+/* search_panel .table td, .search_panel .table th {
+    width:10%;
+    } */ 
+   table.dataTable thead th, table.dataTable tr td{ width:auto !important;}
 </style>
-<!-- <style>
-/* Center the loader */
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 120px;
-  height: 120px;
-  margin: -76px 0 0 -76px;
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-} 
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
-
-#myDiv {
-  display: none;
-  text-align: center;
-} 
-/* End loader slider*/
-
- .search_panel .table thead th {background-color: #2169B2; color: #ffff;} 
-.search_panel .table thead td {
-    width: 100 px!important;
-    text-align: justify;
-    overflow-x: scroll;
-    }
-main ul li{ border: 1px solid #ddd;padding: 5px 10px;border-radius: 25px;}
-.lfr-search-container-wrapper .lfr-icon-menu > .dropdown-toggle {color: #fff;}
-.specialitys{overflow-y: scroll; height: 125px;  width: auto;    }
-.lfr-tooltip-scope{disaply:none;}
-.alert-dismissible{disaply:none;}
-.alert-danger{disaply:none;}
-</style> -->
-<%-- <%-- <%if(pageId1==511) {%> --%>
 <% 
+
+String proc_type=ParamUtil.getString(request, "proc_type").trim();
+String currURL="";
+try{
+    currURL = PortalUtil.getCurrentURL(request); 
+  System.out.println("currURL="+currURL);
+  String[] strArray = null;  
+  strArray = currURL.split("\\?");
+  if(strArray.length>1){
+     String[] mainArray = null;   
+     mainArray = strArray[1].split("\\&");  
+     for (int i = 0; i< mainArray.length; i++){
+	 	 String[] subArray = null; 
+	 	 subArray =mainArray[i].split("\\=");
+	 	  if(subArray.length>0){
+	 		System.out.println("subArray[0]="+subArray[0]);
+	 		 if(subArray[0].equalsIgnoreCase("type")){
+	 			  
+	 	 	     	proc_type=subArray[1];
+	 	 	     	if(!proc_type.equalsIgnoreCase("Aasara") && !proc_type.equalsIgnoreCase("IP") && !proc_type.equalsIgnoreCase("DC") && !proc_type.equalsIgnoreCase("ST"))
+	 	 	     		proc_type="";
+	 	 	  }
+	 		  
+	 	    }
+        } 
+        }
+	 }
+	 catch(Exception e){ }
+
+
 
  String diseaseName=ParamUtil.getString(request, "diseaseName").trim();
 //String specialityId= ParamUtil.getString(request,"specialityId").trim();//ParamUtil.getString(request, "DIST_ID");
 //String splcode="";
 String specialityId = ParamUtil.getString(request, "specialityId").trim();
-String proc_type=ParamUtil.getString(request, "proc_type").trim();
- 
+
+ System.out.println("proc_type>>>>"+proc_type);
+  //String proc_type1=request.getAttribute("proc_type");
+// System.out.println("proc_type>>>>"+proc_type);
  if(diseaseName.length()>5 && diseaseName!=null && diseaseName!=""){
 	 int postion1=diseaseName.indexOf("(");
 	 if(postion1!=0)
@@ -117,8 +88,6 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
 <script>
 	var primaryKeyColumn = 1;
 	var primaryKeyColumnName = "Name of Hospital";
-	
-	
 	var dataTables = {
 	        tables:[
 	            {
@@ -209,10 +178,7 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
             this.api()
                 .columns([1,3,4])
                 .every(function () {
-                    var column = this; 
-                    /* .appendTo($(column.footer()));
-                    .appendTo( $(column.footer()).empty() );
-                     */
+                    var column = this;
                  	$('#select-'+column[0][0]).on('change', function () {
                  		console.log("onchange action for >>>"+"#select-"+column[0][0]);
                         var val = $('#select-'+column[0][0]).val();                        
@@ -223,12 +189,25 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
                         	    procedureData(id);
                             }
                         }
-                   /* column.search(val,true,false,true).draw(); */
-                   var val = $.fn.dataTable.util.escapeRegex(
-                                         $(this).val()
-                                     );
+                        var val = $.fn.dataTable.util.escapeRegex(
+                                $(this).val()
+                            );
+                        if(column[0][0]==4){
+                        	
+                        	if(val=="Aasara"){
+                        		column.search('', true, false).draw();
+                        		aasaraRecords(); 
+                        	}
+                        	else{
+                        		 column.search(val ? '^' + val + '$' : '', true, false).draw();
+                        	}
+                        }
+                        else{
+                 
+                               column.search(val ? '^' + val + '$' : '', true, false).draw();
+                 	     }
                         /* alert("Asche::"+val); */
-                        column.search(val ? '^' + val + '$' : '', true, false).draw();
+                       
                         
                });
                  	/* column.data().unique().sort().each(function (d, j) {
@@ -250,23 +229,43 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
    								}
    							}	
                            });
+                           $('#select-'+column[0][0]).append('<option value="Aasara">Aasara</option>');
                      	}  
 
                 });
-            
-        	
-            <% if(proc_type!="" && proc_type!=null){ %>
+
+           
+              function aasaraRecords(){
+            	  //$("#select-4").val("1").trigger('change');
+	                	  var table = $('#datatables').DataTable();		
+									var selectVal=$('#select-4').val();
+									console.log("keyup>>>"+selectVal);
+									if(selectVal=="Aasara"){
+										 $.fn.dataTable.ext.search.push(function (settings, data, dataIndex) {
+								               console.log("enter"); 
+								                var aasaraAmount = parseFloat(data[6]) || 0; 
+								               if($("#select-4").val()=="Aasara"){
+									                if (aasaraAmount!=0){
+									                        return true;
+									                }
+								               }
+								               else{
+								            	   return true;
+								               }
+								            });
+										table.draw();
+									}
+              }		 
+           <% if(proc_type!="" && proc_type!=null){ %>
             var procedureType="<%=proc_type%>";
-           if(procedureType!=null && procedureType!=""){
+           if(procedureType!=null && procedureType!=""){	
 
             //   console.log("hospitalType>>>>"+ hospitalType);
              $("#select-4").val(procedureType).trigger('change');
            }
             
             <% } %> 
-        	
-            
-            
+        	  
             
             stoploader();
         }, 
@@ -415,6 +414,8 @@ String proc_type=ParamUtil.getString(request, "proc_type").trim();
 				    <option value="">Show All</option>
 				 </select>
 				</div>-->
+			 
+				
 				<div class="col-lg-6">
 				<label  for="Procedure Name">Treatments Name</label>
 				<select class="form-select" id="select-3" name="select-3">
@@ -495,6 +496,5 @@ $(document).ready(function() {
 	$('.modal-backdrop').remove();
 	$('.modal-backdrop').remove();
 } );
- 
-</script>
- 
+
+</script>  
