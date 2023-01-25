@@ -1,0 +1,4 @@
+Bundle-Name: departmentView
+Bundle-SymbolicName: com.Department
+Bundle-Version: 1.0.0
+Export-Package: com.Department.constants
