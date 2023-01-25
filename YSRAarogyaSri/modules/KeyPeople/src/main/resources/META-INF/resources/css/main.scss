@@ -1,0 +1,106 @@
+
+/*****************************Tenders Page CSS start*************************************/
+
+.tenderspage-main .tendersdata-table h1, .tenderspage-main h1.tendertext-main {
+	color: #001A46;
+	text-align: center;
+	margin-bottom: 25px !important;
+	
+}
+table{text-align: center;}
+.tenderspage-main .tendersdata-table h1 span, .tenderspage-main h1.tendertext-main span {
+	border-bottom: 10px solid #FF6F0C;
+} 
+
+
+.tenderspage-main .tendersdata-table div#tenderTable_filter, .tenderspage-main .tendersdata-table div#tenderTable_paginate {
+    float: right;
+}
+
+.tenderspage-main .tendersdata-table .tenders-table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: transparent;
+}
+
+.tenders-table thead tr {
+	    background-color: #04537A;
+}
+.tenders-table thead tr th{
+	    color: #ffffff;
+}
+
+.tenderspage-main .tendersdata-table div#tenderTable_paginate .page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #04537A;
+    border-color: #04537A;
+}
+
+.tenderspage-main .tendersdata-table div#tenderTable_paginate .page-item .page-link {
+	color: #04537A;
+}
+
+.tenderspage-main .tender-form {
+	margin: 0px auto;
+}
+
+.tenderspage-main .tender-form  .btn-submit{
+	background-color: #83C127;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 8px;
+	width: 100%;
+}
+
+.vedioGallery-sec .imp-txt {
+	color: #00050E;
+	text-align: center;
+	margin-bottom: 60px;
+	text-transform: uppercase;
+}
+
+.vedioGallery-sec {
+ 	padding: 40px 0px 0px;
+ }
+
+
+.vedioGallery-sec .imp-txt  span {
+	border-bottom: 10px solid #FF6F0C;
+}
+
+button.btn-createTender {
+	background-color: #83C127;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 8px;
+	
+}
+.tendersdata-table thead tr th {
+    color: #fff;
+    background-color: #04537A;
+    vertical-align: middle;
+}
+
+.table{text-align:center;}
+
+.tendersdata-table .btn.btn-primary.m-0 {
+	background-color: #04537A;
+    color: #fff;
+}
+td.table-cell.first {
+    text-align: center !important;
+}
+.table td, .table th {
+    padding: 8px 15px;
+    vertical-align: middle;
+}
+.taglib-page-iterator .search-results {
+    float: left;
+    line-height: 35px;
+    margin-left: 10px;
+}
+.taglib-page-iterator .lfr-pagination-config {
+    float: left;
+    line-height: 0px;
+}
+.managewdth{width:150px;}
+/*****************************Tenders Page CSS End**************************************/
