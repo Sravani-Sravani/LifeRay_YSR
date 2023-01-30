@@ -53,7 +53,7 @@ margin:auto;
 <div class="tendersdata-table">
        <%--   <div class="row">
              <div class="col-md-12" style="justify-content: flex-end;">
-                           <a href ="<%=addNewUrl %>" cssClass="btn btn-black btn-sm-block" >    
+                            <a href ="<%=addNewUrl %>" cssClass="btn btn-black btn-sm-block" >    
                            	<button type="button" style="width: auto;" class="btn btn-defaulter btn-createTender float-right""> Add</button>
                            </a>                      
                      </div>                  
@@ -97,9 +97,8 @@ margin:auto;
 				      	
 					           
 		          %>
-		
-		     
-		<liferay-ui:search-container-column-text name="title" value="<%=title %>" /> 
+ 		<liferay-ui:search-container-column-text name="title" value="<%=title %>" /> 
+
 		 <liferay-ui:search-container-column-text name="description" value="<%=description %>" />
 		<liferay-ui:search-container-column-text name="Status" value="<%=status %>" />
 		
