@@ -1,0 +1,293 @@
+
+
+/*************************Registration and Login pages CSs start***********************************************/
+
+
+
+ .btn-submit, .btn-submit:hover, .jhansiregister-page .btn-secondary, .jhansiregister-page .btn-secondary:hover{
+	background-color: #83C127;
+	color: #fff;
+	padding: 8px 20px;
+	border-radius: 8px;
+	width: 100%;
+	font-size: 13px;
+}
+
+
+.bdr-right-red{
+	border-right: 3px solid #FF2A31;
+}
+
+.submitbutton-n label{
+	font-weight: bold;
+}
+/*************************Registration page CSs End***********************************************/
+
+
+
+
+  #holder{
+      overflow:hidden;
+    }
+    .piechart{
+      float:left;
+    }
+
+    .piechartchart path {
+      stroke: #cccccc;
+      stroke-width: 1px;
+      opacity:0.8;
+    }
+
+
+    .piechartchart text{
+      font-size:12px;    
+    }
+   .jhansiLogin-page {
+		width: 500px;
+   }
+.createuser-page .form-group label {
+	border: 0px solid #fff;
+	display: inline;
+	float: left;
+	margin-right: 10px;
+	word-break: break-all;
+	word-wrap: break-word;
+	clear: left;
+	width: 178px;
+}
+
+.pwd-checkmark {
+	position: absolute;
+	top: 2px;
+	left: 0px !important;
+}
+
+a.anch-color:hover {
+	color: #fff !important;
+}
+
+a.anch-color {
+	color: #fff !important;
+	text-decoration:under-line;
+}
+
+@media screen and (min-width: 1088px) {
+	form.sign-in-form {
+		width: 100% !important;
+	}
+	.forgot-spacing {
+		padding-left: 22px !important;
+	}
+}
+
+@media screen and (min-width: 900px) and (max-width: 1087px) {
+	.forgot-spacing {
+		padding-left: 26px !important;
+	}
+	.createuser-page .formbox-div {
+		/*width: 260px;*/
+		margin-left: 15px;
+	}
+}
+
+@media screen and (max-width: 898px) {
+	.forgot-spacing {
+		padding-left: 10px !important;
+	}
+}
+
+.label-leftstyling {
+	font-size: 13px;
+	font-weight: bold;
+	border-right: 3px solid red;
+	padding-right: 14px;
+	display: inline-block;
+}
+
+ 
+@media screen and (min-width: 971px) {
+	.createuser-page .formbox-div {
+		background-color: transparent;
+		padding: 20px 20px 0px;
+		border-radius: 15px;
+	/* 	margin-left: 20px;
+		margin-top: 33px;
+		margin-bottom: 20px; */
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 899px) {
+	.createuser-page .formbox-div {
+		/*width: 266px;*/
+	}
+}
+
+
+.jhansiregister-page {
+	width: 700px !important;
+}
+ 
+@media screen and (max-width: 768px) {
+.jhansiregister-page {width: 315px !important;
+}
+}
+   .jhansiback-background{
+		box-shadow: 0px 0px 4px #00000033;
+		padding: 15px 0px !important;
+		width:100%;
+		background-color: #FFFFFF !important;
+    }
+
+    .jhansiLogin-page label, .jhansiregister-page label{
+    	color: #fff;
+    	font-size: 13px;
+    }
+    
+    
+.up-birth-heading .alignIitems-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 0px 0px;
+}
+
+.up-birth-heading .alignIitems-center img {
+	width: 100px;
+	margin-right: 30px;
+}
+
+.up-birth-heading .alignIitems-center h1 {
+	color: #fff;
+}
+
+.jhansiregister-pagefirst h3.birth-heading  {
+	color: #FF6F0C;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+
+.jhansiback-background{
+	box-shadow: 0px 0px 4px #00000033;
+	padding-bottom: 100px;
+	background-color: #FFFFFF !important;
+	 
+}
+
+.jhansiLogin-pagefirst label, .jhansiregister-pagefirst label{
+	color: #fff;
+}
+
+
+.jhansiregister-pagefirst .btn-submit {
+    background-color: #83C127;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 13px;
+}
+
+
+
+	.jhansiregister-pagefirst h4.text-white {
+  		color: #fff;
+  		margin: 20px 0px;
+  	}
+
+  	.jhansiregister-pagefirst .nav-tabs .nav-link:focus,
+  	.jhansiregister-pagefirst .nav-tabs .nav-link:hover {
+  		border-color: transparent;
+  	}
+
+  	.jhansiregister-pagefirst .nav-tabs {
+    border-bottom: none;
+    margin: 10px 0px 15px;
+}
+
+	.jhansiregister-pagefirst .nav-tabs .nav-link {
+		color: #fff;
+		font-size: 16px;
+	}
+
+	.jhansiregister-pagefirst .nav-tabs .nav-link.active span.txt-white{
+		color: #FF6F0C !important;
+	}
+
+	.jhansiregister-pagefirst .nav-tabs .nav-item.show .nav-link,
+	.jhansiregister-pagefirst .nav-tabs .nav-link.active {
+		background-color: transparent;
+	    border: none;
+	    font-weight: bold;
+	    
+		border-bottom: 4px solid #ffff;
+	}
+
+
+
+.jhansiround-sqare-tabs	a.nav-link span.dot {
+    height: 35px;
+    width: 35px;
+    background-color: #2DAAE1;
+    border-radius: 50%;
+    color: #fff;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: 10px;
+}
+
+
+.jhansiround-sqare-tabs a.nav-link.active span.dot {
+    background-color: #FF6F0C !important;
+    color: #fff;
+}
+
+
+
+.register-block .form-group label{
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.register-block .form-group .form-check  label.form-check-label {
+	font-weight: normal;
+	font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+	.jhansiLogin-page {
+    width:315px;
+}
+}
+.button-holder {
+    margin-bottom: 10px;
+}
+.logmiddle-sec {
+    background-color: #4f4f49 !important;
+    width: 100%;
+    padding: 10px;
+}
+.registertab {
+    background-color: #4f4f49 !important;
+        padding: 10px 1px;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #83C127;
+    border-color: #83C127;
+}
+.has-error .help-block {
+    color: #dc3545 !important;
+}
+.acttime{color: #fff !important;text-align: center;}
+.form-control{font-size: 13px;}
+ @media screen and (min-width: 971px) {
+ button#_citizenlogin_INSTANCE_yqly_resend {
+    width: 87%;
+}
+}

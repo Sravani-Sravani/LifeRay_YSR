@@ -7,7 +7,7 @@
     <entity name="Department" remote-service="false" local-service="true" table="department">
         <column name="did" primary="true" type="long" id-type="increment"></column>
         <column name="title" type="String"></column>
-        <column name="description" type="String"></column>
+        <column name="description" type="text"></column>
         <column name="department" type="int"></column>
     </entity>
 </service-builder>

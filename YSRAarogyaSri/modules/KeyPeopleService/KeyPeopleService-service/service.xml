@@ -21,12 +21,10 @@
 			<order-column name="empOrder" />
 		</order>
     </entity>
-    
     <entity name="Wing" remote-service="false" local-service="true" table="wings">
         <column name="wid" primary="true" type="long" id-type="increment"></column>
         <column name="wname" type="String"></column>
         <column name="status" type="String"></column>
-        
         
     </entity>
     

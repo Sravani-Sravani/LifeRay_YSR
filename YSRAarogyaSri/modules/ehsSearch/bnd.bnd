@@ -1,4 +1,0 @@
-Bundle-Name: ehsSearch
-Bundle-SymbolicName: com.kpmg.ehsSearch
-Bundle-Version: 1.0.0
-Export-Package: com.kpmg.ehsSearch.constants

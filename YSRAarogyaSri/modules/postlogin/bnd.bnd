@@ -1,0 +1,4 @@
+Bundle-Name: postlogin
+Bundle-SymbolicName: com.kpmg.action.postlogin
+Import-Package: *; version="0";resolution:=optional
+Bundle-Version: 1.0.0

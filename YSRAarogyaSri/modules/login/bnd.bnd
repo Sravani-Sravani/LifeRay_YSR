@@ -1,0 +1,6 @@
+Bundle-Name: login
+Bundle-SymbolicName: com.kpmg.login
+Bundle-Version: 1.0.0
+Import-Package: *; version="0";resolution:=optional
+Export-Package: com.kpmg.login.constants
+ 
