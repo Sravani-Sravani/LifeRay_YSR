@@ -40,6 +40,7 @@ public class PostLogin implements LifecycleAction {
 		
 		// /c/portal/update_language?p_l_id=185&redirect=null&languageId=hi_IN&showUserLocaleOptionsMessage=false
 		String userRedirectURL = "/web/guest/home";
+		String keyPeopleURL = "/web/guest/manage_who-is-who";
 		String departmentuserURL = "/web/guest/manage-alert";
 		//String birthandDeathRegister = "/group/guest/dashboard";
 		String hotelVendorURL = "/group/guest/hotelVendor-dashboard";
