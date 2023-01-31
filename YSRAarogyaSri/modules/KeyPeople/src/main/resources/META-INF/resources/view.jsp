@@ -1,11 +1,12 @@
- <link rel="stylesheet" href="/o/com.keyPeople/css/jquery-ui.css">
-  <link rel="stylesheet" href="/o/com.keyPeople/css/style.css">
-  
+
+  <%@page import="com.liferay.portal.kernel.model.Role"%>
    <style>
   #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
   #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
   #sortable li span { position: absolute; margin-left: -1.3em; }
+ 
   </style>
+
   
 <%@page import="com.liferay.portal.kernel.util.ParamUtil"%>   
 <%@page import="com.liferay.portal.kernel.util.ListUtil"%>
@@ -18,6 +19,17 @@
 <%@page import="com.liferay.portal.kernel.theme.ThemeDisplay"%>
 <%@page import="javax.portlet.PortletURL"%>
 <%@page import="com.liferay.portal.kernel.util.WebKeys"%>
+
+ <link rel="stylesheet" href="/o/com.keyPeople/css/jquery-ui.css">
+  <link rel="stylesheet" href="/o/com.keyPeople/css/style.css">
+   <link rel="stylesheet" href="/o/com.keyPeople/css/main.css">
+  
+  <%if(!role.equalsIgnoreCase("Departmentuser")){ %>
+  <style>
+  .taglib-search-iterator-page-iterator-bottom{display:none;}
+  </style>
+  
+  <% }%>
 
 <liferay-ui:success key="entryAdded" message="Key People added successfully." />
 <liferay-ui:success key="entryUpdated" message="Key People updated successfully."  />
@@ -52,11 +64,11 @@
 <div class="tenderspage-main">
 	<div class="tendersdata-table">
 		  <div class="col-md-12">
-                <%if(pageId1 == 624){ %><h1>Department view</h1><%}else{ %><h1>Public view</h1><%} %>
+                <%if(role.equalsIgnoreCase("Departmentuser")){ %><h1> Department view</h1><%}else{ %><h1>Public view</h1><%} %>
            </div>
          
 		<div class="container">
-		<%if(pageId1 == 624){ %>
+		<%if(role.equalsIgnoreCase("Departmentuser")){ %>
 					<div class="row">
 	   					<div class="col-md-12" style="justify-content: flex-end;">
                            	<a href ="<%=createFormsURL %>" cssClass="btn btn-black btn-sm-block" >    
@@ -77,7 +89,7 @@
 		    kpList =KeyPeopleLocalServiceUtil.getKeyPeoples(0, size) ;
 			 
 		 %>
-	     		
+	   <div class = "paginationButton"> 		
 	 <liferay-ui:search-container deltaConfigurable="true" delta="20" total="<%=size %>" emptyResultsMessage="No records found" iteratorURL="<%= iteratorNewURL %>" >			 
 	<% try{
 		resultList = ListUtil.subList(kpList, searchContainer.getStart(),searchContainer.getEnd());
@@ -85,6 +97,7 @@
 		e.printStackTrace();
 	}
 	%>
+	
 	
 	<% if(pageId1 == 624){ %>
 	  <script src="/o/com.keyPeople/js/jquery-1.12.4.js"></script>
@@ -123,7 +136,7 @@
 		                   %>
 		
 		 <liferay-ui:search-container-column-text cssClass="<%= String.valueOf(keyPeopleId) %>" name="<%=thSno %>">	 
-		<%if(pageId1==624){    %> 	
+		<%if(role.equalsIgnoreCase("Departmentuser")){    %> 	
 	    <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>	  
 	    <% }%>
 	    <%= String.valueOf(sNo++) %></liferay-ui:search-container-column-text>
@@ -132,8 +145,10 @@
 	    <liferay-ui:search-container-column-text name="Employee Name" value="<%=name %>" /> 
 		 <liferay-ui:search-container-column-text name="Phone" value="<%=mobile %>" />
 		<liferay-ui:search-container-column-text name="Email" value="<%=email %>" />
+		<%if(role.equalsIgnoreCase("Departmentuser")){ %>
 		<liferay-ui:search-container-column-text name="Status" value="<%=status %>" />
-		<%if(pageId1 == 624){ %>
+		<%} %>
+		<%if(role.equalsIgnoreCase("Departmentuser")){ %>
 		<liferay-ui:search-container-column-text name="Manage" cssClass="managewdth">
 		<div>
 	 
@@ -144,7 +159,7 @@
 		</liferay-ui:search-container-column-text>
 		<%} %>
 		
-	
+	</div> 
 
 		
 		
