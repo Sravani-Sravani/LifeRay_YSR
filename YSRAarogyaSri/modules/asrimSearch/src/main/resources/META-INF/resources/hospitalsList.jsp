@@ -22,12 +22,12 @@ function stoploader(){
 }
     $(document).ready(function () {
 <%--     	<% if(pageId1==589 || pageId1==585){ %> --%>
-        $("#select-2").select2();
+        $("#select-1").select2();
 <%--         <% } %> --%>
+	   $("#select-2").select2();
 	   $("#select-3").select2();
 	   $("#select-4").select2();
-	   $("#select-5").select2();
-	   $("#select-1").select2();
+/* 	   $("#select-1").select2(); */
 	   
 	}); 
 </script>
@@ -97,7 +97,7 @@ function stoploader(){
             {
                 select: "By Associate Number",
                 dataURL:"<%=asrimHospitalsURL.toString()%>",
-                columns:["Name of Hospital","Hospital Type","State","District","Mandal","Specialities","Mitra Contact No"],
+                columns:["Name of Hospital","State","District","Mandal","Specialities","Mitra Contact No"],
                 options:{},
                 scrollX: false,
                 header: true,
@@ -114,7 +114,7 @@ function stoploader(){
 	            {
 	                select: "By Associate Number",
 	                dataURL:"<%=asrimHospitalsURL.toString()%>",
-	                columns:["Name of Hospital","Hospital Type","State","District","Mandal","Specialities","Address","Mitra Contact No"],
+	                columns:["Name of Hospital","State","District","Mandal","Specialities","Address","Mitra Contact No"],
 	                options:{},
 	                scrollX: false,
 	                header: true,
@@ -173,7 +173,7 @@ function stoploader(){
         	    { width: "200", targets: 0 }
         	  ],
         	  fixedColumns: true,
-        	//  search: { regex: true, �},
+        	//  search: { regex: true,  },
          initComplete: function () {
         	
         	 stoploader();
@@ -188,10 +188,10 @@ function stoploader(){
                             var id=$('#select-'+column[0][0]).find(':selected').attr('data');
                             console.log("id>>>"+id);
                             if(id!=undefined){
-	                            if(column[0][0]==2){
+	                            if(column[0][0]==1){
 	                        	    districtsData(id);
 	                            }
-	                            else if(column[0][0]==3){
+	                            else if(column[0][0]==2){
 	                        	  mandalData(id);
 	                            }
                             }
@@ -200,7 +200,7 @@ function stoploader(){
                      	
                      	
                      	
-                      	if(column[0][0]==1){
+                      	if(column[0][0]==0){
                             column
                                .data()
                                .unique()
@@ -220,7 +220,7 @@ function stoploader(){
                   	
                 });
 
-          <% if(HOSP_TYPE!="" && HOSP_TYPE!=null){ %>
+      <%--     <% if(HOSP_TYPE!="" && HOSP_TYPE!=null){ %>
              var hospitalType="<%=HOSP_TYPE%>";
             if(hospitalType!=null && hospitalType!=""){
 
@@ -228,25 +228,25 @@ function stoploader(){
               $("#select-1").val(hospitalType).trigger('change');
             }
              
-             <% } %> 
-             <% if(stateName!="" && stateName!=null){ %>
+             <% } %>  --%>
+         <%--     <% if(stateName!="" && stateName!=null){ %>
              
              var stateName="<%=stateName%>";
              if(stateName!=null && stateName!=""){
             	 console.log("state selection");
-                 $("#select-2").val(stateName);
+                 $("#select-1").val(stateName);
                  //
                 //var id=$('#select-2').find(':selected').attr('data');
                 //console.log("state Id>>>"+id); 
             	  // districtsData(id);
              }
-             <% } %>
+             <% } %> --%>
              <% if((DIST_ID!="" && DIST_ID!=null)){ %>
              var districtId="<%=DIST_ID%>"; 
              districtId=$.trim(districtId);
              if((districtId!=null && districtId!="")){
             	 console.log("district selection");
-                  $("#select-3").val(districtId).trigger('change');
+                  $("#select-2").val(districtId).trigger('change');
              }
               <% } %>
            <% if(diseaseName!="" && diseaseName!=null){ %>
@@ -254,7 +254,7 @@ function stoploader(){
              var diseaseName="<%=diseaseName%>";
              if(diseaseName!=null && diseaseName!=""){
             	// $("input[type='search']").val(diseaseName).trigger('keyup');
-            	 $("#select-5").val(diseaseName).trigger('change');
+            	 $("#select-4").val(diseaseName).trigger('change');
               //   console.log("diseaseName>>>>"+ diseaseName); 
                 }
   
@@ -368,7 +368,7 @@ function stoploader(){
  			<%if(pageId1==595 ||pageId1==587|| pageId1==593 ||pageId1==579 || pageId1==515 ||pageId1==497 || pageId1==509 ||pageId1==503){ %>
  							<div class="col-auto">
 				<label  for="Speciality Name"><span class="text-danger">*</span>Speciality Name</label>
-				<select class="form-select" id="select-5" label="Speciality Name" name="select-5">
+				<select class="form-select" id="select-4" label="Speciality Name" name="select-4">
 				    <option value="">Show All</option>
 				    <%
 				    //String specialityId=null;
@@ -405,22 +405,22 @@ function stoploader(){
 				 </select>
 				</div> 
  			<%} %>
-		 
+		 <p style="display: none;"> <%=serverName1%></p>
 				<div class="col-auto">
 				<label  for="State"><span class="text-danger">*</span> State</label>
-				<select class="form-select" id="select-2" name="select-2">
+				<select class="form-select" id="select-1" name="select-1">
 		 <option value="">Show All</option>
 				    <% 
     for(int j=0;j<statesJsonArray.length();j++){
   	org.json.JSONObject data=new org.json.JSONObject(statesJsonArray.get(j).toString()); 
   	%>
-	 <option data="<%=data.get("stateId")  %>" value="<%=data.get("stateName") %>"><%=data.get("stateName")  %></option>
+	 <option data="<%=data.get("stateId")  %>""><%=data.get("stateName")  %></option>
 	<% } %> 
    </select>
 		</div> 
 				<div class="col-auto">
 				<label  for="District">District</label>
-				<select class="form-select" id="select-3" name="select-3">
+				<select class="form-select" id="select-2" name="select-2">
 				    <option value="">Show All</option>
 				     <% 
 				     if(destrictsJsonArray!=null){
@@ -445,7 +445,7 @@ function stoploader(){
 				</div>  -->
 				<div class="col-auto">
 				<label  for="Mandal">Mandal</label>
-				<select class="form-select" id="select-4" name="select-4">
+				<select class="form-select" id="select-3" name="select-3">
 				    <option value="">Show All</option>
 				      <%
 				      if(stateId!=null && stateId!=""){
@@ -472,16 +472,16 @@ function stoploader(){
 				 </select>
 				</div>
 				
-				<div class="col-auto">
+			<!-- 	<div class="col-auto">
 				 <label  for="Type">Type</label>
 				<select class="form-select" id="select-1" name="select-1">
 				    <option value="">Show All</option>
 				 </select>
-				</div>
+				</div> -->
 				<%if(pageId1==585 || pageId1==589 ||pageId1==581 ||pageId1==513 ||pageId1==491||pageId1==507 || pageId1==499){ %>
 				<div class="col-auto">
 				<label  for="Speciality Name">Speciality Name</label>
-				<select class="form-select" id="select-5" label="Speciality Name" name="select-5">
+				<select class="form-select" id="select-4" label="Speciality Name" name="select-4">
 				    <option value="">Show All</option>
 				    <%
 				    //String specialityId=null;
@@ -526,20 +526,20 @@ function stoploader(){
 			<script>
 			$("#resetBtnS").click(function(){
 				//alert("Clear");
+				$("#select-1").val("").trigger('change');
+				$('#select-2').find('option').remove().end().append('<option value="">Show all</option>');
 				$("#select-2").val("").trigger('change');
 				$('#select-3').find('option').remove().end().append('<option value="">Show all</option>');
-				$("#select-3").val("").trigger('change');
-				$('#select-4').find('option').remove().end().append('<option value="">Show all</option>');
-				$("#select-4").val("").trigger('change'); 
-				$("#select-5").val("").trigger('change');
-				$("#select-1").val("").trigger('change');
+				$("#select-3").val("").trigger('change'); 
+				$("#select-4").val("").trigger('change');
+				/* $("#select-1").val("").trigger('change'); */
 				
 				 $("input[type='search']").val("").trigger('keyup');
 			});
 			
 			
 			function districtsData(state_Id){
-	    		   $('#select-3').prop("disabled", true);
+	    		   $('#select-2').prop("disabled", true);
 				 AUI().use('aui-base','aui-io-request-deprecated', 'aui-node', function(A){
 				    A.io.request('<%=getAjaxDataURL.toString() %>',{
 					    dataType : 'json',
@@ -556,17 +556,17 @@ function stoploader(){
 				           			 console.log(response);
 						
 				           			 
-				           			 $('#select-3').find('option').remove().end().append('<option value="">Show all</option>'); 
-				           			 $('#select-4').find('option').remove().end().append('<option value="">Show all</option>');
+				           			 $('#select-2').find('option').remove().end().append('<option value="">Show all</option>'); 
+				           			 $('#select-3').find('option').remove().end().append('<option value="">Show all</option>');
 				           			 $('#<portlet:namespace />searchComplaintTypeId').html("");
 				           			/* if(state_Id=="6"){ */
 				        
 				           			 jQuery.each(response, function(i, val) {
-				           		 	 $('#select-3').append("<option data='"+val.districtId+"' value='"+val.districtName+"'>"+val.districtName+"</option>");
+				           		 	 $('#select-2').append("<option data='"+val.districtId+"' value='"+val.districtName+"'>"+val.districtName+"</option>");
 				           			});
 				           			
-				           			 $('#select-3').trigger('change');
-						    		   $('#select-3').prop("disabled", false);
+				           			 $('#select-2').trigger('change');
+						    		   $('#select-2').prop("disabled", false);
 						    		   
 				           			 },  
                                      error: function(xhr) {
@@ -593,17 +593,17 @@ function stoploader(){
 					    	 console.log("Success 12567");
 				           			 var response=this.get('responseData');
 				           			 console.log(response);
-				           			 $('#select-4').find('option').remove().end().append('<option value="">Show all</option>'); 
+				           			 $('#select-3').find('option').remove().end().append('<option value="">Show all</option>'); 
 				           			 $('#<portlet:namespace />searchComplaintTypeId').html("");
 				           			 jQuery.each(response, function(i, val) {
 				           				<% if(pageId1==589 ||pageId1==581 || pageId1==513 || pageId1==507 ||pageId1==515 || pageId1==593 ||pageId1==579 ||pageId1==509){ %>
-				           		 	 $('#select-4').append("<option data='"+val.mandalId+"' value='"+val.mandalName+"'>"+val.mandalName+"</option>");
+				           		 	 $('#select-3').append("<option data='"+val.mandalId+"' value='"+val.mandalName+"'>"+val.mandalName+"</option>");
 				           			<% }else{ %>
-				           			$('#select-4').append("<option data='"+val.mandalId+"' value='"+val.mandal+"'>"+val.mandal+"</option>");
+				           			$('#select-3').append("<option data='"+val.mandalId+"' value='"+val.mandal+"'>"+val.mandal+"</option>");
 				           			<% } %>
 				           				});
-				           			 $('#select-4').trigger('change');
-						    		   $('#select-4').prop("disabled", false);
+				           			 $('#select-3').trigger('change');
+						    		   $('#select-3').prop("disabled", false);
 				           			 },  
                                      error: function(xhr) {
 						    			  console.log("Error");

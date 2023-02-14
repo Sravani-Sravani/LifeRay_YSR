@@ -27,7 +27,7 @@
 
                             
 <li class="mb-1">
-								<a href="/web/guest/ehs_proceduresearch" ><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button></a>
+								<a href="/web/guest/ehsspecialities" ><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button></a>
 								
 							</li>                            
 

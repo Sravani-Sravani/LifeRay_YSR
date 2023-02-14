@@ -67,11 +67,12 @@ e.getMessage();
 		  <div class="row">
 		      
 		      <% 
+		 
 		      List<String> statesList = new ArrayList<String>();
  		      statesList.add("ANDHRA PRADESH");
 		      statesList.add("TELANGANA");
 		      statesList.add("KARNATAKA");
-		      statesList.add("TAMIL NADU");
+		      statesList.add("TAMIL NADU"); 
  		       
 	        for(int i=0;i<statesList.size();i++){
 	    		/// System.out.println("statesList.get(i)>>>"+statesList.get(i));

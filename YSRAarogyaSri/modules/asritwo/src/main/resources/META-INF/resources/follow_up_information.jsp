@@ -5,7 +5,7 @@
 <%@ include file="/rightContenta.jsp" %>
 
 				<h3 class="bordertitle text-dark">FOLLOW UP INFORMATION</h3> 
-				  <h5> FOLLOW UP SERVICES FOR Dr. YSR Aarogyasri  BENEFICIARIES </h5> 
+				  <h5> FOLLOW UP SERVICES FOR Dr. YSR Aarogyasri  Beneficiaries </h5> 
 				    <h6>AIM</h6>
 					<p>Scheme is aimed at providing coverage for follow-up services where specifically needed, so as to gain optimum benefit from the Surgery/Therapy and to avoid complications by providing <u>system / diseas e specific package for one year follow-up</u> for consultation, investigations, drugs etc.,</p> 
 					<p> Patients require follow-up services for certain procedures in order to gain optimum benefit from the Surgery/Therapy and to avoid complications,. Presently Trust is providing follow-up drugs to these beneficiaries through Network Hospitals, but changes in the follow-up services are required in order to streamline the services. </p> 
@@ -39,7 +39,8 @@
 					  </ul> 
 				  <br />
 					  <h5>FOLLOW UP PACKAGES-SURGICAL:</h5>
-				  <div class="table-responsive">  
+				  <div class="table-responsive"> 
+				  <div class="table-responsive fixed_header_table"> 
 					<table class="table table-bordered table-hover table-striped"> 
 				   <thead> 
 
@@ -744,11 +745,14 @@
 					</tr> 
 				   </tbody> 
 				  </table> 
-				</div><!--END of table-responsive-->	
+				</div>
+				</div>
+				<!--END of table-responsive-->	
 				<br />
 				<h5>FOLLOW UP PACKAGES-MEDICAL :</h5>
 				<br />
-				  <div class="table-responsive">  
+				  <div class="table-responsive"> 
+				  <div class="table-responsive fixed_header_table"> 
 					<table class="table table-bordered table-hover table-striped"> 
 				   <thead> 
 					<tr> 
@@ -1218,11 +1222,13 @@
 					</tr> 
 				   </tbody> 
 				  </table>
-				</div><!--END of table-responsive--> 
+				</div></div>
+				<!--END of table-responsive--> 
 				<br />
 				<h5>FOLLOW UP PACKAGES-MEDICAL :</h5>
 				
 				  <div class="table-responsive">  
+				  <div class="table-responsive fixed_header_table"> 
 					<table class="table table-bordered table-hover table-striped"> 
 				   <thead> 
 					<tr> 
@@ -1638,7 +1644,9 @@
 					</tr> 
 				   </tbody> 
 				  </table> 
-				</div><!--END of table-responsive--> 
+				</div>
+				</div>
+				<!--END of table-responsive--> 
 				 
 
 			 

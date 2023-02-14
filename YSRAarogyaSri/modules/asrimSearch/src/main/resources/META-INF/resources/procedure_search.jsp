@@ -34,7 +34,7 @@ function stoploader(){
 /* search_panel .table td, .search_panel .table th {
     width:10%;
     } */ 
-   table.dataTable thead th, table.dataTable tr td{ width:auto !important;}
+   table.dataTable thead th, table.dataTable tr td{ width:10% !important;}
 </style>
 
 <% 
@@ -42,7 +42,7 @@ function stoploader(){
 String proc_type=ParamUtil.getString(request, "proc_type").trim();
 String currURL="";
 try{
-    currURL = PortalUtil.getCurrentURL(request); 
+  currURL = PortalUtil.getCurrentURL(request); 
   System.out.println("currURL="+currURL);
   String[] strArray = null;  
   strArray = currURL.split("\\?");

@@ -13,6 +13,12 @@ if(pageId==6){ %>
 <%@ include file="/follow_up_guidelines_new.jsp" %>
 <%}else if(pageId==551){ %>
 <%@ include file="/follow_up_guidelines_new.jsp" %>
+<%}else if(pageId==565){ %>
+<%@ include file="/arogyamithra.jsp" %>
+<%}else if(pageId==634){ %>
+<%@ include file="/aasaraAmount.jsp" %>
+<%}else if(pageId==636){ %>
+<%@ include file="/specialities.jsp" %>
 <%}else{ %>
 PageIsNotFound in asri
 <%}

@@ -32,7 +32,7 @@
 							</li>  
                             
 <li class="mb-1">
-								<a href="/web/guest/asri_proceduresearch"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button></a>
+								<a href="/web/guest/specialities"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button></a>
 <!-- 								<div class="collapse" id="treats-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									<li><a href="/web/guest/asri_proceduresearch">Search for Procedures</a></li>                                   
@@ -52,7 +52,7 @@
 							</li>
                             
 <li class="mb-1">
-								<a href="/web/guest/aarogya-aasara" ><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#asara-collapse" aria-expanded="false"> Aarogya Aasara</button></a>
+								<a href="/web/guest/aasaraamount" ><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#asara-collapse" aria-expanded="false"> Aarogya Aasara</button></a>
 							<!-- 	<div class="collapse" id="asara-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									<li><a href="/web/guest/aarogya-aasara">Learn More about the Scheme</a></li>                                   
