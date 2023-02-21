@@ -17,10 +17,6 @@ if(pageId==6 || pageId==87){ %>
 <%@ include file="/follow_up_information.jsp" %>
 <%}else if(pageId==103){ %>
 <%@ include file="/health_camps.jsp" %>
-<%}else if(pageId==89){ %>
-<%@ include file="/health_who_is_who_district.jsp" %>
-<%}else if(pageId==91){ %>
-<%@ include file="/health_who_is_who_trust.jsp" %>
 <%}else if(pageId==177){ %>
 <%@ include file="/salient_features.jsp" %>
 <%}else if(pageId==95){ %>
@@ -38,3 +34,9 @@ PageIsNotFound in raksha
 <%}
 %>
 
+<%-- 
+<%else if(pageId==89){ %>
+<%@ include file="/health_who_is_who_district.jsp" %>
+<%}else if(pageId==91){ %>
+<%@ include file="/health_who_is_who_trust.jsp" %>
+<%} %> --%>

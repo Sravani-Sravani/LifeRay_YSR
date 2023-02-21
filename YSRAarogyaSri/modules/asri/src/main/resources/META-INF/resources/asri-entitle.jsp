@@ -3,69 +3,59 @@
 
 <%@ include file="/sidea.jsp" %>
 <%@ include file="/rightContenta.jsp" %>
+<h3 class="bordertitle text-dark">My Entitlements</h3> 
+ <ul>
+<li>Cashless services provided to those who admitted (IP cases) under Aarogyasri Scheme
+    <ul>
+        <li>Free admission</li>
+        <li>Doctor consultation (every day)</li>
+        <li>Nursing services (every day)</li>
+        <li>Required investigations during hospitalizations</li>
+        <li>All necessary medicines (every day)</li>
+        <li>Surgery (operation) / treatment)</li>
+        <li>Breakfast, Lunch (two meals)</li>
+        <li>Sufficient medicines for 10 days at the time of discharge</li>
+        <li>Bus fare for going home after discharge</li>
+        <li>Free follow up care after 10 days from the date of discharge</li>
+    </ul>
+</li>
+<li>All families whose annual family income is Rs.5,00,000/- are eligible under Mana Aarogyasri as per the new eligibility criteria.</li>
+<li>The citizen should approach to their Sachivalayam to apply for Aarogyasri Health card and Volunteer Household survey is mandatory to apply for Aarogyasri card.</li>
+<li>Now it is easier to get treatment under Aarogyasri.
+    <ul>
+        <li>Direct referral from Village Health Clinic / Primary Health centres / 104 Family Physician (or) Emergency Ambulance in our village to Aarogyasri empanelled hospitals for cashless treatment.</li>
+        <li>You should first contact Arogya Mitra to get treatment under Aarogyasri.</li>
+        <li>to get the Post treatment sustenance allowance amount under Aarogya Aasara for eligible procedures, submit your bank details to Arogya Mitra along with the Bank passbook.</li>
+    </ul>
+</li>
+<li>Cashless OP treatment also available under Aarogyasri i.e., 
+    <ul>
+        <li>Doctor's consultation</li>
+        <li>Required medical tests for diagnosis like 
+            <ul>
+                <li>CBP, ESR</li>
+                <li>RBS Blood Sugar</li>
+                <li>Serum Creatinine / Blood Urea</li>
+                <li>Urine Analysis CUE</li>
+                <li>ECG</li>
+                <li>X-Ray of body part</li>
+                <li>Ultrasound Abdomen</li>
+            </ul>
+        </li>
+    </ul>
+    <p style="color:#777;">
+*All types of medical tests are available for free of cost in Government hospitals.
+</p>
+</li>
 
- <section class="white_section pt-0">
-     <div class="container ">
-      <div class="row">
-       <div class="col-lg-12">
-        <h2 class="subheading"> My Entitlements</h2>
-        <ul class="icon-list">
-          <li><liferay-ui:message key="title"/>
-            <ul class="icon-list">
-              <li><liferay-ui:message key="title1"/></li>
-              <li><liferay-ui:message key="title2"/> </li>
-              <li><liferay-ui:message key="title3"/></li>
-              <li><liferay-ui:message key="title4"/>  
-              </li>
-              <li><liferay-ui:message key="title5"/> </li>
-              <li><liferay-ui:message key="title6"/></li>
-              <li><liferay-ui:message key="title7"/> </li>
-              <li><liferay-ui:message key="title8"/> </li>
-              <li><liferay-ui:message key="title9"/> </li>
-              <li><liferay-ui:message key="title10"/> </li>
-             </ul>
-          </li>              
-          <li><liferay-ui:message key="title11"/></li>
-          <li><b><liferay-ui:message key="title12"/></b> <br> </li>
-          <li><b> <liferay-ui:message key="title13"/>.</b>
-            <ul class="icon-list">
-              <li><liferay-ui:message key="title14"/></li>
-              <li><liferay-ui:message key="title15"/></li>
-              <li><b> <liferay-ui:message key="title16"/>. </b></li>
-          </ul>
-          </li>
-         </ul>
-         <p><liferay-ui:message key="title17"/> </p>
-         <ul class="icon-list">
-         
-            <li><liferay-ui:message key="title18"/></li>
-            <li> <liferay-ui:message key="title19"/></li>
-            <li> <liferay-ui:message key="title20"/> </li>
-            <li> <liferay-ui:message key="title21"/></li>
-            <li> <liferay-ui:message key="title22"/></li>
-            <li> <liferay-ui:message key="title23"/></li>
-            <li> <liferay-ui:message key="title24"/></li>
-            <li><liferay-ui:message key="title25"/>* </li>
-        </ul>
-        <ul class="icon-list">
-          <li><liferay-ui:message key="title26"/></li>
-          <li><liferay-ui:message key="title27"/> </li>
-          <li><liferay-ui:message key="title28"/>.</li>
-          <li><liferay-ui:message key="title29"/>	.</li>
-          <li><liferay-ui:message key="title30"/>.</li>
-          <li><liferay-ui:message key="title31"/>.</li>
-          <li><liferay-ui:message key="title32"/>. </li>
-          <li><liferay-ui:message key="title33"/> </li>
-          <li><liferay-ui:message key="title34"/>	 </li>
-          <li><liferay-ui:message key="title35"/>.</li>
+
+<li>For those who have given account details, the health benefit amount will be credited to your account before discharge from the hospital.</li>
+<li>For identified 138 procedures, the follow-up medicines for 1 year will be provided for free of cost.</li>
+<li>During Discharge, Patient must submit the Confirmation Letter stating that "You have not faced any problem and not spent money during the hospitalization period" and a Consent Letter stating that "the Trust can process the treatment cost as per the package to the Hospital through my Virtual account".</li>
+<li>You can anytime contact Aarogya Mithra in the hospital for any help during the hospitalization.</li>
+<li>For information and complaints on Aarogyasri and Aarogya Aasara, please call to 104.</li>
+<li>Call 108 toll free number to get emergency ambulance services.</li>
+<li>Call 14400 (ACB) toll free number for any Corruption related complaints.</li>
 </ul>
-
-
-       </div>
-      </div>
-     </div>
-    </section>
-
-
 
 <%@ include file="/lasta.jsp" %>

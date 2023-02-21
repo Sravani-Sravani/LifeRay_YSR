@@ -21,21 +21,22 @@
 					<div class="card"> 
 					 <img src="/o/com.kpmg.asri/qr/Aarogyasri.png" class="img-fluid" alt="QR CODE"> 
 					 <div class="card-body"> 
-					  <p class="card-text">To access Aarogyasri App, Please scan the QR code.</p> 
+					  <p class="card-text">To Download Aarogya Sri App, Please scan the QR code.</p> 
 					 </div> 
 					</div> 
 				   </div>
-				<p>The primary objective of Arogyasri Mobile App is to enable the delivery of envisaged medical services through self-service mode on the mobile devices in an efficient and cost-effective manner. The key principles of the Mobile app are (i) Available to All (ii) delivered to all, and (iii) Accessible to All. Initially, it will be available for the Aarogyasri scheme beneficiaries.</p>
+				<!-- <p>The primary objective of Arogyasri Mobile App is to enable the delivery of envisaged medical services through self-service mode on the mobile devices in an efficient and cost-effective manner. The key principles of the Mobile app are (i) Available to All (ii) delivered to all, and (iii) Accessible to All. Initially, it will be available for the Aarogyasri scheme beneficiaries.</p>
 				<p>Beneficiaries of YSRAHCT do not have any medium to view their demographic details, family details, Card utilization and scheme benefits under a single platform.
 					To address this issue, YSRAHCT has come up with a unique enhanced solution for beneficiaries in the existing Mobile Application of YSRAHCT developed in-house. 
 					The beneficiaries need to download and install the mobile app named Aarogyasri App from the Google Play Store.
-					</p>
+					</p> -->
+					<p>The beneficiaries need to download and install the mobile app named Aarogyasri App from the Google Play Store.</p>				
 					<p>Beneficiary of Aarogyasri Scheme through the mobile application will be able to view family details as per records in Trust, Card utilization details, Dashboard and Scheme benefits etc.</p>
-				<h5>The beneficiaries can log in to the mobile application in 3 ways:</h5>
+				<p><b>The beneficiaries can log in to the mobile application in 3 ways:</b></p>
 
 				<ul class="main_ul_list">
-					<li>Scanning the QR code printed on the health care or</li>
-					<li>Entering the UHID number manually or</li>
+					<li>Scanning the QR code printed on the health care</li>
+					<li>Entering the UHID number manually</li>
 					<li>Entering the Aadhar no.</li>
 				</ul>
 
@@ -61,12 +62,12 @@
 							<li>Board of Trustees </li>
 						</ul>
 						<p>For Family details Users can be able to view the Name of their Family Members, Relation , Age, Blood Group etc.</p>
-						<p>Users can also check recent IP cases with details like Hospital Name, DOA, DOD, Complaints, Diagnosis, Surgery, Operative findings, Advice, Amount, View Investigations, Follow up date, Follow up amount, Aasara Amount</p>
-						<p>And Recent Op case with Hospital Name, OP Date, Complaint, Diagnosis will be displayed.</p>
+						<p>Users can also check recent IP cases with details like Hospital Name, Date Of Admission, Date Of Discharge, Complaints, Diagnosis, Surgery, Operative findings, Advice, Amount, View Investigations, Follow up date, Follow up amount, Aasara Amount</p>
+						<p>And Recent OP case with Hospital Name, OP Date, Complaint, Diagnosis will be displayed.</p>
 						</div>
 					  </div>
 					</div>
-					<div class="accordion-item">
+<!-- 					<div class="accordion-item">
 						<h4 class="accordion-header" id="headingTwo">
 						  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 							Card Utilization
@@ -92,7 +93,7 @@
 								<p>User can also be able to see Free Health Camp Information, Nearby Hospitals, Nearby Pharmacies and Laboratory, Nearby Blood Banks<p></p>
 								</div>
 					  </div>
-					</div>
+					</div> -->
 					</div>
 				
 				<br />

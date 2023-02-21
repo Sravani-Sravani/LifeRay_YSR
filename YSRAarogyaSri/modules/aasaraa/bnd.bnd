@@ -1,0 +1,4 @@
+Bundle-Name: aasaraa
+Bundle-SymbolicName: aasaraa
+Bundle-Version: 1.0.0
+Export-Package: aasaraa.constants

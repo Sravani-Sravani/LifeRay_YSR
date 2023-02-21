@@ -1,0 +1,4 @@
+Bundle-Name: aasaraFinal
+Bundle-SymbolicName: aasaraafinal
+Bundle-Version: 1.0.0
+Export-Package: aasaraafinal.constants

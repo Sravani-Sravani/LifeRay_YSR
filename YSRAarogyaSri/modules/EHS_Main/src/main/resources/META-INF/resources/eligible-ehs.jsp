@@ -7,7 +7,7 @@
 <h3 class="bordertitle text-dark">Am I Eligible</h3>
 
 								 
-						<h5>Objective</h5> 
+					<!-- 	<h5>Objective</h5> 
 						<p>Employees Health Scheme is formulated to provide cashless treatment to the employees, pensioners of the State Government and their dependent family members, which will ipso facto replace the existing medical reimbursement system under the 'Andhra Pradesh Integrated medical Attendance Rules, 1972 (APIMA Rules, 1972)', with additional benefits such as post-operative care and treatment of Chronic diseases, which do not require hospitalization and treatment in empanelled Hospitals.</p> 
 					
 						<h5>Important Stakeholders in the Scheme</h5> 
@@ -22,6 +22,7 @@
 						<p>A health care provider shall be a hospital or nursing home in Andhra Pradesh established for indoor medical care and treatment of disease and injuries and should be registered under Andhra Pradesh Private Allopathic Medical Establishments (Registration &amp; Regulation) Act and Pre-Conception and Pre-Natal Diagnostic Techniques Act (Wherever Applicable).</p> 
 						<h6>Software Company - Technology Solutions:</h6> 
 						<p>A dedicated real-time online workflow system was designed by the Trust in order to bring dynamism and decentralization of work like Online processing of the cases starting from registration of case at network hospital, pre-authorization, treatment and other services at the hospital, discharge and post treatment follow-up, claim settlement, payment gateway, accounting system, TDS deductions, e-office solutions etc. The maintenance of the workflow is done round the clock.</p>  
+						 -->
 						<h5>Population Coverage</h5> 
 						<h6>Eligible beneficiaries:</h6> 
 						<ul> 
@@ -67,7 +68,8 @@
 						</ul>
 						<h6>Authentication:</h6> 
 						<p>The eligible beneficiaries will be provided with health cards also called eligibility cards.</p> <p>The procedure of verification of eligibility of beneficiary under the scheme shall be by online authentication of the Health Card details. The beneficiary shall provide either the eligibility card or the card number in case the card is unavailable. The staff at the kiosk in the Network Hospital shall verify the details online by accessing the database. Once the authentication is complete, the eligibility verification ends.</p> 
-						<h6>Penal actions:</h6> 
+						
+						<!-- <h6>Penal actions:</h6> 
 						<p>Any irregularities or misuse committed by the beneficiaries coming to the notice of Government or Dr. YSR AHCT will entail disciplinary action as per A.P. C.S. (CCA) Rules, 1991 and may attract penal action as per law.</p> 
 						<h5>Benefit Coverage</h5> 
 						<h6>In-Patient Treatment:</h6> 
@@ -80,6 +82,6 @@
 							</ul> 
 							</li>
 						</ul>
-
+ -->
 
 <%@ include file="/last.jsp" %>

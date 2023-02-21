@@ -1,0 +1,10 @@
+Bundle-Name: sample-api
+Bundle-SymbolicName: com.kpmg.sample.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.kpmg.sample.exception,\
+	com.kpmg.sample.model,\
+	com.kpmg.sample.service,\
+	com.kpmg.sample.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../sample-service/service.xml

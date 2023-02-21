@@ -17,9 +17,13 @@ if(pageId==6){ %>
 <%@ include file="/arogyamithra.jsp" %>
 <%}else if(pageId==634){ %>
 <%@ include file="/aasaraAmount.jsp" %>
-<%}else if(pageId==636){ %>
+<%}else if(pageId==636||pageId==629){ %>
 <%@ include file="/specialities.jsp" %>
+<%}else if(pageId==640 || pageId==631){ %>
+<%@ include file="/empanelmentfees.jsp" %>
+<%}else if(pageId==627 ||pageId==648){ %>
+<%@ include file="/it.jsp" %>
 <%}else{ %>
-PageIsNotFound in asri
+PageIsNotFound in asrithree
 <%}
 %>

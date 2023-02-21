@@ -1,4 +1,5 @@
-<%@page import="com.kpmg.asrimSearch.util.DataGridDisplayManageUtil"%>
+
+???<%@page import="com.kpmg.asrimSearch.util.DataGridDisplayManageUtil"%>
 <%@page import="com.liferay.portal.kernel.util.WebKeys"%>
 <%@page import="com.liferay.portal.kernel.theme.ThemeDisplay"%>
 <%@page import="org.json.JSONArray"%>
@@ -20,7 +21,8 @@
  <%@ include file="/init.jsp" %>
  <portlet:renderURL var="viewDistrictRecordsURL">
 			<portlet:param name="mvcPath" value="/districtWiseHospitals.jsp"/> 
-		</portlet:renderURL> 
+		</portlet:renderURL>
+		
  <% 
 themeDisplay  = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
 long pageId1=themeDisplay.getPlid();

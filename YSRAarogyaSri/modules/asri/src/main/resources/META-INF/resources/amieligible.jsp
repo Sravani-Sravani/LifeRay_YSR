@@ -44,7 +44,7 @@
          </ul>
 
          
-        <p class="text-end"><a href="/documents/d/guest/15112019hmf_rt628-1-1-" target="_blank" class="btn btn-success btn-md">Know More</a></p>
+        <!-- <p class="text-end"><a href="/documents/d/guest/15112019hmf_rt628-1-1-" target="_blank" class="btn btn-success btn-md">Know More</a></p> -->
        </div>
       </div>
      </div>

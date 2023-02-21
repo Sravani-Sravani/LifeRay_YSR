@@ -44,7 +44,7 @@ h2.subheading{ text-align: left; margin-bottom: 0px; padding: 20px 0 0; }
 .table tr td{ font-size: 12px; text-align: center;}
 .fixed_header_table{ height: 500px; overflow-y: scroll;}
 /*  .fixed_header_table thead td, .fixed_header_table thead th{ position: sticky; top:0;} */
-  .fixed_header_table thead td, .fixed_header_table thead th {
+  .fixed_header_table thead td, .fixed_header_table thead th, .fixed_header_table tbody th {
   position: sticky;
   top: 0;
   z-index: 999;}
@@ -351,11 +351,11 @@ h3.heading_inner{ text-align: left; font-size: 35px; margin-bottom: 2%; }
 .inner_twocol_layout .sidebar_menu ul ul{padding:10px 0;   margin-left: 0px; margin: 0 10px; color: #2169B2; background: rgba(0,0,0,.25); }
 
 .citizenhospital_sidebar_menu .sidebar_menu{ padding:0px; background : #2169B2; }
-.btn_icon, .btn_icon:hover, .btn_icon:focus{background: #2169B2 !important; border-bottom: solid 1px #2169B2 ; margin-top: 5px; text-align: left !important; text-transform: uppercase; font-weight: bold; font-size: 20px; }
-.btn_icon1, .btn_icon1:hover, .btn_icon1:focus{ border-bottom: solid 1px #5EA22E ; background:#5EA22E !important;  margin-top: 5px; text-align: left !important; text-transform: uppercase; font-weight: bold; font-size: 20px;}
+.btn_icon, .btn_icon:hover, .btn_icon:focus{background: #2169B2 !important; border-bottom: solid 1px #2169B2 ; margin-top: 5px; text-align: left !important; text-transform: uppercase; font-weight: bold; font-size: 18px; }
+.btn_icon1, .btn_icon1:hover, .btn_icon1:focus{ border-bottom: solid 1px #5EA22E ; background:#5EA22E !important;  margin-top: 5px; text-align: left !important; text-transform: uppercase; font-weight: bold; font-size: 18px;}
 .btn_icon i,.btn_icon1 i { font-size: 28px; margin-right: 10px; background-color:#09519A;padding: 20px; width:25%; text-align: center; color:#fff;}
 .btn_icon1 i{ font-size: 22px; background-color:#42741f; }
-.btn_icon1 i.downarrow, .btn_icon i.downarrow{background: transparent !important;	padding: 0;	width: 100% !important; text-align: right !important;  font-size: 18px; }	
+.btn_icon1 i.downarrow, .btn_icon i.downarrow{background: transparent !important;	padding: 0;	width:9% !important; text-align: right !important;  font-size: 18px; }	
 .inner_twocol_layout .sidebar_menu ul.green_sidebar .btn:focus{color:#d4f1bf !important;}	
 .inner_twocol_layout .sidebar_menu .green_sidebar .btn{ width:100%; text-align: left; color:#fff !important;text-transform:uppercase; font-weight: 500; }
 .inner_twocol_layout .sidebar_menu .green_sidebar .btn:focus, .inner_twocol_layout .sidebar_menu .green_sidebar .btn:hover{background :transparent; border-radius:0 !important; box-shadow: 0 transparent !important;}
@@ -530,6 +530,9 @@ width:20%;
 	.main_ysriHeader .navbar-nav li.nav-item .active, li.nav-item .nav-link:hover{ background: #fff; color: #2169B2 !important;}
 	li.nav-item .nav-link:focus{ background: #fff !important; color: #2169B2 !important;}
 	
+	
+	
+	.btn_icon1 i.downarrow, .btn_icon i.downarrow{background: transparent !important;	padding: 0;	width:auto !important; text-align: right !important;  font-size: 18px; }
 	.navbar-toggler {width: 100%; margin-bottom: 2px;}
 	.navbar-collapse{ background-color: #2169B2; margin:10px 0; padding:20px; margin-top:0px; border-radius:0px; width: 100% !important;}
 	.navbar-brand{ width:80%; margin:5px 0}

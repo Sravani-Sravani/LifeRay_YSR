@@ -21,24 +21,24 @@
 					   
 					 <div class="qr_code float-end m-4 mt-0"> 
 					<div class="card"> 
-					 <img src="/o/com.kpmg.ArogyaRaksha/qr/EHS.png" class="img-fluid" alt="QR CODE"> 
+					 <img src="/documents/d/guest/qr_codes-3-" class="img-fluid" alt="QR CODE"> 
 					 <div class="card-body"> 
 					  <p class="card-text">To access EHS App, Please scan the QR code.</p> 
 					 </div> 
 					</div> 
 				   </div>
-				<p>The primary objective of Arogyasri Mobile App is to enable the delivery of envisaged medical services through self-service mode on the mobile devices in an efficient and cost-effective manner. The key principles of the Mobile app are (i) Available to All (ii) delivered to all, and (iii) Accessible to All. Initially, it will be available for the Aarogyasri scheme beneficiaries.</p>
+				<p>The primary objective of EHS Mobile App is to enable the delivery of envisaged medical services through self-service mode on the mobile devices in an efficient and cost-effective manner. The key principles of the Mobile app are (i) Available to All (ii) delivered to all, and (iii) Accessible to All. Initially, it will be available for the EHS scheme beneficiaries.</p>
 				<p>Beneficiaries of YSRAHCT do not have any medium to view their demographic details, family details, Card utilization and scheme benefits under a single platform.
 					To address this issue, YSRAHCT has come up with a unique enhanced solution for beneficiaries in the existing Mobile Application of YSRAHCT developed in-house. 
-					The beneficiaries need to download and install the mobile app named Aarogyasri App from the Google Play Store.
+					The beneficiaries need to download and install the mobile app named EHS App from the Google Play Store.
 					</p>
-					<p>Beneficiary of Aarogyasri Scheme through the mobile application will be able to view family details as per records in Trust, Card utilization details, Dashboard and Scheme benefits etc.</p>
+					<p>Beneficiary of EHS Scheme through the mobile application will be able to view family details as per records in Trust, Card utilization details, Dashboard and Scheme benefits etc.</p>
 				<h5>The beneficiaries can log in to the mobile application in 3 ways:</h5>
 
 				<ul class="main_ul_list">
 					<li>Scanning the QR code printed on the health care or</li>
 					<li>Entering the UHID number manually or</li>
-					<li>Entering the Aadhar no.</li>
+					<!-- <li>Entering the Aadhar no.</li> -->
 				</ul>
 
 				<div class="accordion" id="accordionExample">
@@ -50,7 +50,7 @@
 					  </h4>
 					  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 						<div class="accordion-body">
-						<p>Aarogyasri mobile app is providing below mentioned features to the beneficiaries. Users can view their,</p> 
+						<p>EHS mobile app is providing below mentioned features to the beneficiaries. Users can view their,</p> 
 						<ul>
 							<li>Family Health Records</li>
 							<li>Scheme Benefits</li>

@@ -39,7 +39,7 @@
 					  </ul> 
 				  <br />
 					  <h5>FOLLOW UP PACKAGES-SURGICAL:</h5>
-				  <div class="table-responsive"> 
+
 				  <div class="table-responsive fixed_header_table"> 
 					<table class="table table-bordered table-hover table-striped"> 
 				   <thead> 
@@ -746,12 +746,10 @@
 				   </tbody> 
 				  </table> 
 				</div>
-				</div>
 				<!--END of table-responsive-->	
 				<br />
-				<h5>FOLLOW UP PACKAGES-MEDICAL :</h5>
+<!-- 				<h5>FOLLOW UP PACKAGES-MEDICAL :</h5>
 				<br />
-				  <div class="table-responsive"> 
 				  <div class="table-responsive fixed_header_table"> 
 					<table class="table table-bordered table-hover table-striped"> 
 				   <thead> 
@@ -933,14 +931,14 @@
 					 <td> - </td> 
 					 <td> - </td> 
 					 <td> - </td> 
-					</tr> <!--<tr>
+					</tr> <tr>
 								<td>22</p></td>
 								<td ><p>MF4.7.6</p></td>
 								<td ><td>Medical Management of Diphtheria in Paediatric patient</p></td>
 								<td></p>-</td>
 								<td></p>-</td>
 								<td></p>-</td>
-							</tr> --> 
+							</tr> 
 					<tr> 
 					 <td>22</td> 
 					 <td>MF5.1.1</td> 
@@ -1172,7 +1170,7 @@
 					 <td>7000</td> 
 					 <td>2500</td> 
 					 <td>1500</td> 
-					</tr> <!--<tr>
+					</tr> <tr>
 								<td>52</p></td>
 								<td ><p>MF11.2.5</p></td>
 								<td ><td>Hypopiturasim Initial Evaluation And Management With Growth Hormone</p></td>
@@ -1187,7 +1185,7 @@
 								<td></p>-</td>
 								<td></p>-</td>
 								<td></p>-</td>
-							</tr>--> 
+							</tr> 
 					<tr> 
 					 <td>51</td> 
 					 <td>MF12.9</td> 
@@ -1223,11 +1221,11 @@
 				   </tbody> 
 				  </table>
 				</div></div>
-				<!--END of table-responsive--> 
-				<br />
+				END of table-responsive 
+				<br /> -->
 				<h5>FOLLOW UP PACKAGES-MEDICAL :</h5>
 				
-				  <div class="table-responsive">  
+
 				  <div class="table-responsive fixed_header_table"> 
 					<table class="table table-bordered table-hover table-striped"> 
 				   <thead> 
@@ -1644,8 +1642,7 @@
 					</tr> 
 				   </tbody> 
 				  </table> 
-				</div>
-				</div>
+</div>
 				<!--END of table-responsive--> 
 				 
 

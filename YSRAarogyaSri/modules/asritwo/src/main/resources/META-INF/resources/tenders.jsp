@@ -109,3 +109,7 @@
        <p></p>
       </div>
 <%@ include file="/lasta.jsp" %>
+
+else if(pageId==559){ %>
+<%@ include file="/asri_guidelines_new.jsp" %>
+<%}

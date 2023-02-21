@@ -1,0 +1,4 @@
+Bundle-Name: ehsthree
+Bundle-SymbolicName: ehsthree
+Bundle-Version: 1.0.0
+Export-Package: ehsthree.constants

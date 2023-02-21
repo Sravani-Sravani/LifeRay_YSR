@@ -1,6 +1,6 @@
 					<div class="d-flex flex-column flex-shrink-0 sidebar_menu">
 						<button class="accordion-button btn_icon show" type="button" data-bs-toggle="collapse" data-bs-target="#citizen-collapse" aria-expanded="true" aria-controls="citizen-collapse">	
-						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;Citizens
+						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;For Citizens
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
 					<div class="collapse show" id="citizen-collapse"> 
@@ -64,7 +64,7 @@
                             
                             <li class="mb-1">
 							<a href="/web/guest/mithrawjhs" >	<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usermanuals-collapse" aria-expanded="false">
-									Know Your Mithra
+									Find Your Mithra
 
 								</button></a>
 								
@@ -74,7 +74,7 @@
 					</ul> 
 					</div>
 						<button class="accordion-button collapsed btn_icon1" type="button" data-bs-toggle="collapse" data-bs-target="#hospital-collapse" aria-expanded="false" aria-controls="hospital-collapse">
-						<i class="fa-sharp fa-solid fa-hospital"></i> &nbsp;Hospitals
+						<i class="fa-sharp fa-solid fa-hospital"></i> &nbsp;For Hospitals
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
 					<div class="collapse  <% if(pageId==149 || pageId==139 || pageId==137 || pageId==131 || pageId==135 || 
