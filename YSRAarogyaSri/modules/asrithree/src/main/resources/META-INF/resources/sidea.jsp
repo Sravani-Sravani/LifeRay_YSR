@@ -7,7 +7,7 @@
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
 						
-					<div class="collapse  <% if(pageId==589 ||pageId==593 || pageId==629 || pageId==537 ||pageId==591 ||pageId==19 ||pageId==636 || pageId==597 || pageId==565 || pageId==581 || pageId==515 || pageId==595){ %> show <% } %>" id="citizen-collapse"> 
+					<div class="collapse  <% if(pageId==589 ||pageId==593 || pageId==629 || pageId==537 ||pageId==591 ||pageId==19 ||pageId==636 || pageId==597 || pageId==565 || pageId==581 || pageId==515 || pageId==595||pageId==654){ %> show <% } %>" id="citizen-collapse"> 
 						<ul class="list-unstyled ps-0">
 							<li class="mb-1">
 							<a href="/web/guest/am-i-eligible">	
@@ -47,9 +47,10 @@
 								<button class="btn btn-toggle align-items-center" data-bs-toggle="collapse" data-bs-target="#patient-collapse" aria-expanded="false">
 									Follow-up Procedures
 								</button>
-								<div class="collapse <% if(pageId==537){ %> show <% } %>" id="patient-collapse" data-bs-parent="#citizen-collapse">
+								<div class="collapse <% if(pageId==537 ||pageId==654){ %> show <% } %>" id="patient-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ">
-									<li><a href="/web/guest/follow_up_information">Follow Up Information</a></li>
+								<li><a href="/web/guest/follow_procedures">Follow Up Information</a></li>
+									<li><a href="/web/guest/follow_up_information">Follow Up Packages</a></li>
 								<!-- 	<li><a href="/web/guest/asri_follow_up_guidelines">Follow Up Guidelines</a></li> -->
 									</ul>
 								</div>

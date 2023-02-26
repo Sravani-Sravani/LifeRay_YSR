@@ -21,7 +21,7 @@
 					   
 					 <div class="qr_code float-end m-4 mt-0"> 
 					<div class="card"> 
-					 <img src="/documents/d/guest/qr_codes-3-" class="img-fluid" alt="QR CODE"> 
+					 <img src="/documents/d/guest/ehs-1" class="img-fluid" alt="QR CODE"> 
 					 <div class="card-body"> 
 					  <p class="card-text">To access EHS App, Please scan the QR code.</p> 
 					 </div> 
@@ -36,8 +36,8 @@
 				<h5>The beneficiaries can log in to the mobile application in 3 ways:</h5>
 
 				<ul class="main_ul_list">
-					<li>Scanning the QR code printed on the health care or</li>
-					<li>Entering the UHID number manually or</li>
+					<li>Scanning the QR code printed on the health card</li>
+					<li>Entering the Employee/Pensioner number</li>
 					<!-- <li>Entering the Aadhar no.</li> -->
 				</ul>
 
@@ -45,7 +45,7 @@
 					<div class="accordion-item">
 					  <h4 class="accordion-header" id="headingOne">
 						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-							Salient Features
+							EHS Mobile APK-Salient Features
 						</button>
 					  </h4>
 					  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -53,14 +53,14 @@
 						<p>EHS mobile app is providing below mentioned features to the beneficiaries. Users can view their,</p> 
 						<ul>
 							<li>Family Health Records</li>
-							<li>Scheme Benefits</li>
+							<li>Scheme Coverage</li>
 							<li>Hospital Search</li>
-							<li>Procedure Search</li>
+							<li>Card Search</li>
 							<li>Near By Hospitals</li>
-							<li>Health Camps</li>
+						 <li>Case Search</li> 
 							<li>FAQs</li>
 							<li>Contact Us</li>
-							<li>Board of Trustees </li>
+							<li>Medical Reimbursement</li>
 						</ul>
 						<p>For Family details Users can be able to view the Name of their Family Members, Relation , Age, Blood Group etc.</p>
 						<p>Users can also check recent IP cases with details like Hospital Name, DOA, DOD, Complaints, Diagnosis, Surgery, Operative findings, Advice, Amount, View Investigations, Follow up date, Follow up amount, Aasara Amount</p>

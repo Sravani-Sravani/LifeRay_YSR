@@ -7,7 +7,6 @@
 		
 <h3 class="bordertitle text-dark">Arogya Mitra</h3>
 
-<h2 class="subheading">Aarogya Mithra</h2>
           <p class="text-justify">Aarogyamithra is the first point of contact for the Patients visiting the hospitals and will help them through their treatment journey starting from Patient registration to treatment and discharge to follow-up. Some of the key activities of Aarogyamithra include:</p>
 
               <ul class="icon-list">
@@ -28,6 +27,6 @@
             <li>Follow-up medicines facilitation</li>
           </ul>
 
-          <p class="text-end"><a href="/web/guest/ehs_hospitalsearch" class="btn btn-success btn-md">Know More</a></p>
-                </div>
+          <!-- <p class="text-end"><a href="/web/guest/ehs_hospitalsearch" class="btn btn-success btn-md">Know More</a></p> -->
+           
 <%@ include file="/last.jsp" %>

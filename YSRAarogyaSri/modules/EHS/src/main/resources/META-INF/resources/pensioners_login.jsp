@@ -4,12 +4,12 @@
 <%@ include file="/sidebar.jsp" %>
 <%@ include file="/rightContent.jsp" %>
 
-			<h3 class="bordertitle text-dark">Pensioners Login Instructions</h3>
+			<h3 class="bordertitle text-dark">Employee/Pensioners Login Instructions</h3>
 				
 			<ul> 
 				<li><b>Step 1: Enroll Aadhar Number </b>
 				<ul> 
-					<li>In case you have not yet enrolled for ‘Aadhar' go to your nearest Aadhar centre. You can find information about Aadhar Centres from Aadhar website or from your District Collector.</li> 
+					<li>In case you have not yet enrolled for Aadhar go to your nearest Aadhar centre. You can find information about Aadhar Centres from Aadhar website or from your District Collector.</li> 
 					<li>Register yourself and your family members, obtain the Enrollment numbers given at the time of Enrollment. Even if there is delay in getting Aadhar Card, the 28 digit Enrollment number can be filled in the EHS e-form while enrolling for the Scheme.
 					<br /><br />
 						<h6>Instructions to provide Enrollment ID in the EHS-form.</h6> 
@@ -61,9 +61,9 @@
 </li> 
 <li><b>Step 4: Issue of Health Cards:</b> 
 	<ul> 
-		<li><b>Temporary Health Cards</b> 
+		<li><!-- <b>Temporary Health Cards</b>  -->
 			<ul> 
-				<li>In order to enable the beneficiaries quick access under the scheme, temporary health cards will be issued soon after the scrutiny of the online application by Dr.YSR Aarogyasri Health Care Trust. Temporary cards will be generated in the logins of the applicants, soon after the completion of scrutiny of applications, which are in complete shape, by Dr.YSR Aarogyasri Health Care Trust. These digital cards can be printed out and laminated by the applicants on their own through internet. Alternatively the beneficiaries can obtain a laminated temporary card from any Mee Seva Centre at a cost fixed by Director ESD, IT &amp; C Department, but not exceeding Rs.25/- per temporary card.</li> 
+				<li>In order to enable the beneficiaries quick access under the scheme,health cards will be issued soon after the scrutiny of the online application by Dr.YSR Aarogyasri Health Care Trust.Cards will be generated in the logins of the applicants, soon after the completion of scrutiny of applications, which are in complete shape, by Dr.YSR Aarogyasri Health Care Trust. These digital cards can be printed out and laminated by the applicants on their own through internet.</li> 
 				<li>All beneficiaries who receive a health card will be eligible to avail treatment in the empanelled hospitals. To start with, the hospitals empanelled by Dr.YSR Aarogyasri Health Care Trust&nbsp;are available on website www.ehs.ap.gov.in.</li> 
 		</ul> 
 	</li> 
@@ -198,11 +198,13 @@
 			<th colspan="2">Declaration</th> 
 		</tr> 
 		<tr> 
-			<td>Signed application form with declaration <span class="text-danger">*</span></span></td> 
+			<td>Signed application form with declaration <span class="text-danger">*</span></td> 
 			<td>After you enter all the details in the e-form, you need to print it and sign the form. Scan the form and prepare a soft copy. The declaration says that , you declare that (1) you agree to the entire Aadhar data of your family to be transferred to Dr. YSRAHCT, (2) you are liable for disciplinary action for declaring ineligible family members as dependents, and (3) the information submitted is true to the best of your knowledge</td> 
 		</tr> 
 	</tbody> 
+	
 </table>
+<p class="text-end"><a href="/documents/d/guest/pensioners_healthcardstep" target="_blank" class="btn btn-success btn-md">Steps For Health Card</a></p>
 	</div>			
 
 

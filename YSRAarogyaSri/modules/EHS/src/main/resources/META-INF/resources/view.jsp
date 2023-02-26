@@ -18,8 +18,6 @@ if( pageId==33){ %>
 <%@ include file="/whoiswho.jsp" %>
 <%}else if(pageId==39){ %>
 <%@ include file="/about_webportal.jsp" %>
-<%}else if(pageId==45){ %>
-<%@ include file="/who_is_who_district.jsp" %>
 <%}else if(pageId==218){ %>
 <%@ include file="/download_healthcard.jsp" %>
 <%}else if(pageId==115){ %>

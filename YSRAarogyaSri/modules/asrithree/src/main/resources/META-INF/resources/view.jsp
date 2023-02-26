@@ -18,12 +18,16 @@ if(pageId==6){ %>
 <%}else if(pageId==634){ %>
 <%@ include file="/aasaraAmount.jsp" %>
 <%}else if(pageId==636||pageId==629){ %>
-<%@ include file="/specialities.jsp" %>
+<%@ include file="/treatmets_spc.jsp" %>
 <%}else if(pageId==640 || pageId==631){ %>
 <%@ include file="/empanelmentfees.jsp" %>
 <%}else if(pageId==627 ||pageId==648){ %>
 <%@ include file="/it.jsp" %>
+<%}else if(pageId==654){ %>
+<%@ include file="/follow-up_procedure.jsp" %>
 <%}else{ %>
 PageIsNotFound in asrithree
 <%}
 %>
+
+follow_procedures

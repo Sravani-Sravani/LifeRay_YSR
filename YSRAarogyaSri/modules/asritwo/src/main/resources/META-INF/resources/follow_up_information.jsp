@@ -2,43 +2,11 @@
 <%@ include file="/topa.jsp" %>
 
 <%@ include file="/sidea.jsp" %>
-<%@ include file="/rightContenta.jsp" %>
+</div><!--sidebar menu-->
+	<div class="col-lg-9  px-2">
 
-				<h3 class="bordertitle text-dark">FOLLOW UP INFORMATION</h3> 
-				  <h5> FOLLOW UP SERVICES FOR Dr. YSR Aarogyasri  Beneficiaries </h5> 
-				    <h6>AIM</h6>
-					<p>Scheme is aimed at providing coverage for follow-up services where specifically needed, so as to gain optimum benefit from the Surgery/Therapy and to avoid complications by providing <u>system / diseas e specific package for one year follow-up</u> for consultation, investigations, drugs etc.,</p> 
-					<p> Patients require follow-up services for certain procedures in order to gain optimum benefit from the Surgery/Therapy and to avoid complications,. Presently Trust is providing follow-up drugs to these beneficiaries through Network Hospitals, but changes in the follow-up services are required in order to streamline the services. </p> 
-					<p> Hence the technical committee of the Trust in consultation with specialists identified specific procedures for follow-up, reviewed the present policy and suggested change by providing system / disease specific package. Accordingly the following guidelines and packages are formulated for follow-up services by Network Hospitals under the scheme. </p>  
-					<h6>GUIDELINES:</h6>
-					  <ul> 
-					   <li> Package covers entire cost of follow-up. ,i.e., consultation, medicines, diagnostic tests etc., </li> 
-					   <li> Follow-up treatment shall be entirely cashless to the patient and will start on 11th day after his discharge and will continue for one year after 11th day of discharge. </li> 
-					   <li>No formal preauthorization is required.</li> 
-					   <li> For operational convenience package amount is apportioned to 4 quarters. Since frequency of visits and investigations are common during first quarter, more amount is allocated for first installment </li> 
-					   <li> However the entire package amount must be treated as single entity and hospital shall not refuse to conduct investigations free of cost under the package any time during one year follow-up period. </li> 
-					   <li> Patient follow-up visits may be spaced according to medical requirement, but approval will be given for one quarter. </li> 
-					   <li> MEDCO along with AAROGYAMITHRA shall facilitate patient follow-up. </li> 
-					  </ul> 
-					  <h6>PROCESS FLOW:</h6>
-					  <ul> 
-					   <li> Patient is counselled at the time of discharge about the importance of follow-up and availability of free services by the hospital </li> 
-					   <li> The first follow-up date shall be on 11th day after discharge as first 10 days treatment is provided to the patient as per disease package. </li> 
-					   <li> MEDCO and AAROGYAMITHRA shall specifically inform the patient about the date and time of subsequent follow-up visits, duly making entry in patient follow-up in the trust portal based on standard medical protocols. </li> 
-					   <li> Hospital shall send proof of follow-up services of patient and submit to Trust once in three months for each quarter to trust portal by uploading(see the work flow) 
-						<ul> 
-						 <li>Details of consultation</li> 
-						 <li>Details of Medicines given</li> 
-						 <li>Investigations done</li> 
-						 <li>Acquittance from patients in the prescribed format</li> 
-						 <li> Photograph showing acquittance of Medicines to the patient </li> 
-						 <li> Bills for medicines and diagnostics (to be scanned and uploaded) </li> 
-						</ul> </li> 
-					   <li> Trust shall settle claim as per package amount based on above proof. </li> 
-					   <li> Hospital shall claim follow-up package only for the disease mentioned along with the code and no other claim shall be entertained by Trust. </li> 
-					  </ul> 
-				  <br />
-					  <h5>FOLLOW UP PACKAGES-SURGICAL:</h5>
+
+					  <h3 class="bordertitle text-dark">FOLLOW UP PACKAGES</h3>
 
 				  <div class="table-responsive fixed_header_table"> 
 					<table class="table table-bordered table-hover table-striped"> 
@@ -743,12 +711,12 @@
 					 <td> 3200 </td> 
 					 <td> 1600 </td> 
 					</tr> 
-				   </tbody> 
+				 <!--   </tbody> 
 				  </table> 
 				</div>
-				<!--END of table-responsive-->	
-				<br />
-<!-- 				<h5>FOLLOW UP PACKAGES-MEDICAL :</h5>
+				END of table-responsive	
+				<br /> -->
+<!-- 		<h5>FOLLOW UP PACKAGES-MEDICAL :</h5>
 				<br />
 				  <div class="table-responsive fixed_header_table"> 
 					<table class="table table-bordered table-hover table-striped"> 
@@ -763,9 +731,9 @@
 					 <td></td>
 					</tr> 
 				</thead> 
-					<tbody> 
+					<tbody>  -->
 					<tr> 
-					 <td>1</td> 
+					 <td>85</td> 
 					 <td>MF1.1</td> 
 					 <td>Acute severe asthma with Acute respiratory failure </td> 
 					 <td>10000</td> 
@@ -773,7 +741,7 @@
 					 <td>2000</td> 
 					</tr> 
 					<tr> 
-					 <td>2</td> 
+					 <td>86</td> 
 					 <td>MF1.2</td> 
 					 <td>COPD Respiratory Failure (infective exacerbation) </td> 
 					 <td>10000</td> 
@@ -781,7 +749,7 @@
 					 <td>2000</td> 
 					</tr> 
 					<tr> 
-					 <td>3</td> 
+					 <td>87</td> 
 					 <td>MF4.1.12</td> 
 					 <td>Term baby with persistent pulmonary hypertension Ventilation-HFO Hyperbilirubinemia Clinical sepsis </td> 
 					 <td>6000</td> 
@@ -789,7 +757,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>4</td> 
+					 <td>88</td> 
 					 <td>MF4.1.16</td> 
 					 <td>Term baby with seizures ventilated</td> 
 					 <td>5000</td> 
@@ -797,7 +765,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>5</td> 
+					 <td>89</td> 
 					 <td>MF4.2.1.5</td> 
 					 <td>Acute Severe Asthma (Ventilated) </td> 
 					 <td>4000</td> 
@@ -805,7 +773,7 @@
 					 <td>800</td> 
 					</tr> 
 					<tr> 
-					 <td>6</td> 
+					 <td>90</td> 
 					 <td>MF4.2.2.5</td> 
 					 <td>Infective Endocarditis</td> 
 					 <td>10000</td> 
@@ -813,7 +781,7 @@
 					 <td>2000</td> 
 					</tr> 
 					<tr> 
-					 <td>7</td> 
+					 <td>91</td> 
 					 <td>MF4.2.2.6</td> 
 					 <td>Medical Management of Rheumatic heart disease in Paediatric patient </td> 
 					 <td> 5000 </td> 
@@ -821,7 +789,7 @@
 					 <td> 1000 </td> 
 					</tr> 
 					<tr> 
-					 <td>8</td> 
+					 <td>92</td> 
 					 <td>MF4.2.3.1</td> 
 					 <td>Meningo- encephalitis (Non Ventilated) </td> 
 					 <td>6500</td> 
@@ -829,7 +797,7 @@
 					 <td>1500</td> 
 					</tr> 
 					<tr> 
-					 <td>9</td> 
+					 <td>93</td> 
 					 <td>MF4.2.3.2</td> 
 					 <td>Meningo- encephalitis ( Ventilated) </td> 
 					 <td>6500</td> 
@@ -837,7 +805,7 @@
 					 <td>1500</td> 
 					</tr> 
 					<tr> 
-					 <td>10</td> 
+					 <td>94</td> 
 					 <td>MF4.2.3.3</td> 
 					 <td><td>Status Epilepticus</td> 
 					 <td>6500</td> 
@@ -845,7 +813,7 @@
 					 <td>1500</td> 
 					</tr> 
 					<tr> 
-					 <td>11</td> 
+					 <td>95</td> 
 					 <td>MF4.2.3.5</td> 
 					 <td><td>Intra cranial bleed</td> 
 					 <td>6500</td> 
@@ -853,7 +821,7 @@
 					 <td>1500</td> 
 					</tr> 
 					<tr> 
-					 <td>12</td> 
+					 <td>96</td> 
 					 <td>MF4.3.2.1</td> 
 					 <td>Congenital heart disease with congestive cardiac failure </td> 
 					 <td>5000</td> 
@@ -861,7 +829,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>13</td> 
+					 <td>97</td> 
 					 <td>MF4.3.2.2</td> 
 					 <td>Acquired heart disease with congestive cardiac failure </td> 
 					 <td>5000</td> 
@@ -869,7 +837,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>14</td> 
+					 <td>98</td> 
 					 <td>MF4.3.3.1</td> 
 					 <td>Steroid Resistant Nephritic syndrome Complicated or Resistant </td> 
 					 <td>5000</td> 
@@ -877,7 +845,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>15</td> 
+					 <td>99</td> 
 					 <td>MF4.3.4.3</td> 
 					 <td>Anaemia of unknown cause</td> 
 					 <td>5000</td> 
@@ -885,7 +853,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>16</td> 
+					 <td>100</td> 
 					 <td>MF4.3.5.1</td> 
 					 <td><td>Pyogenic meningitis</td> 
 					 <td>5000</td> 
@@ -893,7 +861,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>17</td> 
+					 <td>101</td> 
 					 <td>MF4.3.5.2</td> 
 					 <td><td>Neuro tuberculosis</td> 
 					 <td>5000</td> 
@@ -901,7 +869,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>18</td> 
+					 <td>102</td> 
 					 <td>MF4.3.5.3</td> 
 					 <td>Neuro tuberculosis with ventilation</td> 
 					 <td>5000</td> 
@@ -909,7 +877,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>19</td> 
+					 <td>103</td> 
 					 <td>MF4.3.6.1</td> 
 					 <td>Convulsive Disorders/Status Epilepticus (Fits)</td> 
 					 <td>5000</td> 
@@ -917,7 +885,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>20</td> 
+					 <td>104</td> 
 					 <td>MF4.3.6.3</td> 
 					 <td>Encephalitis / Encephalopathy</td> 
 					 <td>5000</td> 
@@ -925,14 +893,14 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>21</td> 
+					 <td>105</td> 
 					 <td>MF4.6.4</td> 
 					 <td>Medical Management of Auto immune hemolytic anemia in Paediatric patient </td> 
 					 <td> - </td> 
 					 <td> - </td> 
 					 <td> - </td> 
 					</tr> <tr>
-								<td>22</p></td>
+								<td>106</p></td>
 								<td ><p>MF4.7.6</p></td>
 								<td ><td>Medical Management of Diphtheria in Paediatric patient</p></td>
 								<td></p>-</td>
@@ -940,7 +908,7 @@
 								<td></p>-</td>
 							</tr> 
 					<tr> 
-					 <td>22</td> 
+					 <td>107</td> 
 					 <td>MF5.1.1</td> 
 					 <td>Acute Mi (Conservative Management Without Angiogram) </td> 
 					 <td>10000</td> 
@@ -948,7 +916,7 @@
 					 <td>2000</td> 
 					</tr> 
 					<tr> 
-					 <td>23</td> 
+					 <td>108</td> 
 					 <td>MF5.1.2</td> 
 					 <td>Acute Mi (Conservative Management With Angiogram) </td> 
 					 <td>10000</td> 
@@ -956,7 +924,7 @@
 					 <td>2000</td> 
 					</tr> 
 					<tr> 
-					 <td>24</td> 
+					 <td>109</td> 
 					 <td>MF5.1.3</td> 
 					 <td>Acute Mi With Cardiogenic Shock</td> 
 					 <td>10000</td> 
@@ -964,7 +932,7 @@
 					 <td>2000</td> 
 					</tr> 
 					<tr> 
-					 <td>25</td> 
+					 <td>110</td> 
 					 <td>MF5.1.4</td> 
 					 <td>Acute Mi Requiring Iabp Pump</td> 
 					 <td>10000</td> 
@@ -972,7 +940,7 @@
 					 <td>2000</td> 
 					</tr> 
 					<tr> 
-					 <td>26</td> 
+					 <td>111</td> 
 					 <td>MF5.1.5</td> 
 					 <td>Refractory Cardiac Failure</td> 
 					 <td>10000</td> 
@@ -980,7 +948,7 @@
 					 <td>2000</td> 
 					</tr> 
 					<tr> 
-					 <td>27</td> 
+					 <td>112</td> 
 					 <td>MF5.2</td> 
 					 <td>Infective Endocarditis</td> 
 					 <td>10000</td> 
@@ -988,7 +956,7 @@
 					 <td>2000</td> 
 					</tr> 
 					<tr> 
-					 <td>28</td> 
+					 <td>113</td> 
 					 <td>MF5.4</td> 
 					 <td><td>Complex Arrhythmias</td> 
 					 <td>10000</td> 
@@ -996,7 +964,7 @@
 					 <td>2000</td> 
 					</tr> 
 					<tr> 
-					 <td>29</td> 
+					 <td>114</td> 
 					 <td>MF6.2</td> 
 					 <td><td>Nephrotic Syndrome</td> 
 					 <td>5000</td> 
@@ -1004,7 +972,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>30</td> 
+					 <td>115</td> 
 					 <td>MF6.6</td> 
 					 <td>Medical Management of Acute Glomerulo Nephritis </td> 
 					 <td> 5000 </td> 
@@ -1012,7 +980,7 @@
 					 <td> 1000 </td> 
 					</tr> 
 					<tr> 
-					 <td>31</td> 
+					 <td>116</td> 
 					 <td>MF7.1</td> 
 					 <td>ADEM or Relapse in Multiple sclerosis</td> 
 					 <td>5000</td> 
@@ -1020,7 +988,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>32</td> 
+					 <td>117</td> 
 					 <td>MF7.2</td> 
 					 <td><td>CIDP</td> 
 					 <td>5000</td> 
@@ -1028,7 +996,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>33</td> 
+					 <td>118</td> 
 					 <td>MF7.3</td> 
 					 <td>Hemorrhagic Stroke/Strokes</td> 
 					 <td>5000</td> 
@@ -1036,7 +1004,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>34</td> 
+					 <td>119</td> 
 					 <td>MF7.4</td> 
 					 <td><td>Ischemic Strokes</td> 
 					 <td>5000</td> 
@@ -1044,7 +1012,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>35</td> 
+					 <td>120</td> 
 					 <td>MF7.6</td> 
 					 <td>NEUROINFECTIONS -Fungal Meningitis</td> 
 					 <td>5000</td> 
@@ -1052,7 +1020,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>36</td> 
+					 <td>121</td> 
 					 <td>MF7.7</td> 
 					 <td>NEUROINFECTIONS -Pyogenic Meningitis</td> 
 					 <td>5000</td> 
@@ -1060,7 +1028,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>37</td> 
+					 <td>122</td> 
 					 <td>MF7.8</td> 
 					 <td>NEUROINFECTIONS -Viral Meningoencephalitis ( Including Herpes encephalitis) </td> 
 					 <td>5000</td> 
@@ -1068,7 +1036,7 @@
 					 <td>1000</td> 
 					</tr> 
 					<tr> 
-					 <td>38</td> 
+					 <td>123</td> 
 					 <td>MF7.9</td> 
 					 <td>Neuromuscular (myasthenia gravis)</td> 
 					 <td>4000</td> 
@@ -1076,7 +1044,7 @@
 					 <td>800</td> 
 					</tr> 
 					<tr> 
-					 <td>39</td> 
+					 <td>124</td> 
 					 <td>MF8.4</td> 
 					 <td>Interstitial Lung diseases</td> 
 					 <td>10000</td> 
@@ -1084,7 +1052,7 @@
 					 <td>2000</td> 
 					</tr> 
 					<tr> 
-					 <td>40</td> 
+					 <td>125</td> 
 					 <td>MF8.5</td> 
 					 <td><td>Pneumoconiosis</td> 
 					 <td>10000</td> 
@@ -1092,7 +1060,7 @@
 					 <td>2000</td> 
 					</tr> 
 					<tr> 
-					 <td>41</td> 
+					 <td>126</td> 
 					 <td>MF8.8</td> 
 					 <td>Medical Management of Pneumonias</td> 
 					 <td> 10000 </td> 
@@ -1100,7 +1068,7 @@
 					 <td> 2000 </td> 
 					</tr> 
 					<tr> 
-					 <td>42</td> 
+					 <td>127</td> 
 					 <td>MF9.1</td> 
 					 <td>Pemphigus / Pemphigoid</td> 
 					 <td>3500</td> 
@@ -1108,7 +1076,7 @@
 					 <td>700</td> 
 					</tr> 
 					<tr> 
-					 <td>43</td> 
+					 <td>128</td> 
 					 <td>MF10.1</td> 
 					 <td>SLE (SYSTEMIC LUPUS ERYTHEMATOSIS)</td> 
 					 <td>6000</td> 
@@ -1116,7 +1084,7 @@
 					 <td>1200</td> 
 					</tr> 
 					<tr> 
-					 <td>44</td> 
+					 <td>129</td> 
 					 <td>MF10.2</td> 
 					 <td><td>SCLERODERMA</td> 
 					 <td>6000</td> 
@@ -1124,7 +1092,7 @@
 					 <td>1200</td> 
 					</tr> 
 					<tr> 
-					 <td>45</td> 
+					 <td>130</td> 
 					 <td>MF10.3</td> 
 					 <td>MCTD MIXED CONNECTIVE TISSUE DISORDER</td> 
 					 <td>6000</td> 
@@ -1132,7 +1100,7 @@
 					 <td>1200</td> 
 					</tr> 
 					<tr> 
-					 <td>46</td> 
+					 <td>131</td> 
 					 <td>MF10.4</td> 
 					 <td>MCTD MIXED CONNECTIVE TISSUE DISORDER</td> 
 					 <td>6000</td> 
@@ -1140,7 +1108,7 @@
 					 <td>1200</td> 
 					</tr> 
 					<tr> 
-					 <td>47</td> 
+					 <td>132</td> 
 					 <td>MF10.5</td> 
 					 <td><td>VASCULITIS</td> 
 					 <td>6000</td> 
@@ -1148,7 +1116,7 @@
 					 <td>1200</td> 
 					</tr> 
 					<tr> 
-					 <td>48</td> 
+					 <td>133</td> 
 					 <td>MF11.2.1</td> 
 					 <td><td>Hypopitutarism</td> 
 					 <td>8000</td> 
@@ -1156,7 +1124,7 @@
 					 <td>1500</td> 
 					</tr> 
 					<tr> 
-					 <td>49</td> 
+					 <td>134</td> 
 					 <td>MF11.2.2</td> 
 					 <td>Pituitary - Acromegaly</td> 
 					 <td>6500</td> 
@@ -1164,14 +1132,14 @@
 					 <td>1500</td> 
 					</tr> 
 					<tr> 
-					 <td>50</td> 
+					 <td>135</td> 
 					 <td>MF11.2.4</td> 
 					 <td>Delayed Puberty Hypogonadism (ex.Turners synd, Kleinfelter synd) </td> 
 					 <td>7000</td> 
 					 <td>2500</td> 
 					 <td>1500</td> 
 					</tr> <tr>
-								<td>52</p></td>
+								<td>136</p></td>
 								<td ><p>MF11.2.5</p></td>
 								<td ><td>Hypopiturasim Initial Evaluation And Management With Growth Hormone</p></td>
 								<td></p>-</td>
@@ -1179,7 +1147,7 @@
 								<td></p>-</td>
 							</tr> 
 							<tr>
-								<td>53</p></td>
+								<td>137</p></td>
 								<td ><p>MF11.2.6</p></td>
 								<td ><td>Hypopiturasim Maintanance Phase Monthly Package For Growth Hormone</p></td>
 								<td></p>-</td>
@@ -1187,7 +1155,7 @@
 								<td></p>-</td>
 							</tr> 
 					<tr> 
-					 <td>51</td> 
+					 <td>138</td> 
 					 <td>MF12.9</td> 
 					 <td><td>Gastric varices</td> 
 					 <td>7000</td> 
@@ -1195,7 +1163,7 @@
 					 <td>1500</td> 
 					</tr> 
 					<tr> 
-					 <td>52</td> 
+					 <td>139</td> 
 					 <td>MF12.13</td> 
 					 <td>Chronic pancreatitis with severe pain</td> 
 					 <td>7000</td> 
@@ -1203,7 +1171,7 @@
 					 <td>1500</td> 
 					</tr> 
 					<tr> 
-					 <td>53</td> 
+					 <td>140</td> 
 					 <td>MF12.15</td> 
 					 <td>Cirrhosis with Hepatic Encephalopathy</td> 
 					 <td>7000</td> 
@@ -1211,7 +1179,7 @@
 					 <td>1500</td> 
 					</tr> 
 					<tr> 
-					 <td>54</td> 
+					 <td>141</td> 
 					 <td>MF12.16</td> 
 					 <td>Cirrhosis with hepato renal syndrome</td> 
 					 <td>7000</td> 
@@ -1220,13 +1188,12 @@
 					</tr> 
 				   </tbody> 
 				  </table>
-				</div></div>
-				END of table-responsive 
-				<br /> -->
-				<h5>FOLLOW UP PACKAGES-MEDICAL :</h5>
+				</div>
+
+				<!-- <h5>FOLLOW UP PACKAGES-MEDICAL :</h5> -->
 				
 
-				  <div class="table-responsive fixed_header_table"> 
+				  <!-- <div class="table-responsive fixed_header_table"> 
 					<table class="table table-bordered table-hover table-striped"> 
 				   <thead> 
 					<tr> 
@@ -1239,8 +1206,8 @@
 					 <td></td>
 					</tr> 
 				</thead> 
-					<tbody> 
-					<tr> 
+					<tbody>  -->
+					<!-- <tr> 
 					 <td>1</td> 
 					 <td>MF1.1</td> 
 					 <td>Acute severe asthma with Acute respiratory failure </td> 
@@ -1642,7 +1609,7 @@
 					</tr> 
 				   </tbody> 
 				  </table> 
-</div>
+</div> -->
 				<!--END of table-responsive--> 
 				 
 

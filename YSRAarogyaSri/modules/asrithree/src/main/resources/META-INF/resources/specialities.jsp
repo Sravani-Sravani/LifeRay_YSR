@@ -9,7 +9,6 @@ overflow-y:hidden;
 }
 </style>
 <h3 class="bordertitle text-dark">Specialities and Treatments Covered</h3>
-<div class="table-responsive"> 
             <div class="table-responsive fixed_header_table"> 
              <table class="table table-bordered table-hover table-striped"> 
          

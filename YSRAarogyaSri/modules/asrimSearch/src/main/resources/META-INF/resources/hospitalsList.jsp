@@ -119,9 +119,7 @@ function stoploader(){
 	                scrollX: false,
 	                header: true,
 	                footer: true/* ,
-	                aoColumnDefs: [
-		                { "visible": false, "targets": [5] }
-		              ] */
+ 
 	            }
 	       ]
 	    };
@@ -132,7 +130,7 @@ function stoploader(){
 		 booleanflag=false; 
 		 }                                                    
 		//$("#recordList").html("");                       
-		$("#recordList").html("<table id='datatables' class='table table-bordered table-hover table-striped' cellspacing='0' style='width:100%'><thead><tr></tr></thead></table>");
+		$("#recordList").html("<table id='datatables' class='table table-bordered table-hover table-striped ' cellspacing='0' style='width:100%'><thead><tr></tr></thead></table>");
 		var columns = dataTables.tables[selectedFilter].columns;
 		var dataURL = dataTables.tables[selectedFilter].dataURL;
 		var scrollXVal = dataTables.tables[selectedFilter].scrollX;

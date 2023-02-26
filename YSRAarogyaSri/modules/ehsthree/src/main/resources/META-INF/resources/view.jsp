@@ -14,8 +14,12 @@ if( pageId==33 || pageId==565){ %>
 <%@ include file="/mithraehs.jsp" %>
 <%}else if(pageId==638 ){ %>
 <%@ include file="/ehspecialities.jsp" %>
+<%}else if(pageId==650 ){ %>
+<%@ include file="/benefit.jsp" %>
+<%}else if(pageId==652 ){ %>
+<%@ include file="/chronic.jsp" %>
 <%}else{ %>
-PageIsNotFound IN ehs
+PageIsNotFound IN ehsthree
 <%}
 %>
 

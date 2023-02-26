@@ -1,8 +1,8 @@
-<%@ include file="/heading.jsp" %>
-<%@ include file="/top.jsp" %>
+<%@ include file="/headinga.jsp" %>
+<%@ include file="/topa.jsp" %>
 
-<%@ include file="/sidebar.jsp" %>
-<%@ include file="/rightContent.jsp" %>
+<%@ include file="/sidea.jsp" %>
+<%@ include file="/rightContenta.jsp" %>
 <h3 class="bordertitle text-dark">Specialities and Treatments Covered</h3>
 <div class="row">
 <div class="col-lg-6">
@@ -22,7 +22,6 @@
 <li>GYNAECOLOGY AND OBSTETRICS SURGERY</li>
 <li>INFECTIOUS DISEASE</li>
 <li>MEDICAL ONCOLOGY</li>
-<li>DENTAL SURGERY</li>
 
 </ul>
 </div>
@@ -46,7 +45,7 @@
 <li>SURGICAL ONCOLOGY</li>
 
 </ul>
-<p class="text-end"><a href="/web/guest/ehs_proceduresearch" class="btn btn-success btn-md">Know More</a></p>
+<p class="text-end"><a href="/web/guest/asri_proceduresearch" class="btn btn-success btn-md">Know More</a></p>
 </div>
 </div>
-     <%@ include file="/last.jsp" %>
+     <%@ include file="/lasta.jsp" %>

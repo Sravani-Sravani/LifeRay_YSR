@@ -24,7 +24,7 @@
 						<p>A dedicated real-time online workflow system was designed by the Trust in order to bring dynamism and decentralization of work like Online processing of the cases starting from registration of case at network hospital, pre-authorization, treatment and other services at the hospital, discharge and post treatment follow-up, claim settlement, payment gateway, accounting system, TDS deductions, e-office solutions etc. The maintenance of the workflow is done round the clock.</p>  
 						 -->
 						<h5>Population Coverage</h5> 
-						<h6>Eligible beneficiaries:</h6> 
+						<h6>Beneficiaries Covered:</h6> 
 						<ul> 
 							<li>Serving Employees: 
 								<ul> 
@@ -42,8 +42,8 @@
 						</ul> 
 						<h6>Beneficiaries not covered:</h6> 
 						<ul> 
-							<li>Those who are covered under other insurance schemes such as CGHS,</li> 
-							<li>ESIS, Railways, Aarogya Bhadratha of Police Department and Aarogya Sahayatha of Prohibition &amp; Excise Department;</li> 
+							<li>Those who are covered under other insurance schemes such as CGHS,
+							ESIS, Railways, Aarogya Bhadratha of Police Department and Aarogya Sahayatha of Prohibition &amp; Excise Department;</li> 
 							<li>Law officers (Advocate General, State Prosecutors, State Counsels, Government Pleaders and Public Prosecutors);</li> 
 							<li>Casual and Daily paid workers;</li> 
 							<li>Biological parents if adopted parents exist;</li> 
@@ -67,7 +67,7 @@
 							<li>Disabled children with a disability which renders them unfit for employment.</li> 
 						</ul>
 						<h6>Authentication:</h6> 
-						<p>The eligible beneficiaries will be provided with health cards also called eligibility cards.</p> <p>The procedure of verification of eligibility of beneficiary under the scheme shall be by online authentication of the Health Card details. The beneficiary shall provide either the eligibility card or the card number in case the card is unavailable. The staff at the kiosk in the Network Hospital shall verify the details online by accessing the database. Once the authentication is complete, the eligibility verification ends.</p> 
+						<p>The eligible beneficiaries will be provided with health cards.</p> <p>The procedure of verification of eligibility of beneficiary under the scheme shall be by online authentication of the Health Card details. The beneficiary shall provide either the eligibility card or the card number in case the card is unavailable. The staff at the kiosk in the Network Hospital shall verify the details online by accessing the database. Once the authentication is complete, the eligibility verification ends.</p> 
 						
 						<!-- <h6>Penal actions:</h6> 
 						<p>Any irregularities or misuse committed by the beneficiaries coming to the notice of Government or Dr. YSR AHCT will entail disciplinary action as per A.P. C.S. (CCA) Rules, 1991 and may attract penal action as per law.</p> 
