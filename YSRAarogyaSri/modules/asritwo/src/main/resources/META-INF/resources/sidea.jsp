@@ -1,17 +1,18 @@
 
 
-					<div class="d-flex flex-column flex-shrink-0 sidebar_menu">
-					
-						<button class="accordion-button btn_icon" type="button" data-bs-toggle="collapse" data-bs-target="#citizen-collapse" aria-expanded="false" aria-controls="citizen-collapse">	
+					 <div class="d-flex flex-column flex-shrink-0 sidebar_menu" id="accordionFlushExample">
+						
+						<button class="accordion-button btn_icon" type="button" data-bs-toggle="collapse" data-bs-target="#citizen-collapse" aria-expanded="true" aria-controls="citizen-collapse">	
 						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp; For Citizens
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
 						
-					<div class="collapse  <% if(pageId==589 ||pageId==593 || pageId==629 || pageId==537 ||pageId==591 ||pageId==19 ||pageId==636 || pageId==597 || pageId==565 || pageId==581 || pageId==515 || pageId==595||pageId==654){ %> show <% } %>" id="citizen-collapse"> 
+						<div id="citizen-collapse" class="collapse  <% if(pageId==589 ||pageId==593 || pageId==629 || pageId==537 ||pageId==591 ||pageId==19 ||pageId==636 || pageId==597 || pageId==565 || pageId==581 || pageId==515 || pageId==595||pageId==654){ %> show <% } %>"  aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body"> 
 						<ul class="list-unstyled ps-0">
 							<li class="mb-1">
 							<a href="/web/guest/am-i-eligible">	
-							<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#citizen-collapse" aria-expanded="false">Am I Eligible 
+							<button class="btn btn-toggle align-items-center collapsed ayush" data-bs-toggle="collapse" data-bs-target="#citizen-collapse" aria-expanded="false">Am I Eligible 
 							</button>
 							
 							</a>
@@ -111,12 +112,14 @@
                             
 					</ul> 
 					</div>
-						<button class="accordion-button collapsed btn_icon1" type="button" data-bs-toggle="collapse" data-bs-target="#hospital-collapse" aria-expanded="false" aria-controls="hospital-collapse">
+					</div>
+					
+						<button class="accordion-button btn_icon1" type="button" data-bs-toggle="collapse" data-bs-target="#hospital-collapse" aria-expanded="false" aria-controls="hospital-collapse">
 						<i class="fa-sharp fa-solid fa-hospital"></i> &nbsp;For Hospitals
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
-					
-					<div class="collapse <% if(pageId==559 || pageId==427 || pageId==431 || pageId == 153 || pageId==640 ||pageId==631 || pageId==383 ||pageId==627||pageId==648){ %> show <% } %>" id="hospital-collapse"> 
+					<div id="hospital-collapse" class="collapse <% if(pageId==559 || pageId==427 || pageId==431 || pageId == 153 || pageId==640 ||pageId==631 || pageId==383 ||pageId==627||pageId==648){ %> show <% } %>"  aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body"> 
 						<ul class="list-unstyled green_sidebar ps-0">
 					  <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#hospital-collapse1" aria-expanded="false">
@@ -180,4 +183,6 @@
 					  </li>
 					</ul> 
 					</div>
+					</div>
+					
 				  </div>
