@@ -1,15 +1,17 @@
-<div class="d-flex flex-column flex-shrink-0 sidebar_menu">
+	
+	<div class="d-flex flex-column flex-shrink-0 sidebar_menu" id="accordionFlushExample">
 						<button class="accordion-button btn_icon" type="button" data-bs-toggle="collapse" data-bs-target="#citizen-collapse" aria-expanded="true" aria-controls="citizen-collapse">	
-						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;Employees/Pensioners
+						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;For Employees/For Pensioners
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
 					
-					<div class="collapse <% if(pageId==105 || pageId==97|| pageId==567|| pageId==603|| pageId==638|| pageId==652|| pageId==650|| pageId==129|| pageId==73|| pageId==601|| pageId==27||pageId==585 || pageId==587 || pageId==595){ %> show <% } %>" id="citizen-collapse"> 
+					<div class="collapse <% if(pageId==105 || pageId==97|| pageId==567|| pageId==603|| pageId==638|| pageId==652|| pageId==650|| pageId==129|| pageId==73|| pageId==601|| pageId==27||pageId==585 || pageId==587 || pageId==595){ %> show <% } %>" id="citizen-collapse"  aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample"> 
+						<div class="accordion-body"> 
 						<ul class="list-unstyled ps-0">
 
 <li class="mb-1">
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#asara-collapse" aria-expanded="false"> Scheme Coverage</button>
-								<div class="collapse <% if(pageId==601 || pageId==73 || pageId==129){ %> show <% } %>" id="asara-collapse" data-bs-parent="#citizen-collapse">
+								<div class="collapse <% if(pageId==601 || pageId==73 || pageId==129){ %> show <% } %> " id="asara-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									 <li><a href="/web/guest/am-i-eligible-ehs">Am I Eligible</a></li>
 									
@@ -116,11 +118,13 @@
                             
 					</ul> 
 					</div>
+					</div>
 						<button class="accordion-button collapsed btn_icon1" type="button" data-bs-toggle="collapse" data-bs-target="#hospital-collapse" aria-expanded="false" aria-controls="hospital-collapse">
 						<i class="fa-sharp fa-solid fa-hospital"></i> &nbsp;For Hospitals &nbsp;&nbsp;&nbsp;
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
-					<div class="collapse <% if(pageId==200 || pageId==202 || pageId==212 || pageId==84|| pageId==198 || pageId==179|| pageId==206 || pageId==210|| pageId==194 ||pageId==541 || pageId==190 ){ %> show <% } %>" id="hospital-collapse"> 
+					<div class="collapse <% if(pageId==200 || pageId==202 || pageId==212 || pageId==84|| pageId==198 || pageId==179|| pageId==206 || pageId==210|| pageId==194 ||pageId==541 || pageId==190 || pageId==184 ){ %> show <% } %>" id="hospital-collapse"  aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushExample"> 
+						<div class="accordion-body"> 
 						<ul class="list-unstyled green_sidebar ps-0">
 					  <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#hospital-collapse1" aria-expanded="false">
@@ -141,16 +145,16 @@
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usman-collapse1" aria-expanded="false">
 							NWH Obligations
 						</button>
-						<div class="collapse  <% if(pageId==200 || pageId==202 || pageId==212 || pageId==84|| pageId==198 || pageId==179|| pageId==206 || pageId==210|| pageId==194 ){ %> show <% } %> --%>" id="usman-collapse1" data-bs-parent="#hospital-collapse">
+						<div class="collapse  <% if(pageId==200 || pageId==202 || pageId==212 || pageId==84|| pageId==198 || pageId==179|| pageId==206 || pageId==210|| pageId==194 || pageId==184){ %> show <% } %> --%>" id="usman-collapse1" data-bs-parent="#hospital-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 		<li><a href="/web/guest/hospital_networkhospital">Network Hospitals</a></li>
          <li><a href="/web/guest/hospital_nwh">NWH Obligations</a></li>
             <li><a href="/web/guest/hospital_preauthorization">Pre-Authorization</a></li>
             <li><a href="/web/guest/hospital_claims1">Claims</a></li>
-             <li><a href="/web/guest/hospital_empanelmentguidelines">Empanelment Guidelines </a></li> 
-            <li><a href="/web/guest/hospital_chronicpatient1">Packages for Chronic Out Patients</a></li> 
-            <li><a href="/web/guest/hospital_packagefollowup">Packages for Follow Up</a></li> 
+            <!-- <li><a href="/web/guest/hospital_empanelmentguidelines">Empanelment Guidelines </a></li> -->
             <li><a href="/web/guest/hospital_packageprice">Package Prices</a></li> 
+            <li><a href="/web/guest/hospital_packagefollowup">Packages for Follow Up</a></li> 
+            <li><a href="/web/guest/hospital_chronicpatient1">Packages for Chronic Out Patients</a></li> 
             <li><a href="/web/guest/hospital_empanelmentappdoc">Empanelment Application Documents</a></li> 
            <!--  <li><a href="/web/guest/hospital_empanelmentappdoc">Documents for Empanelment of Government Hospitals in Dr.YSR Aarogyasri </a></li> 
             <li><a href="/web/guest/hospital_specialisation">Increased Dr.YSR Aarogyasri Health Care Trust Empanelment Application fee &amp; Specialisation inclusion Details</a></li>	
@@ -179,9 +183,9 @@
 						
 					  </li>
 
-				
-
+			
 
 					</ul> 
+					</div>
 					</div>
 				  </div>
