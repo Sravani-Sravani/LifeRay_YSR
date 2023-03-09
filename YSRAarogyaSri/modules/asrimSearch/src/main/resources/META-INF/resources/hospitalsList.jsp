@@ -119,7 +119,9 @@ function stoploader(){
 	                scrollX: false,
 	                header: true,
 	                footer: true/* ,
- 
+	                aoColumnDefs: [
+		                { "visible": false, "targets": [5] }
+		              ] */
 	            }
 	       ]
 	    };
@@ -130,7 +132,7 @@ function stoploader(){
 		 booleanflag=false; 
 		 }                                                    
 		//$("#recordList").html("");                       
-		$("#recordList").html("<table id='datatables' class='table table-bordered table-hover table-striped ' cellspacing='0' style='width:100%'><thead><tr></tr></thead></table>");
+		$("#recordList").html("<table id='datatables' class='table table-bordered table-hover table-striped' cellspacing='0' style='width:100%'><thead><tr></tr></thead></table>");
 		var columns = dataTables.tables[selectedFilter].columns;
 		var dataURL = dataTables.tables[selectedFilter].dataURL;
 		var scrollXVal = dataTables.tables[selectedFilter].scrollX;
@@ -407,7 +409,7 @@ function stoploader(){
 				<div class="col-auto">
 				<label  for="State"><span class="text-danger">*</span> State</label>
 				<select class="form-select" id="select-1" name="select-1">
-		 <option value="">Show All</option>
+		 <option data="" value="">Show All</option>
 				    <% 
     for(int j=0;j<statesJsonArray.length();j++){
   	org.json.JSONObject data=new org.json.JSONObject(statesJsonArray.get(j).toString()); 

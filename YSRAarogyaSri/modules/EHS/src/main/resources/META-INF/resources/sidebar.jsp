@@ -1,6 +1,6 @@
 <div class="d-flex flex-column flex-shrink-0 sidebar_menu">
 						<button class="accordion-button btn_icon" type="button" data-bs-toggle="collapse" data-bs-target="#citizen-collapse" aria-expanded="true" aria-controls="citizen-collapse">	
-						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;Employees/Pensioners
+						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;For Employees/For Pensioners
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
 					
@@ -13,7 +13,7 @@
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									 <li><a href="/web/guest/am-i-eligible-ehs">Am I Eligible</a></li>
 									
-									<li><a href="/web/guest/pensioners_login">Employee Pensioner Login Instructions</a></li>
+									<li><a href="/web/guest/pensioners_login">Employee Object Pensioner Login Instructions</a></li>
 									 <li><a href="/web/guest/pensioners_healthcardsteps">Steps for Health Card</a></li>
 									<li><a href="https://www.ehs.ap.gov.in/EHSAP/requestingInformation.do?actionFlag=homePageSearch&theme=darkgreen">Enrollment Status</a></li>
 									<li><a href="https://www.ehs.ap.gov.in/EHSAP/hcStatusAction.do?actionFlag=onload&theme=darkgreen">Health Card Status</a></li>
@@ -147,10 +147,12 @@
          <li><a href="/web/guest/hospital_nwh">NWH Obligations</a></li>
             <li><a href="/web/guest/hospital_preauthorization">Pre-Authorization</a></li>
             <li><a href="/web/guest/hospital_claims1">Claims</a></li>
+            
              <li><a href="/web/guest/hospital_empanelmentguidelines">Empanelment Guidelines </a></li> 
-            <li><a href="/web/guest/hospital_chronicpatient1">Packages for Chronic Out Patients</a></li> 
-            <li><a href="/web/guest/hospital_packagefollowup">Packages for Follow Up</a></li> 
             <li><a href="/web/guest/hospital_packageprice">Package Prices</a></li> 
+            <li><a href="/web/guest/hospital_packagefollowup">Packages for Follow Up</a></li>
+            <li><a href="/web/guest/hospital_chronicpatient1">Packages for Chronic Out Patients</a></li> 
+             
             <li><a href="/web/guest/hospital_empanelmentappdoc">Empanelment Application Documents</a></li> 
            <!--  <li><a href="/web/guest/hospital_empanelmentappdoc">Documents for Empanelment of Government Hospitals in Dr.YSR Aarogyasri </a></li> 
             <li><a href="/web/guest/hospital_specialisation">Increased Dr.YSR Aarogyasri Health Care Trust Empanelment Application fee &amp; Specialisation inclusion Details</a></li>	
@@ -178,6 +180,7 @@
 						</button></a>
 						
 					  </li>
+					  
 
 			
 

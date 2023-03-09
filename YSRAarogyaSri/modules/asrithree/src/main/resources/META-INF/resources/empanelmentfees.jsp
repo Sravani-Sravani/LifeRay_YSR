@@ -2,11 +2,14 @@
 <%@ include file="/topa.jsp" %>
 
 <%@ include file="/sidea.jsp" %>
-<%@ include file="/rightContenta.jsp" %>
-
+<%-- <%@ include file="/rightContenta.jsp" %> --%>
+	</div><!--sidebar menu-->
+	<div class="col-lg-9 px-2">
+<style>
+</style>
 <h3 class="bordertitle text-dark">Empanelment Fees</h3>
 <div class="table-responsive"> 
-            <div class="table-responsive fixed_header_table"> 
+            <div class="table-responsive fixed_header_table1"> 
              <table class="table table-bordered table-hover table-striped"> 
               <thead> 
                <tr> 

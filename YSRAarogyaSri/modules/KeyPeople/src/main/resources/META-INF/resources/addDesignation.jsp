@@ -18,15 +18,18 @@ width:80%;
 }
 </style>
 <%
+String dname = "";
+String status ="";
+
+try{
     long did = ParamUtil.getLong(request, "did");
   //  System.out.println("id is"+did);
-   
-   
-    String dname = "";
-    String status ="";
     long wid = ParamUtil.getLong(request, "wid");
     boolean istrue = false;
-   
+}
+    catch(Exception e){
+    	e.printStackTrace();
+    }
   
 %>
 <div class = "formContainer">

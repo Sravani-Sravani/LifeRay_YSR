@@ -113,11 +113,11 @@
 						<div class="collapse <% if(pageId==417 || pageId==413 || pageId==421 || pageId==310 || pageId==415 ){ %> show <% } %>" id="usman-collapse1" data-bs-parent="#hospital-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 							<li><a href="/web/guest/followup_packages">Follow Up Packages </a></li> 
-							<li><a href="/web/guest/steps_for_healthCard">Steps for Health Card </a></li> 
+							<!-- <li><a href="/web/guest/steps_for_healthCard">Steps for Health Card </a></li>  -->
 							<li><a href="/web/guest/user_manual_for_downloading_healthCard">User Manual for Downloading Health Card </a></li> 
 							<li><a href="/web/guest/wjhs_notification_tender">Notifications </a></li> 
-							<li><a href="/web/guest/wjhs_notification_tender">Tenders </a></li> 
-							<li><a href="/web/guest/patient_processflow2">Patient Process Flow </a></li> 
+							<!-- <li><a href="/web/guest/wjhs_notification_tender">Tenders </a></li>  -->
+							<!-- <li><a href="/web/guest/patient_processflow2">Patient Process Flow </a></li>  -->
 							
 						  </ul>
 						</div>
