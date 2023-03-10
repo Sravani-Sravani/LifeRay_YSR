@@ -364,7 +364,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
 				<div class="col-lg-3">
 				<label  for="Speciality Name"><span class="text-danger">*</span> Speciality Name</label>
 				<select class="form-select" id="select-1" name="select-1">
-				    <option value="">Show All</option>
+				    <option data="" value="">Show All</option>
 				  <%
 				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null, pageId1,serverName);
 				      //System.out.print("speciality_List 123"+speciality_List.toString());

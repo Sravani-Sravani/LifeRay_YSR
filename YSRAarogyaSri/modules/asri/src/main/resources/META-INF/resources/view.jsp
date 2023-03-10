@@ -13,8 +13,6 @@ if(pageId==443||pageId==6 || pageId==19){ %>
 <%@ include file="/asri.jsp" %>
 <%}else if(pageId==99){ %>
 <%@ include file="/asrischeme.jsp" %>
-<%}else if(pageId==294){ %>
-<%@ include file="/bids_agreements.jsp" %>
 <%}else if(pageId==250){ %>
 <%@ include file="/govtorders.jsp" %>
 <%}else if(pageId==296){ %>
@@ -45,6 +43,8 @@ if(pageId==443||pageId==6 || pageId==19){ %>
 <%@ include file="/amieligible.jsp" %>
 <%}else if(pageId==429){ %>
 <%@ include file="/fix_incl.jsp" %>
+<%}else if(pageId==415){ %>
+<%@ include file="/patient_processflow.jsp" %>
 <%}else{ %>
 PageIsNotFound in asri
 <%}
@@ -57,4 +57,7 @@ PageIsNotFound in asri
 <%@ include file="/exploredata.jsp" %>
 <%}else if(pageId==248){ %>
 <%@ include file="/publicity.jsp" %>
+<%} --%>
+<%-- else if(pageId==294){ %>
+<%@ include file="/bids_agreements.jsp" %>
 <%} --%>
