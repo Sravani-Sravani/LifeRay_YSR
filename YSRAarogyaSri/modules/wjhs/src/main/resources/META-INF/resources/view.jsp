@@ -40,8 +40,6 @@ if(pageId==151 || pageId==25){ %>
 <%@ include file="/documents_wjhs.jsp" %>
 <%}else if(pageId==417){ %>
 <%@ include file="/followup_packages.jsp" %>
-<%}else if(pageId==415){ %>
-<%@ include file="/patient_processflow.jsp" %>
 <%}else if(pageId==423){ %>
 <%@ include file="/procedure_covered.jsp" %>
 <%}else if(pageId==419){ %>
