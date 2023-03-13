@@ -12,6 +12,7 @@
 <li>COCHLEAR IMPLANT SURGERY</li>
 <li>CRITICAL CARE</li>
 <li>DERMATOLOGY</li>
+<li>DENTAL SURGERY</li>
 <li>EDOCRINOLOGY</li>
 <li>ENT SURGERY</li>
 <li>EPIDEMIC DISEASE</li>
@@ -22,8 +23,6 @@
 <li>GYNAECOLOGY AND OBSTETRICS SURGERY</li>
 <li>INFECTIOUS DISEASE</li>
 <li>MEDICAL ONCOLOGY</li>
-<li>DENTAL SURGERY</li>
-
 </ul>
 </div>
 <div class="col-lg-6">
