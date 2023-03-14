@@ -638,7 +638,8 @@ function stoploader(){
 
  </form>
   </div>
-        <div id="recordList" class="table-responsive-md">
+        <div id="recordList" class="fixed_header_table">
+        
   <!--       <table id="datatables" class="table table-bordered table-striped table-hover display nowrap" cellspacing="0" style=""width:100%">
         <thead class='table-dark'> 
         <th>Name of Hospital</th>
