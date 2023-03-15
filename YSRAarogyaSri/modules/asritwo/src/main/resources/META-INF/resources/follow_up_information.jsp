@@ -807,7 +807,7 @@
 					<tr> 
 					 <td>94</td> 
 					 <td>MF4.2.3.3</td> 
-					 <td><td>Status Epilepticus</td> 
+					 <td>Status Epilepticus</td> 
 					 <td>6500</td> 
 					 <td>2000</td> 
 					 <td>1500</td> 
@@ -815,7 +815,7 @@
 					<tr> 
 					 <td>95</td> 
 					 <td>MF4.2.3.5</td> 
-					 <td><td>Intra cranial bleed</td> 
+					 <td>Intra cranial bleed</td> 
 					 <td>6500</td> 
 					 <td>2000</td> 
 					 <td>1500</td> 
@@ -855,7 +855,7 @@
 					<tr> 
 					 <td>100</td> 
 					 <td>MF4.3.5.1</td> 
-					 <td><td>Pyogenic meningitis</td> 
+					 <td>Pyogenic meningitis</td> 
 					 <td>5000</td> 
 					 <td>2000</td> 
 					 <td>1000</td> 
@@ -863,7 +863,7 @@
 					<tr> 
 					 <td>101</td> 
 					 <td>MF4.3.5.2</td> 
-					 <td><td>Neuro tuberculosis</td> 
+					 <td>Neuro tuberculosis</td> 
 					 <td>5000</td> 
 					 <td>2000</td> 
 					 <td>1000</td> 
@@ -901,8 +901,8 @@
 					 <td> - </td> 
 					</tr> <tr>
 								<td>106</p></td>
-								<td ><p>MF4.7.6</p></td>
-								<td ><td>Medical Management of Diphtheria in Paediatric patient</p></td>
+								<td><p>MF4.7.6</p></td>
+								<td>Medical Management of Diphtheria in Paediatric patient</p></td>
 								<td></p>-</td>
 								<td></p>-</td>
 								<td></p>-</td>
@@ -958,7 +958,7 @@
 					<tr> 
 					 <td>113</td> 
 					 <td>MF5.4</td> 
-					 <td><td>Complex Arrhythmias</td> 
+					 <td>Complex Arrhythmias</td> 
 					 <td>10000</td> 
 					 <td>4000</td> 
 					 <td>2000</td> 
@@ -966,7 +966,7 @@
 					<tr> 
 					 <td>114</td> 
 					 <td>MF6.2</td> 
-					 <td><td>Nephrotic Syndrome</td> 
+					 <td>Nephrotic Syndrome</td> 
 					 <td>5000</td> 
 					 <td>2000</td> 
 					 <td>1000</td> 
@@ -990,7 +990,7 @@
 					<tr> 
 					 <td>117</td> 
 					 <td>MF7.2</td> 
-					 <td><td>CIDP</td> 
+					 <td>CIDP</td> 
 					 <td>5000</td> 
 					 <td>2000</td> 
 					 <td>1000</td> 
@@ -1006,7 +1006,7 @@
 					<tr> 
 					 <td>119</td> 
 					 <td>MF7.4</td> 
-					 <td><td>Ischemic Strokes</td> 
+					 <td>Ischemic Strokes</td> 
 					 <td>5000</td> 
 					 <td>2000</td> 
 					 <td>1000</td> 
@@ -1054,7 +1054,7 @@
 					<tr> 
 					 <td>125</td> 
 					 <td>MF8.5</td> 
-					 <td><td>Pneumoconiosis</td> 
+					 <td>Pneumoconiosis</td> 
 					 <td>10000</td> 
 					 <td>4000</td> 
 					 <td>2000</td> 
@@ -1086,7 +1086,7 @@
 					<tr> 
 					 <td>129</td> 
 					 <td>MF10.2</td> 
-					 <td><td>SCLERODERMA</td> 
+					 <td>SCLERODERMA</td> 
 					 <td>6000</td> 
 					 <td>2400</td> 
 					 <td>1200</td> 
@@ -1110,7 +1110,7 @@
 					<tr> 
 					 <td>132</td> 
 					 <td>MF10.5</td> 
-					 <td><td>VASCULITIS</td> 
+					 <td>VASCULITIS</td> 
 					 <td>6000</td> 
 					 <td>2400</td> 
 					 <td>1200</td> 
@@ -1118,7 +1118,7 @@
 					<tr> 
 					 <td>133</td> 
 					 <td>MF11.2.1</td> 
-					 <td><td>Hypopitutarism</td> 
+					 <td>Hypopitutarism</td> 
 					 <td>8000</td> 
 					 <td>3500</td> 
 					 <td>1500</td> 
@@ -1140,8 +1140,8 @@
 					 <td>1500</td> 
 					</tr> <tr>
 								<td>136</p></td>
-								<td ><p>MF11.2.5</p></td>
-								<td ><td>Hypopiturasim Initial Evaluation And Management With Growth Hormone</p></td>
+								<td><p>MF11.2.5</p></td>
+								<td>Hypopiturasim Initial Evaluation And Management With Growth Hormone</p></td>
 								<td></p>-</td>
 								<td></p>-</td>
 								<td></p>-</td>
@@ -1149,7 +1149,7 @@
 							<tr>
 								<td>137</p></td>
 								<td ><p>MF11.2.6</p></td>
-								<td ><td>Hypopiturasim Maintanance Phase Monthly Package For Growth Hormone</p></td>
+								<td>Hypopiturasim Maintanance Phase Monthly Package For Growth Hormone</p></td>
 								<td></p>-</td>
 								<td></p>-</td>
 								<td></p>-</td>
@@ -1157,7 +1157,7 @@
 					<tr> 
 					 <td>138</td> 
 					 <td>MF12.9</td> 
-					 <td><td>Gastric varices</td> 
+					 <td>Gastric varices</td> 
 					 <td>7000</td> 
 					 <td>2500</td> 
 					 <td>1500</td> 
@@ -1190,427 +1190,7 @@
 				  </table>
 				</div>
 
-				<!-- <h5>FOLLOW UP PACKAGES-MEDICAL :</h5> -->
-				
 
-				  <!-- <div class="table-responsive fixed_header_table"> 
-					<table class="table table-bordered table-hover table-striped"> 
-				   <thead> 
-					<tr> 
-					 <td>S.No</td> 
-					 <td>Code</td> 
-					 <td>SYSTEM</td> 
-					 <td> Package</td> 
-					 <td>First Instalment</td> 
-					 <td> Subsequent 3 Instalments</td> 
-					 <td></td>
-					</tr> 
-				</thead> 
-					<tbody>  -->
-					<!-- <tr> 
-					 <td>1</td> 
-					 <td>MF1.1</td> 
-					 <td>Acute severe asthma with Acute respiratory failure </td> 
-					 <td>10000</td> 
-					 <td>4000</td> 
-					 <td>2000</td> 
-					</tr> 
-					<tr> 
-					 <td>2</td> 
-					 <td>MF1.2</td> 
-					 <td>COPD Respiratory Failure (infective exacerbation) </td> 
-					 <td>10000</td> 
-					 <td>4000</td> 
-					 <td>2000</td> 
-					</tr> 
-					<tr> 
-					 <td>3</td> 
-					 <td>MF4.1.12</td> 
-					 <td>Term baby with persistent pulmonary hypertension Ventilation-HFO Hyperbilirubinemia Clinical sepsis </td> 
-					 <td>6000</td> 
-					 <td>3000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>4</td> 
-					 <td>MF4.1.16</td> 
-					 <td>Term baby with seizures ventilated</td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>5</td> 
-					 <td>MF4.2.1.5</td> 
-					 <td>Acute Severe Asthma (Ventilated) </td> 
-					 <td>4000</td> 
-					 <td>1600</td> 
-					 <td>800</td> 
-					</tr> 
-					<tr> 
-					 <td>6</td> 
-					 <td>MF4.2.2.5</td> 
-					 <td>Infective Endocarditis</td> 
-					 <td>10000</td> 
-					 <td>4000</td> 
-					 <td>2000</td> 
-					</tr> 
-					<tr> 
-					 <td>7</td> 
-					 <td>MF4.2.3.1</td> 
-					 <td>Meningo- encephalitis (Non Ventilated) </td> 
-					 <td>6500</td> 
-					 <td>2000</td> 
-					 <td>1500</td> 
-					</tr> 
-					<tr> 
-					 <td>8</td> 
-					 <td>MF4.2.3.2</td> 
-					 <td>Meningo- encephalitis ( Ventilated) </td> 
-					 <td>6500</td> 
-					 <td>2000</td> 
-					 <td>1500</td> 
-					</tr> 
-					<tr> 
-					 <td>9</td> 
-					 <td>MF4.2.3.3</td> 
-					 <td><td>Status Epilepticus</td> 
-					 <td>6500</td> 
-					 <td>2000</td> 
-					 <td>1500</td> 
-					</tr> 
-					<tr> 
-					 <td>10</td> 
-					 <td>MF4.2.3.5</td> 
-					 <td><td>Intra cranial bleed</td> 
-					 <td>6500</td> 
-					 <td>2000</td> 
-					 <td>1500</td> 
-					</tr> 
-					<tr> 
-					 <td>11</td> 
-					 <td>MF4.3.2.1</td> 
-					 <td>Congenital heart disease with congestive cardiac failure </td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>12</td> 
-					 <td>MF4.3.2.2</td> 
-					 <td>Acquired heart disease with congestive cardiac failure </td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>13</td> 
-					 <td>MF4.3.3.1</td> 
-					 <td>Steroid Resistant Nephritic syndrome Complicated or Resistant </td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>14</td> 
-					 <td>MF4.3.4.3</td> 
-					 <td>Anaemia of unknown cause</td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>15</td> 
-					 <td>MF4.3.5.1</td> 
-					 <td><td>Pyogenic meningitis</td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>16</td> 
-					 <td>MF4.3.5.2</td> 
-					 <td><td>Neuro tuberculosis</td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>17</td> 
-					 <td>MF4.3.5.3</td> 
-					 <td>Neuro tuberculosis with ventilation</td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>18</td> 
-					 <td>MF4.3.6.1</td> 
-					 <td>Convulsive Disorders/Status Epilepticus (Fits)</td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>19</td> 
-					 <td>MF4.3.6.3</td> 
-					 <td>Encephalitis / Encephalopathy</td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>20</td> 
-					 <td>MF5.1.1</td> 
-					 <td>Acute Mi (Conservative Management Without Angiogram) </td> 
-					 <td>10000</td> 
-					 <td>4000</td> 
-					 <td>2000</td> 
-					</tr> 
-					<tr> 
-					 <td>21</td> 
-					 <td>MF5.1.2</td> 
-					 <td>Acute Mi (Conservative Management With Angiogram) </td> 
-					 <td>10000</td> 
-					 <td>4000</td> 
-					 <td>2000</td> 
-					</tr> 
-					<tr> 
-					 <td>22</td> 
-					 <td>MF5.1.3</td> 
-					 <td>Acute Mi With Cardiogenic Shock</td> 
-					 <td>10000</td> 
-					 <td>4000</td> 
-					 <td>2000</td> 
-					</tr> 
-					<tr> 
-					 <td>23</td> 
-					 <td>MF5.1.4</td> 
-					 <td>Acute Mi Requiring Iabp Pump</td> 
-					 <td>10000</td> 
-					 <td>4000</td> 
-					 <td>2000</td> 
-					</tr> 
-					<tr> 
-					 <td>24</td> 
-					 <td>MF5.1.5</td> 
-					 <td>Refractory Cardiac Failure</td> 
-					 <td>10000</td> 
-					 <td>4000</td> 
-					 <td>2000</td> 
-					</tr> 
-					<tr> 
-					 <td>25</td> 
-					 <td>MF5.2</td> 
-					 <td>Infective Endocarditis</td> 
-					 <td>10000</td> 
-					 <td>4000</td> 
-					 <td>2000</td> 
-					</tr> 
-					<tr> 
-					 <td>26</td> 
-					 <td>MF5.4</td> 
-					 <td><td>Complex Arrhythmias</td> 
-					 <td>10000</td> 
-					 <td>4000</td> 
-					 <td>2000</td> 
-					</tr> 
-					<tr> 
-					 <td>27</td> 
-					 <td>MF6.2</td> 
-					 <td><td>Nephrotic Syndrome</td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>28</td> 
-					 <td>MF7.1</td> 
-					 <td>ADEM or Relapse in Multiple sclerosis</td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>29</td> 
-					 <td>MF7.2</td> 
-					 <td><td>CIDP</td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>30</td> 
-					 <td>MF7.3</td> 
-					 <td>Hemorrhagic Stroke/Strokes</td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>31</td> 
-					 <td>MF7.4</td> 
-					 <td><td>Ischemic Strokes</td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>32</td> 
-					 <td>MF7.6</td> 
-					 <td>NEUROINFECTIONS -Fungal Meningitis</td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>33</td> 
-					 <td>MF7.7</td> 
-					 <td>NEUROINFECTIONS -Pyogenic Meningitis</td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>34</td> 
-					 <td>MF7.8</td> 
-					 <td>NEUROINFECTIONS -Viral Meningoencephalitis ( Including Herpes encephalitis) </td> 
-					 <td>5000</td> 
-					 <td>2000</td> 
-					 <td>1000</td> 
-					</tr> 
-					<tr> 
-					 <td>35</td> 
-					 <td>MF7.9</td> 
-					 <td>Neuromuscular (myasthenia gravis)</td> 
-					 <td>4000</td> 
-					 <td>1600</td> 
-					 <td>800</td> 
-					</tr> 
-					<tr> 
-					 <td>36</td> 
-					 <td>MF8.4</td> 
-					 <td>Interstitial Lung diseases</td> 
-					 <td>10000</td> 
-					 <td>4000</td> 
-					 <td>2000</td> 
-					</tr> 
-					<tr> 
-					 <td>37</td> 
-					 <td>MF8.5</td> 
-					 <td><td>Pneumoconiosis</td> 
-					 <td>10000</td> 
-					 <td>4000</td> 
-					 <td>2000</td> 
-					</tr> 
-					<tr> 
-					 <td>38</td> 
-					 <td>MF9.1</td> 
-					 <td>Pemphigus / Pemphigoid</td> 
-					 <td>3500</td> 
-					 <td>1400</td> 
-					 <td>700</td> 
-					</tr> 
-					<tr> 
-					 <td>39</td> 
-					 <td>MF10.1</td> 
-					 <td>SLE (SYSTEMIC LUPUS ERYTHEMATOSIS)</td> 
-					 <td>6000</td> 
-					 <td>2400</td> 
-					 <td>1200</td> 
-					</tr> 
-					<tr> 
-					 <td>40</td> 
-					 <td>MF10.2</td> 
-					 <td><td>SCLERODERMA</td> 
-					 <td>6000</td> 
-					 <td>2400</td> 
-					 <td>1200</td> 
-					</tr> 
-					<tr> 
-					 <td>41</td> 
-					 <td>MF10.3</td> 
-					 <td>MCTD MIXED CONNECTIVE TISSUE DISORDER</td> 
-					 <td>6000</td> 
-					 <td>2400</td> 
-					 <td>1200</td> 
-					</tr> 
-					<tr> 
-					 <td>42</td> 
-					 <td>MF10.4</td> 
-					 <td>MCTD MIXED CONNECTIVE TISSUE DISORDER</td> 
-					 <td>6000</td> 
-					 <td>2400</td> 
-					 <td>1200</td> 
-					</tr> 
-					<tr> 
-					 <td>43</td> 
-					 <td>MF10.5</td> 
-					 <td><td>VASCULITIS</td> 
-					 <td>6000</td> 
-					 <td>2400</td> 
-					 <td>1200</td> 
-					</tr> 
-					<tr> 
-					 <td>44</td> 
-					 <td>MF11.2.1</td> 
-					 <td><td>Hypopitutarism</td> 
-					 <td>8000</td> 
-					 <td>3500</td> 
-					 <td>1500</td> 
-					</tr> 
-					<tr> 
-					 <td>45</td> 
-					 <td>MF11.2.2</td> 
-					 <td>Pituitary - Acromegaly</td> 
-					 <td>6500</td> 
-					 <td>2000</td> 
-					 <td>1500</td> 
-					</tr> 
-					<tr> 
-					 <td>46</td> 
-					 <td>MF11.2.4</td> 
-					 <td>Delayed Puberty Hypogonadism (ex.Turners synd, Kleinfelter synd) </td> 
-					 <td>7000</td> 
-					 <td>2500</td> 
-					 <td>1500</td> 
-					</tr> 
-					<tr> 
-					 <td>47</td> 
-					 <td>MF12.9</td> 
-					 <td><td>Gastric varices</td> 
-					 <td>7000</td> 
-					 <td>2500</td> 
-					 <td>1500</td> 
-					</tr> 
-					<tr> 
-					 <td>48</td> 
-					 <td>MF12.13</td> 
-					 <td>Chronic pancreatitis with severe pain</td> 
-					 <td>7000</td> 
-					 <td>2500</td> 
-					 <td>1500</td> 
-					</tr> 
-					<tr> 
-					 <td>49</td> 
-					 <td>MF12.15</td> 
-					 <td>Cirrhosis with Hepatic Encephalopathy</td> 
-					 <td>7000</td> 
-					 <td>2500</td> 
-					 <td>1500</td> 
-					</tr> 
-					<tr> 
-					 <td>50</td> 
-					 <td>MF12.16</td> 
-					 <td>Cirrhosis with hepato renal syndrome</td> 
-					 <td>7000</td> 
-					 <td>2500</td> 
-					 <td>1500</td> 
-					</tr> 
-				   </tbody> 
-				  </table> 
-</div> -->
-				<!--END of table-responsive--> 
 				 
 
 			 

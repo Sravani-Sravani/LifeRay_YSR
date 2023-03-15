@@ -31,5 +31,3 @@ if(pageId==6){ %>
 PageIsNotFound in asrithree
 <%}
 %>
-
-follow_procedures
