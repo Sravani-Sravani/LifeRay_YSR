@@ -5,13 +5,13 @@
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
 					
-					<div class="collapse <% if(pageId==459 || pageId==469 || pageId==473 || pageId==475 || pageId==477|| pageId== 479|| pageId== 481 || pageId==21 || pageId==75 || pageId==605|| pageId==511){ %> show <% } %>" id="citizen-collapse"  aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample"> 
+					<div class="collapse <% if(pageId==459 || pageId==71|| pageId==469 || pageId==473 || pageId==475 || pageId==477|| pageId== 479|| pageId== 481 || pageId==21 || pageId==75 || pageId==605|| pageId==511){ %> show <% } %>" id="citizen-collapse"  aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample"> 
 						<div class="accordion-body"> 
 						<ul class="list-unstyled ps-0">
 
 <li class="mb-1">
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myarg-collapse" aria-expanded="false"> Documents and Reports</button>
-								<div class="collapse <% if(pageId==459 || pageId==469 || pageId==473 || pageId==475 || pageId==477|| pageId== 479|| pageId== 481 ){ %> show <% } %>" id="myarg-collapse" data-bs-parent="#citizen-collapse">
+								<div class="collapse <% if(pageId==459 || pageId==469 || pageId==71|| pageId==473 || pageId==475 || pageId==477|| pageId== 479|| pageId== 481 ){ %> show <% } %>" id="myarg-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 								<!--  	<li><a href="/web/guest/ar_bids_and_agreements">Bids and Agreements</a></li>	
                                     <li><a href="/web/guest/ar_guidelines_manuals_and_sops">Guidlines, Manuals and SOPs</a></li>
@@ -82,7 +82,7 @@
 						<i class="fa-sharp fa-solid fa-hospital"></i> &nbsp;HOSPITALS &nbsp;&nbsp;&nbsp;
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
-					<div class="collapse <% if(pageId==549 || pageId==71 || pageId==525 || pageId==200 ){ %> show <% } %>"  id="hospital-collapse"  aria-labelledby="flush-heading2" > 
+					<div class="collapse <% if(pageId==549  || pageId==525 || pageId==200 ){ %> show <% } %>"  id="hospital-collapse"  aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushExample"> 
 						<div class="accordion-body"> 
 						<ul class="list-unstyled green_sidebar ps-0">
 					  <li class="mb-1">
@@ -121,7 +121,7 @@
 
 					 
 
-					  <li class="mb-1">
+					<!--   <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usman-collapse1" aria-expanded="false">
 							Others
 						</button>
@@ -133,7 +133,9 @@
 							
 						  </ul>
 						</div>
-					  </li>
+						
+						
+					  </li> -->
 					</ul> 
 					</div>
 					</div>
