@@ -68,10 +68,10 @@ crossorigin="anonymous"></script>
 	
 <#if w3c_language_id=="te-IN">
 		<a href="/te/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=en_US" class="language-entry-long-text" lang="en-US">English</a>
-		 <span class="language-entry-long-text" lang="te-IN">తెలుగు</span>
+		 <span class="language-entry-long-text" lang="te-IN">à°¤à±†à°²à±�à°—à±�</span>
 <#else>
 		 <span class="language-entry-long-text" lang="en-US">English</span>
-		 <a href="/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=te_IN" class="language-entry-long-text" lang="te-IN">తెలుగు</a>
+		 <a href="/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=te_IN" class="language-entry-long-text" lang="te-IN">à°¤à±†à°²à±�à°—à±�</a>
 </#if>
 				 <a href="/web/guest/screen_reader_11"><i class="fa-solid fa-mobile-screen"></i> ${screen_reader} </a> 
 				 <a href="/web/guest/glossary"><i class="fa-solid fa-book-open-cover"></i> ${glossary} </a>   
@@ -309,6 +309,12 @@ ${pin_code}:522503 <br />
                   >${hyperlink_policy}
                 </a>
               </li>
+              <li>
+                <a href="https://www.pmjay.gov.in/" target="_blank"
+                  >${Ayushman Bharat}
+                </a>
+              </li>
+             
               <li>
                 <a href="/web/guest/terms_conditions_use" target="_blank"
                   >${terms_conditions}
