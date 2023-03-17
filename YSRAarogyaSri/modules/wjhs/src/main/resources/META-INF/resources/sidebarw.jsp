@@ -1,9 +1,9 @@
 					<div class="d-flex flex-column flex-shrink-0 sidebar_menu" id="accordionFlushExample">
 						<button class="accordion-button btn_icon show" type="button" data-bs-toggle="collapse" data-bs-target="#citizen-collapse" aria-expanded="true" aria-controls="citizen-collapse">	
-						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;For Citizens
+						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;For Journalists
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
-					<div class="collapse show" id="citizen-collapse" aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample"> 
+					<div class="collapse <% if(pageId==25 ||pageId==409 || pageId==411 || pageId==286 || pageId==419 || pageId==423|| pageId==607 ){ %> show <% } %>" id="citizen-collapse" aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample"> 
 					<div class="accordion-body">
 						<ul class="list-unstyled ps-0">
 

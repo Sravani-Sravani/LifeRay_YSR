@@ -132,7 +132,7 @@
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#hospital-collapse1" aria-expanded="false">
 							Empanelment
 						</button>
-						<div class="collapse <% if(pageId==559 || pageId==427 || pageId==431 ||pageId==631){ %> show <% } %>" id="hospital-collapse1" data-bs-parent="#hospital-collapse">
+						<div class="collapse <% if(pageId==559 || pageId==427 || pageId==431 ||pageId==631 ||pageId==640){ %> show <% } %>" id="hospital-collapse1" data-bs-parent="#hospital-collapse">
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 						  <li><a href="https://www.ysraarogyasri.ap.gov.in/ASRI/empanelment/Eligibility.jsp?stateFlag=ap" target="_blank">Online Empanelment</a></li> 
 							

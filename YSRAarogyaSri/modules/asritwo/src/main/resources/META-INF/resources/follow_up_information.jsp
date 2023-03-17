@@ -22,9 +22,11 @@
 					</tr> 
 				</thead> 
 					<tbody> 
+
 <!-- 
 					<tr> 
 					 <td> 3 Installments</td> 
+					</tr> 
 					</tr>  -->
 					<tr> 
 					 <td> 1 </td> 
@@ -807,6 +809,7 @@
 					<tr> 
 					 <td>94</td> 
 					 <td>MF4.2.3.3</td> 
+					 <td><td>Status Epilepticus</td> 
 					 <td>Status Epilepticus</td> 
 					 <td>6500</td> 
 					 <td>2000</td> 
@@ -815,6 +818,7 @@
 					<tr> 
 					 <td>95</td> 
 					 <td>MF4.2.3.5</td> 
+					 <td><td>Intra cranial bleed</td> 
 					 <td>Intra cranial bleed</td> 
 					 <td>6500</td> 
 					 <td>2000</td> 
@@ -855,6 +859,7 @@
 					<tr> 
 					 <td>100</td> 
 					 <td>MF4.3.5.1</td> 
+					 <td><td>Pyogenic meningitis</td> 
 					 <td>Pyogenic meningitis</td> 
 					 <td>5000</td> 
 					 <td>2000</td> 
@@ -863,6 +868,7 @@
 					<tr> 
 					 <td>101</td> 
 					 <td>MF4.3.5.2</td> 
+					 <td><td>Neuro tuberculosis</td> 
 					 <td>Neuro tuberculosis</td> 
 					 <td>5000</td> 
 					 <td>2000</td> 
@@ -900,7 +906,13 @@
 					 <td> - </td> 
 					 <td> - </td> 
 					</tr> <tr>
+								<td>106</p></td>
 								<td>106</td>
+								<td ><p>MF4.7.6</p></td>
+								<td ><td>Medical Management of Diphtheria in Paediatric patient</p></td>
+								<td></p>-</td>
+								<td></p>-</td>
+								<td></p>-</td>
 								<td ><p>MF4.7.6</p></td>
 								<td >Medical Management of Diphtheria in Paediatric patient</p></td>
 								<td>-</td>
@@ -958,6 +970,7 @@
 					<tr> 
 					 <td>113</td> 
 					 <td>MF5.4</td> 
+					 <td><td>Complex Arrhythmias</td> 
 					 <td>omplex Arrhythmias</td> 
 					 <td>10000</td> 
 					 <td>4000</td> 
@@ -966,6 +979,7 @@
 					<tr> 
 					 <td>114</td> 
 					 <td>MF6.2</td> 
+					 <td><td>Nephrotic Syndrome</td> 
 					 <td>Nephrotic Syndrome</td> 
 					 <td>5000</td> 
 					 <td>2000</td> 
@@ -990,6 +1004,7 @@
 					<tr> 
 					 <td>117</td> 
 					 <td>MF7.2</td> 
+					 <td><td>CIDP</td> 
 					 <td>CIDP</td> 
 					 <td>5000</td> 
 					 <td>2000</td> 
@@ -1006,6 +1021,7 @@
 					<tr> 
 					 <td>119</td> 
 					 <td>MF7.4</td> 
+					 <td><td>Ischemic Strokes</td> 
 					 <td>Ischemic Strokes</td> 
 					 <td>5000</td> 
 					 <td>2000</td> 
@@ -1054,6 +1070,7 @@
 					<tr> 
 					 <td>125</td> 
 					 <td>MF8.5</td> 
+					 <td><td>Pneumoconiosis</td> 
 					 <td>Pneumoconiosis</td> 
 					 <td>10000</td> 
 					 <td>4000</td> 
@@ -1086,6 +1103,7 @@
 					<tr> 
 					 <td>129</td> 
 					 <td>MF10.2</td> 
+					 <td><td>SCLERODERMA</td> 
 					 <td>SCLERODERMA</td> 
 					 <td>6000</td> 
 					 <td>2400</td> 
@@ -1110,6 +1128,7 @@
 					<tr> 
 					 <td>132</td> 
 					 <td>MF10.5</td> 
+					 <td><td>VASCULITIS</td> 
 					 <td>VASCULITIS</td> 
 					 <td>6000</td> 
 					 <td>2400</td> 
@@ -1118,6 +1137,7 @@
 					<tr> 
 					 <td>133</td> 
 					 <td>MF11.2.1</td> 
+					 <td><td>Hypopitutarism</td> 
 					 <td>Hypopitutarism</td> 
 					 <td>8000</td> 
 					 <td>3500</td> 
@@ -1139,6 +1159,12 @@
 					 <td>2500</td> 
 					 <td>1500</td> 
 					</tr> <tr>
+								<td>136</p></td>
+								<td ><p>MF11.2.5</p></td>
+								<td ><td>Hypopiturasim Initial Evaluation And Management With Growth Hormone</p></td>
+								<td></p>-</td>
+								<td></p>-</td>
+								<td></p>-</td>
 								<td>136</td>
 								<td >MF11.2.5</td>
 								<td >Hypopiturasim Initial Evaluation And Management With Growth Hormone</p></td>
@@ -1147,8 +1173,13 @@
 								<td>-</td>
 							</tr> 
 							<tr>
+								<td>137</p></td>
 								<td>137</td>
 								<td ><p>MF11.2.6</p></td>
+								<td ><td>Hypopiturasim Maintanance Phase Monthly Package For Growth Hormone</p></td>
+								<td></p>-</td>
+								<td></p>-</td>
+								<td></p>-</td>
 								<td >Hypopiturasim Maintanance Phase Monthly Package For Growth Hormone</p></td>
 								<td>-</td>
 								<td>-</td>
@@ -1157,6 +1188,7 @@
 					<tr> 
 					 <td>138</td> 
 					 <td>MF12.9</td> 
+					 <td><td>Gastric varices</td> 
 					 <td>Gastric varices</td> 
 					 <td>7000</td> 
 					 <td>2500</td> 
