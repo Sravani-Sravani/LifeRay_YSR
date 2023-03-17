@@ -13,16 +13,12 @@ if(pageId==443||pageId==6 || pageId==19){ %>
 <%@ include file="/asri.jsp" %>
 <%}else if(pageId==99){ %>
 <%@ include file="/asrischeme.jsp" %>
-<%}else if(pageId==250){ %>
-<%@ include file="/govtorders.jsp" %>
 <%}else if(pageId==296){ %>
 <%@ include file="/guidelines.jsp" %>
 <%}else if(pageId==393){ %>
 <%@ include file="/notifications.jsp" %>
 <%}else if(pageId==242){ %>
 <%@ include file="/processflowdocuments.jsp" %>
-<%}else if(pageId==246){ %>
-<%@ include file="/reportsworkingpapers.jsp" %>
 <%}else if(pageId==93){ %>
 <%@ include file="/tenders.jsp" %>
 <%}else if(pageId==153){ %>
@@ -33,8 +29,6 @@ if(pageId==443||pageId==6 || pageId==19){ %>
 <%@ include file="/circulars.jsp" %>
 <%}else if(pageId==425){ %>
 <%@ include file="/empanlementguidelines.jsp" %>
-<%}else if(pageId==427){ %>
-<%@ include file="/changerequest.jsp" %>
 <%}else if(pageId==613 || pageId==591){ %>
 <%@ include file="/asri_treats.jsp" %>
 <%}else if(pageId==615 ||pageId==593){ %>
@@ -57,7 +51,13 @@ PageIsNotFound in asri
 <%@ include file="/exploredata.jsp" %>
 <%}else if(pageId==248){ %>
 <%@ include file="/publicity.jsp" %>
-<%} --%>
+<%} else if(pageId==427){ %>
+<%@ include file="/changerequest.jsp" %>
+<%}
+else if(pageId==246){ %>
+<%@ include file="/reportsworkingpapers.jsp" %>
+<%}
+--%>
 <%-- else if(pageId==294){ %>
 <%@ include file="/bids_agreements.jsp" %>
 <%} --%>

@@ -1,10 +1,11 @@
-					<div class="d-flex flex-column flex-shrink-0 sidebar_menu">
+					<div class="d-flex flex-column flex-shrink-0 sidebar_menu" id="accordionFlushExample">
 						
 <button class="accordion-button btn_icon show" type="button" data-bs-toggle="collapse" data-bs-target="#citizen-collapse" aria-expanded="true" aria-controls="citizen-collapse">	
 <i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;Citizens	<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 </button>
 
-					<div class="collapse show" id="citizen-collapse"> 
+					<div id="citizen-collapse" class="collapse <% if(pageId==459 || pageId==469 || pageId==473 || pageId==475 || pageId==477|| pageId== 479|| pageId== 481 || pageId==21 || pageId==75 || pageId==605|| pageId==511){ %> show <% } %>" aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample">
+					<div class="accordion-body"> 
 						<ul class="list-unstyled ps-0">
 
 <li class="mb-1">
@@ -72,12 +73,14 @@
 							</li>
                             
                             
-					</ul> 
+					</ul>
+					</div> 
 					</div>
 						<button class="accordion-button collapsed btn_icon1" type="button" data-bs-toggle="collapse" data-bs-target="#hospital-collapse" aria-expanded="false" aria-controls="hospital-collapse">
 						<i class="fa-sharp fa-solid fa-hospital"></i> &nbsp;Hospitals		<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
-					<div class="collapse <% if(pageId==549 || pageId==71 || pageId==525 || pageId==200 ){ %> show <% } %>" id="hospital-collapse"> 
+					<div  id="hospital-collapse" class="collapse <% if(pageId==549 || pageId==71 || pageId==525 || pageId==200 ){ %> show <% } %>"  aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushExample"> 
+						<div class="accordion-body"> 
 						<ul class="list-unstyled green_sidebar ps-0">
 					  <li class="mb-1">
 						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#hospital-collapse1" aria-expanded="false">
@@ -128,8 +131,7 @@
 						  </ul>
 						</div>
 					  </li>
-
-
 					</ul> 
+					</div>
 					</div>
 				  </div>

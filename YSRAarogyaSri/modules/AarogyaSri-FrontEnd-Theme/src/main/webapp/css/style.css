@@ -744,3 +744,13 @@ height: 40px;
 background: #fff;
 text-align: center;
 }
+
+.btn-aasara{
+    position: relative;
+    top: -100px;
+    float: right;
+    right: 30px;
+    z-index: 9999999;
+    background: #7BBF4B;
+    color: #fff;
+    }
