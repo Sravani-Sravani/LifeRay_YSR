@@ -85,9 +85,13 @@
 		    List<KeyPeople> resultList=null;
 		    int size=0;
 		    List<KeyPeople> kpList =null;
-		    size = KeyPeopleLocalServiceUtil.getKeyPeoplesCount();
-		    kpList =KeyPeopleLocalServiceUtil.getKeyPeoples(0, size) ;
-			 
+		    try{
+		    	size = KeyPeopleLocalServiceUtil.getKeyPeoplesCount();
+		    		kpList =KeyPeopleLocalServiceUtil.getKeyPeoples(0, size) ;
+		    }
+		    catch(Exception e){
+		    	
+		    }
 		 %>
 	   <div class = "paginationButton"> 		
 	 <liferay-ui:search-container deltaConfigurable="true" delta="20" total="<%=size %>" emptyResultsMessage="No records found" iteratorURL="<%= iteratorNewURL %>" >			 
@@ -98,11 +102,10 @@
 	}
 	%>
 	
-	
-	<% if(pageId1 == 624){ %>
+	 
 	  <script src="/o/com.keyPeople/js/jquery-1.12.4.js"></script>
   <script src="/o/com.keyPeople/js/jquery-ui.js"></script>
-  <%}  %>
+   
 
 	 <liferay-ui:search-container-results results="<%=resultList %>"  /> 
 	 <liferay-ui:search-container-row cssClass="ui-state-default" className="com.keyPeopleService.model.KeyPeople" keyProperty="keyPeopleId" modelVar="keyPeople">

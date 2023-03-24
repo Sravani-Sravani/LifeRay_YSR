@@ -58,9 +58,13 @@
 		    List <Designation> resultList=null;
 		    int size=0;
 		    List<Designation> desigList=null;
-		    size = DesignationLocalServiceUtil.getDesignationsCount();
-		    desigList  = DesignationLocalServiceUtil.getDesignations(0, size);
-		    
+		    try{
+		    	size = DesignationLocalServiceUtil.getDesignationsCount();
+		    	desigList  = DesignationLocalServiceUtil.getDesignations(0, size);
+		    }
+		    catch(Exception e){
+		    	
+		    }
 		   
 			 
 		 %>

@@ -18,11 +18,6 @@ width:80%;
 PortletURL iteratorNewURL = renderResponse.createRenderURL(); 
 iteratorNewURL.setParameter("mvcPath", "/addwing.jsp");
 
-
-
-
-
-
 /* catch(Exception e){
 	e.printStackTrace();
 } */
@@ -31,11 +26,12 @@ iteratorNewURL.setParameter("mvcPath", "/addwing.jsp");
     String status ="";
     boolean istrue = false;
     Wing wing = null;
-	try{
-		long wid = ParamUtil.getLong(request, "wid");
-		System.out.println("idsssss is"+wid);
+	long wid = ParamUtil.getLong(request, "wid");
+	System.out.println("idsssss is"+wid);
 
-		System.out.println("isgfgg");
+	System.out.println("isgfgg");
+
+    try{
 
 
     if(wid!=0){
@@ -44,9 +40,7 @@ iteratorNewURL.setParameter("mvcPath", "/addwing.jsp");
     		 if(wing!=null){
     			 wname = wing.getWname();
     			 status = wing.getStatus();
-    			
-    			 
-    			
+    			  
     		 }
     	}
 	}

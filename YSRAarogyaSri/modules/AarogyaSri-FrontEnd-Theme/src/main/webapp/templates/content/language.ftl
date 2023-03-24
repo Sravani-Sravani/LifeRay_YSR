@@ -61,5 +61,5 @@ visitors="Visitor Count "
 aasara="Aarogya Aasara"
 treatments="Treatments Covered"
 netwrk="Network Hospitals"
-Ayushman Bharat="Ayushman Bharat"
+ayushmanBharat="Ayushman Bharat"
 />

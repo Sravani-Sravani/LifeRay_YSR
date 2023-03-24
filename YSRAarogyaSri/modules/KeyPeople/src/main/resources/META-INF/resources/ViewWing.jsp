@@ -56,9 +56,13 @@
 		    List<Wing> resultList=null;
 		    int size=0;
 		    List<Wing> wingList=null;
-		    size = WingLocalServiceUtil.getWingsCount();
-		    wingList =WingLocalServiceUtil.getWings(0, size);
-			 
+		    try{
+		    	size = WingLocalServiceUtil.getWingsCount();
+		    	wingList =WingLocalServiceUtil.getWings(0, size);
+		    }
+		    catch(Exception e){
+		    	
+		    }
 		 %>
 	     		
 	 <liferay-ui:search-container deltaConfigurable="true" delta="20" total="<%=size %>" emptyResultsMessage="No records found" iteratorURL="<%= iteratorNewURL %>" >

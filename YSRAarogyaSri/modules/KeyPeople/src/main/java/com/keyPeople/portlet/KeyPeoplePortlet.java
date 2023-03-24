@@ -269,6 +269,9 @@ public class KeyPeoplePortlet extends MVCPortlet {
 		String status = ParamUtil.getString(actionRequest, "status");
 		long wid = ParamUtil.getLong(actionRequest, "wid");
 		//String status = ParamUtil.getString(actionRequest, "status");
+		System.out.println("name>>>"+name);
+		System.out.println("status>>>"+status);
+		System.out.println("wid>>>"+wid);
 		boolean isNew = false;
 		Wing wing = null;
 		if(wid==0)
@@ -276,23 +279,35 @@ public class KeyPeoplePortlet extends MVCPortlet {
 			isNew = true;
 			wid = CounterLocalServiceUtil.increment(Wing.class.getName());
 			wing = new WingImpl();
-			
+			System.out.println("wid>>>"+wid);
+			wing.setWid(wid);
 			
 		}
 		else {
+			try {
 			wing = WingLocalServiceUtil.fetchWing(wid);
+			}
+			catch(Exception e) {
+				
+			}
 		}
 		wing.setStatus(status);
 		wing.setWname(name);
-		
-		if(isNew)
-		{
-			WingLocalServiceUtil.addWing(wing);
+		try {
+			System.out.println("isNew>>>"+isNew);
+			if(isNew)
+			{
+				System.out.println("Step-1>");
+				WingLocalServiceUtil.addWing(wing);
+				System.out.println("Step-2>>>");
+			}
+			else {
+				WingLocalServiceUtil.updateWing(wing);
+			}
 		}
-		else {
-			WingLocalServiceUtil.updateWing(wing);
+		catch (Exception e) {
+			e.getMessage();
 		}
-		
 		System.out.println("Wing Added successfully");
 		
 	} 
