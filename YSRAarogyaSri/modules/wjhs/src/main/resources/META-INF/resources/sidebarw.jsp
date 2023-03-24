@@ -104,6 +104,7 @@
 					  <li class="mb-1">
 						<a href="/web/guest/signin" ><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patient-collapse1" aria-expanded="false">
 							Hospital Login
+
 						</button></a>
 						
 					  </li>
@@ -116,11 +117,11 @@
 							<li><a href="/web/guest/followup_packages">Follow Up Packages </a></li> 
 							<!-- <li><a href="/web/guest/steps_for_healthCard">Steps for Health Card </a></li>  -->
 							<li><a href="/web/guest/user_manual_for_downloading_healthCard">User Manual for Downloading Health Card </a></li> 
-							<li><a href="/web/guest/wjhs_notification_tender">Notifications </a></li> 
+							<li><a href="/web/guest/wjhs_notification_tender">Notifications </a></li>
 							<!-- <li><a href="/web/guest/wjhs_notification_tender">Tenders </a></li>  -->
-							<!-- <li><a href="/web/guest/patient_processflow2">Patient Process Flow </a></li>  -->						<!-- <li><a href="/web/guest/steps_for_healthCard">Steps for Health Card </a></li> -->
+							<!-- <li><a href="/web/guest/patient_processflow2">Patient Process Flow </a></li>  -->						
+							<!-- <li><a href="/web/guest/steps_for_healthCard">Steps for Health Card </a></li> -->
 							<li><a href="/web/guest/user_manual_for_downloading_healthCard">User Manual for Downloading Health Card </a></li> 
-							<li><a href="/web/guest/wjhs_notification_tender">Notifications </a></li> 
 						<!-- <li><a href="/web/guest/wjhs_notification_tender">Tenders </a></li> 
 							<li><a href="/web/guest/patient_processflow2">Patient Process Flow </a></li>   -->
 
