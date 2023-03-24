@@ -11,6 +11,6 @@
 <h3 class="bordertitle text-dark">Know Your Aasara Status </h3>
 
 	<!-- <p><a class="btn download_btn" href="/documents/d/guest/memorandum"> Download PDF</a></p> -->
-    <iframe src="https://uat.ysraarogyasri.ap.gov.in/AASARA/" width="100%" height="400px"></iframe>
+    <iframe src="https://api-app.ysraarogyasri.ap.gov.in/AASARA/" width="100%" height="400px"></iframe>
     
 <%@ include file="/lasta.jsp" %>

@@ -15,7 +15,7 @@
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									 <li><a href="/web/guest/am-i-eligible-ehs">Am I Eligible</a></li>
 									
-									<li><a href="/web/guest/pensioners_login">Employee Object Pensioner Login Instructions</a></li>
+									<li><a href="/web/guest/pensioners_login">Employee Pensioner Login Instructions</a></li>
 									 <li><a href="/web/guest/pensioners_healthcardsteps">Steps for Health Card</a></li>
 									<li><a href="https://www.ehs.ap.gov.in/EHSAP/requestingInformation.do?actionFlag=homePageSearch&theme=darkgreen">Enrollment Status</a></li>
 									<li><a href="https://www.ehs.ap.gov.in/EHSAP/hcStatusAction.do?actionFlag=onload&theme=darkgreen">Health Card Status</a></li>
@@ -151,19 +151,10 @@
          <li><a href="/web/guest/hospital_nwh">NWH Obligations</a></li>
             <li><a href="/web/guest/hospital_preauthorization">Pre-Authorization</a></li>
             <li><a href="/web/guest/hospital_claims1">Claims</a></li>
-<<<<<<< HEAD
-            
-             <li><a href="/web/guest/hospital_empanelmentguidelines">Empanelment Guidelines </a></li> 
-            <li><a href="/web/guest/hospital_packageprice">Package Prices</a></li> 
-            <li><a href="/web/guest/hospital_packagefollowup">Packages for Follow Up</a></li>
-            <li><a href="/web/guest/hospital_chronicpatient1">Packages for Chronic Out Patients</a></li> 
-             
-=======
             <!-- <li><a href="/web/guest/hospital_empanelmentguidelines">Empanelment Guidelines </a></li> -->
             <li><a href="/web/guest/hospital_packageprice">Package Prices</a></li> 
             <li><a href="/web/guest/hospital_packagefollowup">Packages for Follow Up</a></li> 
             <li><a href="/web/guest/hospital_chronicpatient1">Packages for Chronic Out Patients</a></li> 
->>>>>>> b42c5bcb74487d825e4a792456dc6869ad303053
             <li><a href="/web/guest/hospital_empanelmentappdoc">Empanelment Application Documents</a></li> 
            <!--  <li><a href="/web/guest/hospital_empanelmentappdoc">Documents for Empanelment of Government Hospitals in Dr.YSR Aarogyasri </a></li> 
             <li><a href="/web/guest/hospital_specialisation">Increased Dr.YSR Aarogyasri Health Care Trust Empanelment Application fee &amp; Specialisation inclusion Details</a></li>	
@@ -191,7 +182,6 @@
 						</button></a>
 						
 					  </li>
-					  
 
 			
 

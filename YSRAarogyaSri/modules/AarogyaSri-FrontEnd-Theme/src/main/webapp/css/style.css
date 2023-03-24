@@ -51,7 +51,7 @@ h2.subheading{ text-align: left; margin-bottom: 0px; padding: 20px 0 0; }
   position: sticky;
   top: 0;
   z-index: 999;
-  background-color: red !important; 
+ 
   }
 
 /******************************* Basic Section Style*******************************/
@@ -60,6 +60,7 @@ h2.subheading{ text-align: left; margin-bottom: 0px; padding: 20px 0 0; }
 .inner_twocol_layout{padding-top:0;}
 
 /******************************* Button Style*******************************/	
+
 .ysri_section .btn, .archive_btn .btn, .rightsidebar_content .btn{ 	background: #2169b2; background: -moz-linear-gradient(180deg, #3a94ee 0%, #2169b2 100%); background: -webkit-linear-gradient(180deg, #3a94ee 0%, #2169b2 100%);	background: linear-gradient(180deg, #3a94ee 0%, #2169b2 100%); border: 0; color: #fff; border-radius: 5px; }
 .ysri_section .btn:hover, .archive_btn .btn:hover, .rightsidebar_content .btn:hover{  border: 0; color: #fff; background: #3a94ee; 	background: -moz-linear-gradient(180deg, #2169b2 0%, #3a94ee 100%); background: -webkit-linear-gradient(180deg, #2169b2 0%, #3a94ee 100%);	background: linear-gradient(180deg, #2169b2 0%, #3a94ee 100%);}
 .button_blueshade {	background: rgb(33,105,178); background: linear-gradient(180deg, rgba(33,105,178,1) 0%, rgba(58,148,238,1) 100%); border-radius: 8px; color: #FFFFFF;  font-size: 17px;  font-weight: 500;  padding: 20PX !important;  text-align: center;  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px; transition: all .5s; display: inline-block; text-align: center; text-decoration: none;}
@@ -175,10 +176,14 @@ to {
 
 
 /******************************* Main Header *******************************/
+.call{
+	font-size:16px;
+
+}
 header.main_ysriHeader .container-fluid{ max-width: 100%;}
 header.main_ysriHeader{background: #FFFFFF; box-shadow: 0 8px 6px -6px rgba(0,0,0,.2); border-bottom: solid 1px #eee; }
 .header_topbar{ background: #003D86 ; padding : 4px 0; text-align: right;  color: #fff; font-weight: 400;  font-size: 11px; }
-.header_topbar .right_topbar span{  line-height: 0;font-family: bebas neue; color: #e5f3ff; font-size: 20px;}
+.header_topbar .right_topbar span{  line-height: 1;font-family: bebas neue; color: #e5f3ff; font-size: 20px;}
 .blink-bg{border:dashed 1px #9ED2FF; background:#3d9df1 ; display: inline-block; border-radius: 5px; font-family: 'Bebas Neue'; font-weight: bold; }
 .header_topbar .btn-success, .header_topbar .btn-danger{border:dotted 1px #9ED2FF; background:#3a82cb ; background: linear-gradient(180deg, rgba(58,148,238,1) 0%, rgba(33,105,178,1) 100%); margin-left: 1px; padding:1px 3px; text-transform: uppercase;  }
 .header_topbar .btn a{color: #fff; text-decoration: none; }

@@ -15,7 +15,7 @@
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									 <li><a href="/web/guest/am-i-eligible-ehs">Am I Eligible</a></li>
 									
-									<li><a href="/web/guest/pensioners_login">Employee Object Pensioner Login Instructions</a></li>
+									<li><a href="/web/guest/pensioners_login">Employee Pensioner Login Instructions</a></li>
 									 <li><a href="/web/guest/pensioners_healthcardsteps">Steps for Health Card</a></li>
 									<li><a href="https://www.ehs.ap.gov.in/EHSAP/requestingInformation.do?actionFlag=homePageSearch&theme=darkgreen">Enrollment Status</a></li>
 									<li><a href="https://www.ehs.ap.gov.in/EHSAP/hcStatusAction.do?actionFlag=onload&theme=darkgreen">Health Card Status</a></li>
@@ -189,3 +189,4 @@
 					</div>
 					</div>
 				  </div>
+				  
