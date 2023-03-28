@@ -374,10 +374,10 @@ function stoploader(){
 		   <form class="row row-cols-lg-auto align-items-center" action="" name="hospitalSearch" method="post" >
  			
  			<%if(pageId1==595 ||pageId1==587|| pageId1==593 ||pageId1==579 || pageId1==515 ||pageId1==497 || pageId1==509 ||pageId1==503){ %>
- 							<div class="col-auto">
+ 			  <div class="col-auto">
 				<label  for="Speciality Name"><span class="text-danger">*</span>Speciality Name</label>
 				<select class="form-select" id="select-4" label="Speciality Name" name="select-4">
-				    <option value="">Show All</option>
+				    <option data="" value="">Show All</option>
 				    <%
 				    //String specialityId=null;
 				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null,pageId1,serverName1);
@@ -429,7 +429,7 @@ function stoploader(){
 				<div class="col-auto">
 				<label  for="District">District</label>
 				<select class="form-select" id="select-2" name="select-2">
-				    <option value="">Show All</option>
+				    <option data="" value="">Show All</option>
 				     <% 
 				     if(destrictsJsonArray!=null){
 					    for(int j=0;j<destrictsJsonArray.length();j++){
@@ -454,7 +454,7 @@ function stoploader(){
 				<div class="col-auto">
 				<label  for="Mandal">Mandal</label>
 				<select class="form-select" id="select-3" name="select-3">
-				    <option value="">Show All</option>
+				    <option data="" value="">Show All</option>
 				      <%
 				      if(stateId!=null && stateId!=""){
 				      JSONObject mandal_List= DataGridDisplayManageUtil.getMandal(distId,pageId1,serverName1);
@@ -490,7 +490,7 @@ function stoploader(){
 				<div class="col-auto">
 				<label  for="Speciality Name">Speciality Name</label>
 				<select class="form-select" id="select-4" label="Speciality Name" name="select-4">
-				    <option value="">Show All</option>
+				    <option data="" value="">Show All</option>
 				    <%
 				    //String specialityId=null;
 				      JSONArray speciality_List= DataGridDisplayManageUtil.getAsriSpecialityCount(null,pageId1,serverName1);
@@ -535,9 +535,9 @@ function stoploader(){
 			$("#resetBtnS").click(function(){
 				//alert("Clear");
 				$("#select-1").val("").trigger('change');
-				$('#select-2').find('option').remove().end().append('<option value="">Show all</option>');
+				$('#select-2').find('option').remove().end().append('<option data="" value="">Show all</option>');
 				$("#select-2").val("").trigger('change');
-				$('#select-3').find('option').remove().end().append('<option value="">Show all</option>');
+				$('#select-3').find('option').remove().end().append('<option data="" value="">Show all</option>');
 				$("#select-3").val("").trigger('change'); 
 				$("#select-4").val("").trigger('change');
 				/* $("#select-1").val("").trigger('change'); */
@@ -564,8 +564,8 @@ function stoploader(){
 				           			 console.log(response);
 						
 				           			 
-				           			 $('#select-2').find('option').remove().end().append('<option value="">Show all</option>'); 
-				           			 $('#select-3').find('option').remove().end().append('<option value="">Show all</option>');
+				           			 $('#select-2').find('option').remove().end().append('<option data="" value="">Show all</option>'); 
+				           			 $('#select-3').find('option').remove().end().append('<option data="" value="">Show all</option>');
 				           			 $('#<portlet:namespace />searchComplaintTypeId').html("");
 				           			/* if(state_Id=="6"){ */
 				        
@@ -587,6 +587,7 @@ function stoploader(){
 
 				function mandalData(district_Id){
 					console.log("Success 1256789" + district_Id);
+					 $('#select-3').find('option').remove().end().append('<option data="" value="">Show all</option>');
 				 AUI().use('aui-base','aui-io-request-deprecated', 'aui-node', function(A){
 				    A.io.request('<%=getAjaxDataURL.toString() %>',{
 					    dataType : 'json',
@@ -601,7 +602,7 @@ function stoploader(){
 					    	 console.log("Success 12567");
 				           			 var response=this.get('responseData');
 				           			 console.log(response);
-				           			 $('#select-3').find('option').remove().end().append('<option value="">Show all</option>'); 
+				           			 $('#select-3').find('option').remove().end().append('<option data="" value="">Show all</option>'); 
 				           			 $('#<portlet:namespace />searchComplaintTypeId').html("");
 				           			 jQuery.each(response, function(i, val) {
 				           				<% if(pageId1==589 ||pageId1==581 || pageId1==513 || pageId1==507 ||pageId1==515 || pageId1==593 ||pageId1==579 ||pageId1==509){ %>

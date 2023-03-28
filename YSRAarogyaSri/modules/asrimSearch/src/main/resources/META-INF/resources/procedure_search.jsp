@@ -44,7 +44,7 @@ String currURL="";
 try{
   currURL = PortalUtil.getCurrentURL(request); 
   System.out.println("currURL="+currURL);
-  String[] strArray = null;  
+  String[] strArray = null;
   strArray = currURL.split("\\?");
   if(strArray.length>1){
      String[] mainArray = null;   
@@ -150,7 +150,7 @@ String specialityId = ParamUtil.getString(request, "specialityId").trim();
     	 ajax: dataURL,
     	 dom: 'Blfrtip',
 	     lengthMenu: [10, 25, 50, 100],
-	     order: [[ 0, "asc" ]], 
+	     order: [[ 1, "asc" ]], 
           scrollY: false,
           scrollx: true, 
          sScrollX: '100%',

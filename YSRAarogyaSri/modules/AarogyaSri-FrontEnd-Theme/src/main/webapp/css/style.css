@@ -56,12 +56,12 @@ h2.subheading{ text-align: left; margin-bottom: 0px; padding: 20px 0 0; }
 	 overflow-y: scroll;
 }
 /*  .fixed_header_table thead td, .fixed_header_table thead th{ position: sticky; top:0;} */
-  .fixed_header_table thead td, .fixed_header_table thead th, .fixed_header_table tbody th {
+ /*  .fixed_header_table thead td, .fixed_header_table thead th, .fixed_header_table tbody th {
   position: sticky;
   top: 0;
   z-index: 999;
  
-  }
+  } */
 
 /******************************* Basic Section Style*******************************/
 .blue_section{background-color: #F1F8FF !important; }
