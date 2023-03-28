@@ -3,7 +3,7 @@
 						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;For Journalists
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
-					<div class="collapse <% if(pageId==25 ||pageId==409 || pageId==411 || pageId==286 || pageId==419 || pageId==423|| pageId==607 ){ %> show <% } %>" id="citizen-collapse" aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample"> 
+					<div class="collapse <% if(pageId==25 ||pageId==409 || pageId==411 || pageId==286 || pageId==419 || pageId==423|| pageId==607 ||pageId==676 ){ %> show <% } %>" id="citizen-collapse" aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample"> 
 					<div class="accordion-body">
 						<ul class="list-unstyled ps-0">
 
@@ -22,7 +22,7 @@
                             
                             
 <li class="mb-1">
-								<a href="/web/guest/ehs_proceduresearch"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button></a>
+								<a href="/web/guest/specialities_wjhs"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#treats-collapse" aria-expanded="false"> Treatments and Specialties Covered</button></a>
 								
 							</li>                            
 
@@ -121,7 +121,7 @@
 							<!-- <li><a href="/web/guest/wjhs_notification_tender">Tenders </a></li>  -->
 							<!-- <li><a href="/web/guest/patient_processflow2">Patient Process Flow </a></li>  -->						
 							<!-- <li><a href="/web/guest/steps_for_healthCard">Steps for Health Card </a></li> -->
-							<li><a href="/web/guest/user_manual_for_downloading_healthCard">User Manual for Downloading Health Card </a></li> 
+<!-- 							<li><a href="/web/guest/user_manual_for_downloading_healthCard">User Manual for Downloading Health Card </a></li>  -->
 						<!-- <li><a href="/web/guest/wjhs_notification_tender">Tenders </a></li> 
 							<li><a href="/web/guest/patient_processflow2">Patient Process Flow </a></li>   -->
 

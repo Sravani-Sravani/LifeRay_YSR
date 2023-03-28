@@ -15,7 +15,7 @@
 					<div class="collapse show" id="citizen-collapse"> 
 						<ul class="list-unstyled ps-0">
 							<li class="mb-1">
-							<a href="/web/guest/aarogya-aasara"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#eligible-collapse" aria-expanded="false">Aarogya Aasara</button></a>
+							<a href="/web/guest/aarogya-aasara"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#eligible-collapse" aria-expanded="false">Scheme Coverage</button></a>
 							</li>
                         <li class="mb-1">
 							<a href="/web/guest/status"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#eligible-collapse" aria-expanded="false">Know Your Aasara Status </button></a>

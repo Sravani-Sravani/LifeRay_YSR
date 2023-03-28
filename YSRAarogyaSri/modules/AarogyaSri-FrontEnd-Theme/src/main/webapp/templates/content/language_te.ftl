@@ -39,11 +39,7 @@ accessibility_statement = "సుగమ నివేదిక"
 know_more = "మరింత తెలుసుకోండి"
 sitemap = "సైట్ పటం"
 hospitals = "ఆసుపత్రులు"
-<<<<<<< HEAD
 procedures = "చికిత్స"
-
-procedures = "చికిత్సలు"
->>>>>>> 423e8e18de6396abc1c05f45cc2c3a5af1bbf660
 speciality_search = "ప్రత్యేక శోధన"
 arogya_mitra = "ఆరోగ్య మిత్ర"
 
@@ -66,5 +62,4 @@ aasara="ఆరోగ్య ఆసరా"
 treatments="చికిత్సలు కవర్"
 netwrk="నెట్‌వర్క్ హాస్పిటల్స్"
 ayushmanBharat="ఆయుష్మాన్ భారత్"
-
 />
