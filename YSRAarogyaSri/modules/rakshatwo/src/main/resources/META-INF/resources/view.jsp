@@ -29,6 +29,8 @@ if(pageId==469 || pageId==6){ %>
 <%@ include file="/notifications.jsp" %>
 <%}else if(pageId==312){ %>
 <%@ include file="/bids_agree_child2.jsp" %>
+<%}else if(pageId==664 || pageId==680){ %>
+<%@ include file="/arogyamithra.jsp" %>
 <%}else if(pageId==85){ %>
 <%@ include file="/ysr_rti_act.jsp" %>
 <%}else if(pageId==660 || pageId==678){ %>

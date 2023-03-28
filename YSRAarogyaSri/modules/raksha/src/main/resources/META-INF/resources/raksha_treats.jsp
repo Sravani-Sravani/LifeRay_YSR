@@ -18,10 +18,10 @@
 					   </div> -->
 
 <div class="qr_code float-end m-4 mt-0"> 
-					<div class="card"> 
+					<div class="card" > 
 					 <img src="/o/com.kpmg.raksha/qr/Aarogyasri.png" class="img-fluid" alt="QR CODE"> 
 					 <div class="card-body"> 
-					  <p class="card-text">To access AarogyaRaksha App, Please scan the QR code.</p> 
+					  <p class="card-text">To access Aarogya Raksha App, Please scan the QR code.</p> 
 					 </div> 
 					</div> 
 				   </div>
