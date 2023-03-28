@@ -4,7 +4,7 @@
 <%@ include file="/sidebar.jsp" %>
 <%@ include file="/rightContent.jsp" %>
 
-			<h3 class="bordertitle text-dark">Employee Object Pensioner Login Instructions</h3>
+			<h3 class="bordertitle text-dark">Employee/Pensioner Login Instructions</h3>
 				
 			<ul> 
 				<li><b>Step 1: Enroll Aadhar Number </b>

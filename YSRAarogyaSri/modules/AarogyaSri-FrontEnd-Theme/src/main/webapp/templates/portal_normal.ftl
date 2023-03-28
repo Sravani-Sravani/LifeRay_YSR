@@ -81,7 +81,7 @@ crossorigin="anonymous"></script>
 				 
 
 
-				 <p class="btn btn-success btn-sm"><a href="/web/guest/status">Know Your Aasara Status</a></p>
+				 <p class="btn btn-success btn-sm"><a href="/web/guest/status">${aasara}</a></p>
 				 <p class="btn btn-success btn-sm"><i class="fa-regular fa-right-to-bracket"></i><a href="/web/guest/signin">${sign_in}</a></p>      
 				 <p class="btn btn-success btn-sm"><i class="fa-regular fa-virus-covid"></i> <a href="/web/guest/covid_19">${covid}</a></p>    
 				 </div>	
@@ -123,7 +123,7 @@ crossorigin="anonymous"></script>
 			  </li>
 				<li><a class="dropdown-item <#if pageId==27> active </#if>" href="/ehs">${ehs_short}</a>
 				</li>
-			<li><a class="dropdown-item <#if pageId==599> active </#if>" href="/web/guest/aarogya-aasara" >${aasara}<span></span></a>
+			<li><a class="dropdown-item <#if pageId==599> active </#if>" href="/web/guest/aarogya-aasara" >Arogya Aasara<span></span></a>
 			  </li>
 			  <li><a class="dropdown-item <#if pageId==21> active </#if>" href="/arogyaraksha">${ar}</a>
 				
@@ -314,43 +314,43 @@ ${pin_code}:522503 <br />
               <li>
                 <a
                   href="https://www.pmjay.gov.in/" target="_blank"
-                  >${ayushman_bharat}
+                  >${ayushmanBharat}
                 </a>
               </li>
               <li>
                 <a href="/web/guest/terms_conditions_use" target="_blank"
-                  >${terms_conditions}
+                  >${terms}
                 </a>
               </li>
               <li>
                 <a
                   href="/web/guest/accessibility-statement" target="_blank"
-                  >${accessibility_statement}
+                  >${access}
                 </a>
               </li>
               <!--<li><a href="#">${sitemap}</a></li>-->
               <li>
                 <a
                   href="https://nhsrcindia.org/" target="_blank"
-                  >${nhsrc}
+                  >${NHSRC}
                 </a>
               </li>
                <li>
                 <a
                   href="http://www.mohfw.nic.in/" target="_blank"
-                  >${mohfw}
+                  >${MOHFW}
                 </a>
               </li>
             <li>
                 <a
                   href="https://cfw.ap.nic.in/" target="_blank"
-                  >${cohfw}
+                  >${COHFW}
                 </a>
               </li>
               <li>
                 <a
                   href="https://www.nppaindia.nic.in/en/" target="_blank"
-                  >${nppa_india}
+                  >${NPPA}
                 </a>
               </li>
             </ul>

@@ -3,7 +3,7 @@
 						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;For Journalists
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
-					<div class="collapse <% if(pageId==25 ||pageId==409 || pageId==411 || pageId==286 || pageId==419 || pageId==423|| pageId==607 ||pageId==676 ){ %> show <% } %>" id="citizen-collapse" aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample"> 
+					<div class="collapse <% if(pageId==25 ||pageId==409 || pageId==411 || pageId==286 || pageId==419 || pageId==423|| pageId==607 ||pageId==676 || pageId==417 || pageId==413 || pageId==421 || pageId==310 || pageId==415 ){ %> show <% } %>" id="citizen-collapse" aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample"> 
 					<div class="accordion-body">
 						<ul class="list-unstyled ps-0">
 
@@ -70,6 +70,27 @@
 								</button></a>
 								
 							</li>
+												  <li class="mb-1">
+						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usman-collapse1" aria-expanded="false">
+							Others
+						</button>
+						<div class="collapse <% if(pageId==417 || pageId==413 || pageId==421 || pageId==310 || pageId==415 ){ %> show <% } %>" id="usman-collapse1" data-bs-parent="#hospital-collapse">
+						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+							<li><a href="/web/guest/followup_packages">Follow Up Packages </a></li> 
+							<!-- <li><a href="/web/guest/steps_for_healthCard">Steps for Health Card </a></li>  -->
+							<li><a href="/web/guest/user_manual_for_downloading_healthCard">User Manual for Downloading Health Card </a></li> 
+							<li><a href="/web/guest/wjhs_notification_tender">Notifications </a></li>
+							<!-- <li><a href="/web/guest/wjhs_notification_tender">Tenders </a></li>  -->
+							<!-- <li><a href="/web/guest/patient_processflow2">Patient Process Flow </a></li>  -->						
+							<!-- <li><a href="/web/guest/steps_for_healthCard">Steps for Health Card </a></li> -->
+<!-- 							<li><a href="/web/guest/user_manual_for_downloading_healthCard">User Manual for Downloading Health Card </a></li>  -->
+						<!-- <li><a href="/web/guest/wjhs_notification_tender">Tenders </a></li> 
+							<li><a href="/web/guest/patient_processflow2">Patient Process Flow </a></li>   -->
+
+							
+						  </ul>
+						</div>
+					  </li>
                             
                             
 					</ul> 
@@ -79,8 +100,8 @@
 						<i class="fa-sharp fa-solid fa-hospital"></i> &nbsp;For Hospitals
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
-					<div class="collapse  <% if(pageId==149 || pageId==139 || pageId==137 || pageId==131 || pageId==135 || 
-					               pageId==417 || pageId==413 || pageId==421 || pageId==310 || pageId==415  ){ %> show <% } %>" id="hospital-collapse" aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushExample"> 
+					<div class="collapse  <% if(pageId==149 || pageId==139 || pageId==137 || pageId==131 || pageId==135
+					               ){ %> show <% } %>" id="hospital-collapse" aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushExample"> 
 							<div class = "accordion-body">
 						<ul class="list-unstyled green_sidebar ps-0">
 					  <li class="mb-1">
@@ -108,27 +129,7 @@
 						</button></a>
 						
 					  </li>
-					  <li class="mb-1">
-						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usman-collapse1" aria-expanded="false">
-							Others
-						</button>
-						<div class="collapse <% if(pageId==417 || pageId==413 || pageId==421 || pageId==310 || pageId==415 ){ %> show <% } %>" id="usman-collapse1" data-bs-parent="#hospital-collapse">
-						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-							<li><a href="/web/guest/followup_packages">Follow Up Packages </a></li> 
-							<!-- <li><a href="/web/guest/steps_for_healthCard">Steps for Health Card </a></li>  -->
-							<li><a href="/web/guest/user_manual_for_downloading_healthCard">User Manual for Downloading Health Card </a></li> 
-							<li><a href="/web/guest/wjhs_notification_tender">Notifications </a></li>
-							<!-- <li><a href="/web/guest/wjhs_notification_tender">Tenders </a></li>  -->
-							<!-- <li><a href="/web/guest/patient_processflow2">Patient Process Flow </a></li>  -->						
-							<!-- <li><a href="/web/guest/steps_for_healthCard">Steps for Health Card </a></li> -->
-<!-- 							<li><a href="/web/guest/user_manual_for_downloading_healthCard">User Manual for Downloading Health Card </a></li>  -->
-						<!-- <li><a href="/web/guest/wjhs_notification_tender">Tenders </a></li> 
-							<li><a href="/web/guest/patient_processflow2">Patient Process Flow </a></li>   -->
 
-							
-						  </ul>
-						</div>
-					  </li>
 
 
 					</ul> 
