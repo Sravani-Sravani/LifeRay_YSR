@@ -68,20 +68,16 @@ crossorigin="anonymous"></script>
 	
 <#if w3c_language_id=="te-IN">
 		<a href="/te/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=en_US" class="language-entry-long-text" lang="en-US">English</a>
-		 <span class="language-entry-long-text" lang="te-IN">à°¤à±†à°²à±�à°—à±�</span>
 		 <span class="language-entry-long-text" lang="te-IN">తెలుగు</span>
 <#else>
 		 <span class="language-entry-long-text" lang="en-US">English</span>
-		 <a href="/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=te_IN" class="language-entry-long-text" lang="te-IN">à°¤à±†à°²à±�à°—à±�</a>
 		 <a href="/c/portal/update_language?p_l_id=${page.plid}&redirect=${themeDisplay.getURLCurrent()}&languageId=te_IN" class="language-entry-long-text" lang="te-IN">తెలుగు</a>
 </#if>
 				 <a href="/web/guest/screen_reader_11"><i class="fa-solid fa-mobile-screen"></i> ${screen_reader} </a> 
 				 <a href="/web/guest/glossary"><i class="fa-solid fa-book-open-cover"></i> ${glossary} </a>   
-        
         		<a href="tel:104" class="call"><b><i class="fa-regular fa-phone"></i> Call 104 </b></a>
 				 </div>
 				 <div class="col-lg-6 right_topbar"> 
-<p class="blink-bg"><a href="tel:104"><span class="btn btn-sm"><i class="fa-regular fa-phone"></i> 104 - ${medical} </span></a></p>
 				 
 
 
@@ -196,7 +192,6 @@ crossorigin="anonymous"></script>
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-regular fa-chevrons-up"></i></button>
 	 <script>
 // Get the button
-let mybutton = document.getElementById("myBtn");
 var mybutton1 = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -204,10 +199,8 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
     mybutton1.style.display = "block";
   } else {
-    mybutton.style.display = "none";
     mybutton1.style.display = "none";
   }
 }
@@ -319,14 +312,11 @@ ${pin_code}:522503 <br />
                 </a>
               </li>
               <li>
-                <a href="https://www.pmjay.gov.in/" target="_blank"
-                  >${Ayushman Bharat}
                 <a
                   href="https://www.pmjay.gov.in/" target="_blank"
                   >${ayushman_bharat}
                 </a>
               </li>
-             
               <li>
                 <a href="/web/guest/terms_conditions_use" target="_blank"
                   >${terms_conditions}
