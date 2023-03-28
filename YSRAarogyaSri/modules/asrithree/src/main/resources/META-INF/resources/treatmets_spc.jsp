@@ -4,6 +4,7 @@
 <%@ include file="/sidea.jsp" %>
 <%@ include file="/rightContenta.jsp" %>
 <h3 class="bordertitle text-dark">Specialities and Treatments Covered</h3>
+
 <div class="row">
 <div class="col-lg-6">
 <ul>

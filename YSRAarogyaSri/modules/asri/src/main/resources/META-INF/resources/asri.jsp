@@ -39,13 +39,13 @@
         <li>Free OP evaluation of patients for listed therapies who may not undergo treatment for "listed therapies.</li>
         <li>All the pre-existing cases under listed therapies are covered under the scheme.</li>
         <li>Food and Transportation.</li>
-    </ul> <br><br>
-        The scheme provides coverage for the procedures under following categories:
-        <div class="col-lg-9 rightsidebar_content px-2" 
-        style="max-height: 200px; background-color: #1b65a6;; color: whitesmoke">
-            <ul class="nav nav-pills nav-stacked anyClass">
+    </ul>
+        <strong>The scheme provides coverage for the procedures under following categories:</strong>
+    <!--     <div class="col-lg-9 rightsidebar_content px-2" 
+        style="max-height: 200px; background-color: #1b65a6;; color: whitesmoke"> -->
+<!--             <ul class="nav nav-pills nav-stacked anyClass">
              <li class="nav-item colorchax" style=" color: whitesmoke"></li>
-                <br><strong>
+           
 
                 1)CARDIAC AND CARDIOTHORACIC SURGERY <br>
 2)CARDIOLOGY <br>
@@ -81,10 +81,59 @@
 </strong><br><br></li> 
 
            </div><br><br>
-    </ul> <br><br>
+    </ul> <br><br> -->
+    
+    
+    
+<div class="row">
+<div class="col-lg-6">
+<ul>
+<li>CARDIAC & CARDIOTHORACIC SURGERY</li>
+<li>CARDIOLOGY</li>
+<li>COCHLEAR IMPLANT SURGERY</li>
+<li>CRITICAL CARE</li>
+<li>DERMATOLOGY</li>
+<li>EDOCRINOLOGY</li>
+<li>ENT SURGERY</li>
+<li>EPIDEMIC DISEASE</li>
+<li>GASTROENTEROLOGY</li>
+<li>GENERAL MEDICINE</li>
+<li>GENERAL SURGERY</li>
+<li>GENITO URINARY SURGERIES</li>
+<li>GYNAECOLOGY AND OBSTETRICS SURGERY</li>
+<li>INFECTIOUS DISEASE</li>
+<li>MEDICAL ONCOLOGY</li>
+
+</ul>
+</div>
+<div class="col-lg-6">
+<ul>
+<li>NEPHROLOGY</li>
+<li>NEUROLOGY</li>
+<li>NEUROSURGERY<</li>
+<li>OPTHALMOLOGY SURGERY</li>
+<li>ORGAN TRANSPLANTATION SURGERY</li>
+<li>ORTHOPEDIC SURGERY AND PROCEDURES</li>
+<li>PEDIATRIC SURGERIES</li>
+<li>PEDIATRICS</li>
+<li>PLASTIC SURGERY</li>
+<li>POLY TRAUMA</li>
+<li>PSYCHIATRY</li>
+<li>PULMONOLOGY</li>
+<li>RADIATION ONCOLOGY</li>
+<li>SURGICAL GASTRO ENTEROLOGY</li>
+<li>RHEUMATOLOGY</li>
+<li>SURGICAL ONCOLOGY</li>
+
+</ul>
+<!-- <p class="text-end"><a href="/web/guest/asri_proceduresearch" class="btn btn-success btn-md">Know More</a></p> -->
+</div>
+</div>
+    
+    
     <h5 class="bordertitle tet-dark">Follow Up Services</h5>
     <p>Follow-up services are provided for a period of one year through fixed packages to the patients whoever require long term follow-up therapy in order to get optimum benefit from the procedure and avoid complications. Follow-up package for consultation, investigations, drugs etc., for one year for listed therapies were formulated by Technical committee of the Trust in consultation with specialists are listed in the website:</p>
-    <a href="https://ysraarogyasri.ap.gov.in/" target="_blank">ysraarogyasri.ap.gov.in</a> <br><br>
+    <a href="/web/guest/follow_up_information" target="_blank">ysraarogyasri.ap.gov.in</a> <br><br>
     <br>
 
     <h5 class="bordertitle tet-dark">Important stakeholders in the scheme are</h5>

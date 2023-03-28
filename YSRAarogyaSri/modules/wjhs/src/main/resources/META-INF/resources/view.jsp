@@ -34,8 +34,8 @@ if(pageId==151 || pageId==25){ %>
 <%@ include file="/tender.jsp" %>
 <%}else if(pageId==143){ %>
 <%@ include file="/webportal_online_workflow.jsp" %>
-<%}else if(pageId==147 || pageId==6){ %>
-<%@ include file="/who_is_who.jsp" %>
+<%}else if( pageId==676){ %>
+<%@ include file="/specialities_wjhs.jsp" %>
 <%}else if(pageId==308){ %>
 <%@ include file="/documents_wjhs.jsp" %>
 <%}else if(pageId==417){ %>
@@ -59,4 +59,4 @@ PageIsNotFound
 <%}
 %>
 
-
+specialities_wjhs

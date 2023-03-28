@@ -18,7 +18,7 @@
 					 <td> SYSTEM</td> 
 					 <td> Package</td> 
 					 <td> First Installment</td> 
-					 <td> Subsequent</td> 
+					 <td> Subsequent 3 Installments</td> 
 					</tr> 
 				</thead> 
 					<tbody> 

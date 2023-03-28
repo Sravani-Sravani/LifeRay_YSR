@@ -335,7 +335,7 @@ border:1px solid #eee;	border-top: 3px solid #2169B2;	background: #fefefe; text-
 .contactUs_section .box_contact span{ margin: 0; padding: 0; font-size: 11px;}
 .contactUs_section .box_contact p{ text-align: center;}
 .contact_icon i{ width: 60px; height: 60px; background-color: #2169B2; border-radius: 100%; line-height: 60px; color: #fff;}
-.contactUs_section .box_contact h6{ text-transform: uppercase; margin: 20px 0 10px;  font-weight: 700; font-size: 14px;	line-height: 20px; color: #444000;	}
+.contactUs_section .box_contact h6{ text-transform: uppercase; margin: 20px 0 10px;  font-weight: 700; font-size: 14px;	line-height: 20px; color: #2169b2;	}
 
 
 /******************************* Sign In Page Section *******************************/
