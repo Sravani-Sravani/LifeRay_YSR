@@ -23,10 +23,6 @@ if(pageId==443){ %>
 <%@ include file="/guidelines.jsp" %>
 <%}else if(pageId==455){ %>
 <%@ include file="/notifications.jsp" %>
-<%}else if(pageId==441){ %>
-<%@ include file="/health_camps.jsp" %>
-<%}else if(pageId==445){ %>
-<%@ include file="/healthcare_trust.jsp" %>
 <%}else if(pageId==431){ %>
 <%@ include file="/moudocument.jsp" %>
 <%}else if(pageId==433){ %>
@@ -48,4 +44,9 @@ PageIsNotFound in asritwo
 <%@ include file="/who_is_who_district.jsp" %>
 <%}else if(pageId==451){ %>
 <%@ include file="/bosrd_of_trustees.jsp" %>
+else if(pageId==441){ %>
+<%@ include file="/health_camps.jsp" %>
+<%}else if(pageId==445){ %>
+<%@ include file="/healthcare_trust.jsp" %>
+<%}
 <%}%> --%>

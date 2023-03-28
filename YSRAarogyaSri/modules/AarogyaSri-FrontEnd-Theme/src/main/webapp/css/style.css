@@ -1,6 +1,15 @@
 /******************************* Liferay CSS Class *******************************/
 .portlet {margin-bottom: 0 !important; }
 
+
+ .dataTables_scrollHead{
+ overflow: hidden !important; 
+ border: 0px !important;
+  width: 100% !important;
+  position:sticky !important;
+   top:0 !important;
+    z-index:999 !important;
+ }
 /******************************* General CSS Class *******************************/
 html,*{ margin:0; padding:0;}
 	

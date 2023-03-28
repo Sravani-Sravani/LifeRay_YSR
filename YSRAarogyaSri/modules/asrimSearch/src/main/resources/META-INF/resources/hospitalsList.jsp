@@ -32,6 +32,14 @@ function stoploader(){
 	}); 
 </script>
  <style>
+ .dataTables_scrollHead{
+ overflow: hidden !important; 
+ border: 0px !important;
+  width: 100% !important;
+  position:sticky !important;
+   top:0 !important;
+    z-index:999 !important;
+ }
 </style>
 
 <portlet:resourceURL var="asrimHospitalsURL">
