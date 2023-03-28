@@ -31,7 +31,7 @@ if(pageId==469 || pageId==6){ %>
 <%@ include file="/bids_agree_child2.jsp" %>
 <%}else if(pageId==85){ %>
 <%@ include file="/ysr_rti_act.jsp" %>
-<%}else if(pageId==660){ %>
+<%}else if(pageId==660 || pageId==678){ %>
 <%@ include file="/treatments2.jsp" %>
 <%}else if(pageId==549){ %>
 <%@ include file="/new_govt_orders.jsp" %>
