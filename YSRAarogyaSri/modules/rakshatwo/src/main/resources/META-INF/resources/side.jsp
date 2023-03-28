@@ -6,7 +6,7 @@
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
 					
-					<div class="collapse <% if(pageId==459 || pageId==71|| pageId==469 || pageId==473 || pageId==475 || pageId==477|| pageId== 479|| pageId== 481 || pageId==21 || pageId==75 || pageId==605|| pageId==511||pageId==660 || pageId==678){ %> show  <% } %>" id="citizen-collapse"  aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample"> 
+					<div class="collapse <% if(pageId==459 || pageId==71|| pageId==469 || pageId==473 || pageId==475 || pageId==477|| pageId== 479|| pageId== 481 || pageId==21 || pageId==75 || pageId==605|| pageId==511||pageId==660 || pageId==678 || pageId==664 || pageId==680){ %> show  <% } %>" id="citizen-collapse"  aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample"> 
 						<div class="accordion-body"> 
 						<ul class="list-unstyled ps-0">
 
@@ -68,7 +68,7 @@
                             
                             
                             <li class="mb-1">
-								<a href="/web/guest/mithraraksha"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usermanuals-collapse" aria-expanded="false">
+								<a href="/web/guest/mithra2"><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#usermanuals-collapse" aria-expanded="false">
 									Know Your Mithra
 
 								</button></a>
