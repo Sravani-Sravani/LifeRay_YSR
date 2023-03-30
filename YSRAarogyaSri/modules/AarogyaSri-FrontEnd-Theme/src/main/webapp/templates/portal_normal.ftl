@@ -220,22 +220,25 @@ function topFunction() {
             <div class="col">
               <div class="content-grid">
                 <div class="row content-grid-row ps-3 pe-3">
-                  <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                  <div class="content-grid-item text-center" style="width:14%;">
                     <a href="https://www.spandana.ap.gov.in/" target="_blank"><img src="/documents/d/guest/1" alt="" class="img-fluid" /></a>
                   </div>
-                  <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                  <div class="content-grid-item text-center" style="width:14%;">
                     <a href="https://gramawardsachivalayam.ap.gov.in/GSWS/Home/Main" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/2.jpg" alt="" class="img-fluid" /></a>
                   </div>
-                  <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                  <div class="content-grid-item text-center"  style="width:14%;">
                     <a href="https://apcos.ap.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/3.jpg" alt="" class="img-fluid" /></a>
                   </div>
-                  <div class="content-grid-item col-md-4 col-lg-2 text-center">
-                    <a href="https://nhsrcindia.org/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/nhsrc-logo.png" alt="" class="img-fluid" /></a>
+                  <div class="content-grid-item text-center"  style="width:14%;">
+                    <a href="https://abdm.gov.in/" target="_blank"><img style="width: 100px;" src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/abdm-logo.jpg" alt="" class="img-fluid" /></a>
                   </div>
-                  <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                  <div class="content-grid-item text-center"  style="width:14%;">
                     <a href="https://www.pmjay.gov.in/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/5.jpg" alt="" class="img-fluid" /></a>
                   </div>
-                  <div class="content-grid-item col-md-4 col-lg-2 text-center">
+                  <div class="content-grid-item text-center"  style="width:14%;">
+                    <a href="https://nhsrcindia.org/" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/quicklinks/nhsrc-logo.png" alt="" class="img-fluid" /></a>
+                  </div>
+                  <div class="content-grid-item text-center"  style="width:14%;">
                     <a href="https://eoffice.ap.gov.in/cas/login" target="_blank"><img src="https://ysraarogyasri.ap.gov.in/documents/d/guest/elogo" alt="" class="img-fluid" /></a>
                   </div>
                 </div>
@@ -275,9 +278,7 @@ ${pin_code}:522503 <br />
 			<li> <a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysraarogyasri_app&hl=en&pli=1" target="_blank">${asri_app}</a></li>
 			<li> <a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysr_mithra&hl=en" target="_blank">${mitra_app}</a></li>
 			<li> <a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ehs_app&hl=en" target="_blank">${ehs_app}</a></li>
-			
-			
-        </ul>
+      </ul>
       </div>
 <!--
       <div class="col-lg-3">
