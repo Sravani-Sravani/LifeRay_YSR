@@ -15,7 +15,7 @@
 					<tr> 
 					 <td style="width:10%"> S.No</td> 
 					 <td style="width:10%"> Code</td> 
-					 <td style="width:40%"> SYSTEM</td> 
+					 <td style="width:40%"> Name of the Procedure</td> 
 					 <td style="width:10%"> Package</td> 
 					 <td style="width:10%"> First Installment</td> 
 					 <td style="width:20%"> Subsequent <hr style="color:white;background-color:white;">3 Installments</td> 

@@ -234,7 +234,7 @@ li.nav-item .nav-link{ color:000 !important;}
 
 /******************************* Service Box Homepage *******************************/
 .service-item{ padding-bottom:10px; text-align: center; background: #FFFFFF; border-top: 4px solid #2169B2; box-shadow: 0 0 16px rgba(148,148,148,.2);
-	transition: all .3s ease-in; border-radius: 0px; min-height: 375px; margin-bottom: 20px;}
+	transition: all .3s ease-in; border-radius: 0px; min-height: 400px; margin-bottom: 20px;}
 	.service-item{ position: relative; margin: 0px 30px 40px;  overflow: hidden;}
 	.btn_servicemore {position: absolute; left: 0; bottom: 0; text-align: center; width: 100%; }
 	.btn_servicemore a {display: block; padding: 5px 0px; text-decoration: none; -moz-transition: all .4s ease; -o-transition: all .4s ease; -webkit-transition: all .4s ease; transition: all .4s ease; }
@@ -243,8 +243,8 @@ li.nav-item .nav-link{ color:000 !important;}
 	.service-item p{ text-align: center; padding: 0 7px ; }
 	.service-item:hover, .service-item:focus{box-shadow:0 6px 26px rgba(148,148,148,.5); }
 	.service-item:hover .btn, .service-item:focus .btn{ background: #7BBF4B;}
-	.service-item .service-icon, .service-item:hover .service-icon{ width: 100%; max-height: 220px; overflow: hidden; }
-	.service-item .service-icon img{transition: 0.5s all ease-in-out; max-height: 220px; width:100%; object-fit: cover; object-position: top; }
+	.service-item .service-icon, .service-item:hover .service-icon{ width: 100%; max-height: 250px; overflow: hidden; }
+	.service-item .service-icon img{transition: 0.5s all ease-in-out; max-height: 250px; height:250px; width:100%; object-fit: cover; object-position: top; }
 	.service-item:hover .service-icon img{ transform: scale(1.1);}
 
 	
@@ -580,10 +580,12 @@ width:20%;
 	.breadcrumb {margin-bottom: 0 !important; padding: 0 !important;}
 	.main_heading_breadcrum h1 {font-size: 14px; margin-bottom: 0; padding: 5px 0 0; }
 	.main_heading_breadcrum {padding: 8px 0; margin-bottom: 30px;}
-	.service-item .service-icon img{ max-height: 120px;}
+
 	.services_section .btn { margin-bottom: 10px; font-size:12px;}
 	.service-item .service_heading {font-size: 16px;line-height: 120%;}
 	.service-item{ position: static;  min-height: auto;}
+	.service-item .service-icon img{height:auto;
+	}
 	.btn_servicemore {position: static;}
 	.contactUs_section .box_contact{min-height: auto; }
 	.callbtn_bottom {font-size: 20px; padding: 10px 20px 10px 10px;}

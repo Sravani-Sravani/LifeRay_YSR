@@ -7,7 +7,7 @@
 
             <h3 class="bordertitle text-dark">WJHS</h3>
             <h5>Introduction</h5>
-            <p>The initial period of coverage under the scheme by Dr.YSR
+<!--             <p>The initial period of coverage under the scheme by Dr.YSR
                 Aarogyasri will be two years.</p>
             <p>The offices of the Dr.YSR Aarogyasri will house the staff
                 administering the Scheme.</p>
@@ -15,6 +15,8 @@
                 expiry of the policy period. This means that pre-authorizations can be done till the end
                 of policy period and surgeries for such pre-authorizations can be done up to one month
                 after the expiry of policy period and all such claims shall be honoured.</p>
+            -->
+            <p>The main aim of this scheme is to provide Comprehensive health coverage to the working journalists in Andhra Pradesh</p>
             <h5>Back Office Departments:</h5>
             <ul>
                 <li>Round-the-Clock Pre-authorization wing with specialist doctors for each category of
