@@ -1,7 +1,7 @@
 	
 	<div class="d-flex flex-column flex-shrink-0 sidebar_menu" id="accordionFlushExample">
 						<button class="accordion-button btn_icon" type="button" data-bs-toggle="collapse" data-bs-target="#citizen-collapse" aria-expanded="true" aria-controls="citizen-collapse">	
-						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;For Employees/ Pensioner
+						<i class="fa-sharp fa-solid fa-user-tie"></i> &nbsp;For Employees/For Pensioners
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
 					
