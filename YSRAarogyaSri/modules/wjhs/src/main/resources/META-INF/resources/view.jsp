@@ -54,6 +54,8 @@ if(pageId==151 || pageId==25){ %>
 <%@ include file="/wjhs_treatments.jsp" %>
 <%}else if(pageId==409){ %>
 <%@ include file="/login_instruction.jsp" %>
+<%}else if(pageId==686){ %>
+<%@ include file="/packageprices.jsp" %>
 <%}else{ %>
 PageIsNotFound
 <%}
