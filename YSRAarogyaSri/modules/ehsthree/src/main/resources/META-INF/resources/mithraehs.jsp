@@ -17,13 +17,13 @@
             <li>Facilitating the Patient to MEDCO for basic diagnosis</li>
             <li>Facilitating the Admission if patient needs to convert to IP</li>
             <li>Responsible for submitting Pre-auth from his login after forwarding from the MEDCO login.</li>
-            <li>Responsible for submitting patient account details for eligible Aasara beneficiaries</li>
+            <!--  <li>Responsible for submitting patient account details for eligible Aasara beneficiaries</li> -->
             <li>Maintenance of Registers</li>
             <li>Daily On-bed visits and updating the patient status including the feedback provided by the Patient through mobile app </li>
             <li>Grievance Redressal</li>
             <li>Discharge facilitation</li>
-            <li>Handover the HCM discharge / Aasara letter to hte patient</li>
-            <li>Uploading  signed consent and confirmation letters of patients through mobile app </li>
+          <!--  <li>Handover the HCM discharge / Aasara letter to hte patient</li> -->  
+          <!--  <li>Uploading  signed consent and confirmation letters of patients through mobile app </li> -->
             <li>Follow-up medicines facilitation</li>
           </ul>
 
