@@ -1,0 +1,10 @@
+Bundle-Name: customTables-service
+Bundle-SymbolicName: com.kpmg.customtables.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+-dsannotations-options: inherit
+Export-Package: \
+	com.kpmg.customtables.model,\
+	com.kpmg.customtables.service.impl,\
+	com.kpmg.customtables.model.impl

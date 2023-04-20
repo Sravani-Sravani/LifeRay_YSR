@@ -1,0 +1,1 @@
+create index IX_88C8D0BB on apgovt_newsandevents (uuid_[$COLUMN_LENGTH:75$]);

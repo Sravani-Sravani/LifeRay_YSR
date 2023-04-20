@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.kpmg.customtables.model.NewsAndEvents">
+		<field name="uuid" type="String" />
+		<field name="newsId" type="long" />
+		<field name="newsdescription" type="String" />
+		<field name="ti_newsdescription" type="String" />
+		<field name="newsDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="status" type="String" />
+		<field name="createdDate" type="Date" />
+		<field name="createdBy" type="long" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifiedBy" type="long" />
+	</model>
+</model-hints>

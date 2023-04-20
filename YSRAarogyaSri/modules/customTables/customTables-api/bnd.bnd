@@ -1,0 +1,10 @@
+Bundle-Name: customTables-api
+Bundle-SymbolicName: com.kpmg.customtables.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.kpmg.customtables.exception,\
+	com.kpmg.customtables.model,\
+	com.kpmg.customtables.service,\
+	com.kpmg.customtables.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../customTables-service/service.xml
