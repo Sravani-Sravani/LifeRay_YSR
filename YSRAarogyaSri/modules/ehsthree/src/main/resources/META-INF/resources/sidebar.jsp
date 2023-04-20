@@ -5,17 +5,18 @@
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
 					
-					<div class="collapse <% if(pageId==105 || pageId==97|| pageId==567|| pageId==603|| pageId==638|| pageId==652|| pageId==650|| pageId==129|| pageId==73|| pageId==601|| pageId==27||pageId==585 || pageId==587 || pageId==595){ %> show <% } %>" id="citizen-collapse"  aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample"> 
+					<div class="collapse <% if(pageId==105 || pageId==97|| pageId==567|| pageId==603||pageId==668|| pageId==684|| pageId==652|| pageId==666|| pageId==690 || pageId==638|| pageId==652|| pageId==650|| pageId==129|| pageId==73|| pageId==601|| pageId==27||pageId==585 || pageId==587 || pageId==595){ %> show <% } %>" id="citizen-collapse"  aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample"> 
 						<div class="accordion-body"> 
 						<ul class="list-unstyled ps-0">
 
 <li class="mb-1">
 								<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#asara-collapse" aria-expanded="false"> Scheme Coverage</button>
-								<div class="collapse <% if(pageId==601 || pageId==73 || pageId==129){ %> show <% } %> " id="asara-collapse" data-bs-parent="#citizen-collapse">
+								<div class="collapse <% if(pageId==601 || pageId==73 || pageId==129|| pageId==129|| pageId==666 || pageId==690){ %> show <% } %> " id="asara-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 									 <li><a href="/web/guest/am-i-eligible-ehs">Am I Eligible</a></li>
 									
 									<li><a href="/web/guest/pensioners_login">Employee/Pensioner Login Instructions</a></li>
+									<!--  	<li><a href="/web/guest/penloginins">Pensioner Login Instructions</a></li>  -->
 									 <li><a href="/web/guest/pensioners_healthcardsteps">Steps for Health Card</a></li>
 									<li><a href="https://www.ehs.ap.gov.in/EHSAP/requestingInformation.do?actionFlag=homePageSearch&theme=darkgreen">Enrollment Status</a></li>
 									<li><a href="https://www.ehs.ap.gov.in/EHSAP/hcStatusAction.do?actionFlag=onload&theme=darkgreen">Health Card Status</a></li>
@@ -24,7 +25,7 @@
 							</li> 
 <li class="mb-1">
 		<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#myarg-collapse" aria-expanded="false"> Patient Services</button>
-								<div class="collapse <% if(pageId==650 || pageId==652){ %> show <% } %>"id="myarg-collapse" data-bs-parent="#citizen-collapse">
+								<div class="collapse <% if(pageId==650 || pageId==652 || pageId==668|| pageId==684){ %> show <% } %>"id="myarg-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 										
                                     <!-- <li><a href="/documents/d/guest/meesevaapplication_pensioners">Mee Seva Health Card Application</a></li> -->
@@ -32,6 +33,7 @@
 									<!-- <li><a href="#">Aadhar Enrolment Centers</a></li> -->
 									 <li><a href="/web/guest/benefit">Benefit Coverage</a></li>
 									<li><a href="/web/guest/chronic">Chronic OP Treatment</a></li>
+									<li><a href="/web/guest/loc">Letter of Credit(LOC)</a></li>
 									<li><a href="https://www.ehs.ap.gov.in/OperationsAP/individualMedicalReport.jsp" target="_blank">Medical Reimbursement Status</a></li>
 									<!-- <li><a href="/web/guest/pensioners_meeseva">Mee-Seva Health Card Application Form</a></li> -->
 								</ul></div>

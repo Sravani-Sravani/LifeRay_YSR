@@ -18,18 +18,11 @@ if( pageId==33 || pageId==565){ %>
 <%@ include file="/benefit.jsp" %>
 <%}else if(pageId==652 ){ %>
 <%@ include file="/chronic.jsp" %>
+<%}else if(pageId==666 || pageId==690 ){ %>
+<%@ include file="/penloginins.jsp" %>
+<%}else if(pageId==668 || pageId==684 ){ %>
+<%@ include file="/loc.jsp" %>
 <%}else{ %>
 PageIsNotFound IN ehsthree
 <%}
 %>
-
-
-
-
-
-
-
-
-
-
-			 
