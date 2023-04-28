@@ -20,7 +20,7 @@ import com.liferay.petra.sql.dsl.base.BaseTable;
 import java.sql.Types;
 
 /**
- * The table class for the &quot;wings&quot; database table.
+ * The table class for the &quot;apgovt_wings&quot; database table.
  *
  * @author Brian Wing Shun Chan
  * @see Wing
@@ -38,7 +38,7 @@ public class WingTable extends BaseTable<WingTable> {
 		"status", String.class, Types.VARCHAR, Column.FLAG_DEFAULT);
 
 	private WingTable() {
-		super("wings", WingTable::new);
+		super("apgovt_wings", WingTable::new);
 	}
 
 }

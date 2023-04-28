@@ -168,11 +168,11 @@ public class KeyPeoplePortlet extends MVCPortlet {
 						         keyPeople=KeyPeopleLocalServiceUtil.fetchKeyPeople(keyPeopleId);
 						         keyPeople.setEmpOrder(EmployeeOrder); 
 						         KeyPeopleLocalServiceUtil.updateKeyPeople(keyPeople);
-						         jsonUser.put("updated", "true");
+						        // jsonUser.put("updated", "true");
 						     }
 						     catch (Exception e) {
 								e.getMessage();
-								jsonUser.put("updated", "false");
+								//jsonUser.put("updated", "false");
 							} 
 						   }
 					}
@@ -297,16 +297,23 @@ public class KeyPeoplePortlet extends MVCPortlet {
 			System.out.println("isNew>>>"+isNew);
 			if(isNew)
 			{
-				System.out.println("Step-1>");
-				WingLocalServiceUtil.addWing(wing);
+				System.out.println("Step-1> Inside Add");
+				System.out.println(wing.getWid());
+				System.out.println(wing.getWname());
+				wing=WingLocalServiceUtil.createWing(wid);
+				
+				
 				System.out.println("Step-2>>>");
 			}
-			else {
-				WingLocalServiceUtil.updateWing(wing);
-			}
+			wing.setStatus(status);
+			wing.setWname(name);
+		 
+				//WingLocalServiceUtil.updateWing(wing);
+			
 		}
 		catch (Exception e) {
-			e.getMessage();
+			
+			System.out.println(e.getMessage());
 		}
 		System.out.println("Wing Added successfully");
 		

@@ -534,6 +534,9 @@ button#rfis {
          <li  class="anchoroful">
             <a href="/web/guest/manage_who-is-who" class="${page.plid}  active  nav-link Complaitsec">Manage Who is Who</a>
         </li>
+         <li  class="anchoroful">
+            <a href="/web/guest/news-and-events1" class="${page.plid}  active  nav-link Complaitsec">News and Events</a>
+        </li>
         </ul>
     </div>
   </nav>

@@ -1,3 +1,6 @@
+<%@page import="com.liferay.portal.kernel.dao.orm.OrderFactoryUtil"%>
+<%@page import="com.liferay.portal.kernel.dao.orm.RestrictionsFactoryUtil"%>
+<%@page import="com.liferay.portal.kernel.dao.orm.DynamicQuery"%>
 <%@page import="com.kpmg.customtables.service.NewsAndEventsLocalServiceUtil"%>
 <%@page import="com.kpmg.customtables.model.NewsAndEvents"%>
 <%@page import="com.liferay.portal.kernel.util.ParamUtil"%>
@@ -7,7 +10,10 @@
 <%@page import="java.util.Date"%>
 <%@page import="javax.portlet.PortletURL"%>
 <%@page import="java.util.List"%>
+<%@page import="com.liferay.portal.kernel.util.WebKeys"%>
+<%@page import="com.liferay.portal.kernel.theme.ThemeDisplay"%>
 <%@ include file="/init.jsp" %>
+
 
 <style>
 .alert-notifications{
@@ -18,15 +24,23 @@ display:none;
 } 
 </style>
 <%
-System.out.println(".getURLCurrent()()>>>"+themeDisplay.getURLCurrent());
+//System.out.println(".getURLCurrent()()>>>"+themeDisplay.getURLCurrent());
 
 String pageUrl=themeDisplay.getURLCurrent();
-System.out.println("pageUrl>>>"+pageUrl);
+//System.out.println("pageUrl>>>"+pageUrl);
 if(!role.equalsIgnoreCase("Departmentuser")){
 	%>
 	
 	<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" referrerpolicy="no-referrer" rel="stylesheet">
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" referrerpolicy="no-referrer" rel="stylesheet">
+
+<%
+themeDisplay = (ThemeDisplay)request.getAttribute(WebKeys.THEME_DISPLAY);
+long pageId=themeDisplay.getPlid();
+//System.out.println("pageId="+pageId);
+
+if(pageId==6){ %>
+
 <section class="newsEvents_section">
 <div class="container-fluid">
   <h2 class="text-start">Latest News &amp; <span>Events</span></h2>
@@ -39,45 +53,58 @@ if(!role.equalsIgnoreCase("Departmentuser")){
 <ul class="spotlight_news"> 
 
 <%
- 
-List<NewsAndEvents> resultList=null;
-int size=NewsAndEventsLocalServiceUtil.getNewsAndEventsesCount();
-List<NewsAndEvents> NewsAndEventsList =NewsAndEventsLocalServiceUtil.getNewsAndEventses(0, size) ;
- for(NewsAndEvents newsAndEvents:NewsAndEventsList){
-long newsId =0L;
-  	String newsDescription ="";
-  	String publishDate="";
-  	long fileEntryId=0L;
-  	String fileUrl="";
-  	SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
-  	try{
-  	
-  	newsId =newsAndEvents.getNewsId();
-  		  newsDescription =newsAndEvents.getNewsdescription();
-  		  fileEntryId=newsAndEvents.getFileEntryId();
-      	  if(fileEntryId!=0L){
-				try{
-					fileUrl = NewsAndEventsPortlet.getFile(fileEntryId, themeDisplay.getScopeGroupId());	  
-				}
-				catch(Exception e){
-					
-				}
-      	  }
-        try{
-			Date dt = newsAndEvents.getNewsDate();
-			publishDate = sdf.format(dt);
-		}catch(Exception e){
-			e.printStackTrace();
-		}
-               
-}catch(Exception e){
-e.printStackTrace();
-}
-%>
+ 	List<NewsAndEvents> resultList=null;
+ //int size=NewsAndEventsLocalServiceUtil.getNewsAndEventsesCount();
+ //List<NewsAndEvents> NewsAndEventsList =NewsAndEventsLocalServiceUtil.getNewsAndEventses(0, size) ;
+   DynamicQuery dynamicQuery = null; 
+ 				dynamicQuery =NewsAndEventsLocalServiceUtil.dynamicQuery(); 				
+ 				
+                       dynamicQuery.add(RestrictionsFactoryUtil.eq("spotlight", 1));
+                       dynamicQuery.addOrder(OrderFactoryUtil.desc("newsDate"));          
+ 		List<NewsAndEvents> newsAndEventsList =null;
+ 		try{
+ 			newsAndEventsList=NewsAndEventsLocalServiceUtil.dynamicQuery(dynamicQuery, 0,
+ 				NewsAndEventsLocalServiceUtil.getNewsAndEventsesCount());
+ 		}
+ 		catch(Exception e){
+ 			
+ 		}
+ 		try{
+ 		  
+ 		for (NewsAndEvents newsAndEvents : newsAndEventsList) {
+ 			long newsId = 0L;
+ 			String newsDescription = "";
+ 			String publishDate = "";
+ 			long fileEntryId = 0L;
+ 			String fileUrl = "";
+ 			SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
+ 			try {
+
+ 				newsId = newsAndEvents.getNewsId();
+ 				newsDescription = newsAndEvents.getNewsdescription();
+ 				fileEntryId = newsAndEvents.getFileEntryId();
+ 				if (fileEntryId != 0L) {
+ 					try {
+ 						fileUrl = NewsAndEventsPortlet.getFile(fileEntryId, themeDisplay.getScopeGroupId());
+ 					} catch (Exception e) {
+
+ 					}
+ 				}
+ 				try {
+ 					Date dt = newsAndEvents.getNewsDate();
+ 					publishDate = sdf.format(dt);
+ 				} catch (Exception e) {
+ 					//e.printStackTrace();
+ 				}
+
+ 			} catch (Exception e) {
+ 				//e.printStackTrace();
+ 			}
+ %>
 
 <li><span class="fw-bold"><%=publishDate %> </span><br><%=newsDescription %>
 <% if(fileUrl!=null && fileUrl!=""){ %><a href="<%=fileUrl %>" target="_blank">( Click here to download)</a>&nbsp;<% } %></li>
-<% } %>    </ul>
+<% } }catch(Exception e){} %>    </ul>
 </div></marquee>
   </section>
 </div>
@@ -93,8 +120,22 @@ e.printStackTrace();
    <div class="owl-stage-outer">
       <div class="owl-stage" style="transform: translate3d(-9286px, 0px, 0px); transition: all 0.25s ease 0s; width: auto;">
 
-  <%   
-   for(NewsAndEvents newsAndEvents:NewsAndEventsList){
+  <%  
+  DynamicQuery dynamicQuery1 = null;
+	dynamicQuery1 = NewsAndEventsLocalServiceUtil.dynamicQuery();
+	dynamicQuery1.add(RestrictionsFactoryUtil.eq("home", 1));
+	dynamicQuery1.addOrder(OrderFactoryUtil.desc("newsDate"));
+	List<NewsAndEvents> newsAndEventsList1 =null;
+	try{
+	   newsAndEventsList1 = NewsAndEventsLocalServiceUtil.dynamicQuery(dynamicQuery1, 0,
+			NewsAndEventsLocalServiceUtil.getNewsAndEventsesCount());
+	}
+	catch(Exception e)
+	{}
+  try
+  {
+   for(NewsAndEvents newsAndEvents:newsAndEventsList1)
+   {
     long newsId =0L;
   	String newsDescription ="";
   	String publishDate1="";
@@ -121,14 +162,15 @@ e.printStackTrace();
 			publishDate1 = sdf1.format(dt);
 			day=dt.getDate();
 		}catch(Exception e){
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
                
 }catch(Exception e){
-e.printStackTrace();
+//e.printStackTrace();
 }
+  
 %>
-            <div class="owl-item cloned" style="width: 230.983px; margin-right: 20px;">
+            <div class="owl-item active" style="width: 230.983px; margin-right: 20px;">
             
             <div class="item">
 
@@ -153,7 +195,13 @@ e.printStackTrace();
 </div>
 
 </div></div>
-<% } %>
+<% }
+}
+catch(Exception e)
+{
+}
+  
+  %>
     
                       
          
@@ -201,6 +249,195 @@ e.printStackTrace();
 </script>
 
 </div></div></section>
+<%}  else{ %>
+<section class="blue_section">  
+  <div class="container">
+    <h2>Our Healthcare <span>Services</span></h2>
+    <div class="row">
+
+  <div class="col-lg-5 p-3">
+    <section class="spotlight p-4">
+      <h3 class="bordertitle">News &amp; Events</h3>
+  <marquee direction="up" scrolldelay="300" class="spotlight_section" id="scroll_news"><div onmouseover="document.getElementById('scroll_news').stop();" onmouseout="document.getElementById('scroll_news').start();">
+   <ul class="spotlight_news">
+  
+  <%
+     List<NewsAndEvents> resultList=null;
+  // int size=NewsAndEventsLocalServiceUtil.getNewsAndEventsesCount();
+   //List<NewsAndEvents> NewsAndEventsList =NewsAndEventsLocalServiceUtil.getNewsAndEventses(0, size) ;
+     DynamicQuery dynamicQuery = null; 
+           dynamicQuery =NewsAndEventsLocalServiceUtil.dynamicQuery(); 		
+           String link1="";
+           String link2="";
+           String link3="";
+           String link4="";
+                         if(pageId==19)
+                         {
+                         dynamicQuery.add(RestrictionsFactoryUtil.eq("asri", 1));
+                         link1="/web/guest/asri_hospitalsearch";
+                         link2="/web/guest/asri_specilitysearch";
+                         link3="/web/guest/arogyamithra";
+                         link4="/web/guest/asri_proceduresearch";
+                         }
+                         else if(pageId==25)
+                         {
+                        	 dynamicQuery.add(RestrictionsFactoryUtil.eq("wjhs", 1));
+                        	 link1="/web/guest/wjhs_hospitalsearch";
+                        	 link2="/web/guest/wjhs_specilitysearch";
+                        	 link3="/web/guest/mithrawjhs";
+                        	 link4="/web/guest/wjhs_proceduresearch";
+                         }
+                         else if(pageId==21)
+                         {
+                        	 dynamicQuery.add(RestrictionsFactoryUtil.eq("aarogyaraksha", 1));
+                        	 link1="/web/guest/arogyaraksha_hospitalsearch";
+                        	 link2="/web/guest/arogyaraksha_specilitysearch";
+                        	 link3="https://115.124.110.149/web/guest/mithraraksha";
+                        	 link4="/web/guest/arogyaraksha_proceduresearch";
+                         }
+                         else if(pageId==27)
+                         {
+                        	 dynamicQuery.add(RestrictionsFactoryUtil.eq("ehs", 1));
+                        	 link1="/web/guest/ehs_hospitalsearch";
+                        	 link2="/web/guest/ehs_specilitysearch";
+                        	 link3="https://115.124.110.149/web/guest/mithraehs";
+                        	 link4="/web/guest/ehs_proceduresearch";
+                         }
+                         dynamicQuery.addOrder(OrderFactoryUtil.desc("newsDate"));
+       List<NewsAndEvents> newsAndEventsList =null;
+       try{
+    	   newsAndEventsList=NewsAndEventsLocalServiceUtil.dynamicQuery(dynamicQuery, 0,
+           NewsAndEventsLocalServiceUtil.getNewsAndEventsesCount());
+       }
+       catch(Exception e){} 
+       if(newsAndEventsList!=null){
+       for (NewsAndEvents newsAndEvents : newsAndEventsList) {
+         long newsId = 0L;
+         String newsDescription = "";
+         String publishDate = "";
+         long fileEntryId = 0L;
+         String fileUrl = "";
+         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
+         try {
+  
+           newsId = newsAndEvents.getNewsId();
+           newsDescription = newsAndEvents.getNewsdescription();
+           fileEntryId = newsAndEvents.getFileEntryId();
+           if (fileEntryId != 0L) {
+             try {
+               fileUrl = NewsAndEventsPortlet.getFile(fileEntryId, themeDisplay.getScopeGroupId());
+             } catch (Exception e) {
+  
+             }
+           }
+           try {
+             Date dt = newsAndEvents.getNewsDate();
+             publishDate = sdf.format(dt);
+           } catch (Exception e) {
+             //e.printStackTrace();
+           }
+  
+         } catch (Exception e) {
+           //e.printStackTrace();
+         }
+   %>
+  
+  <li><span class="fw-bold"><%=publishDate %> </span><br><%=newsDescription %>
+  <% if(fileUrl!=null && fileUrl!=""){ %><a href="<%=fileUrl %>" target="_blank">( Click here to download)</a>&nbsp;<% } %></li>
+  <% } } %>    </ul>
+  </div></marquee>
+    </section>
+  </div>
+    
+  <div class="col-lg-7 p-3">
+        <div class="container">
+          <div class="row">
+         
+             <div class="col-lg-6">
+            <div class="flip-container">
+              <div class="flipper">
+                <div class="front">
+                    <div class="caption text-center">
+                      <i class="fa-solid fa-hospitals"></i>
+                        <h5>Hospital Search </h5>
+                      <a href=<%=link1 %> class="btn btn-success">Learn More</a>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>List of Empanelled Hospitals with their District, Location and speciality...
+                  </p>
+                  <a href=<%=link1 %> class="btn btn-success">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.col-lg-6 -->
+
+         <div class="col-lg-6">
+            <div class="flip-container">
+              <div class="flipper">
+                <div class="front">
+                    <div class="caption text-center">
+                        <i class="fa-solid fa-hands-holding-diamond"></i>
+                        <h5 class="service_heading">Speciality Search</h5>
+                      <a href=<%=link2 %> class="btn btn-success">Learn More</a>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>Hospital List based on Specialities...</p>
+                  <a href=<%=link2 %> class="btn btn-success">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.col-lg-6 -->
+          </div><!--end of row -->
+          <div class="row">		
+          <div class="col-lg-6">
+            <div class="flip-container">
+              <div class="flipper">
+                <div class="front">
+                        <i class="fa-solid fa-list-check"></i>
+                        <h5>Mitra Search</h5>
+                      <a href=<%=link3 %> class="btn btn-success">Learn More</a>
+                  </div>
+                
+                <div class="back">
+                  <p>Know your Mitra of Hospitals...</p>
+                  <a href=<%=link3 %> class="btn btn-success">Learn More</a>
+                </div>
+              </div></div>
+            </div> <!-- /.col-lg-6 -->
+             <div class="col-lg-6">
+            <div class="flip-container">
+              <div class="flipper">
+                <div class="front">
+                <div class="caption text-center">
+                      <i class="fa-solid fa-bed-pulse"></i>
+                    <h5>Procedure Search</h5>
+                   <a href=<%=link4 %> class="btn btn-success">Learn More</a>
+                  </div>
+                </div>
+                <div class="back">
+                  <p>Search for the surgeries and therapies available...</p>
+                  <a href=<%=link4 %> class="btn btn-success">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.col-lg-6 -->
+  </div><!--end of row -->
+        
+
+          </div>
+        </div>
+      
+
+
+      </div>
+    </div>
+</section>
+
+<%}
+%>
+
 	
  <% 
 }
@@ -224,6 +461,7 @@ else{
   String thBooktitle="News Description";
   String thPublishdate="News Date";
   String thDownload="Download";
+  String tnd="News Telugu Description";
  
   PortletURL iteratorNewURL = renderResponse.createRenderURL(); 
   iteratorNewURL.setParameter("mvcPath", "/view.jsp");
@@ -238,16 +476,16 @@ else{
   long sNo=(delta * (cur-1))+1;
   
   String friendlyURL= themeDisplay.getPortalURL();//http://localhost:7070/
-  System.out.println("getPortalURL()>>>"+friendlyURL);
-  System.out.println("role>>>"+role);
+  //System.out.println("getPortalURL()>>>"+friendlyURL);
+  //System.out.println("role>>>"+role);
   
   
   
   
   
-  System.out.println(".getURLCurrent()()>>>"+themeDisplay.getURLCurrent());
-  System.out.println("getURLHome()>>>"+themeDisplay.getURLHome());
-  //System.out.println("getPortalURL()>>>"+themeDisplay);
+  //System.out.println(".getURLCurrent()()>>>"+themeDisplay.getURLCurrent());
+  //System.out.println("getURLHome()>>>"+themeDisplay.getURLHome());
+  //System.out.t.println("getPortalURL()>>>"+themeDisplay);
    
   
  %>
@@ -273,8 +511,15 @@ else{
 			<div class="table-responsive">
 		<%
 			List<NewsAndEvents> resultList=null;
-			int size=NewsAndEventsLocalServiceUtil.getNewsAndEventsesCount();
-			List<NewsAndEvents> NewsAndEventsList =NewsAndEventsLocalServiceUtil.getNewsAndEventses(0, size) ;
+		List<NewsAndEvents> NewsAndEventsList =null;
+			int size=0;
+			try{
+				size=NewsAndEventsLocalServiceUtil.getNewsAndEventsesCount();
+				NewsAndEventsList =NewsAndEventsLocalServiceUtil.getNewsAndEventses(0, size) ;
+			}
+			catch(Exception e){
+				
+			}
 		%>
 	     		
 	 <liferay-ui:search-container deltaConfigurable="true" delta="10" total="<%=size%>" emptyResultsMessage="No records found" iteratorURL="<%=iteratorNewURL%>" >			 
@@ -282,7 +527,7 @@ else{
 			 		try{
 			 			resultList = ListUtil.subList(NewsAndEventsList, searchContainer.getStart(),searchContainer.getEnd());
 			 		}catch(Exception e){
-			 			e.printStackTrace();
+			 			////e.printStackTrace();
 			 		}
 			 	%>
 	
@@ -295,11 +540,13 @@ else{
 		      						      			      	String publishDate="";
 		      						      			      	long fileEntryId=0L;
 		      						      			      	String fileUrl="";
+		      						      			    String tnewsdescription="";
 		      						      			      	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		      						      			      	try{
 		      						      			      	
 		      						      			      	newsId =newsAndEvents.getNewsId();
 		      						      			      		  newsDescription =newsAndEvents.getNewsdescription();
+		      						      			      	tnewsdescription=newsAndEvents.getTi_newsdescription();
 		      						      			      		  fileEntryId=newsAndEvents.getFileEntryId();
 		      						      				      	  if(fileEntryId!=0L){
 		      						      								try{
@@ -313,17 +560,18 @@ else{
 		      						      							Date dt = newsAndEvents.getNewsDate();
 		      						      							publishDate = sdf.format(dt);
 		      						      						}catch(Exception e){
-		      						      							e.printStackTrace();
+		      						      							//e.printStackTrace();
 		      						      						}
 		      						      	                           
 		      						      		 }catch(Exception e){
-		      						      			e.printStackTrace();
+		      						      			////e.printStackTrace();
 		      						      		}
 		      						      	%>
 	  	<liferay-ui:search-container-column-text name="<%=thSno %>" value="<%= String.valueOf(sNo++) %>" />
 		<liferay-ui:search-container-column-text name="<%=thBooktitle %>" value="<%= newsDescription %>" />
+	  			 <liferay-ui:search-container-column-text name="<%=tnd %>" value="<%=tnewsdescription %>"  /> 
+	  	
 	  	<liferay-ui:search-container-column-text name="<%=thPublishdate %>" value="<%=publishDate %>"  /> 
-		 
 		<% if(role.equalsIgnoreCase("Departmentuser")){ %>
 		<liferay-ui:search-container-column-text name="Manage">
 		<div>

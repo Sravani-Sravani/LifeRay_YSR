@@ -21,7 +21,7 @@ import com.keyPeopleService.model.impl.KeyPeopleImpl;
 import com.keyPeopleService.model.impl.KeyPeopleModelImpl;
 import com.keyPeopleService.service.persistence.KeyPeoplePersistence;
 import com.keyPeopleService.service.persistence.KeyPeopleUtil;
-import com.keyPeopleService.service.persistence.impl.constants.KeyPeoplePersistenceConstants;
+import com.keyPeopleService.service.persistence.impl.constants.FOOPersistenceConstants;
 
 import com.liferay.petra.string.StringBundler;
 import com.liferay.portal.kernel.configuration.Configuration;
@@ -641,7 +641,7 @@ public class KeyPeoplePersistenceImpl
 
 	@Override
 	@Reference(
-		target = KeyPeoplePersistenceConstants.SERVICE_CONFIGURATION_FILTER,
+		target = FOOPersistenceConstants.SERVICE_CONFIGURATION_FILTER,
 		unbind = "-"
 	)
 	public void setConfiguration(Configuration configuration) {
@@ -649,7 +649,7 @@ public class KeyPeoplePersistenceImpl
 
 	@Override
 	@Reference(
-		target = KeyPeoplePersistenceConstants.ORIGIN_BUNDLE_SYMBOLIC_NAME_FILTER,
+		target = FOOPersistenceConstants.ORIGIN_BUNDLE_SYMBOLIC_NAME_FILTER,
 		unbind = "-"
 	)
 	public void setDataSource(DataSource dataSource) {
@@ -658,7 +658,7 @@ public class KeyPeoplePersistenceImpl
 
 	@Override
 	@Reference(
-		target = KeyPeoplePersistenceConstants.ORIGIN_BUNDLE_SYMBOLIC_NAME_FILTER,
+		target = FOOPersistenceConstants.ORIGIN_BUNDLE_SYMBOLIC_NAME_FILTER,
 		unbind = "-"
 	)
 	public void setSessionFactory(SessionFactory sessionFactory) {

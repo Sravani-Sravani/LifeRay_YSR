@@ -1,11 +1,11 @@
-create table designation (
+create table apgovt_designation (
 	did LONG not null primary key,
 	wid LONG,
 	dname VARCHAR(75) null,
 	status VARCHAR(75) null
 );
 
-create table keyPeople (
+create table apgovt_keyPeople (
 	trust_userId LONG not null primary key,
 	empname VARCHAR(75) null,
 	phone VARCHAR(75) null,
@@ -20,7 +20,7 @@ create table keyPeople (
 	modifyBy VARCHAR(75) null
 );
 
-create table wings (
+create table apgovt_wings (
 	wid LONG not null primary key,
 	wname VARCHAR(75) null,
 	status VARCHAR(75) null

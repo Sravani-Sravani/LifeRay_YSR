@@ -38,6 +38,24 @@
       width: 150px;" src="/documents/d/guest/iris-image"></td> 
        <td><a href="/documents/d/guest/iris-user-manual" style="text-decoration:none"><h6>(Click here to download IRIS)</h6></a></td> 
        <td><a href="/documents/d/guest/iris-software-1" style="text-decoration:none"><h6>(Click here to download IRIS)</h6></a></td> 
+       </tr>
+        <tr> 
+       <td><img style="border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+      width: 150px;height:150px;" src="<%=request.getContextPath()%>/images/mantra.jpeg"></td> 
+       <td><a href="<%=request.getContextPath()%>/images/Mantra_RD_Service_MIS100V2_Manual_Windows.pdf" style="text-decoration:none"><h6>(Click here to download MANTRA Manual)</h6></a> 
+      <p style="font-size:17px;">&nbsp;&nbsp;&nbsp;&nbsp;<b>Customercare:</b> 079-49068000
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<b>Email:</b> servico@matratec.com
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<b>Fax:</b> +9179 4004 4043
+      </p>
+       </td> 
+       <td><a href="<%=request.getContextPath()%>/images/MantraRDServiceIris_1.0.4.exe" style="text-decoration:none"><h6>(Click here to download MANTRA Software)</h6></a>
+       <a href="https://download.mantratecapp.com/forms/downloadfiles" style="text-decoration:none"><h6>(Click here to download updated hyperlink)</h6></a>
+       </td> 
+       </tr>
      </tbody> 
     </table> 
      </div>

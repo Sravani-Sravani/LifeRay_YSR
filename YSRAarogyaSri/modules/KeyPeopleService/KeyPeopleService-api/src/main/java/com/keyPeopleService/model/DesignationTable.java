@@ -20,7 +20,7 @@ import com.liferay.petra.sql.dsl.base.BaseTable;
 import java.sql.Types;
 
 /**
- * The table class for the &quot;designation&quot; database table.
+ * The table class for the &quot;apgovt_designation&quot; database table.
  *
  * @author Brian Wing Shun Chan
  * @see Designation
@@ -40,7 +40,7 @@ public class DesignationTable extends BaseTable<DesignationTable> {
 		"status", String.class, Types.VARCHAR, Column.FLAG_DEFAULT);
 
 	private DesignationTable() {
-		super("designation", DesignationTable::new);
+		super("apgovt_designation", DesignationTable::new);
 	}
 
 }

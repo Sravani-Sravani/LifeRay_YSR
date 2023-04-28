@@ -6,4 +6,5 @@ Liferay-Service: true
 -dsannotations-options: inherit
 Export-Package: \
 	com.keyPeopleService.model,\
+	com.keyPeopleService.service.impl,\
 	com.keyPeopleService.model.impl

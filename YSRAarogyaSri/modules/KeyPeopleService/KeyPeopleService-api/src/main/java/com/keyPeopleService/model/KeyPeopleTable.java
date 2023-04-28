@@ -22,7 +22,7 @@ import java.sql.Types;
 import java.util.Date;
 
 /**
- * The table class for the &quot;keyPeople&quot; database table.
+ * The table class for the &quot;apgovt_keyPeople&quot; database table.
  *
  * @author Brian Wing Shun Chan
  * @see KeyPeople
@@ -58,7 +58,7 @@ public class KeyPeopleTable extends BaseTable<KeyPeopleTable> {
 		"modifyBy", String.class, Types.VARCHAR, Column.FLAG_DEFAULT);
 
 	private KeyPeopleTable() {
-		super("keyPeople", KeyPeopleTable::new);
+		super("apgovt_keyPeople", KeyPeopleTable::new);
 	}
 
 }

@@ -1,6 +1,5 @@
 Bundle-Name: KeyPeople
 Bundle-SymbolicName: com.keyPeople
 Bundle-Version: 1.0.0
-Export-Package: \
-	com.keyPeopleService.model.impl,\
-	com.keyPeople.constants
+Import-Package: *; version="0";resolution:=optional
+	

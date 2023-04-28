@@ -143,6 +143,90 @@ public interface NewsAndEventsModel extends BaseModel<NewsAndEvents> {
 	public void setFileEntryId(long fileEntryId);
 
 	/**
+	 * Returns the home of this news and events.
+	 *
+	 * @return the home of this news and events
+	 */
+	public int getHome();
+
+	/**
+	 * Sets the home of this news and events.
+	 *
+	 * @param home the home of this news and events
+	 */
+	public void setHome(int home);
+
+	/**
+	 * Returns the spotlight of this news and events.
+	 *
+	 * @return the spotlight of this news and events
+	 */
+	public int getSpotlight();
+
+	/**
+	 * Sets the spotlight of this news and events.
+	 *
+	 * @param spotlight the spotlight of this news and events
+	 */
+	public void setSpotlight(int spotlight);
+
+	/**
+	 * Returns the asri of this news and events.
+	 *
+	 * @return the asri of this news and events
+	 */
+	public int getAsri();
+
+	/**
+	 * Sets the asri of this news and events.
+	 *
+	 * @param asri the asri of this news and events
+	 */
+	public void setAsri(int asri);
+
+	/**
+	 * Returns the ehs of this news and events.
+	 *
+	 * @return the ehs of this news and events
+	 */
+	public int getEhs();
+
+	/**
+	 * Sets the ehs of this news and events.
+	 *
+	 * @param ehs the ehs of this news and events
+	 */
+	public void setEhs(int ehs);
+
+	/**
+	 * Returns the aarogyaraksha of this news and events.
+	 *
+	 * @return the aarogyaraksha of this news and events
+	 */
+	public int getAarogyaraksha();
+
+	/**
+	 * Sets the aarogyaraksha of this news and events.
+	 *
+	 * @param aarogyaraksha the aarogyaraksha of this news and events
+	 */
+	public void setAarogyaraksha(int aarogyaraksha);
+
+	/**
+	 * Returns the wjhs of this news and events.
+	 *
+	 * @return the wjhs of this news and events
+	 */
+	public int getWjhs();
+
+	/**
+	 * Sets the wjhs of this news and events.
+	 *
+	 * @param wjhs the wjhs of this news and events
+	 */
+	public void setWjhs(int wjhs);
+
+	/**
 	 * Returns the status of this news and events.
 	 *
 	 * @return the status of this news and events

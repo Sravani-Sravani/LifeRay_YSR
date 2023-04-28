@@ -8,17 +8,26 @@
  </portlet:actionURL>
  <%
  	long recordId = ParamUtil.getLong(request, "recordId");
-     System.out.println("recordId >>>"+recordId );
+     //System.out.println("recordId >>>"+recordId );
      NewsAndEvents news=null;
      String newsDescription=""; 
+     String ti_newsdescription="";
      String newsDate="";
      long fileEntryId=0L;
+     int home=0,spotlight=0,asri=0,ehs=0,aarogyaraksha=0,wjhs=0;
      SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");
      if(recordId!=0){
      	try{
      		news=NewsAndEventsLocalServiceUtil.fetchNewsAndEvents(recordId);
      		 if(news!=null){
      		 	 newsDescription=news.getNewsdescription();
+     		 	 ti_newsdescription=news.getTi_newsdescription();
+     		 	 home=news.getHome();
+     		 	spotlight=news.getSpotlight();
+     		 	asri=news.getAsri();
+     		 	ehs=news.getEhs();
+     		 	aarogyaraksha=news.getAarogyaraksha();
+     		 	wjhs=news.getWjhs();
      		 	 if(news.getNewsDate()!=null){
      				 newsDate = dateformat.format(news.getNewsDate());
      			 }
@@ -54,7 +63,7 @@
 	       <div class="col-md-6">
 	       <div class="form-group"> 
 	       
-	       <aui:input type="textarea" value="<%=newsDescription %>" name="newsDescription" label="News Descrption"   rows="3" cssClass="form-control">
+	       <aui:input type="textarea" value="<%=newsDescription %>" name="newsDescription" label="News Description"   rows="3" cssClass="form-control">
 	         <aui:validator name="required"></aui:validator>
 
 	          </aui:input> 
@@ -62,7 +71,45 @@
 	         </div>
 	        
 	       </div>
-	       <div class="col-md-6"> 
+	      
+	        <div class="col-md-6">
+	       <div class="form-group"> 
+	       
+	       <aui:input type="textarea" value="<%=ti_newsdescription %>" name="ti_newsdescription" label="News Telugu Description"   rows="3" cssClass="form-control">
+	         <aui:validator name="required"></aui:validator>
+
+	          </aui:input> 
+	       
+	         </div>
+	        
+	       </div>
+	       </div>
+	       
+	       <div class="col-md-12 row">
+           <div class="col-md-2">
+		<aui:input label="Home" id="divCheckbox" name="home" type="checkbox" value="1"  checked="<%=home==1 %>"  />
+	</div>
+	<div class="col-md-2">
+		<aui:input label="Spotlight" id="divCheckbox" name="spotlight" type="checkbox" value="1" checked="<%=spotlight== 1 %>"   />
+	 </div>
+	<div class="col-md-2">
+		<aui:input label="ASRI" id="divCheckbox" name="asri" type="checkbox"  value="1"  checked="<%=asri == 1 %>" />
+	 </div>
+	 <div class="col-md-2">
+		<aui:input label="EHS" id="divCheckbox" name="ehs" type="checkbox" value="1" checked="<%=ehs == 1 %>"   />
+	 </div>
+	<div class="col-md-2">
+		<aui:input label="Aarogya Raksha" id="divCheckbox" name="aarogyaraksha" type="checkbox" value="1" checked="<%=aarogyaraksha == 1 %>"   />
+	 </div>
+	<div class="col-md-2">
+		<aui:input label="WJHS" id="divCheckbox" name="wjhs" type="checkbox" value="1" checked="<%=wjhs == 1 %>"  />
+	 </div>
+</div>
+
+	       
+	       
+	         <div class="col-md-12 row">
+	          <div class="col-md-6"> 
 	       <div class="form-group">
 	          <aui:input type="file" name="newsDocument" label="Upload Document (Note: Upload document accept only .pdf,.jpg,.png,.gif and .webp format.)" accept="<%=NewsAndEventsPortletKeys.NEWS_FILE_CHOOSE_TYPE%>" cssClass="form-control">
 	         <%--  <aui:validator name="acceptFiles">'<%=NewsAndEventsPortletKeys.NEWS_FILE_UPLOAD_TYPES%>'</aui:validator>
@@ -87,10 +134,7 @@
 	          <p><b>Max file upload size 20MB</b></p>
 	        </div>
 	       </div> 
-	       </div>
-	       
-	       
-	         <div class="col-md-12 row">
+	         
 	       <div class="col-md-3">
 	       
 	       

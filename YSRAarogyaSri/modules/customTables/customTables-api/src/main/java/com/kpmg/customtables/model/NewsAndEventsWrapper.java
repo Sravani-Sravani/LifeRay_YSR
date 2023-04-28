@@ -48,6 +48,12 @@ public class NewsAndEventsWrapper
 		attributes.put("ti_newsdescription", getTi_newsdescription());
 		attributes.put("newsDate", getNewsDate());
 		attributes.put("fileEntryId", getFileEntryId());
+		attributes.put("home", getHome());
+		attributes.put("spotlight", getSpotlight());
+		attributes.put("asri", getAsri());
+		attributes.put("ehs", getEhs());
+		attributes.put("aarogyaraksha", getAarogyaraksha());
+		attributes.put("wjhs", getWjhs());
 		attributes.put("status", getStatus());
 		attributes.put("createdDate", getCreatedDate());
 		attributes.put("createdBy", getCreatedBy());
@@ -96,6 +102,42 @@ public class NewsAndEventsWrapper
 			setFileEntryId(fileEntryId);
 		}
 
+		Integer home = (Integer)attributes.get("home");
+
+		if (home != null) {
+			setHome(home);
+		}
+
+		Integer spotlight = (Integer)attributes.get("spotlight");
+
+		if (spotlight != null) {
+			setSpotlight(spotlight);
+		}
+
+		Integer asri = (Integer)attributes.get("asri");
+
+		if (asri != null) {
+			setAsri(asri);
+		}
+
+		Integer ehs = (Integer)attributes.get("ehs");
+
+		if (ehs != null) {
+			setEhs(ehs);
+		}
+
+		Integer aarogyaraksha = (Integer)attributes.get("aarogyaraksha");
+
+		if (aarogyaraksha != null) {
+			setAarogyaraksha(aarogyaraksha);
+		}
+
+		Integer wjhs = (Integer)attributes.get("wjhs");
+
+		if (wjhs != null) {
+			setWjhs(wjhs);
+		}
+
 		String status = (String)attributes.get("status");
 
 		if (status != null) {
@@ -133,6 +175,26 @@ public class NewsAndEventsWrapper
 	}
 
 	/**
+	 * Returns the aarogyaraksha of this news and events.
+	 *
+	 * @return the aarogyaraksha of this news and events
+	 */
+	@Override
+	public int getAarogyaraksha() {
+		return model.getAarogyaraksha();
+	}
+
+	/**
+	 * Returns the asri of this news and events.
+	 *
+	 * @return the asri of this news and events
+	 */
+	@Override
+	public int getAsri() {
+		return model.getAsri();
+	}
+
+	/**
 	 * Returns the created by of this news and events.
 	 *
 	 * @return the created by of this news and events
@@ -153,6 +215,16 @@ public class NewsAndEventsWrapper
 	}
 
 	/**
+	 * Returns the ehs of this news and events.
+	 *
+	 * @return the ehs of this news and events
+	 */
+	@Override
+	public int getEhs() {
+		return model.getEhs();
+	}
+
+	/**
 	 * Returns the file entry ID of this news and events.
 	 *
 	 * @return the file entry ID of this news and events
@@ -160,6 +232,16 @@ public class NewsAndEventsWrapper
 	@Override
 	public long getFileEntryId() {
 		return model.getFileEntryId();
+	}
+
+	/**
+	 * Returns the home of this news and events.
+	 *
+	 * @return the home of this news and events
+	 */
+	@Override
+	public int getHome() {
+		return model.getHome();
 	}
 
 	/**
@@ -223,6 +305,16 @@ public class NewsAndEventsWrapper
 	}
 
 	/**
+	 * Returns the spotlight of this news and events.
+	 *
+	 * @return the spotlight of this news and events
+	 */
+	@Override
+	public int getSpotlight() {
+		return model.getSpotlight();
+	}
+
+	/**
 	 * Returns the status of this news and events.
 	 *
 	 * @return the status of this news and events
@@ -252,9 +344,39 @@ public class NewsAndEventsWrapper
 		return model.getUuid();
 	}
 
+	/**
+	 * Returns the wjhs of this news and events.
+	 *
+	 * @return the wjhs of this news and events
+	 */
+	@Override
+	public int getWjhs() {
+		return model.getWjhs();
+	}
+
 	@Override
 	public void persist() {
 		model.persist();
+	}
+
+	/**
+	 * Sets the aarogyaraksha of this news and events.
+	 *
+	 * @param aarogyaraksha the aarogyaraksha of this news and events
+	 */
+	@Override
+	public void setAarogyaraksha(int aarogyaraksha) {
+		model.setAarogyaraksha(aarogyaraksha);
+	}
+
+	/**
+	 * Sets the asri of this news and events.
+	 *
+	 * @param asri the asri of this news and events
+	 */
+	@Override
+	public void setAsri(int asri) {
+		model.setAsri(asri);
 	}
 
 	/**
@@ -278,6 +400,16 @@ public class NewsAndEventsWrapper
 	}
 
 	/**
+	 * Sets the ehs of this news and events.
+	 *
+	 * @param ehs the ehs of this news and events
+	 */
+	@Override
+	public void setEhs(int ehs) {
+		model.setEhs(ehs);
+	}
+
+	/**
 	 * Sets the file entry ID of this news and events.
 	 *
 	 * @param fileEntryId the file entry ID of this news and events
@@ -285,6 +417,16 @@ public class NewsAndEventsWrapper
 	@Override
 	public void setFileEntryId(long fileEntryId) {
 		model.setFileEntryId(fileEntryId);
+	}
+
+	/**
+	 * Sets the home of this news and events.
+	 *
+	 * @param home the home of this news and events
+	 */
+	@Override
+	public void setHome(int home) {
+		model.setHome(home);
 	}
 
 	/**
@@ -348,6 +490,16 @@ public class NewsAndEventsWrapper
 	}
 
 	/**
+	 * Sets the spotlight of this news and events.
+	 *
+	 * @param spotlight the spotlight of this news and events
+	 */
+	@Override
+	public void setSpotlight(int spotlight) {
+		model.setSpotlight(spotlight);
+	}
+
+	/**
 	 * Sets the status of this news and events.
 	 *
 	 * @param status the status of this news and events
@@ -375,6 +527,16 @@ public class NewsAndEventsWrapper
 	@Override
 	public void setUuid(String uuid) {
 		model.setUuid(uuid);
+	}
+
+	/**
+	 * Sets the wjhs of this news and events.
+	 *
+	 * @param wjhs the wjhs of this news and events
+	 */
+	@Override
+	public void setWjhs(int wjhs) {
+		model.setWjhs(wjhs);
 	}
 
 	@Override

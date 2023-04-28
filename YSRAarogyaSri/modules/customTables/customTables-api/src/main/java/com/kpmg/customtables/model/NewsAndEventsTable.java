@@ -48,6 +48,19 @@ public class NewsAndEventsTable extends BaseTable<NewsAndEventsTable> {
 		"newsDate", Date.class, Types.TIMESTAMP, Column.FLAG_DEFAULT);
 	public final Column<NewsAndEventsTable, Long> fileEntryId = createColumn(
 		"fileEntryId", Long.class, Types.BIGINT, Column.FLAG_DEFAULT);
+	public final Column<NewsAndEventsTable, Integer> home = createColumn(
+		"home", Integer.class, Types.INTEGER, Column.FLAG_DEFAULT);
+	public final Column<NewsAndEventsTable, Integer> spotlight = createColumn(
+		"spotlight", Integer.class, Types.INTEGER, Column.FLAG_DEFAULT);
+	public final Column<NewsAndEventsTable, Integer> asri = createColumn(
+		"asri", Integer.class, Types.INTEGER, Column.FLAG_DEFAULT);
+	public final Column<NewsAndEventsTable, Integer> ehs = createColumn(
+		"ehs", Integer.class, Types.INTEGER, Column.FLAG_DEFAULT);
+	public final Column<NewsAndEventsTable, Integer> aarogyaraksha =
+		createColumn(
+			"aarogyaraksha", Integer.class, Types.INTEGER, Column.FLAG_DEFAULT);
+	public final Column<NewsAndEventsTable, Integer> wjhs = createColumn(
+		"wjhs", Integer.class, Types.INTEGER, Column.FLAG_DEFAULT);
 	public final Column<NewsAndEventsTable, String> status = createColumn(
 		"status", String.class, Types.VARCHAR, Column.FLAG_DEFAULT);
 	public final Column<NewsAndEventsTable, Date> createdDate = createColumn(

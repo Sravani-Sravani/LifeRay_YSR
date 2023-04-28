@@ -73,7 +73,10 @@ public class NewsAndEventsModelImpl
 		{"uuid_", Types.VARCHAR}, {"newsId", Types.BIGINT},
 		{"newsdescription", Types.VARCHAR},
 		{"ti_newsdescription", Types.VARCHAR}, {"newsDate", Types.TIMESTAMP},
-		{"fileEntryId", Types.BIGINT}, {"status", Types.VARCHAR},
+		{"fileEntryId", Types.BIGINT}, {"home", Types.INTEGER},
+		{"spotlight", Types.INTEGER}, {"asri", Types.INTEGER},
+		{"ehs", Types.INTEGER}, {"aarogyaraksha", Types.INTEGER},
+		{"wjhs", Types.INTEGER}, {"status", Types.VARCHAR},
 		{"createdDate", Types.TIMESTAMP}, {"createdBy", Types.BIGINT},
 		{"modifiedDate", Types.TIMESTAMP}, {"modifiedBy", Types.BIGINT}
 	};
@@ -88,6 +91,12 @@ public class NewsAndEventsModelImpl
 		TABLE_COLUMNS_MAP.put("ti_newsdescription", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("newsDate", Types.TIMESTAMP);
 		TABLE_COLUMNS_MAP.put("fileEntryId", Types.BIGINT);
+		TABLE_COLUMNS_MAP.put("home", Types.INTEGER);
+		TABLE_COLUMNS_MAP.put("spotlight", Types.INTEGER);
+		TABLE_COLUMNS_MAP.put("asri", Types.INTEGER);
+		TABLE_COLUMNS_MAP.put("ehs", Types.INTEGER);
+		TABLE_COLUMNS_MAP.put("aarogyaraksha", Types.INTEGER);
+		TABLE_COLUMNS_MAP.put("wjhs", Types.INTEGER);
 		TABLE_COLUMNS_MAP.put("status", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("createdDate", Types.TIMESTAMP);
 		TABLE_COLUMNS_MAP.put("createdBy", Types.BIGINT);
@@ -96,7 +105,7 @@ public class NewsAndEventsModelImpl
 	}
 
 	public static final String TABLE_SQL_CREATE =
-		"create table apgovt_newsandevents (uuid_ VARCHAR(75) null,newsId LONG not null primary key,newsdescription VARCHAR(75) null,ti_newsdescription VARCHAR(75) null,newsDate DATE null,fileEntryId LONG,status VARCHAR(75) null,createdDate DATE null,createdBy LONG,modifiedDate DATE null,modifiedBy LONG)";
+		"create table apgovt_newsandevents (uuid_ VARCHAR(75) null,newsId LONG not null primary key,newsdescription VARCHAR(75) null,ti_newsdescription VARCHAR(75) null,newsDate DATE null,fileEntryId LONG,home INTEGER,spotlight INTEGER,asri INTEGER,ehs INTEGER,aarogyaraksha INTEGER,wjhs INTEGER,status VARCHAR(75) null,createdDate DATE null,createdBy LONG,modifiedDate DATE null,modifiedBy LONG)";
 
 	public static final String TABLE_SQL_DROP =
 		"drop table apgovt_newsandevents";
@@ -292,6 +301,28 @@ public class NewsAndEventsModelImpl
 		attributeSetterBiConsumers.put(
 			"fileEntryId",
 			(BiConsumer<NewsAndEvents, Long>)NewsAndEvents::setFileEntryId);
+		attributeGetterFunctions.put("home", NewsAndEvents::getHome);
+		attributeSetterBiConsumers.put(
+			"home", (BiConsumer<NewsAndEvents, Integer>)NewsAndEvents::setHome);
+		attributeGetterFunctions.put("spotlight", NewsAndEvents::getSpotlight);
+		attributeSetterBiConsumers.put(
+			"spotlight",
+			(BiConsumer<NewsAndEvents, Integer>)NewsAndEvents::setSpotlight);
+		attributeGetterFunctions.put("asri", NewsAndEvents::getAsri);
+		attributeSetterBiConsumers.put(
+			"asri", (BiConsumer<NewsAndEvents, Integer>)NewsAndEvents::setAsri);
+		attributeGetterFunctions.put("ehs", NewsAndEvents::getEhs);
+		attributeSetterBiConsumers.put(
+			"ehs", (BiConsumer<NewsAndEvents, Integer>)NewsAndEvents::setEhs);
+		attributeGetterFunctions.put(
+			"aarogyaraksha", NewsAndEvents::getAarogyaraksha);
+		attributeSetterBiConsumers.put(
+			"aarogyaraksha",
+			(BiConsumer<NewsAndEvents, Integer>)
+				NewsAndEvents::setAarogyaraksha);
+		attributeGetterFunctions.put("wjhs", NewsAndEvents::getWjhs);
+		attributeSetterBiConsumers.put(
+			"wjhs", (BiConsumer<NewsAndEvents, Integer>)NewsAndEvents::setWjhs);
 		attributeGetterFunctions.put("status", NewsAndEvents::getStatus);
 		attributeSetterBiConsumers.put(
 			"status",
@@ -434,6 +465,96 @@ public class NewsAndEventsModelImpl
 		}
 
 		_fileEntryId = fileEntryId;
+	}
+
+	@JSON
+	@Override
+	public int getHome() {
+		return _home;
+	}
+
+	@Override
+	public void setHome(int home) {
+		if (_columnOriginalValues == Collections.EMPTY_MAP) {
+			_setColumnOriginalValues();
+		}
+
+		_home = home;
+	}
+
+	@JSON
+	@Override
+	public int getSpotlight() {
+		return _spotlight;
+	}
+
+	@Override
+	public void setSpotlight(int spotlight) {
+		if (_columnOriginalValues == Collections.EMPTY_MAP) {
+			_setColumnOriginalValues();
+		}
+
+		_spotlight = spotlight;
+	}
+
+	@JSON
+	@Override
+	public int getAsri() {
+		return _asri;
+	}
+
+	@Override
+	public void setAsri(int asri) {
+		if (_columnOriginalValues == Collections.EMPTY_MAP) {
+			_setColumnOriginalValues();
+		}
+
+		_asri = asri;
+	}
+
+	@JSON
+	@Override
+	public int getEhs() {
+		return _ehs;
+	}
+
+	@Override
+	public void setEhs(int ehs) {
+		if (_columnOriginalValues == Collections.EMPTY_MAP) {
+			_setColumnOriginalValues();
+		}
+
+		_ehs = ehs;
+	}
+
+	@JSON
+	@Override
+	public int getAarogyaraksha() {
+		return _aarogyaraksha;
+	}
+
+	@Override
+	public void setAarogyaraksha(int aarogyaraksha) {
+		if (_columnOriginalValues == Collections.EMPTY_MAP) {
+			_setColumnOriginalValues();
+		}
+
+		_aarogyaraksha = aarogyaraksha;
+	}
+
+	@JSON
+	@Override
+	public int getWjhs() {
+		return _wjhs;
+	}
+
+	@Override
+	public void setWjhs(int wjhs) {
+		if (_columnOriginalValues == Collections.EMPTY_MAP) {
+			_setColumnOriginalValues();
+		}
+
+		_wjhs = wjhs;
 	}
 
 	@JSON
@@ -584,6 +705,12 @@ public class NewsAndEventsModelImpl
 		newsAndEventsImpl.setTi_newsdescription(getTi_newsdescription());
 		newsAndEventsImpl.setNewsDate(getNewsDate());
 		newsAndEventsImpl.setFileEntryId(getFileEntryId());
+		newsAndEventsImpl.setHome(getHome());
+		newsAndEventsImpl.setSpotlight(getSpotlight());
+		newsAndEventsImpl.setAsri(getAsri());
+		newsAndEventsImpl.setEhs(getEhs());
+		newsAndEventsImpl.setAarogyaraksha(getAarogyaraksha());
+		newsAndEventsImpl.setWjhs(getWjhs());
 		newsAndEventsImpl.setStatus(getStatus());
 		newsAndEventsImpl.setCreatedDate(getCreatedDate());
 		newsAndEventsImpl.setCreatedBy(getCreatedBy());
@@ -610,6 +737,14 @@ public class NewsAndEventsModelImpl
 			this.<Date>getColumnOriginalValue("newsDate"));
 		newsAndEventsImpl.setFileEntryId(
 			this.<Long>getColumnOriginalValue("fileEntryId"));
+		newsAndEventsImpl.setHome(this.<Integer>getColumnOriginalValue("home"));
+		newsAndEventsImpl.setSpotlight(
+			this.<Integer>getColumnOriginalValue("spotlight"));
+		newsAndEventsImpl.setAsri(this.<Integer>getColumnOriginalValue("asri"));
+		newsAndEventsImpl.setEhs(this.<Integer>getColumnOriginalValue("ehs"));
+		newsAndEventsImpl.setAarogyaraksha(
+			this.<Integer>getColumnOriginalValue("aarogyaraksha"));
+		newsAndEventsImpl.setWjhs(this.<Integer>getColumnOriginalValue("wjhs"));
 		newsAndEventsImpl.setStatus(
 			this.<String>getColumnOriginalValue("status"));
 		newsAndEventsImpl.setCreatedDate(
@@ -737,6 +872,18 @@ public class NewsAndEventsModelImpl
 
 		newsAndEventsCacheModel.fileEntryId = getFileEntryId();
 
+		newsAndEventsCacheModel.home = getHome();
+
+		newsAndEventsCacheModel.spotlight = getSpotlight();
+
+		newsAndEventsCacheModel.asri = getAsri();
+
+		newsAndEventsCacheModel.ehs = getEhs();
+
+		newsAndEventsCacheModel.aarogyaraksha = getAarogyaraksha();
+
+		newsAndEventsCacheModel.wjhs = getWjhs();
+
 		newsAndEventsCacheModel.status = getStatus();
 
 		String status = newsAndEventsCacheModel.status;
@@ -863,6 +1010,12 @@ public class NewsAndEventsModelImpl
 	private String _ti_newsdescription;
 	private Date _newsDate;
 	private long _fileEntryId;
+	private int _home;
+	private int _spotlight;
+	private int _asri;
+	private int _ehs;
+	private int _aarogyaraksha;
+	private int _wjhs;
 	private String _status;
 	private Date _createdDate;
 	private long _createdBy;
@@ -905,6 +1058,12 @@ public class NewsAndEventsModelImpl
 		_columnOriginalValues.put("ti_newsdescription", _ti_newsdescription);
 		_columnOriginalValues.put("newsDate", _newsDate);
 		_columnOriginalValues.put("fileEntryId", _fileEntryId);
+		_columnOriginalValues.put("home", _home);
+		_columnOriginalValues.put("spotlight", _spotlight);
+		_columnOriginalValues.put("asri", _asri);
+		_columnOriginalValues.put("ehs", _ehs);
+		_columnOriginalValues.put("aarogyaraksha", _aarogyaraksha);
+		_columnOriginalValues.put("wjhs", _wjhs);
 		_columnOriginalValues.put("status", _status);
 		_columnOriginalValues.put("createdDate", _createdDate);
 		_columnOriginalValues.put("createdBy", _createdBy);
@@ -945,15 +1104,27 @@ public class NewsAndEventsModelImpl
 
 		columnBitmasks.put("fileEntryId", 32L);
 
-		columnBitmasks.put("status", 64L);
+		columnBitmasks.put("home", 64L);
 
-		columnBitmasks.put("createdDate", 128L);
+		columnBitmasks.put("spotlight", 128L);
 
-		columnBitmasks.put("createdBy", 256L);
+		columnBitmasks.put("asri", 256L);
 
-		columnBitmasks.put("modifiedDate", 512L);
+		columnBitmasks.put("ehs", 512L);
 
-		columnBitmasks.put("modifiedBy", 1024L);
+		columnBitmasks.put("aarogyaraksha", 1024L);
+
+		columnBitmasks.put("wjhs", 2048L);
+
+		columnBitmasks.put("status", 4096L);
+
+		columnBitmasks.put("createdDate", 8192L);
+
+		columnBitmasks.put("createdBy", 16384L);
+
+		columnBitmasks.put("modifiedDate", 32768L);
+
+		columnBitmasks.put("modifiedBy", 65536L);
 
 		_columnBitmasks = Collections.unmodifiableMap(columnBitmasks);
 	}

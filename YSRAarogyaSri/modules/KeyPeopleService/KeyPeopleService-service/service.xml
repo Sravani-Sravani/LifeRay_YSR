@@ -2,9 +2,9 @@
 <!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
 
 <service-builder dependency-injector="ds" package-path="com.keyPeopleService">
-	<namespace>KeyPeople</namespace>
+	<namespace>FOO</namespace>
 	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
-    <entity name="KeyPeople" remote-service="false" local-service="true" table="keyPeople">
+	<entity name="KeyPeople" remote-service="false" local-service="true" table="apgovt_keyPeople">
         <column name="trust_userId" primary="true" type="long" id-type="increment"></column>
         <column name="empname" type="String"></column>
         <column name="phone" type="String"></column>
@@ -21,14 +21,14 @@
 			<order-column name="empOrder" />
 		</order>
     </entity>
-    <entity name="Wing" remote-service="false" local-service="true" table="wings">
+    <entity name="Wing" remote-service="false" local-service="true" table="apgovt_wings">
         <column name="wid" primary="true" type="long" id-type="increment"></column>
         <column name="wname" type="String"></column>
         <column name="status" type="String"></column>
         
     </entity>
     
-     <entity name="Designation" remote-service="false" local-service="true" table="designation">
+     <entity name="Designation" remote-service="false" local-service="true" table="apgovt_designation">
         <column name="did" primary="true" type="long" id-type="increment"></column>
         <column name="wid" type="long"></column>
         <column name="dname" type="String"></column>

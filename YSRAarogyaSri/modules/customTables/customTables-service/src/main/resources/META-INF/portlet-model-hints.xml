@@ -8,6 +8,12 @@
 		<field name="ti_newsdescription" type="String" />
 		<field name="newsDate" type="Date" />
 		<field name="fileEntryId" type="long" />
+		<field name="home" type="int" />
+		<field name="spotlight" type="int" />
+		<field name="asri" type="int" />
+		<field name="ehs" type="int" />
+		<field name="aarogyaraksha" type="int" />
+		<field name="wjhs" type="int" />
 		<field name="status" type="String" />
 		<field name="createdDate" type="Date" />
 		<field name="createdBy" type="long" />

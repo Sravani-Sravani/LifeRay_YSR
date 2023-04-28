@@ -5,7 +5,7 @@
 	<import class="com.keyPeopleService.model.Designation" />
 	<import class="com.keyPeopleService.model.KeyPeople" />
 	<import class="com.keyPeopleService.model.Wing" />
-	<class name="com.keyPeopleService.model.impl.DesignationImpl" table="designation">
+	<class name="com.keyPeopleService.model.impl.DesignationImpl" table="apgovt_designation">
 		<id access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="did" type="long">
 			<generator class="increment" />
 		</id>
@@ -13,7 +13,7 @@
 		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="dname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="status" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 	</class>
-	<class name="com.keyPeopleService.model.impl.KeyPeopleImpl" table="keyPeople">
+	<class name="com.keyPeopleService.model.impl.KeyPeopleImpl" table="apgovt_keyPeople">
 		<id access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="trust_userId" type="long">
 			<generator class="increment" />
 		</id>
@@ -29,7 +29,7 @@
 		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="modifyDate" type="org.hibernate.type.TimestampType" />
 		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="modifyBy" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 	</class>
-	<class name="com.keyPeopleService.model.impl.WingImpl" table="wings">
+	<class name="com.keyPeopleService.model.impl.WingImpl" table="apgovt_wings">
 		<id access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="wid" type="long">
 			<generator class="increment" />
 		</id>

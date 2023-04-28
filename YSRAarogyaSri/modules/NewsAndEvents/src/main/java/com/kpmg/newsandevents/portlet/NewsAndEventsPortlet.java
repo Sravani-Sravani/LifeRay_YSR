@@ -66,6 +66,13 @@ public class NewsAndEventsPortlet extends MVCPortlet {
          ThemeDisplay themeDisplay = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
 		 long userId = themeDisplay.getUserId();
 		 String newsDescription = ParamUtil.getString(request, "newsDescription");  
+		 String tnewdescription= ParamUtil.getString(request,"ti_newsdescription");
+		 int home=ParamUtil.getInteger(request, "home");
+		 int spotlight=ParamUtil.getInteger(request,"spotlight");
+		 int asri=ParamUtil.getInteger(request,"asri");
+		 int ehs=ParamUtil.getInteger(request, "ehs");
+		 int aarogyaraksha=ParamUtil.getInteger(request,"aarogyaraksha");
+		 int wjhs=ParamUtil.getInteger(request, "wjhs");
 		 long recordId = ParamUtil.getLong(request, "recordId");
 		 String newsDate = ParamUtil.getString(request, "newsDate"); 
 		 SimpleDateFormat DbDataFormate=new SimpleDateFormat("yyyy-MM-dd");
@@ -77,10 +84,12 @@ public class NewsAndEventsPortlet extends MVCPortlet {
 					publishedDate=DbDataFormate.parse(newsDate);
 				} catch (java.text.ParseException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					//e.printStackTrace();
 				}
 		}					 
 		NewsAndEvents newsAndEvents=null;
+		
+		//_log.info("recordId>"+recordId);
 	  if(recordId==0) {
 		   newsAndEvents=new NewsAndEventsImpl();
 		   recordId=CounterLocalServiceUtil.increment(NewsAndEventsPortlet.class.getName());
@@ -94,8 +103,15 @@ public class NewsAndEventsPortlet extends MVCPortlet {
 		  newsAndEvents.setModifiedDate(new Date());
 		   newsAndEvents.setModifiedBy(userId);
 	  }
-		 
+	 // _log.info("recordId>"+recordId); 
 	  newsAndEvents.setNewsdescription(newsDescription);
+	  newsAndEvents.setTi_newsdescription(tnewdescription);
+	  newsAndEvents.setHome(home);
+	  newsAndEvents.setSpotlight(spotlight);
+	  newsAndEvents.setAsri(asri);
+	  newsAndEvents.setEhs(ehs);
+	  newsAndEvents.setAarogyaraksha(aarogyaraksha);
+	  newsAndEvents.setWjhs(wjhs);
 	   newsAndEvents.setNewsDate(publishedDate);
 	    
 		 long userFolderId = getUserFolderId(themeDisplay, request);
@@ -103,34 +119,39 @@ public class NewsAndEventsPortlet extends MVCPortlet {
 		 
 		 boolean flag=true;
 		  try {
-			 
+			  //_log.info("Step-1"); 
 	 		    UploadPortletRequest uploadPortletRequest = PortalUtil.getUploadPortletRequest(request);
 					String uploadFileName = null;
 					String uploadType="newsDocument";
 					uploadFileName = uploadPortletRequest.getFileName(uploadType);
-					
+					//_log.info("Step-2>"+uploadFileName);	
 					 String nameArray[]=uploadFileName.split("\\."); 
 					 if (uploadFileName != null && !uploadFileName.isEmpty()) {
+						 //_log.info("Step-3>");
 						 long uploadSize =  uploadPortletRequest.getSize(uploadType);
 							int fileSize= Math.round((uploadSize / 1024)); 
 				             if (fileSize > 20480) {
 				            	    SessionErrors.add(request, "document.errorMsg.sizeIssue");
 									flag =false; 
 				             }
+				             //_log.info("Step-4>"+flag);
 						 String[] extensionsList= new String[]  {"pdf"};
 					     if(nameArray.length>2 || !(Arrays.asList(extensionsList).contains(nameArray[nameArray.length-1]))){
 							SessionErrors.add(request, "document.errorMsg.missing");
 							flag =false;
 						 }
+					     //_log.info("Step-5>"+flag);
 			    		     if(flag) {
 					    	 FileEntry entry = fileUpload(themeDisplay, request, "newsDocument","", themeDisplay.getUserId(),userFolderId, recordId);
 								if(entry!=null){
 									newsAndEvents.setFileEntryId(entry.getFileEntryId());
 								} 
 					     }
+			    		     //_log.info("Step-6>"+flag);
 					 }
 			  }
 	 	catch(Exception e) {
+	 		//_log.info("Step-7>"+e.getMessage());
 	    	SessionErrors.add(request, "document.errorMsg.missing");
 	    	flag=false;
 		}
@@ -207,7 +228,7 @@ public class NewsAndEventsPortlet extends MVCPortlet {
 		try {
 			folder = DLAppServiceUtil.getFolder(scopeGroupId, parentFolderId, rootFolderName);
 		} catch (Exception e) {
-			_log.info(e.getMessage());
+			//_log.info(e.getMessage());
 		}
 		return folder;
 	}
@@ -217,9 +238,9 @@ public class NewsAndEventsPortlet extends MVCPortlet {
 		try {
 			DLAppServiceUtil.getFolder(scopeGroupId, parentFolderId, rootFolderName);
 			folderExist = true;
-			_log.info("Folder is already Exist");
+			//_log.info("Folder is already Exist");
 		} catch (Exception e) {
-			_log.info(e.getMessage());
+			//_log.info(e.getMessage());
 		}
 		return folderExist;
 	}
@@ -233,24 +254,24 @@ public class NewsAndEventsPortlet extends MVCPortlet {
 			folder = DLAppServiceUtil.addFolder(repositoryId, parentFolderId, rootFolderName, rootFolderDescription,
 					serviceContext);
 		} catch (PortalException e1) {
-			e1.printStackTrace();
+			//e1.printStackTrace();
 		} catch (SystemException e1) {
-			e1.printStackTrace();
+			//e1.printStackTrace();
 		}
 		return folder;
 	}
 
 public FileEntry fileUpload(ThemeDisplay themeDisplay, ActionRequest actionRequest, String uploadType, String docNumber, long userId, long folderId, long jobPortalJobId) {
-	_log.info("calling file uplodad" + docNumber);
+	//_log.info("calling file uplodad" + docNumber);
 	UploadPortletRequest uploadPortletRequest = PortalUtil.getUploadPortletRequest(actionRequest);
 	String uploadFileName = null;
 	FileEntry fileEntry = null;
-	_log.info("uploadType>>" + uploadType);
+	//_log.info("uploadType>>" + uploadType);
 	uploadFileName = uploadPortletRequest.getFileName(uploadType);
 	File uploadFile = uploadPortletRequest.getFile(uploadType);
 	long uploadSize =  uploadPortletRequest.getSize(uploadType);
 	String uploadMimeType = uploadPortletRequest.getContentType(uploadType);
-	_log.info("uploadFileName>>" + uploadFileName);
+	//_log.info("uploadFileName>>" + uploadFileName);
 	String description = "This file is added via programatically";
 	long repositoryId = themeDisplay.getScopeGroupId();
 	if (uploadFileName != null && !uploadFileName.isEmpty()) {
@@ -259,13 +280,13 @@ public FileEntry fileUpload(ThemeDisplay themeDisplay, ActionRequest actionReque
 			ServiceContext serviceContext = ServiceContextFactory.getInstance(DLFileEntry.class.getName(),
 					actionRequest);
 			serviceContext.setScopeGroupId(repositoryId);
-			uploadFileName = uploadFileName.replaceAll(" ", "_");
-			String ProfilePictureTitle = currentDate.getTime() + "_-_" + uploadFileName;
+			String ProfilePictureTitle = currentDate.getTime() + "_-_" +uploadFileName;
+			uploadFileName =  currentDate.getTime() + "_-_" +uploadFileName.replaceAll(" ", "_");
 			fileEntry = DLAppServiceUtil.addFileEntry(repositoryId, folderId, uploadFileName, uploadMimeType, ProfilePictureTitle, description, "changeLog",uploadFile, serviceContext);
 				 
 		} catch (Exception e) {
-			_log.info(e.getMessage());
-			e.printStackTrace();
+			//_log.info(e.getMessage());
+			//e.printStackTrace();
 		}
 	}
 	return fileEntry;
@@ -273,19 +294,19 @@ public FileEntry fileUpload(ThemeDisplay themeDisplay, ActionRequest actionReque
 public static String getFile(long docEntryId,long scopeId){
 	String fileUrl="";
 	 FileEntry fileEntry;
-	 _log.info("Enter to getFile");
-	 _log.info("docEntryId>>>>>"+docEntryId);
-	 _log.info("scopeId>>>>"+scopeId);
+	 //_log.info("Enter to getFile");
+	 //_log.info("docEntryId>>>>>"+docEntryId);
+	 //_log.info("scopeId>>>>"+scopeId);
 	try {
 		fileEntry = DLAppServiceUtil.getFileEntry(docEntryId);
 		if(fileEntry!=null){
-			_log.info("Enter to fileEntry not empty");
+			////_log.info("Enter to fileEntry not empty");
 			fileUrl = "/documents/" + scopeId + "/" + 
 					fileEntry.getFolderId() +  "/" +fileEntry.getTitle();
 		  }
 	} catch (PortalException e) {
 		// TODO Auto-generated catch block
-		e.printStackTrace();
+		//e.printStackTrace();
 	}
 	return fileUrl;	  
  }

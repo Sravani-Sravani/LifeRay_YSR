@@ -63,7 +63,7 @@ public class NewsAndEventsCacheModel
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(23);
+		StringBundler sb = new StringBundler(35);
 
 		sb.append("{uuid=");
 		sb.append(uuid);
@@ -77,6 +77,18 @@ public class NewsAndEventsCacheModel
 		sb.append(newsDate);
 		sb.append(", fileEntryId=");
 		sb.append(fileEntryId);
+		sb.append(", home=");
+		sb.append(home);
+		sb.append(", spotlight=");
+		sb.append(spotlight);
+		sb.append(", asri=");
+		sb.append(asri);
+		sb.append(", ehs=");
+		sb.append(ehs);
+		sb.append(", aarogyaraksha=");
+		sb.append(aarogyaraksha);
+		sb.append(", wjhs=");
+		sb.append(wjhs);
 		sb.append(", status=");
 		sb.append(status);
 		sb.append(", createdDate=");
@@ -127,6 +139,12 @@ public class NewsAndEventsCacheModel
 		}
 
 		newsAndEventsImpl.setFileEntryId(fileEntryId);
+		newsAndEventsImpl.setHome(home);
+		newsAndEventsImpl.setSpotlight(spotlight);
+		newsAndEventsImpl.setAsri(asri);
+		newsAndEventsImpl.setEhs(ehs);
+		newsAndEventsImpl.setAarogyaraksha(aarogyaraksha);
+		newsAndEventsImpl.setWjhs(wjhs);
 
 		if (status == null) {
 			newsAndEventsImpl.setStatus("");
@@ -168,6 +186,18 @@ public class NewsAndEventsCacheModel
 		newsDate = objectInput.readLong();
 
 		fileEntryId = objectInput.readLong();
+
+		home = objectInput.readInt();
+
+		spotlight = objectInput.readInt();
+
+		asri = objectInput.readInt();
+
+		ehs = objectInput.readInt();
+
+		aarogyaraksha = objectInput.readInt();
+
+		wjhs = objectInput.readInt();
 		status = objectInput.readUTF();
 		createdDate = objectInput.readLong();
 
@@ -206,6 +236,18 @@ public class NewsAndEventsCacheModel
 
 		objectOutput.writeLong(fileEntryId);
 
+		objectOutput.writeInt(home);
+
+		objectOutput.writeInt(spotlight);
+
+		objectOutput.writeInt(asri);
+
+		objectOutput.writeInt(ehs);
+
+		objectOutput.writeInt(aarogyaraksha);
+
+		objectOutput.writeInt(wjhs);
+
 		if (status == null) {
 			objectOutput.writeUTF("");
 		}
@@ -227,6 +269,12 @@ public class NewsAndEventsCacheModel
 	public String ti_newsdescription;
 	public long newsDate;
 	public long fileEntryId;
+	public int home;
+	public int spotlight;
+	public int asri;
+	public int ehs;
+	public int aarogyaraksha;
+	public int wjhs;
 	public String status;
 	public long createdDate;
 	public long createdBy;
