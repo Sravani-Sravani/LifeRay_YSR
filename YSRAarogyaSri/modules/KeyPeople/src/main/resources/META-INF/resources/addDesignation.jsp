@@ -20,9 +20,10 @@ width:80%;
 <%
 String dname = "";
 String status ="";
+long did=0;
 
 try{
-    long did = ParamUtil.getLong(request, "did");
+     did = ParamUtil.getLong(request, "did");
   //  System.out.println("id is"+did);
     long wid = ParamUtil.getLong(request, "wid");
     boolean istrue = false;

@@ -1,5 +1,15 @@
 
-  <%@page import="com.liferay.portal.kernel.model.Role"%>
+  <%@page import="com.liferay.portal.kernel.portlet.PortletClassLoaderUtil"%>
+<%@page import="com.liferay.portal.kernel.dao.orm.DynamicQueryFactory;import com.liferay.portal.kernel.dao.orm.DynamicQuery;
+import com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil"%>
+<%@page import="com.liferay.portal.kernel.dao.orm.OrderFactoryUtil"%>
+<%@page import="com.liferay.portal.kernel.dao.orm.RestrictionsFactoryUtil"%>
+<%@page import="com.liferay.portal.kernel.dao.orm.DynamicQuery"%>
+<%@page import="com.keyPeopleService.service.DesignationLocalServiceUtil"%>
+<%@page import="com.keyPeopleService.model.Designation"%>
+<%@page import="com.keyPeopleService.service.WingLocalServiceUtil"%>
+<%@page import="com.keyPeopleService.model.Wing"%>
+<%@page import="com.liferay.portal.kernel.model.Role"%>
    <style>
   #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
   #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
@@ -25,12 +35,64 @@
    <link rel="stylesheet" href="/o/com.keyPeople/css/main.css">
   
   <%if(!role.equalsIgnoreCase("Departmentuser")){ %>
-  <style>
-  .taglib-search-iterator-page-iterator-bottom{display:none;}
-  </style>
-  
-  <% }%>
+ <main><div class="ysri_section">
+    <div class="main_heading_breadcrum">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-8 p-static">
+                  <h1>Who Is Who</h1>
+                  <span class="sub-title">Get to know us...</span>
+              </div>
+              <div class="col-md-4 order-1 order-md-2 align-self-center">
+                  <ul class="breadcrumb d-block text-md-end breadcrumb-light">
+                      <li><a href="index.html">Home</a></li>
+                      <li class="active">Who Is Who</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div><!--main_heading_breadcrum-->
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-12">
+                 <div class="table-responsive fixed_header_table">  
+                   <table class="table table-bordered table-hover ">
+                      <tbody>
+                         <tr>
+                            <th style="width:20%">Wing</th>
+                            <th style="width:30%;">Designation</th>
+                            <th style="width:30%;">Name of the Employee</th>
+                            <th style="width:30%;">Phone Number</th>
+                            <th style="width:10%;">E-mail</th>
+                         </tr>
+         
+         <tr>
+          <td colspan="1" rowspan="2"><font color="#404040"><span style="font-weight: 400;">Others</span></font></td>
+          <td><font color="#404040"><span style="font-weight: 400;">Vigilance Officer</span></font></td>
+          <td><font color="#404040"><span style="font-weight: 400;">P Narasimha Rao</span></font></td>
+          <td><font color="#404040"><span style="font-weight: 400;">9281072726</span></font></td>
+          <td><font color="#404040"><span style="font-weight: 400;">ap_c474[at]ysraarogyasri[dot]ap[dot]gov[dot]in</span></font></td>
+         </tr>
+         <tr>
+          <td><font color="#404040"><span style="font-weight: 400;">Legal Officer</span></font></td>
+          <td><font color="#404040"><span style="font-weight: 400;">V. Jawahar Babu</span></font></td>
+          <td><font color="#404040"><span style="font-weight: 400;">9281072719</span></font></td>
+          <td><font color="#404040"><span style="font-weight: 400;">ap_c203[at]ysraarogyasri[dot]ap[dot]gov[dot]in</span></font></td>
+         </tr>
+        
+        
+                      </tbody>
+                   </table>
+                  </div> <!-- end of table-responsive--> 
+              </div>
+                  
+              </div>
+  </div>
 
+  </div><!--ysri_section-->     
+</main>
+  <%  }else {%>
+  
 <liferay-ui:success key="entryAdded" message="Key People added successfully." />
 <liferay-ui:success key="entryUpdated" message="Key People updated successfully."  />
 <liferay-ui:success key="entryDeleted" message="Key People deleted successfully." />
@@ -64,7 +126,7 @@
 <div class="tenderspage-main">
 	<div class="tendersdata-table">
 		  <div class="col-md-12">
-                <%if(role.equalsIgnoreCase("Departmentuser")){ %><h1> Department view</h1><%}else{ %><h1>Public view</h1><%} %>
+               <h1> Department view</h1>
            </div>
          
 		<div class="container">
@@ -185,6 +247,7 @@
 		
 		 <portlet:actionURL var="deleteRecordURL" name="deleteImportantLink"> 
          </portlet:actionURL>
+        
          
 <script>
 function updateRecord(recordId){
@@ -258,4 +321,4 @@ function deleteRecord(recordId){
    <aui:input type="text" name="keyPeopleId" value=""></aui:input>
 </aui:form>
 
-
+ <%} %>

@@ -297,23 +297,16 @@ public class KeyPeoplePortlet extends MVCPortlet {
 			System.out.println("isNew>>>"+isNew);
 			if(isNew)
 			{
-				System.out.println("Step-1> Inside Add");
-				System.out.println(wing.getWid());
-				System.out.println(wing.getWname());
-				wing=WingLocalServiceUtil.createWing(wid);
-				
-				
+				System.out.println("Step-1>");
+				WingLocalServiceUtil.addWing(wing);
 				System.out.println("Step-2>>>");
 			}
-			wing.setStatus(status);
-			wing.setWname(name);
-		 
-				//WingLocalServiceUtil.updateWing(wing);
-			
+			else {
+				WingLocalServiceUtil.updateWing(wing);
+			}
 		}
 		catch (Exception e) {
-			
-			System.out.println(e.getMessage());
+			e.getMessage();
 		}
 		System.out.println("Wing Added successfully");
 		
