@@ -36,7 +36,7 @@ public class sampleePortlet extends MVCPortlet {
 	public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
 			throws IOException, PortletException {
 		// TODO Auto-generated method stub
-		System.out.println("value is..."+sampleServiceUtil,);
+	//	System.out.println("value is..."+sampleServiceUtil,);
 		super.doView(renderRequest, renderResponse);
 	}
 }

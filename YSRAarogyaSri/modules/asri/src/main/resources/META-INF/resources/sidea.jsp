@@ -57,8 +57,9 @@
 								</button>
 								<div class="collapse <% if(pageId==537 ||pageId==654){ %> show <% } %>" id="patient-collapse" data-bs-parent="#citizen-collapse">
 								<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ">
-								<li><a href="/web/guest/follow_procedures">Follow Up Information</a></li>
-									<li><a href="/web/guest/follow_up_information">Follow Up Packages</a></li>
+								<li><a href="/web/guest/follow_up_information">Follow Up Information</a></li>
+								<!-- <li><a href="/web/guest/follow_procedures">Follow Up Information</a></li>
+									<li><a href="/web/guest/follow_up_information">Follow Up Packages</a></li> -->
 								<!-- 	<li><a href="/web/guest/asri_follow_up_guidelines">Follow Up Guidelines</a></li> -->
 									</ul>
 								</div>
@@ -138,7 +139,7 @@
 						<div class="collapse <% if(pageId==559 || pageId==427 || pageId==431 ||pageId==631 ||pageId==640){ %> show <% } %>" id="hospital-collapse1" data-bs-parent="#hospital-collapse">
 
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-						  <li><a href="https://www.ysraarogyasri.ap.gov.in/ASRI/empanelment/Eligibility.jsp?stateFlag=ap" target="_blank">Online Empanelment</a></li> 
+						  <li><a href="https://app.ysraarogyasri.ap.gov.in/ASRI/empanelment/Eligibility.jsp?stateFlag=ap" target="_blank">Online Empanelment</a></li> 
 							
 							<li><a href="/asri#">Online Empanelment User Manual</a></li> 
 							<li><a href="/web/guest/asri_guidelines_new">Empanelment Guidelines</a></li> 
@@ -188,11 +189,12 @@
 						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 							<li><a href="/web/guest/usermanuals">Aadhar Biometric User Manual &amp; Software</a></li> 
 							<li><a href="/documents/d/guest/dongletool">Dongle-Tool</a></li> 
-							<li>IT Support
+							<!-- <li>IT Support
 							<ul>
 							<li>9281067981</li>
 							<li>9281067982</li>
-							</ul></li>
+							</ul></li> -->
+							<li><a href="/web/guest/it">IT Support</a> </li>
 							
 						  </ul>
 						</div>

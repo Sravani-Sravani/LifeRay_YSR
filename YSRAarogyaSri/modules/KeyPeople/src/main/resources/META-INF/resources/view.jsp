@@ -56,7 +56,7 @@ import com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil"%>
           <div class="row">
               <div class="col-lg-12">
                  <div class="table-responsive fixed_header_table">  
-                   <table class="table table-bordered table-hover ">
+                   <table class="table table-bordered">
                       <tbody>
                          <tr>
                             <th style="width:20%">Wing</th>
@@ -65,21 +65,111 @@ import com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil"%>
                             <th style="width:30%;">Phone Number</th>
                             <th style="width:10%;">E-mail</th>
                          </tr>
+                         
+                         <% 
+		    List<Wing> wingList=null;
+		    List<Designation> designationList=null;
+		    List<KeyPeople> keypeopleList=null;
+		    DynamicQuery dq1 = null;
+		    DynamicQuery dq2 = null; 
+		    DynamicQuery dq3 = null; 
+		    dq1 =WingLocalServiceUtil.dynamicQuery();
+		    dq1.add(RestrictionsFactoryUtil.eq("status", "Y"));
+		    dq1.addOrder(OrderFactoryUtil.asc("wid"));
+		    dq2 =DesignationLocalServiceUtil.dynamicQuery();
+		    dq2.add(RestrictionsFactoryUtil.eq("status", "Y"));
+		    dq2.addOrder(OrderFactoryUtil.asc("wid"));
+		    dq3 =KeyPeopleLocalServiceUtil.dynamicQuery();
+		    dq3.add(RestrictionsFactoryUtil.eq("status", "Y"));
+		    dq3.addOrder(OrderFactoryUtil.asc("wingId"));
+		    try{
+		    	wingList=WingLocalServiceUtil.dynamicQuery(dq1, 0,
+		    			WingLocalServiceUtil.getWingsCount());
+		    	designationList=DesignationLocalServiceUtil.dynamicQuery(dq2,0,
+		    			DesignationLocalServiceUtil.getDesignationsCount());
+		    	keypeopleList=KeyPeopleLocalServiceUtil.dynamicQuery(dq3,0,
+		    			KeyPeopleLocalServiceUtil.getKeyPeoplesCount());
+		    	
+	 		}
+	 		catch(Exception e){}
+		    try
+		    {
+		    	for(Wing wing:wingList){
+		            long wid = wing.getWid();
+		            String wname = wing.getWname();
+		            int c= 0;
+		            
+		            for(Designation designation:designationList){
+		                if(designation.getWid() == wid){
+		                    long did = designation.getDid();
+		                    String dname = designation.getDname();
+		                    
+		                    for(KeyPeople keypeople:keypeopleList){
+		                        if(keypeople.getWingId() == wid && keypeople.getDesignationId() == did){
+		                            c++;
+		                        }
+		                    }
+		                }
+		            }
+		            
+		            int p = 0;
+		            
+		            for(Designation designation:designationList){
+		                if(designation.getWid() == wid){
+		                    long did = designation.getDid();
+		                    String dname = designation.getDname();
+		                    
+		                    for(KeyPeople keypeople:keypeopleList){
+		                        if(keypeople.getWingId() == wid && keypeople.getDesignationId() == did){
+		                            String empname = keypeople.getEmpname();
+		                            if(empname.equals("NULL"))
+		                            {
+		                            	empname=" ";
+		                            	System.out.println(empname);
+		                            }
+		                            String pn = keypeople.getPhone();
+		                            if(pn.equals("NULL"))
+		                            {
+		                            	pn=" ";
+		                            	System.out.println(pn);
+		                            }
+		                            String email1=keypeople.getEmail();
+		                            String email2=email1.replace("@","[at]");
+		                            String email = email2.replace(".","[dot]");
+		                            System.out.println(empname);
+		                            if(p == 0){
+		                                %>
+		                                <tr bgcolor="blue">
+		                                  <td rowspan="<%=c%>"><%=wname%></td>
+		                                  <td bgcolor="blue"><%=dname%></td>
+		                                  <td bgcolor="green"><%=empname%></td>
+		                                  <td bgcolor="blue" ><%=pn%></td>
+		                                  <td bgcolor="red"><%=email%></td>
+		                                </tr>
+		                                <%
+		                            } else {
+		                                %>
+		                                <tr bgcolor="red">
+		                                  <td><%=dname%></td>
+		                                  <td><%=empname%></td>
+		                                  <td><%=pn%></td>
+		                                  <td><%=email%></td>
+		                                </tr>
+		                                <%
+		                            }
+		                            
+		                            p++;
+		                        }
+		                    }
+		                }
+		            }
+		        }
+		    } catch(Exception e){} 
+	%>
          
-         <tr>
-          <td colspan="1" rowspan="2"><font color="#404040"><span style="font-weight: 400;">Others</span></font></td>
-          <td><font color="#404040"><span style="font-weight: 400;">Vigilance Officer</span></font></td>
-          <td><font color="#404040"><span style="font-weight: 400;">P Narasimha Rao</span></font></td>
-          <td><font color="#404040"><span style="font-weight: 400;">9281072726</span></font></td>
-          <td><font color="#404040"><span style="font-weight: 400;">ap_c474[at]ysraarogyasri[dot]ap[dot]gov[dot]in</span></font></td>
-         </tr>
-         <tr>
-          <td><font color="#404040"><span style="font-weight: 400;">Legal Officer</span></font></td>
-          <td><font color="#404040"><span style="font-weight: 400;">V. Jawahar Babu</span></font></td>
-          <td><font color="#404040"><span style="font-weight: 400;">9281072719</span></font></td>
-          <td><font color="#404040"><span style="font-weight: 400;">ap_c203[at]ysraarogyasri[dot]ap[dot]gov[dot]in</span></font></td>
-         </tr>
-        
+         
+         
+      
         
                       </tbody>
                    </table>

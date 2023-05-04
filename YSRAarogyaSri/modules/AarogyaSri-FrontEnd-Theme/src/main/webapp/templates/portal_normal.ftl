@@ -123,11 +123,9 @@ crossorigin="anonymous"></script>
 			  </li>
 				<li><a class="dropdown-item <#if pageId==27> active </#if>" href="/ehs">${ehs_short}</a>
 				</li>
-			<li><a class="dropdown-item <#if pageId==599> active </#if>" href="/web/guest/aarogya-aasara" >Arogya Aasara<span></span></a>
+			<li><a class="dropdown-item <#if pageId==599> active </#if>" href="/web/guest/aarogya-aasara" >${aasara1}<span></span></a>
 			  </li>
-			  <li><a class="dropdown-item <#if pageId==21> active </#if>" href="/arogyaraksha">${ar}</a>
-				
-				</li>
+			  
 				<li><a class="dropdown-item <#if pageId==25> active </#if>"  href="/wjhs">${wjhs_short}</a>
 				</li>
 				
@@ -273,8 +271,7 @@ ${pin_code}:522503 <br />
         <ul class="nav flex-column">
             <li><a href="/web/guest/asri" target="_blank">${asri}</a></li> 
 			<li><a href="/web/guest/ehs" target="_blank">${ehs}</a></li> 
-			<li><a href="/web/guest/wjhs" target="_blank">${wjhs}</a></li> 
-			<li><a href="/web/guest/arogyaraksha" target="_blank">${ar}</a></li> 
+			<li><a href="/web/guest/wjhs" target="_blank">${wjhs}</a></li>  
 			<li> <a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysraarogyasri_app&hl=en&pli=1" target="_blank">${asri_app}</a></li>
 			<li> <a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysr_mithra&hl=en" target="_blank">${mitra_app}</a></li>
 			<li> <a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ehs_app&hl=en" target="_blank">${ehs_app}</a></li>

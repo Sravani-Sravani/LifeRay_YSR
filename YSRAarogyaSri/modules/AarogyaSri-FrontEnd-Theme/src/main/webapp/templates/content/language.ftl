@@ -59,7 +59,7 @@ find="Find Us On"
 links="Useful Links"
 medical="Helpline/Grievances"
 visitors="Visitor Count "
-aasara="Aarogya Aasara"
+aasara1="Aarogya Aasara"
 treatments="Treatments Covered"
 netwrk="Network Hospitals"
 
