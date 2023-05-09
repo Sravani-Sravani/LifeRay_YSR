@@ -45,6 +45,7 @@ public class DesignationWrapper
 		attributes.put("wid", getWid());
 		attributes.put("dname", getDname());
 		attributes.put("status", getStatus());
+		attributes.put("dorder", getDorder());
 
 		return attributes;
 	}
@@ -74,6 +75,12 @@ public class DesignationWrapper
 		if (status != null) {
 			setStatus(status);
 		}
+
+		Integer dorder = (Integer)attributes.get("dorder");
+
+		if (dorder != null) {
+			setDorder(dorder);
+		}
 	}
 
 	@Override
@@ -99,6 +106,16 @@ public class DesignationWrapper
 	@Override
 	public String getDname() {
 		return model.getDname();
+	}
+
+	/**
+	 * Returns the dorder of this designation.
+	 *
+	 * @return the dorder of this designation
+	 */
+	@Override
+	public int getDorder() {
+		return model.getDorder();
 	}
 
 	/**
@@ -154,6 +171,16 @@ public class DesignationWrapper
 	@Override
 	public void setDname(String dname) {
 		model.setDname(dname);
+	}
+
+	/**
+	 * Sets the dorder of this designation.
+	 *
+	 * @param dorder the dorder of this designation
+	 */
+	@Override
+	public void setDorder(int dorder) {
+		model.setDorder(dorder);
 	}
 
 	/**

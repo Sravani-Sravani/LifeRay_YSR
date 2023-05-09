@@ -38,6 +38,8 @@ public class DesignationTable extends BaseTable<DesignationTable> {
 		"dname", String.class, Types.VARCHAR, Column.FLAG_DEFAULT);
 	public final Column<DesignationTable, String> status = createColumn(
 		"status", String.class, Types.VARCHAR, Column.FLAG_DEFAULT);
+	public final Column<DesignationTable, Integer> dorder = createColumn(
+		"dorder", Integer.class, Types.INTEGER, Column.FLAG_DEFAULT);
 
 	private DesignationTable() {
 		super("apgovt_designation", DesignationTable::new);

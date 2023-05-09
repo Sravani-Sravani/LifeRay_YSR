@@ -70,7 +70,6 @@
             </div><!-- accordion-body -->
           </div>
           </div>
-
         </div>
 
 <%@ include file="/lastr.jsp" %>

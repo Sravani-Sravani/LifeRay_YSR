@@ -33,6 +33,7 @@
         <column name="wid" type="long"></column>
         <column name="dname" type="String"></column>
         <column name="status" type="String"></column>
+        <column name="dorder" type="int"></column>
         
     </entity>
 </service-builder>

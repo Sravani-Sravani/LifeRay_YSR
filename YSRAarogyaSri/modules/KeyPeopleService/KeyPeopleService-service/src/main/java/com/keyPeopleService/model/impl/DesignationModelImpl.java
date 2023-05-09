@@ -68,7 +68,7 @@ public class DesignationModelImpl
 
 	public static final Object[][] TABLE_COLUMNS = {
 		{"did", Types.BIGINT}, {"wid", Types.BIGINT}, {"dname", Types.VARCHAR},
-		{"status", Types.VARCHAR}
+		{"status", Types.VARCHAR}, {"dorder", Types.INTEGER}
 	};
 
 	public static final Map<String, Integer> TABLE_COLUMNS_MAP =
@@ -79,10 +79,11 @@ public class DesignationModelImpl
 		TABLE_COLUMNS_MAP.put("wid", Types.BIGINT);
 		TABLE_COLUMNS_MAP.put("dname", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("status", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("dorder", Types.INTEGER);
 	}
 
 	public static final String TABLE_SQL_CREATE =
-		"create table apgovt_designation (did LONG not null primary key,wid LONG,dname VARCHAR(75) null,status VARCHAR(75) null)";
+		"create table apgovt_designation (did LONG not null primary key,wid LONG,dname VARCHAR(75) null,status VARCHAR(75) null,dorder INTEGER)";
 
 	public static final String TABLE_SQL_DROP = "drop table apgovt_designation";
 
@@ -254,6 +255,9 @@ public class DesignationModelImpl
 		attributeGetterFunctions.put("status", Designation::getStatus);
 		attributeSetterBiConsumers.put(
 			"status", (BiConsumer<Designation, String>)Designation::setStatus);
+		attributeGetterFunctions.put("dorder", Designation::getDorder);
+		attributeSetterBiConsumers.put(
+			"dorder", (BiConsumer<Designation, Integer>)Designation::setDorder);
 
 		_attributeGetterFunctions = Collections.unmodifiableMap(
 			attributeGetterFunctions);
@@ -327,6 +331,20 @@ public class DesignationModelImpl
 		_status = status;
 	}
 
+	@Override
+	public int getDorder() {
+		return _dorder;
+	}
+
+	@Override
+	public void setDorder(int dorder) {
+		if (_columnOriginalValues == Collections.EMPTY_MAP) {
+			_setColumnOriginalValues();
+		}
+
+		_dorder = dorder;
+	}
+
 	public long getColumnBitmask() {
 		if (_columnBitmask > 0) {
 			return _columnBitmask;
@@ -387,6 +405,7 @@ public class DesignationModelImpl
 		designationImpl.setWid(getWid());
 		designationImpl.setDname(getDname());
 		designationImpl.setStatus(getStatus());
+		designationImpl.setDorder(getDorder());
 
 		designationImpl.resetOriginalValues();
 
@@ -402,6 +421,8 @@ public class DesignationModelImpl
 		designationImpl.setDname(this.<String>getColumnOriginalValue("dname"));
 		designationImpl.setStatus(
 			this.<String>getColumnOriginalValue("status"));
+		designationImpl.setDorder(
+			this.<Integer>getColumnOriginalValue("dorder"));
 
 		return designationImpl;
 	}
@@ -498,6 +519,8 @@ public class DesignationModelImpl
 			designationCacheModel.status = null;
 		}
 
+		designationCacheModel.dorder = getDorder();
+
 		return designationCacheModel;
 	}
 
@@ -592,6 +615,7 @@ public class DesignationModelImpl
 	private long _wid;
 	private String _dname;
 	private String _status;
+	private int _dorder;
 
 	public <T> T getColumnValue(String columnName) {
 		Function<Designation, Object> function = _attributeGetterFunctions.get(
@@ -624,6 +648,7 @@ public class DesignationModelImpl
 		_columnOriginalValues.put("wid", _wid);
 		_columnOriginalValues.put("dname", _dname);
 		_columnOriginalValues.put("status", _status);
+		_columnOriginalValues.put("dorder", _dorder);
 	}
 
 	private transient Map<String, Object> _columnOriginalValues;
@@ -644,6 +669,8 @@ public class DesignationModelImpl
 		columnBitmasks.put("dname", 4L);
 
 		columnBitmasks.put("status", 8L);
+
+		columnBitmasks.put("dorder", 16L);
 
 		_columnBitmasks = Collections.unmodifiableMap(columnBitmasks);
 	}

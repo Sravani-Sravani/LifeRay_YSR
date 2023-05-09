@@ -6,17 +6,6 @@
 
 
 <h3 class="bordertitle text-dark">Check Treatment History</h3>
-<!-- <div class="qr_code">  
-						<h5 class="text-center">To access AarogyRaksha App, Please scan the QR code. </h5> 
-						 <div class="card mx-auto">
-							<img src="/o/com.kpmg.raksha/qr/Aarogyasri.png" class="img-fluid" alt="QR CODE">
-								  <div class="card-body"> 
-						   <p class="card-text">AarogyRaksha</p> 
-						  </div> 
-						 </div> 
-
-					   </div> -->
-
 <div class="qr_code float-end m-4 mt-0"> 
 					<div class="card" > 
 					 <img src="/o/com.kpmg.raksha/qr/Aarogyasri.png" class="img-fluid" alt="QR CODE"> 
@@ -94,10 +83,6 @@
 					  </div>
 					</div>
 					</div>
-				
 				<br />
-
-
-
 
 <%@ include file="/lastr.jsp" %>

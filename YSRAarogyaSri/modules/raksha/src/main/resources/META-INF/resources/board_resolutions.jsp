@@ -69,7 +69,4 @@
         </table>
        </div><!-- /.col-lg-7 -->
       </div>
-       
-
-
 <%@ include file="/lastr.jsp" %>

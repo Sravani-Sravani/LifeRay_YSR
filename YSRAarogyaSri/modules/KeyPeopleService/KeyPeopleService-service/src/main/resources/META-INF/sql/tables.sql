@@ -2,7 +2,8 @@ create table apgovt_designation (
 	did LONG not null primary key,
 	wid LONG,
 	dname VARCHAR(75) null,
-	status VARCHAR(75) null
+	status VARCHAR(75) null,
+	dorder INTEGER
 );
 
 create table apgovt_keyPeople (

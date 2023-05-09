@@ -1,5 +1,3 @@
-
-
 <%@ include file="/headinga.jsp" %>
 <%@ include file="/topa.jsp" %>
 

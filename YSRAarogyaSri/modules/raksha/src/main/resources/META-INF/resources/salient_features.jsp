@@ -1,17 +1,13 @@
 <%@ include file="/headingr.jsp" %>
 <%@ include file="/topr.jsp" %>
-
 <%@ include file="/side.jsp" %>
 <%@ include file="/rightContentr.jsp" %>
-
 <h3 class="bordertitle text-dark">Salient Features</h3>
-
 				<div class="card-off">
 					<div class="card-body">
 						<div class="container">
 							<h4 class="tablecontainer" style="text-align: center !important;">Aarogya Raksha</h4>
 							<table class="table table-bordered table-hover table-striped">
-							  
 							  <tr> 
 							   <th><h6><a style = "color:white; text-decoration:none" href="https://www.ysraarogyasri.ap.gov.in/documents/10181/0/AR+Maintanance+Enroll1/14cad4f6-fd34-4d95-a597-f36a0f386c27?t=1663914026296"  target="_blank">Click Here to Enroll</a></h6></th>
 							   <th><h6><a style = "color:white; text-decoration:none" href="http://pull71.sps.ap.gov.in/NTRSeva/MIS_NTRCovered/MIS_NAbstract.aspx?Id=NTR+Aarogya+Raksha+Covered+Families"  target="_blank">Enrollment Statistics</a></h6></th>
@@ -50,7 +46,4 @@
 						   </section>
 					</div>
 				  </div>
-
-
-
 <%@ include file="/lastr.jsp" %>

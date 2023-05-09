@@ -6,6 +6,7 @@
 		<field name="wid" type="long" />
 		<field name="dname" type="String" />
 		<field name="status" type="String" />
+		<field name="dorder" type="int" />
 	</model>
 	<model name="com.keyPeopleService.model.KeyPeople">
 		<field name="trust_userId" type="long" />

@@ -1,17 +1,9 @@
 <%@ include file="/headingr.jsp" %>
 <%@ include file="/topr.jsp" %>
-
 <%@ include file="/side.jsp" %>
 <%@ include file="/rightContentr.jsp" %>
-
 <h3 class="bordertitle text-dark">DR.YSR AAROGYASRI HEALTH CARE TRUST</h3>
-   
-  
-
-
   <div class="accordion" id="accordionExample">
-    
-    
     <div class="accordion-item">
       <h4 class="accordion-header" id="headingOne">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -50,10 +42,7 @@
                 In order to facilitate the effective implementation of the scheme, the State Government set up the Dr.YSR Aarogyasri Health Care Trust, under the chairmanship of the Honorable Chief Minister. The Trust is administered by a Chief Executive Officer who is an IPS Officer. The trust, in consultation with the specialists in the field of insurance and healthcare, runs the scheme. The Trust being an independent body and single purpose unit is able to achieve universal health coverage to poor families in the state at a faster rate. Some of its activities could include governing, organizing and monitoring the scheme, capacity building of the stakeholders and negotiating with the providers.
               </p>										  
             </div>
-            </div></div>
-        
-        
-          <!--ysri_section-->	  
+            </div></div>	  
         </div>
 
           </div>
@@ -176,10 +165,7 @@ Organisational Chart
     <br> 
     <br> <a class="btn btn-primary" href="/documents/d/guest/supp_trust_deed" role="button">SUPPLEMENTARY TRUST DEED 1</a> 
      </ul>
-  </div>
-
-
-<!--ysri_section-->	  
+  </div> 
 </div>
 </div>	
 </div>

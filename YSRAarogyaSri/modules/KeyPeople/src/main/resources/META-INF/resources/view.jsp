@@ -59,11 +59,11 @@ import com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil"%>
                    <table class="table table-bordered">
                       <tbody>
                          <tr>
-                            <th style="width:20%">Wing</th>
-                            <th style="width:30%;">Designation</th>
-                            <th style="width:30%;">Name of the Employee</th>
-                            <th style="width:30%;">Phone Number</th>
-                            <th style="width:10%;">E-mail</th>
+                            <th style="width:20%;font-weight: bold;font-weight:750;font-family: poppins,Arial,sans-serif;">Wing</th>
+                            <th style="width:30%;font-weight: bold;;font-weight:750;font-family: poppins,Arial,sans-serif;">Designation</th>
+                            <th style="width:30%;font-weight: bold;font-weight:750;font-family: poppins,Arial,sans-serif;">Name of the Employee</th>
+                            <th style="width:30%;font-weight: bold;font-weight:750;font-family: poppins,Arial,sans-serif;">Phone Number</th>
+                            <th style="width:10%;font-weight: bold;font-weight:750;font-family: poppins,Arial,sans-serif;">E-mail</th>
                          </tr>
                          
                          <% 
@@ -79,9 +79,12 @@ import com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil"%>
 		    dq2 =DesignationLocalServiceUtil.dynamicQuery();
 		    dq2.add(RestrictionsFactoryUtil.eq("status", "Y"));
 		    dq2.addOrder(OrderFactoryUtil.asc("wid"));
+		    dq2.addOrder(OrderFactoryUtil.asc("did"));
 		    dq3 =KeyPeopleLocalServiceUtil.dynamicQuery();
 		    dq3.add(RestrictionsFactoryUtil.eq("status", "Y"));
 		    dq3.addOrder(OrderFactoryUtil.asc("wingId"));
+		  //dq3.addOrder(OrderFactoryUtil.asc("designationId"));
+		    dq3.addOrder(OrderFactoryUtil.asc("trust_userId"));
 		    try{
 		    	wingList=WingLocalServiceUtil.dynamicQuery(dq1, 0,
 		    			WingLocalServiceUtil.getWingsCount());
@@ -94,6 +97,7 @@ import com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil"%>
 	 		catch(Exception e){}
 		    try
 		    {
+		    	int t=0;
 		    	for(Wing wing:wingList){
 		            long wid = wing.getWid();
 		            String wname = wing.getWname();
@@ -114,55 +118,65 @@ import com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil"%>
 		            
 		            int p = 0;
 		            
-		            for(Designation designation:designationList){
+		            for(Designation designation:designationList)
+		            {
 		                if(designation.getWid() == wid){
 		                    long did = designation.getDid();
 		                    String dname = designation.getDname();
 		                    
-		                    for(KeyPeople keypeople:keypeopleList){
+		                    for(KeyPeople keypeople:keypeopleList)
+		                    {
 		                        if(keypeople.getWingId() == wid && keypeople.getDesignationId() == did){
 		                            String empname = keypeople.getEmpname();
 		                            if(empname.equals("NULL"))
 		                            {
 		                            	empname=" ";
-		                            	System.out.println(empname);
+		                            	//System.out.println(empname);
 		                            }
 		                            String pn = keypeople.getPhone();
 		                            if(pn.equals("NULL"))
 		                            {
 		                            	pn=" ";
-		                            	System.out.println(pn);
+		                            //	System.out.println(pn);
 		                            }
 		                            String email1=keypeople.getEmail();
 		                            String email2=email1.replace("@","[at]");
 		                            String email = email2.replace(".","[dot]");
 		                            System.out.println(empname);
+		                            String color="#ececec";
+		                            if(t%2==0)
+		                            {
+		                            	color="white";
+		                            }
 		                            if(p == 0){
 		                                %>
-		                                <tr bgcolor="blue">
-		                                  <td rowspan="<%=c%>"><%=wname%></td>
-		                                  <td bgcolor="blue"><%=dname%></td>
-		                                  <td bgcolor="green"><%=empname%></td>
-		                                  <td bgcolor="blue" ><%=pn%></td>
-		                                  <td bgcolor="red"><%=email%></td>
+		                                <tr >
+		                                  <td style="font-size:12px;font-weight:400;text-align:center;" rowspan="<%=c%>"><font color="#404040"><span style="font-weight: 400;font-family: poppins,Arial,sans-serif;"><%=wname%></span></font></td>
+		                                  <td style="background-color:<%=color%>;font-size:12px;font-weight:400;text-align:center;"><font color="#404040"><span style="font-weight: 400;font-family: poppins,Arial,sans-serif;"><%=dname%></span></font></td>
+		                                  <td style="background-color:<%=color%>;font-size:12px;font-weight:400;text-align:center;"><font color="#404040"><span style="font-weight: 400;font-family: poppins,Arial,sans-serif;"><%=empname%></span></font></td>
+		                                  <td style="background-color:<%=color%>;font-size:12px;font-weight:400;text-align:center;" ><font color="#404040"><span style="font-weight: 400;font-family: poppins,Arial,sans-serif;"><%=pn%></span></font></td>
+		                                  <td style="background-color:<%=color%>;font-size:12px;font-weight:400;text-align:center;"><font color="#404040"><span style="font-weight: 400;font-family: poppins,Arial,sans-serif;"><%=email%></span></font></td>
 		                                </tr>
 		                                <%
 		                            } else {
+		                            	
 		                                %>
-		                                <tr bgcolor="red">
-		                                  <td><%=dname%></td>
-		                                  <td><%=empname%></td>
-		                                  <td><%=pn%></td>
-		                                  <td><%=email%></td>
+		                                <tr style="background-color:<%=color%>">
+		                                  <td style="font-size:12px;font-weight:400;text-align:center;"><font color="#404040"><span style="font-weight: 400;font-family: poppins,Arial,sans-serif;"><%=dname%></span></font></td>
+		                                  <td style="font-size:12px;font-weight:400;text-align:center;"><font color="#404040"><span style="font-weight: 400;font-family: poppins,Arial,sans-serif;"><%=empname%></span></font></td>
+		                                  <td style="font-size:12px;font-weight:400;text-align:center;"><font color="#404040"><span style="font-weight: 400;font-family: poppins,Arial,sans-serif;"><%=pn%></span></font></td>
+		                                  <td style="font-size:12px;font-weight:400;text-align:center;"><font color="#404040"><span style="font-weight: 400;font-family: poppins,Arial,sans-serif;"><%=email%></span></font></td>
 		                                </tr>
 		                                <%
 		                            }
-		                            
+		                            t++;
 		                            p++;
+		                          //  System.out.println(t);
 		                        }
 		                    }
 		                }
 		            }
+		           // System.out.println(t);
 		        }
 		    } catch(Exception e){} 
 	%>

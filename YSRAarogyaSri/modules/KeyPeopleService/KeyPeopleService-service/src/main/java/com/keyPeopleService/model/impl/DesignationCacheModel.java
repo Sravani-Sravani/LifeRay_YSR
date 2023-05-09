@@ -61,7 +61,7 @@ public class DesignationCacheModel
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(9);
+		StringBundler sb = new StringBundler(11);
 
 		sb.append("{did=");
 		sb.append(did);
@@ -71,6 +71,8 @@ public class DesignationCacheModel
 		sb.append(dname);
 		sb.append(", status=");
 		sb.append(status);
+		sb.append(", dorder=");
+		sb.append(dorder);
 		sb.append("}");
 
 		return sb.toString();
@@ -97,6 +99,8 @@ public class DesignationCacheModel
 			designationImpl.setStatus(status);
 		}
 
+		designationImpl.setDorder(dorder);
+
 		designationImpl.resetOriginalValues();
 
 		return designationImpl;
@@ -109,6 +113,8 @@ public class DesignationCacheModel
 		wid = objectInput.readLong();
 		dname = objectInput.readUTF();
 		status = objectInput.readUTF();
+
+		dorder = objectInput.readInt();
 	}
 
 	@Override
@@ -130,11 +136,14 @@ public class DesignationCacheModel
 		else {
 			objectOutput.writeUTF(status);
 		}
+
+		objectOutput.writeInt(dorder);
 	}
 
 	public long did;
 	public long wid;
 	public String dname;
 	public String status;
+	public int dorder;
 
 }

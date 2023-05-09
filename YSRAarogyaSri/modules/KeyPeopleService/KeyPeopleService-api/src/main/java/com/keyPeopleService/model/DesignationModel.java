@@ -111,6 +111,20 @@ public interface DesignationModel extends BaseModel<Designation> {
 	 */
 	public void setStatus(String status);
 
+	/**
+	 * Returns the dorder of this designation.
+	 *
+	 * @return the dorder of this designation
+	 */
+	public int getDorder();
+
+	/**
+	 * Sets the dorder of this designation.
+	 *
+	 * @param dorder the dorder of this designation
+	 */
+	public void setDorder(int dorder);
+
 	@Override
 	public Designation cloneWithOriginalValues();
 

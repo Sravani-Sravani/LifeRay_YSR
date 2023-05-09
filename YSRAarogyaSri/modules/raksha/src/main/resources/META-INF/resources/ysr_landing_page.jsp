@@ -8,7 +8,7 @@
 <div class="container-fluid search_panel">
 <div class="row">
        <div class="col-lg-12 text-end">
-<a href="http://pull71.sps.ap.gov.in/AarogyaSri/pages/home.aspx" target="_blank" class="btn search_sm_btn">Click Here to Enroll </a> 
+<a href="/web/guest/cardrenewal" class="btn search_sm_btn">Click Here for renewal of card</a> 
 <a href="http://pull71.sps.ap.gov.in/NTRSeva/MIS_NTRCovered/MIS_NAbstract.aspx?Id=NTR+Aarogya+Raksha+Covered+Families"  target="_blank" class="btn search_sm_btn">Enrollment Statistics </a>
  <a href="http://pull71.sps.ap.gov.in/ARDashboard/reports/ARRenewalAmoutReport.aspx"  target="_blank" class="btn search_sm_btn">Renewal Statistics </a>
        </div> <!--end of col-->

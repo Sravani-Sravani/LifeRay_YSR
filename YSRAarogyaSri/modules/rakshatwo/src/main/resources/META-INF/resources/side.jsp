@@ -99,19 +99,7 @@
 						  </ul>
 						</div>
 					  </li>
-					  <!-- <li class="mb-1">
-						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patient-collapse1" aria-expanded="false">
-							Search Hospitals
-						</button>
-						<div class="collapse" id="patient-collapse1" data-bs-parent="#hospital-collapse">
-						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-							<li><a href="/web/guest/arogyaraksha_hospitalsearch">Where Can I Find a Network Hospital</a></li>
-									<li><a href="/web/guest/arogyaraksha_proceduresearch">Where Can I Find Treatment</a></li>
-									<li><a href="/web/guest/arogyaraksha_specilitysearch">Where Can I Find Speciality Details</a></li>
-									<li><a href="/web/guest/nearby-hospitals">Find a Hospital Near Me</a></li>
-							  </ul>
-						</div>
-					  </li> -->
+					
 
 					  <li class="mb-1">
 						<a href="/web/guest/signin" ><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patient-collapse1" aria-expanded="false">

@@ -29,14 +29,10 @@ if(pageId==6 || pageId==87){ %>
 <%@ include file="/ysr_circulars.jsp" %>
 <%}else if(pageId==244){ %>
 <%@ include file="/board_resolutions.jsp" %>
-<%}else{ %>
+<%}else if(pageId==662 || pageId==702){ %>
+<%@ include file="/cardrenewal.jsp" %>
+<%}
+else{ %>
 PageIsNotFound in raksha
 <%}
 %>
-
-<%-- 
-<%else if(pageId==89){ %>
-<%@ include file="/health_who_is_who_district.jsp" %>
-<%}else if(pageId==91){ %>
-<%@ include file="/health_who_is_who_trust.jsp" %>
-<%} %> --%>

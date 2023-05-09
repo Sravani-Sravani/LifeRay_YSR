@@ -6,7 +6,7 @@
 						<i class="fa-sharp fa-solid fa-caret-down downarrow"></i>
 						</button>
 					
-					<div class="collapse <% if(pageId==459 || pageId==71|| pageId==469 || pageId==473 || pageId==475 || pageId==477|| pageId== 479|| pageId== 481 || pageId==21 || pageId==75 || pageId==605|| pageId==511||pageId==660 || pageId==678 || pageId==664 || pageId==680){ %> show  <% } %>" id="citizen-collapse"  aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample"> 
+					<div class="collapse <% if(pageId==459 || pageId==71|| pageId==469 || pageId==473 || pageId==475 || pageId==477|| pageId== 479|| pageId== 481 || pageId==21 || pageId==75 || pageId==605|| pageId==511||pageId==660 || pageId==678 || pageId==664 || pageId==680||pageId==662 || pageId==702){ %> show  <% } %>" id="citizen-collapse"  aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample"> 
 						<div class="accordion-body"> 
 						<ul class="list-unstyled ps-0">
 
@@ -99,19 +99,7 @@
 						  </ul>
 						</div>
 					  </li>
-					  <!-- <li class="mb-1">
-						<button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patient-collapse1" aria-expanded="false">
-							Search Hospitals
-						</button>
-						<div class="collapse" id="patient-collapse1" data-bs-parent="#hospital-collapse">
-						  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-							<li><a href="/web/guest/arogyaraksha_hospitalsearch">Where Can I Find a Network Hospital</a></li>
-									<li><a href="/web/guest/arogyaraksha_proceduresearch">Where Can I Find Treatment</a></li>
-									<li><a href="/web/guest/arogyaraksha_specilitysearch">Where Can I Find Speciality Details</a></li>
-									<li><a href="/web/guest/nearby-hospitals">Find a Hospital Near Me</a></li>
-							  </ul>
-						</div>
-					  </li> -->
+					 
 
 					  <li class="mb-1">
 						<a href="/web/guest/signin" ><button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#patient-collapse1" aria-expanded="false">

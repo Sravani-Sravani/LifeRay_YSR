@@ -1,12 +1,8 @@
 <%@ include file="/headingr.jsp" %>
 <%@ include file="/topr.jsp" %>
-
 <%@ include file="/side.jsp" %>
 <%@ include file="/rightContentr.jsp" %>
-
-
 <h3 class="bordertitle text-dark">Health Camps</h3>
-
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
     <h4 class="accordion-header" id="headingOne">
@@ -134,8 +130,6 @@
                 </div>
               </div>
             </div>
-
-            <!--ysri_section-->
           </div>
         </div>
       </div>
