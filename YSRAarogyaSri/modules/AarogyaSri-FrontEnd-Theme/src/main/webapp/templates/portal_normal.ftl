@@ -353,43 +353,6 @@ ${pin_code}:522503 <br />
               </li>
             </ul>
           </div>
-  <script>
-
-function increaser(){
-    $.getJSON("https://api.countapi.xyz/hit/ysraarogyasri.ap.gov.in/visits", function(response) {
-        $("#visits").text(response.value);
-    });
-}
-
-function reader(){
-    $.getJSON("https://api.countapi.xyz/get/ysraarogyasri.ap.gov.in/visits", function(response) {
-        $("#visits").text(response.value);
-    });
-}
-
-//Invoke jquery if aarogyasri url for home page matches
-//alert(window.location.href); //-> Get Current Page URL before validation
-
-if(window.location.href === "https://www.ysraarogyasri.ap.gov.in/"){
-    increaser(); // Increase counter on asri homepage url only.
-}
-
-// For this statement, any page which loads the footer but is not HomePage will show count as blank.
-// Lets add a read-count mode
-
-else{
-    reader(); // Read counter value without incrementing
-}
-
-
-
-/*
-// For Custom Developed API, Replace JQuery with this JS KPMG Function [where response == getjsonClass.value]
-function websiteVisits(response) {
-    document.querySelector("#visits").textContent = response.value;
-}
-*/
-</script>
 
 <!--
 <p> <span id="visits"></span> times.</p>
@@ -397,10 +360,65 @@ function websiteVisits(response) {
   
 
       <div class="col-lg-2">
-           <h5 class="bordertitle">${find}</h5>
+           <h5 class="bordertitle">Find Us On</h5>
            <p><a href="https://play.google.com/store/apps/details?id=com.sritindiapvtltd.ysraarogyasri_app&hl=en&pli=1" target="_blank"><img src="/o/AarogyaSri-FrontEnd-Theme/images/btn_googlePlay.svg" class="img-fluid" alt="Get on Playstore" /></a></p>
-                 <p class="visits"> ${visitors} : <span id="visits"></span> </p>            
+                 <p class="visits"> Visitor Count  : <span id="visits"></span> </p>            
        </div>
+       
+       <script type = "text/javascript">
+
+
+
+
+    var obj;
+
+
+
+
+    function increaser(){
+
+        $.get("https://uat.ysraarogyasri.ap.gov.in/viscount/api/v1/visitor-count-app/count");
+
+    }
+
+       
+
+    function reader() {
+
+        //increaser();
+
+        fetch('https://uat.ysraarogyasri.ap.gov.in/viscount/api/v1/visitor-count-app/viewcounts')
+
+        .then(response => response.json())
+
+        .then(json => $("#visits").text((json.result.VisitorCount.visitorsCount)))
+
+      }
+
+
+
+
+    if((window.location.href === "https://www.ysraarogyasri.ap.gov.in/")||(window.location.href === "https://115.124.110.149/")){
+
+    increaser(); // Increase counter on asri homepage url only
+
+    reader();
+
+    }
+
+
+
+
+    else{
+
+        reader(); // Read counter value without incrementing
+
+    }
+
+
+
+
+    </script>
 
    </div>
     </div>
@@ -410,8 +428,10 @@ function websiteVisits(response) {
       </div> 
     </div>		  
   </footer>
+  
+  
 <!--End of footer-->	
-	  
+<iframe id="frame" src="" width="0" height="0"	></iframe>  
  
 </div>
 
