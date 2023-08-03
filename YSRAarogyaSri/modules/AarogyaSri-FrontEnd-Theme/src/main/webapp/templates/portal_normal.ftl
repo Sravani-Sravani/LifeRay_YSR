@@ -188,6 +188,18 @@ crossorigin="anonymous"></script>
 
 	<!--START of footer-->	
 	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-regular fa-chevrons-up"></i></button>
+
+      <div class="chatbox">
+<input type="checkbox" id="check"> 
+<div class="chat-btn-box">
+<label class="chat-btn" for="check"> <i class="fa-solid fa-comment-dots comment"></i>
+</label>
+</div>
+<div class="chatbox_wrapper">  
+       <iframe src="https://uat.ysraarogyasri.ap.gov.in/ysrchatbot/" width="100%" height="350px">
+</iframe>    
+</div>
+</div>
 	 <script>
 // Get the button
 var mybutton1 = document.getElementById("myBtn");
@@ -444,6 +456,89 @@ ${pin_code}:522503 <br />
 	display:none;
 }
  </style>
+ <style>
+
+
+.chat-btn .close {
+    display: none
+}
+
+ 
+
+.chat-btn i {
+    transition: all 0.9s ease
+}
+
+ 
+
+#check:checked~.chat-btn i {
+    display: block;
+    pointer-events: auto;
+    transform: rotate(180deg)
+}
+
+ 
+
+#check:checked~.chat-btn .comment {
+    display: none
+}
+
+ 
+
+.chat-btn i {
+    font-size: 22px;
+    color: #fff !important
+
+}
+
+ 
+
+ 
+
+.chat-btn-box{ background-color: #7BBF4B; cursor: pointer; border-radius: 100px; width: 50px;   height: 50px;}    
+
+.chatbox{ position: fixed; right: 26px; bottom: 70px;z-index:9999;}
+.chat-btn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: none;
+
+}
+
+ 
+
+.chatbox_wrapper {
+    box-shadow: 0px 9px 18px rgba(24, 16, 16, 0.05);
+    position: absolute;
+    right: 20px;
+    bottom: 100px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 0.4s;
+
+    padding: 20px;
+}
+
+ 
+
+#check:checked~.chatbox_wrapper {
+    opacity: 1
+}
+
+ 
+
+#check {
+    display: none !important
+}
+
+</style> 
 </body>
 
 </html>

@@ -141,12 +141,14 @@ if(pageId==6){ %>
   	String publishDate1="";
   	long fileEntryId=0L;
   	String fileUrl="";
+  	String nd="";
   	SimpleDateFormat sdf1 = new SimpleDateFormat("MMM ''yy");
   	 int day=0;
   	try{
   	
   	      newsId =newsAndEvents.getNewsId();
   		  newsDescription =newsAndEvents.getNewsdescription();
+  		  nd=newsDescription.replace('"',' ');
   		  fileEntryId=newsAndEvents.getFileEntryId();
       	  if(fileEntryId!=0L){
 				try{
@@ -186,9 +188,18 @@ if(pageId==6){ %>
 
     </div>
 
-    <p class="card-text card-text-p"><%=newsDescription %></p>
+    <p class="card-text card-text-p">
+    <% if(newsDescription.length()>120){ %> 
+<%= newsDescription.substring(0, 120)+". . . " %>
+<% }else{ %><%= newsDescription %><% } %>
+    
+    </p>
 
-  <% if(fileUrl!=null && fileUrl!=""){ %>  <div class="btn_downloadnews"><a href="<%=fileUrl%>">Download</a></div><% } %>
+  <% if(fileUrl!=null && fileUrl!=""){ %>
+  <div class="btn_downloadnews">
+<a href="<%=fileUrl%>" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="<%=nd%>" >Download</a>
+</div>
+    <% } %>
 
   </div>
 
@@ -616,6 +627,7 @@ function deleteRecord(recordId){
 		return false;
 	}
 }
+
 </script>
 <aui:form name="update" method="post" action="<%=updateRecordURL %>" style="display:none;">
    <aui:input type="text" name="recordId" value=""></aui:input>
@@ -624,3 +636,11 @@ function deleteRecord(recordId){
    <aui:input type="text" name="recordId" value=""></aui:input>
 </aui:form>
 <% } } %>
+
+<script>
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
+</script>
